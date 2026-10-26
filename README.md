@@ -24,7 +24,6 @@
 
 ## 版本与权威来源
 
-- `server/`及`organizer/`使用51归档时的现行源，不用旧Stage1/Stage2实验快照替代。
 - `participant/demo/`使用50的官方Demo，未包含任何队伍的自研算法或运行历史。
 - Master保留了多个adapter和安全门版本；版本名、历史报告和源码原样归档，见[故障脚本索引](docs/FAULT_INJECTION.md)。旧DRAFT不自动成为可执行入口。
 - 正式半决赛GT在`private/ground-truth/semifinal/`，决赛GT在`private/ground-truth/final/`。`questions/semifinal/generation/private/`是原始生成资料，可能保留当时的DRAFT状态，不能据此覆盖现行正式GT。

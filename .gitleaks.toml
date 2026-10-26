@@ -1,0 +1,23 @@
+title = "Competition archive secret checks"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "competition-host-password"
+description = "Legacy host password must not enter the archive"
+regex = '''(?i)\b(?:open|pjs)@\d{4}\b'''
+
+[[rules]]
+id = "competition-team-token"
+description = "Assigned team bearer credential"
+regex = '''team\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]{24,}'''
+
+[[allowlists]]
+description = "Source SHA-256 values and reviewed non-secret identifiers"
+regexTarget = "line"
+regexes = [
+  '''^\s*"[^"]*(?:\.py|_source_sha256)"\s*:\s*"[a-f0-9]{64}",?\s*$''',
+  '''^\s*"annotation_key"\s*:\s*"stage5v3\-reliability",?\s*$''',
+  '''^\s*"idempotency_key"\s*:\s*"key\-1234567890123456",?\s*$''',
+]

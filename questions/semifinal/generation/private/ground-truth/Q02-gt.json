@@ -1,0 +1,325 @@
+{
+  "question_id": "Q02",
+  "case_id": "SF-003",
+  "source_public_manifest_sha256": "2dda9c2d1cb4dd912df3efe5e5d2dcc8fb9b6ae2505f49f24682d2a2d22b1b8e",
+  "source_file_sha256": "5295628c2040fb5c85c14fd43d5000eecb5cac88a00b7b512721e5a8e4ce8d64",
+  "canonical_chart_data": [
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:26:49.724275+00:00",
+      "minute_index": 0,
+      "value": 0.037520422222223716,
+      "sample_count": 3
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:27:49.724275+00:00",
+      "minute_index": 1,
+      "value": 0.05217901666665057,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:28:49.724275+00:00",
+      "minute_index": 2,
+      "value": 0.036719816666663976,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:29:49.724275+00:00",
+      "minute_index": 3,
+      "value": 0.058177216666687556,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:30:49.724275+00:00",
+      "minute_index": 4,
+      "value": 0.03677981666666407,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:31:49.724275+00:00",
+      "minute_index": 5,
+      "value": 0.04870136666665227,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:32:49.724275+00:00",
+      "minute_index": 6,
+      "value": 0.0405826000000161,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:33:49.724275+00:00",
+      "minute_index": 7,
+      "value": 0.03998516666664121,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:34:49.724275+00:00",
+      "minute_index": 8,
+      "value": 0.04847778333335857,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:35:49.724275+00:00",
+      "minute_index": 9,
+      "value": 0.043900499999987616,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:36:49.724275+00:00",
+      "minute_index": 10,
+      "value": 0.0486371666666552,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:37:49.724275+00:00",
+      "minute_index": 11,
+      "value": 0.05387395000000955,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:38:49.724275+00:00",
+      "minute_index": 12,
+      "value": 0.04233389999999417,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:39:49.724275+00:00",
+      "minute_index": 13,
+      "value": 0.04552611666667872,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:40:49.724275+00:00",
+      "minute_index": 14,
+      "value": 0.04038228333332275,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:41:49.724275+00:00",
+      "minute_index": 15,
+      "value": 0.04574526666668438,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:42:49.724275+00:00",
+      "minute_index": 16,
+      "value": 0.04666351666664923,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:43:49.724275+00:00",
+      "minute_index": 17,
+      "value": 0.04581010000001697,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:44:49.724275+00:00",
+      "minute_index": 18,
+      "value": 0.052501699999993434,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:45:49.724275+00:00",
+      "minute_index": 19,
+      "value": 0.04364351666666456,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:46:49.724275+00:00",
+      "minute_index": 20,
+      "value": 0.03397633333333943,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:47:49.724275+00:00",
+      "minute_index": 21,
+      "value": 0.05436544999999266,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:48:49.724275+00:00",
+      "minute_index": 22,
+      "value": 0.04166955000000598,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:49:49.724275+00:00",
+      "minute_index": 23,
+      "value": 0.05174940000000182,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:50:49.724275+00:00",
+      "minute_index": 24,
+      "value": 0.043488399999993516,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:51:49.724275+00:00",
+      "minute_index": 25,
+      "value": 0.06280413333333854,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:52:49.724275+00:00",
+      "minute_index": 26,
+      "value": 0.04481393333332259,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:53:49.724275+00:00",
+      "minute_index": 27,
+      "value": 0.04872281666666822,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:54:49.724275+00:00",
+      "minute_index": 28,
+      "value": 0.0538971333333393,
+      "sample_count": 4
+    },
+    {
+      "series": "frontend-68d8bbfdc8-8mnzh",
+      "timestamp_utc": "2026-10-16T03:55:49.724275+00:00",
+      "minute_index": 29,
+      "value": 0.04012890000000577,
+      "sample_count": 4
+    }
+  ],
+  "reference_chart_path": "private/reference-charts/Q02.png",
+  "three_gold_answers": [
+    {
+      "answer_type": "number",
+      "answer": 0.0628,
+      "answer_unit": "cores",
+      "numerical_tolerance": 0.0002,
+      "time_tolerance_seconds": 0,
+      "calculation_method": "max of valid minute values"
+    },
+    {
+      "answer_type": "time",
+      "answer": "2026-10-16T03:51:49.724275+00:00",
+      "answer_unit": "UTC",
+      "numerical_tolerance": null,
+      "time_tolerance_seconds": 0,
+      "calculation_method": "earliest maximum minute start"
+    },
+    {
+      "answer_type": "number",
+      "answer": 0.0461,
+      "answer_unit": "cores",
+      "numerical_tolerance": 0.0002,
+      "time_tolerance_seconds": 0,
+      "calculation_method": "unweighted mean of valid minute values"
+    }
+  ],
+  "supporting_public_records": [
+    {
+      "timestamp_utc": "2026-10-16T03:27:19.724000+00:00",
+      "metric_name": "container_cpu_usage_seconds_total",
+      "pod": "frontend-68d8bbfdc8-8mnzh",
+      "raw_value": 8736.407284
+    },
+    {
+      "timestamp_utc": "2026-10-16T03:27:34.724000+00:00",
+      "metric_name": "container_cpu_usage_seconds_total",
+      "pod": "frontend-68d8bbfdc8-8mnzh",
+      "raw_value": 8736.958559
+    },
+    {
+      "timestamp_utc": "2026-10-16T03:27:49.724000+00:00",
+      "metric_name": "container_cpu_usage_seconds_total",
+      "pod": "frontend-68d8bbfdc8-8mnzh",
+      "raw_value": 8736.958559
+    },
+    {
+      "timestamp_utc": "2026-10-16T03:28:04.724000+00:00",
+      "metric_name": "container_cpu_usage_seconds_total",
+      "pod": "frontend-68d8bbfdc8-8mnzh",
+      "raw_value": 8738.106257
+    },
+    {
+      "timestamp_utc": "2026-10-16T03:28:19.724000+00:00",
+      "metric_name": "container_cpu_usage_seconds_total",
+      "pod": "frontend-68d8bbfdc8-8mnzh",
+      "raw_value": 8738.695191
+    },
+    {
+      "timestamp_utc": "2026-10-16T03:28:34.724000+00:00",
+      "metric_name": "container_cpu_usage_seconds_total",
+      "pod": "frontend-68d8bbfdc8-8mnzh",
+      "raw_value": 8739.670072
+    }
+  ],
+  "grading_rubric": {
+    "chart_points": 4,
+    "answer_points_each": 2,
+    "chart_breakdown": {
+      "entity_and_filter": 1,
+      "time_axis": 1,
+      "values_and_aggregation": 1,
+      "unit_and_legend": 1
+    }
+  },
+  "gt_version": "semifinal-query-visualization-candidate-v1",
+  "review_status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "calculation_method": {
+    "source_file": "metrics.parquet",
+    "source_columns": [
+      "timestamp",
+      "metric_name",
+      "value",
+      "pod",
+      "labels"
+    ],
+    "filters": {
+      "entities": [
+        "frontend-68d8bbfdc8-8mnzh"
+      ],
+      "metric_name": "container_cpu_usage_seconds_total",
+      "container": "frontend"
+    },
+    "aggregation": "mean(max(0, counter_delta) / elapsed_seconds) by later-sample 60-second bucket",
+    "time_bucket": {
+      "origin_utc": "2026-10-16T03:26:49.724275+00:00",
+      "width_seconds": 60,
+      "closed": "left",
+      "timestamp_label": "bucket start UTC",
+      "observation_end_exclusive_utc": "2026-10-16T03:56:49.724275+00:00"
+    },
+    "minimum_samples_per_minute": 2,
+    "missing_policy": "null and line gap for insufficient samples; zero only for observed count queries",
+    "counter_reset_policy": "omit negative deltas and nonpositive time gaps",
+    "p95_definition": "not applicable",
+    "comparison_minute_ranges": null
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "created_utc": "2026-10-10T02:47:10.407818+00:00",
+  "api_provenance": {
+    "deployment_image": "ghcr.io/open-telemetry/demo:3.0.0-load-generator",
+    "deployed_script": "/home/k6/script.js",
+    "deployed_script_sha256": "cacfe65d69e2c20f2e22ebef618369a4ddf731ce750e275444f9c86cf50ac755",
+    "endpoint_basis": "deployed_k6_script"
+  },
+  "verified_entrypoints": {
+    "home": {
+      "method": "GET",
+      "path": "/"
+    },
+    "product": {
+      "method": "GET",
+      "path": "/api/products/{product}"
+    },
+    "recommendations": {
+      "method": "GET",
+      "path": "/api/recommendations?productIds={product}"
+    },
+    "ads": {
+      "method": "GET",
+      "path": "/api/data/?contextKeys={category}"
+    },
+    "cart_view": {
+      "method": "GET",
+      "path": "/api/cart"
+    },
+    "cart_add": {
+      "method": "POST",
+      "path": "/api/cart",
+      "requires": [
+        "product_selected",
+        "user_id"
+      ]
+    },
+    "checkout": {
+      "method": "POST",
+      "path": "/api/checkout",
+      "requires": [
+        "cart_nonempty",
+        "user_id"
+      ]
+    }
+  },
+  "workflows": {
+    "browse": {
+      "weight": 35,
+      "start": "home",
+      "transitions": {
+        "home": [
+          {
+            "to": "product",
+            "probability": 1.0
+          }
+        ],
+        "product": [
+          {
+            "to": "recommendations",
+            "probability": 0.5
+          },
+          {
+            "to": "ads",
+            "probability": 0.25
+          },
+          {
+            "to": "end",
+            "probability": 0.25
+          }
+        ],
+        "recommendations": [
+          {
+            "to": "ads",
+            "probability": 0.4
+          },
+          {
+            "to": "end",
+            "probability": 0.6
+          }
+        ],
+        "ads": [
+          {
+            "to": "end",
+            "probability": 1.0
+          }
+        ]
+      }
+    },
+    "shopping": {
+      "weight": 40,
+      "start": "home",
+      "transitions": {
+        "home": [
+          {
+            "to": "product",
+            "probability": 1.0
+          }
+        ],
+        "product": [
+          {
+            "to": "recommendations",
+            "probability": 0.35
+          },
+          {
+            "to": "ads",
+            "probability": 0.25
+          },
+          {
+            "to": "cart_add",
+            "probability": 0.4
+          }
+        ],
+        "recommendations": [
+          {
+            "to": "ads",
+            "probability": 0.35
+          },
+          {
+            "to": "cart_add",
+            "probability": 0.65
+          }
+        ],
+        "ads": [
+          {
+            "to": "cart_add",
+            "probability": 1.0
+          }
+        ],
+        "cart_add": [
+          {
+            "to": "cart_view",
+            "probability": 0.75
+          },
+          {
+            "to": "product",
+            "probability": 0.15
+          },
+          {
+            "to": "end",
+            "probability": 0.1
+          }
+        ],
+        "cart_view": [
+          {
+            "to": "end",
+            "probability": 1.0
+          }
+        ]
+      }
+    },
+    "checkout": {
+      "weight": 25,
+      "start": "home",
+      "transitions": {
+        "home": [
+          {
+            "to": "product",
+            "probability": 1.0
+          }
+        ],
+        "product": [
+          {
+            "to": "recommendations",
+            "probability": 0.3
+          },
+          {
+            "to": "ads",
+            "probability": 0.3
+          },
+          {
+            "to": "cart_add",
+            "probability": 0.4
+          }
+        ],
+        "recommendations": [
+          {
+            "to": "cart_add",
+            "probability": 1.0
+          }
+        ],
+        "ads": [
+          {
+            "to": "cart_add",
+            "probability": 1.0
+          }
+        ],
+        "cart_add": [
+          {
+            "to": "cart_view",
+            "probability": 0.6
+          },
+          {
+            "to": "checkout",
+            "probability": 0.4
+          }
+        ],
+        "cart_view": [
+          {
+            "to": "checkout",
+            "probability": 1.0
+          }
+        ],
+        "checkout": [
+          {
+            "to": "end",
+            "probability": 1.0
+          }
+        ]
+      }
+    }
+  },
+  "business_services": [
+    "ad",
+    "cart",
+    "checkout",
+    "currency",
+    "email",
+    "frontend",
+    "frontend-proxy",
+    "image-provider",
+    "payment",
+    "product-catalog",
+    "quote",
+    "recommendation",
+    "shipping"
+  ],
+  "background_or_control": [
+    "agent",
+    "astronomy-db",
+    "chatbot",
+    "flagd",
+    "grafana",
+    "jaeger",
+    "kafka",
+    "mcp",
+    "opamp-server",
+    "opensearch",
+    "otel-cluster-collector",
+    "otel-collector",
+    "prometheus",
+    "telemetry-docs",
+    "valkey-cart"
+  ],
+  "branch_basis": "state graph derived only from deployed k6 HTTP tasks",
+  "excluded_unverified_apis": [
+    "direct shipping API",
+    "direct payment API",
+    "direct currency API",
+    "direct image-provider API"
+  ],
+  "limitations": [
+    "frontend-web is a browser instrumentation identity, not a Kubernetes Service",
+    "current HTTP generator does not execute browser asset requests",
+    "business edges are observed in a finite trace window, not a complete static architecture"
+  ]
+}

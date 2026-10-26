@@ -1,0 +1,12 @@
+{
+  "question_id": "EX-P01",
+  "case_id": "SF-001",
+  "source_public_manifest_sha256": "8ad8c5eb25e48a33ebf776a40db0f3fbe62284ee7c26df3e4d04139532db0eaa",
+  "independent_chart_sha256": "c6db9ca1870208340d2d95fd7e2c062c1cd2d953de604c29323e6ebddd873481",
+  "answers_before_gt_read": [
+    161.705078125,
+    "2026-10-14T09:51:25.156656+00:00",
+    130.58797200520834
+  ],
+  "chart_points": 60
+}

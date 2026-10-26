@@ -1,0 +1,15 @@
+{
+  "status": "POST_CAPTURE_ANALYSIS_LOCKED_BEFORE_RESULTS",
+  "at_utc": "2026-10-12T15:49:48.752774+00:00",
+  "source_sha256": {
+    "/root/stage5-v3-collector-reliability/scripts/summarize_continuous.py": "4fc1521fdf0e200421dfa892451362c947252f6a15be4f51cce5f6e035c868e2",
+    "/root/stage5-v3-collector-reliability/scripts/qualify_network_controls.py": "2ba969bf025a80944562601f353a60db93a4ec4032e9a6af5d991e5d383affb8",
+    "/root/stage5-v3-collector-reliability/scripts/archive_continuous_orchestrator.py": "a74984a19af69a664e00516829561d1812ac492d107f64310a01b3c039d516b7",
+    "/root/stage5-v3-collector-reliability/scripts/build_pipeline_topology.py": "0c31664bd482c215489fcb3fd413d870f6b6862e145db64164eca7b6091573ab",
+    "/root/stage5-v3-collector-reliability/design/continuous-window-prereg.yaml": "fa51304c8ff64e2dc3a61feceec8345fd2ffdc51f7b17c0cd43310638fed4a48",
+    "/root/stage5-v3-collector-reliability/design/network-control-prereg.yaml": "d8890058cae6cf0b3099af8248e13156e311df0eb3c41a1dec85dfe80fa30883"
+  },
+  "collector_config_modified_by_analysis": false,
+  "thresholds_changed_after_window_start": false,
+  "formal_protocol_changed": false
+}

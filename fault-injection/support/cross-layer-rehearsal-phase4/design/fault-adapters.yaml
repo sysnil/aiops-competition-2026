@@ -1,0 +1,5 @@
+schema_version: 1
+kind: bounded_independent_phase4_rehearsal
+network_experiments:
+  - {id: P4-W3W2-S1, path: NETWORK_PATH/k8s-worker3/k8s-worker2, mechanism: egress_filtered_netem_loss, loss_percent: 10, fault_seconds: 60}
+  - {id: P4-W3W2-S2, path: NETWORK_PATH/k8s-worker3/k8s-worker2, mechanism: egress_filtered_netem_loss, loss_percent: 10, fault_seconds: 60}

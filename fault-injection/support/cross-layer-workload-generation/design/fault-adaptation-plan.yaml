@@ -1,0 +1,68 @@
+schema_version: 1
+status: PREDECLARED_BEFORE_PHASE2_FAULTS
+kind: independent_cross_layer_workload_rehearsal
+source_archive_read_only: /root/stage5-v2-cross-layer-rca
+rehearsal_root: /root/cross-layer-workload-generation
+workload:
+  machine: design/workload-state-machine-v2.yaml
+  profile: MEDIUM
+  seed: 41006
+  before_seconds: 120
+  during_seconds: 60
+  after_seconds: 120
+  generation_strategy_unchanged_across_phases: true
+health:
+  require_five_host_residue_pass: true
+  require_stage5_base_health_pass: true
+  require_recovery: true
+  maximum_fault_seconds: 90
+  maximum_new_unready_nodes: 0
+controls:
+  selected_before_fault:
+    NETWORK_PATH/k8s-worker2/k8s-worker3:
+      - frontend-proxy->image-provider
+    NETWORK_PATH/k8s-worker3/k8s-worker1:
+      - frontend->product-catalog
+    NETWORK_PATH/k8s-worker3/k8s-worker2:
+      - checkout->currency
+  minimum_control_spans_per_phase: 30
+  maximum_during_before_p95_ratio: 1.25
+  require_local_route_and_trace: true
+service_pod_experiments:
+  - {id: WG-SERVICE-PULSE, source_mechanism: D03-type, target_service: frontend,
+     source_case: D03-type,
+     target_scope: both_ready_replicas, mechanism: bounded_sigstop_pulses,
+     stop_seconds: 8, period_seconds: 20, fault_seconds: 60}
+  - {id: WG-SERVICE-PULSE-R2, source_mechanism: D03-type, target_service: frontend,
+     source_case: D03-type, replacement_reason: generator_schedule_abort_in_original_attempt,
+     target_scope: both_ready_replicas, mechanism: bounded_sigstop_pulses,
+     stop_seconds: 8, period_seconds: 20, fault_seconds: 60}
+  - {id: WG-POD-QUOTA, source_mechanism: D04-type, target_service: ad,
+     source_case: D04-type,
+     target_node: k8s-worker1, mechanism: reversible_cgroup_cpu_quota_reduction,
+     quota_fraction_of_original: 0.125, fault_seconds: 60,
+     precondition: pre_fault_cpu_demand_cores_above_0_25_and_cfs_periods_present}
+  - {id: WG-POD-PULSE, source_mechanism: D06-type, target_service: frontend,
+     source_case: D06-type,
+     target_node: k8s-worker3, mechanism: bounded_sigstop_pulses,
+     stop_seconds: 5, period_seconds: 15, fault_seconds: 60}
+network_experiments:
+  - {id: WG-NET-LOSS, source_mechanism: D11-type,
+     source_case: D11-type,
+     path: NETWORK_PATH/k8s-worker3/k8s-worker1,
+     mechanism: egress_filtered_netem_loss, loss_percent: 10,
+     fault_seconds: 60, probe_interval_seconds: 10,
+     compare_probes: [bounded_iperf3_udp, timestamped_icmp]}
+  - {id: WG-NET-BANDWIDTH, source_mechanism: D12-type,
+     source_case: D12-type,
+     path: NETWORK_PATH/k8s-worker2/k8s-worker3,
+     mechanism: egress_filtered_tbf_shaping, rate_kbit: 1500,
+     fault_seconds: 60, probe_interval_seconds: 10,
+     compare_probes: [bounded_iperf3_udp, timestamped_icmp]}
+failure_rules:
+  pod_identity_missing: OBSERVABILITY_LIMITATION
+  insufficient_root_resource_demand: WORKLOAD_PREREQUISITE_FAILED
+  no_verified_path_flow: NETWORK_PATH_NOT_PROVEN
+  insufficient_independent_control: CONTROL_UNQUALIFIED
+  probe_timeout: MISSING_SAMPLE
+  timeout_is_not_zero_throughput: true

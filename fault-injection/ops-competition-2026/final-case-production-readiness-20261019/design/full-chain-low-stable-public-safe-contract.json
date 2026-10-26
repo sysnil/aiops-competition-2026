@@ -1,0 +1,140 @@
+{
+  "collector_config_sha256": "ad42e84b2a1d25b6b9b716f2a119f8d3ab6c50a975b860f3a8eed939618dd05f",
+  "created_utc": "2026-10-19T04:25:08.679481+00:00",
+  "criteria": {
+    "all_expected_sampled_request_proxy_match_fraction": 1.0,
+    "all_receiver_refused_signal_deltas": 0,
+    "all_three_modalities_each_minute": true,
+    "approved_control_span_tags_min": 1,
+    "chunk_seconds": 300,
+    "collector_restarts_or_oom": 0,
+    "collector_working_set_stop_bytes": 398458880,
+    "control_p95_ratio_max": 1.25,
+    "control_successes_per_minute_min": 30,
+    "duration_seconds": 1800,
+    "exporter_queue_final_growth_bytes_max": 1048576,
+    "exporter_queue_peak_capacity_fraction_max": 0.01,
+    "forbidden_public_user_agent_occurrences": 0,
+    "log_trace_storage_age_seconds_max": 60,
+    "no_business_fault": true,
+    "opensearch_parent_breaker_new_trips": 0,
+    "target_successes_per_minute_min": 30,
+    "trace_audit_offsets_seconds": [
+      5,
+      60,
+      120,
+      240
+    ],
+    "unexplained_missing_request_ids": 0
+  },
+  "faults_allowed": false,
+  "runs": {
+    "VAL6": {
+      "duration_seconds": 1800,
+      "seed": 751719
+    }
+  },
+  "source_sha256": {
+    "/root/cross-layer-observability-control-rehearsal/scripts/workload_generator_rehearsal.py": "5f7291c9b7698af50b66357fe2fcd38ef9eb491a6330db207d578d38f6fe5464",
+    "/root/cross-layer-workload-generation/design/people.json": "2e780c99cd1950213c798ba086c184b6ae89a98af8a6df4bb190b2e19bcf77ab",
+    "/root/ops-competition-2026/final-case-production-readiness-20261019/scripts/readiness_observer.py": "75c6342c80c887736a0479f3e16d7ab53f1bc2d0a623206edd51bf151a81bba4",
+    "/root/ops-competition-2026/final-case-production-readiness-20261019/scripts/register_plan.py": "008baf33f9f5e0c135a8b48afd7f07eaca18286ff5fe975b4026570108f634f8",
+    "/root/ops-competition-2026/final-case-production-readiness-20261019/scripts/start_formal_nofault.py": "51bde2db3f93071eb2de74b1e8298a61503f78280cfea9f66d4548f6ba14657b",
+    "/root/ops-competition-2026/final-case-production-readiness-20261019/validation-v6/common.py": "e5acdad7bd9669c34e5a1458d540bbb080831cd1fba37e9dd560143b3a91b180",
+    "/root/ops-competition-2026/final-case-production-readiness-20261019/validation-v6/evaluate.py": "01ce5ee74b4ad996d2ed2a1192d5200175cfc7232019e873047c247bbd32ace1",
+    "/root/ops-competition-2026/final-case-production-readiness-20261019/validation-v6/fixed_business_streams_v4.py": "04335d378cd6f001f7aedcba1fba1d826cc342ac597594e34229057abd2ff1a9",
+    "/root/ops-competition-2026/final-case-production-readiness-20261019/validation-v6/observation.py": "4a5e93d47923a62532a16cb87165683450404cba451a05d2d66c0de8d494b991",
+    "/root/ops-competition-2026/final-case-production-readiness-20261019/validation-v6/run_validation.py": "448d78640fbbe8227110ce26e5ddc1a5fd9525c41df074048d4862dc05c113d0",
+    "/root/ops-competition-2026/final-case-timer-safety-v1-20261019/scripts/audit_competition_units.py": "0b084cb80b3ee5752250b5329e0170620955b4b8fb89e267665ca5305b658848",
+    "/root/ops-competition-2026/final-case-timer-safety-v1-20261019/scripts/collector_health.py": "a07e0602fa2b685abfaee8c56c48509b132ae4601b2ee2c010d6e5ef2afbfeee",
+    "/root/ops-competition-2026/final-case-timer-safety-v1-20261019/scripts/final_snapshot.py": "307110ca1bcf24cb985d82efe5b49bc12c6b504e3f482c6130089afb90422e26",
+    "/root/ops-competition-2026/final-case-timer-safety-v1-20261019/scripts/marker_controller.py": "798a1fb0d98e23911aced6cc8367aafe6da2da89c9b52d4623fc93d2b3188584",
+    "/root/ops-competition-2026/final-case-timer-safety-v1-20261019/scripts/marker_guard.py": "77d65a4c1fcf485447ca201c8bb4690f12db6aeb9af4de876464a44c0a35ff74",
+    "/root/ops-competition-2026/final-case-timer-safety-v1-20261019/scripts/marker_worker.py": "305327f680c834a5b6ede03d2e187a340d55227ea0e633e3e4a263177a34b99b",
+    "/root/ops-competition-2026/final-case-timer-safety-v1-20261019/scripts/run_marker_isolation.py": "623560092649413864a6ac2a60401674fcdda139a343accf4a1e189672c42eb8",
+    "/root/ops-competition-2026/final-case-timer-safety-v1-20261019/scripts/run_marker_suite.py": "b371d92d34b1d591ffcb8a554a1169b303687b90060754b695a868c93d456a4c",
+    "/root/ops-competition-2026/final-case-timer-safety-v1-20261019/scripts/storage_projection.py": "22b6397b3138848c92f58695f56d137d2b31bcc40602b5ba36448f0a567bd948",
+    "/root/ops-competition-2026/final-case-timer-safety-v1-20261019/scripts/verify_historical_ready.py": "fe18c7e50bc5501761f373afe8ac355948079312b0b385ba1473a8716be66d74",
+    "/root/ops-competition-2026/final-case-timer-safety-v1-20261019/scripts/version_manifest.py": "47e4708940918926c81a987d012859079038af10dd3c3b0d795821e3ed7affc3",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/capture_live_c2.py": "a0b36a73d64d563fa7a733e821eddddb0a6ad55a0b9017482b5f846d12cef4f6",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/evaluate_trace_v2.py": "0f434f1b6efd5c3b576d742184b6f1c0f7222e50e057f55a34dabbd29ff06f4a",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/schedule_trace_completion.py": "27ebeca04f74e4e7a312cb277bfa5777864edeb6df39dda223670914dfdcb885",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/schedule_trace_completion_v2.py": "9a2db5310fd33f7182cd9dda43fd8f44b17029b3111b8e5b0f1baa26d08a8aae",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/schedule_trace_v2.py": "24a05f44d51beab11067b7e51337eafe3be0718333e80231dde8a99b6d190d86",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/trace_identity.py": "5370f59591582ed0d0fdc5f97e43347e9f0bcfbbce5a002af5e16f164b4c5af9",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/trace_storage_reader.py": "1b6bc74480e43a8e83d6508f6a8cc47a8ea09bdd57fe577b9f268c014126adb6",
+    "/root/ops-competition-2026/low-stable-v4-20261017/design/load-profiles-v4b.yaml": "a2ec4d8c830408c5ce4b513c8ed01c415d5aeac1728bbd92c9d5726128ddad94",
+    "/root/ops-competition-2026/low-stable-v4-20261017/formal-v2/fixed_business_streams_faultable.py": "7c0b8e74bf445cc4d5a131f606e0c9119d758bbb957af4c690c83fa75370fe6e",
+    "/root/ops-competition-2026/low-stable-v4-20261017/formal-v2/fixed_business_streams_plain.py": "23d2d4419f2e87a9b2bad6b72a2d43f32ba2781c68d15ba7f977cfed07ff9f12",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/entry_smoke.py": "007dfb34022ae107be7e7f0d5dbeed9712bc80ab18282db39336c27c292709f4",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/fault_worker.py": "fc76dcfe86fa3e0b52724d8b89fc73550be1714cc01a3c1ba86d207b94ac46b0",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/five_host_heartbeat.py": "da7287343bdf7ae6a66f17e09c8af9c4e17d5f7f7c498416778a64ff44728837",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/handshake.py": "df921e49e0a11ce8b8c73d71e23e49a16169c577e575f3cc01d3e4b6c0fb7857",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/master_transport.py": "dec549d93df579052ee5b67911a66b3a54a1ca4cba9de06a7c0cf87e6f32565f",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/pilot_exchange_schema.py": "b201bf4807e26706003096a59c754bb532307d40dd59154899ddefa7f7432c43",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/prepare_pod_registration.py": "1a43e1ed8bcef3c37f1a408537582a8c4e7b1f643c7d548feb3368bc089f680a",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/prepare_sf003_formal.py": "56f53a8ae6798e5f6e960996eebe60e5dc7f7fdb2965f2e36ac9a492e12685ba",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/run_registry.py": "35659ff827f5f4bd5d37148c537a7c72162572e3dd164ad286ce6e39de0de042",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/sampler_smoke.py": "93cb57da6e7ac0ebd0ae521a4be73accd734daf9e6b75fe9d99ea380d8081f70",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/sf003_admission.py": "69cf3df8b4c0e674bd0128098398f11a1b502a35b09df39aa4b996356b2c2c51",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/sf003_annotations.py": "aeefb0cb918ceaf5b60d3fae90ee41283701021ce025385d1fa7d01bb8ae3438",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/sf003_archive.py": "52265f0bef157d7791efc590f7dfb78a8d46516961c15038cd7246ddbb167244",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/sf003_contract.py": "e42a42ea2636b2de1cb9c859fe9094c63404a89b7b4f9841eb56d983b5d103c0",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/sf003_controller.py": "27159e9d1f5eb16c6746cd3eaf40a4ac8490238c941748afe5dcb2a0ca5fafe2",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/sf003_export.py": "7b63fb3a36dda9e88083617be02664471139911e2fc32a886c5ea99a139af5f3",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/sf003_observer.py": "923d7c7296a4fce1bcb79074bea868ae9d953effe3e6a2eda69e301c04eb4fdd",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/sf003_preflight.py": "426d571f937c91b711577fbe9e81d6bcd250960ab1f45e8f2622cc41e389ba71",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/sf003_workload.py": "598c581b8630c597d757475182e53df06dd9fe741b6c9ad5c5b4cc913fbdcaa7",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/start_formal.py": "d1af93430624cda43fc484bb1e0ce2ff1152c1319715f136c5ca4d043024d573",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/startup_timing.py": "1b922428fffb3625dd82b4579ceff50a8d6185ad65f479ea2b974ff3ef3df971",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/timer_guard.py": "5ffdf14c771f021664b0df6dab7167504982fb697dc3281fd657ee7d3f0f778d",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/timer_inventory.py": "02610b157a8ac09c19f60860240d53af570e60d1648a5990d71f9ca2d5e38adb",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/timer_lifecycle.py": "0c4b76a8c7ec1c361d7943d75a886c2721c296dcdb29a9bc4e5d82618c7e44bc",
+    "/root/ops-competition-2026/sf013-adapter-v3-20261019/scripts/watchdog_reachability.py": "6ccc5f08d7c44e94b3639aafd114fdbdb2ea08f627e7f684cb9ddbdef832eed5",
+    "/root/stage5-v3-observability-diagnostics/snapshots/reference/workload-state-machine-c3.yaml": "e877814f950088c6a692778a23644979e44888f955bcf35496f4ad59c26ad05b"
+  },
+  "status": "PREREGISTERED_FINAL_CASE_NOFAULT_1800_MARKER_ONLY",
+  "workload": {
+    "arrival_rate_sessions_per_second": 0.7,
+    "control_concurrency_per_stream": {
+      "cart_view": 3,
+      "home": 3,
+      "image_asset": 3,
+      "recommendations": 3
+    },
+    "control_streams": [
+      {
+        "name": "image_asset",
+        "rate_per_second": 1.0,
+        "seed_offset": 101
+      },
+      {
+        "name": "cart_view",
+        "rate_per_second": 1.0,
+        "seed_offset": 103
+      },
+      {
+        "name": "home",
+        "rate_per_second": 1.0,
+        "seed_offset": 107
+      },
+      {
+        "name": "recommendations",
+        "rate_per_second": 1.0,
+        "seed_offset": 109
+      }
+    ],
+    "control_timeout_seconds": 8,
+    "policy_name": "LOW_STABLE",
+    "profile": "LOW"
+  },
+  "reference_plan_sha256": "c43b971b19593880aec7d217d5c9f7476eb17f91e7b6959efe7da97a478bd1c5",
+  "readiness_design_sha256": "8dee131725933dd4426dcbf11e3d454963797c902ad290dbe8efe2b0b78e57c0",
+  "readiness_harness": {
+    "run_id": "SF-FINAL-NOFAULT-1800-20261019-01",
+    "real_fault_adapter_access": false,
+    "marker_only": true,
+    "planned_marker_offset_seconds": 600,
+    "output_root": "/data/stage5-v3/ops-competition-2026/final-case-production-readiness-20261019/validation-runs-v6/VAL6"
+  }
+}

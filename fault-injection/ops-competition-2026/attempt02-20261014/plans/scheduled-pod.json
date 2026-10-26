@@ -1,0 +1,14 @@
+{
+  "id": "SF-PILOT-01-ATTEMPT-02-POD",
+  "mode": "FAULT",
+  "worker": "k8s-worker2",
+  "unit": "ops-a02-pod",
+  "runtime": "/root/ops-competition-2026/attempt02-20261014/runtime/SF-PILOT-01-ATTEMPT-02-POD",
+  "tolerance_seconds": 2,
+  "planned_utc": "2026-10-14T05:24:10.838859+00:00",
+  "scheduler_sha256": "2c5724242bfb2e3e5e71e1f3e756515c33db74224948a928808a26c56ec5ad42",
+  "registration": "/root/ops-competition-2026/plans/SF-PILOT-01-ATTEMPT-02-POD.json",
+  "registration_sha256": "92822f066f3ef09e7cbf246a92c77801502c60511cd50cd07c4c60375d302a1c",
+  "authorization": "/root/ops-competition-2026/attempt02-20261014/runtime/SF-PILOT-01-ATTEMPT-02-POD/authorization.json",
+  "output": "/root/ops-competition-2026/qualification/private-attempts/SF-PILOT-01-ATTEMPT-02-POD"
+}

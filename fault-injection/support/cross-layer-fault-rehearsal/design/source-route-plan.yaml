@@ -1,0 +1,27 @@
+schema_version: 1
+public_only: true
+paths:
+  - entity: NETWORK_PATH/k8s-worker3/k8s-worker2
+    source_node: k8s-worker3
+    destination_node: k8s-worker2
+    source_pcap: worker3/route.pcap
+    traversing:
+      - {source_service: frontend, destination_service: cart}
+      - {source_service: checkout, destination_service: cart}
+    control: {source_service: checkout, destination_service: currency}
+  - entity: NETWORK_PATH/k8s-worker3/k8s-worker1
+    source_node: k8s-worker3
+    destination_node: k8s-worker1
+    source_pcap: worker3/route.pcap
+    traversing:
+      - {source_service: frontend, destination_service: shipping}
+      - {source_service: checkout, destination_service: shipping}
+    control: {source_service: checkout, destination_service: currency}
+  - entity: NETWORK_PATH/k8s-worker2/k8s-worker3
+    source_node: k8s-worker2
+    destination_node: k8s-worker3
+    source_pcap: worker2/route.pcap
+    traversing:
+      - {source_service: frontend-proxy, destination_service: frontend}
+      - {source_service: frontend, destination_service: currency}
+    control: {source_service: frontend, destination_service: cart}

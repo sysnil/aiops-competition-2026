@@ -1,0 +1,20 @@
+schema_version: 1
+applies_to: future_rehearsal_only
+minimum_completed_workflows: 20
+minimum_success_fraction: 0.98
+minimum_target_service_spans: 30
+minimum_target_pod_requests: 30
+minimum_control_edge_spans: 30
+minimum_verified_path_flows: 1
+maximum_kubernetes_unready_nodes: 0
+require_opensearch_green: true
+require_no_residual_fault: true
+quota_fault:
+  require_cpu_demand_above_reduced_quota: true
+  require_cfs_periods_and_throttled_periods: true
+  require_same_pod_uid_and_container_id: true
+network_fault:
+  require_fresh_route_and_flow_proof: true
+  timeout_value: null
+  require_independent_control_flow: true
+note: Proposed future protocol thresholds require validation before any formal freeze.

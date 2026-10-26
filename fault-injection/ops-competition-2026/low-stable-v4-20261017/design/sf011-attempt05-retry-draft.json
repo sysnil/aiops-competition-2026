@@ -1,0 +1,36 @@
+{
+  "status": "DRAFT_PENDING_POST_RELOCATION_NOFAULT_QUALIFICATION",
+  "case_id": "SF-011",
+  "run_id": "SF-011-ATTEMPT-05",
+  "superseded_attempt04_failure_record_sha256": "35fd765e5f7aaf60ef4b1de63f5afef02c29b692cea7ab59fdc39376719ae39f",
+  "reason_for_new_attempt": "ATTEMPT-04 safely stopped after HTTP recovery when Worker1 forecast remaining fell below the existing 5 GB floor; complete 30-minute collection was not achieved",
+  "mechanism": "HTTP_HOME_DELAY_250MS_60",
+  "target": "ordinary frontend-proxy GET / business path",
+  "fault_offset_seconds": 900,
+  "fault_duration_seconds": 60,
+  "fault_delay_ms": 250,
+  "workload": {
+    "profile": "LOW_STABLE",
+    "sessions_per_second": 0.7,
+    "image_per_second": 1,
+    "cart_per_second": 1,
+    "home_per_second": 1,
+    "recommendations_per_second": 1,
+    "duration_seconds": 1800
+  },
+  "normal_control_rule": {
+    "image_p95_limit": "max(1.25 * before, before + 2.0 ms)",
+    "calibration_source": "VAL5 and VAL6 clean data, recorded before SF-011 formal attempts",
+    "calibration_sha256": "7b347645e8ce1525b7f1bfdbb6f85bbc4a3e6e2226a94656e38e891e41de19b0",
+    "cart_p95_limit": "1.25 * before, unchanged",
+    "minimum_samples": "unchanged from SF-011 ATTEMPT-04",
+    "no_prior_attempt_rescoring": true
+  },
+  "required_fresh_heartbeat_contract": "design/five-host-heartbeat-qualification-sf011-att05.json",
+  "worker1_archive_relocation": "SF-007-ATTEMPT-08 and SF-012-ATTEMPT-04 Master-backed Worker1 copies moved to the same-host root disk with triple SHA and original-path links",
+  "minimum_filesystem_free_bytes": 5000000000,
+  "no_change_to_public_private_boundary": true,
+  "private_gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "competition_server_import": false,
+  "last_automatic_attempt_for_this_case": true
+}

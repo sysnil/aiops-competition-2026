@@ -1,0 +1,90 @@
+{
+  "case_id": "SF-002",
+  "status": "CANDIDATE_NOT_REGISTERED",
+  "duration_seconds": 3600,
+  "maximum_attempts": 1,
+  "seed": 20261014002,
+  "fault_events": [
+    {
+      "fault_event_id": "SF-002-F01",
+      "mechanism": "ServicePause",
+      "fault_category": "Code",
+      "fault_type": "ServicePause",
+      "target_layer": "SERVICE",
+      "target_entity": null,
+      "target_uid": null,
+      "actual_target": null,
+      "worker": null,
+      "duration_seconds": 300,
+      "requested_parameters": {
+        "scope": "both recommendation replicas"
+      },
+      "actual_parameters": null,
+      "start_seconds": 720,
+      "recovery_seconds": 240,
+      "recovery_check_seconds": 45,
+      "precheck_seconds": 105,
+      "actual_start": null,
+      "actual_end": null,
+      "injection_status": "NOT_EXECUTED",
+      "watchdog_status": "NOT_ARMED",
+      "recovery_status": "NOT_APPLICABLE_NO_INJECTION"
+    },
+    {
+      "fault_event_id": "SF-002-F02",
+      "mechanism": "PodMemoryStress",
+      "fault_category": "Resource",
+      "fault_type": "PodMemoryStress",
+      "target_layer": "POD",
+      "target_entity": null,
+      "target_uid": null,
+      "actual_target": null,
+      "worker": null,
+      "duration_seconds": 300,
+      "requested_parameters": {
+        "allocation_bytes": 33554432
+      },
+      "actual_parameters": null,
+      "start_seconds": 2100,
+      "recovery_seconds": 180,
+      "recovery_check_seconds": 45,
+      "precheck_seconds": 105,
+      "actual_start": null,
+      "actual_end": null,
+      "injection_status": "NOT_EXECUTED",
+      "watchdog_status": "NOT_ARMED",
+      "recovery_status": "NOT_APPLICABLE_NO_INJECTION"
+    }
+  ],
+  "original_candidate_start_minutes": [
+    12,
+    35
+  ],
+  "workload": {
+    "profile": "MEDIUM",
+    "sessions_per_second": 1.4,
+    "image_per_second": 1,
+    "cart_per_second": 2
+  },
+  "T0_utc": null,
+  "source_scope": "directional authorization; no automatic replacement; no real activation while blocked",
+  "time_plan_audit": {
+    "status": "TIME_PLAN_PASS",
+    "reasons": [],
+    "recovery_completed_by_seconds": 2625
+  },
+  "capture_offsets_seconds": [
+    0,
+    300,
+    600,
+    1200,
+    1500,
+    1800,
+    2100,
+    2400,
+    2700,
+    3000,
+    3300,
+    3600
+  ]
+}

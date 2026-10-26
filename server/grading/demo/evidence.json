@@ -1,0 +1,52 @@
+{
+  "case_id": "DEMO-001",
+  "classification": "SYNTHETIC_DEMO_ONLY",
+  "start_time": "2030-01-01T00:00:00+00:00",
+  "end_time": "2030-01-01T01:00:00+00:00",
+  "records": [
+    {
+      "modality": "logs",
+      "record": {
+        "timestamp": "2030-01-01T00:20:05+00:00",
+        "service": "demo-payment",
+        "pod": "demo-payment-abc123",
+        "severity": "ERROR",
+        "body": "synthetic demo: worker heartbeat stopped for 120 seconds",
+        "attributes": {"demo": true, "source": "synthetic-fixture"},
+        "trace_id": "11111111111111111111111111111111",
+        "span_id": "2222222222222222"
+      }
+    },
+    {
+      "modality": "traces",
+      "record": {
+        "trace_id": "11111111111111111111111111111111",
+        "span_id": "2222222222222222",
+        "parent_span_id": "3333333333333333",
+        "parent_service": "demo-checkout",
+        "service": "demo-payment",
+        "operation_name": "Charge",
+        "start_time": "2030-01-01T00:20:06+00:00",
+        "duration_ms": 120000.0,
+        "status": "ERROR",
+        "attributes": {"demo": true, "error.type": "deadline_exceeded"},
+        "resource_attributes": {"service.name": "demo-payment"}
+      }
+    },
+    {
+      "modality": "metrics",
+      "record": {
+        "timestamp": "2030-01-01T00:20:00+00:00",
+        "metric_name": "demo_service_heartbeat",
+        "value": 0.0,
+        "labels": {"demo": "true"},
+        "service": "demo-payment",
+        "pod": "demo-payment-abc123",
+        "node": "demo-node-1",
+        "unit": "1",
+        "metric_type": "gauge",
+        "source": "synthetic-fixture"
+      }
+    }
+  ]
+}

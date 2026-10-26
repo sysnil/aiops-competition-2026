@@ -1,0 +1,20 @@
+{
+  "status": "DRAFT_CODE_AND_MARKER_ONLY__PRODUCTION_BLOCKED",
+  "version": "final-case-unified-execution-v1-20261019",
+  "protocol": "SF_FINAL_LIVE_AUTH_V1",
+  "master_authorizer": "scripts/master_authorizer.py",
+  "decision_state": "one decision.lock and revocation intent per Attempt/Action",
+  "worker_entry": "scripts/worker_entry.py",
+  "master_http_entry": "scripts/http_gate.py",
+  "actions": {
+    "SF-013": [{"kind":"POD","worker":"k8s-worker2","mechanism":"PodMemoryStress","duration_seconds":300,"real_adapter_qualification":"PENDING"}],
+    "SF-014": [{"kind":"SERVICE","worker":"k8s-worker3","mechanism":"ServicePause","duration_seconds":30,"real_adapter_qualification":"PENDING"}],
+    "SF-015": [{"kind":"HTTP","worker":"k8s-master","mechanism":"HTTPReqDelay","duration_seconds":60,"real_adapter_qualification":"PENDING"}],
+    "SF-016": [{"kind":"POD","worker":"k8s-worker2","mechanism":"PodMemoryStress","duration_seconds":300,"real_adapter_qualification":"PENDING"}],
+    "SF-017": [{"kind":"HTTP","worker":"k8s-master","mechanism":"HTTPReqDelay","duration_seconds":60,"real_adapter_qualification":"PENDING"},{"kind":"SERVICE","worker":"k8s-worker3","mechanism":"ServicePause","duration_seconds":30,"real_adapter_qualification":"PENDING"}]
+  },
+  "archive_allocation": "DRAFT: Worker system-root option needs capacity and recovery qualification",
+  "historical_lease_entries": "FORBIDDEN_FOR_NEW_CASES",
+  "real_fault_injection": false,
+  "formal_attempt_created": false
+}

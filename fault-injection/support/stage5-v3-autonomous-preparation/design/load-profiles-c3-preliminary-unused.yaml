@@ -1,0 +1,6 @@
+schema_version: 1
+profiles:
+  LOW: {arrival_rate_rps: 0.5, concurrency: 2, duration_seconds: 180, seed: 41001, timeout_seconds: 8, max_error_rate: 0.02}
+  MEDIUM: {arrival_rate_rps: 1.5, concurrency: 4, duration_seconds: 1500, seed: 851221, timeout_seconds: 8, max_error_rate: 0.02}
+  HIGH: {arrival_rate_rps: 3.0, concurrency: 8, duration_seconds: 180, seed: 41003, timeout_seconds: 8, max_error_rate: 0.02}
+status: PRE_REGISTERED_CLEAN_CANDIDATE_NOT_FROZEN_BENCHMARK

@@ -1,0 +1,43 @@
+{
+  "run_id": "SF-008-ATTEMPT-02",
+  "plan_sha256": "71d19450fd0f84a8b08c69ef676b906dfd9244e19a39685ec2520cc7ef09f181",
+  "actions": [
+    {
+      "run_id": "SF-008-ATTEMPT-02",
+      "action_id": "SF-008-ATTEMPT-02-POD",
+      "fault_event_id": "SF-008-F01",
+      "fault_type": "PodMemoryStress",
+      "mechanism_id": "POD",
+      "worker": "k8s-worker2",
+      "targets": [
+        {
+          "service": "frontend",
+          "name": "frontend-68d8bbfdc8-8mnzh",
+          "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+          "node": "k8s-worker2",
+          "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+          "restart_count": 0,
+          "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-podd4bb49b4_6fb8_4a07_aaf6_e2caff5df974.slice/cri-containerd-447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e.scope",
+          "pid": 2022249,
+          "start_ticks": "164244306"
+        }
+      ],
+      "duration_seconds": 60,
+      "offset_seconds": 600,
+      "planned_utc": "2026-10-16T15:42:52.277570+00:00",
+      "recovery_offset_seconds": 840,
+      "onset_tolerance_seconds": 2,
+      "unit": "ops-sf008-sf-008-attempt-02-pod",
+      "backend": "SF008_QUALIFIED_POD_MEMORY60_REQDELAY60_V1",
+      "execute": "RUN_PINNED_QUALIFIED_ADAPTER",
+      "revoke": "REVOKE_STOP_AND_PINNED_CLEANUP",
+      "qualified_registration": "/root/ops-competition-2026/sf008-real-adapter-v2-20261016/plans/SF-008-ATTEMPT-02/pod-registration.json",
+      "qualified_registration_sha256": "6ed9864426482c912a00886369b58b5f2ae2c2932ffaf30c2ec411d9c79db0b4",
+      "watchdog_proof_file": "/root/ops-competition-2026/qualification/SF008-WATCHDOG-SELFTEST-W2-ATTEMPT02.json",
+      "watchdog_proof_sha256": "e9dcd0ff533227f93758969cdc2d36975b4b71a96e9cca89238cf4a49a47ee9a",
+      "injection_output": "/root/ops-competition-2026/qualification/private-attempts/SF-008-ATTEMPT-02-POD",
+      "runtime": "/root/ops-competition-2026/sf008-real-adapter-v2-20261016/worker-runtime/SF-008-ATTEMPT-02-POD",
+      "registration_file": "/root/ops-competition-2026/sf008-real-adapter-v2-20261016/plans/SF-008-ATTEMPT-02/run-plan.json"
+    }
+  ]
+}

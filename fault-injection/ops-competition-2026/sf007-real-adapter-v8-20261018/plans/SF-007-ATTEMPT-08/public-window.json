@@ -1,0 +1,8 @@
+{
+  "case_id": "SF-007",
+  "run_id": "SF-007-ATTEMPT-08",
+  "start_utc": "2026-10-18T10:27:45.435689+00:00",
+  "end_utc": "2026-10-18T10:57:45.435689+00:00",
+  "schedule_sha256": "9c68220d4d71321fea8d2c608dc1a8cd04f5da7d0b84ef3ddc6877493cb2fb5f",
+  "capture_terminal_sha256": "2adc5505df2263fe472808cf63c2558191507e2e8abade8e5c6833874fe5aa65"
+}

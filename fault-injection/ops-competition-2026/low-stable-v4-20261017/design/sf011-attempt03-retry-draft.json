@@ -1,0 +1,33 @@
+{
+  "status": "DRAFT_PENDING_INDEPENDENT_HEARTBEAT_QUALIFICATION",
+  "case_id": "SF-011",
+  "run_id": "SF-011-ATTEMPT-03",
+  "superseded_attempt02_failure_record_sha256": "a84409d6561f8a8b103b8eb2e7f8e202c62c05d043b6ce26c1f672e417c3f8d9",
+  "reason_for_new_design": "Two-fault ServicePause plus HTTP delay attempts were rejected by the pre-registered Cart normal-control latency criterion; keep those attempts failed and test one previously qualified HTTP mechanism in a new run",
+  "faults": [
+    {
+      "mechanism": "HTTP_HOME_DELAY_250MS_60",
+      "target": "ordinary frontend-proxy GET / business path",
+      "offset_seconds": 900,
+      "duration_seconds": 60,
+      "delay_ms": 250,
+      "qualification_source": "SF-010-ATTEMPT-07 real HTTP delay execution and SF-004-ATTEMPT-05 admitted production"
+    }
+  ],
+  "workload": {
+    "profile": "LOW_STABLE",
+    "sessions_per_second": 0.7,
+    "image_per_second": 1,
+    "cart_per_second": 1,
+    "home_per_second": 1,
+    "recommendations_per_second": 1,
+    "duration_seconds": 1800
+  },
+  "admission": "preserve qualified HTTP direct-effect and Image/Cart normal-control thresholds; no prior failed attempt is rescored",
+  "minimum_filesystem_free_bytes": 5000000000,
+  "required_five_host_no_fault_qualification": "SF007-ATT06-BUDGET-NOFAULT-01: 121 scheduled five-host reads, zero fault or formal case, same 5 GB floor; execute SF011 only while evidence is fresh",
+  "archive_target": "worker3 only after verified historical-archive relocation and a fresh capacity PASS",
+  "no_change_to_public_private_boundary": true,
+  "private_gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "competition_server_import": false
+}

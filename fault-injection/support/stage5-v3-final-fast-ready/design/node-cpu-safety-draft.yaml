@@ -1,0 +1,39 @@
+status: DRAFT_NOT_APPROVED_NO_INJECTION_AUTHORIZATION
+target: k8s-worker1
+mechanism: bounded_cpu_contention
+planned_duration_seconds_max: 300
+independent_rollback_deadline_seconds_max: 360
+preflight:
+  node_ready: required
+  disk_memory_pid_pressure: 'False'
+  kubelet_lease_age_seconds_max: 60
+  two_active_business_pods_on_target: required
+  unaffected_worker_control: required
+  five_host_residue: PASS
+  workload_health: PASS
+  collector_and_trace_storage: PASS
+during:
+  monitor_interval_seconds: 10
+  target_ready: required_for_this_cpu_mechanism
+  target_memory_pressure: 'False'
+  target_disk_pressure: 'False'
+  target_pid_pressure: 'False'
+  no_unplanned_business_pod_rebuild: required
+  control_plane_and_kubelet_lease: monitored
+  business_control_health: monitored
+  cpu_psi_some_avg10_abort_percent: 20.0
+  cpu_psi_full_avg10_abort_percent: 5.0
+  pressure_exceedance_consecutive_seconds: 30
+  minimum_memory_available_bytes: 2147483648
+  unrelated_control_request_error_abort: immediate
+  threshold_validation_status: PROPOSED_UNVALIDATED_REQUIRES_HUMAN_REVIEW
+recovery:
+  independent_systemd_watchdog: required
+  stop_registered_stress_process_only: required
+  node_ready_and_lease: required
+  node_cpu_psi_return_to_clean_band: required
+  no_stress_or_network_residue_on_five_hosts: required
+notes:
+  - Clean CPU Safety v2 headroom applies before injection, not as a during-fault target rule.
+  - Proposed numeric abort thresholds must be independently validated and approved before any real Node stress.
+  - This draft does not authorize qualification or formal cases.

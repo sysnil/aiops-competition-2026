@@ -1,0 +1,21 @@
+status: PREREGISTERED_SHORT_NO_FAULT_ROUTE_PREFLIGHT
+id: S5V3FFR-ROUTE-PREFLIGHT-20261013
+seed: 864090
+duration_seconds: 180
+data_root: /data/stage5-v3/final-fast-ready
+planned_raw_bytes: 5368709120
+fault_injected: false
+formal_case: false
+collector_configuration: original_spike_limit_percentage_25
+target_path: NETWORK_PATH/k8s-worker2/k8s-worker3
+workload:
+  duration_seconds: 180
+  sessions_per_second: 1.4
+  weights: {browse: 20, shopping: 30, checkout: 50}
+  image_per_second: 1
+  cart_per_second: 2
+  control_streams:
+    - {name: image_asset, operation: GET /images/products/OpticalTubeAssembly.jpg, rate_per_second: 1.0, seed_offset: 101}
+    - {name: cart_view, operation: GET /api/cart, rate_per_second: 2.0, seed_offset: 103}
+  control_timeout_seconds: 8
+  control_concurrency_per_stream: {image_asset: 2, cart_view: 4}

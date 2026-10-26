@@ -1,0 +1,120 @@
+{
+  "id": "SF-008-ATTEMPT-08-POD",
+  "status": "PRIVATE_COMPETITION_QUALIFICATION_PREREGISTERED",
+  "at_utc": "2026-10-17T13:45:39.679871+00:00",
+  "layer": "POD",
+  "host": "k8s-worker2",
+  "targets": [
+    {
+      "service": "frontend",
+      "name": "frontend-68d8bbfdc8-8mnzh",
+      "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+      "node": "k8s-worker2",
+      "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+      "restart_count": 0,
+      "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-podd4bb49b4_6fb8_4a07_aaf6_e2caff5df974.slice/cri-containerd-447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e.scope",
+      "pid": 2022249,
+      "start_ticks": "164244306"
+    }
+  ],
+  "targets_and_siblings": [
+    {
+      "service": "frontend",
+      "name": "frontend-68d8bbfdc8-8mnzh",
+      "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+      "node": "k8s-worker2",
+      "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+      "restart_count": 0
+    },
+    {
+      "service": "frontend",
+      "name": "frontend-68d8bbfdc8-c4n85",
+      "uid": "6305d17a-27f0-4dbf-8fc7-7238acb3be91",
+      "node": "k8s-worker1",
+      "container_id": "containerd://71c436f60470eeaf12334e5dd3a69302bbfe16ba1be6f0886260a1b2eb9d0c4e",
+      "restart_count": 0
+    },
+    {
+      "service": "recommendation",
+      "name": "recommendation-c887f6f6b-cxb5j",
+      "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+      "node": "k8s-worker3",
+      "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+      "restart_count": 0
+    },
+    {
+      "service": "recommendation",
+      "name": "recommendation-c887f6f6b-zchkk",
+      "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+      "node": "k8s-worker3",
+      "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+      "restart_count": 0
+    }
+  ],
+  "durations_seconds": [
+    300,
+    300,
+    300
+  ],
+  "duration_seconds": 300,
+  "seed": 910104,
+  "allocation_bytes": 33554432,
+  "contract_sha256": "cffe921ac415fa2bc7d4d76125e18b2a209933b8489dda2699ebb5c65ebbf538",
+  "adapter_sha256": "791481b3e12ce6f64bb77c75acaff7df8000d800081589194ccde5d5ad3f2a92",
+  "holder_sha256": "659a6a5d51521e36fda8e6d83b6245b4400d4137f1b343e50e04ee2759d687d0",
+  "source_lock_sha256": "6fc041ded198e6a93b9d8fb3ee799e1c81b5230e55f17b4c37df36f45fea1a83",
+  "source_sha256": {
+    "/root/ops-competition-2026/plans/competition-fault-admission.yaml": "cffe921ac415fa2bc7d4d76125e18b2a209933b8489dda2699ebb5c65ebbf538",
+    "/root/ops-competition-2026/scripts/competition_adapter.py": "791481b3e12ce6f64bb77c75acaff7df8000d800081589194ccde5d5ad3f2a92",
+    "/root/ops-competition-2026/scripts/resource_memory_holder.py": "659a6a5d51521e36fda8e6d83b6245b4400d4137f1b343e50e04ee2759d687d0",
+    "/root/ops-competition-2026/scripts/competition_observation.py": "f9d6c1bca2527aa0064eccb16e26108719ec08b00fe86a53d8a0fb3941287d89",
+    "/root/ops-competition-2026/scripts/competition_controls.py": "a4a11e9f581bf85970326dae1ba151747a83c96596434e7a3d53ca668ddac8cf",
+    "/root/ops-competition-2026/scripts/competition_preflight.py": "5c73f34f1ba27ccdda6c7dfc9d9fd5cf19ceaf7f91913f2c2251fc95452f1c70",
+    "/root/ops-competition-2026/scripts/competition_qualification.py": "2f110ea7073896dee2287937d66fce5d84384e249affa60acf9d1ce9e9a72cd1",
+    "/root/ops-competition-2026/scripts/competition_baseline_prefix.py": "8b208c6ae4e9209fdf93e8dc7e5236a46f17f0278c249a97a9ad282030329874",
+    "/root/ops-competition-2026/scripts/authorize_competition.py": "9c14daf5dd71bf263e372c3f5115b49e000657bfe64dbc1b1dab4e35f1d56c03",
+    "/root/ops-competition-2026/scripts/prepare_competition_plan.py": "80f429b12dc3acbf1f59ce3f897ff6980fb419be455c46ccbdd094393c236e7a",
+    "/root/ops-competition-2026/scripts/run_competition_qualification.py": "5f1deb3614dc6196756cf6eba2998d084a8f64312a6a9e31ef835e8ae716902c",
+    "/root/cross-layer-observability-control-rehearsal/scripts/workload_generator_rehearsal.py": "5f7291c9b7698af50b66357fe2fcd38ef9eb491a6330db207d578d38f6fe5464",
+    "/root/stage5-v3-observability-diagnostics/snapshots/reference/workload-state-machine-c3.yaml": "e877814f950088c6a692778a23644979e44888f955bcf35496f4ad59c26ad05b",
+    "/root/stage5-v3-autonomous-preparation/design/load-profiles-c3.yaml": "e9893989f9012cb00432ec95aed3af9daa218238a90bd5a82a61fba02888a23d",
+    "/root/cross-layer-workload-generation/design/people.json": "2e780c99cd1950213c798ba086c184b6ae89a98af8a6df4bb190b2e19bcf77ab",
+    "/root/stage5-v3-autonomous-preparation/scripts/fixed_control_load_c3.py": "77a4f1efe10b23f95358b784fcd428d200b922632aeb9e4ef0920b7365dd4b1c",
+    "/root/stage5-v3-autonomous-preparation/scripts/capture_live_c2.py": "417baa3e086e67b1301ff5a2ea496d57dbd097cd405e01059e8371cb84d68d86",
+    "/root/stage5-v3-autonomous-preparation/scripts/trace_storage_reader.py": "686dc664812d7ad6594ecd4240a907cb990e3ac852af6b4b4747235a6e43e7b4",
+    "/root/stage5-v3-clean-gate-v2/scripts/schedule_trace_completion_v2.py": "0d77ebf6ae147c72e97a3ea9660942a649329ff01411fb1329a4e321441ac38a",
+    "/root/stage5-v3-clean-gate-v2/scripts/schedule_trace_v2.py": "a47013ad0102b907a4faff3fb8e43b5fb6f19d7bd9c8f133c7ee4a73cf5fca92",
+    "/root/stage5-v3-clean-gate-v2/scripts/trace_identity.py": "5370f59591582ed0d0fdc5f97e43347e9f0bcfbbce5a002af5e16f164b4c5af9",
+    "/root/stage5-v3-clean-gate-v2/scripts/evaluate_trace_v2.py": "0f434f1b6efd5c3b576d742184b6f1c0f7222e50e057f55a34dabbd29ff06f4a"
+  },
+  "inspection_sha256": "55bf20317075b8b8639cc3316c4fe85c6a61b634e8485d9b7ce82b11449e6055",
+  "prerequisites": [
+    {
+      "id": "COMP-SF01-POD-SHORT",
+      "file": "/root/ops-competition-2026/qualification/COMP-SF01-POD-SHORT/decision.json",
+      "sha256": "c237d3940af65eca17aaa53343d2ed9df12c33348b027058509eb60ee1b94b22"
+    }
+  ],
+  "workload": {
+    "duration_seconds": 900,
+    "control_streams": [
+      {
+        "name": "image_asset",
+        "rate_per_second": 1.0,
+        "seed_offset": 101
+      },
+      {
+        "name": "cart_view",
+        "rate_per_second": 2.0,
+        "seed_offset": 103
+      }
+    ],
+    "control_timeout_seconds": 8,
+    "control_concurrency_per_stream": {
+      "image_asset": 2,
+      "cart_view": 4
+    }
+  },
+  "formal_case": true,
+  "fresh_identity_sha256": "55bf20317075b8b8639cc3316c4fe85c6a61b634e8485d9b7ce82b11449e6055"
+}

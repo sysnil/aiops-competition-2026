@@ -1,0 +1,35 @@
+{
+  "created_at_utc": "2026-10-10T05:17:22.001963+00:00",
+  "experiment_id": "OC-D06-S1",
+  "source_case": "D06_TYPE_SINGLE_POD_PAUSE",
+  "plan_sha256": "e12fc3de078b7e475701316db85a6526b727b1d658e897aadb5c11f57143f396",
+  "design_sha256": "2acfa2ee1596aca0acd24aa866ee362344c14645a7c50d2e76c4ac4fd0770edc",
+  "health_sha256": "ba5f32a9219dbf4e745b497a52ab0dd7e0446cd09acea549629a5498cca95cd8",
+  "identity_audit_sha256": "a1bf96f7af8baec86bc1e4ea1ab56e967301794de58a25e3d3129d3bacf257e9",
+  "control_analysis_sha256": "e7ec0051940d122baae858b0251fc579aca7fd7311a33b5b7907a19630d1e292",
+  "faults_injected": 0,
+  "formal_case_created": false,
+  "gt_read": false,
+  "status": "RH_PREFLIGHT_READY",
+  "selection_policy": "lexicographically_first_ready_pod_uid",
+  "targets": [
+    {
+      "service": "frontend",
+      "name": "frontend-68d8bbfdc8-m8jzl",
+      "uid": "61bce249-37a1-4267-8f80-6f0e9617693c",
+      "pod_ip": "10.244.126.53",
+      "node": "k8s-worker2",
+      "container_id": "containerd://a616f6944bc3ca135febbc1bab6391c3834a8f62f60f0b6e4156c5f0875489d2"
+    }
+  ],
+  "controls": [
+    {
+      "service": "frontend",
+      "name": "frontend-68d8bbfdc8-6fshv",
+      "uid": "819ed018-af80-4b15-b513-40ce0b75c166",
+      "pod_ip": "10.244.126.54",
+      "node": "k8s-worker2",
+      "container_id": "containerd://a3a8eaa773679cca2b169fe3155219025c2c0be857390f9c794a407dad85c502"
+    }
+  ]
+}

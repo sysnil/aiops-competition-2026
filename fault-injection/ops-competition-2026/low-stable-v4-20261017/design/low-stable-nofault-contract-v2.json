@@ -1,0 +1,85 @@
+{
+  "collector_config_sha256": "ad42e84b2a1d25b6b9b716f2a119f8d3ab6c50a975b860f3a8eed939618dd05f",
+  "created_utc": "2026-10-17T01:13:51.297070+00:00",
+  "criteria": {
+    "all_expected_sampled_request_proxy_match_fraction": 1.0,
+    "all_receiver_refused_signal_deltas": 0,
+    "all_three_modalities_each_minute": true,
+    "chunk_seconds": 300,
+    "collector_restarts_or_oom": 0,
+    "collector_working_set_stop_bytes": 398458880,
+    "control_p95_ratio_max": 1.25,
+    "control_successes_per_minute_min": 30,
+    "duration_seconds": 1800,
+    "exporter_queue_final_growth_bytes_max": 1048576,
+    "exporter_queue_peak_capacity_fraction_max": 0.01,
+    "log_trace_storage_age_seconds_max": 60,
+    "no_business_fault": true,
+    "opensearch_parent_breaker_new_trips": 0,
+    "target_successes_per_minute_min": 30,
+    "trace_audit_offsets_seconds": [
+      5,
+      60,
+      120,
+      240
+    ],
+    "unexplained_missing_request_ids": 0
+  },
+  "faults_allowed": false,
+  "runs": {
+    "VAL2": {
+      "duration_seconds": 1800,
+      "seed": 751702
+    }
+  },
+  "source_sha256": {
+    "/root/cross-layer-observability-control-rehearsal/scripts/workload_generator_rehearsal.py": "5f7291c9b7698af50b66357fe2fcd38ef9eb491a6330db207d578d38f6fe5464",
+    "/root/cross-layer-workload-generation/design/people.json": "2e780c99cd1950213c798ba086c184b6ae89a98af8a6df4bb190b2e19bcf77ab",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/capture_live_c2.py": "a0b36a73d64d563fa7a733e821eddddb0a6ad55a0b9017482b5f846d12cef4f6",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/trace_storage_reader.py": "1b6bc74480e43a8e83d6508f6a8cc47a8ea09bdd57fe577b9f268c014126adb6",
+    "/root/ops-competition-2026/low-stable-v4-20261017/design/load-profiles-v4b.yaml": "a2ec4d8c830408c5ce4b513c8ed01c415d5aeac1728bbd92c9d5726128ddad94",
+    "/root/ops-competition-2026/low-stable-v4-20261017/validation-v2/common.py": "8dccd5ca94ef6436e84e0455dd04c1b558d0f60ee956fb71c9ad9c661d86d7cb",
+    "/root/ops-competition-2026/low-stable-v4-20261017/validation-v2/evaluate.py": "95e6002a179902a4083745cc0f72697f04ce5e7c0ec1c244d8ec86180db3936a",
+    "/root/ops-competition-2026/low-stable-v4-20261017/validation-v2/fixed_business_streams_v4.py": "d926119748c3f1dc59f937a834e05549e3994691526025dadfb5bcd8279006dd",
+    "/root/ops-competition-2026/low-stable-v4-20261017/validation-v2/observation.py": "0b292422ebdc52e78ea1c59a6176120ba76de97fe5cdc87174a23b0cd360008e",
+    "/root/ops-competition-2026/low-stable-v4-20261017/validation-v2/run_validation.py": "9c4910bef1c59f8a25e341441042eaeb4a414498abb3b3e7de27135b0f0c288d",
+    "/root/stage5-v3-clean-gate-v2/scripts/schedule_trace_completion_v2.py": "0d77ebf6ae147c72e97a3ea9660942a649329ff01411fb1329a4e321441ac38a",
+    "/root/stage5-v3-clean-gate-v2/scripts/schedule_trace_v2.py": "a47013ad0102b907a4faff3fb8e43b5fb6f19d7bd9c8f133c7ee4a73cf5fca92",
+    "/root/stage5-v3-observability-diagnostics/snapshots/reference/workload-state-machine-c3.yaml": "e877814f950088c6a692778a23644979e44888f955bcf35496f4ad59c26ad05b"
+  },
+  "status": "PREREGISTERED_LOW_STABLE_NOFAULT_1800S",
+  "workload": {
+    "arrival_rate_sessions_per_second": 0.7,
+    "control_concurrency_per_stream": {
+      "cart_view": 3,
+      "home": 3,
+      "image_asset": 3,
+      "recommendations": 3
+    },
+    "control_streams": [
+      {
+        "name": "image_asset",
+        "rate_per_second": 1.0,
+        "seed_offset": 101
+      },
+      {
+        "name": "cart_view",
+        "rate_per_second": 1.0,
+        "seed_offset": 103
+      },
+      {
+        "name": "home",
+        "rate_per_second": 1.0,
+        "seed_offset": 107
+      },
+      {
+        "name": "recommendations",
+        "rate_per_second": 1.0,
+        "seed_offset": 109
+      }
+    ],
+    "control_timeout_seconds": 8,
+    "policy_name": "LOW_STABLE",
+    "profile": "LOW"
+  }
+}

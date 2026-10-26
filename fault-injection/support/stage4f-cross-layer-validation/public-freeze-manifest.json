@@ -1,0 +1,348 @@
+{
+  "status": "STAGE4F_PUBLIC_BUNDLES_FROZEN_BEFORE_INFERENCE",
+  "contract_freeze_sha256": "52710b1ceb7ef3b1c4cf904df30a777b7c7adbcffc28d0cdbd6dc2ce991f6b74",
+  "preflight_freeze_sha256": {
+    "F01": "7874ff394ab68eb5ea09bb749cd54d3ea76d745744d22ee4e718f7670d12dede",
+    "F02": "bf94a2589ca15cbff481205db18bfcb85253c743e9bd20dd8d36e670536fe594",
+    "F03": "21eab98d0b8837e073eebcee02ce56e0c8ca01245bb3dd495507e68da255d53f",
+    "F04": "aa3d31c87ad8ee5ae9ed8cebe20e9ced1ba952286dc8bc2cdca7660e19dbc068"
+  },
+  "files": {
+    "cases/F01/public/variant-a/bundle.json": {
+      "sha256": "e658403bbc2e66438422092f5b0a3a0cd0004a888c6af0b959c536f6bfca14c6",
+      "bytes": 20913468
+    },
+    "cases/F01/public/variant-a/case-quality.json": {
+      "sha256": "1add7cfcf100a72476ddd24a5528ac5c7689b0c880d38b3322057f963f8464f2",
+      "bytes": 144
+    },
+    "cases/F01/public/variant-a/kubernetes/metadata.json": {
+      "sha256": "a32d58c391c994b515e709ca8d1b3d4a2d04765abf8a6a2d374c174e2b3b7c08",
+      "bytes": 8847
+    },
+    "cases/F01/public/variant-a/logs/observations.json": {
+      "sha256": "5f970201508f5a24ae9e0ea9318d484d739c580f062448c8f48cee82ec1f2876",
+      "bytes": 6026507
+    },
+    "cases/F01/public/variant-a/metrics/observations.json": {
+      "sha256": "7037cea5b59bbe5b9e97c75c8c3bd1ad6b23d11675b0aaad0f9e67df8d496bff",
+      "bytes": 832143
+    },
+    "cases/F01/public/variant-a/node-placement.json": {
+      "sha256": "620bbbe4dbbe6f995f86d24560f303c7d6932ce63eea71046e9126508d902459",
+      "bytes": 145
+    },
+    "cases/F01/public/variant-a/pod-placement.json": {
+      "sha256": "dc896863b54f6357bfe1157f724eefcdc5c4e7a0d8ece84b0d9f1ee8b4d466d7",
+      "bytes": 7340
+    },
+    "cases/F01/public/variant-a/service-topology.json": {
+      "sha256": "f30ec9263121ae5e18ed851295fbb761685b8d1d567019e85505ba4276ab6147",
+      "bytes": 1002
+    },
+    "cases/F01/public/variant-a/traces/observations.json": {
+      "sha256": "97e01ee68765b2d099456e4c74b0ade051ecab7d64cc16c6e8b72ea74f5a3463",
+      "bytes": 13894620
+    },
+    "cases/F01/public/variant-b/bundle.json": {
+      "sha256": "b266d4deb0da84642392adc22a42de938f0e8c36cfc57bbaf6b6a7a9c7dd0166",
+      "bytes": 20931291
+    },
+    "cases/F01/public/variant-b/case-quality.json": {
+      "sha256": "1add7cfcf100a72476ddd24a5528ac5c7689b0c880d38b3322057f963f8464f2",
+      "bytes": 144
+    },
+    "cases/F01/public/variant-b/edge-path-map.json": {
+      "sha256": "c8cf8c7f8592465ab1aa3553ddb7c5eacad12a2fd91b1a9073448d27e68143da",
+      "bytes": 3117
+    },
+    "cases/F01/public/variant-b/kubernetes/metadata.json": {
+      "sha256": "a32d58c391c994b515e709ca8d1b3d4a2d04765abf8a6a2d374c174e2b3b7c08",
+      "bytes": 8847
+    },
+    "cases/F01/public/variant-b/logs/observations.json": {
+      "sha256": "5f970201508f5a24ae9e0ea9318d484d739c580f062448c8f48cee82ec1f2876",
+      "bytes": 6026507
+    },
+    "cases/F01/public/variant-b/metrics/observations.json": {
+      "sha256": "9ecd56120f68b60bdacb8147c226c94e20b277279e80c9575255b8108da5ff7b",
+      "bytes": 832185
+    },
+    "cases/F01/public/variant-b/network-paths.json": {
+      "sha256": "9075c50d366e1f8988732bcf5215519532ba4a129f5f3fddbf6800477903c130",
+      "bytes": 8839
+    },
+    "cases/F01/public/variant-b/node-placement.json": {
+      "sha256": "620bbbe4dbbe6f995f86d24560f303c7d6932ce63eea71046e9126508d902459",
+      "bytes": 145
+    },
+    "cases/F01/public/variant-b/normal-network-observations.json": {
+      "sha256": "32685d6808be9cb843868109a13004c621c2f7e64aae5588f140268fbde0a425",
+      "bytes": 7254
+    },
+    "cases/F01/public/variant-b/pod-placement.json": {
+      "sha256": "dc896863b54f6357bfe1157f724eefcdc5c4e7a0d8ece84b0d9f1ee8b4d466d7",
+      "bytes": 7340
+    },
+    "cases/F01/public/variant-b/service-topology.json": {
+      "sha256": "f30ec9263121ae5e18ed851295fbb761685b8d1d567019e85505ba4276ab6147",
+      "bytes": 1002
+    },
+    "cases/F01/public/variant-b/traces/observations.json": {
+      "sha256": "97e01ee68765b2d099456e4c74b0ade051ecab7d64cc16c6e8b72ea74f5a3463",
+      "bytes": 13894620
+    },
+    "cases/F02/public/variant-a/bundle.json": {
+      "sha256": "be8a56cda3678c650de71dc78f52e54604935baa3f4f0793ab172eb2c61a5af9",
+      "bytes": 21941704
+    },
+    "cases/F02/public/variant-a/case-quality.json": {
+      "sha256": "1add7cfcf100a72476ddd24a5528ac5c7689b0c880d38b3322057f963f8464f2",
+      "bytes": 144
+    },
+    "cases/F02/public/variant-a/kubernetes/metadata.json": {
+      "sha256": "a32d58c391c994b515e709ca8d1b3d4a2d04765abf8a6a2d374c174e2b3b7c08",
+      "bytes": 8847
+    },
+    "cases/F02/public/variant-a/logs/observations.json": {
+      "sha256": "7c1a6cf0d870e000ec073721475341bf74721848b226dbedb552ee9dd1c91fc9",
+      "bytes": 6284598
+    },
+    "cases/F02/public/variant-a/metrics/observations.json": {
+      "sha256": "f7f7ef9e8ac745a22507124a140f359aff2249a215a1fc93c6091abc13e48b3d",
+      "bytes": 832207
+    },
+    "cases/F02/public/variant-a/node-placement.json": {
+      "sha256": "620bbbe4dbbe6f995f86d24560f303c7d6932ce63eea71046e9126508d902459",
+      "bytes": 145
+    },
+    "cases/F02/public/variant-a/pod-placement.json": {
+      "sha256": "dc896863b54f6357bfe1157f724eefcdc5c4e7a0d8ece84b0d9f1ee8b4d466d7",
+      "bytes": 7340
+    },
+    "cases/F02/public/variant-a/service-topology.json": {
+      "sha256": "f30ec9263121ae5e18ed851295fbb761685b8d1d567019e85505ba4276ab6147",
+      "bytes": 1002
+    },
+    "cases/F02/public/variant-a/traces/observations.json": {
+      "sha256": "bdc3444c79ee0b469681aa3c472e0fbb52e3097d01286858048e1c946a7b7043",
+      "bytes": 14661249
+    },
+    "cases/F02/public/variant-b/bundle.json": {
+      "sha256": "c643fa7a0d68b55dfb8a98c87a736a2bebcbb91314340882386897ba68c5cd16",
+      "bytes": 21959521
+    },
+    "cases/F02/public/variant-b/case-quality.json": {
+      "sha256": "1add7cfcf100a72476ddd24a5528ac5c7689b0c880d38b3322057f963f8464f2",
+      "bytes": 144
+    },
+    "cases/F02/public/variant-b/edge-path-map.json": {
+      "sha256": "c8cf8c7f8592465ab1aa3553ddb7c5eacad12a2fd91b1a9073448d27e68143da",
+      "bytes": 3117
+    },
+    "cases/F02/public/variant-b/kubernetes/metadata.json": {
+      "sha256": "a32d58c391c994b515e709ca8d1b3d4a2d04765abf8a6a2d374c174e2b3b7c08",
+      "bytes": 8847
+    },
+    "cases/F02/public/variant-b/logs/observations.json": {
+      "sha256": "7c1a6cf0d870e000ec073721475341bf74721848b226dbedb552ee9dd1c91fc9",
+      "bytes": 6284598
+    },
+    "cases/F02/public/variant-b/metrics/observations.json": {
+      "sha256": "e8de93e6d54bd7f78f4948a4e29a8a5cbee3e8d74cc8e80d0d1c8025f25284c7",
+      "bytes": 832249
+    },
+    "cases/F02/public/variant-b/network-paths.json": {
+      "sha256": "9075c50d366e1f8988732bcf5215519532ba4a129f5f3fddbf6800477903c130",
+      "bytes": 8839
+    },
+    "cases/F02/public/variant-b/node-placement.json": {
+      "sha256": "620bbbe4dbbe6f995f86d24560f303c7d6932ce63eea71046e9126508d902459",
+      "bytes": 145
+    },
+    "cases/F02/public/variant-b/normal-network-observations.json": {
+      "sha256": "f0c02af248cdef8458b06e7bb50702b4746be3c6cc5f8fe984b2eab08244746f",
+      "bytes": 7249
+    },
+    "cases/F02/public/variant-b/pod-placement.json": {
+      "sha256": "dc896863b54f6357bfe1157f724eefcdc5c4e7a0d8ece84b0d9f1ee8b4d466d7",
+      "bytes": 7340
+    },
+    "cases/F02/public/variant-b/service-topology.json": {
+      "sha256": "f30ec9263121ae5e18ed851295fbb761685b8d1d567019e85505ba4276ab6147",
+      "bytes": 1002
+    },
+    "cases/F02/public/variant-b/traces/observations.json": {
+      "sha256": "bdc3444c79ee0b469681aa3c472e0fbb52e3097d01286858048e1c946a7b7043",
+      "bytes": 14661249
+    },
+    "cases/F03/public/variant-a/bundle.json": {
+      "sha256": "41074f85fab23787ffb46dea462e7730b36a6394680d2569bdb6127d6bffda0a",
+      "bytes": 23038845
+    },
+    "cases/F03/public/variant-a/case-quality.json": {
+      "sha256": "1add7cfcf100a72476ddd24a5528ac5c7689b0c880d38b3322057f963f8464f2",
+      "bytes": 144
+    },
+    "cases/F03/public/variant-a/kubernetes/metadata.json": {
+      "sha256": "a32d58c391c994b515e709ca8d1b3d4a2d04765abf8a6a2d374c174e2b3b7c08",
+      "bytes": 8847
+    },
+    "cases/F03/public/variant-a/logs/observations.json": {
+      "sha256": "d612e96392bb0a0e634326f1336ca9dfebe66b6d63292a0ea7cb4274c4a2d88c",
+      "bytes": 6608397
+    },
+    "cases/F03/public/variant-a/metrics/observations.json": {
+      "sha256": "d9fe92f2ef10ef7ba9d28c2a17b19438a4d18a9b250c94019437f3351e4f6dfb",
+      "bytes": 832373
+    },
+    "cases/F03/public/variant-a/node-placement.json": {
+      "sha256": "620bbbe4dbbe6f995f86d24560f303c7d6932ce63eea71046e9126508d902459",
+      "bytes": 145
+    },
+    "cases/F03/public/variant-a/pod-placement.json": {
+      "sha256": "dc896863b54f6357bfe1157f724eefcdc5c4e7a0d8ece84b0d9f1ee8b4d466d7",
+      "bytes": 7340
+    },
+    "cases/F03/public/variant-a/service-topology.json": {
+      "sha256": "f30ec9263121ae5e18ed851295fbb761685b8d1d567019e85505ba4276ab6147",
+      "bytes": 1002
+    },
+    "cases/F03/public/variant-a/traces/observations.json": {
+      "sha256": "9f0e9212992c4ac477979b545bccc9db0dcfccb941b4b18dcde27a5a98d9959c",
+      "bytes": 15435036
+    },
+    "cases/F03/public/variant-b/bundle.json": {
+      "sha256": "3e33467922420f21bf3e8f0f9bf22848f29bffb5eabc30cec3ce3a5d97004a3c",
+      "bytes": 23056666
+    },
+    "cases/F03/public/variant-b/case-quality.json": {
+      "sha256": "1add7cfcf100a72476ddd24a5528ac5c7689b0c880d38b3322057f963f8464f2",
+      "bytes": 144
+    },
+    "cases/F03/public/variant-b/edge-path-map.json": {
+      "sha256": "c8cf8c7f8592465ab1aa3553ddb7c5eacad12a2fd91b1a9073448d27e68143da",
+      "bytes": 3117
+    },
+    "cases/F03/public/variant-b/kubernetes/metadata.json": {
+      "sha256": "a32d58c391c994b515e709ca8d1b3d4a2d04765abf8a6a2d374c174e2b3b7c08",
+      "bytes": 8847
+    },
+    "cases/F03/public/variant-b/logs/observations.json": {
+      "sha256": "d612e96392bb0a0e634326f1336ca9dfebe66b6d63292a0ea7cb4274c4a2d88c",
+      "bytes": 6608397
+    },
+    "cases/F03/public/variant-b/metrics/observations.json": {
+      "sha256": "e36fa3822b6c5c2c8b2692b8c1fb9042b9815a1ac3e89b671fe55193937f0717",
+      "bytes": 832415
+    },
+    "cases/F03/public/variant-b/network-paths.json": {
+      "sha256": "9075c50d366e1f8988732bcf5215519532ba4a129f5f3fddbf6800477903c130",
+      "bytes": 8839
+    },
+    "cases/F03/public/variant-b/node-placement.json": {
+      "sha256": "620bbbe4dbbe6f995f86d24560f303c7d6932ce63eea71046e9126508d902459",
+      "bytes": 145
+    },
+    "cases/F03/public/variant-b/normal-network-observations.json": {
+      "sha256": "d72528766be7682441460d237e03fdc1eb1355282a66eb5fc6bcba4842163c83",
+      "bytes": 7253
+    },
+    "cases/F03/public/variant-b/pod-placement.json": {
+      "sha256": "dc896863b54f6357bfe1157f724eefcdc5c4e7a0d8ece84b0d9f1ee8b4d466d7",
+      "bytes": 7340
+    },
+    "cases/F03/public/variant-b/service-topology.json": {
+      "sha256": "f30ec9263121ae5e18ed851295fbb761685b8d1d567019e85505ba4276ab6147",
+      "bytes": 1002
+    },
+    "cases/F03/public/variant-b/traces/observations.json": {
+      "sha256": "9f0e9212992c4ac477979b545bccc9db0dcfccb941b4b18dcde27a5a98d9959c",
+      "bytes": 15435036
+    },
+    "cases/F04/public/variant-a/bundle.json": {
+      "sha256": "5a0929ce1ea96e25c2e20357f79c215237148af4b344ace4b09fb7c67ecfc149",
+      "bytes": 20235246
+    },
+    "cases/F04/public/variant-a/case-quality.json": {
+      "sha256": "1add7cfcf100a72476ddd24a5528ac5c7689b0c880d38b3322057f963f8464f2",
+      "bytes": 144
+    },
+    "cases/F04/public/variant-a/kubernetes/metadata.json": {
+      "sha256": "a32d58c391c994b515e709ca8d1b3d4a2d04765abf8a6a2d374c174e2b3b7c08",
+      "bytes": 8847
+    },
+    "cases/F04/public/variant-a/logs/observations.json": {
+      "sha256": "610a168c0ce6baa4a010c2b99b8f45465b35bb30f3cbfd5460a1556bb3593136",
+      "bytes": 5787105
+    },
+    "cases/F04/public/variant-a/metrics/observations.json": {
+      "sha256": "a14ca4ff1fec813865c2dc7cc450f40e2d5c10cacd8384f6350aa912961373ba",
+      "bytes": 832399
+    },
+    "cases/F04/public/variant-a/node-placement.json": {
+      "sha256": "620bbbe4dbbe6f995f86d24560f303c7d6932ce63eea71046e9126508d902459",
+      "bytes": 145
+    },
+    "cases/F04/public/variant-a/pod-placement.json": {
+      "sha256": "dc896863b54f6357bfe1157f724eefcdc5c4e7a0d8ece84b0d9f1ee8b4d466d7",
+      "bytes": 7340
+    },
+    "cases/F04/public/variant-a/service-topology.json": {
+      "sha256": "f30ec9263121ae5e18ed851295fbb761685b8d1d567019e85505ba4276ab6147",
+      "bytes": 1002
+    },
+    "cases/F04/public/variant-a/traces/observations.json": {
+      "sha256": "c8de3f735ce935f49d366346da394100523870f02c4773de68f76ce8213015c7",
+      "bytes": 13453230
+    },
+    "cases/F04/public/variant-b/bundle.json": {
+      "sha256": "9e9132949175c859b6cf7f23f13d680ee995efa46389f83d30ef27eda80372f6",
+      "bytes": 20253067
+    },
+    "cases/F04/public/variant-b/case-quality.json": {
+      "sha256": "1add7cfcf100a72476ddd24a5528ac5c7689b0c880d38b3322057f963f8464f2",
+      "bytes": 144
+    },
+    "cases/F04/public/variant-b/edge-path-map.json": {
+      "sha256": "c8cf8c7f8592465ab1aa3553ddb7c5eacad12a2fd91b1a9073448d27e68143da",
+      "bytes": 3117
+    },
+    "cases/F04/public/variant-b/kubernetes/metadata.json": {
+      "sha256": "a32d58c391c994b515e709ca8d1b3d4a2d04765abf8a6a2d374c174e2b3b7c08",
+      "bytes": 8847
+    },
+    "cases/F04/public/variant-b/logs/observations.json": {
+      "sha256": "610a168c0ce6baa4a010c2b99b8f45465b35bb30f3cbfd5460a1556bb3593136",
+      "bytes": 5787105
+    },
+    "cases/F04/public/variant-b/metrics/observations.json": {
+      "sha256": "28aaf23724f4259e80912e86affa05cbd48ba34d3afacf9e1c6355c6f6f151f6",
+      "bytes": 832441
+    },
+    "cases/F04/public/variant-b/network-paths.json": {
+      "sha256": "9075c50d366e1f8988732bcf5215519532ba4a129f5f3fddbf6800477903c130",
+      "bytes": 8839
+    },
+    "cases/F04/public/variant-b/node-placement.json": {
+      "sha256": "620bbbe4dbbe6f995f86d24560f303c7d6932ce63eea71046e9126508d902459",
+      "bytes": 145
+    },
+    "cases/F04/public/variant-b/normal-network-observations.json": {
+      "sha256": "e4e120b2df8f9c3217885207906ca6cad237cce1bd9118b83fc21dd00466267e",
+      "bytes": 7263
+    },
+    "cases/F04/public/variant-b/pod-placement.json": {
+      "sha256": "dc896863b54f6357bfe1157f724eefcdc5c4e7a0d8ece84b0d9f1ee8b4d466d7",
+      "bytes": 7340
+    },
+    "cases/F04/public/variant-b/service-topology.json": {
+      "sha256": "f30ec9263121ae5e18ed851295fbb761685b8d1d567019e85505ba4276ab6147",
+      "bytes": 1002
+    },
+    "cases/F04/public/variant-b/traces/observations.json": {
+      "sha256": "c8de3f735ce935f49d366346da394100523870f02c4773de68f76ce8213015c7",
+      "bytes": 13453230
+    }
+  }
+}

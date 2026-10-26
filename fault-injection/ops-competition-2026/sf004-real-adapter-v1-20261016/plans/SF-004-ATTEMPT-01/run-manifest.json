@@ -1,0 +1,13 @@
+{
+  "schema": "EXPLICIT_RUN_REGISTRY_V1",
+  "run_id": "SF-004-ATTEMPT-01",
+  "backend": "SF004_BOUNDED_HTTP_HOME_DELAY_V1",
+  "plan_path": "/root/ops-competition-2026/sf004-real-adapter-v1-20261016/plans/SF-004-ATTEMPT-01/run-plan.json",
+  "plan_sha256": "f214844a8e3c4252500a45073be531d6295ab2b015880414fde9c474a1479497",
+  "schedule_lock_path": "/root/ops-competition-2026/sf004-real-adapter-v1-20261016/plans/SF-004-ATTEMPT-01/schedule-lock.json",
+  "schedule_lock_sha256": "6e39209ba7d02c0ac15a69d88f782b844b0c17a8233bf221ad48446aac5c3704",
+  "actions": [],
+  "no_worker_timer": true,
+  "controller_unit": "ops-sf004-formal-controller01-20261016",
+  "observer_unit": "ops-sf004-formal-observer01-20261016"
+}

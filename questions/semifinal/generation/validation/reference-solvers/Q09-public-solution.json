@@ -1,0 +1,12 @@
+{
+  "question_id": "Q09",
+  "case_id": "SF-010",
+  "source_public_manifest_sha256": "6598702cfb9edd0cd5476de44e46c5c75191f12583c67c34c86e75a6e8d47a96",
+  "independent_chart_sha256": "65c48e85987dfcbed5c9cef67c17b85c77e5b691375b72ae01a05b7cf7428323",
+  "answers_before_gt_read": [
+    84.508,
+    "2026-10-15T16:47:43.727538+00:00",
+    14.7738
+  ],
+  "chart_points": 30
+}

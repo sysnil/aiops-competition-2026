@@ -1,0 +1,10 @@
+{
+  "mode": "SYNTHETIC_DRY_RUN",
+  "methods": ["OpenRCA-XL", "MicroIRC-original"],
+  "method_layers": {
+    "OpenRCA-XL": ["SERVICE", "POD", "NODE", "NETWORK_PATH"],
+    "MicroIRC-original": ["SERVICE"]
+  },
+  "blocked_methods": ["MicroIRC-original"],
+  "test_method_lock_sha256": "synthetic-lock-no-real-model"
+}

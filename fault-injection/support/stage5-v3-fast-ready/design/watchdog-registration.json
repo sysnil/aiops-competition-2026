@@ -1,0 +1,43 @@
+{
+  "status": "WATCHDOG_TEST_OBJECT_REGISTERED",
+  "created_utc": "2026-10-13T02:59:14.432404+00:00",
+  "cluster": {
+    "context": "kubernetes-admin@kubernetes",
+    "server": "https://192.168.53.52:6443",
+    "namespace_uid": "7030ffb7-b5c5-498b-8895-4a58171240bb",
+    "kubeconfig_path": "/etc/kubernetes/admin.conf",
+    "kubeconfig_owner_only": true
+  },
+  "name": "s5v3-fastready-watchdog-probe-20261013",
+  "object_uid": "31f682b5-2eb5-453a-9a3f-6220d36728b0",
+  "baseline_data_sha256": "ca6565f91099d0877b04441ef79931a313ee611c16bc20ecb11f23e306e24256",
+  "candidate_data_sha256": "83941a10e5b771b3a292d5400439f60567cae5bf846c1cfaee74798be30980dc",
+  "preregistration_sha256": "fac4f2324c2dd4412c3b47b706a7d24bec9a402c289cdc737279aebf7dbd8d0d",
+  "business_pod_uids_before": {
+    "cart-6c888669bc-g76nh": "9b309714-c491-452a-af83-15c5960de71f",
+    "checkout-6767884cf8-v57xw": "89780c7f-a487-4d1e-a2fb-d7abc482c231",
+    "frontend-proxy-844f94c445-w25c9": "0fdcca7f-b125-4993-b329-e83d5570d072",
+    "otel-collector-7f5c5999c-xhnvx": "43eb1a2f-b3a8-43cb-b66e-eb085a8e29b0",
+    "quote-6bb6755bc6-rfqgn": "a226abaa-395b-4c01-8d05-f7ccd1474d67",
+    "shipping-7898d4fcfc-726nf": "5fa727ea-ccb3-4611-abd0-1735465ecc9d"
+  },
+  "original_object": {
+    "apiVersion": "v1",
+    "data": {
+      "marker": "20261013",
+      "state": "BASELINE"
+    },
+    "kind": "ConfigMap",
+    "metadata": {
+      "creationTimestamp": "2026-10-13T02:59:14Z",
+      "labels": {
+        "stage5v3-fastready": "watchdog-probe"
+      },
+      "name": "s5v3-fastready-watchdog-probe-20261013",
+      "namespace": "otel-demo",
+      "resourceVersion": "4634729",
+      "uid": "31f682b5-2eb5-453a-9a3f-6220d36728b0"
+    }
+  },
+  "fault_injected": false
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "SF_REMAINING_NINE_PRODUCTION_DESIGN_V2",
+  "status": "DRAFT_NOT_A_FAULT_PERMISSION",
+  "source_authorization_sha256": "7ffdc7a1688ee1589be7d6a4f2d234dd4f77f206ca5b2aa37b8830da40dcb47b",
+  "historical_plan_sha256": "762ff940a8198e0ef4470614f410edaddab3bc73a277f8a36f04015cc34943f4",
+  "existing_successful_case": "SF-010-ATTEMPT-07",
+  "duration_seconds_each": 1800,
+  "absolute_free_floor_bytes_each_mount": 5000000000,
+  "trace_source": "JAEGER_OPENSEARCH_STORAGE",
+  "load": {"profile": "MEDIUM", "sessions_per_second": 1.4, "image_per_second": 1, "cart_per_second": 2},
+  "mechanism_capabilities": {
+    "SERVICE_PAUSE_30": {"target_selector": "both current recommendation Pods on Worker3", "duration_seconds": 30, "historical_qualification": "COMP-SF01-SERVICE-SHORT", "fresh_target_and_watchdog_required": true},
+    "POD_MEMORY_32M_60": {"target_selector": "current frontend Pod on Worker2 with a separately observed sibling", "duration_seconds": 60, "allocation_bytes": 33554432, "historical_qualification": "COMP-SF01-POD-SHORT", "fresh_target_and_watchdog_required": true},
+    "HTTP_HOME_DELAY_250MS_60": {"target_selector": "ordinary state-machine GET / home requests only", "duration_seconds": 60, "delay_ms": 250, "historical_qualification": "SF30-REQDELAY-MEDIUM-20261015", "fresh_route_and_lease_required": true}
+  },
+  "case_plans": [
+    {"case_id": "SF-003", "seed": 72003, "difficulty_intent": "BASIC_POD_RESOURCE", "events": [{"mechanism": "POD_MEMORY_32M_60", "start_offset_seconds": 600}], "production_status": "NOT_STARTED"},
+    {"case_id": "SF-004", "seed": 72004, "difficulty_intent": "BASIC_HTTP_LATENCY", "events": [{"mechanism": "HTTP_HOME_DELAY_250MS_60", "start_offset_seconds": 900}], "production_status": "NOT_STARTED"},
+    {"case_id": "SF-005", "seed": 72005, "difficulty_intent": "BASIC_SERVICE_OUTAGE", "events": [{"mechanism": "SERVICE_PAUSE_30", "start_offset_seconds": 1200}], "production_status": "NOT_STARTED"},
+    {"case_id": "SF-006", "seed": 72006, "difficulty_intent": "POD_THEN_SERVICE", "events": [{"mechanism": "POD_MEMORY_32M_60", "start_offset_seconds": 600}, {"mechanism": "SERVICE_PAUSE_30", "start_offset_seconds": 960}], "production_status": "NOT_STARTED"},
+    {"case_id": "SF-007", "seed": 72007, "difficulty_intent": "SERVICE_THEN_POD", "events": [{"mechanism": "SERVICE_PAUSE_30", "start_offset_seconds": 600}, {"mechanism": "POD_MEMORY_32M_60", "start_offset_seconds": 960}], "production_status": "NOT_STARTED"},
+    {"case_id": "SF-008", "seed": 72008, "difficulty_intent": "POD_THEN_HTTP", "events": [{"mechanism": "POD_MEMORY_32M_60", "start_offset_seconds": 600}, {"mechanism": "HTTP_HOME_DELAY_250MS_60", "start_offset_seconds": 960}], "production_status": "NOT_STARTED"},
+    {"case_id": "SF-009", "seed": 72009, "difficulty_intent": "HTTP_THEN_SERVICE", "events": [{"mechanism": "HTTP_HOME_DELAY_250MS_60", "start_offset_seconds": 600}, {"mechanism": "SERVICE_PAUSE_30", "start_offset_seconds": 960}], "production_status": "NOT_STARTED", "diversity_review": "Compare against SF-010 reverse order using actual anomalies"},
+    {"case_id": "SF-011", "seed": 72011, "difficulty_intent": "THREE_LAYERED_EPISODES", "events": [{"mechanism": "SERVICE_PAUSE_30", "start_offset_seconds": 600}, {"mechanism": "POD_MEMORY_32M_60", "start_offset_seconds": 960}, {"mechanism": "HTTP_HOME_DELAY_250MS_60", "start_offset_seconds": 1320}], "production_status": "NOT_STARTED", "three_event_time_contract": "NEEDS_INDEPENDENT_NO_FAULT_REHEARSAL"},
+    {"case_id": "SF-012", "seed": 72012, "difficulty_intent": "REVERSED_THREE_EPISODES", "events": [{"mechanism": "HTTP_HOME_DELAY_250MS_60", "start_offset_seconds": 600}, {"mechanism": "POD_MEMORY_32M_60", "start_offset_seconds": 960}, {"mechanism": "SERVICE_PAUSE_30", "start_offset_seconds": 1320}], "production_status": "NOT_STARTED", "three_event_time_contract": "NEEDS_INDEPENDENT_NO_FAULT_REHEARSAL", "diversity_review": "Require actual multimodal differences from SF-011"}
+  ],
+  "case_freeze_rule": "Generate and SHA-pin a distinct execution manifest only after fresh five-host, target, mechanism, time-contract and workload gates pass. Never promote this draft directly to fault permission.",
+  "diversity_rule": "Do not treat differing IDs, seeds or time shifts alone as sufficient. Audit actual public anomaly types, affected entities, propagation and modalities before marking a case ready.",
+  "gt_rule": "Public-only anomaly candidates remain DRAFT_PENDING_HUMAN_REVIEW; injection logs are private review evidence, never scoring labels by themselves."
+}

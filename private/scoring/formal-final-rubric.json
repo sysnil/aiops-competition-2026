@@ -1,0 +1,17 @@
+{
+  "version": "final-balanced-evidence-v2.0",
+  "status": "ACTIVE_FORMAL",
+  "applies_to": "FUTURE_OFFICIAL_FINAL_SUBMISSIONS_ALL_TEAMS",
+  "approved_gt_manifest_sha256": "9049aa9461c61a08bde91a7c5e0c4cb8b9b848c62e92636dcbb567abc295c807",
+  "max_points": 10.0,
+  "strict_positive_credit": true,
+  "type": 40.0,
+  "entity": 20.0,
+  "time": 20.0,
+  "evidence": 20.0,
+  "time_tolerance_seconds": 300,
+  "false_positive_penalty": 2.0,
+  "duplicate_penalty": 2.0,
+  "empty_answer_score": 0.0,
+  "notes": "Uniform pre-competition Final rubric revision. An empty or unverified answer receives no synthetic points. Historical preview and offline demo scores remain unchanged."
+}

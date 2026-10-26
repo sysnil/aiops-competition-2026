@@ -1,0 +1,14 @@
+{
+  "id": "SF-PILOT-01-ATTEMPT-03-SERVICE",
+  "mode": "FAULT",
+  "worker": "k8s-worker3",
+  "unit": "ops-a03-sf-pilot-01-attempt-03-service",
+  "runtime": "/root/ops-competition-2026/attempt03-20261014/runtime/SF-PILOT-01-ATTEMPT-03-SERVICE",
+  "tolerance_seconds": 2,
+  "planned_utc": "2026-10-14T05:56:53.440750+00:00",
+  "scheduler_sha256": "3bcf0779499d817b9294e5e54d60a9959037bedac383dcdca604b8a6f3b28d4d",
+  "registration": "/root/ops-competition-2026/plans/SF-PILOT-01-ATTEMPT-03-SERVICE.json",
+  "registration_sha256": "47da5b2b034226bd8e3459430dedbdcab1004dc873629af2db6356218e609658",
+  "authorization": "/root/ops-competition-2026/attempt03-20261014/runtime/SF-PILOT-01-ATTEMPT-03-SERVICE/authorization.json",
+  "output": "/root/ops-competition-2026/qualification/private-attempts/SF-PILOT-01-ATTEMPT-03-SERVICE"
+}

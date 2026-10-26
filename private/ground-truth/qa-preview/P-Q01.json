@@ -1,0 +1,189 @@
+{
+  "task_type": "SEMIFINAL_QUERY_VISUALIZATION",
+  "question_id": "P-Q01",
+  "case_id": "SF-001",
+  "classification": "DRAFT_PREVIEW_ONLY",
+  "review_status": "PREVIEW_ONLY",
+  "gt_version": "P-Q01-preview-public-recompute-v1",
+  "rubric_version": "semifinal-query-visualization-rubric-1.0",
+  "chart_value_tolerance": 1e-06,
+  "chart_time_tolerance_seconds": 0,
+  "chart": {
+    "chart_type": "line",
+    "title": "checkout Pod - Per-minute Mean Working Set Memory",
+    "x_axis": {
+      "label": "Time",
+      "timezone": "UTC"
+    },
+    "y_axis": {
+      "label": "Working Set Memory",
+      "unit": "MiB"
+    },
+    "series": [
+      {
+        "name": "checkout-6767884cf8-v57xw",
+        "unit": "MiB",
+        "points": [
+          {
+            "timestamp": "2026-10-14T09:12:00Z",
+            "value": 13.152344
+          },
+          {
+            "timestamp": "2026-10-14T09:13:00Z",
+            "value": 13.080078
+          },
+          {
+            "timestamp": "2026-10-14T09:14:00Z",
+            "value": 13.157227
+          },
+          {
+            "timestamp": "2026-10-14T09:15:00Z",
+            "value": 13.341797
+          },
+          {
+            "timestamp": "2026-10-14T09:16:00Z",
+            "value": 13.160156
+          },
+          {
+            "timestamp": "2026-10-14T09:17:00Z",
+            "value": 13.133789
+          },
+          {
+            "timestamp": "2026-10-14T09:18:00Z",
+            "value": 13.072266
+          },
+          {
+            "timestamp": "2026-10-14T09:19:00Z",
+            "value": 12.945312
+          },
+          {
+            "timestamp": "2026-10-14T09:20:00Z",
+            "value": 13.081055
+          },
+          {
+            "timestamp": "2026-10-14T09:21:00Z",
+            "value": 13.098633
+          },
+          {
+            "timestamp": "2026-10-14T09:22:00Z",
+            "value": 13.236328
+          },
+          {
+            "timestamp": "2026-10-14T09:23:00Z",
+            "value": 12.952148
+          },
+          {
+            "timestamp": "2026-10-14T09:24:00Z",
+            "value": 13.282227
+          },
+          {
+            "timestamp": "2026-10-14T09:25:00Z",
+            "value": 13.273438
+          },
+          {
+            "timestamp": "2026-10-14T09:26:00Z",
+            "value": 13.211914
+          },
+          {
+            "timestamp": "2026-10-14T09:27:00Z",
+            "value": 13.338867
+          },
+          {
+            "timestamp": "2026-10-14T09:28:00Z",
+            "value": 13.251953
+          },
+          {
+            "timestamp": "2026-10-14T09:29:00Z",
+            "value": 13.150391
+          },
+          {
+            "timestamp": "2026-10-14T09:30:00Z",
+            "value": 13.131836
+          },
+          {
+            "timestamp": "2026-10-14T09:31:00Z",
+            "value": 13.158203
+          },
+          {
+            "timestamp": "2026-10-14T09:32:00Z",
+            "value": 13.032227
+          },
+          {
+            "timestamp": "2026-10-14T09:33:00Z",
+            "value": 13.240234
+          },
+          {
+            "timestamp": "2026-10-14T09:34:00Z",
+            "value": 13.018555
+          },
+          {
+            "timestamp": "2026-10-14T09:35:00Z",
+            "value": 13.101562
+          },
+          {
+            "timestamp": "2026-10-14T09:36:00Z",
+            "value": 12.996094
+          },
+          {
+            "timestamp": "2026-10-14T09:37:00Z",
+            "value": 13.085938
+          },
+          {
+            "timestamp": "2026-10-14T09:38:00Z",
+            "value": 13.125977
+          },
+          {
+            "timestamp": "2026-10-14T09:39:00Z",
+            "value": 13.076172
+          },
+          {
+            "timestamp": "2026-10-14T09:40:00Z",
+            "value": 13.089844
+          },
+          {
+            "timestamp": "2026-10-14T09:41:00Z",
+            "value": 13.092773
+          },
+          {
+            "timestamp": "2026-10-14T09:42:00Z",
+            "value": 12.96875
+          }
+        ]
+      }
+    ]
+  },
+  "answers": [
+    {
+      "question_index": 1,
+      "unit": "MiB",
+      "value_tolerance": 1e-06,
+      "time_tolerance_seconds": 1.0,
+      "value": 13.341797,
+      "timestamp": "2026-10-14T09:15:00Z"
+    },
+    {
+      "question_index": 2,
+      "unit": "MiB",
+      "value_tolerance": 1e-06,
+      "time_tolerance_seconds": 1.0,
+      "value": 0.330079,
+      "start_time": "2026-10-14T09:23:00Z",
+      "end_time": "2026-10-14T09:24:00Z"
+    },
+    {
+      "question_index": 3,
+      "unit": "MiB",
+      "value_tolerance": 1e-06,
+      "time_tolerance_seconds": 1.0,
+      "value": -0.001709,
+      "start_time": "2026-10-14T09:22:25.156656+00:00",
+      "end_time": "2026-10-14T09:42:25.156656+00:00"
+    }
+  ],
+  "generation": {
+    "method": "independent_duckdb_public_parquet_recompute",
+    "source_manifest_hash": "00ff80c6ee42d1baf5a48b205a1383a01bbabe5ef0c350293b71c0da215a2319",
+    "source_parquet": "metrics.parquet",
+    "generated_at": "2026-10-17T06:16:32.738759+00:00"
+  }
+}

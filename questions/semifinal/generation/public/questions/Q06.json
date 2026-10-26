@@ -1,0 +1,86 @@
+{
+  "question_id": "Q06",
+  "case_id": "SF-005",
+  "title": "Frontend 到商品目录的错误调用数量",
+  "description": "使用已归档的真实监控记录，按下列口径绘制一张分钟时序图并回答三个问题。",
+  "target_entity_type": "CallEdge",
+  "target_entity_id": "frontend -> product-catalog",
+  "modality": "Traces",
+  "time_range": {
+    "start_utc": "2026-10-16T11:23:55.458636+00:00",
+    "end_exclusive_utc": "2026-10-16T11:53:55.458636+00:00"
+  },
+  "query_spec": {
+    "source_file": "traces.parquet",
+    "source_columns": [
+      "start_time",
+      "service",
+      "parent_service",
+      "operation_name",
+      "duration_ms",
+      "status",
+      "attributes"
+    ],
+    "filters": {
+      "entities": [
+        "frontend -> product-catalog"
+      ],
+      "span_kind": "server",
+      "status": "ERROR (case-insensitive exact match)"
+    },
+    "aggregation": "count matching server Spans by 60-second bucket",
+    "time_bucket": {
+      "origin_utc": "2026-10-16T11:23:55.458636+00:00",
+      "width_seconds": 60,
+      "closed": "left",
+      "timestamp_label": "bucket start UTC",
+      "observation_end_exclusive_utc": "2026-10-16T11:53:55.458636+00:00"
+    },
+    "minimum_samples_per_minute": 0,
+    "missing_policy": "null and line gap for insufficient samples; zero only for observed count queries",
+    "counter_reset_policy": "not applicable",
+    "p95_definition": "not applicable",
+    "comparison_minute_ranges": [
+      [
+        0,
+        5
+      ],
+      [
+        10,
+        15
+      ]
+    ],
+    "kind": "edge_error_count",
+    "answer_plan": "window_count"
+  },
+  "chart_requirement": {
+    "chart_count": 1,
+    "type": "line",
+    "x_axis": "UTC bucket start",
+    "y_axis": "error spans/min",
+    "series": [
+      "frontend -> product-catalog"
+    ],
+    "granularity_seconds": 60,
+    "legend_required": false
+  },
+  "questions": [
+    {
+      "id": "A1",
+      "text": "整段时间内共有多少条错误调用边 Span（单位 error spans）？",
+      "answer_format": "number"
+    },
+    {
+      "id": "A2",
+      "text": "错误 Span 数量最多的分钟起点 UTC 是什么？若并列，取最早一分钟。",
+      "answer_format": "time"
+    },
+    {
+      "id": "A3",
+      "text": "从 11:33:55 UTC 起的 5 分钟总数减去从 11:23:55 UTC 起的 5 分钟总数，差是多少（单位 error spans）？",
+      "answer_format": "number"
+    }
+  ],
+  "question_version": "semifinal-query-visualization-candidate-v1",
+  "difficulty": "MEDIUM"
+}

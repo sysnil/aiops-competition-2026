@@ -1,0 +1,934 @@
+{
+  "status": "STAGE4F_PREDICTIONS_FROZEN_BEFORE_GT",
+  "public_freeze_sha256": "bbccfd151d46656f31c44be3455f52d996a5de0c224f91f272de29fb8641e6c8",
+  "files": {
+    "runs/F01/variant-a/CrossLayer-MicroRCA/command.txt": {
+      "sha256": "7984fd0b3e70f97bb4dda7d4b3b5d3e821b947ff2e454639b00daf769ad3f823",
+      "bytes": 879
+    },
+    "runs/F01/variant-a/CrossLayer-MicroRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F01/variant-a/CrossLayer-MicroRCA/prediction.json": {
+      "sha256": "22901006ea8c3558044abc9350bffb597f36d3aaa6d59b424651b17880d878c9",
+      "bytes": 19601
+    },
+    "runs/F01/variant-a/CrossLayer-MicroRCA/run-manifest.json": {
+      "sha256": "0629ba40e8de722a59ab0048550a7f25524e5e074337f48f04f2c1630eb246a4",
+      "bytes": 501
+    },
+    "runs/F01/variant-a/CrossLayer-MicroRCA/runtime.json": {
+      "sha256": "b4b9bc5b430e99f8a8d225322f84848e9a5bba84b9f281ce1a2d631946f371d3",
+      "bytes": 162
+    },
+    "runs/F01/variant-a/CrossLayer-MicroRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F01/variant-a/CrossLayer-MicroRCA/stdout.log": {
+      "sha256": "7a8a3111450b9a84692fafd40a4f32838b0ee5ccdcfe688a3e5cf251fa31e5cf",
+      "bytes": 112
+    },
+    "runs/F01/variant-a/CrossLayer-SimpleRCA/command.txt": {
+      "sha256": "86cd8457917aa8f0baecd8141773a281d9b42a24e24f0e06687df68bb578fe3c",
+      "bytes": 890
+    },
+    "runs/F01/variant-a/CrossLayer-SimpleRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F01/variant-a/CrossLayer-SimpleRCA/prediction.json": {
+      "sha256": "b40a3d36ea431c6a219e40d5758e73ea0a12ea81c52c8d0775448959ff348878",
+      "bytes": 13005
+    },
+    "runs/F01/variant-a/CrossLayer-SimpleRCA/run-manifest.json": {
+      "sha256": "2b98e86ee1dea9953219a15aa40a96743cbb67308af8deaafc9cf4e10efbcdba",
+      "bytes": 503
+    },
+    "runs/F01/variant-a/CrossLayer-SimpleRCA/runtime.json": {
+      "sha256": "ede45f56604cb0e52306d22fff6408b689191d2303c1e9577798a36212f72a75",
+      "bytes": 163
+    },
+    "runs/F01/variant-a/CrossLayer-SimpleRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F01/variant-a/CrossLayer-SimpleRCA/stdout.log": {
+      "sha256": "47a884d25d5884e58f68ed08986e47169bb5a86713aa3aa1f8e1ff3def626054",
+      "bytes": 112
+    },
+    "runs/F01/variant-a/OpenRCA-XL/command.txt": {
+      "sha256": "1a5163a869217621c12dca1cd5648c84491e8778d507b5e751c6a0c4bb563860",
+      "bytes": 470
+    },
+    "runs/F01/variant-a/OpenRCA-XL/endpoint-audit.json": {
+      "sha256": "36c8d47ebb07c85239538d5ff4fb3baae0d1b0b2ebd0af48e76ca7ba6f9cf13b",
+      "bytes": 677
+    },
+    "runs/F01/variant-a/OpenRCA-XL/isolation-audit.json": {
+      "sha256": "2fa18bd0d83c416255f303c0ce20a58ac497102afec6c3e3d065423e843ef540",
+      "bytes": 188
+    },
+    "runs/F01/variant-a/OpenRCA-XL/prediction.json": {
+      "sha256": "71b8d539fe6bbd511af588e9731302dc836ffe5131dfac32138cbf4f85c138fb",
+      "bytes": 327
+    },
+    "runs/F01/variant-a/OpenRCA-XL/run-manifest.json": {
+      "sha256": "75f6a24d8bc202c58e2c37d335e32cc265c83bd92d4461f579e1a757290f84a6",
+      "bytes": 523
+    },
+    "runs/F01/variant-a/OpenRCA-XL/runtime.json": {
+      "sha256": "429059385f0873028487f0792223b87367165a76c6de33647243dd9fb66f2670",
+      "bytes": 162
+    },
+    "runs/F01/variant-a/OpenRCA-XL/stderr.log": {
+      "sha256": "69f5483e4834e4264e9a94b7339314097a42f20b7101e8ad7dc3d47826675c0c",
+      "bytes": 679
+    },
+    "runs/F01/variant-a/OpenRCA-XL/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F01/variant-b/CrossLayer-MicroRCA/command.txt": {
+      "sha256": "84522fa3861a005c9d73fe77952f0568a675a516249ed0dbee664181dda1cb1d",
+      "bytes": 879
+    },
+    "runs/F01/variant-b/CrossLayer-MicroRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F01/variant-b/CrossLayer-MicroRCA/prediction.json": {
+      "sha256": "ca3bc8448572570d52390c71a1458cb84d20b668f8d19315a4e061518585985c",
+      "bytes": 20374
+    },
+    "runs/F01/variant-b/CrossLayer-MicroRCA/run-manifest.json": {
+      "sha256": "fbc00f8e2576385cc84b883e90feb8310c104a1a44995604996e0bff83ee91fd",
+      "bytes": 500
+    },
+    "runs/F01/variant-b/CrossLayer-MicroRCA/runtime.json": {
+      "sha256": "d1e543683f72973d28d4d020f834e6c7c13c142c8bf7cb495797e9c7e265f26c",
+      "bytes": 162
+    },
+    "runs/F01/variant-b/CrossLayer-MicroRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F01/variant-b/CrossLayer-MicroRCA/stdout.log": {
+      "sha256": "7a8a3111450b9a84692fafd40a4f32838b0ee5ccdcfe688a3e5cf251fa31e5cf",
+      "bytes": 112
+    },
+    "runs/F01/variant-b/CrossLayer-SimpleRCA/command.txt": {
+      "sha256": "4b312975f1f4d17bb2a150b86dc71179b01b1d7c93270e1e4c3ffae04528c08f",
+      "bytes": 890
+    },
+    "runs/F01/variant-b/CrossLayer-SimpleRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F01/variant-b/CrossLayer-SimpleRCA/prediction.json": {
+      "sha256": "97afc1c8069cc0d33f9cea08b60492599ab4bd050c3b2c693f850d9a01fa747e",
+      "bytes": 13153
+    },
+    "runs/F01/variant-b/CrossLayer-SimpleRCA/run-manifest.json": {
+      "sha256": "57f99ed74a0f3f4dc881e0618299c73953d4a8383cb06b661d246133fee5d787",
+      "bytes": 502
+    },
+    "runs/F01/variant-b/CrossLayer-SimpleRCA/runtime.json": {
+      "sha256": "d59c10e31dd77e5179628b4ec3565d93f1f3a9889a8a0ce1194d6dabb14fba06",
+      "bytes": 163
+    },
+    "runs/F01/variant-b/CrossLayer-SimpleRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F01/variant-b/CrossLayer-SimpleRCA/stdout.log": {
+      "sha256": "47a884d25d5884e58f68ed08986e47169bb5a86713aa3aa1f8e1ff3def626054",
+      "bytes": 112
+    },
+    "runs/F01/variant-b/MicroIRC-XL/command.txt": {
+      "sha256": "057203c6fedd7f4c8b664766cd09d4fb55da43c547b45f7ac48a5764b5af2ba0",
+      "bytes": 893
+    },
+    "runs/F01/variant-b/MicroIRC-XL/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F01/variant-b/MicroIRC-XL/prediction.json": {
+      "sha256": "7ea35da9014acd1c577fdc76524459cfb0d8b5c47beec024a3415d10c4f51797",
+      "bytes": 6642
+    },
+    "runs/F01/variant-b/MicroIRC-XL/run-manifest.json": {
+      "sha256": "ef09f003c69ff6e4f8c3a8fe32126c5c1e5421197c1b98181a24a89900273f23",
+      "bytes": 678
+    },
+    "runs/F01/variant-b/MicroIRC-XL/runtime.json": {
+      "sha256": "01124fb8970dd70b23622d7ea1cd170aa7f4694087ad0e65b3fcb97a4513cc77",
+      "bytes": 162
+    },
+    "runs/F01/variant-b/MicroIRC-XL/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F01/variant-b/MicroIRC-XL/stdout.log": {
+      "sha256": "45bb9c587a25aed64e9903582b2a4280f801027057a7d32a2d3ee8d814972826",
+      "bytes": 88
+    },
+    "runs/F01/variant-b/MicroIRC-original/command.txt": {
+      "sha256": "8d6b707dc698f5d506d31f3d9dfc3d3cb6b98f5648ea87e01aa6dbacbf608ead",
+      "bytes": 905
+    },
+    "runs/F01/variant-b/MicroIRC-original/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F01/variant-b/MicroIRC-original/prediction.json": {
+      "sha256": "e5209cee43f9892557b172826642c9c7d173f379de9c73e8374c60871c5480aa",
+      "bytes": 6648
+    },
+    "runs/F01/variant-b/MicroIRC-original/run-manifest.json": {
+      "sha256": "a3d40c7b4bab82a02cb330c9c4cb8700896bc70346dfece108cd91c6863f2ffb",
+      "bytes": 685
+    },
+    "runs/F01/variant-b/MicroIRC-original/runtime.json": {
+      "sha256": "1266ed935f3e7046ba533447d6ecabdb6ed70d72369a62d4975f9cd18d194e5e",
+      "bytes": 163
+    },
+    "runs/F01/variant-b/MicroIRC-original/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F01/variant-b/MicroIRC-original/stdout.log": {
+      "sha256": "0806964141b0a67ac34de6c58f697665ae0dd36ebac31a09153d5d8d44a902c7",
+      "bytes": 94
+    },
+    "runs/F01/variant-b/OpenRCA-XL/command.txt": {
+      "sha256": "c709245dbcfe6493f1b703f5f35803e8a2c55d1ce37ffa18134baffbc39f33dd",
+      "bytes": 470
+    },
+    "runs/F01/variant-b/OpenRCA-XL/endpoint-audit.json": {
+      "sha256": "e08e164ae1a13ffac3a7bb052156d35224324000009fad2d2699bdc5e16d81cb",
+      "bytes": 677
+    },
+    "runs/F01/variant-b/OpenRCA-XL/isolation-audit.json": {
+      "sha256": "2fa18bd0d83c416255f303c0ce20a58ac497102afec6c3e3d065423e843ef540",
+      "bytes": 188
+    },
+    "runs/F01/variant-b/OpenRCA-XL/prediction.json": {
+      "sha256": "5f0d67c6c4368c04f663a0c84748c455cf44853e6bea923fc5a6e3380427ef1f",
+      "bytes": 327
+    },
+    "runs/F01/variant-b/OpenRCA-XL/run-manifest.json": {
+      "sha256": "7b5b0e9a1bfc427bc4598b705c3d8db5134699be1af57e2126091586ef457b3a",
+      "bytes": 522
+    },
+    "runs/F01/variant-b/OpenRCA-XL/runtime.json": {
+      "sha256": "88b5ff7c2b8cce0408907ff540420f26541ca4ba5c929cb978e7d2a6ed588850",
+      "bytes": 161
+    },
+    "runs/F01/variant-b/OpenRCA-XL/stderr.log": {
+      "sha256": "69f5483e4834e4264e9a94b7339314097a42f20b7101e8ad7dc3d47826675c0c",
+      "bytes": 679
+    },
+    "runs/F01/variant-b/OpenRCA-XL/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F02/variant-a/CrossLayer-MicroRCA/command.txt": {
+      "sha256": "0aef10a58b6a022c706b096a8c721872ab01e10c307897b004b962f12867b3e7",
+      "bytes": 879
+    },
+    "runs/F02/variant-a/CrossLayer-MicroRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F02/variant-a/CrossLayer-MicroRCA/prediction.json": {
+      "sha256": "6dc773fa94a4d62fcb095a0d936197e9e084f6dccac4204e8039f803c1e3a57f",
+      "bytes": 19717
+    },
+    "runs/F02/variant-a/CrossLayer-MicroRCA/run-manifest.json": {
+      "sha256": "a18c04b714ea181682a8012d6ca86c24efe2c260acf278e9d56c7f72a1435aef",
+      "bytes": 501
+    },
+    "runs/F02/variant-a/CrossLayer-MicroRCA/runtime.json": {
+      "sha256": "e25d39a01206c3e965d5250b3c5988a62a96e1b33355dd40dcb734cd11d9ab4c",
+      "bytes": 162
+    },
+    "runs/F02/variant-a/CrossLayer-MicroRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F02/variant-a/CrossLayer-MicroRCA/stdout.log": {
+      "sha256": "58c36c1e87c5035374d682a04133623e7355ae80c76ecb58caf20b19fcbaee96",
+      "bytes": 112
+    },
+    "runs/F02/variant-a/CrossLayer-SimpleRCA/command.txt": {
+      "sha256": "446be2a32f9ca34629d75daa23d5576eb88655527aec2d1a8d4f0d3067966657",
+      "bytes": 890
+    },
+    "runs/F02/variant-a/CrossLayer-SimpleRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F02/variant-a/CrossLayer-SimpleRCA/prediction.json": {
+      "sha256": "6b1c5ec2e57a143a287bea965cd86959717f502dfd5e17c1fb9e81cb63f81d66",
+      "bytes": 12960
+    },
+    "runs/F02/variant-a/CrossLayer-SimpleRCA/run-manifest.json": {
+      "sha256": "df5a670dd50d74322200e267c8480e3f5fc5c5cf5abbb52c6b654965efb6f0cc",
+      "bytes": 503
+    },
+    "runs/F02/variant-a/CrossLayer-SimpleRCA/runtime.json": {
+      "sha256": "d8aca9d4b1a181ac34025e826e76cc3890fa71eb9ef227874858e567745e409e",
+      "bytes": 163
+    },
+    "runs/F02/variant-a/CrossLayer-SimpleRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F02/variant-a/CrossLayer-SimpleRCA/stdout.log": {
+      "sha256": "906bdc619b865e6f9326461da6908cb0ef48e3d8259a3da60bc7bb12c06230e7",
+      "bytes": 112
+    },
+    "runs/F02/variant-a/OpenRCA-XL/command.txt": {
+      "sha256": "d73fc12eddece00ca6796e71a763c953e930c6425221dad7631bed743857b7d4",
+      "bytes": 470
+    },
+    "runs/F02/variant-a/OpenRCA-XL/endpoint-audit.json": {
+      "sha256": "045d9b498fe9836fe24bce7c9b7ce81d18103a71d7611f1b803f914018819e74",
+      "bytes": 677
+    },
+    "runs/F02/variant-a/OpenRCA-XL/isolation-audit.json": {
+      "sha256": "2fa18bd0d83c416255f303c0ce20a58ac497102afec6c3e3d065423e843ef540",
+      "bytes": 188
+    },
+    "runs/F02/variant-a/OpenRCA-XL/prediction.json": {
+      "sha256": "74d0f7460d8b5962b6e45ad08624e3e14cfd6159164a0417c3abc72fcdcffdb7",
+      "bytes": 327
+    },
+    "runs/F02/variant-a/OpenRCA-XL/run-manifest.json": {
+      "sha256": "55e9b122739b8f0f77b4a73b15ab7357f885d081fb4c1da61b21cb3f659e3e73",
+      "bytes": 523
+    },
+    "runs/F02/variant-a/OpenRCA-XL/runtime.json": {
+      "sha256": "e731ab732a4f187dfd6731e6d55a16c77cab6ab1f00ddd7ec73700ae19fd7c7b",
+      "bytes": 162
+    },
+    "runs/F02/variant-a/OpenRCA-XL/stderr.log": {
+      "sha256": "69f5483e4834e4264e9a94b7339314097a42f20b7101e8ad7dc3d47826675c0c",
+      "bytes": 679
+    },
+    "runs/F02/variant-a/OpenRCA-XL/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F02/variant-b/CrossLayer-MicroRCA/command.txt": {
+      "sha256": "890a4335628b3c0e8ef0fa28e59eede22a1d3f68267adae7d42f29aa5b0f195f",
+      "bytes": 879
+    },
+    "runs/F02/variant-b/CrossLayer-MicroRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F02/variant-b/CrossLayer-MicroRCA/prediction.json": {
+      "sha256": "8c1fa5afad6f2c77732dc2d7fa6de19cf64f92cec808cbb6721ae694dcf2e12b",
+      "bytes": 20259
+    },
+    "runs/F02/variant-b/CrossLayer-MicroRCA/run-manifest.json": {
+      "sha256": "3a58959c9f87a67382c8cc0ad970ebdfaca2fab985ac546df408bf9526e99fe4",
+      "bytes": 500
+    },
+    "runs/F02/variant-b/CrossLayer-MicroRCA/runtime.json": {
+      "sha256": "901455eecc7a1437746269df9ad00597538baa5be2518cc4b911d7630157e229",
+      "bytes": 162
+    },
+    "runs/F02/variant-b/CrossLayer-MicroRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F02/variant-b/CrossLayer-MicroRCA/stdout.log": {
+      "sha256": "58c36c1e87c5035374d682a04133623e7355ae80c76ecb58caf20b19fcbaee96",
+      "bytes": 112
+    },
+    "runs/F02/variant-b/CrossLayer-SimpleRCA/command.txt": {
+      "sha256": "d364c979e43e67d7c7b4c57d2fa0e664f83bec29e92efc5364d2c4cd608c66b5",
+      "bytes": 890
+    },
+    "runs/F02/variant-b/CrossLayer-SimpleRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F02/variant-b/CrossLayer-SimpleRCA/prediction.json": {
+      "sha256": "92ac84918a42ace74225159edbc127d3574bc70a7e7edfd158a9719f621b8fee",
+      "bytes": 13488
+    },
+    "runs/F02/variant-b/CrossLayer-SimpleRCA/run-manifest.json": {
+      "sha256": "023ac1a817c0704d01c64d956be6643d443c2b0db2cb5475bc524c17ba90a3f1",
+      "bytes": 502
+    },
+    "runs/F02/variant-b/CrossLayer-SimpleRCA/runtime.json": {
+      "sha256": "48d4c6702b78e0bf7f177026466b3608327ece88c560af5436891fad7dacdaf4",
+      "bytes": 163
+    },
+    "runs/F02/variant-b/CrossLayer-SimpleRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F02/variant-b/CrossLayer-SimpleRCA/stdout.log": {
+      "sha256": "906bdc619b865e6f9326461da6908cb0ef48e3d8259a3da60bc7bb12c06230e7",
+      "bytes": 112
+    },
+    "runs/F02/variant-b/MicroIRC-XL/command.txt": {
+      "sha256": "52f01396f2fe8906f0f9c3e624f4b94aaf4842b51025bd2594bd4244385e2e62",
+      "bytes": 893
+    },
+    "runs/F02/variant-b/MicroIRC-XL/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F02/variant-b/MicroIRC-XL/prediction.json": {
+      "sha256": "e4e4c5025295ec93277a3d6de7a66ed6feea272587f3ad38d8efa262f37ffd93",
+      "bytes": 6642
+    },
+    "runs/F02/variant-b/MicroIRC-XL/run-manifest.json": {
+      "sha256": "91d9391d7b922c22d505c1eeb806f312212867923d74abce20f8fcf84279f124",
+      "bytes": 678
+    },
+    "runs/F02/variant-b/MicroIRC-XL/runtime.json": {
+      "sha256": "c7f5c95ad650b02010eb0a5933bf23bb36a6e27931339f1b2b55311d623b975b",
+      "bytes": 162
+    },
+    "runs/F02/variant-b/MicroIRC-XL/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F02/variant-b/MicroIRC-XL/stdout.log": {
+      "sha256": "45bb9c587a25aed64e9903582b2a4280f801027057a7d32a2d3ee8d814972826",
+      "bytes": 88
+    },
+    "runs/F02/variant-b/MicroIRC-original/command.txt": {
+      "sha256": "0c86a669ea4473b19ced55d8ec89edb4971a0ee744d5c88fff2967aa1455727c",
+      "bytes": 905
+    },
+    "runs/F02/variant-b/MicroIRC-original/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F02/variant-b/MicroIRC-original/prediction.json": {
+      "sha256": "55d32c330386cca048c89b35da9845e73f3f79f56ab5430b590c276907b85464",
+      "bytes": 6648
+    },
+    "runs/F02/variant-b/MicroIRC-original/run-manifest.json": {
+      "sha256": "1804e57fef8dd89ad6a14a2d58c4cdeab862aa85dcc86d7e501d792074cfa39e",
+      "bytes": 684
+    },
+    "runs/F02/variant-b/MicroIRC-original/runtime.json": {
+      "sha256": "85ad1bda2d452ddd8ef63d2ac5616ab44470e138e8416847fec71bb55091f69e",
+      "bytes": 162
+    },
+    "runs/F02/variant-b/MicroIRC-original/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F02/variant-b/MicroIRC-original/stdout.log": {
+      "sha256": "0806964141b0a67ac34de6c58f697665ae0dd36ebac31a09153d5d8d44a902c7",
+      "bytes": 94
+    },
+    "runs/F02/variant-b/OpenRCA-XL/command.txt": {
+      "sha256": "1097ac662d133e9650d83ae70c82d3ad4a2d9134cd8b72ae78e4a6b0a604d45f",
+      "bytes": 470
+    },
+    "runs/F02/variant-b/OpenRCA-XL/endpoint-audit.json": {
+      "sha256": "86db159a0082477b67266f4ca5c00719e00d1ba8da07734c4106c22dd2263734",
+      "bytes": 677
+    },
+    "runs/F02/variant-b/OpenRCA-XL/isolation-audit.json": {
+      "sha256": "2fa18bd0d83c416255f303c0ce20a58ac497102afec6c3e3d065423e843ef540",
+      "bytes": 188
+    },
+    "runs/F02/variant-b/OpenRCA-XL/prediction.json": {
+      "sha256": "a6de8385552641dbaf2ac714ca7b3773b1c5608fde369f7ce4fb630c53e34747",
+      "bytes": 327
+    },
+    "runs/F02/variant-b/OpenRCA-XL/run-manifest.json": {
+      "sha256": "5fbec74f0003884e8a9ec897489ff513d57aa009447f53ac1b388ddb33ae6730",
+      "bytes": 523
+    },
+    "runs/F02/variant-b/OpenRCA-XL/runtime.json": {
+      "sha256": "563de43accc36874c966c70de9936caa2826bebc2a7f0f2348d58e5057902aa6",
+      "bytes": 162
+    },
+    "runs/F02/variant-b/OpenRCA-XL/stderr.log": {
+      "sha256": "69f5483e4834e4264e9a94b7339314097a42f20b7101e8ad7dc3d47826675c0c",
+      "bytes": 679
+    },
+    "runs/F02/variant-b/OpenRCA-XL/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F03/variant-a/CrossLayer-MicroRCA/command.txt": {
+      "sha256": "6aa424efa764286ad1342367691f1d797ea4846f2d2fe013d91b06be550fcf15",
+      "bytes": 879
+    },
+    "runs/F03/variant-a/CrossLayer-MicroRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F03/variant-a/CrossLayer-MicroRCA/prediction.json": {
+      "sha256": "b9fbde6ca96b1cdae33b00702eb173dca8d656ce2d78c4cc325555e7f24d288e",
+      "bytes": 19746
+    },
+    "runs/F03/variant-a/CrossLayer-MicroRCA/run-manifest.json": {
+      "sha256": "20861c70465381232b466a8827652c9e4f715319fcfadc7bfa91c3f36f122047",
+      "bytes": 501
+    },
+    "runs/F03/variant-a/CrossLayer-MicroRCA/runtime.json": {
+      "sha256": "946d46182cc949337aab4c55b31044f13bb1bfb27dc8f2b84965baa0b39a3214",
+      "bytes": 162
+    },
+    "runs/F03/variant-a/CrossLayer-MicroRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F03/variant-a/CrossLayer-MicroRCA/stdout.log": {
+      "sha256": "73642ee99bf43f3101f2f05d0637a06082720f4fa921c6edee6a44c64d434a0a",
+      "bytes": 112
+    },
+    "runs/F03/variant-a/CrossLayer-SimpleRCA/command.txt": {
+      "sha256": "8b9abd975af6c8d222d23f7d4b1d806311bceef3c38044ca0337370555c9eaab",
+      "bytes": 890
+    },
+    "runs/F03/variant-a/CrossLayer-SimpleRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F03/variant-a/CrossLayer-SimpleRCA/prediction.json": {
+      "sha256": "180a5e259c90942562b02604b390f6dbff15f0c1152b02e065c9a0fc22e20b53",
+      "bytes": 13258
+    },
+    "runs/F03/variant-a/CrossLayer-SimpleRCA/run-manifest.json": {
+      "sha256": "5161a7bd3a0b548d1fc16b2d67c0b0886595be40c7cc9ed26bc3fda8bb319fa4",
+      "bytes": 503
+    },
+    "runs/F03/variant-a/CrossLayer-SimpleRCA/runtime.json": {
+      "sha256": "10453f889c212a3396b91bb09a756e71396a5a456f4dc6b8a6e8629effbc880a",
+      "bytes": 163
+    },
+    "runs/F03/variant-a/CrossLayer-SimpleRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F03/variant-a/CrossLayer-SimpleRCA/stdout.log": {
+      "sha256": "9a119122256e66d5d2d7dbf371b7d93a4a24b40bb23dcfa1ca79b6c23141df67",
+      "bytes": 112
+    },
+    "runs/F03/variant-a/OpenRCA-XL/command.txt": {
+      "sha256": "3a32eebbc2ddedc6a8acdb1c29774e5589a768436e687e7aab0769b921f6c64c",
+      "bytes": 470
+    },
+    "runs/F03/variant-a/OpenRCA-XL/endpoint-audit.json": {
+      "sha256": "467c5b258c223a837f87e34d78905793e333ffd5cd984cf3352d332a4641e41d",
+      "bytes": 677
+    },
+    "runs/F03/variant-a/OpenRCA-XL/isolation-audit.json": {
+      "sha256": "2fa18bd0d83c416255f303c0ce20a58ac497102afec6c3e3d065423e843ef540",
+      "bytes": 188
+    },
+    "runs/F03/variant-a/OpenRCA-XL/prediction.json": {
+      "sha256": "fb44709641071d4d802544982f35b4d0ca3595b22b11cfa89bb5ebad53ac9a74",
+      "bytes": 327
+    },
+    "runs/F03/variant-a/OpenRCA-XL/run-manifest.json": {
+      "sha256": "c002b17ae2edc9ae7e07a0852de25cfd04e8275ff9f8d31615739f9d93cb4e3d",
+      "bytes": 523
+    },
+    "runs/F03/variant-a/OpenRCA-XL/runtime.json": {
+      "sha256": "0536e6e5df443a96c3502b1bb1c650c1327b9dd115701ab2d2d34c531186eb4c",
+      "bytes": 162
+    },
+    "runs/F03/variant-a/OpenRCA-XL/stderr.log": {
+      "sha256": "69f5483e4834e4264e9a94b7339314097a42f20b7101e8ad7dc3d47826675c0c",
+      "bytes": 679
+    },
+    "runs/F03/variant-a/OpenRCA-XL/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F03/variant-b/CrossLayer-MicroRCA/command.txt": {
+      "sha256": "eb3310c27f5bdf6e0c51cbb647e065cef7d6e8949f5e33cdd7a014860af6d3a2",
+      "bytes": 879
+    },
+    "runs/F03/variant-b/CrossLayer-MicroRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F03/variant-b/CrossLayer-MicroRCA/prediction.json": {
+      "sha256": "18abdfc59c5bc08151e42fe3b58a8d93791bd069eda1c74a2628788f6467b835",
+      "bytes": 20451
+    },
+    "runs/F03/variant-b/CrossLayer-MicroRCA/run-manifest.json": {
+      "sha256": "473580be11976069bd7d53c958f6b42ada2aedb00c0ab83375bd8ee7153fcffb",
+      "bytes": 499
+    },
+    "runs/F03/variant-b/CrossLayer-MicroRCA/runtime.json": {
+      "sha256": "cf121823f7f71a8da79102b16cb7ab94b2652d2e4b9a915e9e054580c9cc8ce0",
+      "bytes": 161
+    },
+    "runs/F03/variant-b/CrossLayer-MicroRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F03/variant-b/CrossLayer-MicroRCA/stdout.log": {
+      "sha256": "73642ee99bf43f3101f2f05d0637a06082720f4fa921c6edee6a44c64d434a0a",
+      "bytes": 112
+    },
+    "runs/F03/variant-b/CrossLayer-SimpleRCA/command.txt": {
+      "sha256": "9dc62a62b67e54e3b9e88a8d10d180fc5e208d330675014090cae86e9423b75f",
+      "bytes": 890
+    },
+    "runs/F03/variant-b/CrossLayer-SimpleRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F03/variant-b/CrossLayer-SimpleRCA/prediction.json": {
+      "sha256": "d29ddc9174f0c8659608753eecc4cd293237ba04f4f4868d2df4806c4c08d807",
+      "bytes": 13786
+    },
+    "runs/F03/variant-b/CrossLayer-SimpleRCA/run-manifest.json": {
+      "sha256": "7e3f9e820a12d49eb878136c0a2f7073894f510721175b7c1f7ce87d42dd975e",
+      "bytes": 501
+    },
+    "runs/F03/variant-b/CrossLayer-SimpleRCA/runtime.json": {
+      "sha256": "2a3c7ac35e94355f645340ef5108fac30280198c3103ebff515b2c7b54373bd8",
+      "bytes": 162
+    },
+    "runs/F03/variant-b/CrossLayer-SimpleRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F03/variant-b/CrossLayer-SimpleRCA/stdout.log": {
+      "sha256": "9a119122256e66d5d2d7dbf371b7d93a4a24b40bb23dcfa1ca79b6c23141df67",
+      "bytes": 112
+    },
+    "runs/F03/variant-b/MicroIRC-XL/command.txt": {
+      "sha256": "134af96ebe64c1bcdbeb872a87746c4196b1947f02d70a7c6f48f45c4bbe8115",
+      "bytes": 893
+    },
+    "runs/F03/variant-b/MicroIRC-XL/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F03/variant-b/MicroIRC-XL/prediction.json": {
+      "sha256": "089018af9e4b9fc5e4690365f1fbef52d8ddabe2bb35bcd3fafab4136e26a40e",
+      "bytes": 6642
+    },
+    "runs/F03/variant-b/MicroIRC-XL/run-manifest.json": {
+      "sha256": "4ccad1c45f723ac66f85910796ca50917c83fded883cde30fefbbc4b34bbc05a",
+      "bytes": 679
+    },
+    "runs/F03/variant-b/MicroIRC-XL/runtime.json": {
+      "sha256": "093806f3886ca0bb9ef15cdc8ec531cbe4e119feae62dccb5d0d768e3d54c11b",
+      "bytes": 163
+    },
+    "runs/F03/variant-b/MicroIRC-XL/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F03/variant-b/MicroIRC-XL/stdout.log": {
+      "sha256": "45bb9c587a25aed64e9903582b2a4280f801027057a7d32a2d3ee8d814972826",
+      "bytes": 88
+    },
+    "runs/F03/variant-b/MicroIRC-original/command.txt": {
+      "sha256": "24f7558928e81a26e64579c5c467b2165595c3565f3569b6cd4b1499fe6248f2",
+      "bytes": 905
+    },
+    "runs/F03/variant-b/MicroIRC-original/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F03/variant-b/MicroIRC-original/prediction.json": {
+      "sha256": "02a34d26b285b5dfc09f1e68f14949bec1e3d74aef9a8ada64e60603c1d6b836",
+      "bytes": 6648
+    },
+    "runs/F03/variant-b/MicroIRC-original/run-manifest.json": {
+      "sha256": "ed026f8c18b8bdf3c9e4b532edf5b49107063757a8425ee1793ae76757403454",
+      "bytes": 685
+    },
+    "runs/F03/variant-b/MicroIRC-original/runtime.json": {
+      "sha256": "50520937730008f2ac0e065aabaabf8a41c07e8be69851050ea222e491c524e9",
+      "bytes": 163
+    },
+    "runs/F03/variant-b/MicroIRC-original/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F03/variant-b/MicroIRC-original/stdout.log": {
+      "sha256": "0806964141b0a67ac34de6c58f697665ae0dd36ebac31a09153d5d8d44a902c7",
+      "bytes": 94
+    },
+    "runs/F03/variant-b/OpenRCA-XL/command.txt": {
+      "sha256": "7e26981013a1fbca9df5c64bb4530966eeed4f3a85ff503c461ef5b8160df64f",
+      "bytes": 470
+    },
+    "runs/F03/variant-b/OpenRCA-XL/endpoint-audit.json": {
+      "sha256": "e84d5f40e76294c202c1541fcf9ff8f378f5ad691f120b5ca3516c232ec3e334",
+      "bytes": 677
+    },
+    "runs/F03/variant-b/OpenRCA-XL/isolation-audit.json": {
+      "sha256": "2fa18bd0d83c416255f303c0ce20a58ac497102afec6c3e3d065423e843ef540",
+      "bytes": 188
+    },
+    "runs/F03/variant-b/OpenRCA-XL/prediction.json": {
+      "sha256": "e5c14c855ed638600b3bb0fd72656bc97c3a870960c79e8830caa47a47f68198",
+      "bytes": 327
+    },
+    "runs/F03/variant-b/OpenRCA-XL/run-manifest.json": {
+      "sha256": "4f7788c9efb8cbf55f5645795ac76d3ff92d44ad248bdcb924f502b99b41eba1",
+      "bytes": 523
+    },
+    "runs/F03/variant-b/OpenRCA-XL/runtime.json": {
+      "sha256": "176ed8ef68272ef30dee9fea740338c0e3a0281b06b6d98ed5faabbd31bd2e30",
+      "bytes": 162
+    },
+    "runs/F03/variant-b/OpenRCA-XL/stderr.log": {
+      "sha256": "69f5483e4834e4264e9a94b7339314097a42f20b7101e8ad7dc3d47826675c0c",
+      "bytes": 679
+    },
+    "runs/F03/variant-b/OpenRCA-XL/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F04/variant-a/CrossLayer-MicroRCA/command.txt": {
+      "sha256": "0be24a4d7310b9ab2ba1a9f9cfe342f847bbef21f9f9b7dc872c6d85efb1839f",
+      "bytes": 879
+    },
+    "runs/F04/variant-a/CrossLayer-MicroRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F04/variant-a/CrossLayer-MicroRCA/prediction.json": {
+      "sha256": "782323f7982ffd24f4429fab1e4162130732156b13ee197331f29db45ca2e1c2",
+      "bytes": 19624
+    },
+    "runs/F04/variant-a/CrossLayer-MicroRCA/run-manifest.json": {
+      "sha256": "4743bd62d4d8ab006a40a506fc947816c881493bd02fe18ec4a9237c580bcfd8",
+      "bytes": 501
+    },
+    "runs/F04/variant-a/CrossLayer-MicroRCA/runtime.json": {
+      "sha256": "66f665d2bfcdb916a622cb404f8a88a06c0ad18a46b555bae152dbc406200b6c",
+      "bytes": 162
+    },
+    "runs/F04/variant-a/CrossLayer-MicroRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F04/variant-a/CrossLayer-MicroRCA/stdout.log": {
+      "sha256": "91214e84ef9bd2b3e135d5d5a6f5d534ab9569d0c629ea61b6c7d59e200f0cf2",
+      "bytes": 112
+    },
+    "runs/F04/variant-a/CrossLayer-SimpleRCA/command.txt": {
+      "sha256": "3b5ad360bd67ea54416bffd631c281bccc05326f9eb6e83289212c8034c09e71",
+      "bytes": 890
+    },
+    "runs/F04/variant-a/CrossLayer-SimpleRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F04/variant-a/CrossLayer-SimpleRCA/prediction.json": {
+      "sha256": "348c4c7f4ffe7f816d0c890b1c83131d52b7f91cfe01bf238264df18a065842f",
+      "bytes": 12421
+    },
+    "runs/F04/variant-a/CrossLayer-SimpleRCA/run-manifest.json": {
+      "sha256": "3b4be17d797c9f9e2a84d06679efb40ea13787219fd4a5664ee361dfa1abe04e",
+      "bytes": 503
+    },
+    "runs/F04/variant-a/CrossLayer-SimpleRCA/runtime.json": {
+      "sha256": "065e4d5c7f1eb3389d5d467f015b5ec1b8a16cba05a0c8e3c648ad550f5b8a47",
+      "bytes": 163
+    },
+    "runs/F04/variant-a/CrossLayer-SimpleRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F04/variant-a/CrossLayer-SimpleRCA/stdout.log": {
+      "sha256": "91214e84ef9bd2b3e135d5d5a6f5d534ab9569d0c629ea61b6c7d59e200f0cf2",
+      "bytes": 112
+    },
+    "runs/F04/variant-a/OpenRCA-XL/command.txt": {
+      "sha256": "2efb28d21ad4d46481579d408ddf8452c68dc80a71d993fb4939a0659461b87a",
+      "bytes": 470
+    },
+    "runs/F04/variant-a/OpenRCA-XL/endpoint-audit.json": {
+      "sha256": "294caa04283861d64d726effd548597389398d7e60b6b5632af5bb2f2060e1a4",
+      "bytes": 677
+    },
+    "runs/F04/variant-a/OpenRCA-XL/isolation-audit.json": {
+      "sha256": "2fa18bd0d83c416255f303c0ce20a58ac497102afec6c3e3d065423e843ef540",
+      "bytes": 188
+    },
+    "runs/F04/variant-a/OpenRCA-XL/prediction.json": {
+      "sha256": "6a2902bcb8d468172e54559df0c48bd5de43080aa11c7e74e5467d94e1e0b957",
+      "bytes": 327
+    },
+    "runs/F04/variant-a/OpenRCA-XL/run-manifest.json": {
+      "sha256": "61496fd706bf28a151b7e256aee76b2eb8e91b2a0c813065c10fda7560a655be",
+      "bytes": 522
+    },
+    "runs/F04/variant-a/OpenRCA-XL/runtime.json": {
+      "sha256": "b4087dc8ef3d118a5b9093f8b1d8868a90bc890a69f963f80204b5d3dc32dccb",
+      "bytes": 161
+    },
+    "runs/F04/variant-a/OpenRCA-XL/stderr.log": {
+      "sha256": "69f5483e4834e4264e9a94b7339314097a42f20b7101e8ad7dc3d47826675c0c",
+      "bytes": 679
+    },
+    "runs/F04/variant-a/OpenRCA-XL/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F04/variant-b/CrossLayer-MicroRCA/command.txt": {
+      "sha256": "687cf6e24e840ca2cabb7c505908c72bc325bd0bf7092a2bbee0c0d3b931e324",
+      "bytes": 879
+    },
+    "runs/F04/variant-b/CrossLayer-MicroRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F04/variant-b/CrossLayer-MicroRCA/prediction.json": {
+      "sha256": "0f66967a40c1070e73287d098b6d055983e05eb0a3138fefd5b4da01950d64bf",
+      "bytes": 20243
+    },
+    "runs/F04/variant-b/CrossLayer-MicroRCA/run-manifest.json": {
+      "sha256": "855fb62f0a466c7c04d1d6dd743e32f6cef17c0e193ff2c21566edf461d40859",
+      "bytes": 500
+    },
+    "runs/F04/variant-b/CrossLayer-MicroRCA/runtime.json": {
+      "sha256": "d3925fe3afee20cf522beb35afc7a1630ea56f0db14b5101e6ed14a6c443c2c0",
+      "bytes": 162
+    },
+    "runs/F04/variant-b/CrossLayer-MicroRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F04/variant-b/CrossLayer-MicroRCA/stdout.log": {
+      "sha256": "cdb24f87ac8a23e706947e9a69eb8a1b758a42a9b5d27060d47796748daa7200",
+      "bytes": 132
+    },
+    "runs/F04/variant-b/CrossLayer-SimpleRCA/command.txt": {
+      "sha256": "341a56a558aec1f9194ade4056769cc25c40a9049a0d23acca0262d47e1cfed3",
+      "bytes": 890
+    },
+    "runs/F04/variant-b/CrossLayer-SimpleRCA/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F04/variant-b/CrossLayer-SimpleRCA/prediction.json": {
+      "sha256": "7d0566726f793fa219ff9a1b16b2f7f69ac0db04cc584bcd50db297791662603",
+      "bytes": 12569
+    },
+    "runs/F04/variant-b/CrossLayer-SimpleRCA/run-manifest.json": {
+      "sha256": "58e947bd4a82b5817eecb0b3b0c988f62a6ccd98eca4d15c649b3734ee091559",
+      "bytes": 502
+    },
+    "runs/F04/variant-b/CrossLayer-SimpleRCA/runtime.json": {
+      "sha256": "2f05ff66f181ddc326732675a1b84c8ca9dfd6e6a064a5bd3cde8d12243556f5",
+      "bytes": 163
+    },
+    "runs/F04/variant-b/CrossLayer-SimpleRCA/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F04/variant-b/CrossLayer-SimpleRCA/stdout.log": {
+      "sha256": "91214e84ef9bd2b3e135d5d5a6f5d534ab9569d0c629ea61b6c7d59e200f0cf2",
+      "bytes": 112
+    },
+    "runs/F04/variant-b/MicroIRC-XL/command.txt": {
+      "sha256": "f0d2484b647895b7444938e39e7884a2c9007b7320f8c0de94afdaabe1f0be3f",
+      "bytes": 893
+    },
+    "runs/F04/variant-b/MicroIRC-XL/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F04/variant-b/MicroIRC-XL/prediction.json": {
+      "sha256": "08cb96c6704f8aaca110054a38f790fa2d8eef4f62f6b578b9715ef2f94576e7",
+      "bytes": 6642
+    },
+    "runs/F04/variant-b/MicroIRC-XL/run-manifest.json": {
+      "sha256": "4a4a70d22cf1956d7fe367ead64d69dbe6c9c86cac10ab413bbb1595355bc669",
+      "bytes": 679
+    },
+    "runs/F04/variant-b/MicroIRC-XL/runtime.json": {
+      "sha256": "19fb51fc0f7bace36b2a619b9c276c747ed6b10de7d31df1cec37392b370334e",
+      "bytes": 163
+    },
+    "runs/F04/variant-b/MicroIRC-XL/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F04/variant-b/MicroIRC-XL/stdout.log": {
+      "sha256": "45bb9c587a25aed64e9903582b2a4280f801027057a7d32a2d3ee8d814972826",
+      "bytes": 88
+    },
+    "runs/F04/variant-b/MicroIRC-original/command.txt": {
+      "sha256": "d7c78ea4d44922814b0dcc381116fc31986ab24306b46ec8403088104a140217",
+      "bytes": 905
+    },
+    "runs/F04/variant-b/MicroIRC-original/isolation-audit.json": {
+      "sha256": "6de662340fc9fe881b4b4c497bcd6805d87eb1aef90886f6d2fa8b9298dc1ff2",
+      "bytes": 196
+    },
+    "runs/F04/variant-b/MicroIRC-original/prediction.json": {
+      "sha256": "711c2ef636bb759c3e528f5bbc4b2519476848c2ca11f6fcdb0ab494403cd4a9",
+      "bytes": 6648
+    },
+    "runs/F04/variant-b/MicroIRC-original/run-manifest.json": {
+      "sha256": "1342d0091e958453a689b2826f68652fd441533c7e875e13adca4b6e18a6be26",
+      "bytes": 685
+    },
+    "runs/F04/variant-b/MicroIRC-original/runtime.json": {
+      "sha256": "1b27f10bd7008c35b91f790562bc564bfe3d92ce4a07600d1caaca0cebd7288a",
+      "bytes": 163
+    },
+    "runs/F04/variant-b/MicroIRC-original/stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/F04/variant-b/MicroIRC-original/stdout.log": {
+      "sha256": "0806964141b0a67ac34de6c58f697665ae0dd36ebac31a09153d5d8d44a902c7",
+      "bytes": 94
+    },
+    "runs/F04/variant-b/OpenRCA-XL/command.txt": {
+      "sha256": "07a282b045da2c0fde7ee58cd3e830c6f307012768a4c6577fc006cf3a78a93b",
+      "bytes": 470
+    },
+    "runs/F04/variant-b/OpenRCA-XL/endpoint-audit.json": {
+      "sha256": "2e0f0e3cefd81c9210b298a23a4e948618bf14278cd2236edcba3d77059f7f1f",
+      "bytes": 677
+    },
+    "runs/F04/variant-b/OpenRCA-XL/isolation-audit.json": {
+      "sha256": "2fa18bd0d83c416255f303c0ce20a58ac497102afec6c3e3d065423e843ef540",
+      "bytes": 188
+    },
+    "runs/F04/variant-b/OpenRCA-XL/prediction.json": {
+      "sha256": "2830f0cfd2c35f60513370d79d011182f119598e36a88cdb07a91629942131bb",
+      "bytes": 327
+    },
+    "runs/F04/variant-b/OpenRCA-XL/run-manifest.json": {
+      "sha256": "0c5ef04ab381afb169472258fbe9e0fb76a45c59c9e2bef167d913305ae6c7d3",
+      "bytes": 523
+    },
+    "runs/F04/variant-b/OpenRCA-XL/runtime.json": {
+      "sha256": "c1150a01b2258178a6d82c9f3c59ada04633e3fd0a1fa023374a85be491244d3",
+      "bytes": 162
+    },
+    "runs/F04/variant-b/OpenRCA-XL/stderr.log": {
+      "sha256": "69f5483e4834e4264e9a94b7339314097a42f20b7101e8ad7dc3d47826675c0c",
+      "bytes": 679
+    },
+    "runs/F04/variant-b/OpenRCA-XL/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

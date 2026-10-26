@@ -1,0 +1,20 @@
+{
+  "schema": "SF006_LOW_STABLE_WORKLOAD_POLICY_DRAFT_V1",
+  "workload": {
+    "duration_seconds": 1800,
+    "profile": "LOW",
+    "policy_name": "LOW_STABLE",
+    "rate_sessions_per_second": 0.7,
+    "control_streams": [
+      {"name": "image_asset", "rate_per_second": 1.0, "seed_offset": 101},
+      {"name": "cart_view", "rate_per_second": 1.0, "seed_offset": 103},
+      {"name": "home", "rate_per_second": 1.0, "seed_offset": 107},
+      {"name": "recommendations", "rate_per_second": 1.0, "seed_offset": 109}
+    ],
+    "control_timeout_seconds": 8,
+    "control_concurrency_per_stream": {"image_asset": 3, "cart_view": 3, "home": 3, "recommendations": 3}
+  },
+  "fixed_across_before_during_after": true,
+  "formal_fault_count": 1,
+  "disk_floor_bytes": 5000000000
+}

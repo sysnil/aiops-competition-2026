@@ -1,0 +1,23 @@
+{
+  "status": "DRAFT_PENDING_HEARTBEAT_QUALIFICATION",
+  "case_id": "SF-004",
+  "run_id": "SF-004-ATTEMPT-05",
+  "parent_attempt04_plan_sha256": "9ebe2ab7faafa29343e405b1f7fac2afbc235cb11bfedda0bcce3840a6474016",
+  "parent_attempt04_failure_record_sha256": "3b297563c1122f91cea6810fa9f94191db7999e8c1161d5c098e6a136fad4813",
+  "failure_reason_to_address": "Mac-to-VM1 SSH control socket lost during five-host heartbeat; no fault injected",
+  "workload_and_fault_policy": "Identical to prospectively frozen SF-004 ATTEMPT-04: LOW-STABLE 0.7 sessions/s plus four business-control/1.0 streams at 1/s, HTTP home delay 250 ms for 60 s at T+900",
+  "no_change_to_admission_thresholds": true,
+  "no_change_to_public_private_boundary": true,
+  "required_public_safe_no_fault_contract_sha256": "c43b971b19593880aec7d217d5c9f7476eb17f91e7b6959efe7da97a478bd1c5",
+  "required_heartbeat_qualification": {
+    "contract": "design/five-host-heartbeat-qualification.json",
+    "duration_seconds": 1800,
+    "planned_samples": 121,
+    "allowed_timeout_or_missing_samples": 0,
+    "maximum_cycle_seconds": 10
+  },
+  "minimum_filesystem_free_bytes": 5000000000,
+  "history_immutable": true,
+  "private_gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "competition_server_import": false
+}

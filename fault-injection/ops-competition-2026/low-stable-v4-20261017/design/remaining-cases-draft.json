@@ -1,0 +1,35 @@
+{
+  "status": "DRAFT_NOT_AUTHORIZED_FOR_INJECTION",
+  "objective": "Complete the seven remaining 1800-second semifinal cases with qualified mechanisms",
+  "immutable_ready_cases": ["SF-003", "SF-005", "SF-010"],
+  "candidate_workload_contract": "design/low-stable-nofault-contract-v2.json",
+  "prerequisites": [
+    "LOW_STABLE_1800S_NOFAULT_PASS",
+    "MEDIUM_TRACE_READER_1800S_NOFAULT_PASS",
+    "FRESH_FIVE_HOST_SAFETY_PASS",
+    "FRESH_FAULT_TARGET_IDENTITY_PASS",
+    "FIVE_GB_ALL_RELEVANT_FILESYSTEMS_PASS",
+    "PER_CASE_FROZEN_ATTEMPT_MANIFEST_AND_WATCHDOG_PASS",
+    "HTTP_FIXED_HOME_STREAM_SAME_LEASE_AND_WINDOW_QUALIFIED_BEFORE_HTTP_CASE"
+  ],
+  "cases": [
+    {"case_id": "SF-004", "next_attempt": "SF-004-ATTEMPT-02", "events": [{"mechanism": "HTTP_HOME_DELAY_250MS_60", "offset_seconds": 900, "duration_seconds": 60}]},
+    {"case_id": "SF-006", "next_attempt": "SF-006-ATTEMPT-01", "events": [{"mechanism": "FRONTEND_POD_MEMORY_32M_60", "offset_seconds": 600, "duration_seconds": 60}]},
+    {"case_id": "SF-007", "next_attempt": "SF-007-ATTEMPT-01", "events": [{"mechanism": "RECOMMENDATION_SERVICE_PAUSE_30", "offset_seconds": 600, "duration_seconds": 30}]},
+    {"case_id": "SF-008", "next_attempt": "SF-008-ATTEMPT-05", "events": [{"mechanism": "FRONTEND_POD_MEMORY_32M_60", "offset_seconds": 600, "duration_seconds": 60}, {"mechanism": "HTTP_HOME_DELAY_250MS_60", "offset_seconds": 960, "duration_seconds": 60}]},
+    {"case_id": "SF-009", "next_attempt": "SF-009-ATTEMPT-02", "events": [{"mechanism": "HTTP_HOME_DELAY_250MS_60", "offset_seconds": 600, "duration_seconds": 60}, {"mechanism": "RECOMMENDATION_SERVICE_PAUSE_30", "offset_seconds": 960, "duration_seconds": 30}]},
+    {"case_id": "SF-011", "next_attempt": "SF-011-ATTEMPT-01", "events": [{"mechanism": "RECOMMENDATION_SERVICE_PAUSE_30", "offset_seconds": 600, "duration_seconds": 30}, {"mechanism": "HTTP_HOME_DELAY_250MS_60", "offset_seconds": 960, "duration_seconds": 60}]},
+    {"case_id": "SF-012", "next_attempt": "SF-012-ATTEMPT-01", "events": [{"mechanism": "FRONTEND_POD_MEMORY_32M_60", "offset_seconds": 600, "duration_seconds": 60}, {"mechanism": "HTTP_HOME_DELAY_250MS_60", "offset_seconds": 960, "duration_seconds": 60}]}
+  ],
+  "constraints": {
+    "capture_seconds": 1800,
+    "all_faults_nonoverlapping": true,
+    "business_policy_fixed_before_during_after": true,
+    "minimum_filesystem_free_bytes": 5000000000,
+    "historical_attempts_immutable": true,
+    "private_gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+    "competition_server_import": false,
+    "http_fault_target_requests": "state-machine home plus fixed ordinary home stream; both require the same bounded lease",
+    "http_minimum_delayed_requests_per_60_seconds": 60
+  }
+}

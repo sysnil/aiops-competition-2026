@@ -1,0 +1,45 @@
+{
+  "status": "DRAFT_PRE_PRODUCTION",
+  "scope": "SF-013..SF-017 only; prospective before any formal attempt",
+  "window_seconds": 1800,
+  "trace_source": "JAEGER_OPENSEARCH_STORAGE",
+  "collection_gate": "final-case-observation-v2-20261020/design/collection-contract-draft.json",
+  "injection_start_tolerance_seconds": 2,
+  "injection_duration_tolerance_seconds": 2,
+  "pod_memory": {
+    "minimum_samples_per_300s_window": 8,
+    "minimum_target_increase_bytes": 16777216,
+    "baseline_noise_multiplier_mad": 5,
+    "minimum_target_minus_sibling_increase_bytes": 8388608,
+    "consecutive_abnormal_samples": 2,
+    "maximum_recovery_difference_bytes": 16777216
+  },
+  "service_pause": {
+    "minimum_server_trace_ids_per_pod_before_and_after": 10,
+    "minimum_public_caller_or_proxy_spans_during": 30,
+    "maximum_during_to_before_server_completion_rate_ratio": 0.2,
+    "minimum_after_to_before_server_completion_rate_ratio": 0.5
+  },
+  "http_delay": {
+    "minimum_home_proxy_spans_each_window": 30,
+    "minimum_p95_increase_milliseconds": 100,
+    "maximum_after_minus_before_p95_milliseconds": 100
+  },
+  "normal_controls": {
+    "minimum_successful_requests_per_300s_chunk": 270,
+    "minimum_proxy_span_match_fraction": 0.99,
+    "latency_ratio": "record descriptively; do not reject a case solely on one noisy p95 ratio"
+  },
+  "severe_fault_policy": "Zero target successes and missing target Server Spans during fault are allowed only when public caller/proxy evidence and independent resource or completion evidence support the mechanism.",
+  "gt_review": {
+    "maximum_scoring_events": 5,
+    "minimum_preferred_duration_seconds": 90,
+    "retain_all_raw_candidates": true,
+    "human_approval_required": true
+  },
+  "safety": {
+    "five_host_minimum_free_bytes": 5000000000,
+    "collector_receiver_refused_delta_max": 0,
+    "independent_watchdog_and_cleanup_required": true
+  }
+}

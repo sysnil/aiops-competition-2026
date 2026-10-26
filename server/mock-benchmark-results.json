@@ -1,0 +1,82 @@
+{
+  "classification": "MOCK_ONLY",
+  "clients": 17,
+  "requests": 204,
+  "elapsed_seconds": 12.751,
+  "qps": 15.999,
+  "latency_ms": {
+    "p50": 1039.677,
+    "p95": 1511.194,
+    "p99": 1774.01
+  },
+  "http_errors": 0,
+  "http_error_rate": 0.0,
+  "resources": {
+    "cpu_peak_percent": 100.0,
+    "cpu_mean_percent": 29.58,
+    "memory_peak_bytes": 845561856,
+    "disk_read_bytes": 0,
+    "disk_write_bytes": 1499136
+  },
+  "by_type": {
+    "logs": {
+      "requests": 34,
+      "p50_ms": 1033.291,
+      "p95_ms": 1063.191,
+      "p99_ms": 1623.953,
+      "errors": 0
+    },
+    "metrics": {
+      "requests": 34,
+      "p50_ms": 1343.758,
+      "p95_ms": 1515.504,
+      "p99_ms": 1596.835,
+      "errors": 0
+    },
+    "metrics_agg": {
+      "requests": 34,
+      "p50_ms": 1043.547,
+      "p95_ms": 1287.376,
+      "p99_ms": 1295.39,
+      "errors": 0
+    },
+    "topology": {
+      "requests": 34,
+      "p50_ms": 354.79,
+      "p95_ms": 686.61,
+      "p99_ms": 687.3,
+      "errors": 0
+    },
+    "trace_detail": {
+      "requests": 34,
+      "p50_ms": 1389.596,
+      "p95_ms": 1778.683,
+      "p99_ms": 1779.062,
+      "errors": 0
+    },
+    "traces": {
+      "requests": 34,
+      "p50_ms": 1034.078,
+      "p95_ms": 1091.652,
+      "p99_ms": 1103.747,
+      "errors": 0
+    }
+  },
+  "security_checks": {
+    "invalid_token": 401,
+    "unpublished_case": 404,
+    "out_of_bounds": 400,
+    "sql_injection_literal": 200,
+    "oversized_page": 400,
+    "path_traversal": 404
+  },
+  "rate_limit_check": {
+    "attempts": 65,
+    "statuses": {
+      "200": 48,
+      "429": 17
+    },
+    "passed": true
+  },
+  "note": "Mock benchmark results do not represent future full-size one-hour competition data."
+}

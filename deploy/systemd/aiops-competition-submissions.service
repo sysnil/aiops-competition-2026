@@ -1,0 +1,39 @@
+[Unit]
+Description=AIOps committee submission and grading evidence viewer
+After=network.target aiops-contest-api.service
+Wants=aiops-submission-snapshot.service aiops-submission-snapshot.timer
+After=aiops-submission-snapshot.service
+
+[Service]
+Type=simple
+User=aiops-api
+Group=aiops-api
+WorkingDirectory=/opt/aiops-competition-submissions
+Environment=HOME=/var/lib/aiops-submission-review
+Environment=STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+Environment=SUBMISSION_REVIEW_DATABASE=/var/lib/aiops-submission-snapshot/submissions.sqlite3
+Environment=SUBMISSION_REVIEW_SNAPSHOT=true
+ExecStart=/opt/aiops-competition-visualization/.venv312/bin/streamlit run /opt/aiops-competition-submissions/app.py --server.address=127.0.0.1 --server.port=8504 --server.headless=true --server.fileWatcherType=none --server.enableStaticServing=false --server.enableCORS=true --server.enableXsrfProtection=true --client.toolbarMode=minimal --client.disableDataExport=true
+Restart=on-failure
+RestartSec=3
+StateDirectory=aiops-submission-review
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+CapabilityBoundingSet=
+InaccessiblePaths=/etc/aiops-private-grader /etc/aiops-contest /data/aiops-contest /opt/aiops-contest-server
+ReadOnlyPaths=/var/lib/aiops-grading /etc/aiops-submission-review/auth.json
+ReadOnlyPaths=/var/lib/aiops-submission-snapshot
+ReadWritePaths=/var/lib/aiops-submission-review
+IPAddressDeny=any
+IPAddressAllow=localhost
+
+[Install]
+WantedBy=multi-user.target

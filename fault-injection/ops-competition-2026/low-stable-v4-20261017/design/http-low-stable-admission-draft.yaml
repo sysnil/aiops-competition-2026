@@ -1,0 +1,44 @@
+status: DRAFT_NOT_FROZEN
+scope: future_sf004_to_sf012_http_home_delay_attempts_only
+mechanism: qualified_envoy_home_request_delay_250ms_60s
+fault_window:
+  duration_seconds: 60
+  path: GET /
+  target_request_sources:
+    - state_machine_ordinary_home
+    - fixed_rate_ordinary_home
+  require_same_short_lease_for_both_sources: true
+public_effect:
+  minimum_home_proxy_server_trace_ids:
+    before_120s: 120
+    during_60s: 60
+    after_120s: 120
+  minimum_during_p95_increase_ms: 100
+  minimum_during_p95_ratio: 2.0
+  recovery_max_p95_ratio: 1.25
+  recovery_max_absolute_increase_ms: 20
+normal_controls:
+  image_asset:
+    minimum_successful_proxy_spans: {before_120s: 90, during_60s: 45, after_120s: 90}
+  cart_view:
+    minimum_successful_proxy_spans: {before_120s: 90, during_60s: 45, after_120s: 90}
+  maximum_during_to_before_p95_ratio: 1.25
+  maximum_after_to_before_p95_ratio: 1.25
+  require_exact_request_to_proxy_span_identity: true
+private_execution:
+  minimum_total_delayed_home_requests: 60
+  minimum_fixed_stream_delayed_home_requests: 45
+  exact_250ms_header_only_inside_registered_window: true
+  short_lease_and_live_safety_required: true
+  no_unregistered_timer_or_worker_fault: true
+capture:
+  complete_1800s_three_modalities: true
+  all_six_chunks_and_immutable_trace_audits: true
+  collector_receiver_refused_delta: 0
+  open_search_http_429_count: 0
+  public_private_leak_scan: true
+result_policy:
+  invalid_attempt_is_preserved: true
+  no_retroactive_threshold_change: true
+  private_header_log_never_public: true
+  gt_draft_requires_human_review: true

@@ -1,0 +1,44 @@
+[Unit]
+Description=AIOps Final Stage 2 Internal Preview API
+After=network-online.target data.mount aiops-private-grader-demo.service
+Wants=network-online.target
+RequiresMountsFor=/data
+
+[Service]
+Type=simple
+User=aiops-api
+Group=aiops-api
+WorkingDirectory=/opt/aiops-contest-server
+Environment=AIOPS_CONFIG=/etc/aiops-final-stage2/config.yaml
+Environment=AIOPS_FINAL_TASK_CATALOG=/etc/aiops-final-stage2/catalog.json
+Environment=AIOPS_FINAL_INTERNAL_BATCH_ID=FINAL-STAGE2-AUTO-GT-20261019
+Environment=AIOPS_FINAL_ROUNDS=/etc/aiops-final-stage2/legacy-final-rounds.json
+Environment=GRADING_DATABASE=/var/lib/aiops-final-stage2/stage2.sqlite3
+Environment=GRADING_SUBMISSION_DIR=/var/lib/aiops-final-stage2/answers
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/etc/aiops-contest/grading-gateway.env
+ExecStart=/opt/aiops-contest-server/.venv/bin/uvicorn app.main:app --host 192.168.51.51 --port 18080 --workers 1 --no-access-log
+Restart=on-failure
+RestartSec=2s
+TimeoutStopSec=20s
+LimitNOFILE=65536
+TasksMax=256
+MemoryMax=4G
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictNamespaces=true
+LockPersonality=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadOnlyPaths=/data/aiops-contest/public /data/aiops-contest/mock-only /etc/aiops-final-stage2
+ReadWritePaths=/data/aiops-contest/cache /data/aiops-contest/indexes /var/lib/aiops-final-stage2
+
+[Install]
+WantedBy=multi-user.target

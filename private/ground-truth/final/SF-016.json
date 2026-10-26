@@ -1,0 +1,62 @@
+{
+  "case_id": "SF-016",
+  "classification": "OFFICIAL",
+  "events": [
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "frontend-68d8bbfdc8-8mnzh"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+      "entity_type": "Pod",
+      "evidence_rubric": "Public container_memory_working_set_bytes samples support the Pod memory increase.",
+      "gt_event_id": "EVT-0002",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T08:59:42.493000+00:00",
+      "observable_start_time": "2026-10-20T08:54:57.493000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "opensearch-0"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+      "entity_type": "Pod",
+      "evidence_rubric": "Public container_memory_working_set_bytes samples support the Pod memory increase.",
+      "gt_event_id": "EVT-0001",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T09:14:27.493000+00:00",
+      "observable_start_time": "2026-10-20T09:11:57.493000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    }
+  ],
+  "excluded_groups": [
+    {
+      "event_id": "EVT-0003",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0004",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0005",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    }
+  ],
+  "matching_rule_version": "final-strict-positive-credit-1.1",
+  "review_status": "APPROVED",
+  "rubric_version": "final-strict-positive-credit-1.1",
+  "source_candidate_manifest_sha256": "012c1a428cf618987f305d659b1be2ea7b8d7e11416c16086c5705990660af7d",
+  "source_candidate_sha256": "0dc13107d578b9c7fd89516e908b1ec8cfbbb05fcc7312fa4f8bbc087c5c1693",
+  "source_public_manifest_sha256": "66797252cef3c83f06477bf8c59aec694b732c7bd30b23b55af36335522546a0",
+  "status": "APPROVED",
+  "task_type": "FINAL_ANOMALY_INVESTIGATION",
+  "time_tolerance_seconds": 120,
+  "version": "FINAL-GT-TAXONOMY-20261020-v2"
+}

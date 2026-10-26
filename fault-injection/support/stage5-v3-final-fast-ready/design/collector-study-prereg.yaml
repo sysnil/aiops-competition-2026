@@ -1,0 +1,31 @@
+status: PREREGISTERED_COLLECTOR_SINGLE_CANDIDATE
+id: S5V3FFR-COLLECTOR-20261013
+seed: 864001
+duration_seconds: 1800
+original_spike_limit_percentage: 25
+candidate_spike_limit_percentage: 15
+data_root: /data/stage5-v3/final-fast-ready
+planned_raw_bytes: 5368709120
+fault_injected: false
+formal_case: false
+trace_source: JAEGER_OPENSEARCH_STORAGE
+timed_capture_offsets_seconds: [5, 60, 120, 240]
+source_lock_required: true
+monitor_interval_seconds: 15
+stopping_rules:
+  root_free_minimum_bytes: 46000000000
+  data_free_after_reservation_minimum_bytes: 68719476736
+  collector_restart_max: 0
+  collector_memory_working_set_stop_mib: 380
+  critical_issued_proxy_trace_gap_max: 0
+workload:
+  sessions_per_second: 1.4
+  weights: {browse: 20, shopping: 30, checkout: 50}
+  image_per_second: 1
+  cart_per_second: 2
+  duration_seconds: 1800
+  control_streams:
+    - {name: image_asset, operation: GET /images/products/OpticalTubeAssembly.jpg, rate_per_second: 1.0, seed_offset: 101}
+    - {name: cart_view, operation: GET /api/cart, rate_per_second: 2.0, seed_offset: 103}
+  control_timeout_seconds: 8
+  control_concurrency_per_stream: {image_asset: 2, cart_view: 4}

@@ -1,0 +1,86 @@
+{
+  "question_id": "Q07",
+  "case_id": "SF-010",
+  "title": "Frontend Proxy 入口调用 p95 时延",
+  "description": "使用已归档的真实监控记录，按下列口径绘制一张分钟时序图并回答三个问题。",
+  "target_entity_type": "Service",
+  "target_entity_id": "frontend-proxy",
+  "modality": "Traces",
+  "time_range": {
+    "start_utc": "2026-10-15T16:37:43.727538+00:00",
+    "end_exclusive_utc": "2026-10-15T17:07:43.727538+00:00"
+  },
+  "query_spec": {
+    "source_file": "traces.parquet",
+    "source_columns": [
+      "start_time",
+      "service",
+      "parent_service",
+      "operation_name",
+      "duration_ms",
+      "status",
+      "attributes"
+    ],
+    "filters": {
+      "entities": [
+        "frontend-proxy"
+      ],
+      "span_kind": "server",
+      "operation_name": "ingress"
+    },
+    "aggregation": "nearest-rank p95 of valid duration_ms in each bucket",
+    "time_bucket": {
+      "origin_utc": "2026-10-15T16:37:43.727538+00:00",
+      "width_seconds": 60,
+      "closed": "left",
+      "timestamp_label": "bucket start UTC",
+      "observation_end_exclusive_utc": "2026-10-15T17:07:43.727538+00:00"
+    },
+    "minimum_samples_per_minute": 20,
+    "missing_policy": "null and line gap for insufficient samples; zero only for observed count queries",
+    "counter_reset_policy": "not applicable",
+    "p95_definition": "sort ascending; rank ceil(0.95*n), one-based",
+    "comparison_minute_ranges": [
+      [
+        0,
+        5
+      ],
+      [
+        15,
+        20
+      ]
+    ],
+    "kind": "server_p95",
+    "answer_plan": "window_mean"
+  },
+  "chart_requirement": {
+    "chart_count": 1,
+    "type": "line",
+    "x_axis": "UTC bucket start",
+    "y_axis": "ms",
+    "series": [
+      "frontend-proxy"
+    ],
+    "granularity_seconds": 60,
+    "legend_required": false
+  },
+  "questions": [
+    {
+      "id": "A1",
+      "text": "整段时间内，最高的每分钟 p95 是多少（单位 ms）？",
+      "answer_format": "number"
+    },
+    {
+      "id": "A2",
+      "text": "最高值出现在哪个 UTC 分钟起点？若并列，取最早一分钟。",
+      "answer_format": "time"
+    },
+    {
+      "id": "A3",
+      "text": "从 16:52:43 UTC 起的 5 个分钟 p95 的均值，减去从 16:37:43 UTC 起的 5 个分钟 p95 的均值，差是多少（单位 ms）？",
+      "answer_format": "number"
+    }
+  ],
+  "question_version": "semifinal-query-visualization-candidate-v1",
+  "difficulty": "MEDIUM"
+}

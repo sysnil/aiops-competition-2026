@@ -1,0 +1,36 @@
+schema_version: 1
+primary_root_granularity: NETWORK_PATH
+path_latency_probe_target: verified_destination_pod_ip
+example_entity: NETWORK_PATH/k8s-worker3/k8s-worker2
+edge_membership_proof:
+  required_before_fault: true
+  public_fields:
+    - service_edge
+    - source_service
+    - destination_service
+    - source_pod_name
+    - source_pod_uid
+    - destination_pod_name
+    - destination_pod_uid
+    - source_node
+    - destination_node
+    - network_path_entity
+    - route_or_flow_evidence_id
+    - observed_at_utc
+  allowed_evidence:
+    - pre_fault_pod_endpoint_resolution
+    - pre_fault_route_table
+    - pre_fault_flow_table
+    - pre_fault_packet_path_probe_without_fault
+  rule: "Every TRAVERSES relation must cite a route_or_flow_evidence_id from the clean pre-fault snapshot."
+  ambiguous_membership_status: PATH_MEMBERSHIP_UNVERIFIED
+variant_a:
+  includes_network_path_mapping: false
+variant_b:
+  includes_network_path_mapping: true
+  includes_normal_network_observations: true
+  forbid_injection_specific_network_fields: true
+evaluator_finer_granularity:
+  allowed_private_fields: [physical_device, interface, port, injection_evidence]
+  main_score_uses_finer_root: false
+forbidden_public_tokens: [VM1, gretap, netem, fault_injection_port, delay_parameter]

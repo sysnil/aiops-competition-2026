@@ -1,0 +1,35 @@
+status: DRAFT_LOW_STABLE_NOT_FROZEN
+case_id: SF-012
+mechanism: POD_MEMORY_32M_60
+target_selector: current frontend Pod on k8s-worker2
+normal_control: other Ready frontend replica with distinct Pod UID
+fault_window:
+  start_offset_seconds: 600
+  duration_seconds: 60
+public_root_evidence:
+  metric: container_memory_working_set_bytes
+  identity: exact k8s.pod.uid joined to container cgroup
+  before_min_samples: 10
+  during_min_samples: 4
+  after_min_samples: 10
+  minimum_target_increase_bytes: 16777216
+  baseline_noise_multiplier_mad: 5
+  consecutive_abnormal_samples: 4
+  sibling_max_median_increase_bytes: 8388608
+  recovery_max_difference_from_baseline_bytes: 8388608
+ordinary_business:
+  minimum_frontend_trace_ids_per_replica_before: 30
+  minimum_frontend_trace_ids_per_replica_during: 30
+  minimum_frontend_trace_ids_per_replica_after: 30
+private_injection_validity:
+  bounded_duration_seconds: 60
+  duration_tolerance_seconds: 2
+  exact_pod_uid_container_id_pid_start_ticks_required: true
+  independent_watchdog_and_cleanup_required: true
+  node_memory_reserve_bytes: 8589934592
+  no_oom_or_pod_restart: true
+result_policy:
+  injection_and_public_observability_both_required_for_ready: true
+  weak_user_impact_does_not_erase_real_pod_root_evidence: true
+  private_injection_evidence_is_never_public: true
+  no_prediction_or_agent_result_used_for_admission: true

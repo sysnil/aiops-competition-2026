@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reviewed Semifinal Anomaly Ground Truth v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "task_type", "review_status", "gt_version", "rubric_version", "matching_rule_version", "time_tolerance_seconds", "events"],
+  "properties": {
+    "case_id": {"type": "string"},
+    "task_type": {"const": "SEMIFINAL_ANOMALY_DETECTION"},
+    "classification": {"enum": ["OFFICIAL", "SYNTHETIC_DEMO_ONLY", "DRAFT_PREVIEW_ONLY"]},
+    "review_status": {"enum": ["DRAFT", "APPROVED"]},
+    "gt_version": {"type": "string"},
+    "rubric_version": {"type": "string"},
+    "matching_rule_version": {"type": "string"},
+    "time_tolerance_seconds": {"type": "integer", "minimum": 0, "maximum": 600},
+    "events": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["gt_event_id", "anomaly_type", "accepted_anomaly_types", "entity_type", "entity_id", "accepted_entity_aliases", "observable_start_time", "observable_end_time", "evidence_rubric", "review_status", "gt_version", "rubric_version"],
+        "properties": {
+          "gt_event_id": {"type": "string"},
+          "anomaly_type": {"type": "string"},
+          "accepted_anomaly_types": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "entity_type": {"type": "string"},
+          "entity_id": {"type": "string"},
+          "accepted_entity_aliases": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "allow_service_level_partial": {"type": "boolean"},
+          "accepted_service_aliases": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "service_id": {"type": ["string", "null"]},
+          "observable_start_time": {"type": "string", "format": "date-time"},
+          "observable_end_time": {"type": "string", "format": "date-time"},
+          "evidence_rubric": {"type": "string", "minLength": 8},
+          "review_status": {"enum": ["DRAFT", "APPROVED"]},
+          "gt_version": {"type": "string"},
+          "rubric_version": {"type": "string"}
+        }
+      }
+    },
+    "source_draft_sha256": {"type": "string"},
+    "warning": {"type": "string"}
+  }
+}

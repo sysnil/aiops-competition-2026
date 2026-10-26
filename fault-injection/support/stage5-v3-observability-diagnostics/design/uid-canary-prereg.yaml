@@ -1,0 +1,63 @@
+status: PREREGISTERED_BEFORE_UID_ROLLOUT
+scope: independent_stage5_v3_prefreeze_observability_repair
+formal_case: false
+fault_injection: forbidden
+historical_clean_results_overwrite: forbidden
+targets: [cart, checkout, shipping, quote]
+rollout_order: [cart, checkout, shipping, quote]
+target_replicas_each: 1
+method: downward_api_k8s_pod_uid_and_name_in_otel_resource_attributes
+collector_pipeline_change: forbidden
+source_sha256:
+  uid_rollout_py: e7c6d9d21cc53858ac31043a44588e8ad281adcfa4faef2075d3c7fcddf4702d
+  run_uid_canary_py: 2831ded3cdd5280ed16867d6b4bd8fb431cdb6337fd49152eee45e8b3939456e
+  audit_uid_canary_py: daaf914a5584283d8c225197460a2572312787e69940c02a9a5f73bce54a029a
+  repair_plan_json: c9adb1ffc9b9ea55347307d0e0ebc00bbb93c6356cd149802f2d447316909ef0
+  backup_manifest_json: 1b16eef633ee138230dfa26b483b0b773a2681c88204e3db12d12bcc2610a3f5
+  state_machine_yaml: e877814f950088c6a692778a23644979e44888f955bcf35496f4ad59c26ad05b
+  workload_generator_py: 5f7291c9b7698af50b66357fe2fcd38ef9eb491a6330db207d578d38f6fe5464
+  load_profiles_c3_yaml: e9893989f9012cb00432ec95aed3af9daa218238a90bd5a82a61fba02888a23d
+  synthetic_people_json: 2e780c99cd1950213c798ba086c184b6ae89a98af8a6df4bb190b2e19bcf77ab
+preconditions:
+  fresh_global_safety_pass_max_age_seconds: 180
+  four_nodes_ready_and_pressure_free: true
+  five_host_residue_pass: true
+  prometheus_opensearch_jaeger_collector_pass: true
+  master_free_bytes_min: 46000000000
+  independent_rollback_timer_active_before_first_patch: true
+  current_deployment_uid_env_replicas_match_backup: true
+rollout:
+  one_service_at_a_time: true
+  resource_version_test: true
+  rollout_ready_timeout_seconds: 240
+  runtime_env_direct_read_when_executable_available: true
+  checkout_shipping_without_printenv_require_raw_jaeger_uid_proof: true
+  any_failed_service: stop_and_rollback_all
+  independent_rollback_unit: s5v3od-uid-rollback
+  automatic_rollback_after_minutes: 45
+canary:
+  id: OD-UID-CANARY-20261012
+  seed: 861303
+  duration_seconds: 180
+  profile: MEDIUM
+  workflow_weights: {browse: 20, shopping: 30, checkout: 50}
+  fixed_business_entry: frontend_proxy_service
+  direct_pod_diagnostic_requests_counted_as_business: false
+  ordinary_business_client_errors_max: 0
+  each_target_service_issued_trace_server_span_min: 30
+  each_target_service_server_uid_match_fraction_min: 1.0
+  unmatched_uid_or_mismatched_uid_max: 0
+  issued_request_trace_id_match_fraction_min: 1.0
+  jaeger_query_before_start_padding_seconds: 1
+  jaeger_query_after_end_padding_seconds: 5
+  jaeger_read_not_before_end_plus_seconds: 120
+  all_four_nodes_ready_after: true
+  healthy_prometheus_opensearch_jaeger_collector_after: true
+  route_and_pod_placement_must_be_refreshed_after_rollout: true
+  failure_result: UID_CANARY_FAILED_ROLLBACK_REQUIRED
+  successful_result: UID_CANARY_PASS_RETAINABLE_WITH_HUMAN_REVIEW
+post_canary:
+  stage5_v3_protocol_freeze: forbidden
+  formal_dev_test_case: forbidden
+  clean_gate_approval: forbidden
+  rca_formal_inference: forbidden

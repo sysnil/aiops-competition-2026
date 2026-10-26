@@ -1,0 +1,15 @@
+{
+  "servers": [
+    {
+      "name": "trace-diagnostics",
+      "enabled": true,
+      "command": "${PYTHON}",
+      "args": ["${PROJECT_ROOT}/mcp_servers/trace_diagnostics.py"],
+      "env": {
+        "AIOPS_BASE_URL": "${BASE_URL}",
+        "PYTHONPATH": "${PROJECT_ROOT}"
+      }
+    }
+  ]
+}
+

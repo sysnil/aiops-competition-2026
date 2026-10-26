@@ -1,0 +1,90 @@
+status: PROPOSED_NOT_APPROVED
+scope: independent_stage5_v3_prefreeze_rehearsal
+formal_admission_replacement: false
+historic_C2_C3_D3_VAL1_VAL2_reclassification: forbidden
+global_safety:
+  fail_closed: true
+  required:
+    - four_nodes_ready_and_disk_memory_pid_pressure_false
+    - fresh_node_leases_and_full_10_min_cpu_memory_condition_series
+    - tigera_operator_ready
+    - infra_agent_4_of_4_ready
+    - calico_bgp_3_of_3_and_network_connectivity
+    - prometheus_opensearch_jaeger_storage_collectors_ready
+    - no_unexplained_workload_http_failures
+    - five_host_fault_and_network_residue_pass
+    - independent_watchdog_executable
+    - no_mass_pod_restart
+    - current_run_storage_budget_and_eviction_margin_pass
+  unknown_or_stale: FAIL
+  statistical_rule_may_override: false
+cpu_safety:
+  status: DRAFT_REQUIRES_INDEPENDENT_VALIDATION_AND_FAULT_SENSITIVITY
+  applies: clean_and_prefault_all_nodes; during_target_node_fault_uses_mechanism_specific_rule
+  four_node_cpu_series_required: true
+  worker_allocatable_cores_source: current_kubernetes_node_status
+  each_worker_min_headroom_cores: 2.0
+  each_worker_min_headroom_fraction_of_allocatable: 0.25
+  cpu_psi_some_avg60_max_percent: 5.0
+  psi_source: host_proc_pressure_cpu_sampled_at_fixed_30_second_intervals
+  sustained_violation_seconds_to_abort: 60
+  any_node_not_ready_or_pressure_or_missing_psi: immediate_fail
+  no_unexplained_client_errors_or_timeouts: true
+  node_cpu_contention_fault_during: separate_prefrozen_target_safety_policy_required
+cpu_workload_overhead:
+  report_only_not_safety_override: true
+  old_added_node_cpu_limit_cores: 0.25
+  old_two_minute_reference_is_descriptive_comparator: true
+  compare_reference_minutes: [2, 5, 10]
+  categories: [ordinary_business_leaf_containers, fixed_controls,
+               probe_and_collector, other_containers, UNATTRIBUTED]
+  host_process_and_container_cpu_must_not_be_added_together: true
+  background_drift_and_sampling_uncertainty_reported: true
+workload_qualification:
+  same_state_machine_and_fixed_controls_before_during_after: true
+  no_qps_or_fault_strength_retuning_for_pass: true
+  recommendation_each_pod_before_last_5_min_trace_ids_per_minute_min: 30
+  checkout_cart_before_last_5_min_trace_ids_per_minute_min: 30
+  fresh_pod_uid_route_and_real_business_packet_proof: true
+  control_successful_requests_each_minute_min: 30
+  control_usable_edge_trace_ids_each_minute_min: 30
+  any_control_client_error_timeout_or_missed_arrival: FAIL
+  missing_control_identity_or_trace_source: FAIL
+control_rules:
+  unit_of_independence: complete_25_minute_window
+  before_baseline: median_of_10_before_minute_p95_order_statistics
+  evaluated_minutes: 15_during_plus_after
+  request_level_window_p95: historical_order_statistic_over_all_successful_during_after_requests
+  p95_comparison_is_client_side: true
+  all_controls_must_pass: true
+  simultaneous_both_controls_above_1_25_same_minute: FAIL
+  A_old:
+    status: unchanged_comparator
+    every_evaluated_minute_p95_ratio_max: 1.25
+  B_persistence_peak:
+    status: MAIN_CANDIDATE_1_PROPOSED_NOT_APPROVED
+    minute_high_if_p95_ratio_gt: 1.25
+    max_consecutive_high_minutes: 1
+    absolute_single_minute_ratio_ceiling: 1.50
+    all_client_errors_timeouts_missed_arrivals: FAIL
+    any_missing_request_or_edge_span_minute: FAIL
+  E_B_and_window:
+    status: MAIN_CANDIDATE_2_PROPOSED_NOT_APPROVED
+    require_B: true
+    max_high_minutes_fraction_of_15: 0.10
+    pooled_during_after_request_p95_ratio_max: 1.25
+    all_client_errors_timeouts_missed_arrivals: FAIL
+    any_missing_request_or_edge_span_minute: FAIL
+  C_window_alone:
+    status: EXPLORATORY_ONLY
+  D_noise_envelope:
+    status: NOT_SELECTED_SMALL_HETEROGENEOUS_SAMPLE_AND_REPEATED_1_69_CART_PEAK
+  candidate_success_does_not_approve_protocol: true
+trace_completion:
+  proposed_contract: design/trace-completion-v2-proposed.yaml
+  critical_missing_or_unclassified_late_span: FAIL
+  known_noncritical_late_span: record_separately_not_silent
+root_observable_definition_unchanged: Injection_VALID_and_Observability_VALID
+user_impactful_definition_unchanged: Root_Observable_and_Business_Impact_STRONG_or_WEAK
+fault_target_during_successful_request_or_server_span_requirement_added: false
+mechanism_direct_root_evidence_requirements_unchanged: true

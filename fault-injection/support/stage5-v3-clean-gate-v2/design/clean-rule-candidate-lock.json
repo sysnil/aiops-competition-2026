@@ -1,0 +1,57 @@
+{
+  "status": "PROPOSED_NOT_APPROVED_LOCKED_BEFORE_VALIDATION",
+  "at_utc": "2026-10-12T07:12:01.691752+00:00",
+  "candidates": [
+    "B_persistence_peak",
+    "E_B_and_window"
+  ],
+  "B": {
+    "high_minute_ratio_gt": 1.25,
+    "max_consecutive_high_minutes": 1,
+    "single_minute_ratio_ceiling": 1.5,
+    "any_client_error_timeout_or_missing_arrival": "FAIL"
+  },
+  "E": {
+    "requires_B": true,
+    "max_high_minute_fraction": 0.1,
+    "pooled_request_p95_ratio_max": 1.25
+  },
+  "both_controls_simultaneously_high": "FAIL",
+  "minimum_successful_requests_per_control_minute": 30,
+  "minimum_usable_edge_spans_per_control_minute": 30,
+  "cpu_safety": {
+    "worker_min_headroom_cores": 2.0,
+    "worker_min_headroom_fraction": 0.25,
+    "cpu_psi_some_avg60_percent_max": 5.0,
+    "sustained_violation_abort_seconds": 60
+  },
+  "trace_completion": {
+    "first_start": 5,
+    "plus60_start": 60,
+    "plus120_start": 120,
+    "plus120_finish_by": 180,
+    "audit_start": 240,
+    "audit_finish_by": 300,
+    "scoring_snapshot": "immutable_plus120"
+  },
+  "validation_seeds": [
+    861201,
+    861202
+  ],
+  "historical_calibration_source_sha256": {
+    "/Users/liuzihan/Documents/ChatGPT/otel/stage5-v3-clean-gate-v2/design/clean-gate-v2-proposed.yaml": "56fcecbe2ae90223d1dd0b8e05142f2aa528fc250ffad1e84df4a897d38e10fc",
+    "/Users/liuzihan/Documents/ChatGPT/otel/stage5-v3-clean-gate-v2/design/trace-completion-v2-proposed.yaml": "e5707882f0259a77d3639fc244f536517b0ca5fd8f9f912384a540cf297b7269",
+    "/Users/liuzihan/Documents/ChatGPT/otel/stage5-v3-clean-gate-v2/design/validation-prereg-draft.yaml": "ecf38816ef31de600dbde8fcccd15eb61bcf9a83c11e1c55d4530d2c62036c58",
+    "/Users/liuzihan/Documents/ChatGPT/otel/stage5-v3-clean-gate-v2/snapshots/historical-input-manifest.json": "bc6646d1de4ea7a48adbe5207537564e75e0c69ff7d40a46045195148c00f1fc",
+    "/Users/liuzihan/Documents/ChatGPT/otel/stage5-v3-clean-gate-v2/results/historical-window-analysis.json": "df3c40a96e3cdbefc4d1c3a42a23d84755d5ab9374ce3a21d8831c0fca46581a",
+    "/Users/liuzihan/Documents/ChatGPT/otel/stage5-v3-clean-gate-v2/results/historical-control-candidates.json": "1d7cca9354e4ba13325ca57c0d2d8e28693d32890085ae00e7d0ef72ae1030a7",
+    "/Users/liuzihan/Documents/ChatGPT/otel/stage5-v3-clean-gate-v2/results/cpu-reference-analysis.json": "4e4f43f9813ae3944073aea6e71725c3bf221f1a795ca233c127860a6deab57f",
+    "/Users/liuzihan/Documents/ChatGPT/otel/stage5-v3-clean-gate-v2/results/D3-late-classification.json": "76f1fc77854ec4667178c9e45e369f4b894f85985ce575ffac287ec33971cfe5",
+    "/Users/liuzihan/Documents/ChatGPT/otel/stage5-v3-clean-gate-v2/results/VAL-1-late-span-ids-v2.json": "96edfbee01d5ef3a543c27d28d6aca10b4f6d4d142f0979def107a8b1fbaff3c",
+    "/Users/liuzihan/Documents/ChatGPT/otel/stage5-v3-clean-gate-v2/results/VAL-2-late-span-ids-v2.json": "0887702b534280f7137d98c8edff6d7b0fd702a991c16d34799dff350adf6046"
+  },
+  "new_calibration_windows": 0,
+  "formal_admission_or_clean_gate_approved": false,
+  "validation_results_used_to_choose_rules": false,
+  "historic_results_reclassified": false
+}

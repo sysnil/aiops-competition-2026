@@ -1,0 +1,11 @@
+{
+  "status": "PREREGISTERED_HARMLESS_TWO_ATTEMPT_ISOLATION_TEST",
+  "run_suffixes": ["isolation_a", "isolation_b"],
+  "planned_delay_seconds": 7,
+  "cancel_first_before_planned": true,
+  "first_expected_fired": false,
+  "second_expected_fired": true,
+  "both_expected_inactive_after_cleanup": true,
+  "real_fault_adapter_allowed": false,
+  "business_resources_modified": false
+}

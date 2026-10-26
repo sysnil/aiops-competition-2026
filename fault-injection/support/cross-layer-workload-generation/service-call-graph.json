@@ -1,0 +1,702 @@
+{
+  "created_utc": "2026-10-10T02:47:10.407818+00:00",
+  "source": "current Kubernetes objects + JAEGER_OPENSEARCH_STORAGE",
+  "baseline_sha256": "8d3e8512ffd051fe1195e0d6ffdf7d80ca12e79b153e1d473d07b7c8c6636a6c",
+  "services": [
+    {
+      "name": "ad",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "ad",
+          "pod": "ad-86dd5957d-56fmd",
+          "uid": "1d3918c3-4a96-4537-b92c-0c572f31fbc5",
+          "ip": "10.244.194.89",
+          "node": "k8s-worker1",
+          "ready": true
+        },
+        {
+          "service": "ad",
+          "pod": "ad-86dd5957d-rzw7x",
+          "uid": "872cda9b-1a8d-4b7d-a674-2eb7089f4585",
+          "ip": "10.244.126.47",
+          "node": "k8s-worker2",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 75
+    },
+    {
+      "name": "agent",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [
+        {
+          "service": "agent",
+          "pod": "agent-6b7d44c85f-bhfvq",
+          "uid": "0a09a62e-1ef8-4781-8c43-1410f168d593",
+          "ip": "10.244.194.74",
+          "node": "k8s-worker1",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 0
+    },
+    {
+      "name": "astronomy-db",
+      "classification": "BACKGROUND",
+      "pods": [
+        {
+          "service": "astronomy-db",
+          "pod": "astronomy-db-697d687fcd-9dr26",
+          "uid": "8a378f59-f231-4ff7-8b6c-bb160610909a",
+          "ip": "10.244.126.9",
+          "node": "k8s-worker2",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 0
+    },
+    {
+      "name": "cart",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "cart",
+          "pod": "cart-859c57747f-mmp79",
+          "uid": "4fdedc27-dc56-4272-9f30-4c2a47832c9a",
+          "ip": "10.244.126.8",
+          "node": "k8s-worker2",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 633
+    },
+    {
+      "name": "chatbot",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [
+        {
+          "service": "chatbot",
+          "pod": "chatbot-6d894d668f-ptb7v",
+          "uid": "820ba742-de63-4daa-8fd2-846a3d264a9b",
+          "ip": "10.244.126.15",
+          "node": "k8s-worker2",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 0
+    },
+    {
+      "name": "checkout",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "checkout",
+          "pod": "checkout-86f46d5794-29s22",
+          "uid": "42723cbc-7393-43c1-b112-8d88dd4b86ee",
+          "ip": "10.244.100.216",
+          "node": "k8s-worker3",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 202
+    },
+    {
+      "name": "currency",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "currency",
+          "pod": "currency-9ff44bdfb-5k6jm",
+          "uid": "577366bf-9673-4d4a-a001-feba68408590",
+          "ip": "10.244.100.210",
+          "node": "k8s-worker3",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 121
+    },
+    {
+      "name": "email",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "email",
+          "pod": "email-6967b9f69-dj44d",
+          "uid": "fc047327-027f-40da-90b5-4b7c332da332",
+          "ip": "10.244.100.220",
+          "node": "k8s-worker3",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 56
+    },
+    {
+      "name": "flagd",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [
+        {
+          "service": "flagd",
+          "pod": "flagd-54d7d6656-wmq72",
+          "uid": "630bc141-cc47-46ff-87bd-1c1aa971b7ce",
+          "ip": "10.244.126.46",
+          "node": "k8s-worker2",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 2313
+    },
+    {
+      "name": "frontend",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "frontend",
+          "pod": "frontend-55495688b-6qczq",
+          "uid": "f81645d1-1d65-4e53-8ab6-6f3807b5edfe",
+          "ip": "10.244.100.214",
+          "node": "k8s-worker3",
+          "ready": true
+        },
+        {
+          "service": "frontend",
+          "pod": "frontend-55495688b-zl2zz",
+          "uid": "ef6f12e8-2202-45b7-b854-4296eba4ac32",
+          "ip": "10.244.126.49",
+          "node": "k8s-worker2",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 3066
+    },
+    {
+      "name": "frontend-proxy",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "frontend-proxy",
+          "pod": "frontend-proxy-5c845cb4fd-4p9q9",
+          "uid": "0ec44465-2320-417d-b718-4e374f98d9da",
+          "ip": "10.244.126.7",
+          "node": "k8s-worker2",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 2950
+    },
+    {
+      "name": "grafana",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [],
+      "baseline_spans": 0
+    },
+    {
+      "name": "image-provider",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "image-provider",
+          "pod": "image-provider-5679bf79b7-dwl69",
+          "uid": "97d402d1-315f-4a69-9960-767519ff7136",
+          "ip": "10.244.126.14",
+          "node": "k8s-worker2",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 245
+    },
+    {
+      "name": "jaeger",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [],
+      "baseline_spans": 0
+    },
+    {
+      "name": "kafka",
+      "classification": "BACKGROUND",
+      "pods": [
+        {
+          "service": "kafka",
+          "pod": "kafka-5b868d7cc4-nwqxj",
+          "uid": "0ff8945b-27a3-48af-986c-47ebb8ea25fa",
+          "ip": "10.244.194.77",
+          "node": "k8s-worker1",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 0
+    },
+    {
+      "name": "mcp",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [
+        {
+          "service": "mcp",
+          "pod": "mcp-55bf76756c-5qtnx",
+          "uid": "af109a14-a471-496d-a065-8fd7fb03c8e3",
+          "ip": "10.244.100.222",
+          "node": "k8s-worker3",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 0
+    },
+    {
+      "name": "opamp-server",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [
+        {
+          "service": "opamp-server",
+          "pod": "opamp-server-9f7fcc695-cf9nm",
+          "uid": "70303b5b-0138-44b7-9e59-b5ebd8df44f8",
+          "ip": "10.244.126.6",
+          "node": "k8s-worker2",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 0
+    },
+    {
+      "name": "opensearch",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [],
+      "baseline_spans": 0
+    },
+    {
+      "name": "opensearch-headless",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [],
+      "baseline_spans": 0
+    },
+    {
+      "name": "otel-cluster-collector",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [],
+      "baseline_spans": 0
+    },
+    {
+      "name": "otel-collector",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [],
+      "baseline_spans": 0
+    },
+    {
+      "name": "payment",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "payment",
+          "pod": "payment-6f6546fd4d-9jjvb",
+          "uid": "8d5e481d-0528-4791-9b63-b400a217d94b",
+          "ip": "10.244.194.95",
+          "node": "k8s-worker1",
+          "ready": true
+        },
+        {
+          "service": "payment",
+          "pod": "payment-6f6546fd4d-j9v6q",
+          "uid": "f9fbdf9e-8eca-4d49-b964-9736d36db1a3",
+          "ip": "10.244.100.203",
+          "node": "k8s-worker3",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 29
+    },
+    {
+      "name": "product-catalog",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "product-catalog",
+          "pod": "product-catalog-67768465c-q4n2g",
+          "uid": "ceafa7b1-6ef7-4dbd-92d5-392d38974b9b",
+          "ip": "10.244.100.208",
+          "node": "k8s-worker3",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 1256
+    },
+    {
+      "name": "prometheus",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [],
+      "baseline_spans": 0
+    },
+    {
+      "name": "quote",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "quote",
+          "pod": "quote-5cc4c9f6cb-6khbh",
+          "uid": "99f4c976-5f54-4763-ba00-e5e3a2f0a453",
+          "ip": "10.244.194.79",
+          "node": "k8s-worker1",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 63
+    },
+    {
+      "name": "recommendation",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "recommendation",
+          "pod": "recommendation-5654fd7874-cwhvj",
+          "uid": "50cba1c7-74d5-49ff-a675-b529e44b71bd",
+          "ip": "10.244.194.94",
+          "node": "k8s-worker1",
+          "ready": true
+        },
+        {
+          "service": "recommendation",
+          "pod": "recommendation-5654fd7874-fl2rm",
+          "uid": "33b72cda-1795-4e3e-9f10-026d1305c3c2",
+          "ip": "10.244.100.204",
+          "node": "k8s-worker3",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 249
+    },
+    {
+      "name": "shipping",
+      "classification": "BUSINESS",
+      "pods": [
+        {
+          "service": "shipping",
+          "pod": "shipping-d8fdcff65-6qfsc",
+          "uid": "b3c93584-6cfc-4daa-bd7a-de9a0ca0c4dc",
+          "ip": "10.244.194.73",
+          "node": "k8s-worker1",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 56
+    },
+    {
+      "name": "telemetry-docs",
+      "classification": "CONTROL_OR_OTHER",
+      "pods": [
+        {
+          "service": "telemetry-docs",
+          "pod": "telemetry-docs-7b7ccd8b47-2s7p5",
+          "uid": "5682d98f-f412-42d8-8967-6a61ad4b25db",
+          "ip": "10.244.194.72",
+          "node": "k8s-worker1",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 0
+    },
+    {
+      "name": "valkey-cart",
+      "classification": "BACKGROUND",
+      "pods": [
+        {
+          "service": "valkey-cart",
+          "pod": "valkey-cart-846c4f796c-xdkzr",
+          "uid": "2e70c257-b485-425f-b094-e65596ea1a49",
+          "ip": "10.244.194.71",
+          "node": "k8s-worker1",
+          "ready": true
+        }
+      ],
+      "baseline_spans": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": "frontend-proxy",
+      "destination": "frontend",
+      "baseline_span_count": 1143,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "frontend",
+      "destination": "product-catalog",
+      "baseline_span_count": 513,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "frontend-web",
+      "destination": "frontend-proxy",
+      "baseline_span_count": 430,
+      "category": "CONTROL_OR_BACKGROUND",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "frontend-proxy",
+      "destination": "image-provider",
+      "baseline_span_count": 245,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "load-generator",
+      "destination": "flagd",
+      "baseline_span_count": 224,
+      "category": "CONTROL_OR_BACKGROUND",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "load-generator",
+      "destination": "frontend-proxy",
+      "baseline_span_count": 221,
+      "category": "CONTROL_OR_BACKGROUND",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "frontend",
+      "destination": "cart",
+      "baseline_span_count": 202,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "frontend",
+      "destination": "recommendation",
+      "baseline_span_count": 83,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "recommendation",
+      "destination": "product-catalog",
+      "baseline_span_count": 83,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "frontend",
+      "destination": "currency",
+      "baseline_span_count": 76,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "checkout",
+      "destination": "currency",
+      "baseline_span_count": 45,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "frontend-proxy",
+      "destination": "flagd",
+      "baseline_span_count": 43,
+      "category": "CONTROL_OR_BACKGROUND",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "checkout",
+      "destination": "product-catalog",
+      "baseline_span_count": 31,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "checkout",
+      "destination": "shipping",
+      "baseline_span_count": 28,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "checkout",
+      "destination": "cart",
+      "baseline_span_count": 28,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "frontend",
+      "destination": "ad",
+      "baseline_span_count": 27,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "shipping",
+      "destination": "quote",
+      "baseline_span_count": 21,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "cart",
+      "destination": "flagd",
+      "baseline_span_count": 20,
+      "category": "CONTROL_OR_BACKGROUND",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "checkout",
+      "destination": "email",
+      "baseline_span_count": 14,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "frontend",
+      "destination": "checkout",
+      "baseline_span_count": 14,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "checkout",
+      "destination": "payment",
+      "baseline_span_count": 14,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "frontend",
+      "destination": "shipping",
+      "baseline_span_count": 7,
+      "category": "BUSINESS_REACHABLE",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    },
+    {
+      "source": "payment",
+      "destination": "flagd",
+      "baseline_span_count": 1,
+      "category": "CONTROL_OR_BACKGROUND",
+      "evidence": {
+        "source": "/root/cross-layer-workload-generation/observations/baseline-trace-coverage.json",
+        "window_start": "2026-10-10T02:41:20.266073+00:00",
+        "window_end": "2026-10-10T02:44:20.266073+00:00"
+      }
+    }
+  ],
+  "business_service_denominator": [
+    "ad",
+    "cart",
+    "checkout",
+    "currency",
+    "email",
+    "frontend",
+    "frontend-proxy",
+    "image-provider",
+    "payment",
+    "product-catalog",
+    "quote",
+    "recommendation",
+    "shipping"
+  ],
+  "business_edge_denominator": [
+    "checkout->cart",
+    "checkout->currency",
+    "checkout->email",
+    "checkout->payment",
+    "checkout->product-catalog",
+    "checkout->shipping",
+    "frontend->ad",
+    "frontend->cart",
+    "frontend->checkout",
+    "frontend->currency",
+    "frontend->product-catalog",
+    "frontend->recommendation",
+    "frontend->shipping",
+    "frontend-proxy->frontend",
+    "frontend-proxy->image-provider",
+    "recommendation->product-catalog",
+    "shipping->quote"
+  ],
+  "pod_identity_in_trace": 0.0,
+  "network_path_coverage_status": "UNVERIFIED_PENDING_FRESH_ROUTE_AND_FLOW_PROOF"
+}

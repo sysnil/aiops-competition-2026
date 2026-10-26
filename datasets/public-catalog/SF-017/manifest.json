@@ -1,0 +1,3901 @@
+{
+  "case_id": "SF-017",
+  "version": "public-v1",
+  "dataset_schema_version": "CONTEST_EXCHANGE_V2",
+  "start_time": "2026-10-20T13:45:16.132537+00:00",
+  "end_time": "2026-10-20T14:15:16.132537+00:00",
+  "available_modalities": [
+    "metrics",
+    "logs",
+    "traces"
+  ],
+  "public_services": [
+    "accounting",
+    "ad",
+    "astronomy-db",
+    "cart",
+    "checkout",
+    "currency",
+    "default",
+    "email",
+    "flagd",
+    "fraud-detection",
+    "frontend",
+    "frontend-proxy",
+    "frontend-web",
+    "image-provider",
+    "kafka",
+    "load-generator",
+    "opamp-server",
+    "otel-demo",
+    "otelcol-contrib",
+    "payment",
+    "product-catalog",
+    "quote",
+    "recommendation",
+    "shipping",
+    "tigera-operator",
+    "valkey-cart"
+  ],
+  "public_topology": {
+    "case_id": "SF-017",
+    "kind": "observed_public_kubernetes_identity_snapshots",
+    "snapshots": [
+      {
+        "observed_at_utc": "2026-10-20T13:50:21.612130+00:00",
+        "pods": [
+          {
+            "name": "accounting-6f555cfd6f-6xdpf",
+            "uid": "e1bfa7db-46cf-4d67-8223-51af9dc92a00",
+            "namespace": "otel-demo",
+            "service": "accounting",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.219",
+            "containers": [
+              {
+                "name": "accounting",
+                "container_id": "containerd://00f2af79927b4844f7b693f4d97c838054a471651397ef125e767a90a8b49f01",
+                "restart_count": 2
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-bngm2",
+            "uid": "ed46f7c4-4ebc-4888-b079-6c2af9eeb010",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.96",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://d29bdafe326cdde074582d0b05939d73ffd0059ac3319d82be99823f89ba89d7",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-qd57p",
+            "uid": "302465c2-8b62-4aa9-bcf5-1cf9c3c195bc",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.215",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://721c58ad7b4530e6a7769fa388b88a69d4908f7546af3cbbccafc4d70a31ac38",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "agent-6b7d44c85f-bhfvq",
+            "uid": "0a09a62e-1ef8-4781-8c43-1410f168d593",
+            "namespace": "otel-demo",
+            "service": "agent",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.74",
+            "containers": [
+              {
+                "name": "agent",
+                "container_id": "containerd://0b71439205a9034f686b405ef935f750c957e9f38febe8dcb9a17c1073cdf292",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "astronomy-db-697d687fcd-9dr26",
+            "uid": "8a378f59-f231-4ff7-8b6c-bb160610909a",
+            "namespace": "otel-demo",
+            "service": "astronomy-db",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.9",
+            "containers": [
+              {
+                "name": "astronomy-db",
+                "container_id": "containerd://27530b2f940695c77b16b1420d4d1b4a92c4346523c9e4199b186c34e6a6dde9",
+                "restart_count": 16
+              }
+            ]
+          },
+          {
+            "name": "cart-6c888669bc-g76nh",
+            "uid": "9b309714-c491-452a-af83-15c5960de71f",
+            "namespace": "otel-demo",
+            "service": "cart",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.221",
+            "containers": [
+              {
+                "name": "cart",
+                "container_id": "containerd://06a533909f71d3243ca632d74af6149cdcff49ebc35b3cb20047b5ef196a00c3",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "chatbot-6d894d668f-ptb7v",
+            "uid": "820ba742-de63-4daa-8fd2-846a3d264a9b",
+            "namespace": "otel-demo",
+            "service": "chatbot",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.15",
+            "containers": [
+              {
+                "name": "chatbot",
+                "container_id": "containerd://78eee0fe482ef2bed9bf3977d1bac8254a71756dddffa0d2ade05838fb04db10",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "checkout-6767884cf8-v57xw",
+            "uid": "89780c7f-a487-4d1e-a2fb-d7abc482c231",
+            "namespace": "otel-demo",
+            "service": "checkout",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.4",
+            "containers": [
+              {
+                "name": "checkout",
+                "container_id": "containerd://713f7c6d4b5b9a7b1ecf04657e5beb23b79afd900b4ada880bc2e58c0f0a993c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "currency-9ff44bdfb-5k6jm",
+            "uid": "577366bf-9673-4d4a-a001-feba68408590",
+            "namespace": "otel-demo",
+            "service": "currency",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.210",
+            "containers": [
+              {
+                "name": "currency",
+                "container_id": "containerd://1d43b689598b064dbb087eea980d1e086c425551e7ad8bd324719584d5d5a1d5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "email-6967b9f69-dj44d",
+            "uid": "fc047327-027f-40da-90b5-4b7c332da332",
+            "namespace": "otel-demo",
+            "service": "email",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.220",
+            "containers": [
+              {
+                "name": "email",
+                "container_id": "containerd://61505246b48f3a374f2e1af3e00ef4f66d657bf926d8e7ee9cc50862588d3520",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "flagd-54d7d6656-wmq72",
+            "uid": "630bc141-cc47-46ff-87bd-1c1aa971b7ce",
+            "namespace": "otel-demo",
+            "service": "flagd",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.46",
+            "containers": [
+              {
+                "name": "flagd",
+                "container_id": "containerd://c06f5572c4d3767fc80215dcce6e8145b6ba1121e253761338fb53a76d279b24",
+                "restart_count": 0
+              },
+              {
+                "name": "flagd-ui",
+                "container_id": "containerd://65b36cd366e61f50d83730339cfe79e5d6a16eaacba3272da970ab28712fbb58",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "fraud-detection-57958fdd76-nldnw",
+            "uid": "6b808d21-447c-4ff5-a3fa-8b9991080203",
+            "namespace": "otel-demo",
+            "service": "fraud-detection",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.75",
+            "containers": [
+              {
+                "name": "fraud-detection",
+                "container_id": "containerd://443077405ba2efcf59c3c55b887ba6b71714e407e4db74d9ef8ba8bc6b24a8ff",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-8mnzh",
+            "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.57",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-c4n85",
+            "uid": "6305d17a-27f0-4dbf-8fc7-7238acb3be91",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.101",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://71c436f60470eeaf12334e5dd3a69302bbfe16ba1be6f0886260a1b2eb9d0c4e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-proxy-844f94c445-w25c9",
+            "uid": "0fdcca7f-b125-4993-b329-e83d5570d072",
+            "namespace": "otel-demo",
+            "service": "frontend-proxy",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.59",
+            "containers": [
+              {
+                "name": "frontend-proxy",
+                "container_id": "containerd://f5e03b207200f192b6bc545d8a3bb68fe1e001960a7c862450980d8bc245c976",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "grafana-7fd8f8759f-gfb8z",
+            "uid": "56779f3a-333f-4783-b8b4-5f6bb3d37fac",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.27",
+            "containers": [
+              {
+                "name": "grafana",
+                "container_id": "containerd://7923b0d30ffcd5bfe1b25cdd327b7b6a8847f8c0a066e76d1569f568a0c2df92",
+                "restart_count": 1
+              },
+              {
+                "name": "grafana-sc-alerts",
+                "container_id": "containerd://92e53895f1ff7e9b04668b06e16c513d39b008202be8d7ec0f2c17ee937ed12d",
+                "restart_count": 0
+              },
+              {
+                "name": "grafana-sc-dashboard",
+                "container_id": "containerd://2707e11ceaf11c67820cb7a9e3ac533a262bd38c10cfd9419172f5d49f3fe68c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "image-provider-5679bf79b7-dwl69",
+            "uid": "97d402d1-315f-4a69-9960-767519ff7136",
+            "namespace": "otel-demo",
+            "service": "image-provider",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.14",
+            "containers": [
+              {
+                "name": "image-provider",
+                "container_id": "containerd://537f6ec27307d40c459bc968d865a575288ace50b5a3fbf90c4bc8ab186ae6ce",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "jaeger-6c4688ff45-swvnz",
+            "uid": "bb9e7ff3-1727-4981-a1f7-977ab62ab8e5",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.91",
+            "containers": [
+              {
+                "name": "jaeger",
+                "container_id": "containerd://24a9a162cf6426a390d60a27094a9ca76832f1036d77452fb476282eaa213001",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "kafka-5b868d7cc4-nwqxj",
+            "uid": "0ff8945b-27a3-48af-986c-47ebb8ea25fa",
+            "namespace": "otel-demo",
+            "service": "kafka",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.77",
+            "containers": [
+              {
+                "name": "kafka",
+                "container_id": "containerd://b4c58cdebe64abb3686866da3ac7c57410cb17b33db1a8754dfa8989c44fc6fb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "load-generator-79cbb674d-hmktb",
+            "uid": "63176197-bad1-4d67-8844-e825f4a6fea2",
+            "namespace": "otel-demo",
+            "service": "load-generator",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.12",
+            "containers": [
+              {
+                "name": "load-generator",
+                "container_id": "containerd://cfede5befb66632bf8de2ae8beae48c1bde48ab22e7ddeb36f642dff52e3561a",
+                "restart_count": 47
+              }
+            ]
+          },
+          {
+            "name": "mcp-55bf76756c-5qtnx",
+            "uid": "af109a14-a471-496d-a065-8fd7fb03c8e3",
+            "namespace": "otel-demo",
+            "service": "mcp",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.222",
+            "containers": [
+              {
+                "name": "mcp",
+                "container_id": "containerd://42de0162953d5d1d6be9dc7d26ae88ac29a119071edcec5dde502016f021e712",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opamp-server-9f7fcc695-cf9nm",
+            "uid": "70303b5b-0138-44b7-9e59-b5ebd8df44f8",
+            "namespace": "otel-demo",
+            "service": "opamp-server",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.6",
+            "containers": [
+              {
+                "name": "opamp-server",
+                "container_id": "containerd://ab44c43a4108cf67686ecfae5996aa01467439b321643299629dd82d65b1fe45",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opensearch-0",
+            "uid": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.86",
+            "containers": [
+              {
+                "name": "opensearch",
+                "container_id": "containerd://e9d3a4c9f581cd4540e75884d9095da4ddff3c21ca1c94cfec33f4db2472d718",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-cluster-collector-8c9c95bc8-kfx56",
+            "uid": "5141ae43-2d88-4f83-96a6-93855800f3c9",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.60",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://d08a0c0314576715d3d2a314f09f09786bf360f8191897d303195d72d03789af",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-collector-65dbbd4c5-7qf92",
+            "uid": "b6e0e86e-fd79-46ed-be58-61d494c6b074",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.248",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://a97354f80eb80d15e25e28357862aeb050327f07bd28a12f4dc470b29420c016",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-2w6fg",
+            "uid": "0e0ac70a-a31f-460b-865f-944bc87d29b0",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-master",
+            "pod_ip": "10.244.235.200",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://731fc72ed47854a2bdbb6c50617e0a96ce6882b1fa693dbe51dd3d71ec4ec7cb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-82bqk",
+            "uid": "cb592d79-fb4e-4367-8101-696150a2b1e6",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.225",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://7a30b0014f0630398d7fece12af593326a3484aa63e88d9b336357475d535cf6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-nj6kp",
+            "uid": "1c992c69-605b-4265-aa29-7aa632b0553c",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.20",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://c032e7f7d60c6cbfdc18933367487a72cab603887aa99ecdbe4af157246265db",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-svj2q",
+            "uid": "9b5846d8-57a9-4dbe-bd10-5608b6468e41",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.85",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://3021ce9c5bc1ab7937e6296330824c7270d4f4dee4cca58d7aa5cd4c4c426871",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-425wj",
+            "uid": "0d1d3434-9b4f-434c-9953-0d0f899fa255",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.97",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://ad9f93c5be3c7aeb311d5d1db11c2f455032aa9f08d43b01ca4d1698acd8dea5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-zsprs",
+            "uid": "01ab962b-e4a3-4e9e-b723-db762b2260d7",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.55",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://6565e7fc623c5a9dea14f6deb0768e4c201602bc7068f56e05b0c02ca584df0c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "product-catalog-67768465c-q4n2g",
+            "uid": "ceafa7b1-6ef7-4dbd-92d5-392d38974b9b",
+            "namespace": "otel-demo",
+            "service": "product-catalog",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.208",
+            "containers": [
+              {
+                "name": "product-catalog",
+                "container_id": "containerd://a15cc9f263845b26de9e1588f6d1847817fde5853e9244c5003b000714a4b14b",
+                "restart_count": 3
+              }
+            ]
+          },
+          {
+            "name": "prometheus-665dbf8745-67bmm",
+            "uid": "d61600d8-407a-46ae-b0e5-766ad683573d",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.48",
+            "containers": [
+              {
+                "name": "prometheus-server",
+                "container_id": "containerd://381897d5ea867f449d37d5a778f396d40af23afa6342ce8bd48ee85e0a04f0bc",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "quote-6bb6755bc6-rfqgn",
+            "uid": "a226abaa-395b-4c01-8d05-f7ccd1474d67",
+            "namespace": "otel-demo",
+            "service": "quote",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.240",
+            "containers": [
+              {
+                "name": "quote",
+                "container_id": "containerd://51ca969e277702d547c5723dc4ddc8eaf8a3b7f4c4782b525dad9a51aa6a24e6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-cxb5j",
+            "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.213",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-zchkk",
+            "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.200",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "shipping-7898d4fcfc-726nf",
+            "uid": "5fa727ea-ccb3-4611-abd0-1735465ecc9d",
+            "namespace": "otel-demo",
+            "service": "shipping",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.239",
+            "containers": [
+              {
+                "name": "shipping",
+                "container_id": "containerd://8833a8fcc620824b8ab05801f2830a2796975b88a7d331bd516bbfc7567800ac",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "telemetry-docs-7b7ccd8b47-2s7p5",
+            "uid": "5682d98f-f412-42d8-8967-6a61ad4b25db",
+            "namespace": "otel-demo",
+            "service": "telemetry-docs",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.72",
+            "containers": [
+              {
+                "name": "telemetry-docs",
+                "container_id": "containerd://20581b8bb5ec3d87e4bdeb15b0e67d65cc6704cc6ca5f504630da39771476044",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "valkey-cart-846c4f796c-xdkzr",
+            "uid": "2e70c257-b485-425f-b094-e65596ea1a49",
+            "namespace": "otel-demo",
+            "service": "valkey-cart",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.71",
+            "containers": [
+              {
+                "name": "valkey-cart",
+                "container_id": "containerd://01d3ffb9bf2f224742388fd939d4fac1c971f633244d4ffc93974835a7d57fbb",
+                "restart_count": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at_utc": "2026-10-20T13:55:21.580348+00:00",
+        "pods": [
+          {
+            "name": "accounting-6f555cfd6f-6xdpf",
+            "uid": "e1bfa7db-46cf-4d67-8223-51af9dc92a00",
+            "namespace": "otel-demo",
+            "service": "accounting",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.219",
+            "containers": [
+              {
+                "name": "accounting",
+                "container_id": "containerd://00f2af79927b4844f7b693f4d97c838054a471651397ef125e767a90a8b49f01",
+                "restart_count": 2
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-bngm2",
+            "uid": "ed46f7c4-4ebc-4888-b079-6c2af9eeb010",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.96",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://d29bdafe326cdde074582d0b05939d73ffd0059ac3319d82be99823f89ba89d7",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-qd57p",
+            "uid": "302465c2-8b62-4aa9-bcf5-1cf9c3c195bc",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.215",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://721c58ad7b4530e6a7769fa388b88a69d4908f7546af3cbbccafc4d70a31ac38",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "agent-6b7d44c85f-bhfvq",
+            "uid": "0a09a62e-1ef8-4781-8c43-1410f168d593",
+            "namespace": "otel-demo",
+            "service": "agent",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.74",
+            "containers": [
+              {
+                "name": "agent",
+                "container_id": "containerd://0b71439205a9034f686b405ef935f750c957e9f38febe8dcb9a17c1073cdf292",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "astronomy-db-697d687fcd-9dr26",
+            "uid": "8a378f59-f231-4ff7-8b6c-bb160610909a",
+            "namespace": "otel-demo",
+            "service": "astronomy-db",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.9",
+            "containers": [
+              {
+                "name": "astronomy-db",
+                "container_id": "containerd://27530b2f940695c77b16b1420d4d1b4a92c4346523c9e4199b186c34e6a6dde9",
+                "restart_count": 16
+              }
+            ]
+          },
+          {
+            "name": "cart-6c888669bc-g76nh",
+            "uid": "9b309714-c491-452a-af83-15c5960de71f",
+            "namespace": "otel-demo",
+            "service": "cart",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.221",
+            "containers": [
+              {
+                "name": "cart",
+                "container_id": "containerd://06a533909f71d3243ca632d74af6149cdcff49ebc35b3cb20047b5ef196a00c3",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "chatbot-6d894d668f-ptb7v",
+            "uid": "820ba742-de63-4daa-8fd2-846a3d264a9b",
+            "namespace": "otel-demo",
+            "service": "chatbot",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.15",
+            "containers": [
+              {
+                "name": "chatbot",
+                "container_id": "containerd://78eee0fe482ef2bed9bf3977d1bac8254a71756dddffa0d2ade05838fb04db10",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "checkout-6767884cf8-v57xw",
+            "uid": "89780c7f-a487-4d1e-a2fb-d7abc482c231",
+            "namespace": "otel-demo",
+            "service": "checkout",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.4",
+            "containers": [
+              {
+                "name": "checkout",
+                "container_id": "containerd://713f7c6d4b5b9a7b1ecf04657e5beb23b79afd900b4ada880bc2e58c0f0a993c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "currency-9ff44bdfb-5k6jm",
+            "uid": "577366bf-9673-4d4a-a001-feba68408590",
+            "namespace": "otel-demo",
+            "service": "currency",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.210",
+            "containers": [
+              {
+                "name": "currency",
+                "container_id": "containerd://1d43b689598b064dbb087eea980d1e086c425551e7ad8bd324719584d5d5a1d5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "email-6967b9f69-dj44d",
+            "uid": "fc047327-027f-40da-90b5-4b7c332da332",
+            "namespace": "otel-demo",
+            "service": "email",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.220",
+            "containers": [
+              {
+                "name": "email",
+                "container_id": "containerd://61505246b48f3a374f2e1af3e00ef4f66d657bf926d8e7ee9cc50862588d3520",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "flagd-54d7d6656-wmq72",
+            "uid": "630bc141-cc47-46ff-87bd-1c1aa971b7ce",
+            "namespace": "otel-demo",
+            "service": "flagd",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.46",
+            "containers": [
+              {
+                "name": "flagd",
+                "container_id": "containerd://c06f5572c4d3767fc80215dcce6e8145b6ba1121e253761338fb53a76d279b24",
+                "restart_count": 0
+              },
+              {
+                "name": "flagd-ui",
+                "container_id": "containerd://65b36cd366e61f50d83730339cfe79e5d6a16eaacba3272da970ab28712fbb58",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "fraud-detection-57958fdd76-nldnw",
+            "uid": "6b808d21-447c-4ff5-a3fa-8b9991080203",
+            "namespace": "otel-demo",
+            "service": "fraud-detection",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.75",
+            "containers": [
+              {
+                "name": "fraud-detection",
+                "container_id": "containerd://443077405ba2efcf59c3c55b887ba6b71714e407e4db74d9ef8ba8bc6b24a8ff",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-8mnzh",
+            "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.57",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-c4n85",
+            "uid": "6305d17a-27f0-4dbf-8fc7-7238acb3be91",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.101",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://71c436f60470eeaf12334e5dd3a69302bbfe16ba1be6f0886260a1b2eb9d0c4e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-proxy-844f94c445-w25c9",
+            "uid": "0fdcca7f-b125-4993-b329-e83d5570d072",
+            "namespace": "otel-demo",
+            "service": "frontend-proxy",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.59",
+            "containers": [
+              {
+                "name": "frontend-proxy",
+                "container_id": "containerd://f5e03b207200f192b6bc545d8a3bb68fe1e001960a7c862450980d8bc245c976",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "grafana-7fd8f8759f-gfb8z",
+            "uid": "56779f3a-333f-4783-b8b4-5f6bb3d37fac",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.27",
+            "containers": [
+              {
+                "name": "grafana",
+                "container_id": "containerd://7923b0d30ffcd5bfe1b25cdd327b7b6a8847f8c0a066e76d1569f568a0c2df92",
+                "restart_count": 1
+              },
+              {
+                "name": "grafana-sc-alerts",
+                "container_id": "containerd://92e53895f1ff7e9b04668b06e16c513d39b008202be8d7ec0f2c17ee937ed12d",
+                "restart_count": 0
+              },
+              {
+                "name": "grafana-sc-dashboard",
+                "container_id": "containerd://2707e11ceaf11c67820cb7a9e3ac533a262bd38c10cfd9419172f5d49f3fe68c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "image-provider-5679bf79b7-dwl69",
+            "uid": "97d402d1-315f-4a69-9960-767519ff7136",
+            "namespace": "otel-demo",
+            "service": "image-provider",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.14",
+            "containers": [
+              {
+                "name": "image-provider",
+                "container_id": "containerd://537f6ec27307d40c459bc968d865a575288ace50b5a3fbf90c4bc8ab186ae6ce",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "jaeger-6c4688ff45-swvnz",
+            "uid": "bb9e7ff3-1727-4981-a1f7-977ab62ab8e5",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.91",
+            "containers": [
+              {
+                "name": "jaeger",
+                "container_id": "containerd://24a9a162cf6426a390d60a27094a9ca76832f1036d77452fb476282eaa213001",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "kafka-5b868d7cc4-nwqxj",
+            "uid": "0ff8945b-27a3-48af-986c-47ebb8ea25fa",
+            "namespace": "otel-demo",
+            "service": "kafka",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.77",
+            "containers": [
+              {
+                "name": "kafka",
+                "container_id": "containerd://b4c58cdebe64abb3686866da3ac7c57410cb17b33db1a8754dfa8989c44fc6fb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "load-generator-79cbb674d-hmktb",
+            "uid": "63176197-bad1-4d67-8844-e825f4a6fea2",
+            "namespace": "otel-demo",
+            "service": "load-generator",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.12",
+            "containers": [
+              {
+                "name": "load-generator",
+                "container_id": "containerd://cfede5befb66632bf8de2ae8beae48c1bde48ab22e7ddeb36f642dff52e3561a",
+                "restart_count": 47
+              }
+            ]
+          },
+          {
+            "name": "mcp-55bf76756c-5qtnx",
+            "uid": "af109a14-a471-496d-a065-8fd7fb03c8e3",
+            "namespace": "otel-demo",
+            "service": "mcp",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.222",
+            "containers": [
+              {
+                "name": "mcp",
+                "container_id": "containerd://42de0162953d5d1d6be9dc7d26ae88ac29a119071edcec5dde502016f021e712",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opamp-server-9f7fcc695-cf9nm",
+            "uid": "70303b5b-0138-44b7-9e59-b5ebd8df44f8",
+            "namespace": "otel-demo",
+            "service": "opamp-server",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.6",
+            "containers": [
+              {
+                "name": "opamp-server",
+                "container_id": "containerd://ab44c43a4108cf67686ecfae5996aa01467439b321643299629dd82d65b1fe45",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opensearch-0",
+            "uid": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.86",
+            "containers": [
+              {
+                "name": "opensearch",
+                "container_id": "containerd://e9d3a4c9f581cd4540e75884d9095da4ddff3c21ca1c94cfec33f4db2472d718",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-cluster-collector-8c9c95bc8-kfx56",
+            "uid": "5141ae43-2d88-4f83-96a6-93855800f3c9",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.60",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://d08a0c0314576715d3d2a314f09f09786bf360f8191897d303195d72d03789af",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-collector-65dbbd4c5-7qf92",
+            "uid": "b6e0e86e-fd79-46ed-be58-61d494c6b074",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.248",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://a97354f80eb80d15e25e28357862aeb050327f07bd28a12f4dc470b29420c016",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-2w6fg",
+            "uid": "0e0ac70a-a31f-460b-865f-944bc87d29b0",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-master",
+            "pod_ip": "10.244.235.200",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://731fc72ed47854a2bdbb6c50617e0a96ce6882b1fa693dbe51dd3d71ec4ec7cb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-82bqk",
+            "uid": "cb592d79-fb4e-4367-8101-696150a2b1e6",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.225",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://7a30b0014f0630398d7fece12af593326a3484aa63e88d9b336357475d535cf6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-nj6kp",
+            "uid": "1c992c69-605b-4265-aa29-7aa632b0553c",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.20",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://c032e7f7d60c6cbfdc18933367487a72cab603887aa99ecdbe4af157246265db",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-svj2q",
+            "uid": "9b5846d8-57a9-4dbe-bd10-5608b6468e41",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.85",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://3021ce9c5bc1ab7937e6296330824c7270d4f4dee4cca58d7aa5cd4c4c426871",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-425wj",
+            "uid": "0d1d3434-9b4f-434c-9953-0d0f899fa255",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.97",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://ad9f93c5be3c7aeb311d5d1db11c2f455032aa9f08d43b01ca4d1698acd8dea5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-zsprs",
+            "uid": "01ab962b-e4a3-4e9e-b723-db762b2260d7",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.55",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://6565e7fc623c5a9dea14f6deb0768e4c201602bc7068f56e05b0c02ca584df0c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "product-catalog-67768465c-q4n2g",
+            "uid": "ceafa7b1-6ef7-4dbd-92d5-392d38974b9b",
+            "namespace": "otel-demo",
+            "service": "product-catalog",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.208",
+            "containers": [
+              {
+                "name": "product-catalog",
+                "container_id": "containerd://a15cc9f263845b26de9e1588f6d1847817fde5853e9244c5003b000714a4b14b",
+                "restart_count": 3
+              }
+            ]
+          },
+          {
+            "name": "prometheus-665dbf8745-67bmm",
+            "uid": "d61600d8-407a-46ae-b0e5-766ad683573d",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.48",
+            "containers": [
+              {
+                "name": "prometheus-server",
+                "container_id": "containerd://381897d5ea867f449d37d5a778f396d40af23afa6342ce8bd48ee85e0a04f0bc",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "quote-6bb6755bc6-rfqgn",
+            "uid": "a226abaa-395b-4c01-8d05-f7ccd1474d67",
+            "namespace": "otel-demo",
+            "service": "quote",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.240",
+            "containers": [
+              {
+                "name": "quote",
+                "container_id": "containerd://51ca969e277702d547c5723dc4ddc8eaf8a3b7f4c4782b525dad9a51aa6a24e6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-cxb5j",
+            "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.213",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-zchkk",
+            "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.200",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "shipping-7898d4fcfc-726nf",
+            "uid": "5fa727ea-ccb3-4611-abd0-1735465ecc9d",
+            "namespace": "otel-demo",
+            "service": "shipping",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.239",
+            "containers": [
+              {
+                "name": "shipping",
+                "container_id": "containerd://8833a8fcc620824b8ab05801f2830a2796975b88a7d331bd516bbfc7567800ac",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "telemetry-docs-7b7ccd8b47-2s7p5",
+            "uid": "5682d98f-f412-42d8-8967-6a61ad4b25db",
+            "namespace": "otel-demo",
+            "service": "telemetry-docs",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.72",
+            "containers": [
+              {
+                "name": "telemetry-docs",
+                "container_id": "containerd://20581b8bb5ec3d87e4bdeb15b0e67d65cc6704cc6ca5f504630da39771476044",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "valkey-cart-846c4f796c-xdkzr",
+            "uid": "2e70c257-b485-425f-b094-e65596ea1a49",
+            "namespace": "otel-demo",
+            "service": "valkey-cart",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.71",
+            "containers": [
+              {
+                "name": "valkey-cart",
+                "container_id": "containerd://01d3ffb9bf2f224742388fd939d4fac1c971f633244d4ffc93974835a7d57fbb",
+                "restart_count": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at_utc": "2026-10-20T14:00:21.594749+00:00",
+        "pods": [
+          {
+            "name": "accounting-6f555cfd6f-6xdpf",
+            "uid": "e1bfa7db-46cf-4d67-8223-51af9dc92a00",
+            "namespace": "otel-demo",
+            "service": "accounting",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.219",
+            "containers": [
+              {
+                "name": "accounting",
+                "container_id": "containerd://00f2af79927b4844f7b693f4d97c838054a471651397ef125e767a90a8b49f01",
+                "restart_count": 2
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-bngm2",
+            "uid": "ed46f7c4-4ebc-4888-b079-6c2af9eeb010",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.96",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://d29bdafe326cdde074582d0b05939d73ffd0059ac3319d82be99823f89ba89d7",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-qd57p",
+            "uid": "302465c2-8b62-4aa9-bcf5-1cf9c3c195bc",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.215",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://721c58ad7b4530e6a7769fa388b88a69d4908f7546af3cbbccafc4d70a31ac38",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "agent-6b7d44c85f-bhfvq",
+            "uid": "0a09a62e-1ef8-4781-8c43-1410f168d593",
+            "namespace": "otel-demo",
+            "service": "agent",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.74",
+            "containers": [
+              {
+                "name": "agent",
+                "container_id": "containerd://0b71439205a9034f686b405ef935f750c957e9f38febe8dcb9a17c1073cdf292",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "astronomy-db-697d687fcd-9dr26",
+            "uid": "8a378f59-f231-4ff7-8b6c-bb160610909a",
+            "namespace": "otel-demo",
+            "service": "astronomy-db",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.9",
+            "containers": [
+              {
+                "name": "astronomy-db",
+                "container_id": "containerd://27530b2f940695c77b16b1420d4d1b4a92c4346523c9e4199b186c34e6a6dde9",
+                "restart_count": 16
+              }
+            ]
+          },
+          {
+            "name": "cart-6c888669bc-g76nh",
+            "uid": "9b309714-c491-452a-af83-15c5960de71f",
+            "namespace": "otel-demo",
+            "service": "cart",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.221",
+            "containers": [
+              {
+                "name": "cart",
+                "container_id": "containerd://06a533909f71d3243ca632d74af6149cdcff49ebc35b3cb20047b5ef196a00c3",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "chatbot-6d894d668f-ptb7v",
+            "uid": "820ba742-de63-4daa-8fd2-846a3d264a9b",
+            "namespace": "otel-demo",
+            "service": "chatbot",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.15",
+            "containers": [
+              {
+                "name": "chatbot",
+                "container_id": "containerd://78eee0fe482ef2bed9bf3977d1bac8254a71756dddffa0d2ade05838fb04db10",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "checkout-6767884cf8-v57xw",
+            "uid": "89780c7f-a487-4d1e-a2fb-d7abc482c231",
+            "namespace": "otel-demo",
+            "service": "checkout",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.4",
+            "containers": [
+              {
+                "name": "checkout",
+                "container_id": "containerd://713f7c6d4b5b9a7b1ecf04657e5beb23b79afd900b4ada880bc2e58c0f0a993c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "currency-9ff44bdfb-5k6jm",
+            "uid": "577366bf-9673-4d4a-a001-feba68408590",
+            "namespace": "otel-demo",
+            "service": "currency",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.210",
+            "containers": [
+              {
+                "name": "currency",
+                "container_id": "containerd://1d43b689598b064dbb087eea980d1e086c425551e7ad8bd324719584d5d5a1d5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "email-6967b9f69-dj44d",
+            "uid": "fc047327-027f-40da-90b5-4b7c332da332",
+            "namespace": "otel-demo",
+            "service": "email",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.220",
+            "containers": [
+              {
+                "name": "email",
+                "container_id": "containerd://61505246b48f3a374f2e1af3e00ef4f66d657bf926d8e7ee9cc50862588d3520",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "flagd-54d7d6656-wmq72",
+            "uid": "630bc141-cc47-46ff-87bd-1c1aa971b7ce",
+            "namespace": "otel-demo",
+            "service": "flagd",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.46",
+            "containers": [
+              {
+                "name": "flagd",
+                "container_id": "containerd://c06f5572c4d3767fc80215dcce6e8145b6ba1121e253761338fb53a76d279b24",
+                "restart_count": 0
+              },
+              {
+                "name": "flagd-ui",
+                "container_id": "containerd://65b36cd366e61f50d83730339cfe79e5d6a16eaacba3272da970ab28712fbb58",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "fraud-detection-57958fdd76-nldnw",
+            "uid": "6b808d21-447c-4ff5-a3fa-8b9991080203",
+            "namespace": "otel-demo",
+            "service": "fraud-detection",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.75",
+            "containers": [
+              {
+                "name": "fraud-detection",
+                "container_id": "containerd://443077405ba2efcf59c3c55b887ba6b71714e407e4db74d9ef8ba8bc6b24a8ff",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-8mnzh",
+            "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.57",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-c4n85",
+            "uid": "6305d17a-27f0-4dbf-8fc7-7238acb3be91",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.101",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://71c436f60470eeaf12334e5dd3a69302bbfe16ba1be6f0886260a1b2eb9d0c4e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-proxy-844f94c445-w25c9",
+            "uid": "0fdcca7f-b125-4993-b329-e83d5570d072",
+            "namespace": "otel-demo",
+            "service": "frontend-proxy",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.59",
+            "containers": [
+              {
+                "name": "frontend-proxy",
+                "container_id": "containerd://f5e03b207200f192b6bc545d8a3bb68fe1e001960a7c862450980d8bc245c976",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "grafana-7fd8f8759f-gfb8z",
+            "uid": "56779f3a-333f-4783-b8b4-5f6bb3d37fac",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.27",
+            "containers": [
+              {
+                "name": "grafana",
+                "container_id": "containerd://7923b0d30ffcd5bfe1b25cdd327b7b6a8847f8c0a066e76d1569f568a0c2df92",
+                "restart_count": 1
+              },
+              {
+                "name": "grafana-sc-alerts",
+                "container_id": "containerd://92e53895f1ff7e9b04668b06e16c513d39b008202be8d7ec0f2c17ee937ed12d",
+                "restart_count": 0
+              },
+              {
+                "name": "grafana-sc-dashboard",
+                "container_id": "containerd://2707e11ceaf11c67820cb7a9e3ac533a262bd38c10cfd9419172f5d49f3fe68c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "image-provider-5679bf79b7-dwl69",
+            "uid": "97d402d1-315f-4a69-9960-767519ff7136",
+            "namespace": "otel-demo",
+            "service": "image-provider",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.14",
+            "containers": [
+              {
+                "name": "image-provider",
+                "container_id": "containerd://537f6ec27307d40c459bc968d865a575288ace50b5a3fbf90c4bc8ab186ae6ce",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "jaeger-6c4688ff45-swvnz",
+            "uid": "bb9e7ff3-1727-4981-a1f7-977ab62ab8e5",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.91",
+            "containers": [
+              {
+                "name": "jaeger",
+                "container_id": "containerd://24a9a162cf6426a390d60a27094a9ca76832f1036d77452fb476282eaa213001",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "kafka-5b868d7cc4-nwqxj",
+            "uid": "0ff8945b-27a3-48af-986c-47ebb8ea25fa",
+            "namespace": "otel-demo",
+            "service": "kafka",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.77",
+            "containers": [
+              {
+                "name": "kafka",
+                "container_id": "containerd://b4c58cdebe64abb3686866da3ac7c57410cb17b33db1a8754dfa8989c44fc6fb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "load-generator-79cbb674d-hmktb",
+            "uid": "63176197-bad1-4d67-8844-e825f4a6fea2",
+            "namespace": "otel-demo",
+            "service": "load-generator",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.12",
+            "containers": [
+              {
+                "name": "load-generator",
+                "container_id": "containerd://cfede5befb66632bf8de2ae8beae48c1bde48ab22e7ddeb36f642dff52e3561a",
+                "restart_count": 47
+              }
+            ]
+          },
+          {
+            "name": "mcp-55bf76756c-5qtnx",
+            "uid": "af109a14-a471-496d-a065-8fd7fb03c8e3",
+            "namespace": "otel-demo",
+            "service": "mcp",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.222",
+            "containers": [
+              {
+                "name": "mcp",
+                "container_id": "containerd://42de0162953d5d1d6be9dc7d26ae88ac29a119071edcec5dde502016f021e712",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opamp-server-9f7fcc695-cf9nm",
+            "uid": "70303b5b-0138-44b7-9e59-b5ebd8df44f8",
+            "namespace": "otel-demo",
+            "service": "opamp-server",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.6",
+            "containers": [
+              {
+                "name": "opamp-server",
+                "container_id": "containerd://ab44c43a4108cf67686ecfae5996aa01467439b321643299629dd82d65b1fe45",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opensearch-0",
+            "uid": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.86",
+            "containers": [
+              {
+                "name": "opensearch",
+                "container_id": "containerd://e9d3a4c9f581cd4540e75884d9095da4ddff3c21ca1c94cfec33f4db2472d718",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-cluster-collector-8c9c95bc8-kfx56",
+            "uid": "5141ae43-2d88-4f83-96a6-93855800f3c9",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.60",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://d08a0c0314576715d3d2a314f09f09786bf360f8191897d303195d72d03789af",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-collector-65dbbd4c5-7qf92",
+            "uid": "b6e0e86e-fd79-46ed-be58-61d494c6b074",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.248",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://a97354f80eb80d15e25e28357862aeb050327f07bd28a12f4dc470b29420c016",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-2w6fg",
+            "uid": "0e0ac70a-a31f-460b-865f-944bc87d29b0",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-master",
+            "pod_ip": "10.244.235.200",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://731fc72ed47854a2bdbb6c50617e0a96ce6882b1fa693dbe51dd3d71ec4ec7cb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-82bqk",
+            "uid": "cb592d79-fb4e-4367-8101-696150a2b1e6",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.225",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://7a30b0014f0630398d7fece12af593326a3484aa63e88d9b336357475d535cf6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-nj6kp",
+            "uid": "1c992c69-605b-4265-aa29-7aa632b0553c",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.20",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://c032e7f7d60c6cbfdc18933367487a72cab603887aa99ecdbe4af157246265db",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-svj2q",
+            "uid": "9b5846d8-57a9-4dbe-bd10-5608b6468e41",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.85",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://3021ce9c5bc1ab7937e6296330824c7270d4f4dee4cca58d7aa5cd4c4c426871",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-425wj",
+            "uid": "0d1d3434-9b4f-434c-9953-0d0f899fa255",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.97",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://ad9f93c5be3c7aeb311d5d1db11c2f455032aa9f08d43b01ca4d1698acd8dea5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-zsprs",
+            "uid": "01ab962b-e4a3-4e9e-b723-db762b2260d7",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.55",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://6565e7fc623c5a9dea14f6deb0768e4c201602bc7068f56e05b0c02ca584df0c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "product-catalog-67768465c-q4n2g",
+            "uid": "ceafa7b1-6ef7-4dbd-92d5-392d38974b9b",
+            "namespace": "otel-demo",
+            "service": "product-catalog",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.208",
+            "containers": [
+              {
+                "name": "product-catalog",
+                "container_id": "containerd://a15cc9f263845b26de9e1588f6d1847817fde5853e9244c5003b000714a4b14b",
+                "restart_count": 3
+              }
+            ]
+          },
+          {
+            "name": "prometheus-665dbf8745-67bmm",
+            "uid": "d61600d8-407a-46ae-b0e5-766ad683573d",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.48",
+            "containers": [
+              {
+                "name": "prometheus-server",
+                "container_id": "containerd://381897d5ea867f449d37d5a778f396d40af23afa6342ce8bd48ee85e0a04f0bc",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "quote-6bb6755bc6-rfqgn",
+            "uid": "a226abaa-395b-4c01-8d05-f7ccd1474d67",
+            "namespace": "otel-demo",
+            "service": "quote",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.240",
+            "containers": [
+              {
+                "name": "quote",
+                "container_id": "containerd://51ca969e277702d547c5723dc4ddc8eaf8a3b7f4c4782b525dad9a51aa6a24e6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-cxb5j",
+            "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.213",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-zchkk",
+            "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.200",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "shipping-7898d4fcfc-726nf",
+            "uid": "5fa727ea-ccb3-4611-abd0-1735465ecc9d",
+            "namespace": "otel-demo",
+            "service": "shipping",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.239",
+            "containers": [
+              {
+                "name": "shipping",
+                "container_id": "containerd://8833a8fcc620824b8ab05801f2830a2796975b88a7d331bd516bbfc7567800ac",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "telemetry-docs-7b7ccd8b47-2s7p5",
+            "uid": "5682d98f-f412-42d8-8967-6a61ad4b25db",
+            "namespace": "otel-demo",
+            "service": "telemetry-docs",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.72",
+            "containers": [
+              {
+                "name": "telemetry-docs",
+                "container_id": "containerd://20581b8bb5ec3d87e4bdeb15b0e67d65cc6704cc6ca5f504630da39771476044",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "valkey-cart-846c4f796c-xdkzr",
+            "uid": "2e70c257-b485-425f-b094-e65596ea1a49",
+            "namespace": "otel-demo",
+            "service": "valkey-cart",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.71",
+            "containers": [
+              {
+                "name": "valkey-cart",
+                "container_id": "containerd://01d3ffb9bf2f224742388fd939d4fac1c971f633244d4ffc93974835a7d57fbb",
+                "restart_count": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at_utc": "2026-10-20T14:05:21.630897+00:00",
+        "pods": [
+          {
+            "name": "accounting-6f555cfd6f-6xdpf",
+            "uid": "e1bfa7db-46cf-4d67-8223-51af9dc92a00",
+            "namespace": "otel-demo",
+            "service": "accounting",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.219",
+            "containers": [
+              {
+                "name": "accounting",
+                "container_id": "containerd://00f2af79927b4844f7b693f4d97c838054a471651397ef125e767a90a8b49f01",
+                "restart_count": 2
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-bngm2",
+            "uid": "ed46f7c4-4ebc-4888-b079-6c2af9eeb010",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.96",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://d29bdafe326cdde074582d0b05939d73ffd0059ac3319d82be99823f89ba89d7",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-qd57p",
+            "uid": "302465c2-8b62-4aa9-bcf5-1cf9c3c195bc",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.215",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://721c58ad7b4530e6a7769fa388b88a69d4908f7546af3cbbccafc4d70a31ac38",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "agent-6b7d44c85f-bhfvq",
+            "uid": "0a09a62e-1ef8-4781-8c43-1410f168d593",
+            "namespace": "otel-demo",
+            "service": "agent",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.74",
+            "containers": [
+              {
+                "name": "agent",
+                "container_id": "containerd://0b71439205a9034f686b405ef935f750c957e9f38febe8dcb9a17c1073cdf292",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "astronomy-db-697d687fcd-9dr26",
+            "uid": "8a378f59-f231-4ff7-8b6c-bb160610909a",
+            "namespace": "otel-demo",
+            "service": "astronomy-db",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.9",
+            "containers": [
+              {
+                "name": "astronomy-db",
+                "container_id": "containerd://ccbbeea84d87560d85ee271c3bc839a8a6693d4c85fe21f58ea4fbbda390a240",
+                "restart_count": 17
+              }
+            ]
+          },
+          {
+            "name": "cart-6c888669bc-g76nh",
+            "uid": "9b309714-c491-452a-af83-15c5960de71f",
+            "namespace": "otel-demo",
+            "service": "cart",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.221",
+            "containers": [
+              {
+                "name": "cart",
+                "container_id": "containerd://06a533909f71d3243ca632d74af6149cdcff49ebc35b3cb20047b5ef196a00c3",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "chatbot-6d894d668f-ptb7v",
+            "uid": "820ba742-de63-4daa-8fd2-846a3d264a9b",
+            "namespace": "otel-demo",
+            "service": "chatbot",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.15",
+            "containers": [
+              {
+                "name": "chatbot",
+                "container_id": "containerd://78eee0fe482ef2bed9bf3977d1bac8254a71756dddffa0d2ade05838fb04db10",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "checkout-6767884cf8-v57xw",
+            "uid": "89780c7f-a487-4d1e-a2fb-d7abc482c231",
+            "namespace": "otel-demo",
+            "service": "checkout",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.4",
+            "containers": [
+              {
+                "name": "checkout",
+                "container_id": "containerd://713f7c6d4b5b9a7b1ecf04657e5beb23b79afd900b4ada880bc2e58c0f0a993c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "currency-9ff44bdfb-5k6jm",
+            "uid": "577366bf-9673-4d4a-a001-feba68408590",
+            "namespace": "otel-demo",
+            "service": "currency",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.210",
+            "containers": [
+              {
+                "name": "currency",
+                "container_id": "containerd://1d43b689598b064dbb087eea980d1e086c425551e7ad8bd324719584d5d5a1d5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "email-6967b9f69-dj44d",
+            "uid": "fc047327-027f-40da-90b5-4b7c332da332",
+            "namespace": "otel-demo",
+            "service": "email",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.220",
+            "containers": [
+              {
+                "name": "email",
+                "container_id": "containerd://61505246b48f3a374f2e1af3e00ef4f66d657bf926d8e7ee9cc50862588d3520",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "flagd-54d7d6656-wmq72",
+            "uid": "630bc141-cc47-46ff-87bd-1c1aa971b7ce",
+            "namespace": "otel-demo",
+            "service": "flagd",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.46",
+            "containers": [
+              {
+                "name": "flagd",
+                "container_id": "containerd://c06f5572c4d3767fc80215dcce6e8145b6ba1121e253761338fb53a76d279b24",
+                "restart_count": 0
+              },
+              {
+                "name": "flagd-ui",
+                "container_id": "containerd://65b36cd366e61f50d83730339cfe79e5d6a16eaacba3272da970ab28712fbb58",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "fraud-detection-57958fdd76-nldnw",
+            "uid": "6b808d21-447c-4ff5-a3fa-8b9991080203",
+            "namespace": "otel-demo",
+            "service": "fraud-detection",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.75",
+            "containers": [
+              {
+                "name": "fraud-detection",
+                "container_id": "containerd://443077405ba2efcf59c3c55b887ba6b71714e407e4db74d9ef8ba8bc6b24a8ff",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-8mnzh",
+            "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.57",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-c4n85",
+            "uid": "6305d17a-27f0-4dbf-8fc7-7238acb3be91",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.101",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://71c436f60470eeaf12334e5dd3a69302bbfe16ba1be6f0886260a1b2eb9d0c4e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-proxy-844f94c445-w25c9",
+            "uid": "0fdcca7f-b125-4993-b329-e83d5570d072",
+            "namespace": "otel-demo",
+            "service": "frontend-proxy",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.59",
+            "containers": [
+              {
+                "name": "frontend-proxy",
+                "container_id": "containerd://f5e03b207200f192b6bc545d8a3bb68fe1e001960a7c862450980d8bc245c976",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "grafana-7fd8f8759f-gfb8z",
+            "uid": "56779f3a-333f-4783-b8b4-5f6bb3d37fac",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.27",
+            "containers": [
+              {
+                "name": "grafana",
+                "container_id": "containerd://7923b0d30ffcd5bfe1b25cdd327b7b6a8847f8c0a066e76d1569f568a0c2df92",
+                "restart_count": 1
+              },
+              {
+                "name": "grafana-sc-alerts",
+                "container_id": "containerd://92e53895f1ff7e9b04668b06e16c513d39b008202be8d7ec0f2c17ee937ed12d",
+                "restart_count": 0
+              },
+              {
+                "name": "grafana-sc-dashboard",
+                "container_id": "containerd://2707e11ceaf11c67820cb7a9e3ac533a262bd38c10cfd9419172f5d49f3fe68c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "image-provider-5679bf79b7-dwl69",
+            "uid": "97d402d1-315f-4a69-9960-767519ff7136",
+            "namespace": "otel-demo",
+            "service": "image-provider",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.14",
+            "containers": [
+              {
+                "name": "image-provider",
+                "container_id": "containerd://537f6ec27307d40c459bc968d865a575288ace50b5a3fbf90c4bc8ab186ae6ce",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "jaeger-6c4688ff45-swvnz",
+            "uid": "bb9e7ff3-1727-4981-a1f7-977ab62ab8e5",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.91",
+            "containers": [
+              {
+                "name": "jaeger",
+                "container_id": "containerd://24a9a162cf6426a390d60a27094a9ca76832f1036d77452fb476282eaa213001",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "kafka-5b868d7cc4-nwqxj",
+            "uid": "0ff8945b-27a3-48af-986c-47ebb8ea25fa",
+            "namespace": "otel-demo",
+            "service": "kafka",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.77",
+            "containers": [
+              {
+                "name": "kafka",
+                "container_id": "containerd://b4c58cdebe64abb3686866da3ac7c57410cb17b33db1a8754dfa8989c44fc6fb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "load-generator-79cbb674d-hmktb",
+            "uid": "63176197-bad1-4d67-8844-e825f4a6fea2",
+            "namespace": "otel-demo",
+            "service": "load-generator",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.12",
+            "containers": [
+              {
+                "name": "load-generator",
+                "container_id": "containerd://cfede5befb66632bf8de2ae8beae48c1bde48ab22e7ddeb36f642dff52e3561a",
+                "restart_count": 47
+              }
+            ]
+          },
+          {
+            "name": "mcp-55bf76756c-5qtnx",
+            "uid": "af109a14-a471-496d-a065-8fd7fb03c8e3",
+            "namespace": "otel-demo",
+            "service": "mcp",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.222",
+            "containers": [
+              {
+                "name": "mcp",
+                "container_id": "containerd://42de0162953d5d1d6be9dc7d26ae88ac29a119071edcec5dde502016f021e712",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opamp-server-9f7fcc695-cf9nm",
+            "uid": "70303b5b-0138-44b7-9e59-b5ebd8df44f8",
+            "namespace": "otel-demo",
+            "service": "opamp-server",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.6",
+            "containers": [
+              {
+                "name": "opamp-server",
+                "container_id": "containerd://ab44c43a4108cf67686ecfae5996aa01467439b321643299629dd82d65b1fe45",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opensearch-0",
+            "uid": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.86",
+            "containers": [
+              {
+                "name": "opensearch",
+                "container_id": "containerd://e9d3a4c9f581cd4540e75884d9095da4ddff3c21ca1c94cfec33f4db2472d718",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-cluster-collector-8c9c95bc8-kfx56",
+            "uid": "5141ae43-2d88-4f83-96a6-93855800f3c9",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.60",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://d08a0c0314576715d3d2a314f09f09786bf360f8191897d303195d72d03789af",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-collector-65dbbd4c5-7qf92",
+            "uid": "b6e0e86e-fd79-46ed-be58-61d494c6b074",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.248",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://a97354f80eb80d15e25e28357862aeb050327f07bd28a12f4dc470b29420c016",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-2w6fg",
+            "uid": "0e0ac70a-a31f-460b-865f-944bc87d29b0",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-master",
+            "pod_ip": "10.244.235.200",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://731fc72ed47854a2bdbb6c50617e0a96ce6882b1fa693dbe51dd3d71ec4ec7cb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-82bqk",
+            "uid": "cb592d79-fb4e-4367-8101-696150a2b1e6",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.225",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://7a30b0014f0630398d7fece12af593326a3484aa63e88d9b336357475d535cf6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-nj6kp",
+            "uid": "1c992c69-605b-4265-aa29-7aa632b0553c",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.20",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://c032e7f7d60c6cbfdc18933367487a72cab603887aa99ecdbe4af157246265db",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-svj2q",
+            "uid": "9b5846d8-57a9-4dbe-bd10-5608b6468e41",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.85",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://3021ce9c5bc1ab7937e6296330824c7270d4f4dee4cca58d7aa5cd4c4c426871",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-425wj",
+            "uid": "0d1d3434-9b4f-434c-9953-0d0f899fa255",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.97",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://ad9f93c5be3c7aeb311d5d1db11c2f455032aa9f08d43b01ca4d1698acd8dea5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-zsprs",
+            "uid": "01ab962b-e4a3-4e9e-b723-db762b2260d7",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.55",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://6565e7fc623c5a9dea14f6deb0768e4c201602bc7068f56e05b0c02ca584df0c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "product-catalog-67768465c-q4n2g",
+            "uid": "ceafa7b1-6ef7-4dbd-92d5-392d38974b9b",
+            "namespace": "otel-demo",
+            "service": "product-catalog",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.208",
+            "containers": [
+              {
+                "name": "product-catalog",
+                "container_id": "containerd://d5f854f1de3b2e7c39a97703ea908c05b32e19f819bde98404d0c96b1e7d5aaf",
+                "restart_count": 4
+              }
+            ]
+          },
+          {
+            "name": "prometheus-665dbf8745-67bmm",
+            "uid": "d61600d8-407a-46ae-b0e5-766ad683573d",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.48",
+            "containers": [
+              {
+                "name": "prometheus-server",
+                "container_id": "containerd://381897d5ea867f449d37d5a778f396d40af23afa6342ce8bd48ee85e0a04f0bc",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "quote-6bb6755bc6-rfqgn",
+            "uid": "a226abaa-395b-4c01-8d05-f7ccd1474d67",
+            "namespace": "otel-demo",
+            "service": "quote",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.240",
+            "containers": [
+              {
+                "name": "quote",
+                "container_id": "containerd://51ca969e277702d547c5723dc4ddc8eaf8a3b7f4c4782b525dad9a51aa6a24e6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-cxb5j",
+            "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.213",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-zchkk",
+            "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.200",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "shipping-7898d4fcfc-726nf",
+            "uid": "5fa727ea-ccb3-4611-abd0-1735465ecc9d",
+            "namespace": "otel-demo",
+            "service": "shipping",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.239",
+            "containers": [
+              {
+                "name": "shipping",
+                "container_id": "containerd://8833a8fcc620824b8ab05801f2830a2796975b88a7d331bd516bbfc7567800ac",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "telemetry-docs-7b7ccd8b47-2s7p5",
+            "uid": "5682d98f-f412-42d8-8967-6a61ad4b25db",
+            "namespace": "otel-demo",
+            "service": "telemetry-docs",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.72",
+            "containers": [
+              {
+                "name": "telemetry-docs",
+                "container_id": "containerd://20581b8bb5ec3d87e4bdeb15b0e67d65cc6704cc6ca5f504630da39771476044",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "valkey-cart-846c4f796c-xdkzr",
+            "uid": "2e70c257-b485-425f-b094-e65596ea1a49",
+            "namespace": "otel-demo",
+            "service": "valkey-cart",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.71",
+            "containers": [
+              {
+                "name": "valkey-cart",
+                "container_id": "containerd://01d3ffb9bf2f224742388fd939d4fac1c971f633244d4ffc93974835a7d57fbb",
+                "restart_count": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at_utc": "2026-10-20T14:10:21.613925+00:00",
+        "pods": [
+          {
+            "name": "accounting-6f555cfd6f-6xdpf",
+            "uid": "e1bfa7db-46cf-4d67-8223-51af9dc92a00",
+            "namespace": "otel-demo",
+            "service": "accounting",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.219",
+            "containers": [
+              {
+                "name": "accounting",
+                "container_id": "containerd://00f2af79927b4844f7b693f4d97c838054a471651397ef125e767a90a8b49f01",
+                "restart_count": 2
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-bngm2",
+            "uid": "ed46f7c4-4ebc-4888-b079-6c2af9eeb010",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.96",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://d29bdafe326cdde074582d0b05939d73ffd0059ac3319d82be99823f89ba89d7",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-qd57p",
+            "uid": "302465c2-8b62-4aa9-bcf5-1cf9c3c195bc",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.215",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://721c58ad7b4530e6a7769fa388b88a69d4908f7546af3cbbccafc4d70a31ac38",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "agent-6b7d44c85f-bhfvq",
+            "uid": "0a09a62e-1ef8-4781-8c43-1410f168d593",
+            "namespace": "otel-demo",
+            "service": "agent",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.74",
+            "containers": [
+              {
+                "name": "agent",
+                "container_id": "containerd://0b71439205a9034f686b405ef935f750c957e9f38febe8dcb9a17c1073cdf292",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "astronomy-db-697d687fcd-9dr26",
+            "uid": "8a378f59-f231-4ff7-8b6c-bb160610909a",
+            "namespace": "otel-demo",
+            "service": "astronomy-db",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.9",
+            "containers": [
+              {
+                "name": "astronomy-db",
+                "container_id": "containerd://6a40fd8d34231484801799633954de7c53494f95b307c789d0a38351936c4b6d",
+                "restart_count": 18
+              }
+            ]
+          },
+          {
+            "name": "cart-6c888669bc-g76nh",
+            "uid": "9b309714-c491-452a-af83-15c5960de71f",
+            "namespace": "otel-demo",
+            "service": "cart",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.221",
+            "containers": [
+              {
+                "name": "cart",
+                "container_id": "containerd://06a533909f71d3243ca632d74af6149cdcff49ebc35b3cb20047b5ef196a00c3",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "chatbot-6d894d668f-ptb7v",
+            "uid": "820ba742-de63-4daa-8fd2-846a3d264a9b",
+            "namespace": "otel-demo",
+            "service": "chatbot",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.15",
+            "containers": [
+              {
+                "name": "chatbot",
+                "container_id": "containerd://78eee0fe482ef2bed9bf3977d1bac8254a71756dddffa0d2ade05838fb04db10",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "checkout-6767884cf8-v57xw",
+            "uid": "89780c7f-a487-4d1e-a2fb-d7abc482c231",
+            "namespace": "otel-demo",
+            "service": "checkout",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.4",
+            "containers": [
+              {
+                "name": "checkout",
+                "container_id": "containerd://713f7c6d4b5b9a7b1ecf04657e5beb23b79afd900b4ada880bc2e58c0f0a993c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "currency-9ff44bdfb-5k6jm",
+            "uid": "577366bf-9673-4d4a-a001-feba68408590",
+            "namespace": "otel-demo",
+            "service": "currency",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.210",
+            "containers": [
+              {
+                "name": "currency",
+                "container_id": "containerd://1d43b689598b064dbb087eea980d1e086c425551e7ad8bd324719584d5d5a1d5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "email-6967b9f69-dj44d",
+            "uid": "fc047327-027f-40da-90b5-4b7c332da332",
+            "namespace": "otel-demo",
+            "service": "email",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.220",
+            "containers": [
+              {
+                "name": "email",
+                "container_id": "containerd://61505246b48f3a374f2e1af3e00ef4f66d657bf926d8e7ee9cc50862588d3520",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "flagd-54d7d6656-wmq72",
+            "uid": "630bc141-cc47-46ff-87bd-1c1aa971b7ce",
+            "namespace": "otel-demo",
+            "service": "flagd",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.46",
+            "containers": [
+              {
+                "name": "flagd",
+                "container_id": "containerd://c06f5572c4d3767fc80215dcce6e8145b6ba1121e253761338fb53a76d279b24",
+                "restart_count": 0
+              },
+              {
+                "name": "flagd-ui",
+                "container_id": "containerd://65b36cd366e61f50d83730339cfe79e5d6a16eaacba3272da970ab28712fbb58",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "fraud-detection-57958fdd76-nldnw",
+            "uid": "6b808d21-447c-4ff5-a3fa-8b9991080203",
+            "namespace": "otel-demo",
+            "service": "fraud-detection",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.75",
+            "containers": [
+              {
+                "name": "fraud-detection",
+                "container_id": "containerd://443077405ba2efcf59c3c55b887ba6b71714e407e4db74d9ef8ba8bc6b24a8ff",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-8mnzh",
+            "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.57",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-c4n85",
+            "uid": "6305d17a-27f0-4dbf-8fc7-7238acb3be91",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.101",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://71c436f60470eeaf12334e5dd3a69302bbfe16ba1be6f0886260a1b2eb9d0c4e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-proxy-844f94c445-w25c9",
+            "uid": "0fdcca7f-b125-4993-b329-e83d5570d072",
+            "namespace": "otel-demo",
+            "service": "frontend-proxy",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.59",
+            "containers": [
+              {
+                "name": "frontend-proxy",
+                "container_id": "containerd://f5e03b207200f192b6bc545d8a3bb68fe1e001960a7c862450980d8bc245c976",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "grafana-7fd8f8759f-gfb8z",
+            "uid": "56779f3a-333f-4783-b8b4-5f6bb3d37fac",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.27",
+            "containers": [
+              {
+                "name": "grafana",
+                "container_id": "containerd://7923b0d30ffcd5bfe1b25cdd327b7b6a8847f8c0a066e76d1569f568a0c2df92",
+                "restart_count": 1
+              },
+              {
+                "name": "grafana-sc-alerts",
+                "container_id": "containerd://92e53895f1ff7e9b04668b06e16c513d39b008202be8d7ec0f2c17ee937ed12d",
+                "restart_count": 0
+              },
+              {
+                "name": "grafana-sc-dashboard",
+                "container_id": "containerd://2707e11ceaf11c67820cb7a9e3ac533a262bd38c10cfd9419172f5d49f3fe68c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "image-provider-5679bf79b7-dwl69",
+            "uid": "97d402d1-315f-4a69-9960-767519ff7136",
+            "namespace": "otel-demo",
+            "service": "image-provider",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.14",
+            "containers": [
+              {
+                "name": "image-provider",
+                "container_id": "containerd://537f6ec27307d40c459bc968d865a575288ace50b5a3fbf90c4bc8ab186ae6ce",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "jaeger-6c4688ff45-swvnz",
+            "uid": "bb9e7ff3-1727-4981-a1f7-977ab62ab8e5",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.91",
+            "containers": [
+              {
+                "name": "jaeger",
+                "container_id": "containerd://24a9a162cf6426a390d60a27094a9ca76832f1036d77452fb476282eaa213001",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "kafka-5b868d7cc4-nwqxj",
+            "uid": "0ff8945b-27a3-48af-986c-47ebb8ea25fa",
+            "namespace": "otel-demo",
+            "service": "kafka",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.77",
+            "containers": [
+              {
+                "name": "kafka",
+                "container_id": "containerd://b4c58cdebe64abb3686866da3ac7c57410cb17b33db1a8754dfa8989c44fc6fb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "load-generator-79cbb674d-hmktb",
+            "uid": "63176197-bad1-4d67-8844-e825f4a6fea2",
+            "namespace": "otel-demo",
+            "service": "load-generator",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.12",
+            "containers": [
+              {
+                "name": "load-generator",
+                "container_id": "containerd://cfede5befb66632bf8de2ae8beae48c1bde48ab22e7ddeb36f642dff52e3561a",
+                "restart_count": 47
+              }
+            ]
+          },
+          {
+            "name": "mcp-55bf76756c-5qtnx",
+            "uid": "af109a14-a471-496d-a065-8fd7fb03c8e3",
+            "namespace": "otel-demo",
+            "service": "mcp",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.222",
+            "containers": [
+              {
+                "name": "mcp",
+                "container_id": "containerd://42de0162953d5d1d6be9dc7d26ae88ac29a119071edcec5dde502016f021e712",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opamp-server-9f7fcc695-cf9nm",
+            "uid": "70303b5b-0138-44b7-9e59-b5ebd8df44f8",
+            "namespace": "otel-demo",
+            "service": "opamp-server",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.6",
+            "containers": [
+              {
+                "name": "opamp-server",
+                "container_id": "containerd://ab44c43a4108cf67686ecfae5996aa01467439b321643299629dd82d65b1fe45",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opensearch-0",
+            "uid": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.86",
+            "containers": [
+              {
+                "name": "opensearch",
+                "container_id": "containerd://e9d3a4c9f581cd4540e75884d9095da4ddff3c21ca1c94cfec33f4db2472d718",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-cluster-collector-8c9c95bc8-kfx56",
+            "uid": "5141ae43-2d88-4f83-96a6-93855800f3c9",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.60",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://d08a0c0314576715d3d2a314f09f09786bf360f8191897d303195d72d03789af",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-collector-65dbbd4c5-7qf92",
+            "uid": "b6e0e86e-fd79-46ed-be58-61d494c6b074",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.248",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://a97354f80eb80d15e25e28357862aeb050327f07bd28a12f4dc470b29420c016",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-2w6fg",
+            "uid": "0e0ac70a-a31f-460b-865f-944bc87d29b0",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-master",
+            "pod_ip": "10.244.235.200",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://731fc72ed47854a2bdbb6c50617e0a96ce6882b1fa693dbe51dd3d71ec4ec7cb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-82bqk",
+            "uid": "cb592d79-fb4e-4367-8101-696150a2b1e6",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.225",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://7a30b0014f0630398d7fece12af593326a3484aa63e88d9b336357475d535cf6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-nj6kp",
+            "uid": "1c992c69-605b-4265-aa29-7aa632b0553c",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.20",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://c032e7f7d60c6cbfdc18933367487a72cab603887aa99ecdbe4af157246265db",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-svj2q",
+            "uid": "9b5846d8-57a9-4dbe-bd10-5608b6468e41",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.85",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://3021ce9c5bc1ab7937e6296330824c7270d4f4dee4cca58d7aa5cd4c4c426871",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-425wj",
+            "uid": "0d1d3434-9b4f-434c-9953-0d0f899fa255",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.97",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://ad9f93c5be3c7aeb311d5d1db11c2f455032aa9f08d43b01ca4d1698acd8dea5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-zsprs",
+            "uid": "01ab962b-e4a3-4e9e-b723-db762b2260d7",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.55",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://6565e7fc623c5a9dea14f6deb0768e4c201602bc7068f56e05b0c02ca584df0c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "product-catalog-67768465c-q4n2g",
+            "uid": "ceafa7b1-6ef7-4dbd-92d5-392d38974b9b",
+            "namespace": "otel-demo",
+            "service": "product-catalog",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.208",
+            "containers": [
+              {
+                "name": "product-catalog",
+                "container_id": "containerd://495405a533755231e6b470f3ce5e5ab0f42a9d0e03d2f34f265453c0c6b686af",
+                "restart_count": 5
+              }
+            ]
+          },
+          {
+            "name": "prometheus-665dbf8745-67bmm",
+            "uid": "d61600d8-407a-46ae-b0e5-766ad683573d",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.48",
+            "containers": [
+              {
+                "name": "prometheus-server",
+                "container_id": "containerd://381897d5ea867f449d37d5a778f396d40af23afa6342ce8bd48ee85e0a04f0bc",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "quote-6bb6755bc6-rfqgn",
+            "uid": "a226abaa-395b-4c01-8d05-f7ccd1474d67",
+            "namespace": "otel-demo",
+            "service": "quote",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.240",
+            "containers": [
+              {
+                "name": "quote",
+                "container_id": "containerd://51ca969e277702d547c5723dc4ddc8eaf8a3b7f4c4782b525dad9a51aa6a24e6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-cxb5j",
+            "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.213",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-zchkk",
+            "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.200",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "shipping-7898d4fcfc-726nf",
+            "uid": "5fa727ea-ccb3-4611-abd0-1735465ecc9d",
+            "namespace": "otel-demo",
+            "service": "shipping",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.239",
+            "containers": [
+              {
+                "name": "shipping",
+                "container_id": "containerd://8833a8fcc620824b8ab05801f2830a2796975b88a7d331bd516bbfc7567800ac",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "telemetry-docs-7b7ccd8b47-2s7p5",
+            "uid": "5682d98f-f412-42d8-8967-6a61ad4b25db",
+            "namespace": "otel-demo",
+            "service": "telemetry-docs",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.72",
+            "containers": [
+              {
+                "name": "telemetry-docs",
+                "container_id": "containerd://20581b8bb5ec3d87e4bdeb15b0e67d65cc6704cc6ca5f504630da39771476044",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "valkey-cart-846c4f796c-xdkzr",
+            "uid": "2e70c257-b485-425f-b094-e65596ea1a49",
+            "namespace": "otel-demo",
+            "service": "valkey-cart",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.71",
+            "containers": [
+              {
+                "name": "valkey-cart",
+                "container_id": "containerd://01d3ffb9bf2f224742388fd939d4fac1c971f633244d4ffc93974835a7d57fbb",
+                "restart_count": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at_utc": "2026-10-20T14:15:21.605257+00:00",
+        "pods": [
+          {
+            "name": "accounting-6f555cfd6f-6xdpf",
+            "uid": "e1bfa7db-46cf-4d67-8223-51af9dc92a00",
+            "namespace": "otel-demo",
+            "service": "accounting",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.219",
+            "containers": [
+              {
+                "name": "accounting",
+                "container_id": "containerd://00f2af79927b4844f7b693f4d97c838054a471651397ef125e767a90a8b49f01",
+                "restart_count": 2
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-bngm2",
+            "uid": "ed46f7c4-4ebc-4888-b079-6c2af9eeb010",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.96",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://d29bdafe326cdde074582d0b05939d73ffd0059ac3319d82be99823f89ba89d7",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "ad-6dd859cc54-qd57p",
+            "uid": "302465c2-8b62-4aa9-bcf5-1cf9c3c195bc",
+            "namespace": "otel-demo",
+            "service": "ad",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.215",
+            "containers": [
+              {
+                "name": "ad",
+                "container_id": "containerd://721c58ad7b4530e6a7769fa388b88a69d4908f7546af3cbbccafc4d70a31ac38",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "agent-6b7d44c85f-bhfvq",
+            "uid": "0a09a62e-1ef8-4781-8c43-1410f168d593",
+            "namespace": "otel-demo",
+            "service": "agent",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.74",
+            "containers": [
+              {
+                "name": "agent",
+                "container_id": "containerd://0b71439205a9034f686b405ef935f750c957e9f38febe8dcb9a17c1073cdf292",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "astronomy-db-697d687fcd-9dr26",
+            "uid": "8a378f59-f231-4ff7-8b6c-bb160610909a",
+            "namespace": "otel-demo",
+            "service": "astronomy-db",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.9",
+            "containers": [
+              {
+                "name": "astronomy-db",
+                "container_id": "containerd://6a40fd8d34231484801799633954de7c53494f95b307c789d0a38351936c4b6d",
+                "restart_count": 18
+              }
+            ]
+          },
+          {
+            "name": "cart-6c888669bc-g76nh",
+            "uid": "9b309714-c491-452a-af83-15c5960de71f",
+            "namespace": "otel-demo",
+            "service": "cart",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.221",
+            "containers": [
+              {
+                "name": "cart",
+                "container_id": "containerd://06a533909f71d3243ca632d74af6149cdcff49ebc35b3cb20047b5ef196a00c3",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "chatbot-6d894d668f-ptb7v",
+            "uid": "820ba742-de63-4daa-8fd2-846a3d264a9b",
+            "namespace": "otel-demo",
+            "service": "chatbot",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.15",
+            "containers": [
+              {
+                "name": "chatbot",
+                "container_id": "containerd://78eee0fe482ef2bed9bf3977d1bac8254a71756dddffa0d2ade05838fb04db10",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "checkout-6767884cf8-v57xw",
+            "uid": "89780c7f-a487-4d1e-a2fb-d7abc482c231",
+            "namespace": "otel-demo",
+            "service": "checkout",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.4",
+            "containers": [
+              {
+                "name": "checkout",
+                "container_id": "containerd://713f7c6d4b5b9a7b1ecf04657e5beb23b79afd900b4ada880bc2e58c0f0a993c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "currency-9ff44bdfb-5k6jm",
+            "uid": "577366bf-9673-4d4a-a001-feba68408590",
+            "namespace": "otel-demo",
+            "service": "currency",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.210",
+            "containers": [
+              {
+                "name": "currency",
+                "container_id": "containerd://1d43b689598b064dbb087eea980d1e086c425551e7ad8bd324719584d5d5a1d5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "email-6967b9f69-dj44d",
+            "uid": "fc047327-027f-40da-90b5-4b7c332da332",
+            "namespace": "otel-demo",
+            "service": "email",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.220",
+            "containers": [
+              {
+                "name": "email",
+                "container_id": "containerd://61505246b48f3a374f2e1af3e00ef4f66d657bf926d8e7ee9cc50862588d3520",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "flagd-54d7d6656-wmq72",
+            "uid": "630bc141-cc47-46ff-87bd-1c1aa971b7ce",
+            "namespace": "otel-demo",
+            "service": "flagd",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.46",
+            "containers": [
+              {
+                "name": "flagd",
+                "container_id": "containerd://c06f5572c4d3767fc80215dcce6e8145b6ba1121e253761338fb53a76d279b24",
+                "restart_count": 0
+              },
+              {
+                "name": "flagd-ui",
+                "container_id": "containerd://65b36cd366e61f50d83730339cfe79e5d6a16eaacba3272da970ab28712fbb58",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "fraud-detection-57958fdd76-nldnw",
+            "uid": "6b808d21-447c-4ff5-a3fa-8b9991080203",
+            "namespace": "otel-demo",
+            "service": "fraud-detection",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.75",
+            "containers": [
+              {
+                "name": "fraud-detection",
+                "container_id": "containerd://443077405ba2efcf59c3c55b887ba6b71714e407e4db74d9ef8ba8bc6b24a8ff",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-8mnzh",
+            "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.57",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-68d8bbfdc8-c4n85",
+            "uid": "6305d17a-27f0-4dbf-8fc7-7238acb3be91",
+            "namespace": "otel-demo",
+            "service": "frontend",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.101",
+            "containers": [
+              {
+                "name": "frontend",
+                "container_id": "containerd://71c436f60470eeaf12334e5dd3a69302bbfe16ba1be6f0886260a1b2eb9d0c4e",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "frontend-proxy-844f94c445-w25c9",
+            "uid": "0fdcca7f-b125-4993-b329-e83d5570d072",
+            "namespace": "otel-demo",
+            "service": "frontend-proxy",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.59",
+            "containers": [
+              {
+                "name": "frontend-proxy",
+                "container_id": "containerd://f5e03b207200f192b6bc545d8a3bb68fe1e001960a7c862450980d8bc245c976",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "grafana-7fd8f8759f-gfb8z",
+            "uid": "56779f3a-333f-4783-b8b4-5f6bb3d37fac",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.27",
+            "containers": [
+              {
+                "name": "grafana",
+                "container_id": "containerd://7923b0d30ffcd5bfe1b25cdd327b7b6a8847f8c0a066e76d1569f568a0c2df92",
+                "restart_count": 1
+              },
+              {
+                "name": "grafana-sc-alerts",
+                "container_id": "containerd://92e53895f1ff7e9b04668b06e16c513d39b008202be8d7ec0f2c17ee937ed12d",
+                "restart_count": 0
+              },
+              {
+                "name": "grafana-sc-dashboard",
+                "container_id": "containerd://2707e11ceaf11c67820cb7a9e3ac533a262bd38c10cfd9419172f5d49f3fe68c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "image-provider-5679bf79b7-dwl69",
+            "uid": "97d402d1-315f-4a69-9960-767519ff7136",
+            "namespace": "otel-demo",
+            "service": "image-provider",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.14",
+            "containers": [
+              {
+                "name": "image-provider",
+                "container_id": "containerd://537f6ec27307d40c459bc968d865a575288ace50b5a3fbf90c4bc8ab186ae6ce",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "jaeger-6c4688ff45-swvnz",
+            "uid": "bb9e7ff3-1727-4981-a1f7-977ab62ab8e5",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.91",
+            "containers": [
+              {
+                "name": "jaeger",
+                "container_id": "containerd://24a9a162cf6426a390d60a27094a9ca76832f1036d77452fb476282eaa213001",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "kafka-5b868d7cc4-nwqxj",
+            "uid": "0ff8945b-27a3-48af-986c-47ebb8ea25fa",
+            "namespace": "otel-demo",
+            "service": "kafka",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.77",
+            "containers": [
+              {
+                "name": "kafka",
+                "container_id": "containerd://b4c58cdebe64abb3686866da3ac7c57410cb17b33db1a8754dfa8989c44fc6fb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "load-generator-79cbb674d-hmktb",
+            "uid": "63176197-bad1-4d67-8844-e825f4a6fea2",
+            "namespace": "otel-demo",
+            "service": "load-generator",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.12",
+            "containers": [
+              {
+                "name": "load-generator",
+                "container_id": "containerd://cfede5befb66632bf8de2ae8beae48c1bde48ab22e7ddeb36f642dff52e3561a",
+                "restart_count": 47
+              }
+            ]
+          },
+          {
+            "name": "mcp-55bf76756c-5qtnx",
+            "uid": "af109a14-a471-496d-a065-8fd7fb03c8e3",
+            "namespace": "otel-demo",
+            "service": "mcp",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.222",
+            "containers": [
+              {
+                "name": "mcp",
+                "container_id": "containerd://42de0162953d5d1d6be9dc7d26ae88ac29a119071edcec5dde502016f021e712",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opamp-server-9f7fcc695-cf9nm",
+            "uid": "70303b5b-0138-44b7-9e59-b5ebd8df44f8",
+            "namespace": "otel-demo",
+            "service": "opamp-server",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.6",
+            "containers": [
+              {
+                "name": "opamp-server",
+                "container_id": "containerd://ab44c43a4108cf67686ecfae5996aa01467439b321643299629dd82d65b1fe45",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "opensearch-0",
+            "uid": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.86",
+            "containers": [
+              {
+                "name": "opensearch",
+                "container_id": "containerd://e9d3a4c9f581cd4540e75884d9095da4ddff3c21ca1c94cfec33f4db2472d718",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-cluster-collector-8c9c95bc8-kfx56",
+            "uid": "5141ae43-2d88-4f83-96a6-93855800f3c9",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.60",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://d08a0c0314576715d3d2a314f09f09786bf360f8191897d303195d72d03789af",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-collector-65dbbd4c5-7qf92",
+            "uid": "b6e0e86e-fd79-46ed-be58-61d494c6b074",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.248",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://a97354f80eb80d15e25e28357862aeb050327f07bd28a12f4dc470b29420c016",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-2w6fg",
+            "uid": "0e0ac70a-a31f-460b-865f-944bc87d29b0",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-master",
+            "pod_ip": "10.244.235.200",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://731fc72ed47854a2bdbb6c50617e0a96ce6882b1fa693dbe51dd3d71ec4ec7cb",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-82bqk",
+            "uid": "cb592d79-fb4e-4367-8101-696150a2b1e6",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.225",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://7a30b0014f0630398d7fece12af593326a3484aa63e88d9b336357475d535cf6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-nj6kp",
+            "uid": "1c992c69-605b-4265-aa29-7aa632b0553c",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.20",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://c032e7f7d60c6cbfdc18933367487a72cab603887aa99ecdbe4af157246265db",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "otel-infra-agent-agent-svj2q",
+            "uid": "9b5846d8-57a9-4dbe-bd10-5608b6468e41",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.85",
+            "containers": [
+              {
+                "name": "opentelemetry-collector",
+                "container_id": "containerd://3021ce9c5bc1ab7937e6296330824c7270d4f4dee4cca58d7aa5cd4c4c426871",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-425wj",
+            "uid": "0d1d3434-9b4f-434c-9953-0d0f899fa255",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.97",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://ad9f93c5be3c7aeb311d5d1db11c2f455032aa9f08d43b01ca4d1698acd8dea5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "payment-58d77d78bd-zsprs",
+            "uid": "01ab962b-e4a3-4e9e-b723-db762b2260d7",
+            "namespace": "otel-demo",
+            "service": "payment",
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.55",
+            "containers": [
+              {
+                "name": "payment",
+                "container_id": "containerd://6565e7fc623c5a9dea14f6deb0768e4c201602bc7068f56e05b0c02ca584df0c",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "product-catalog-67768465c-q4n2g",
+            "uid": "ceafa7b1-6ef7-4dbd-92d5-392d38974b9b",
+            "namespace": "otel-demo",
+            "service": "product-catalog",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.208",
+            "containers": [
+              {
+                "name": "product-catalog",
+                "container_id": "containerd://495405a533755231e6b470f3ce5e5ab0f42a9d0e03d2f34f265453c0c6b686af",
+                "restart_count": 5
+              }
+            ]
+          },
+          {
+            "name": "prometheus-665dbf8745-67bmm",
+            "uid": "d61600d8-407a-46ae-b0e5-766ad683573d",
+            "namespace": "otel-demo",
+            "service": null,
+            "node": "k8s-worker2",
+            "pod_ip": "10.244.126.48",
+            "containers": [
+              {
+                "name": "prometheus-server",
+                "container_id": "containerd://381897d5ea867f449d37d5a778f396d40af23afa6342ce8bd48ee85e0a04f0bc",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "quote-6bb6755bc6-rfqgn",
+            "uid": "a226abaa-395b-4c01-8d05-f7ccd1474d67",
+            "namespace": "otel-demo",
+            "service": "quote",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.240",
+            "containers": [
+              {
+                "name": "quote",
+                "container_id": "containerd://51ca969e277702d547c5723dc4ddc8eaf8a3b7f4c4782b525dad9a51aa6a24e6",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-cxb5j",
+            "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.213",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "recommendation-c887f6f6b-zchkk",
+            "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+            "namespace": "otel-demo",
+            "service": "recommendation",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.200",
+            "containers": [
+              {
+                "name": "recommendation",
+                "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "shipping-7898d4fcfc-726nf",
+            "uid": "5fa727ea-ccb3-4611-abd0-1735465ecc9d",
+            "namespace": "otel-demo",
+            "service": "shipping",
+            "node": "k8s-worker3",
+            "pod_ip": "10.244.100.239",
+            "containers": [
+              {
+                "name": "shipping",
+                "container_id": "containerd://8833a8fcc620824b8ab05801f2830a2796975b88a7d331bd516bbfc7567800ac",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "telemetry-docs-7b7ccd8b47-2s7p5",
+            "uid": "5682d98f-f412-42d8-8967-6a61ad4b25db",
+            "namespace": "otel-demo",
+            "service": "telemetry-docs",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.72",
+            "containers": [
+              {
+                "name": "telemetry-docs",
+                "container_id": "containerd://20581b8bb5ec3d87e4bdeb15b0e67d65cc6704cc6ca5f504630da39771476044",
+                "restart_count": 0
+              }
+            ]
+          },
+          {
+            "name": "valkey-cart-846c4f796c-xdkzr",
+            "uid": "2e70c257-b485-425f-b094-e65596ea1a49",
+            "namespace": "otel-demo",
+            "service": "valkey-cart",
+            "node": "k8s-worker1",
+            "pod_ip": "10.244.194.71",
+            "containers": [
+              {
+                "name": "valkey-cart",
+                "container_id": "containerd://01d3ffb9bf2f224742388fd939d4fac1c971f633244d4ffc93974835a7d57fbb",
+                "restart_count": 0
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "observed_service_edges": [
+      {
+        "source": "ad",
+        "destination": "flagd",
+        "child_of_span_count": 9
+      },
+      {
+        "source": "cart",
+        "destination": "flagd",
+        "child_of_span_count": 706
+      },
+      {
+        "source": "checkout",
+        "destination": "cart",
+        "child_of_span_count": 1293
+      },
+      {
+        "source": "checkout",
+        "destination": "currency",
+        "child_of_span_count": 1375
+      },
+      {
+        "source": "checkout",
+        "destination": "email",
+        "child_of_span_count": 646
+      },
+      {
+        "source": "checkout",
+        "destination": "payment",
+        "child_of_span_count": 646
+      },
+      {
+        "source": "checkout",
+        "destination": "product-catalog",
+        "child_of_span_count": 729
+      },
+      {
+        "source": "checkout",
+        "destination": "shipping",
+        "child_of_span_count": 1292
+      },
+      {
+        "source": "fraud-detection",
+        "destination": "flagd",
+        "child_of_span_count": 3
+      },
+      {
+        "source": "frontend",
+        "destination": "ad",
+        "child_of_span_count": 687
+      },
+      {
+        "source": "frontend",
+        "destination": "cart",
+        "child_of_span_count": 5895
+      },
+      {
+        "source": "frontend",
+        "destination": "checkout",
+        "child_of_span_count": 647
+      },
+      {
+        "source": "frontend",
+        "destination": "currency",
+        "child_of_span_count": 1347
+      },
+      {
+        "source": "frontend",
+        "destination": "product-catalog",
+        "child_of_span_count": 16855
+      },
+      {
+        "source": "frontend",
+        "destination": "recommendation",
+        "child_of_span_count": 3669
+      },
+      {
+        "source": "frontend",
+        "destination": "shipping",
+        "child_of_span_count": 567
+      },
+      {
+        "source": "frontend-proxy",
+        "destination": "flagd",
+        "child_of_span_count": 412
+      },
+      {
+        "source": "frontend-proxy",
+        "destination": "frontend",
+        "child_of_span_count": 23268
+      },
+      {
+        "source": "frontend-proxy",
+        "destination": "image-provider",
+        "child_of_span_count": 4894
+      },
+      {
+        "source": "frontend-web",
+        "destination": "frontend-proxy",
+        "child_of_span_count": 4412
+      },
+      {
+        "source": "load-generator",
+        "destination": "flagd",
+        "child_of_span_count": 2080
+      },
+      {
+        "source": "load-generator",
+        "destination": "frontend-proxy",
+        "child_of_span_count": 2073
+      },
+      {
+        "source": "payment",
+        "destination": "flagd",
+        "child_of_span_count": 6
+      },
+      {
+        "source": "recommendation",
+        "destination": "product-catalog",
+        "child_of_span_count": 3584
+      },
+      {
+        "source": "shipping",
+        "destination": "quote",
+        "child_of_span_count": 1213
+      }
+    ]
+  },
+  "data_source": "SF-017_PUBLIC_CONTEST_EXCHANGE_V2",
+  "classification": "PUBLIC_COMPETITION_DATA",
+  "publication_status": "published",
+  "files": [
+    {
+      "name": "metrics.parquet",
+      "sha256": "2a0ce77696570a4b97d96186342577331076f4c4121d1993be5131d1ecf30447",
+      "size_bytes": 133277,
+      "row_count": 41589
+    },
+    {
+      "name": "logs.parquet",
+      "sha256": "195ccc66b62eb4580c799625c0d916f5cb2afaf4dee451b9b91da6428bfb1a5d",
+      "size_bytes": 6929065,
+      "row_count": 193788
+    },
+    {
+      "name": "traces.parquet",
+      "sha256": "49991b8c88d78ad2df00a5ce6b14a62eb4970a00eab1836fdba66db5cb6f8bfc",
+      "size_bytes": 20975255,
+      "row_count": 325966
+    },
+    {
+      "name": "trace_index.parquet",
+      "sha256": "20d232cd79a957ef6ff9690cb2a86ec9ad0a6bfe19262345824592cb1e57a701",
+      "size_bytes": 1316280,
+      "row_count": 50389
+    }
+  ],
+  "sample_trace_id": "61c8790fe10a53fa6f0b1e419658919f",
+  "source_manifest_sha256": "1f772f68bf55bedb3239d4fc6d67a485f81ba109b504c300b6b0dd3d7bf39dd0",
+  "source_original_files": {
+    "logs.parquet": {
+      "sha256": "621f9e69b3d790ed351a20779c5287457f890f0b99b9d937f4dac81d002df0b4",
+      "bytes": 7679588
+    },
+    "metrics.parquet": {
+      "sha256": "9430537f6456e0bec3b8f48755bb6397d7efb505cab073ed5ba283c94754d3b8",
+      "bytes": 226149
+    },
+    "topology.json": {
+      "sha256": "5f18b8f600570d60985997de919e4efea605da1d25693d78731a1ff36e13b87e",
+      "bytes": 126959
+    },
+    "trace_index.parquet": {
+      "sha256": "d155c9e136ed6b6b25c97ec79bffe60970252da4575895caa88236cf055767c2",
+      "bytes": 1640923
+    },
+    "traces.parquet": {
+      "sha256": "c50008f792e2c14848ef5139baf89136096b71ca970b1f2573bf6965cb1313b1",
+      "bytes": 20860769
+    }
+  },
+  "source_row_counts": {
+    "metrics": 41589,
+    "logs": 193788,
+    "traces": 325966
+  },
+  "source_unique_trace_count": 50389,
+  "source_exchange_conditions": {
+    "duplicate_metric_identities": 0,
+    "duplicate_metric_full_row_groups": 1,
+    "duplicate_trace_span_identities": 0,
+    "invalid_trace_or_span_ids": 0,
+    "unresolved_parent_spans": 14780,
+    "log_trace_ids_missing_from_traces": 1,
+    "trace_index_mismatches": 0
+  },
+  "allowed_source_conditions": {
+    "duplicate_metric_identity_groups": 0,
+    "duplicate_metric_full_row_groups": 0,
+    "unresolved_parent_spans": 14780,
+    "unresolved_log_trace_rows": 1
+  },
+  "compatibility_conversion": {
+    "input_schema": "CONTEST_EXCHANGE_V2",
+    "output_schema": "AIOPS_CONTEST_SERVER_MANIFEST_V1",
+    "parquet_record_transformation": "NONE_IN_COMPATIBILITY_STAGE",
+    "rules": [
+      "Preserve every source Parquet row and value byte-for-byte in compatibility staging.",
+      "Map source window to start_time/end_time.",
+      "Embed the supplied public topology JSON in public_topology.",
+      "Declare observed source integrity conditions so the existing validator retains rather than deletes them.",
+      "The existing importer subsequently performs stable sorting and Zstandard re-encoding only."
+    ],
+    "before_rows": {
+      "metrics": 41589,
+      "logs": 193788,
+      "traces": 325966,
+      "trace_index": 50389
+    },
+    "compatibility_stage_rows": {
+      "metrics": 41589,
+      "logs": 193788,
+      "traces": 325966
+    }
+  },
+  "immutable_manifest_hash": "e656e04799a1ba98b39bad44cbb7450d3ca607f95df966d3c4d9d8ecc473211d"
+}

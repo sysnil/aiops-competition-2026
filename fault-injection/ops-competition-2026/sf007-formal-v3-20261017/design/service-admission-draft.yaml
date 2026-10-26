@@ -1,0 +1,30 @@
+schema: SF007_SERVICE_PAUSE30_ADMISSION_V1
+status: DRAFT_LOW_STABLE_NOT_FROZEN
+case_id: SF-007
+mechanism: SERVICE_PAUSE_30
+window_seconds:
+  before: [300, 600]
+  during: [600, 630]
+  after: [720, 900]
+injection:
+  duration_tolerance_seconds: 2
+  require_both_registered_recommendation_pids: true
+  require_exact_pid_cleanup_and_recovery: true
+public_root_evidence:
+  minimum_distinct_recommendation_traces_per_pod_before: 30
+  minimum_distinct_recommendation_traces_per_pod_after: 30
+  minimum_recommendation_caller_spans_during: 8
+  minimum_failed_recommendation_caller_spans_during: 5
+  maximum_failed_recommendation_caller_fraction_before: 0.05
+normal_controls:
+  image_requests_before_during_after: [240, 25, 120]
+  cart_requests_before_during_after: [240, 25, 120]
+  maximum_after_to_before_client_p95_ratio: 1.25
+  maximum_during_to_before_client_p95_ratio: 1.25
+  timeout_is_failure_not_zero_latency: true
+capture:
+  required_chunks: 6
+  require_each_chunk_quality_pass: true
+  require_public_proxy_identity_match: true
+  require_collector_receiver_refused_delta_zero: true
+  require_no_private_leak: true

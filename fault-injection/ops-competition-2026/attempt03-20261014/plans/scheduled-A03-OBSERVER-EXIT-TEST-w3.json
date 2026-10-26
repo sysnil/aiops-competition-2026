@@ -1,0 +1,14 @@
+{
+  "id": "A03-OBSERVER-EXIT-TEST-W3",
+  "mode": "MARKER",
+  "worker": "k8s-worker3",
+  "unit": "ops-a03-a03-observer-exit-test-w3",
+  "runtime": "/root/ops-competition-2026/attempt03-20261014/runtime/A03-OBSERVER-EXIT-TEST-W3",
+  "tolerance_seconds": 2,
+  "planned_utc": "2026-10-14T05:41:39.712870+00:00",
+  "scheduler_sha256": "3bcf0779499d817b9294e5e54d60a9959037bedac383dcdca604b8a6f3b28d4d",
+  "registration": null,
+  "registration_sha256": null,
+  "authorization": "/root/ops-competition-2026/attempt03-20261014/runtime/A03-OBSERVER-EXIT-TEST-W3/authorization.json",
+  "output": "/root/ops-competition-2026/qualification/private-attempts/A03-OBSERVER-EXIT-TEST-W3"
+}

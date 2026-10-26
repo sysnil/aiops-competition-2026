@@ -1,0 +1,24 @@
+{
+  "status": "DRAFT_NOT_QUALIFIED_NOT_FROZEN",
+  "scope": "SF-013 through SF-017; five new 1800-second cases",
+  "deadline_target_hours": 10,
+  "workload": "Existing LOW_STABLE; unchanged within before/during/after",
+  "public_private_boundary": "Public telemetry is exhaustive; execution plans and GT remain private",
+  "gt_review": {
+    "maximum_scoring_events": 5,
+    "minimum_preferred_observed_duration_seconds": 90,
+    "raw_candidates_and_unselected_merged_events_retained": true,
+    "every_exclusion_requires_human_reason": true,
+    "overflow_action": "BLOCK_SCORING_GT_REVIEW; do not truncate or hide real anomalies",
+    "gt_status_until_approved": "DRAFT_PENDING_HUMAN_REVIEW"
+  },
+  "cases": [
+    {"case_id": "SF-013", "actions": [{"kind": "POD", "mechanism": "PodMemoryStress", "worker": "k8s-worker2", "duration_seconds": 300, "start_offset_seconds": 600}], "final_recovery_seconds": 900, "qualification": "PENDING_FOR_V4"},
+    {"case_id": "SF-014", "actions": [{"kind": "SERVICE", "mechanism": "ServicePause", "worker": "k8s-worker3", "duration_seconds": 300, "start_offset_seconds": 600}], "final_recovery_seconds": 900, "qualification": "PENDING_FOR_V4"},
+    {"case_id": "SF-015", "actions": [{"kind": "HTTP", "mechanism": "HTTPReqDelay", "worker": "k8s-master", "duration_seconds": 300, "start_offset_seconds": 600}], "final_recovery_seconds": 900, "qualification": "PENDING_FOR_V4"},
+    {"case_id": "SF-016", "actions": [{"kind": "POD", "mechanism": "PodMemoryStress", "worker": "k8s-worker2", "duration_seconds": 300, "start_offset_seconds": 600}], "final_recovery_seconds": 900, "qualification": "PENDING_FOR_V4"},
+    {"case_id": "SF-017", "actions": [{"kind": "HTTP", "mechanism": "HTTPReqDelay", "worker": "k8s-master", "duration_seconds": 240, "start_offset_seconds": 600}, {"kind": "SERVICE", "mechanism": "ServicePause", "worker": "k8s-worker3", "duration_seconds": 240, "start_offset_seconds": 960}], "between_action_recovery_seconds": 120, "final_recovery_seconds": 600, "qualification": "PENDING_FOR_V4"}
+  ],
+  "production_gates": ["credible host reboot lifecycle validation", "v4 harmless joint test", "v4 real mechanism qualification", "fresh five-host safety", "five-host storage forecast", "collector and storage health", "immutable Manifest and source SHA", "bounded watchdog and recovery", "full public export and leak audit", "two-host archive SHA and readback"],
+  "transfer": {"destination": "192.168.51.51", "mode": "verified Public-only protected staging", "private_gt": "remain private pending human review", "publication": "not automatic"}
+}

@@ -1,0 +1,40 @@
+status: PREREGISTERED_NO_FAULT_CANARY
+id: S5V3FR-DISK-CANARY-20261013
+seed: 863301
+formal_case: false
+fault_injection: forbidden
+trace_source: JAEGER_OPENSEARCH_STORAGE
+collector_configuration: original_spike_limit_percentage_25
+workload:
+  duration_seconds: 180
+  profile: MEDIUM
+  session_arrival_rate_per_second: 1.4
+  workflow_weights: {browse: 20, shopping: 30, checkout: 50}
+  control_streams:
+    - {name: image_asset, operation: GET /images/products/OpticalTubeAssembly.jpg, rate_per_second: 1.0, seed_offset: 101}
+    - {name: cart_view, operation: GET /api/cart, rate_per_second: 2.0, seed_offset: 103}
+  control_timeout_seconds: 8
+  control_concurrency_per_stream: {image_asset: 2, cart_view: 4}
+trace_completion:
+  offsets_seconds: [5, 60, 120, 240]
+  latest_start_offsets_seconds: [10, 65, 125, 245]
+  latest_completion_offsets_seconds: [60, 120, 180, 300]
+  half_open_window: true
+  query_start_pad_seconds: 1
+  query_end_pad_seconds: 5
+  source_index_locked_across_versions: true
+  earlier_span_identities_must_be_subset: true
+  plus_240_read_only: true
+quality:
+  proxy_server_coverage_fraction_min: 1.0
+  direct_uid_match_fraction_each_target_min: 1.0
+  fixed_image_and_cart_backend_coverage_fraction_min: 1.0
+  collector_receiver_refused_delta_max: 0
+  collector_limiter_refused_delta_max: 0
+  missing_counter: UNKNOWN_NOT_ZERO
+failed_canary_cannot_be_replaced: true
+disk:
+  uuid: a35051a2-3d09-4b83-bbc0-3bb055e8a4f3
+  raw_run_root: /data/stage5-v3/fast-ready/runs
+  planned_raw_bytes: 5368709120
+  root_floor_unchanged: true

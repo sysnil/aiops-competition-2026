@@ -1,0 +1,35 @@
+{
+  "admission_contract": "/root/ops-competition-2026/sf004-formal-v2-20261016/design/http-home-admission-draft.yaml",
+  "admission_contract_sha256": "8fb66c9ec77800410e8d8e25635839cf09efc46edf6c7e9d6b7647e92eca98df",
+  "after_seconds": 120,
+  "anchor_offset_seconds": 900,
+  "before_seconds": 120,
+  "control_identity": "successful ordinary fixed-frequency control request trace_id; independent of user_agent",
+  "created_utc": "2026-10-16T10:35:46.192148+00:00",
+  "during_seconds": 60,
+  "evaluator_sha256": "53547ea3b13ffa090f96145caa929d5c977965c84f474477dd28dced86b88787",
+  "maximum_p95_ratio": 1.25,
+  "minimum_control_trace_ids": {
+    "cart": {
+      "after": 180,
+      "before": 180,
+      "during": 90
+    },
+    "image": {
+      "after": 90,
+      "before": 90,
+      "during": 45
+    }
+  },
+  "runs": {
+    "VAL1": {
+      "run_dir": "/data/stage5-v3/ops-competition-2026/collector-debug-repair-20261016/runs-v6/VAL1",
+      "seed": 741603
+    },
+    "VAL2": {
+      "run_dir": "/data/stage5-v3/ops-competition-2026/collector-debug-repair-20261016/runs-v6/VAL2",
+      "seed": 741604
+    }
+  },
+  "status": "PREREGISTERED_TRACE_ID_SF004_CONTROL_RULE_V2"
+}

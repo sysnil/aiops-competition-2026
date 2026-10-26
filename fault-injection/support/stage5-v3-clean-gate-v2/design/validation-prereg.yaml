@@ -1,0 +1,45 @@
+status: PREREGISTERED_BEFORE_VALIDATION
+scope: independent_stage5_v3_clean_gate_v2_rehearsal
+formal_benchmark_case: false
+fault_injection: forbidden
+historical_calibration_only:
+  windows: [C2_S1, C2_S2, C3_S1, C3_S2, D3, VAL_1, VAL_2]
+  new_full_calibration_windows: 0
+  previous_window_statuses_unchanged: true
+candidate_lock_sha256: 2c7cf681d3e8b346cfeb44aa5ee26dbddef1a4c807c960ca31e5799f4febf64a
+current_old_rule_comparator:
+  added_node_cpu_limit_cores: 0.25
+  each_evaluated_control_minute_p95_ratio_max: 1.25
+  result_does_not_override_v2_candidate: true
+validation:
+  runs:
+    - {id: S5V3AP-CGV2-VAL-1, seed: 861201}
+    - {id: S5V3AP-CGV2-VAL-2, seed: 861202}
+  before_seconds: 600
+  during_no_fault_seconds: 300
+  after_seconds: 600
+  master_storage_before_each_run_min_bytes: 46000000000
+  master_run_safety_floor_bytes: 21000000000
+  worker_archive_free_bytes_each_min: 40000000000
+  original_workload_plan: /root/stage5-v3-autonomous-preparation/design/load-plan-c3.yaml
+  original_workload_plan_sha256: c74fc2dd121e172640c891470370d29a5e2e4e279e819879cb3f38d59069e7a9
+  workflow_weights: {browse: 20, shopping: 30, checkout: 50}
+  arrival_rate_sessions_per_second: 1.4
+  controls: {image_asset_requests_per_second: 1.0, cart_view_requests_per_second: 2.0}
+  planned_probe_samples: {before: 120, during: 60, after: 120}
+  probe_interval_seconds: 5
+  cpu_safety_sample_interval_seconds: 30
+  source_lock_must_match_before_each_run: true
+  global_safety_fresh_pass_before_each_run: true
+  same_code_workload_and_candidate_rules_for_both_seeds: true
+  any_incomplete_attempt_preserved_not_replaced: true
+  no_retuning_after_first_validation: true
+  rolling_archive_after_complete_cleanup_only: true
+  dual_worker_immutable_archive_and_restore_test_before_local_release: true
+  sync_during_network_fault: forbidden
+independent_fault_sensitivity:
+  prior_rehearsal_replay_first: true
+  exploratory_new_faults_max: 2
+  new_faults_require_separate_preregistration_and_watchdog: true
+  may_upgrade_mechanism_or_approve_gate: false
+stage5_v3_protocol_frozen: false

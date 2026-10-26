@@ -1,0 +1,41 @@
+status: PROPOSED_NOT_APPROVED
+scope: independent_prefreeze_diagnostics_only
+candidate_id: NONE_THIS_ROUND
+executable_new_rule: null
+reason: >-
+  VAL-1 Cart has a real Worker1-Frontend-path client/Envoy latency shift,
+  while the precise connection, queue, network or background-resource cause
+  remains unverified. An absolute-latency allowance or higher p95 ceiling
+  chosen from these two validation outcomes would be post-hoc threshold tuning.
+historical_decisions_reclassified: false
+old_comparator_A_preserved: true
+clean_gate_v2_B_and_E_preserved_as_unapproved_candidates: true
+no_full_25_minute_validation_this_round: true
+not_an_admission_or_scoring_contract: true
+no_threshold_relaxation:
+  client_error_and_timeout: unchanged_fail
+  minimum_successful_requests_and_usable_spans: unchanged
+  normal_control_identity_and_path: must_be_reverified_for_each_fault_mechanism
+  critical_trace_and_pod_uid_evidence: cannot_be_waived
+  simultaneous_controls_abnormal: must_not_be_silently_accepted
+future_candidate_hypothesis_only:
+  relative_p95_change: retain_as_descriptive_evidence
+  absolute_p95_change_ms: consider_only_after_independent_calibration
+  duration_and_consecutive_minutes: retain_as_descriptive_evidence
+  normal_noise_envelope: requires_more_independent_full_windows
+  numeric_thresholds: NOT_SPECIFIED
+  eligible_for_formal_validation: false
+unchanged_protocol_boundaries:
+  - hard_global_safety
+  - cpu_safety_separate_from_workload_overhead
+  - root_observable_and_user_impactful_definitions
+  - mechanism_direct_root_evidence
+  - fixed_primary_reserve_pool
+  - A_B1_B2_candidate_space_fairness
+  - DEV_TEST_GT_barrier
+  - immutable_trace_completion_and_late_audit
+next_prerequisite:
+  - explain_or_measure_worker1_frontend_proxy_to_backend_wait
+  - fix_proxy_trace_export_gap_and_prove_full_ordinary_request_coverage
+  - repeat_reversible_uid_canary_only_under_a_new_preregistration
+  - reprove_networkpath_route_and_independent_control_after_pod_rescheduling

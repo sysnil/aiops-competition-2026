@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aiops-contest:semifinal-query-visualization:1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_type", "schema_version", "question_id", "case_id", "chart", "answers", "data_source", "processing"],
+  "properties": {
+    "task_type": {"const": "SEMIFINAL_QUERY_VISUALIZATION"},
+    "schema_version": {"const": "1.0"},
+    "question_id": {"type": "string", "pattern": "^[A-Z][A-Z0-9_-]{1,31}$"},
+    "case_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9_-]{2,63}$"},
+    "chart": {
+      "type": "object", "additionalProperties": false,
+      "required": ["chart_type", "title", "x_axis", "y_axis", "series", "artifact"],
+      "properties": {
+        "chart_type": {"const": "line"},
+        "title": {"type": "string", "minLength": 1, "maxLength": 256},
+        "x_axis": {"$ref": "#/$defs/axis"}, "y_axis": {"$ref": "#/$defs/axis"},
+        "series": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"$ref": "#/$defs/series"}},
+        "artifact": {
+          "type": "object", "additionalProperties": false,
+          "required": ["filename", "media_type", "sha256", "data_base64"],
+          "properties": {
+            "filename": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"},
+            "media_type": {"const": "image/png"},
+            "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "data_base64": {"type": "string", "minLength": 16, "maxLength": 2000000}
+          }
+        }
+      }
+    },
+    "answers": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/answer"}},
+    "data_source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["modality", "start_time", "end_time", "filters", "request_ids", "record_count"],
+      "properties": {
+        "modality": {"enum": ["metrics", "logs", "traces"]},
+        "start_time": {"type": "string", "format": "date-time"}, "end_time": {"type": "string", "format": "date-time"},
+        "filters": {"type": "object", "maxProperties": 20},
+        "request_ids": {"type": "array", "minItems": 1, "maxItems": 200, "items": {"type": "string", "maxLength": 128}},
+        "record_count": {"type": "integer", "minimum": 1, "maximum": 2000000}
+      }
+    },
+    "processing": {"type": "object", "maxProperties": 30}
+  },
+  "$defs": {
+    "axis": {"type": "object", "additionalProperties": false, "required": ["label"], "properties": {"label": {"type": "string", "minLength": 1, "maxLength": 128}, "unit": {"type": ["string", "null"], "maxLength": 32}, "timezone": {"type": ["string", "null"], "maxLength": 32}}},
+    "point": {"type": "object", "additionalProperties": false, "required": ["timestamp", "value"], "properties": {"timestamp": {"type": "string", "format": "date-time"}, "value": {"type": ["number", "null"]}}},
+    "series": {"type": "object", "additionalProperties": false, "required": ["name", "unit", "points"], "properties": {"name": {"type": "string", "minLength": 1, "maxLength": 256}, "unit": {"type": "string", "minLength": 1, "maxLength": 32}, "points": {"type": "array", "minItems": 1, "maxItems": 3600, "items": {"$ref": "#/$defs/point"}}}},
+    "answer": {"type": "object", "additionalProperties": false, "required": ["question_index", "answer_type", "value", "explanation"], "properties": {"question_index": {"type": "integer", "minimum": 1, "maximum": 3}, "answer_type": {"type": "string", "minLength": 1, "maxLength": 64}, "value": {"type": ["number", "string", "boolean"]}, "unit": {"type": ["string", "null"], "maxLength": 32}, "timestamp": {"type": ["string", "null"], "format": "date-time"}, "start_time": {"type": ["string", "null"], "format": "date-time"}, "end_time": {"type": ["string", "null"], "format": "date-time"}, "explanation": {"type": "string", "minLength": 1, "maxLength": 1000}}}
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "case_id": "SF-011",
+  "classification": "OFFICIAL",
+  "events": [
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "opensearch-0"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+      "entity_type": "Pod",
+      "evidence_rubric": "Published MEMORY_USAGE_INCREASE explicitly covers the memory working-set gauge.",
+      "gt_event_id": "EVT-0001",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-18T13:40:42.473000+00:00",
+      "observable_start_time": "2026-10-18T13:21:57.473000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [],
+      "anomaly_type": "TRACE_LATENCY_INCREASE",
+      "entity_id": "frontend-proxy",
+      "entity_type": "Service",
+      "evidence_rubric": "Already in the published 11-type taxonomy.",
+      "gt_event_id": "EVT-0002",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-18T13:26:56.470365+00:00",
+      "observable_start_time": "2026-10-18T13:25:58.470426+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    }
+  ],
+  "excluded_groups": [],
+  "matching_rule_version": "final-strict-positive-credit-1.1",
+  "review_status": "APPROVED",
+  "rubric_version": "final-strict-positive-credit-1.1",
+  "source_candidate_manifest_sha256": "2b90d9e09dc2b4b0e718c039bcbaf34db0b0d07451090d516ba02ea235abc314",
+  "source_candidate_sha256": "b7bd01c4b88a5dc0773102076c2c683acc42e1c4c2b63624653e0e662b49b624",
+  "source_public_manifest_sha256": "025b1a41fc56c17e5b0dd9e36731260eaa5268696b5f0e3b8d36b0a9af12d47e",
+  "status": "APPROVED",
+  "task_type": "FINAL_ANOMALY_INVESTIGATION",
+  "time_tolerance_seconds": 120,
+  "version": "FINAL-GT-TAXONOMY-20261020-v2"
+}

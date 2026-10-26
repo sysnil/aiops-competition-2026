@@ -1,0 +1,45 @@
+[Unit]
+Description=AIOps Final Stage 3 Hybrid GT Internal Preview API
+After=network-online.target data.mount aiops-private-grader-demo.service
+Wants=network-online.target
+RequiresMountsFor=/data
+
+[Service]
+Type=simple
+User=aiops-api
+Group=aiops-api
+WorkingDirectory=/opt/aiops-contest-server
+Environment=AIOPS_CONFIG=/etc/aiops-final-stage3/config.yaml
+Environment=AIOPS_FINAL_TASK_CATALOG=/etc/aiops-final-stage3/catalog.json
+Environment=AIOPS_FINAL_INTERNAL_BATCH_ID=FINAL-STAGE3-HYBRID-GT
+Environment=AIOPS_FINAL_INTERNAL_GRADING_MODE=HYBRID_INTERNAL_PREVIEW
+Environment=AIOPS_FINAL_ROUNDS=/etc/aiops-final-stage3/legacy-final-rounds.json
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/etc/aiops-final-stage3/grading-gateway.env
+ExecStart=/opt/aiops-contest-server/.venv/bin/uvicorn app.main:app --host 192.168.51.51 --port 18081 --workers 1 --no-access-log
+Restart=on-failure
+RestartSec=2s
+TimeoutStopSec=20s
+LimitNOFILE=65536
+TasksMax=256
+MemoryMax=4G
+UMask=0027
+StateDirectory=aiops-final-stage3
+StateDirectoryMode=0750
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictNamespaces=true
+LockPersonality=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadOnlyPaths=/data/aiops-contest/public /data/aiops-contest/mock-only /etc/aiops-final-stage3
+ReadWritePaths=/data/aiops-contest/cache /data/aiops-contest/indexes /var/lib/aiops-final-stage3
+
+[Install]
+WantedBy=multi-user.target

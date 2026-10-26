@@ -1,0 +1,53 @@
+status: PROPOSED_NOT_APPROVED
+source: JAEGER_OPENSEARCH_STORAGE
+scope: independent_prefreeze_validation_only
+formal_stage5_v3_observation_contract_replaced: false
+identity_key: [traceID, spanID]
+query_window: exact_half_open_UTC_microseconds
+index_uuid_and_mapping_sha256_required: true
+live_capture:
+  first_read_earliest_start_after_window_end_seconds: 5
+  first_read_must_freeze_by_seconds: 90
+  record_planned_start_actual_start_completion_query_duration_response_and_sha256: true
+  later_completion_does_not_relabel_live_capture_complete: true
+immutable_completion:
+  first_supplement_earliest_start_seconds: 60
+  first_supplement_waits_for_first_archive: true
+  first_supplement_must_finish_by_seconds: 120
+  final_supplement_earliest_start_seconds: 120
+  final_supplement_waits_for_first_supplement: true
+  final_supplement_must_finish_by_seconds: 180
+  final_scoring_snapshot: immutable_plus_120_supplement_finished_by_plus_180
+  append_only_new_version_never_overwrite_first_or_plus_60: true
+  identical_duplicate_span_ids: deduplicate_for_scoring_preserve_duplicate_source_evidence
+  conflicting_duplicate_id_content: CAPTURE_INCOMPLETE_CONFLICT
+  earlier_identity_missing_from_later_version: CAPTURE_INCOMPLETE_IDENTITY_LOSS
+  source_query_truncated_failed_shard_or_index_changed: CAPTURE_INCOMPLETE_SOURCE
+late_arrival_audit:
+  fixed_read_start_after_window_end_seconds: 240
+  audit_snapshot_used_to_change_blind_prediction_or_scoring_archive: false
+  classify_against_public_issued_ordinary_business_and_fixed_control_trace_ids: true
+  positive_control_minimum_matched_business_trace_ids: 100
+  positive_control_minimum_matched_each_fixed_control_trace_ids: 30
+  known_noncritical_control_plane_edges:
+    - ad_to_flagd
+    - recommendation_to_flagd
+    - payment_to_flagd
+    - fraud_detection_to_flagd
+  noncritical_requires_no_issued_request_trace_id_and_public_trace_or_operation_proof: true
+  unknown_or_unattributed_may_not_be_assumed_noncritical: true
+  critical_late_request_control_or_root_evidence: CAPTURE_INCOMPLETE_CRITICAL_LATE
+  unclassified_late_evidence: CAPTURE_PARTIAL_UNVERIFIED
+  only_verified_noncritical_late_evidence: BOUNDED_COMPLETION_WITH_NONCRITICAL_LATE_AUDIT
+  late_count_and_fraction_recorded_even_when_noncritical: true
+  no_infinite_wait_for_background_spans: true
+failure_states:
+  - CAPTURE_INCOMPLETE_TIMEOUT
+  - CAPTURE_INCOMPLETE_SOURCE
+  - CAPTURE_INCOMPLETE_CONFLICT
+  - CAPTURE_INCOMPLETE_IDENTITY_LOSS
+  - CAPTURE_INCOMPLETE_UTC_BOUNDARY
+  - CAPTURE_INCOMPLETE_CRITICAL_LATE
+  - CAPTURE_PARTIAL_UNVERIFIED
+fault_target_server_span_missing_alone_is_not_capture_failure: true
+normal_control_trace_coverage_and_independent_root_evidence_still_required: true

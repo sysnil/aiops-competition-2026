@@ -1,0 +1,344 @@
+{
+  "question_id": "Q04",
+  "case_id": "SF-005",
+  "source_public_manifest_sha256": "3bddfc396be4bb0a6002d1bbd959c44bf770a692e916dfd5c71da31fafd756f2",
+  "source_file_sha256": "39121200abf15ff5493348a345026aafbfec06dcb0d0a32c4d0e3914c169c0f2",
+  "canonical_chart_data": [
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:23:55.458636+00:00",
+      "minute_index": 0,
+      "value": 114.0,
+      "sample_count": 114
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:24:55.458636+00:00",
+      "minute_index": 1,
+      "value": 116.0,
+      "sample_count": 116
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:25:55.458636+00:00",
+      "minute_index": 2,
+      "value": 113.0,
+      "sample_count": 113
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:26:55.458636+00:00",
+      "minute_index": 3,
+      "value": 116.0,
+      "sample_count": 116
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:27:55.458636+00:00",
+      "minute_index": 4,
+      "value": 119.0,
+      "sample_count": 119
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:28:55.458636+00:00",
+      "minute_index": 5,
+      "value": 120.0,
+      "sample_count": 120
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:29:55.458636+00:00",
+      "minute_index": 6,
+      "value": 111.0,
+      "sample_count": 111
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:30:55.458636+00:00",
+      "minute_index": 7,
+      "value": 110.0,
+      "sample_count": 110
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:31:55.458636+00:00",
+      "minute_index": 8,
+      "value": 116.0,
+      "sample_count": 116
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:32:55.458636+00:00",
+      "minute_index": 9,
+      "value": 111.0,
+      "sample_count": 111
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:33:55.458636+00:00",
+      "minute_index": 10,
+      "value": 86.0,
+      "sample_count": 86
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:34:55.458636+00:00",
+      "minute_index": 11,
+      "value": 111.0,
+      "sample_count": 111
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:35:55.458636+00:00",
+      "minute_index": 12,
+      "value": 118.0,
+      "sample_count": 118
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:36:55.458636+00:00",
+      "minute_index": 13,
+      "value": 111.0,
+      "sample_count": 111
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:37:55.458636+00:00",
+      "minute_index": 14,
+      "value": 109.0,
+      "sample_count": 109
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:38:55.458636+00:00",
+      "minute_index": 15,
+      "value": 113.0,
+      "sample_count": 113
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:39:55.458636+00:00",
+      "minute_index": 16,
+      "value": 107.0,
+      "sample_count": 107
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:40:55.458636+00:00",
+      "minute_index": 17,
+      "value": 101.0,
+      "sample_count": 101
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:41:55.458636+00:00",
+      "minute_index": 18,
+      "value": 112.0,
+      "sample_count": 112
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:42:55.458636+00:00",
+      "minute_index": 19,
+      "value": 106.0,
+      "sample_count": 106
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:43:55.458636+00:00",
+      "minute_index": 20,
+      "value": 110.0,
+      "sample_count": 110
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:44:55.458636+00:00",
+      "minute_index": 21,
+      "value": 106.0,
+      "sample_count": 106
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:45:55.458636+00:00",
+      "minute_index": 22,
+      "value": 117.0,
+      "sample_count": 117
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:46:55.458636+00:00",
+      "minute_index": 23,
+      "value": 100.0,
+      "sample_count": 100
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:47:55.458636+00:00",
+      "minute_index": 24,
+      "value": 106.0,
+      "sample_count": 106
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:48:55.458636+00:00",
+      "minute_index": 25,
+      "value": 107.0,
+      "sample_count": 107
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:49:55.458636+00:00",
+      "minute_index": 26,
+      "value": 131.0,
+      "sample_count": 131
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:50:55.458636+00:00",
+      "minute_index": 27,
+      "value": 115.0,
+      "sample_count": 115
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:51:55.458636+00:00",
+      "minute_index": 28,
+      "value": 110.0,
+      "sample_count": 110
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-16T11:52:55.458636+00:00",
+      "minute_index": 29,
+      "value": 109.0,
+      "sample_count": 109
+    }
+  ],
+  "reference_chart_path": "private/reference-charts/Q04.png",
+  "three_gold_answers": [
+    {
+      "answer_type": "number",
+      "answer": 3331,
+      "answer_unit": "spans",
+      "numerical_tolerance": 0,
+      "time_tolerance_seconds": 0,
+      "calculation_method": "sum of all 60-second bucket counts"
+    },
+    {
+      "answer_type": "number",
+      "answer": 131,
+      "answer_unit": "spans",
+      "numerical_tolerance": 0,
+      "time_tolerance_seconds": 0,
+      "calculation_method": "maximum minute count"
+    },
+    {
+      "answer_type": "time",
+      "answer": "2026-10-16T11:49:55.458636+00:00",
+      "answer_unit": "UTC",
+      "numerical_tolerance": null,
+      "time_tolerance_seconds": 0,
+      "calculation_method": "earliest maximum minute start"
+    }
+  ],
+  "supporting_public_records": [
+    {
+      "timestamp_utc": "2026-10-16T11:26:47.619872+00:00",
+      "trace_id": "a0445fdf343cd26507b9ef47be39e356",
+      "span_id": "3b8ba8600d1d17a9",
+      "service": "recommendation",
+      "parent_service": "frontend",
+      "duration_ms": 3.277,
+      "status": null
+    },
+    {
+      "timestamp_utc": "2026-10-16T11:26:48.338425+00:00",
+      "trace_id": "a5a4217977c02eb0250ae056ee98ebc0",
+      "span_id": "dfb8a5abf28ad8eb",
+      "service": "recommendation",
+      "parent_service": "frontend",
+      "duration_ms": 3.992,
+      "status": null
+    },
+    {
+      "timestamp_utc": "2026-10-16T11:26:49.052901+00:00",
+      "trace_id": "d82b0d20fed6539d68a15bc8c6528d38",
+      "span_id": "a06b4b98f9b40b07",
+      "service": "recommendation",
+      "parent_service": "frontend",
+      "duration_ms": 2.703,
+      "status": null
+    },
+    {
+      "timestamp_utc": "2026-10-16T11:26:49.768627+00:00",
+      "trace_id": "04ad1db657b17decf4d216d74c18ce6b",
+      "span_id": "1a26a04d3743829b",
+      "service": "recommendation",
+      "parent_service": "frontend",
+      "duration_ms": 3.126,
+      "status": null
+    },
+    {
+      "timestamp_utc": "2026-10-16T11:26:50.480824+00:00",
+      "trace_id": "f8ef539590f17dbb5c490f8249d5944c",
+      "span_id": "41990b9da8404561",
+      "service": "recommendation",
+      "parent_service": "frontend",
+      "duration_ms": 2.688,
+      "status": null
+    },
+    {
+      "timestamp_utc": "2026-10-16T11:26:50.819658+00:00",
+      "trace_id": "facef0e51e03d4e56c15e618e4542ad1",
+      "span_id": "856f3ee661641bf4",
+      "service": "recommendation",
+      "parent_service": "frontend",
+      "duration_ms": 5.658,
+      "status": null
+    }
+  ],
+  "grading_rubric": {
+    "chart_points": 4,
+    "answer_points_each": 2,
+    "chart_breakdown": {
+      "entity_and_filter": 1,
+      "time_axis": 1,
+      "values_and_aggregation": 1,
+      "unit_and_legend": 1
+    }
+  },
+  "gt_version": "semifinal-query-visualization-candidate-v1",
+  "review_status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "calculation_method": {
+    "source_file": "traces.parquet",
+    "source_columns": [
+      "start_time",
+      "service",
+      "parent_service",
+      "operation_name",
+      "duration_ms",
+      "status",
+      "attributes"
+    ],
+    "filters": {
+      "entities": [
+        "recommendation"
+      ],
+      "span_kind": "server"
+    },
+    "aggregation": "count matching server Spans by 60-second bucket",
+    "time_bucket": {
+      "origin_utc": "2026-10-16T11:23:55.458636+00:00",
+      "width_seconds": 60,
+      "closed": "left",
+      "timestamp_label": "bucket start UTC",
+      "observation_end_exclusive_utc": "2026-10-16T11:53:55.458636+00:00"
+    },
+    "minimum_samples_per_minute": 0,
+    "missing_policy": "null and line gap for insufficient samples; zero only for observed count queries",
+    "counter_reset_policy": "not applicable",
+    "p95_definition": "not applicable",
+    "comparison_minute_ranges": null
+  }
+}

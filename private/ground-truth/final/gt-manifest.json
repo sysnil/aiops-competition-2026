@@ -1,0 +1,90 @@
+{
+  "approval": {
+    "approval_source": "User confirmed SF-013 through SF-017 GT review in this task on 2026-10-20",
+    "new_source_manifest_sha256": "012c1a428cf618987f305d659b1be2ea7b8d7e11416c16086c5705990660af7d",
+    "previous_approved_manifest_sha256": "918c90331f260075987ca16164088c76fb2d716d73fe0ee5e631c2dba65d331c",
+    "scope": "twelve Final Case GT definitions; no task/session publication",
+    "unselected_candidates": "retained in private source, not represented as human REJECT decisions"
+  },
+  "approved_at_utc": "2026-10-20T15:47:20.149784+00:00",
+  "cases": [
+    {
+      "case_id": "SF-004",
+      "events": 2,
+      "file": "SF-004.json",
+      "sha256": "3c773321ea419c7018e6353d88441201b535d65e1cc3350df0dd7d4d0ba9fabf"
+    },
+    {
+      "case_id": "SF-006",
+      "events": 4,
+      "file": "SF-006.json",
+      "sha256": "ea4a8790f8a57afbebde92a5fce9fb8c34684edf81de753607502989af77a5db"
+    },
+    {
+      "case_id": "SF-007",
+      "events": 2,
+      "file": "SF-007.json",
+      "sha256": "e69ffccab3dc7015cf34bd5fcfab1b5034be41beb80f7e7f7ead6106e20a3e66"
+    },
+    {
+      "case_id": "SF-008",
+      "events": 3,
+      "file": "SF-008.json",
+      "sha256": "3ede11a7604c100c80d3b3e35911d3f30e36340f5bdb53aa0fd92d6f8f6b32c1"
+    },
+    {
+      "case_id": "SF-009",
+      "events": 3,
+      "file": "SF-009.json",
+      "sha256": "aacc75c9837cb5b3a149ebb54e36fa8b574bde7c59c8f68e3e0235bda31b88f3"
+    },
+    {
+      "case_id": "SF-011",
+      "events": 2,
+      "file": "SF-011.json",
+      "sha256": "e89a272f91392102074577bd7d328c4cef15cd4126a3b60cd2958508fcc689b3"
+    },
+    {
+      "case_id": "SF-012",
+      "events": 1,
+      "file": "SF-012.json",
+      "sha256": "02b4885b65804e24dbe2256e81e72b351c8a5800610c9a6a7d10268f26b336a4"
+    },
+    {
+      "case_id": "SF-013",
+      "events": 1,
+      "file": "SF-013.json",
+      "sha256": "4cc4c3d54f72d948cafad237f5097311429b0b244c2a124c5fb3eb625ceefee1"
+    },
+    {
+      "case_id": "SF-014",
+      "events": 5,
+      "file": "SF-014.json",
+      "sha256": "038cfedee2fb11dda26babc462bdd5aa617eefdeb59f5ad89bb986755df4d104"
+    },
+    {
+      "case_id": "SF-015",
+      "events": 5,
+      "file": "SF-015.json",
+      "sha256": "d78cab7d3fe4c5fce90b8ee1c33285e9b1a84f78277b67eaa4cc99ed7e685c1e"
+    },
+    {
+      "case_id": "SF-016",
+      "events": 2,
+      "file": "SF-016.json",
+      "sha256": "9fea06356654ac54b726dfc966e83671752394ec21ee9e58bf2a54bb23da1582"
+    },
+    {
+      "case_id": "SF-017",
+      "events": 5,
+      "file": "SF-017.json",
+      "sha256": "8f382191abfee0d2d426ac242b7327c3b74dbcb159890fdb99166ebdd04995cf"
+    }
+  ],
+  "classification": "PRIVATE_OFFICIAL_FINAL_GT",
+  "review_status": "APPROVED",
+  "schema_sha256": "1490f0e6ae20557c73d2b0e1b9a9ef3dbaf94dd0495992d891f57e331ea1a60b",
+  "scoring_rule_version": "final-strict-positive-credit-1.1",
+  "taxonomy_sha256": "e972da4a2f82407fb30f985463e61d6943ce3fda043ef76846b03be71ca7282a",
+  "version": "FINAL-GT-TAXONOMY-20261020-v2"
+}

@@ -1,0 +1,34 @@
+schema_version: 1
+status: PREDECLARED_BEFORE_RH_NET_BW_CONTROLS
+source_dev_case: S5V2-D12
+target_path: NETWORK_PATH/k8s-worker2/k8s-worker3
+selection_policy:
+  primary_rule: candidate_must_be_pre_registered_and_have_verified_pod_pair_route_not_traversing_target
+  min_before_trace_spans: 30
+  min_during_trace_spans: 30
+  normality_p95_during_over_before_max: 1.25
+  normality_error_rate_increase_max: 0.02
+  pod_identity_required_for_multi_replica_source: true
+  no_post_fault_substitution: true
+  no_eligible_control_means_invalid_future_case: true
+candidates:
+  - edge: frontend-proxy->image-provider
+    source_node: k8s-worker2
+    destination_node: k8s-worker2
+    role: same_source_local_control
+    caveat: source_process_shared_with_affected_frontend_call
+  - edge: shipping->quote
+    source_node: k8s-worker1
+    destination_node: k8s-worker1
+    role: independent_service_local_control
+    caveat: natural_request_volume_may_be_insufficient
+  - edge: checkout->currency
+    source_node: k8s-worker3
+    destination_node: k8s-worker3
+    role: independent_local_control
+    caveat: upstream_checkout_traffic_may_propagate_network_delay
+  - edge: frontend->cart
+    source_node: k8s-worker2
+    destination_node: k8s-worker2
+    role: historical_failed_control
+    caveat: service_level_trace_aggregates_frontend_replicas_and_cannot_verify_local_pod_pair

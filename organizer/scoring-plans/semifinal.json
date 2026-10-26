@@ -1,0 +1,68 @@
+{
+  "version": "SEMIFINAL-20261022-v5-PM1655-1800",
+  "status": "APPROVED_FOR_SCORING",
+  "timezone": "Asia/Shanghai",
+  "date": "2026-10-22",
+  "questions": [
+    "Q01",
+    "Q02",
+    "Q03",
+    "Q04",
+    "Q05",
+    "Q06",
+    "Q07",
+    "Q08",
+    "Q09",
+    "Q10"
+  ],
+  "points_per_question": 10,
+  "selection": "HIGHEST_SCORE_EARLIEST_RECEIVED_WITHIN_WINDOW",
+  "ties": "EARLIEST_TOTAL_ACHIEVEMENT_ELAPSED_FROM_SESSION_START",
+  "retain_read_access_after_end": true,
+  "windows": {
+    "AM": {
+      "start": "13:30:00",
+      "end": "15:36:00",
+      "teams": [
+        "TEAM-01",
+        "TEAM-02",
+        "TEAM-03",
+        "TEAM-04",
+        "TEAM-05",
+        "TEAM-06",
+        "TEAM-07",
+        "TEAM-08",
+        "TEAM-09"
+      ]
+    },
+    "PM": {
+      "start": "16:55:00",
+      "end": "18:00:00",
+      "teams": [
+        "TEAM-10",
+        "TEAM-11",
+        "TEAM-12",
+        "TEAM-13",
+        "TEAM-14",
+        "TEAM-15",
+        "TEAM-16",
+        "TEAM-17"
+      ],
+      "previous_scheduled_start": "16:00:00",
+      "schedule_status": "CONFIRMED"
+    }
+  },
+  "approved_at_utc": "2026-10-21T11:19:01.873572+00:00",
+  "qa_submission_attempt_limit": null,
+  "ranking_authority": "USER_APPROVED_BEST_SCORE_SPEED_20261022",
+  "ranking_rule_updated_at_utc": "2026-10-22T03:04:06.108471+00:00",
+  "am_deadline_extension": {
+    "previous_end": "15:30:00",
+    "new_end": "15:36:00",
+    "authority": "USER_APPROVED_AM_DEADLINE_EXTENSION_20261022",
+    "updated_at_utc": "2026-10-22T07:38:33.458373+00:00"
+  },
+  "manual_start_hold_approved_at_utc": "2026-10-22T07:54:19.277173+00:00",
+  "pm_schedule_authority": "USER_APPROVED_1655_TO_1800_20261022",
+  "pm_schedule_confirmed_at_utc": "2026-10-22T08:41:24.068269+00:00"
+}

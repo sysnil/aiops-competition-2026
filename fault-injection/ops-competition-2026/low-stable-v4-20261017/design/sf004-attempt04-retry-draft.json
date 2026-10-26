@@ -1,0 +1,38 @@
+{
+  "status": "DRAFT_NOT_FROZEN_FOR_FAULT",
+  "case_id": "SF-004",
+  "run_id": "SF-004-ATTEMPT-04",
+  "parent_remaining_cases_plan_sha256": "64567bac143fa955cba501abf591049adba42ec2c15499ab7629e7e9b72e08ef",
+  "previous_attempts": [
+    {
+      "run_id": "SF-004-ATTEMPT-02",
+      "status": "FAILED_BEFORE_INJECTION",
+      "capture_terminal_sha256": "3b858c34fa5d897ede6a0dff6bf6bdf0e2dc7224b4bb27169b8fe35aadadaf45"
+    },
+    {
+      "run_id": "SF-004-ATTEMPT-03",
+      "status": "FAILED_EXPORT_BOUNDARY",
+      "fault_injected_and_recovered": true,
+      "failure_record_sha256": "c2530e3f4d2bc99e7758eead3a014d7532d579a641f0054f162c96dcb0597429"
+    }
+  ],
+  "capture_seconds": 1800,
+  "fault": {"mechanism": "HTTP_HOME_DELAY_250MS_60", "offset_seconds": 900,
+            "duration_seconds": 60, "delay_ms": 250},
+  "workload": {
+    "state_machine_sessions_per_second": 0.7,
+    "fixed_business_streams_per_second": {
+      "image_asset": 1, "cart_view": 1, "home": 1, "recommendations": 1
+    },
+    "fixed_stream_user_agent": "business-control/1.0",
+    "all_phases_same_generation_policy": true
+  },
+  "required_new_no_fault_contract_sha256": "c43b971b19593880aec7d217d5c9f7476eb17f91e7b6959efe7da97a478bd1c5",
+  "normal_control_p95_ratio_max": 1.25,
+  "minimum_fixed_home_delay_requests": 45,
+  "minimum_total_home_delay_requests": 60,
+  "minimum_filesystem_free_bytes": 5000000000,
+  "history_immutable": true,
+  "private_gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "competition_server_import": false
+}

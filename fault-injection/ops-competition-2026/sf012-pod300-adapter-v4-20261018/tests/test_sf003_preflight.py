@@ -1,0 +1,92 @@
+import importlib.util
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+import sys
+import tempfile
+import unittest
+
+
+SCRIPTS = Path(__file__).resolve().parents[1] / 'scripts'
+sys.path.insert(0, str(SCRIPTS))
+SPEC = importlib.util.spec_from_file_location('sf003_preflight',
+                                              SCRIPTS / 'sf003_preflight.py')
+MODULE = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(MODULE)
+
+
+class FormalFaultPreflight(unittest.TestCase):
+    def heartbeat(self):
+        at = datetime.now(timezone.utc).isoformat()
+        amounts = json.loads(MODULE.BUDGET_SOURCE.read_text())['data_reservation_bytes']
+        return {'run_id': 'SF-012-ATTEMPT-04', 'plan_sha256': 'a' * 64,
+                'status': 'DYNAMIC_STORAGE_PASS', 'at_utc': at,
+                'source_sha256': MODULE.sha(SCRIPTS / 'five_host_heartbeat.py'),
+                'storage_gate_sha256': MODULE.sha(MODULE.GATE_SOURCE),
+                'case_budget_sha256': MODULE.sha(MODULE.BUDGET_SOURCE),
+                'archive_target': 'worker1',
+                'decision': {'status': 'DYNAMIC_STORAGE_PASS',
+                             'floor_bytes': 5_000_000_000,
+                             'fault_permission': False,
+                             'pending_forecast_breaches': {}},
+                'snapshot': {host: {disk: 15_000_000_000 for disk in disks}
+                    for host, disks in MODULE.MOUNTS.items()},
+                'forecast': {host: {disk: (64 * 1024**2 if disk == 'root_free_bytes'
+                                          else amounts[host]) for disk in disks}
+                    for host, disks in MODULE.MOUNTS.items()}}
+
+    def test_fresh_all_mounts_pass(self):
+        MODULE.check_five_host_heartbeat(self.heartbeat(), 'a' * 64,
+                                         datetime.now(timezone.utc).timestamp())
+
+    def test_stale_or_low_space_fails_closed(self):
+        value = self.heartbeat()
+        value['at_utc'] = '2020-01-01T00:00:00+00:00'
+        with self.assertRaisesRegex(RuntimeError, 'stale'):
+            MODULE.check_five_host_heartbeat(value, 'a' * 64,
+                                             datetime.now(timezone.utc).timestamp())
+        value = self.heartbeat()
+        value['snapshot']['worker3']['data_free_bytes'] = 4_999_999_999
+        with self.assertRaisesRegex(RuntimeError, 'actual 5 GB floor'):
+            MODULE.check_five_host_heartbeat(value, 'a' * 64,
+                                             datetime.now(timezone.utc).timestamp())
+
+    def test_one_pending_forecast_is_accepted_but_three_are_rejected(self):
+        value = self.heartbeat()
+        value['snapshot']['worker3']['data_free_bytes'] = 8_000_000_000
+        value['forecast']['worker3']['data_free_bytes'] = 4_000_000_000
+        value['decision']['pending_forecast_breaches'] = {'worker3:data_free_bytes': 1}
+        MODULE.check_five_host_heartbeat(value, 'a' * 64,
+                                         datetime.now(timezone.utc).timestamp())
+        value['decision']['pending_forecast_breaches']['worker3:data_free_bytes'] = 3
+        with self.assertRaisesRegex(RuntimeError, 'confirmation invalid'):
+            MODULE.check_five_host_heartbeat(value, 'a' * 64,
+                                             datetime.now(timezone.utc).timestamp())
+
+    def test_underreserved_worker3_or_wrong_archive_target_is_rejected(self):
+        value = self.heartbeat()
+        value['forecast']['worker3']['data_free_bytes'] = 1_999_999_999
+        with self.assertRaisesRegex(RuntimeError, 'case-specific reserve'):
+            MODULE.check_five_host_heartbeat(value, 'a' * 64,
+                                             datetime.now(timezone.utc).timestamp())
+        value = self.heartbeat()
+        value['archive_target'] = 'worker3'
+        with self.assertRaisesRegex(RuntimeError, 'case-specific reserve'):
+            MODULE.check_five_host_heartbeat(value, 'a' * 64,
+                                             datetime.now(timezone.utc).timestamp())
+
+    def test_unregistered_monitor_source_is_rejected(self):
+        value = self.heartbeat()
+        value['source_sha256'] = 'a' * 64
+        with self.assertRaisesRegex(RuntimeError, 'stale or foreign'):
+            MODULE.check_five_host_heartbeat(value, 'a' * 64,
+                datetime.now(timezone.utc).timestamp(), 'b' * 64)
+
+    def test_missing_mature_chunk_fails_before_fault(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with self.assertRaisesRegex(RuntimeError, 'quality missing'):
+                MODULE.wait_for_quality([Path(directory) / 'quality.json'], 0)
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -1,0 +1,65 @@
+schema_version: 1
+ranked_entity_levels: [SERVICE, POD, NODE, NETWORK_PATH]
+primary_metrics:
+  layer_at_1: "top ranked entity layer equals evaluator root layer"
+  entity_at_1: "top ranked canonical entity equals evaluator root entity"
+  entity_at_3: "evaluator root entity appears in first three global candidates"
+  entity_at_1_conditioned_on_correct_layer: "entity_at_1 among cases with layer_at_1 true"
+  end_to_end_exact: "layer_at_1 and entity_at_1"
+hierarchical_report:
+  representation: "three disjoint counts: wrong_layer, correct_layer_wrong_entity, exact_entity"
+  scalar_weighted_sum_as_primary: false
+secondary_metrics:
+  mrr: "reciprocal rank of exact evaluator root entity, zero if ranked universe supports it but it is absent"
+denominators:
+  include_only: [ADMITTED_CASE]
+  exclude: [INVALID_CASE, OUT_OF_CANDIDATE_SPACE, NETWORK_CONTEXT_UNSUPPORTED]
+  separate_inference_failure_from_non_evaluability: true
+  no_prediction_on_admitted_case: "Count as zero for Layer@1, Entity@1, Entity@3 and Exact; report separate no_prediction state."
+  partial_adaptation: "Exclude from fair method accuracy and report coverage separately."
+variant_comparison:
+  network_cases_only: true
+  require_network_input_consumed: true
+  unsupported_status: NETWORK_CONTEXT_UNSUPPORTED
+simple_rca_calibration:
+  minimum_independent_signal_families: 4
+  per_modality_fraction: "(abnormal + 1) / (observable + 2)"
+  modality_combination: "arithmetic mean of non-null modality fractions"
+  entity_type_normalization: "For each layer, take the maximum candidate score in each nonoverlapping clean-before 60-second window. Tail probability = (1 + count(window_max >= observed_score)) / (1 + number_of_window_maxima); final score = -log10(tail probability)."
+  clean_null_window_seconds: 60
+  clean_null_resource_min_samples: 4
+  clean_null_trace_min_spans: 6
+  clean_null_network_packets_min: 20
+  clean_null_policy: "Each 60-second clean slice is compared to the remaining clean-before samples; the lower slice sample and network-packet minima apply only to null calibration, never to the 5-minute during observation."
+  null_windows_minimum: 8
+  insufficient_null_status: INSUFFICIENT_TYPE_CALIBRATION
+  missing_signal_policy: "missing is not normal and does not enter the denominator"
+  tie_break: "more independent observed signal families, then canonical entity ID"
+  no_stage4e_threshold_tuning: true
+micro_rca_adaptation:
+  birch_smoothing_window: 12
+  birch_threshold: 0.045
+  anomalous_edge_alpha: 0.55
+  pagerank_alpha: 0.85
+  minimum_pearson_pairs: 4
+  correlation_floor: 0.01
+  required_original_steps:
+    - BIRCH_invocation_anomaly_detection
+    - attributed_graph
+    - correlation_based_edge_weights
+    - personalized_random_walk
+  missing_step_status: PARTIAL_ADAPTATION
+  entity_type_normalization: "For each layer, compare candidate PageRank mass to the maximum same-layer PageRank mass in each pre-fault clean 60-second null window; use -log10((1 + count(null >= observed)) / (1 + null_windows))."
+  null_windows_minimum: 8
+freeze_policy:
+  contracts_and_code_before_faults: true
+  predictions_before_gt_read: true
+method_eligibility:
+  mandatory_for_executable_readiness:
+    - OpenRCA-XL
+    - CrossLayer-MicroRCA
+    - CrossLayer-SimpleRCA
+  nonmandatory_when_label_free_inference_unavailable:
+    - MicroIRC-original
+    - MicroIRC-XL
+  blocked_method_policy: "Archive a public candidate map and BLOCKED_PREREQUISITE with no ranking; exclude from method accuracy."

@@ -1,0 +1,37 @@
+{
+  "status": "CLEAN_REHEARSAL_CANDIDATE_PINNED",
+  "created_at_utc": "2026-10-10T16:45:02.848833+00:00",
+  "clean_seeds": [
+    851221,
+    851222
+  ],
+  "faults_injected": 0,
+  "formal_cases_created": 0,
+  "stage5_v3_protocol_frozen": false,
+  "sha256": {
+    "/root/stage5-v3-autonomous-preparation/design/load-plan-c3.yaml": "c74fc2dd121e172640c891470370d29a5e2e4e279e819879cb3f38d59069e7a9",
+    "/root/stage5-v3-autonomous-preparation/design/load-profiles-c3.yaml": "e9893989f9012cb00432ec95aed3af9daa218238a90bd5a82a61fba02888a23d",
+    "/root/stage5-v3-autonomous-preparation/design/workload-state-machine-c3.yaml": "e877814f950088c6a692778a23644979e44888f955bcf35496f4ad59c26ad05b",
+    "/root/stage5-v3-autonomous-preparation/scripts/run_clean_c3.py": "c8e7d556838644e94019908c24732e96add7f6c0a517d467381ea1b5f0fa6b72",
+    "/root/stage5-v3-autonomous-preparation/scripts/run_load_pair_c3.py": "793974062569c19de3220f66a8d9b5adc9d3bd5d946c754acd2a805f89c9cb98",
+    "/root/stage5-v3-autonomous-preparation/scripts/fixed_control_load_c3.py": "77a4f1efe10b23f95358b784fcd428d200b922632aeb9e4ef0920b7365dd4b1c",
+    "/root/stage5-v3-autonomous-preparation/scripts/capture_pipeline_c2.py": "3360bc279707e725fa0f3d0f494ac968b06227a5702b7786562135252c45bb90",
+    "/root/stage5-v3-autonomous-preparation/scripts/capture_live_c2.py": "417baa3e086e67b1301ff5a2ea496d57dbd097cd405e01059e8371cb84d68d86",
+    "/root/stage5-v3-autonomous-preparation/scripts/trace_storage_reader.py": "686dc664812d7ad6594ecd4240a907cb990e3ac852af6b4b4747235a6e43e7b4",
+    "/root/stage5-v3-autonomous-preparation/scripts/schedule_trace_completion.py": "5c8d212d34bc2c1cf358627213de2c47d03739b980bf15828d3a548cd2293851",
+    "/root/stage5-v3-autonomous-preparation/scripts/check_ingest_lag.py": "b6917dda0ff67b6179c5fbcb844a8199f228071c9283f5fa18c169e60c803100",
+    "/root/stage5-v3-autonomous-preparation/scripts/probe_network.py": "a232fa437d26b4432212337ed7a27b42933e305a6d225ace0b99803be156a2c2",
+    "/root/stage5-v3-autonomous-preparation/scripts/verify_business_routes.py": "0fab81485e25e3e087cdf887532135c71ced2380ddd38e0f72b000f658ea52c4",
+    "/root/stage5-v3-autonomous-preparation/scripts/analyze_clean_c3.py": "5a2e83225751b64289d263a2c6d45f8a8af18ae0aa33332f64f2521c8ce3df47",
+    "/root/stage5-v3-autonomous-preparation/scripts/assess_clean.py": "90f56166c8ef81bf55ae3c91c527c175f5cd0258c1241f98d58dd6ced146fc85",
+    "/root/stage5-v3-autonomous-preparation/scripts/assess_resource_pressure.py": "86ca2d30f0043b8c527d63595fbb49ff453f3d9d481a252c0dff5169adf533af",
+    "/root/stage5-v3-autonomous-preparation/scripts/audit_hosts.py": "35eecd2e8ae8fbad3763c96e0b0418e5502222e12d15ee085bafb53b681f327b",
+    "/root/stage5-v3-autonomous-preparation/scripts/freeze_clean_candidate.py": "0239c7f12b886af413c3d5b6ef89cb6868e05f6abb1d5277f9a25afd02d560e9",
+    "/root/stage5-v3-autonomous-preparation/scripts/host_io.py": "ed708ffa81cc4a1c18bf3ff0680fbdb5f87639b7888186ba45abfba35569e3a1",
+    "/root/stage5-v3-autonomous-preparation/scripts/stop_attempt_processes.py": "8e40dc1faf7d9abd47cc671316ed1440f5006f556c5802925d17f85c4b2eda12",
+    "/root/stage5-v3-autonomous-preparation/snapshots/proxy-upstream-repair-c2b-preparation/frontend-proxy-envoy-c2.tmpl.yaml": "04e1ada41b29264ad2941844594ca86e1cab2594e447255f41b7a3622eefcf78",
+    "/root/stage5-v3-autonomous-preparation/runtime/proxy-c2b-worker2-pin/deployment-after-pin.json": "4914a827a201299d22e9260b9aa485dc89da8b715cebc29bf7fa58d9b9ade99c",
+    "/root/cross-layer-observability-control-rehearsal/scripts/workload_generator_rehearsal.py": "5f7291c9b7698af50b66357fe2fcd38ef9eb491a6330db207d578d38f6fe5464",
+    "/root/cross-layer-workload-generation/design/people.json": "2e780c99cd1950213c798ba086c184b6ae89a98af8a6df4bb190b2e19bcf77ab"
+  }
+}

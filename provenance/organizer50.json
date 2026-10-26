@@ -1,0 +1,653 @@
+{
+  "host": "organizer50",
+  "snapshot_utc": "2026-10-26T07:23:48.250466+00:00",
+  "files": [
+    {
+      "path": "participant/demo/AGENT_VISUALIZATION_WEB_REPORT.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/AGENT_VISUALIZATION_WEB_REPORT.md",
+      "source_sha256": "4d0463ed299fc09060130f81191bd0eafd9ab56bbbbf4fe80bcd54b0508e371a",
+      "sha256": "4d0463ed299fc09060130f81191bd0eafd9ab56bbbbf4fe80bcd54b0508e371a",
+      "bytes": 10293,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/COMPETITION_CLIENT_UPGRADE_REPORT.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/COMPETITION_CLIENT_UPGRADE_REPORT.md",
+      "source_sha256": "f3e67e4c8794dce0af2d6a42c7ae95b361fadca6696cee8be7553e76036fa933",
+      "sha256": "f3e67e4c8794dce0af2d6a42c7ae95b361fadca6696cee8be7553e76036fa933",
+      "bytes": 4483,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/FINAL_SCORE_DISPLAY_100.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/FINAL_SCORE_DISPLAY_100.md",
+      "source_sha256": "387f5baee6f3a4bbac55d9b8c1a6d4c36be9d64ad1fc144512a6678c1e0b4cc0",
+      "sha256": "387f5baee6f3a4bbac55d9b8c1a6d4c36be9d64ad1fc144512a6678c1e0b4cc0",
+      "bytes": 1476,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/FINAL_STAGE1_AGENT_WEB_E2E_REPORT.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/FINAL_STAGE1_AGENT_WEB_E2E_REPORT.md",
+      "source_sha256": "ac171109cd767cffed9e059e66c6c25d9c057394dc7dd8bea08efcaadb682963",
+      "sha256": "ac171109cd767cffed9e059e66c6c25d9c057394dc7dd8bea08efcaadb682963",
+      "bytes": 10107,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/FINAL_WEB_OPERATOR_GUIDE.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/FINAL_WEB_OPERATOR_GUIDE.md",
+      "source_sha256": "c66b8ae2ec046b3b4341c25be3325c71b3f5b7f2b93a94087a1bbbe4eb6b1fd8",
+      "sha256": "c66b8ae2ec046b3b4341c25be3325c71b3f5b7f2b93a94087a1bbbe4eb6b1fd8",
+      "bytes": 5067,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/LLM_AGENT_REPORT.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/LLM_AGENT_REPORT.md",
+      "source_sha256": "4ba63b8e537c677058e774a012296a43cd37cd983cc2a59b9079ce8b83531625",
+      "sha256": "4ba63b8e537c677058e774a012296a43cd37cd983cc2a59b9079ce8b83531625",
+      "bytes": 9333,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/NEW_COMPETITION_AGENT_REPORT.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/NEW_COMPETITION_AGENT_REPORT.md",
+      "source_sha256": "8f9b3020d0fd08d4c0d07f57c2aea5470ccc58bf0377f833e5b45fa09caed653",
+      "sha256": "8f9b3020d0fd08d4c0d07f57c2aea5470ccc58bf0377f833e5b45fa09caed653",
+      "bytes": 9103,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/PARTICIPANT_HANDBOOK.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/PARTICIPANT_HANDBOOK.md",
+      "source_sha256": "695a9c8631dce307daf2247f0481dcd7cc8cacdcebfeeb72ca8e8dfbcb204221",
+      "sha256": "695a9c8631dce307daf2247f0481dcd7cc8cacdcebfeeb72ca8e8dfbcb204221",
+      "bytes": 39714,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/README.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/README.md",
+      "source_sha256": "f9e943f92dea8e69d2f6a844fc9a6d859f1c4c72cf1d3e6571fc67ab88c67e32",
+      "sha256": "f9e943f92dea8e69d2f6a844fc9a6d859f1c4c72cf1d3e6571fc67ab88c67e32",
+      "bytes": 9237,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/REPORT.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/REPORT.md",
+      "source_sha256": "08891f7d4bba6177efb670f279203a329318ca40a754d3613f348791374a2e7d",
+      "sha256": "08891f7d4bba6177efb670f279203a329318ca40a754d3613f348791374a2e7d",
+      "bytes": 6958,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/SEMIFINAL_AGENT_E2E_REPORT.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/SEMIFINAL_AGENT_E2E_REPORT.md",
+      "source_sha256": "7a3681dea98c5fe8ffd14a44b74c3684cb813811978d954b420b4fce0ed12319",
+      "sha256": "7a3681dea98c5fe8ffd14a44b74c3684cb813811978d954b420b4fce0ed12319",
+      "bytes": 7762,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/config.yaml",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/config.yaml",
+      "source_sha256": "15758a1841277771c15748708472005898c4a5c14b32c41b50eaab0e15a28e02",
+      "sha256": "15758a1841277771c15748708472005898c4a5c14b32c41b50eaab0e15a28e02",
+      "bytes": 443,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/final_answer.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/final_answer.py",
+      "source_sha256": "5a4221d5fb73c0b1f7540c31ec387bc932a661e2558372da1ff76b041f249256",
+      "sha256": "5a4221d5fb73c0b1f7540c31ec387bc932a661e2558372da1ff76b041f249256",
+      "bytes": 9240,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/main.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/main.py",
+      "source_sha256": "fb7e08a9353d229f217e3dc4a3bcca4bed77cf13e7b88b114c763fa144503f14",
+      "sha256": "fb7e08a9353d229f217e3dc4a3bcca4bed77cf13e7b88b114c763fa144503f14",
+      "bytes": 17411,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/qa_solver.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/qa_solver.py",
+      "source_sha256": "4276ebff8c572957d57213d2bf49d6e8167a0da5b11c1094f037c098d4381e48",
+      "sha256": "4276ebff8c572957d57213d2bf49d6e8167a0da5b11c1094f037c098d4381e48",
+      "bytes": 36866,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/requirements.txt",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/requirements.txt",
+      "source_sha256": "78168a145fd45197f03e57b3c7891daee42df490fcde784993a640d89a1fb776",
+      "sha256": "78168a145fd45197f03e57b3c7891daee42df490fcde784993a640d89a1fb776",
+      "bytes": 77,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/starter_todos.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/starter_todos.py",
+      "source_sha256": "1c647ec4353a1bfd86b796172fd59f15eb4b68453d96faf5fc2ebe4c1b1d41fa",
+      "sha256": "1c647ec4353a1bfd86b796172fd59f15eb4b68453d96faf5fc2ebe4c1b1d41fa",
+      "bytes": 2741,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/submit.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/submit.py",
+      "source_sha256": "742a0c308c8b496ceaab1fc24d47d36da2ed64f80e053a923c8ec873e2208bfd",
+      "sha256": "742a0c308c8b496ceaab1fc24d47d36da2ed64f80e053a923c8ec873e2208bfd",
+      "bytes": 15129,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/agent/__init__.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/agent/__init__.py",
+      "source_sha256": "1e38493db2b7886079d270978fa44c243c03c09ccca72a3f5e72ca6feda36718",
+      "sha256": "1e38493db2b7886079d270978fa44c243c03c09ccca72a3f5e72ca6feda36718",
+      "bytes": 45,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/agent/core.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/agent/core.py",
+      "source_sha256": "5b629f5a195dcc21a77c605f96f30b586ff8c8e8d313e31f78f911a8b0860e5b",
+      "sha256": "5b629f5a195dcc21a77c605f96f30b586ff8c8e8d313e31f78f911a8b0860e5b",
+      "bytes": 18962,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/agent/evidence.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/agent/evidence.py",
+      "source_sha256": "63a726c42d69ac24f4de8199b853d79c9da98cb7388308f4c8c91c641cea586d",
+      "sha256": "63a726c42d69ac24f4de8199b853d79c9da98cb7388308f4c8c91c641cea586d",
+      "bytes": 2644,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/agent/final_scout.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/agent/final_scout.py",
+      "source_sha256": "6897c761231edeffe159456227ec62502c8261436e09ceff1ee75ee2d2b0e206",
+      "sha256": "6897c761231edeffe159456227ec62502c8261436e09ceff1ee75ee2d2b0e206",
+      "bytes": 13994,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/agent/llm_client.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/agent/llm_client.py",
+      "source_sha256": "f3c6209532fff7abde5d1de0e02a6d17e86ea92509ab532835f85cc55026d382",
+      "sha256": "f3c6209532fff7abde5d1de0e02a6d17e86ea92509ab532835f85cc55026d382",
+      "bytes": 8978,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/agent/llm_core.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/agent/llm_core.py",
+      "source_sha256": "f5016d909d1238867994bf351382941f1319bea95e77677a20d8e217c89e56ea",
+      "sha256": "f5016d909d1238867994bf351382941f1319bea95e77677a20d8e217c89e56ea",
+      "bytes": 60316,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/agent/mcp_client.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/agent/mcp_client.py",
+      "source_sha256": "e52eb3e498777c01f05ab2a2b2c134d11c7b3e23b189d9e763b9e4e0ede49235",
+      "sha256": "e52eb3e498777c01f05ab2a2b2c134d11c7b3e23b189d9e763b9e4e0ede49235",
+      "bytes": 5992,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/agent/skill_loader.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/agent/skill_loader.py",
+      "source_sha256": "42ff1a821c6d41b323d053c5f4282822d311d1d5b72d091fc6331de928677499",
+      "sha256": "42ff1a821c6d41b323d053c5f4282822d311d1d5b72d091fc6331de928677499",
+      "bytes": 1653,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/agent/tool_registry.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/agent/tool_registry.py",
+      "source_sha256": "215069d4577a4c589801356cf1e8f52a03508eaec66006153134b263272950c1",
+      "sha256": "215069d4577a4c589801356cf1e8f52a03508eaec66006153134b263272950c1",
+      "bytes": 2605,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/client/__init__.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/client/__init__.py",
+      "source_sha256": "955063b8390c800c2fe6ab8444e1a3819faaffea10b22b944d9e511a3fbc6bc9",
+      "sha256": "955063b8390c800c2fe6ab8444e1a3819faaffea10b22b944d9e511a3fbc6bc9",
+      "bytes": 56,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/client/public_api.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/client/public_api.py",
+      "source_sha256": "3d36e302c45aa8fe61be2141b9f31de1d38270e84fdd6179cc6ebe5a64e7dded",
+      "sha256": "3d36e302c45aa8fe61be2141b9f31de1d38270e84fdd6179cc6ebe5a64e7dded",
+      "bytes": 7598,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/configs/agent-llm.env.example",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/configs/agent-llm.env.example",
+      "source_sha256": "552dfd44927c4c6ac44525fe26a829a5b0cd68effdfb8b3d1e1d417cad4138b6",
+      "sha256": "552dfd44927c4c6ac44525fe26a829a5b0cd68effdfb8b3d1e1d417cad4138b6",
+      "bytes": 300,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/configs/mcp_servers.json",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/configs/mcp_servers.json",
+      "source_sha256": "bb5ae3d677500c1007585a191e593d6415677c3dfe738905ea2b83d81a46133a",
+      "sha256": "bb5ae3d677500c1007585a191e593d6415677c3dfe738905ea2b83d81a46133a",
+      "bytes": 296,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/detectors/__init__.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/detectors/__init__.py",
+      "source_sha256": "3e4d8d265ac76675ccffa7cf89917bca12b289ca174fe9b968149c28fb5a5e5c",
+      "sha256": "3e4d8d265ac76675ccffa7cf89917bca12b289ca174fe9b968149c28fb5a5e5c",
+      "bytes": 41,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/detectors/common.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/detectors/common.py",
+      "source_sha256": "baa24a46fd2d80dcc1ca78d32cc0096d497247680a8665c397e04c71d9d26df4",
+      "sha256": "baa24a46fd2d80dcc1ca78d32cc0096d497247680a8665c397e04c71d9d26df4",
+      "bytes": 1265,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/detectors/logs.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/detectors/logs.py",
+      "source_sha256": "2d6c76b4efc765e0452ededa37fa975f3c58085bfd085899cfa25d84a3c244ac",
+      "sha256": "2d6c76b4efc765e0452ededa37fa975f3c58085bfd085899cfa25d84a3c244ac",
+      "bytes": 2803,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/detectors/metrics.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/detectors/metrics.py",
+      "source_sha256": "0964f879a6fbfe5703c96b10473611cc4fadf51b525abe017bd09d3a3c9b8eec",
+      "sha256": "0964f879a6fbfe5703c96b10473611cc4fadf51b525abe017bd09d3a3c9b8eec",
+      "bytes": 6958,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/detectors/traces.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/detectors/traces.py",
+      "source_sha256": "cf03509f1c4480d00adb1c8ddd0d1b6f8217f27d2f1dfadb4174ce052399c63e",
+      "sha256": "cf03509f1c4480d00adb1c8ddd0d1b6f8217f27d2f1dfadb4174ce052399c63e",
+      "bytes": 5150,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/examples/basic.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/examples/basic.py",
+      "source_sha256": "2e6fd7ce3a1272af62220f15f84179da7cda862d2111b4e7b2e64d2ffbb27253",
+      "sha256": "2e6fd7ce3a1272af62220f15f84179da7cda862d2111b4e7b2e64d2ffbb27253",
+      "bytes": 341,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/examples/demo-answer.json",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/examples/demo-answer.json",
+      "source_sha256": "5eaf62274d9feef517880a8e7e2f5f4f8d6b2137ee7ce5ccc407d07e60229aff",
+      "sha256": "5eaf62274d9feef517880a8e7e2f5f4f8d6b2137ee7ce5ccc407d07e60229aff",
+      "bytes": 2371,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/examples/question.txt",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/examples/question.txt",
+      "source_sha256": "44fac8c7d46f2412ac6ead31334d4f2fb3f79ab89fbba9df3d20093d2c5f842f",
+      "sha256": "44fac8c7d46f2412ac6ead31334d4f2fb3f79ab89fbba9df3d20093d2c5f842f",
+      "bytes": 225,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/examples/submit_answer.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/examples/submit_answer.md",
+      "source_sha256": "5d5e1b151f93bca6010ed76acd34e4dc207ff0d868d872278abb1faee2709056",
+      "sha256": "5d5e1b151f93bca6010ed76acd34e4dc207ff0d868d872278abb1faee2709056",
+      "bytes": 5127,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/examples/with_skill.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/examples/with_skill.py",
+      "source_sha256": "0dc98227bd3d2ec2d4fab8edf9c25039698b5f2604967b86ddddb8287dd411cc",
+      "sha256": "0dc98227bd3d2ec2d4fab8edf9c25039698b5f2604967b86ddddb8287dd411cc",
+      "bytes": 388,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/examples/with_skill_and_mcp.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/examples/with_skill_and_mcp.py",
+      "source_sha256": "d9e5842736018fdbc488da6945eb3c4ccb4c210212d945e4790f375fde313159",
+      "sha256": "d9e5842736018fdbc488da6945eb3c4ccb4c210212d945e4790f375fde313159",
+      "bytes": 450,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/mcp_servers/trace_diagnostics.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/mcp_servers/trace_diagnostics.py",
+      "source_sha256": "562ab6bdd5b08dd1eaf13a06ffbe1c3281a319c12f8b98e48a5110e7e20782b3",
+      "sha256": "562ab6bdd5b08dd1eaf13a06ffbe1c3281a319c12f8b98e48a5110e7e20782b3",
+      "bytes": 8013,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/schemas/answer-v2.schema.json",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/schemas/answer-v2.schema.json",
+      "source_sha256": "e500b9aee405efbfb366a7ab03aeb84224b94ea8cf0ac5c06a48ad9460b85e89",
+      "sha256": "e500b9aee405efbfb366a7ab03aeb84224b94ea8cf0ac5c06a48ad9460b85e89",
+      "bytes": 1850,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/schemas/answer.schema.json",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/schemas/answer.schema.json",
+      "source_sha256": "6991e4947f584119db5c80e30985c9fc62bde4a108668e4f124b4c80de0d4809",
+      "sha256": "6991e4947f584119db5c80e30985c9fc62bde4a108668e4f124b4c80de0d4809",
+      "bytes": 2046,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/schemas/final-answer-v1.schema.json",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/schemas/final-answer-v1.schema.json",
+      "source_sha256": "23fd9ba7339e35f422540ae7acd2817543f00298e00df5076861e564b9a0ca5a",
+      "sha256": "23fd9ba7339e35f422540ae7acd2817543f00298e00df5076861e564b9a0ca5a",
+      "bytes": 4932,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/schemas/qa-answer-v1.schema.json",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/schemas/qa-answer-v1.schema.json",
+      "source_sha256": "5c34b488b036ba62b6e3646da5e4e298e1a7c62c842a3910444b8aeda4328e5e",
+      "sha256": "5c34b488b036ba62b6e3646da5e4e298e1a7c62c842a3910444b8aeda4328e5e",
+      "bytes": 3894,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/scripts/qa_negative_fixtures.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/scripts/qa_negative_fixtures.py",
+      "source_sha256": "e62a785d46a7653c8f424aac2b398d5bf31ab38f75e68d7b556d76f1438b22e5",
+      "sha256": "e62a785d46a7653c8f424aac2b398d5bf31ab38f75e68d7b556d76f1438b22e5",
+      "bytes": 1741,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/skills/counter-rate-analysis/SKILL.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/skills/counter-rate-analysis/SKILL.md",
+      "source_sha256": "2c75e9db071dd2fd0949b16388d06391f9dc28934b1be692082b89a492bd8267",
+      "sha256": "2c75e9db071dd2fd0949b16388d06391f9dc28934b1be692082b89a492bd8267",
+      "bytes": 1864,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/tests/test_agent.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/tests/test_agent.py",
+      "source_sha256": "c856939d567b2bf351bdaa0872ce2c7771dfa7e33122807268090aedbfe12f5d",
+      "sha256": "c856939d567b2bf351bdaa0872ce2c7771dfa7e33122807268090aedbfe12f5d",
+      "bytes": 1243,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/tests/test_api_retry.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/tests/test_api_retry.py",
+      "source_sha256": "0b1889b813faeb4f5fbe2496ea3babe4d98450f8811ce86d4eb72b40b379a788",
+      "sha256": "0b1889b813faeb4f5fbe2496ea3babe4d98450f8811ce86d4eb72b40b379a788",
+      "bytes": 1022,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/tests/test_detectors.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/tests/test_detectors.py",
+      "source_sha256": "fed6b02586930b12a0f0e1d5f96ad1d21a526464660397617aa0018c54fea416",
+      "sha256": "fed6b02586930b12a0f0e1d5f96ad1d21a526464660397617aa0018c54fea416",
+      "bytes": 2137,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/tests/test_evidence.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/tests/test_evidence.py",
+      "source_sha256": "6061904a9c18ab2231be28159c56ffdc068f1f3859676941752a172c3a1b2352",
+      "sha256": "6061904a9c18ab2231be28159c56ffdc068f1f3859676941752a172c3a1b2352",
+      "bytes": 878,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/tests/test_final_mode.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/tests/test_final_mode.py",
+      "source_sha256": "d380cd766bf33b751eb0769f448ca107de04054943357c737c9045cf6dbf9065",
+      "sha256": "d380cd766bf33b751eb0769f448ca107de04054943357c737c9045cf6dbf9065",
+      "bytes": 3167,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/tests/test_llm_agent.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/tests/test_llm_agent.py",
+      "source_sha256": "9484386e20ebbde93ccaf8ea0c13dd55c53cd4769d07b5d16d6af4a66896d415",
+      "sha256": "9633031f050c84aa6d13f334a6eec65a5832a16da473ac1d5f76b71d7fdf3c0e",
+      "bytes": 2873,
+      "sanitization": [
+        {
+          "kind": "credential_assignment",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "participant/demo/tests/test_mcp.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/tests/test_mcp.py",
+      "source_sha256": "f9c514d2462d316a3d149bc77e83876df2be5bb223c018c352d5a1a6f0775fdf",
+      "sha256": "f9c514d2462d316a3d149bc77e83876df2be5bb223c018c352d5a1a6f0775fdf",
+      "bytes": 1302,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/tests/test_public_recovery.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/tests/test_public_recovery.py",
+      "source_sha256": "ebe26110df34bd0a2f2b07e63f9293e5e453a8e775c29e286240174a6f1b64d0",
+      "sha256": "ebe26110df34bd0a2f2b07e63f9293e5e453a8e775c29e286240174a6f1b64d0",
+      "bytes": 7152,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/tests/test_qa_solver.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/tests/test_qa_solver.py",
+      "source_sha256": "c972148d52573905c5a9fd734cb67d26c638e0a22d8d13b1dfccbbf29650cfa3",
+      "sha256": "c972148d52573905c5a9fd734cb67d26c638e0a22d8d13b1dfccbbf29650cfa3",
+      "bytes": 3701,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/tests/test_skill.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/tests/test_skill.py",
+      "source_sha256": "371ef9a9fe5cab5db5c54b848224e03c9255f3f5f9f5bd008d8bf867dab32eff",
+      "sha256": "371ef9a9fe5cab5db5c54b848224e03c9255f3f5f9f5bd008d8bf867dab32eff",
+      "bytes": 2727,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/webapp/README.md",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/webapp/README.md",
+      "source_sha256": "38180d252a895624ffa4691af2161a02e199027e99c26aab845fb4691065c4a2",
+      "sha256": "38180d252a895624ffa4691af2161a02e199027e99c26aab845fb4691065c4a2",
+      "bytes": 3473,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/webapp/__init__.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/webapp/__init__.py",
+      "source_sha256": "5f706645ab890294aa4aa708a1ed36cd860ec45f8f719f5b9ba6f1823cb47d83",
+      "sha256": "5f706645ab890294aa4aa708a1ed36cd860ec45f8f719f5b9ba6f1823cb47d83",
+      "bytes": 80,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/webapp/backend.py",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/webapp/backend.py",
+      "source_sha256": "174891d50e3a7d6380ca91869930c5924d1d0973dde337819d0f5b0c12e8ae23",
+      "sha256": "174891d50e3a7d6380ca91869930c5924d1d0973dde337819d0f5b0c12e8ae23",
+      "bytes": 64115,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/webapp/deploy/aiops-agent-web.service",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/webapp/deploy/aiops-agent-web.service",
+      "source_sha256": "a772ae0ea1341afd905ec35f5859ebeb87d7120d4360cbbe817efcfbb7536f77",
+      "sha256": "a772ae0ea1341afd905ec35f5859ebeb87d7120d4360cbbe817efcfbb7536f77",
+      "bytes": 1096,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/webapp/static/app.js",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/webapp/static/app.js",
+      "source_sha256": "2ef8855cb1f976c730093402ee006264c65e8b84919a581696feeb7169893922",
+      "sha256": "2ef8855cb1f976c730093402ee006264c65e8b84919a581696feeb7169893922",
+      "bytes": 59570,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/webapp/static/evidence-model.js",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/webapp/static/evidence-model.js",
+      "source_sha256": "a9d0be2969846f487774120f86eff0c38446a7c523998ee9bb50b6312006eb26",
+      "sha256": "a9d0be2969846f487774120f86eff0c38446a7c523998ee9bb50b6312006eb26",
+      "bytes": 3393,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/webapp/static/index.html",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/webapp/static/index.html",
+      "source_sha256": "3ed54ddb0c2024e1e11473b6c46e2227b1e99c42cb9342311e64dadb66802448",
+      "sha256": "3ed54ddb0c2024e1e11473b6c46e2227b1e99c42cb9342311e64dadb66802448",
+      "bytes": 739,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/webapp/static/styles.css",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/webapp/static/styles.css",
+      "source_sha256": "22e34368276e32039ca8ca9d6b67fe088399ebae94f1bb6b4ea122fd16029709",
+      "sha256": "22e34368276e32039ca8ca9d6b67fe088399ebae94f1bb6b4ea122fd16029709",
+      "bytes": 19510,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/webapp/static/vendor/echarts.min.js",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/webapp/static/vendor/echarts.min.js",
+      "source_sha256": "bf4a223524e40b77c304bec67e1222cf551f14880cf42c69dc046558e11c07b1",
+      "sha256": "bf4a223524e40b77c304bec67e1222cf551f14880cf42c69dc046558e11c07b1",
+      "bytes": 1034102,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/webapp/static/vendor/react-dom.production.min.js",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/webapp/static/vendor/react-dom.production.min.js",
+      "source_sha256": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d",
+      "sha256": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d",
+      "bytes": 131835,
+      "sanitization": []
+    },
+    {
+      "path": "participant/demo/webapp/static/vendor/react.production.min.js",
+      "source_host": "organizer50",
+      "source_path": "/opt/aiops-competition/participant-starter/webapp/static/vendor/react.production.min.js",
+      "source_sha256": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd",
+      "sha256": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd",
+      "bytes": 10751,
+      "sanitization": []
+    },
+    {
+      "path": "deploy/systemd/aiops-agent-web.service",
+      "source_host": "organizer50",
+      "source_path": "/etc/systemd/system/aiops-agent-web.service",
+      "source_sha256": "a772ae0ea1341afd905ec35f5859ebeb87d7120d4360cbbe817efcfbb7536f77",
+      "sha256": "a772ae0ea1341afd905ec35f5859ebeb87d7120d4360cbbe817efcfbb7536f77",
+      "bytes": 1096,
+      "sanitization": []
+    }
+  ],
+  "missing_sources": [],
+  "excluded_large_files": [],
+  "scope": "code, question definitions, private grading assets and small manifests; no credentials or raw telemetry"
+}

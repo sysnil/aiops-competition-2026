@@ -1,0 +1,8 @@
+{
+  "case_id": "SF-011",
+  "run_id": "SF-011-ATTEMPT-05",
+  "formal_case": true,
+  "start_utc": "2026-10-18T13:10:57.472933+00:00",
+  "end_utc": "2026-10-18T13:40:57.472933+00:00",
+  "schedule_sha256": "cc0286762149447396efe37e192b76886466935512ffe005ede479246fdf69a4"
+}

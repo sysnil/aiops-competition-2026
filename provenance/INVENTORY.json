@@ -1,0 +1,116 @@
+{
+  "archive_date": "2026-10-26",
+  "repository_visibility_required": "PRIVATE",
+  "source_file_count": 5249,
+  "source_bytes": 32643392,
+  "questions_registered": [
+    {
+      "question_id": "P-Q01",
+      "case_id": "SF-001",
+      "mode": "practice",
+      "title": "Checkout Pod 内存：峰值与窗口对比"
+    },
+    {
+      "question_id": "EX-P01",
+      "case_id": "SF-001",
+      "mode": "practice",
+      "title": "Frontend Pod 内存：峰值与平均值"
+    },
+    {
+      "question_id": "EX-P02",
+      "case_id": "SF-002",
+      "mode": "practice",
+      "title": "Recommendation ERROR 日志：总量与峰值"
+    },
+    {
+      "question_id": "Q01",
+      "case_id": "SF-003",
+      "mode": "semifinal",
+      "title": "Frontend Pod 内存：峰值与平均值"
+    },
+    {
+      "question_id": "Q02",
+      "case_id": "SF-003",
+      "mode": "semifinal",
+      "title": "Frontend Pod CPU：峰值与平均使用量"
+    },
+    {
+      "question_id": "Q03",
+      "case_id": "SF-003",
+      "mode": "semifinal",
+      "title": "两个 Frontend Pod：内存曲线对比"
+    },
+    {
+      "question_id": "Q04",
+      "case_id": "SF-005",
+      "mode": "semifinal",
+      "title": "Recommendation：服务端 Span 分钟统计"
+    },
+    {
+      "question_id": "Q05",
+      "case_id": "SF-005",
+      "mode": "semifinal",
+      "title": "Recommendation：ERROR 日志分钟统计"
+    },
+    {
+      "question_id": "Q06",
+      "case_id": "SF-005",
+      "mode": "semifinal",
+      "title": "Frontend → Product Catalog：错误调用统计"
+    },
+    {
+      "question_id": "Q07",
+      "case_id": "SF-010",
+      "mode": "semifinal",
+      "title": "Frontend Proxy 入口：p95 时延变化"
+    },
+    {
+      "question_id": "Q08",
+      "case_id": "SF-010",
+      "mode": "semifinal",
+      "title": "Frontend：服务端 Span 分钟统计"
+    },
+    {
+      "question_id": "Q09",
+      "case_id": "SF-010",
+      "mode": "semifinal",
+      "title": "Frontend → Product Catalog：p95 时延"
+    },
+    {
+      "question_id": "Q10",
+      "case_id": "SF-010",
+      "mode": "semifinal",
+      "title": "Frontend 与 Cart：服务端 p95 对比"
+    }
+  ],
+  "semifinal_formal_gt_count": 10,
+  "final_formal_gt_count": 12,
+  "public_case_manifests": [
+    "SF-001",
+    "SF-002",
+    "SF-003",
+    "SF-004",
+    "SF-005",
+    "SF-006",
+    "SF-007",
+    "SF-008",
+    "SF-009",
+    "SF-010",
+    "SF-011",
+    "SF-012",
+    "SF-013",
+    "SF-014",
+    "SF-015",
+    "SF-016",
+    "SF-017"
+  ],
+  "raw_telemetry_included": false,
+  "credentials_included": false,
+  "contestant_custom_algorithms_included": false,
+  "source_packages": {
+    "server51-current.tgz": "7d6ae063f3aa9e2b4fceab0ea980d0a601fca48da69c92a9b0f4687ad1029b8b",
+    "master-current.tgz": "fb378597b5f61e3a3989615bd1bb0c4e1b544ee64b22202ceb286590de770e46",
+    "organizer50.tgz": "efc9573b6093a3ad0c8501965853375777411e7fd37549b2d564a9f42c060e53"
+  },
+  "historical_run_tokens_redacted": 63
+}

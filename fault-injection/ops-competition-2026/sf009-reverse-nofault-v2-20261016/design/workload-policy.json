@@ -1,0 +1,16 @@
+{
+  "schema": "SF009_REVERSE_NOFAULT_WORKLOAD_V2",
+  "duration_seconds": 1800,
+  "faults_allowed": false,
+  "workload": {
+    "duration_seconds": 1800,
+    "profile": "MEDIUM",
+    "rate_sessions_per_second": 1.4,
+    "control_streams": [
+      {"name": "image_asset", "rate_per_second": 1.0, "seed_offset": 101},
+      {"name": "cart_view", "rate_per_second": 2.0, "seed_offset": 103}
+    ],
+    "control_timeout_seconds": 8,
+    "control_concurrency_per_stream": {"image_asset": 3, "cart_view": 6}
+  }
+}

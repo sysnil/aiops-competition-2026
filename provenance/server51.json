@@ -1,0 +1,2376 @@
+{
+  "host": "server51",
+  "snapshot_utc": "2026-10-26T07:27:06.724861+00:00",
+  "files": [
+    {
+      "path": "server/COMPETITION_ACCESS_CONTROL_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/COMPETITION_ACCESS_CONTROL_REPORT.md",
+      "source_sha256": "eaceaf495281063225678b2637f97bb8d31ef2a2caeb70e03b2ff89a7b2bb996",
+      "sha256": "eaceaf495281063225678b2637f97bb8d31ef2a2caeb70e03b2ff89a7b2bb996",
+      "bytes": 7001,
+      "sanitization": []
+    },
+    {
+      "path": "server/COMPETITION_CASE_IMPORT_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/COMPETITION_CASE_IMPORT_REPORT.md",
+      "source_sha256": "9a98e7818b31137ec503b44e3692a68dd1043b17642373d441ac399cf46179e9",
+      "sha256": "9a98e7818b31137ec503b44e3692a68dd1043b17642373d441ac399cf46179e9",
+      "bytes": 8807,
+      "sanitization": []
+    },
+    {
+      "path": "server/FINAL_API_CONTRACT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/FINAL_API_CONTRACT.md",
+      "source_sha256": "f4ef1c46e743d6069cf06ec4cf528006c831ef8cd3dd39d0f360734ab6638c1e",
+      "sha256": "f4ef1c46e743d6069cf06ec4cf528006c831ef8cd3dd39d0f360734ab6638c1e",
+      "bytes": 3734,
+      "sanitization": []
+    },
+    {
+      "path": "server/FINAL_POOL_PLAYER_HANDOFF_REPORT_20261021.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/FINAL_POOL_PLAYER_HANDOFF_REPORT_20261021.md",
+      "source_sha256": "a37e161938b6b1b828a2e4f1634f03f37443869ea4a3349e6daf0b8fcb590f09",
+      "sha256": "a37e161938b6b1b828a2e4f1634f03f37443869ea4a3349e6daf0b8fcb590f09",
+      "bytes": 4834,
+      "sanitization": []
+    },
+    {
+      "path": "server/FINAL_ROUND_CONTROLLER_TEST_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/FINAL_ROUND_CONTROLLER_TEST_REPORT.md",
+      "source_sha256": "8b75187b9981202f3f705ed610e6ed8cd965fea6e3644cbdc9026d8edb973c12",
+      "sha256": "8b75187b9981202f3f705ed610e6ed8cd965fea6e3644cbdc9026d8edb973c12",
+      "bytes": 2584,
+      "sanitization": []
+    },
+    {
+      "path": "server/FINAL_SCORING_DESIGN.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/FINAL_SCORING_DESIGN.md",
+      "source_sha256": "d214998caa6c2b6c1845ef15bddf950e8e100698b6e36100dbf9b4629d056ffb",
+      "sha256": "d214998caa6c2b6c1845ef15bddf950e8e100698b6e36100dbf9b4629d056ffb",
+      "bytes": 3716,
+      "sanitization": []
+    },
+    {
+      "path": "server/FINAL_SCORING_RULE_V2.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/FINAL_SCORING_RULE_V2.md",
+      "source_sha256": "678d1ee0895db62807748e3069654208e6aa5401645b0abef61b6cf491bc79db",
+      "sha256": "678d1ee0895db62807748e3069654208e6aa5401645b0abef61b6cf491bc79db",
+      "bytes": 1320,
+      "sanitization": []
+    },
+    {
+      "path": "server/FINAL_STAGE1_SERVER_E2E_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/FINAL_STAGE1_SERVER_E2E_REPORT.md",
+      "source_sha256": "de5d1252a02f6146db29e8e26e942f45b979f44e8b349333f460d6aabb12a3b9",
+      "sha256": "de5d1252a02f6146db29e8e26e942f45b979f44e8b349333f460d6aabb12a3b9",
+      "bytes": 8593,
+      "sanitization": []
+    },
+    {
+      "path": "server/FINAL_STAGE2_AUTO_GT_E2E_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/FINAL_STAGE2_AUTO_GT_E2E_REPORT.md",
+      "source_sha256": "3ce041a21888e339c34a8b39d4ab104781ec770d38492b363d8f1e7ea6747313",
+      "sha256": "3ce041a21888e339c34a8b39d4ab104781ec770d38492b363d8f1e7ea6747313",
+      "bytes": 9978,
+      "sanitization": []
+    },
+    {
+      "path": "server/FINAL_STAGE3_HYBRID_GT_SCORING_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/FINAL_STAGE3_HYBRID_GT_SCORING_REPORT.md",
+      "source_sha256": "c25f76a2ff1d6cd07cc018ba80fc998eb7f52c1ca611708f7f50e1db6b900277",
+      "sha256": "c25f76a2ff1d6cd07cc018ba80fc998eb7f52c1ca611708f7f50e1db6b900277",
+      "bytes": 9762,
+      "sanitization": []
+    },
+    {
+      "path": "server/FORMAL_RUBRIC_V2_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/FORMAL_RUBRIC_V2_REPORT.md",
+      "source_sha256": "bb035f2d1e117afae63890e610b2316a946a43bd658245686d26d52b3a3a1410",
+      "sha256": "bb035f2d1e117afae63890e610b2316a946a43bd658245686d26d52b3a3a1410",
+      "bytes": 2249,
+      "sanitization": []
+    },
+    {
+      "path": "server/NEW_COMPETITION_SCORING_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/NEW_COMPETITION_SCORING_REPORT.md",
+      "source_sha256": "65d7d7ebf4c90840eb406dc953263736c3dfcda815ed7f014f77edd88438ad23",
+      "sha256": "65d7d7ebf4c90840eb406dc953263736c3dfcda815ed7f014f77edd88438ad23",
+      "bytes": 9626,
+      "sanitization": []
+    },
+    {
+      "path": "server/PUBLIC_TASK_COPY_UPDATE_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/PUBLIC_TASK_COPY_UPDATE_REPORT.md",
+      "source_sha256": "73ac49c4e1593b50b4ff2b27e62de95ec428059f06600cec269dd7569b9e6743",
+      "sha256": "73ac49c4e1593b50b4ff2b27e62de95ec428059f06600cec269dd7569b9e6743",
+      "bytes": 3574,
+      "sanitization": []
+    },
+    {
+      "path": "server/README.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/README.md",
+      "source_sha256": "a0687c6bc04d3d0322788685cb3543c9d4c5e9680e47aeecc6c005b707e54c34",
+      "sha256": "a0687c6bc04d3d0322788685cb3543c9d4c5e9680e47aeecc6c005b707e54c34",
+      "bytes": 3563,
+      "sanitization": []
+    },
+    {
+      "path": "server/SEMIFINAL_ANOMALY_SCORING_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/SEMIFINAL_ANOMALY_SCORING_REPORT.md",
+      "source_sha256": "341a8f5037dba50ad2cb7a4fd28b3068b3803b5c33f01ed09d71a57f8457fbf3",
+      "sha256": "341a8f5037dba50ad2cb7a4fd28b3068b3803b5c33f01ed09d71a57f8457fbf3",
+      "bytes": 17147,
+      "sanitization": []
+    },
+    {
+      "path": "server/SEMIFINAL_BEST_SCORE_RANKING_GUIDE.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/SEMIFINAL_BEST_SCORE_RANKING_GUIDE.md",
+      "source_sha256": "80f9c6ef5ee7d8cbeaa1f4ed9f7f6c795ec414d33fb5bd89e448aaa2b25f9492",
+      "sha256": "80f9c6ef5ee7d8cbeaa1f4ed9f7f6c795ec414d33fb5bd89e448aaa2b25f9492",
+      "bytes": 5403,
+      "sanitization": []
+    },
+    {
+      "path": "server/SEMIFINAL_FORMAL_20261022_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/SEMIFINAL_FORMAL_20261022_REPORT.md",
+      "source_sha256": "a9259d0eb99415494a4dea3206e68fdf7d1943db928b235dcb3a62ec3c8f0f63",
+      "sha256": "a9259d0eb99415494a4dea3206e68fdf7d1943db928b235dcb3a62ec3c8f0f63",
+      "bytes": 6361,
+      "sanitization": []
+    },
+    {
+      "path": "server/SEMIFINAL_GT_AND_GRADING_FINALIZATION.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/SEMIFINAL_GT_AND_GRADING_FINALIZATION.md",
+      "source_sha256": "f521539534437f3e7002b6234ff916c395fe978813549dd2e1f3e0975782e525",
+      "sha256": "f521539534437f3e7002b6234ff916c395fe978813549dd2e1f3e0975782e525",
+      "bytes": 13859,
+      "sanitization": []
+    },
+    {
+      "path": "server/SEMIFINAL_QA_SERVER_E2E_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/SEMIFINAL_QA_SERVER_E2E_REPORT.md",
+      "source_sha256": "97bc80b3a6766f6843c0ffde27f002f65b44906efad644dcec3439bbe99e33d2",
+      "sha256": "97bc80b3a6766f6843c0ffde27f002f65b44906efad644dcec3439bbe99e33d2",
+      "bytes": 7544,
+      "sanitization": []
+    },
+    {
+      "path": "server/SEMIFINAL_READY_CASE_IMPORT_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/SEMIFINAL_READY_CASE_IMPORT_REPORT.md",
+      "source_sha256": "f50b101ab7570adf84c79b41d2066bd19645dd01d0a81418fb76fe11784617c6",
+      "sha256": "f50b101ab7570adf84c79b41d2066bd19645dd01d0a81418fb76fe11784617c6",
+      "bytes": 1277,
+      "sanitization": []
+    },
+    {
+      "path": "server/SF-001-api-e2e-results.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/SF-001-api-e2e-results.json",
+      "source_sha256": "16af5c706004d01bc6ff65d65d340ffe3c98f89bbf20491e034c2b0a989dba41",
+      "sha256": "16af5c706004d01bc6ff65d65d340ffe3c98f89bbf20491e034c2b0a989dba41",
+      "bytes": 3776,
+      "sanitization": []
+    },
+    {
+      "path": "server/SF-001-benchmark-resources.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/SF-001-benchmark-resources.json",
+      "source_sha256": "9e3dbd88d65f945f2c1ff02babbafd33f82dcfbd453a0d41983d5de046e0c478",
+      "sha256": "9e3dbd88d65f945f2c1ff02babbafd33f82dcfbd453a0d41983d5de046e0c478",
+      "bytes": 734,
+      "sanitization": []
+    },
+    {
+      "path": "server/SF-001-final-published-validation.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/SF-001-final-published-validation.json",
+      "source_sha256": "4175424f3225a51ffaa525f12a1d0dcbec54d779bf6a1ba826d23a891087e122",
+      "sha256": "4175424f3225a51ffaa525f12a1d0dcbec54d779bf6a1ba826d23a891087e122",
+      "bytes": 672,
+      "sanitization": []
+    },
+    {
+      "path": "server/SF007_SF009_SHORTLIST_PROPOSAL.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/SF007_SF009_SHORTLIST_PROPOSAL.md",
+      "source_sha256": "a3fe9f12fb9293dd1664325970cf79e57a69cce5c74af53e7be2a3c71c520b98",
+      "sha256": "a3fe9f12fb9293dd1664325970cf79e57a69cce5c74af53e7be2a3c71c520b98",
+      "bytes": 4886,
+      "sanitization": []
+    },
+    {
+      "path": "server/import-pipeline-test-results.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/import-pipeline-test-results.json",
+      "source_sha256": "221f0ef99a6a66a8b9e436c83d5f4bfb0844c92b8fc60c751e04b640e1cf3260",
+      "sha256": "221f0ef99a6a66a8b9e436c83d5f4bfb0844c92b8fc60c751e04b640e1cf3260",
+      "bytes": 700,
+      "sanitization": []
+    },
+    {
+      "path": "server/installation-report.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/installation-report.md",
+      "source_sha256": "5c673cdff29ddce4e4737cf939c0a39dbae1349bca67c39e9cb57f4ade5eea1f",
+      "sha256": "5c673cdff29ddce4e4737cf939c0a39dbae1349bca67c39e9cb57f4ade5eea1f",
+      "bytes": 11175,
+      "sanitization": []
+    },
+    {
+      "path": "server/mock-benchmark-results.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/mock-benchmark-results.json",
+      "source_sha256": "ccbff4441729bd36a6469b09bf841be7878deb53d97fa4bcf58cc07f67b461cf",
+      "sha256": "ccbff4441729bd36a6469b09bf841be7878deb53d97fa4bcf58cc07f67b461cf",
+      "bytes": 1714,
+      "sanitization": []
+    },
+    {
+      "path": "server/pyproject.toml",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/pyproject.toml",
+      "source_sha256": "b8d2cd466c70d638b219a9a4e061b2e98ff2c7b0c2614192ebb6488bbd1bdfa2",
+      "sha256": "b8d2cd466c70d638b219a9a4e061b2e98ff2c7b0c2614192ebb6488bbd1bdfa2",
+      "bytes": 494,
+      "sanitization": []
+    },
+    {
+      "path": "server/system-inventory.txt",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/system-inventory.txt",
+      "source_sha256": "ed9e7942edd0f2ed465425ebb19cd38baedd521a2a64f7479e9d0c37df936f18",
+      "sha256": "ed9e7942edd0f2ed465425ebb19cd38baedd521a2a64f7479e9d0c37df936f18",
+      "bytes": 4811,
+      "sanitization": []
+    },
+    {
+      "path": "server/uv.lock",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/uv.lock",
+      "source_sha256": "85668e0fcd59abfd9191a1374c5fac1d1e0f6cc1239cf9b6b780d5b0f231d74d",
+      "sha256": "85668e0fcd59abfd9191a1374c5fac1d1e0f6cc1239cf9b6b780d5b0f231d74d",
+      "bytes": 58071,
+      "sanitization": []
+    },
+    {
+      "path": "server/validation-results.txt",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/validation-results.txt",
+      "source_sha256": "7f6002ff53a2c872952bf12d40c74a09063c1b1eb291bf8b3db8790962467e86",
+      "sha256": "7f6002ff53a2c872952bf12d40c74a09063c1b1eb291bf8b3db8790962467e86",
+      "bytes": 1676,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/__init__.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/__init__.py",
+      "source_sha256": "1e0f8f4ea2d04381e525abe6bdee7555dca05df9ac9e0adcd25df7a4fbdc89e3",
+      "sha256": "1e0f8f4ea2d04381e525abe6bdee7555dca05df9ac9e0adcd25df7a4fbdc89e3",
+      "bytes": 38,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/access_control.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/access_control.py",
+      "source_sha256": "04f20b10a5baec298072ecaba7b982936fb95b942427a355774207cbdaf99bc4",
+      "sha256": "04f20b10a5baec298072ecaba7b982936fb95b942427a355774207cbdaf99bc4",
+      "bytes": 10053,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/accuracy_speed.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/accuracy_speed.py",
+      "source_sha256": "9aa1ca4c454dd2999de3c83fa057b6e3193661bf921a4d5276db79fe5f15875f",
+      "sha256": "9aa1ca4c454dd2999de3c83fa057b6e3193661bf921a4d5276db79fe5f15875f",
+      "bytes": 3565,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/final_api.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/final_api.py",
+      "source_sha256": "0a6a87ea2756baf0e087a71a32ee29248928f9cc491e9651957bc647afa5ac33",
+      "sha256": "0a6a87ea2756baf0e087a71a32ee29248928f9cc491e9651957bc647afa5ac33",
+      "bytes": 22038,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/final_rounds.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/final_rounds.py",
+      "source_sha256": "6db31669c59180d804ef8e28620d6fd051d4ace4e2ecae2614b239057f088534",
+      "sha256": "6db31669c59180d804ef8e28620d6fd051d4ace4e2ecae2614b239057f088534",
+      "bytes": 3841,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/final_store.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/final_store.py",
+      "source_sha256": "066ab2607f9fc77907402aad586b97f5d988fa7a825ba4fa4cc5a4eaf8abaea6",
+      "sha256": "066ab2607f9fc77907402aad586b97f5d988fa7a825ba4fa4cc5a4eaf8abaea6",
+      "bytes": 32364,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/main.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/main.py",
+      "source_sha256": "8f4fc62beb24d26609f02d4b22fb371c4d2ab0f5243ac350c362ddd97bb92cb4",
+      "sha256": "8f4fc62beb24d26609f02d4b22fb371c4d2ab0f5243ac350c362ddd97bb92cb4",
+      "bytes": 18906,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/questions.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/questions.py",
+      "source_sha256": "9963537e461893bf07439d2f1b9d8649249039e17d11f84d451c927d1aba27bf",
+      "sha256": "9963537e461893bf07439d2f1b9d8649249039e17d11f84d451c927d1aba27bf",
+      "bytes": 5004,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/security.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/security.py",
+      "source_sha256": "db0c9eebc9f6b66753cbc93f24d5feeba567a8d54a423b05e93ff7c3f5e09f73",
+      "sha256": "db0c9eebc9f6b66753cbc93f24d5feeba567a8d54a423b05e93ff7c3f5e09f73",
+      "bytes": 3323,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/semifinal_ranking.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/semifinal_ranking.py",
+      "source_sha256": "9a08fa904f465bd8120e68c0ee6342d0e4d4e4dfe0e800ab80f5337ace6c7ba4",
+      "sha256": "9a08fa904f465bd8120e68c0ee6342d0e4d4e4dfe0e800ab80f5337ace6c7ba4",
+      "bytes": 14103,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/settings.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/settings.py",
+      "source_sha256": "197734e37f278ba01c04b18fd73da9ea3369c9a7c884bd91f0a12fa65e846153",
+      "sha256": "197734e37f278ba01c04b18fd73da9ea3369c9a7c884bd91f0a12fa65e846153",
+      "bytes": 2728,
+      "sanitization": []
+    },
+    {
+      "path": "server/app/storage.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/app/storage.py",
+      "source_sha256": "ed64654e45917152abda9b6d358cf3668c32312f9184f449c66617951bd2fdbe",
+      "sha256": "ed64654e45917152abda9b6d358cf3668c32312f9184f449c66617951bd2fdbe",
+      "bytes": 13781,
+      "sanitization": []
+    },
+    {
+      "path": "server/client/__init__.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/client/__init__.py",
+      "source_sha256": "5acb109e41a2888adb60ba7bbc1aab0a6a39995641e37f808d300836cd797e7a",
+      "sha256": "5acb109e41a2888adb60ba7bbc1aab0a6a39995641e37f808d300836cd797e7a",
+      "bytes": 128,
+      "sanitization": []
+    },
+    {
+      "path": "server/client/competition_client.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/client/competition_client.py",
+      "source_sha256": "13f3319b413ff88d71189080b64cef83b6164e572071e54d7ef6a5d392ee8edf",
+      "sha256": "13f3319b413ff88d71189080b64cef83b6164e572071e54d7ef6a5d392ee8edf",
+      "bytes": 3421,
+      "sanitization": []
+    },
+    {
+      "path": "server/config/aiops-contest-api.service",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/config/aiops-contest-api.service",
+      "source_sha256": "f0632cc260ec862964508ca42e6364255dba659fc0257e733adfb5fc6733b711",
+      "sha256": "f0632cc260ec862964508ca42e6364255dba659fc0257e733adfb5fc6733b711",
+      "bytes": 1134,
+      "sanitization": []
+    },
+    {
+      "path": "server/config/aiops-final-stage2.service",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/config/aiops-final-stage2.service",
+      "source_sha256": "d8a84140b34deb065f9ec33d74503d57696e918306e8ba372e2852addf2030e0",
+      "sha256": "d8a84140b34deb065f9ec33d74503d57696e918306e8ba372e2852addf2030e0",
+      "bytes": 1557,
+      "sanitization": []
+    },
+    {
+      "path": "server/config/aiops-final-stage3.service",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/config/aiops-final-stage3.service",
+      "source_sha256": "c8ae472191245abc9598af7b17ec0f1b8d13177142794eb5165970c329631c24",
+      "sha256": "c8ae472191245abc9598af7b17ec0f1b8d13177142794eb5165970c329631c24",
+      "bytes": 1549,
+      "sanitization": []
+    },
+    {
+      "path": "server/config/competition_state.example.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/config/competition_state.example.json",
+      "source_sha256": "baabc51e00fb4cf6631d89c6c455ba85ba397db566aaab43d16dbc83717cce0c",
+      "sha256": "baabc51e00fb4cf6631d89c6c455ba85ba397db566aaab43d16dbc83717cce0c",
+      "bytes": 369,
+      "sanitization": []
+    },
+    {
+      "path": "server/config/config.yaml",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/config/config.yaml",
+      "source_sha256": "e362375b7db79db8bd2c3286e0f75f0a312d4054bf02d877a4bf4724f1be2995",
+      "sha256": "e362375b7db79db8bd2c3286e0f75f0a312d4054bf02d877a4bf4724f1be2995",
+      "bytes": 687,
+      "sanitization": []
+    },
+    {
+      "path": "server/config/final-case-allocation-20261020.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/config/final-case-allocation-20261020.json",
+      "source_sha256": "4720fd60f4f95cf6ceaebd30ca5464ca8f5e1ab30cd005211fca00fbb22d7188",
+      "sha256": "4720fd60f4f95cf6ceaebd30ca5464ca8f5e1ab30cd005211fca00fbb22d7188",
+      "bytes": 672,
+      "sanitization": []
+    },
+    {
+      "path": "server/config/final-stage1-catalog.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/config/final-stage1-catalog.json",
+      "source_sha256": "5bab8414b8ac67179464c2e9dbb66fa88f2d173ca0d389f7d119b48df2081edc",
+      "sha256": "5bab8414b8ac67179464c2e9dbb66fa88f2d173ca0d389f7d119b48df2081edc",
+      "bytes": 4540,
+      "sanitization": []
+    },
+    {
+      "path": "server/config/nginx-aiops-contest.conf",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/config/nginx-aiops-contest.conf",
+      "source_sha256": "f1368969520bbcee447bc1ad42294ccce078c16049d49a2cbc23165d1971716e",
+      "sha256": "f1368969520bbcee447bc1ad42294ccce078c16049d49a2cbc23165d1971716e",
+      "bytes": 3414,
+      "sanitization": []
+    },
+    {
+      "path": "server/config/questions.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/config/questions.json",
+      "source_sha256": "d1d333a689928356750ee9965b21746c1772cc1420ebabbd5a671e9a1eafa6e3",
+      "sha256": "d1d333a689928356750ee9965b21746c1772cc1420ebabbd5a671e9a1eafa6e3",
+      "bytes": 35979,
+      "sanitization": []
+    },
+    {
+      "path": "server/examples/error_handling.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/examples/error_handling.py",
+      "source_sha256": "72a9fc46fbb5c6fde5734a6fedd09ee53491d15f81e950cb980eac5e6f82b7c4",
+      "sha256": "72a9fc46fbb5c6fde5734a6fedd09ee53491d15f81e950cb980eac5e6f82b7c4",
+      "bytes": 397,
+      "sanitization": []
+    },
+    {
+      "path": "server/examples/mock_agent.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/examples/mock_agent.py",
+      "source_sha256": "9a91d0739377629ccb872c1da3b0c375cb588aa1062f02d05f5b99cd4fcb73a6",
+      "sha256": "9a91d0739377629ccb872c1da3b0c375cb588aa1062f02d05f5b99cd4fcb73a6",
+      "bytes": 907,
+      "sanitization": []
+    },
+    {
+      "path": "server/examples/query_logs.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/examples/query_logs.py",
+      "source_sha256": "9e1516336d89093ea876f02e18587ebe2cc285203490701e8301f6699703dd36",
+      "sha256": "9e1516336d89093ea876f02e18587ebe2cc285203490701e8301f6699703dd36",
+      "bytes": 282,
+      "sanitization": []
+    },
+    {
+      "path": "server/examples/query_metrics.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/examples/query_metrics.py",
+      "source_sha256": "602728f119ee3248a3629b5ea428ac41abd994cf0f80d77b7563d3f0ad77af9e",
+      "sha256": "602728f119ee3248a3629b5ea428ac41abd994cf0f80d77b7563d3f0ad77af9e",
+      "bytes": 285,
+      "sanitization": []
+    },
+    {
+      "path": "server/examples/query_traces.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/examples/query_traces.py",
+      "source_sha256": "9f194ab51c184277df3ce87ee7e6e4238267f909668533ec7fb36ba4ad1379e9",
+      "sha256": "9f194ab51c184277df3ce87ee7e6e4238267f909668533ec7fb36ba4ad1379e9",
+      "bytes": 384,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/README.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/README.md",
+      "source_sha256": "400cf50a25532a01b58f10a25c12567f1c7c18d668b46c9b21ff13a521ba825a",
+      "sha256": "400cf50a25532a01b58f10a25c12567f1c7c18d668b46c9b21ff13a521ba825a",
+      "bytes": 7476,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/__init__.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/__init__.py",
+      "source_sha256": "51754fb5821f590a76b060fd283bbd1b1a03d3df73ba3513c3f55d0615922ca4",
+      "sha256": "51754fb5821f590a76b060fd283bbd1b1a03d3df73ba3513c3f55d0615922ca4",
+      "bytes": 41,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/demo/demo-answer-v3.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/demo/demo-answer-v3.json",
+      "source_sha256": "c2b4cb0356aae506468baa64869eef8464f9f3b0bcf4a77998a559ac2b74c87a",
+      "sha256": "c2b4cb0356aae506468baa64869eef8464f9f3b0bcf4a77998a559ac2b74c87a",
+      "bytes": 2406,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/demo/demo-answer.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/demo/demo-answer.json",
+      "source_sha256": "5eaf62274d9feef517880a8e7e2f5f4f8d6b2137ee7ce5ccc407d07e60229aff",
+      "sha256": "5eaf62274d9feef517880a8e7e2f5f4f8d6b2137ee7ce5ccc407d07e60229aff",
+      "bytes": 2371,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/demo/evidence.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/demo/evidence.json",
+      "source_sha256": "15291cd198a50eac92f45950cef3c132f70b708f72b6a8bfa477880192328012",
+      "sha256": "15291cd198a50eac92f45950cef3c132f70b708f72b6a8bfa477880192328012",
+      "bytes": 1624,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/demo/gt-v3.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/demo/gt-v3.json",
+      "source_sha256": "a0357762b0023bbd4096e8f37bce3b8f12e687988c58919bc75ce7e2271cca04",
+      "sha256": "a0357762b0023bbd4096e8f37bce3b8f12e687988c58919bc75ce7e2271cca04",
+      "bytes": 1274,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/demo/gt.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/demo/gt.json",
+      "source_sha256": "6a3183c2284e613aaa8c5b0e6defa2b36c0dae1be64a81b4bf1fb04ce672a292",
+      "sha256": "6a3183c2284e613aaa8c5b0e6defa2b36c0dae1be64a81b4bf1fb04ce672a292",
+      "bytes": 900,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/private_grader/README.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/private_grader/README.md",
+      "source_sha256": "2f9a7029af99fe0c503e830a7aa66e29c2d60c3c83322582dfad03abee9c208f",
+      "sha256": "2f9a7029af99fe0c503e830a7aa66e29c2d60c3c83322582dfad03abee9c208f",
+      "bytes": 2377,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/private_grader/__init__.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/private_grader/__init__.py",
+      "source_sha256": "5470b33d2651cf566db7e32fe59ad48891362b8a3105d0eba853c9d5d2d9128b",
+      "sha256": "5470b33d2651cf566db7e32fe59ad48891362b8a3105d0eba853c9d5d2d9128b",
+      "bytes": 60,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/private_grader/aiops-private-grader-demo.service",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/private_grader/aiops-private-grader-demo.service",
+      "source_sha256": "474fe19c9a922354117ef86c510a757be1638a5edd539c59ec0fd9d6580b276a",
+      "sha256": "474fe19c9a922354117ef86c510a757be1638a5edd539c59ec0fd9d6580b276a",
+      "bytes": 1001,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/private_grader/final_scoring.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/private_grader/final_scoring.py",
+      "source_sha256": "2615dd5a6ff1a8106ad1c4032afa1a54ed650f70862854e1f786aac1091caf86",
+      "sha256": "2615dd5a6ff1a8106ad1c4032afa1a54ed650f70862854e1f786aac1091caf86",
+      "bytes": 9727,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/private_grader/judge_store.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/private_grader/judge_store.py",
+      "source_sha256": "87efae464211889a53d3be235b683010d7c4e5eb874e4107a3ff9f8387b42b3e",
+      "sha256": "87efae464211889a53d3be235b683010d7c4e5eb874e4107a3ff9f8387b42b3e",
+      "bytes": 4189,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/private_grader/llm_judge.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/private_grader/llm_judge.py",
+      "source_sha256": "9cbca92ce75acf447177bc349c1b1a8ddce53eb9cfa410a6d47391263f6eb70b",
+      "sha256": "9cbca92ce75acf447177bc349c1b1a8ddce53eb9cfa410a6d47391263f6eb70b",
+      "bytes": 6898,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/private_grader/matching.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/private_grader/matching.py",
+      "source_sha256": "6de1479cb947e0f406585d1ca3da21027e5adf19c07f8bcef38727a1d9361dd0",
+      "sha256": "6de1479cb947e0f406585d1ca3da21027e5adf19c07f8bcef38727a1d9361dd0",
+      "bytes": 5769,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/private_grader/qa_scoring.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/private_grader/qa_scoring.py",
+      "source_sha256": "95e05093512d2f1d7fb9512bdc62bcd251c4eee8883ebb5ae11590799d54b48e",
+      "sha256": "95e05093512d2f1d7fb9512bdc62bcd251c4eee8883ebb5ae11590799d54b48e",
+      "bytes": 5023,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/private_grader/scoring.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/private_grader/scoring.py",
+      "source_sha256": "57f9175567041b3a598dd26af1488176721a0b858078a33f375d69c5bf43b2ff",
+      "sha256": "57f9175567041b3a598dd26af1488176721a0b858078a33f375d69c5bf43b2ff",
+      "bytes": 8331,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/private_grader/service.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/private_grader/service.py",
+      "source_sha256": "11bb5a4367eb1cff5f1a2eb2b045132223799421a8ea8309819789e3f18526ff",
+      "sha256": "11bb5a4367eb1cff5f1a2eb2b045132223799421a8ea8309819789e3f18526ff",
+      "bytes": 14306,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/schemas/anomaly-gt-v1.schema.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/schemas/anomaly-gt-v1.schema.json",
+      "source_sha256": "a2026c2ea0f2d042fcb1d19c9e87f3d0fa26e8267ce550063d8be821d964889d",
+      "sha256": "a2026c2ea0f2d042fcb1d19c9e87f3d0fa26e8267ce550063d8be821d964889d",
+      "bytes": 2323,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/schemas/anomaly-taxonomy-v1.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/schemas/anomaly-taxonomy-v1.json",
+      "source_sha256": "e972da4a2f82407fb30f985463e61d6943ce3fda043ef76846b03be71ca7282a",
+      "sha256": "e972da4a2f82407fb30f985463e61d6943ce3fda043ef76846b03be71ca7282a",
+      "bytes": 4448,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/schemas/answer-v2.schema.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/schemas/answer-v2.schema.json",
+      "source_sha256": "88410f173774db59f65adb866d04a502eec9419f0146d067211c2b69dbefcfa9",
+      "sha256": "88410f173774db59f65adb866d04a502eec9419f0146d067211c2b69dbefcfa9",
+      "bytes": 2415,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/schemas/answer-v3.schema.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/schemas/answer-v3.schema.json",
+      "source_sha256": "ff882397e90e924ccb32eaf3a61b199a63bf507f07a448d6c8ef915b31de7c94",
+      "sha256": "ff882397e90e924ccb32eaf3a61b199a63bf507f07a448d6c8ef915b31de7c94",
+      "bytes": 2231,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/schemas/fault-taxonomy-v1.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/schemas/fault-taxonomy-v1.json",
+      "source_sha256": "003d648109876a2c220d6084fea8c07b093703210bf3c8a7d867020d0bc81c02",
+      "sha256": "003d648109876a2c220d6084fea8c07b093703210bf3c8a7d867020d0bc81c02",
+      "bytes": 381,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/schemas/final-submission-v1.schema.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/schemas/final-submission-v1.schema.json",
+      "source_sha256": "a90c88a0531758df583a7651b1dcba9e9c5bc642a35a2233de9766e1311f42d5",
+      "sha256": "a90c88a0531758df583a7651b1dcba9e9c5bc642a35a2233de9766e1311f42d5",
+      "bytes": 10028,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/schemas/formal-final-gt.schema.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/schemas/formal-final-gt.schema.json",
+      "source_sha256": "1490f0e6ae20557c73d2b0e1b9a9ef3dbaf94dd0495992d891f57e331ea1a60b",
+      "sha256": "1490f0e6ae20557c73d2b0e1b9a9ef3dbaf94dd0495992d891f57e331ea1a60b",
+      "bytes": 2462,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/schemas/qa-answer-v1.schema.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/schemas/qa-answer-v1.schema.json",
+      "source_sha256": "683c6f1ac340288fa4934ea3172a706a827b09b35eb95241ee709d377db630aa",
+      "sha256": "683c6f1ac340288fa4934ea3172a706a827b09b35eb95241ee709d377db630aa",
+      "bytes": 4071,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/scripts/build_qa_preview_gt.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/scripts/build_qa_preview_gt.py",
+      "source_sha256": "3fdfaebe89fb45cf366fe986b2aa63f4a358123d14badade3347a7d7b9045d52",
+      "sha256": "3fdfaebe89fb45cf366fe986b2aa63f4a358123d14badade3347a7d7b9045d52",
+      "bytes": 5621,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/scripts/build_sf001_preview_gt.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/scripts/build_sf001_preview_gt.py",
+      "source_sha256": "5b8eb238b0504968042200bb49ec522a78b43f2a6995359b3eb3bba12bf78a54",
+      "sha256": "5b8eb238b0504968042200bb49ec522a78b43f2a6995359b3eb3bba12bf78a54",
+      "bytes": 3551,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/scripts/configure_runtime.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/scripts/configure_runtime.py",
+      "source_sha256": "3765adad4216cdc2dd5def04d49c6464b62d516f697c3cb4cf12178f8ec5a500",
+      "sha256": "3765adad4216cdc2dd5def04d49c6464b62d516f697c3cb4cf12178f8ec5a500",
+      "bytes": 2498,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/scripts/create_demo_answer.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/scripts/create_demo_answer.py",
+      "source_sha256": "9d8606ce70bdf5e8d2bc80fc35810aed6f9785dcbc6b3e4517fe14bd24406c4b",
+      "sha256": "9d8606ce70bdf5e8d2bc80fc35810aed6f9785dcbc6b3e4517fe14bd24406c4b",
+      "bytes": 1411,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/scripts/create_demo_credentials.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/scripts/create_demo_credentials.py",
+      "source_sha256": "ce55c9e397c36bd3cc02f6292135fd9128b0c73250e262b8ba8c5f60d39b5311",
+      "sha256": "ce55c9e397c36bd3cc02f6292135fd9128b0c73250e262b8ba8c5f60d39b5311",
+      "bytes": 1192,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/scripts/evaluate_draft_gt.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/scripts/evaluate_draft_gt.py",
+      "source_sha256": "d820709847ca07f0a944ac7adcdd8eeaa360c423918f2b7a595f71421f3f9155",
+      "sha256": "d820709847ca07f0a944ac7adcdd8eeaa360c423918f2b7a595f71421f3f9155",
+      "bytes": 8740,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/submission_api/__init__.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/submission_api/__init__.py",
+      "source_sha256": "c0d757271e641144d5e90aa6de5bdfd4d06ce5e4f07be43c365cd5dbd8260789",
+      "sha256": "c0d757271e641144d5e90aa6de5bdfd4d06ce5e4f07be43c365cd5dbd8260789",
+      "bytes": 41,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/submission_api/auth.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/submission_api/auth.py",
+      "source_sha256": "a2add1f1b877cc0982cb9240dcf95eb3df088e17bc1f682d751ae67a8aaed63b",
+      "sha256": "a2add1f1b877cc0982cb9240dcf95eb3df088e17bc1f682d751ae67a8aaed63b",
+      "bytes": 1146,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/submission_api/evidence_verifier.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/submission_api/evidence_verifier.py",
+      "source_sha256": "54179117251dc1a6b619e7c2506024659efbf4c14af4e9f91abff6f1edbc7fe9",
+      "sha256": "54179117251dc1a6b619e7c2506024659efbf4c14af4e9f91abff6f1edbc7fe9",
+      "bytes": 9810,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/submission_api/final_models.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/submission_api/final_models.py",
+      "source_sha256": "4d117a7d67795da394c0cf4968a3502c52c7531d2635595fad3375ff1b1d5afc",
+      "sha256": "4d117a7d67795da394c0cf4968a3502c52c7531d2635595fad3375ff1b1d5afc",
+      "bytes": 2019,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/submission_api/grader_client.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/submission_api/grader_client.py",
+      "source_sha256": "a66a22f65a030f8cb5854e6a55315fa3d95f0c370f4d13e92df7885b15a355fd",
+      "sha256": "a66a22f65a030f8cb5854e6a55315fa3d95f0c370f4d13e92df7885b15a355fd",
+      "bytes": 1770,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/submission_api/models.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/submission_api/models.py",
+      "source_sha256": "ebe672c23889041384a6166a048b5b621010b4fa19cbbc17a5fd1ddd94e8aaee",
+      "sha256": "ebe672c23889041384a6166a048b5b621010b4fa19cbbc17a5fd1ddd94e8aaee",
+      "bytes": 9879,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/submission_api/router.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/submission_api/router.py",
+      "source_sha256": "caf3eab2a7ba28660e9749f4a6f32a210375127aec1046f52f99c1e692f3f26d",
+      "sha256": "caf3eab2a7ba28660e9749f4a6f32a210375127aec1046f52f99c1e692f3f26d",
+      "bytes": 12490,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/submission_api/settings.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/submission_api/settings.py",
+      "source_sha256": "56daa1374e2f45ab06eee24531e9f9c24ae36e0aba902954e920fe827a194e1a",
+      "sha256": "56daa1374e2f45ab06eee24531e9f9c24ae36e0aba902954e920fe827a194e1a",
+      "bytes": 1796,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/submission_api/store.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/submission_api/store.py",
+      "source_sha256": "b4443ee131dc77575702eb7315b21333098d212d83b13e56d6c44f831324719f",
+      "sha256": "b4443ee131dc77575702eb7315b21333098d212d83b13e56d6c44f831324719f",
+      "bytes": 12384,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/submission_api/worker.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/submission_api/worker.py",
+      "source_sha256": "e537524222455ce389b3b12524e1a6f2ea28a5725034a1feadff223265dbb8d1",
+      "sha256": "e537524222455ce389b3b12524e1a6f2ea28a5725034a1feadff223265dbb8d1",
+      "bytes": 8004,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/tests/test_access_control.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/tests/test_access_control.py",
+      "source_sha256": "973f25a61d1d40b8f7374746f372e0dd820e0798a217e60a2c979e0b2884b041",
+      "sha256": "973f25a61d1d40b8f7374746f372e0dd820e0798a217e60a2c979e0b2884b041",
+      "bytes": 5416,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/tests/test_llm_guard.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/tests/test_llm_guard.py",
+      "source_sha256": "de49d0b577b6a562da59220294376cd033826b90b9eef19948cee515d92707c9",
+      "sha256": "de49d0b577b6a562da59220294376cd033826b90b9eef19948cee515d92707c9",
+      "bytes": 7440,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/tests/test_matching_scoring.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/tests/test_matching_scoring.py",
+      "source_sha256": "06ca51a23fefe0557c09f736483f7b77753e6201873b2f6185b135f46fa69153",
+      "sha256": "06ca51a23fefe0557c09f736483f7b77753e6201873b2f6185b135f46fa69153",
+      "bytes": 10783,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/tests/test_qa_scoring.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/tests/test_qa_scoring.py",
+      "source_sha256": "c3308846c8fca38fb5701dbb4380a431f043d0303376876df65959f78113685e",
+      "sha256": "c3308846c8fca38fb5701dbb4380a431f043d0303376876df65959f78113685e",
+      "bytes": 3023,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/tests/test_schema_evidence.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/tests/test_schema_evidence.py",
+      "source_sha256": "cf559374ed70f65ba87dff35ae960cebc93088ba75a6102c4de526387e80f163",
+      "sha256": "cf559374ed70f65ba87dff35ae960cebc93088ba75a6102c4de526387e80f163",
+      "bytes": 3947,
+      "sanitization": []
+    },
+    {
+      "path": "server/grading/tests/test_store_and_limits.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/grading/tests/test_store_and_limits.py",
+      "source_sha256": "6ff523e3ebdd31baa32ad5fabf932ce465492a0fa8c7e470bf15d31aacf9e7bd",
+      "sha256": "6ff523e3ebdd31baa32ad5fabf932ce465492a0fa8c7e470bf15d31aacf9e7bd",
+      "bytes": 5078,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/backfill_final_answers.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/backfill_final_answers.py",
+      "source_sha256": "06d8d821a22d0561a39d2edfd588196bb273be7ecaf3a2ea2cfc81e0dc6e358a",
+      "sha256": "06d8d821a22d0561a39d2edfd588196bb273be7ecaf3a2ea2cfc81e0dc6e358a",
+      "bytes": 2030,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/benchmark_api.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/benchmark_api.py",
+      "source_sha256": "5dfe2f907db96c70589e967cf78496596e16da694581a45996a5697d729e3db2",
+      "sha256": "5dfe2f907db96c70589e967cf78496596e16da694581a45996a5697d729e3db2",
+      "bytes": 8318,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/build_formal_gt_v2.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/build_formal_gt_v2.py",
+      "source_sha256": "4d1c6ebf489f58cdef57526ef10348c7d0f14204afa72f12daadea832e19a846",
+      "sha256": "4d1c6ebf489f58cdef57526ef10348c7d0f14204afa72f12daadea832e19a846",
+      "bytes": 12360,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/case_utils.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/case_utils.py",
+      "source_sha256": "622a4af6becb26958130336800e430410aba3fe203e619412fc66ea8af27f6e5",
+      "sha256": "622a4af6becb26958130336800e430410aba3fe203e619412fc66ea8af27f6e5",
+      "bytes": 8816,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/export_organizer_credential.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/export_organizer_credential.py",
+      "source_sha256": "788970e210a658fad4fe525ec30880dfee31c2b0e996d62aec6113b4805233ab",
+      "sha256": "788970e210a658fad4fe525ec30880dfee31c2b0e996d62aec6113b4805233ab",
+      "bytes": 883,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/final_event_control.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/final_event_control.py",
+      "source_sha256": "d035afbd874d4b5b007eb3289cb643d89e6c7c56ef65749b94efaf288fccf641",
+      "sha256": "d035afbd874d4b5b007eb3289cb643d89e6c7c56ef65749b94efaf288fccf641",
+      "bytes": 12511,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/fix_final_case_permissions.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/fix_final_case_permissions.py",
+      "source_sha256": "76f20b0d05a393b0f31a5876dd75c5bf4d0ad2319854f815faa2504157ea01bb",
+      "sha256": "76f20b0d05a393b0f31a5876dd75c5bf4d0ad2319854f815faa2504157ea01bb",
+      "bytes": 1671,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/freeze_final_stage2_gt.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/freeze_final_stage2_gt.py",
+      "source_sha256": "3f9873e90cc2781bc188c3800e825f4f7429eb3d7d023491064a4b785c1976b8",
+      "sha256": "3f9873e90cc2781bc188c3800e825f4f7429eb3d7d023491064a4b785c1976b8",
+      "bytes": 2679,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/generate_mock_case.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/generate_mock_case.py",
+      "source_sha256": "9cd71927c7440b599ee445c06bfa2b311278ed8402738c8ce5a723cb2f8d797a",
+      "sha256": "9cd71927c7440b599ee445c06bfa2b311278ed8402738c8ce5a723cb2f8d797a",
+      "bytes": 9262,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/import_case.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/import_case.py",
+      "source_sha256": "8f0cc9899ad5c5935b461fbd40412f87942fd6fb622fa7c544f620385f41785a",
+      "sha256": "8f0cc9899ad5c5935b461fbd40412f87942fd6fb622fa7c544f620385f41785a",
+      "bytes": 6090,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/import_semifinal_qa_bundle.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/import_semifinal_qa_bundle.py",
+      "source_sha256": "94e12f6251072813c9f93034465d85e6667ec4563a7a2456494874c3eb921914",
+      "sha256": "94e12f6251072813c9f93034465d85e6667ec4563a7a2456494874c3eb921914",
+      "bytes": 13596,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/manage_competition.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/manage_competition.py",
+      "source_sha256": "da4912bb48b6d955f3d3dcf679c6b0f98c4c49813f2a89bac7fb6e4cd95e4067",
+      "sha256": "da4912bb48b6d955f3d3dcf679c6b0f98c4c49813f2a89bac7fb6e4cd95e4067",
+      "bytes": 5057,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/manage_final_rounds.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/manage_final_rounds.py",
+      "source_sha256": "782993ec862676fa18bcf56817ecbd3a128fc7a1299b47cd8bccb6d888c544dd",
+      "sha256": "782993ec862676fa18bcf56817ecbd3a128fc7a1299b47cd8bccb6d888c544dd",
+      "bytes": 3666,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/manage_final_stage1.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/manage_final_stage1.py",
+      "source_sha256": "ad262c472ab8aa87c7d977b3da4e70d80635eedd6ef3d0b45fda28ac17bcae6a",
+      "sha256": "ad262c472ab8aa87c7d977b3da4e70d80635eedd6ef3d0b45fda28ac17bcae6a",
+      "bytes": 3858,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/manage_final_stage2.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/manage_final_stage2.py",
+      "source_sha256": "e05f5bd38d3f21f8b4bada9599d3771c1cc51caa8f6fd57619d170597e09cfba",
+      "sha256": "e05f5bd38d3f21f8b4bada9599d3771c1cc51caa8f6fd57619d170597e09cfba",
+      "bytes": 4312,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/manage_final_stage3.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/manage_final_stage3.py",
+      "source_sha256": "e323481a1396a7bfab91507652d32cf372814608f22a615320a58434b0ddd092",
+      "sha256": "e323481a1396a7bfab91507652d32cf372814608f22a615320a58434b0ddd092",
+      "bytes": 4890,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/manage_tokens.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/manage_tokens.py",
+      "source_sha256": "1620d1676a8a62435ec8328a82009fd1115d4b697530424f2e50a838278c1c36",
+      "sha256": "1620d1676a8a62435ec8328a82009fd1115d4b697530424f2e50a838278c1c36",
+      "bytes": 4159,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/prepare_exchange_v2.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/prepare_exchange_v2.py",
+      "source_sha256": "b42f089c964ac5886ff7b01c4941a147f5139de872fd29617b41114dde39f8cb",
+      "sha256": "b42f089c964ac5886ff7b01c4941a147f5139de872fd29617b41114dde39f8cb",
+      "bytes": 6950,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/provision_team_registry.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/provision_team_registry.py",
+      "source_sha256": "c9619baa4678f07fda48feaacae261a07fe86ee93fbc328146f9df34eb884e8e",
+      "sha256": "c9619baa4678f07fda48feaacae261a07fe86ee93fbc328146f9df34eb884e8e",
+      "bytes": 4285,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/register_final_case_pool.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/register_final_case_pool.py",
+      "source_sha256": "b99bbd4ef97c5d17edfee9fa62c6ce2c2dfacf9d1b4704c0e2130364722bd7f3",
+      "sha256": "b99bbd4ef97c5d17edfee9fa62c6ce2c2dfacf9d1b4704c0e2130364722bd7f3",
+      "bytes": 8631,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/sample_benchmark_resources.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/sample_benchmark_resources.py",
+      "source_sha256": "263bedc770fe005938a3b9615931e9ae1c9c7fe9a10526e860322a0dcedfb46b",
+      "sha256": "263bedc770fe005938a3b9615931e9ae1c9c7fe9a10526e860322a0dcedfb46b",
+      "bytes": 3880,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/setup_final_stage2.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/setup_final_stage2.py",
+      "source_sha256": "c1f8c79a4929f741d2677e5aa19a524141a3938bf9583daed57987b2023f59a6",
+      "sha256": "c1f8c79a4929f741d2677e5aa19a524141a3938bf9583daed57987b2023f59a6",
+      "bytes": 6854,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/setup_server.sh",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/setup_server.sh",
+      "source_sha256": "89eb5e174d7260f714c26f6149fbd636763568fd667dfd7a00acd92e1ddcf4da",
+      "sha256": "89eb5e174d7260f714c26f6149fbd636763568fd667dfd7a00acd92e1ddcf4da",
+      "bytes": 4091,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/sf005_readback_20261017.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/sf005_readback_20261017.py",
+      "source_sha256": "6766b1f1ef188592279525a9157d4fd03900d01871cf154ee5d6816ee48786b1",
+      "sha256": "6766b1f1ef188592279525a9157d4fd03900d01871cf154ee5d6816ee48786b1",
+      "bytes": 4106,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/simulate_final_stage1.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/simulate_final_stage1.py",
+      "source_sha256": "fad7cab9e1636c411a5f9d7ffa7e41ef241641194992617e0b3e89697997d9ed",
+      "sha256": "fad7cab9e1636c411a5f9d7ffa7e41ef241641194992617e0b3e89697997d9ed",
+      "bytes": 4151,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/test_case_duration.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/test_case_duration.py",
+      "source_sha256": "ebd2f05739832c32667ae18198a83cc938777175167623c0dd53d698af1e452b",
+      "sha256": "ebd2f05739832c32667ae18198a83cc938777175167623c0dd53d698af1e452b",
+      "bytes": 561,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/test_competition_access.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/test_competition_access.py",
+      "source_sha256": "8fb7c1a8871c6fe8b582d2f548e5cc261a1de3c1dcec17b6efab56197bfd6ce0",
+      "sha256": "8fb7c1a8871c6fe8b582d2f548e5cc261a1de3c1dcec17b6efab56197bfd6ce0",
+      "bytes": 6053,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/test_import_pipeline.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/test_import_pipeline.py",
+      "source_sha256": "c9a2aadca3ebc39bbb842b8cf9f1eff68157b7ee73ce777022c0d24d789dac41",
+      "sha256": "c9a2aadca3ebc39bbb842b8cf9f1eff68157b7ee73ce777022c0d24d789dac41",
+      "bytes": 2340,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/test_sf001_live_api.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/test_sf001_live_api.py",
+      "source_sha256": "2e41dd9e3ca647bedd27e1662a9ee6aabe0bf18e20995903504c7ce757441b3b",
+      "sha256": "2e41dd9e3ca647bedd27e1662a9ee6aabe0bf18e20995903504c7ce757441b3b",
+      "bytes": 10408,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/validate_case.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/validate_case.py",
+      "source_sha256": "2572a7b4b8bbaf26e847a1664a33774a42f9df29e8f1f7eb065e0119dc54e024",
+      "sha256": "2572a7b4b8bbaf26e847a1664a33774a42f9df29e8f1f7eb065e0119dc54e024",
+      "bytes": 660,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/validate_exchange_v2.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/validate_exchange_v2.py",
+      "source_sha256": "ba268c9638cdbfbf9f0ce95ac204634dbe19dbe810a606b6c19a1a15c1af27cc",
+      "sha256": "ba268c9638cdbfbf9f0ce95ac204634dbe19dbe810a606b6c19a1a15c1af27cc",
+      "bytes": 12848,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/validate_public_bundle.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/validate_public_bundle.py",
+      "source_sha256": "8fecfe890b13ac5a5e542d4ee417dfcf0883af41349cf30d0deb509ebee19d35",
+      "sha256": "8fecfe890b13ac5a5e542d4ee417dfcf0883af41349cf30d0deb509ebee19d35",
+      "bytes": 7851,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/verify_access_isolation.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/verify_access_isolation.py",
+      "source_sha256": "47f5b298e4b6c52478d58685d63f78bb0ab36faa2003b54e6c53d2a15cd1bc0c",
+      "sha256": "47f5b298e4b6c52478d58685d63f78bb0ab36faa2003b54e6c53d2a15cd1bc0c",
+      "bytes": 4286,
+      "sanitization": []
+    },
+    {
+      "path": "server/scripts/verify_public_copy_live.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/scripts/verify_public_copy_live.py",
+      "source_sha256": "c25bd1940d8fb3fb2472c3d2f138ff772251b8499a4aeb57f1da56a884641713",
+      "sha256": "c25bd1940d8fb3fb2472c3d2f138ff772251b8499a4aeb57f1da56a884641713",
+      "bytes": 1497,
+      "sanitization": []
+    },
+    {
+      "path": "server/semifinal-operations/activate_semifinal.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/semifinal-operations/activate_semifinal.py",
+      "source_sha256": "6cae8ebf917fdc3764f760ff9cd0dc77a0cc11cb64788495eccc7d3a9404990e",
+      "sha256": "6cae8ebf917fdc3764f760ff9cd0dc77a0cc11cb64788495eccc7d3a9404990e",
+      "bytes": 7403,
+      "sanitization": []
+    },
+    {
+      "path": "server/semifinal-operations/export_semifinal_results.sh",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/semifinal-operations/export_semifinal_results.sh",
+      "source_sha256": "9e349f6c8b0a62b841342ea852622d618b477d86d9add201ff37889357f27964",
+      "sha256": "9e349f6c8b0a62b841342ea852622d618b477d86d9add201ff37889357f27964",
+      "bytes": 709,
+      "sanitization": []
+    },
+    {
+      "path": "server/semifinal-operations/prepare_release.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/semifinal-operations/prepare_release.py",
+      "source_sha256": "e06c6d591b41cb012dc2bdbfdced84827d1c56ee1e89c49decbf68c7f4d16b6c",
+      "sha256": "e06c6d591b41cb012dc2bdbfdced84827d1c56ee1e89c49decbf68c7f4d16b6c",
+      "bytes": 7830,
+      "sanitization": []
+    },
+    {
+      "path": "server/semifinal-operations/verify_semifinal_export.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/semifinal-operations/verify_semifinal_export.py",
+      "source_sha256": "f4365bef3b3a7cd451577ff9e4fcdb51a200c31ec6c77f55de166d47e2cdbc1d",
+      "sha256": "f4365bef3b3a7cd451577ff9e4fcdb51a200c31ec6c77f55de166d47e2cdbc1d",
+      "bytes": 1052,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_access_control_closed_practice.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_access_control_closed_practice.py",
+      "source_sha256": "c3e7e031f5ba08d0375b28f5849eb6758f4764ac684d07e91e7e6eb87b077d1e",
+      "sha256": "c3e7e031f5ba08d0375b28f5849eb6758f4764ac684d07e91e7e6eb87b077d1e",
+      "bytes": 3624,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_accuracy_speed.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_accuracy_speed.py",
+      "source_sha256": "22b871cc73aeb2d9e853ff79be4715839b65288ffd2c155e574a355988b8f396",
+      "sha256": "22b871cc73aeb2d9e853ff79be4715839b65288ffd2c155e574a355988b8f396",
+      "bytes": 4689,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_final_answer_archive.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_final_answer_archive.py",
+      "source_sha256": "1466b52223390594bf2f0bb11c13c0e27153cc165c1f9ee939b6aa3fc0a65cb3",
+      "sha256": "1466b52223390594bf2f0bb11c13c0e27153cc165c1f9ee939b6aa3fc0a65cb3",
+      "bytes": 2416,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_final_preview_quota.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_final_preview_quota.py",
+      "source_sha256": "993d11b1e35ff41163592f195053a1678c9c31daf0c73b5ece7cb285024f6f0f",
+      "sha256": "993d11b1e35ff41163592f195053a1678c9c31daf0c73b5ece7cb285024f6f0f",
+      "bytes": 6241,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_final_rounds.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_final_rounds.py",
+      "source_sha256": "0f3e83c4ed6d108c25c0e5501401d5af8bad876accc7682112204ecce8015e45",
+      "sha256": "0f3e83c4ed6d108c25c0e5501401d5af8bad876accc7682112204ecce8015e45",
+      "bytes": 3360,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_final_score_visibility.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_final_score_visibility.py",
+      "source_sha256": "88609076898aa9bf1bec0e5f5c92d536c74bc64d787a986468bfc2bd623871de",
+      "sha256": "88609076898aa9bf1bec0e5f5c92d536c74bc64d787a986468bfc2bd623871de",
+      "bytes": 2461,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_final_stage2.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_final_stage2.py",
+      "source_sha256": "41dd0b24b769589ed2d14fd80a38121c59321154927d4a97be1dcb6adcd446c5",
+      "sha256": "41dd0b24b769589ed2d14fd80a38121c59321154927d4a97be1dcb6adcd446c5",
+      "bytes": 4101,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_final_stage3.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_final_stage3.py",
+      "source_sha256": "0d76f447db5f93e29613a6b39e0196c05654ec63dc0e09e6627c419d502cd2b3",
+      "sha256": "0d76f447db5f93e29613a6b39e0196c05654ec63dc0e09e6627c419d502cd2b3",
+      "bytes": 2879,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_formal_accuracy_speed.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_formal_accuracy_speed.py",
+      "source_sha256": "4fbd087e1d86603c01abbabcf29bd0617ccffcec266c680e5f2bcfa3f36aad3b",
+      "sha256": "4fbd087e1d86603c01abbabcf29bd0617ccffcec266c680e5f2bcfa3f36aad3b",
+      "bytes": 3443,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_formal_rubric_v2.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_formal_rubric_v2.py",
+      "source_sha256": "95b18093a2a11b01c4ad56c49c5516f48dd1498aec2cc53133ff0cb78c0dcffb",
+      "sha256": "95b18093a2a11b01c4ad56c49c5516f48dd1498aec2cc53133ff0cb78c0dcffb",
+      "bytes": 2480,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_live_api.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_live_api.py",
+      "source_sha256": "88d1b6cf031013ad9e2628663b47aae5243695667cdfa7a80a4f4ffa58210b66",
+      "sha256": "88d1b6cf031013ad9e2628663b47aae5243695667cdfa7a80a4f4ffa58210b66",
+      "bytes": 2819,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_pk_missing_zero.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_pk_missing_zero.py",
+      "source_sha256": "4bfaca788a7ea3427ba8775c115e4203d50ef39cb51f2e730bbb4e6387a2d837",
+      "sha256": "4bfaca788a7ea3427ba8775c115e4203d50ef39cb51f2e730bbb4e6387a2d837",
+      "bytes": 4689,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_pk_reopen.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_pk_reopen.py",
+      "source_sha256": "8d0ce78e02bbb6c4158bebb77016fe5c402d8a2f91ef289536667855903d22c4",
+      "sha256": "8d0ce78e02bbb6c4158bebb77016fe5c402d8a2f91ef289536667855903d22c4",
+      "bytes": 6337,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_query_timeout.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_query_timeout.py",
+      "source_sha256": "1a72049e6b02a903cdb2076d143c35baf3797572b600b2278c586a7bad913ab0",
+      "sha256": "1a72049e6b02a903cdb2076d143c35baf3797572b600b2278c586a7bad913ab0",
+      "bytes": 508,
+      "sanitization": []
+    },
+    {
+      "path": "server/tests/test_questions.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/tests/test_questions.py",
+      "source_sha256": "1f3055b29dccd1330a48bfceb0d9e37bab11d0df6dc8eb66a48288bbafcf3f1a",
+      "sha256": "1f3055b29dccd1330a48bfceb0d9e37bab11d0df6dc8eb66a48288bbafcf3f1a",
+      "bytes": 2153,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/visualization/COMPETITION_VISUALIZATION_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-visualization/COMPETITION_VISUALIZATION_REPORT.md",
+      "source_sha256": "7e51bdd33ee604dfda5d13914398515a78b96fab2db73495e6e549aa8c10a827",
+      "sha256": "7e51bdd33ee604dfda5d13914398515a78b96fab2db73495e6e549aa8c10a827",
+      "bytes": 6826,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/visualization/anomaly-taxonomy-v1.json",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-visualization/anomaly-taxonomy-v1.json",
+      "source_sha256": "e972da4a2f82407fb30f985463e61d6943ce3fda043ef76846b03be71ca7282a",
+      "sha256": "e972da4a2f82407fb30f985463e61d6943ce3fda043ef76846b03be71ca7282a",
+      "bytes": 4448,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/visualization/app.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-visualization/app.py",
+      "source_sha256": "04d45805baea49045f8ef52152d3809ad67f3fae9e1ce3f1b64ddcb9c824e633",
+      "sha256": "04d45805baea49045f8ef52152d3809ad67f3fae9e1ce3f1b64ddcb9c824e633",
+      "bytes": 18954,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/visualization/browser_qa_imported_cases.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-visualization/browser_qa_imported_cases.py",
+      "source_sha256": "09aa64538d37b9611f46140f0993d6d19c6a2025cf6be5f422c13675a00641d1",
+      "sha256": "09aa64538d37b9611f46140f0993d6d19c6a2025cf6be5f422c13675a00641d1",
+      "bytes": 3074,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/visualization/browser_qa_linux.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-visualization/browser_qa_linux.py",
+      "source_sha256": "bdb0fb0fbe90fffc99feb84fe0ba9dd6f310e02f1e3613167b5c0271fb13dc77",
+      "sha256": "bdb0fb0fbe90fffc99feb84fe0ba9dd6f310e02f1e3613167b5c0271fb13dc77",
+      "bytes": 4566,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/visualization/data.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-visualization/data.py",
+      "source_sha256": "19675fd3435b7ae5e3d16729cc7442562df6a64b356685531f58012322937cb6",
+      "sha256": "19675fd3435b7ae5e3d16729cc7442562df6a64b356685531f58012322937cb6",
+      "bytes": 12196,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/visualization/requirements-qa.txt",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-visualization/requirements-qa.txt",
+      "source_sha256": "29a78497a4c20e695fb2ab67d477e52ca17f02d7588ebf2285d02f1565868690",
+      "sha256": "29a78497a4c20e695fb2ab67d477e52ca17f02d7588ebf2285d02f1565868690",
+      "bytes": 39,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/visualization/requirements.txt",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-visualization/requirements.txt",
+      "source_sha256": "c753adea66ce50a950d1935f7e6516083c76b135da4f1f7dcbbdc432a6fec60c",
+      "sha256": "c753adea66ce50a950d1935f7e6516083c76b135da4f1f7dcbbdc432a6fec60c",
+      "bytes": 94,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/visualization/verify_organizer_data.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-visualization/verify_organizer_data.py",
+      "source_sha256": "936dce7bf82f17dfecddee08e9aeef88a65e8f6c4412179a0116f9e5b5c819b0",
+      "sha256": "936dce7bf82f17dfecddee08e9aeef88a65e8f6c4412179a0116f9e5b5c819b0",
+      "bytes": 4788,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/visualization/tests/test_data.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-visualization/tests/test_data.py",
+      "source_sha256": "a437a80a8f7c77e07c9f627b3601dd30123f3070cc00796faefa1d95385a08c5",
+      "sha256": "a437a80a8f7c77e07c9f627b3601dd30123f3070cc00796faefa1d95385a08c5",
+      "bytes": 3454,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/visualization/tests/test_taxonomy.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-visualization/tests/test_taxonomy.py",
+      "source_sha256": "83f3c2b1ba26192ab1b92dcfb1ebe1418bcabdf45be556af7265ba686ac6948c",
+      "sha256": "83f3c2b1ba26192ab1b92dcfb1ebe1418bcabdf45be556af7265ba686ac6948c",
+      "bytes": 893,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/submissions/IMPLEMENTATION_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-submissions/IMPLEMENTATION_REPORT.md",
+      "source_sha256": "9aeeaeffdd848c17a751f78a21839aed8ef46f6d88be4e22553de2fcefa09b6b",
+      "sha256": "9aeeaeffdd848c17a751f78a21839aed8ef46f6d88be4e22553de2fcefa09b6b",
+      "bytes": 3195,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/submissions/app.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-submissions/app.py",
+      "source_sha256": "e3610a117083d06a45447ace99a7f72649da309d99b8103852f16523f4198ac8",
+      "sha256": "e3610a117083d06a45447ace99a7f72649da309d99b8103852f16523f4198ac8",
+      "bytes": 17768,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/submissions/auth.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-submissions/auth.py",
+      "source_sha256": "c55595207de536ae79e81e9597b4699e0a4aeb34605805cb255808f8641475eb",
+      "sha256": "c55595207de536ae79e81e9597b4699e0a4aeb34605805cb255808f8641475eb",
+      "bytes": 830,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/submissions/data.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-submissions/data.py",
+      "source_sha256": "5ec4102e7fadd36d4281b304e8e7f23065c1e891d9653e17d4691441a064d2bf",
+      "sha256": "5ec4102e7fadd36d4281b304e8e7f23065c1e891d9653e17d4691441a064d2bf",
+      "bytes": 8772,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/submissions/final_qualifier_results.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-submissions/final_qualifier_results.py",
+      "source_sha256": "d96580911bd6d5c80feca5d7159245af17a560815918f1318bceee036f9a99b1",
+      "sha256": "d96580911bd6d5c80feca5d7159245af17a560815918f1318bceee036f9a99b1",
+      "bytes": 10369,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/submissions/semifinal_results.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-submissions/semifinal_results.py",
+      "source_sha256": "9a08fa904f465bd8120e68c0ee6342d0e4d4e4dfe0e800ab80f5337ace6c7ba4",
+      "sha256": "9a08fa904f465bd8120e68c0ee6342d0e4d4e4dfe0e800ab80f5337ace6c7ba4",
+      "bytes": 14103,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/submissions/snapshot.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-submissions/snapshot.py",
+      "source_sha256": "c43f4d23c92247c50759a72de94691d33508c8ace4a72691f0f7f830fc2663bf",
+      "sha256": "c43f4d23c92247c50759a72de94691d33508c8ace4a72691f0f7f830fc2663bf",
+      "bytes": 2701,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/submissions/tests/test_data.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-submissions/tests/test_data.py",
+      "source_sha256": "56895dc744a4473b158a5b8d40d4bbe0f2bc3b262a0101090a3779817cad5340",
+      "sha256": "56895dc744a4473b158a5b8d40d4bbe0f2bc3b262a0101090a3779817cad5340",
+      "bytes": 8542,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/submissions/tools/semifinal_results.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-competition-submissions/tools/semifinal_results.py",
+      "source_sha256": "9a08fa904f465bd8120e68c0ee6342d0e4d4e4dfe0e800ab80f5337ace6c7ba4",
+      "sha256": "9a08fa904f465bd8120e68c0ee6342d0e4d4e4dfe0e800ab80f5337ace6c7ba4",
+      "bytes": 14103,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/ALL_TEAM_PRACTICE_OPEN_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/ALL_TEAM_PRACTICE_OPEN_REPORT.md",
+      "source_sha256": "0e1344f561f902dd0bbe116726ae3d40d2f42c7a9c8d1bf94f1bc70a94903b57",
+      "sha256": "0e1344f561f902dd0bbe116726ae3d40d2f42c7a9c8d1bf94f1bc70a94903b57",
+      "bytes": 1604,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/AM_PREVIEW_TEST_OPEN_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/AM_PREVIEW_TEST_OPEN_REPORT.md",
+      "source_sha256": "0eab2744f33f6bef60b977ffb0b9664b02d040002e9f0ef52af7f4919c2b21bf",
+      "sha256": "0eab2744f33f6bef60b977ffb0b9664b02d040002e9f0ef52af7f4919c2b21bf",
+      "bytes": 2225,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/AM_TEAM01_10_ASSIGNMENT_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/AM_TEAM01_10_ASSIGNMENT_REPORT.md",
+      "source_sha256": "02e97e754a560d20dff0b217e889611bacd7366b8af37d23cc07a13169ec3814",
+      "sha256": "02e97e754a560d20dff0b217e889611bacd7366b8af37d23cc07a13169ec3814",
+      "bytes": 1523,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/FINAL_TASK_ID_ACCESS_DESIGN.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/FINAL_TASK_ID_ACCESS_DESIGN.md",
+      "source_sha256": "296911046715da0336c860cd2a5d7bfb00f56588ada84392554d0018ce357582",
+      "sha256": "296911046715da0336c860cd2a5d7bfb00f56588ada84392554d0018ce357582",
+      "bytes": 2565,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/LLM_KEY_DISTRIBUTION_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/LLM_KEY_DISTRIBUTION_REPORT.md",
+      "source_sha256": "f58dcb03662f8c1f1586b0f27e5f32fa6fd78e5975ec64e01733561c0c6b6ca8",
+      "sha256": "f58dcb03662f8c1f1586b0f27e5f32fa6fd78e5975ec64e01733561c0c6b6ca8",
+      "bytes": 2964,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/SEMIFINAL_AM_PM_ACCESS_DESIGN.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/SEMIFINAL_AM_PM_ACCESS_DESIGN.md",
+      "source_sha256": "cb426812d0dc2e1ad5d24433bfa5d5b0bf1027fd316229242c7bb7f19723c254",
+      "sha256": "cb426812d0dc2e1ad5d24433bfa5d5b0bf1027fd316229242c7bb7f19723c254",
+      "bytes": 3036,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/SEMIFINAL_TEAM_ACCESS_DESIGN.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/SEMIFINAL_TEAM_ACCESS_DESIGN.md",
+      "source_sha256": "3309f2c03a919a164d212af26f82ecbda5f80f8825fb568fa9fc0ab3597ac5f0",
+      "sha256": "3309f2c03a919a164d212af26f82ecbda5f80f8825fb568fa9fc0ab3597ac5f0",
+      "bytes": 4751,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/TEAM01_DELIVERY_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/TEAM01_DELIVERY_REPORT.md",
+      "source_sha256": "aa7e6ddb45da777ec740f30600c609f586d6e1cba612467da059c19ea83afdf9",
+      "sha256": "aa7e6ddb45da777ec740f30600c609f586d6e1cba612467da059c19ea83afdf9",
+      "bytes": 2324,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/TEAM_TOKEN_ACCESS_DESIGN.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/TEAM_TOKEN_ACCESS_DESIGN.md",
+      "source_sha256": "91cbdcae2b0f084ab23b9e085c4b37090cc934f7fe4868f7bb8408cc36baaaf0",
+      "sha256": "91cbdcae2b0f084ab23b9e085c4b37090cc934f7fe4868f7bb8408cc36baaaf0",
+      "bytes": 8265,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/TEAM_TOKEN_ROLLOUT_REPORT.md",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/TEAM_TOKEN_ROLLOUT_REPORT.md",
+      "source_sha256": "ccc0b857b775dc3a60bd3a52eb8d928418c4852078ba8423877930a9167866e7",
+      "sha256": "ccc0b857b775dc3a60bd3a52eb8d928418c4852078ba8423877930a9167866e7",
+      "bytes": 2977,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/enable_am_preview.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/enable_am_preview.py",
+      "source_sha256": "94ed01db912812836cd8cbf34db9c8a85e3d7e68b39c65159743a228f51762d9",
+      "sha256": "94ed01db912812836cd8cbf34db9c8a85e3d7e68b39c65159743a228f51762d9",
+      "bytes": 3337,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/llm_dispatch.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/llm_dispatch.py",
+      "source_sha256": "1c5148f4be63e41507f776b448cba4d1b4dae22bb98f555797714de5962ec7ef",
+      "sha256": "1c5148f4be63e41507f776b448cba4d1b4dae22bb98f555797714de5962ec7ef",
+      "bytes": 8195,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/probe_team_llm_endpoint.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/probe_team_llm_endpoint.py",
+      "source_sha256": "bbea2ff77c2c14ca044b137342c3b0f5d73d447f2318529a9aaea20d6126bc37",
+      "sha256": "bbea2ff77c2c14ca044b137342c3b0f5d73d447f2318529a9aaea20d6126bc37",
+      "bytes": 3447,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/rollout_team_hosts.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/rollout_team_hosts.py",
+      "source_sha256": "3b218130660e3a6834341399ae64abdc5c5c574ed0c0dc9df463ee98d36c311c",
+      "sha256": "3b218130660e3a6834341399ae64abdc5c5c574ed0c0dc9df463ee98d36c311c",
+      "bytes": 13822,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/token_dispatch.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/token_dispatch.py",
+      "source_sha256": "9950a3b9975739d97497943add7c16b9b5926215efb4b252b59488b9d2995748",
+      "sha256": "9950a3b9975739d97497943add7c16b9b5926215efb4b252b59488b9d2995748",
+      "bytes": 15989,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/verify_am_preview.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/verify_am_preview.py",
+      "source_sha256": "44ead1754424fbedba97dc8efc1c5bd3ad0f192009fe7aba84bbdee5bd75edcc",
+      "sha256": "44ead1754424fbedba97dc8efc1c5bd3ad0f192009fe7aba84bbdee5bd75edcc",
+      "bytes": 3374,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/verify_llm_rollout.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/verify_llm_rollout.py",
+      "source_sha256": "f73fc94222ebb6da5e2088c2c4f3d9b006f9a94d194921d1f5fee7e4b3d7dac6",
+      "sha256": "f73fc94222ebb6da5e2088c2c4f3d9b006f9a94d194921d1f5fee7e4b3d7dac6",
+      "bytes": 3023,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/verify_practice_open.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/verify_practice_open.py",
+      "source_sha256": "99c701b4696749e6610c625bd0a7de55c0926f8f47249e27e559eab2edf5476f",
+      "sha256": "99c701b4696749e6610c625bd0a7de55c0926f8f47249e27e559eab2edf5476f",
+      "bytes": 2874,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/verify_team_delivery.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/verify_team_delivery.py",
+      "source_sha256": "0dcbbf937e1d8162edaa7e85784cce48f8e543fed36f9f0952ff9f7087acfc10",
+      "sha256": "0dcbbf937e1d8162edaa7e85784cce48f8e543fed36f9f0952ff9f7087acfc10",
+      "bytes": 4357,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/team-management/tests/test_token_dispatch.py",
+      "source_host": "server51",
+      "source_path": "/opt/aiops-contest-server/team-provisioning/tests/test_token_dispatch.py",
+      "source_sha256": "e555b68f53e60c5408f517549ad43e00d723e99c41ff508b94b477338afae166",
+      "sha256": "e555b68f53e60c5408f517549ad43e00d723e99c41ff508b94b477338afae166",
+      "bytes": 4823,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-004.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-004.json",
+      "source_sha256": "3c773321ea419c7018e6353d88441201b535d65e1cc3350df0dd7d4d0ba9fabf",
+      "sha256": "3c773321ea419c7018e6353d88441201b535d65e1cc3350df0dd7d4d0ba9fabf",
+      "bytes": 1962,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-006.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-006.json",
+      "source_sha256": "ea4a8790f8a57afbebde92a5fce9fb8c34684edf81de753607502989af77a5db",
+      "sha256": "ea4a8790f8a57afbebde92a5fce9fb8c34684edf81de753607502989af77a5db",
+      "bytes": 3435,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-007.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-007.json",
+      "source_sha256": "e69ffccab3dc7015cf34bd5fcfab1b5034be41beb80f7e7f7ead6106e20a3e66",
+      "sha256": "e69ffccab3dc7015cf34bd5fcfab1b5034be41beb80f7e7f7ead6106e20a3e66",
+      "bytes": 2145,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-008.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-008.json",
+      "source_sha256": "3ede11a7604c100c80d3b3e35911d3f30e36340f5bdb53aa0fd92d6f8f6b32c1",
+      "sha256": "3ede11a7604c100c80d3b3e35911d3f30e36340f5bdb53aa0fd92d6f8f6b32c1",
+      "bytes": 2963,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-009.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-009.json",
+      "source_sha256": "aacc75c9837cb5b3a149ebb54e36fa8b574bde7c59c8f68e3e0235bda31b88f3",
+      "sha256": "aacc75c9837cb5b3a149ebb54e36fa8b574bde7c59c8f68e3e0235bda31b88f3",
+      "bytes": 2929,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-011.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-011.json",
+      "source_sha256": "e89a272f91392102074577bd7d328c4cef15cd4126a3b60cd2958508fcc689b3",
+      "sha256": "e89a272f91392102074577bd7d328c4cef15cd4126a3b60cd2958508fcc689b3",
+      "bytes": 1962,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-012.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-012.json",
+      "source_sha256": "02b4885b65804e24dbe2256e81e72b351c8a5800610c9a6a7d10268f26b336a4",
+      "sha256": "02b4885b65804e24dbe2256e81e72b351c8a5800610c9a6a7d10268f26b336a4",
+      "bytes": 1389,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-013.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-013.json",
+      "source_sha256": "4cc4c3d54f72d948cafad237f5097311429b0b244c2a124c5fb3eb625ceefee1",
+      "sha256": "4cc4c3d54f72d948cafad237f5097311429b0b244c2a124c5fb3eb625ceefee1",
+      "bytes": 1392,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-014.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-014.json",
+      "source_sha256": "038cfedee2fb11dda26babc462bdd5aa617eefdeb59f5ad89bb986755df4d104",
+      "sha256": "038cfedee2fb11dda26babc462bdd5aa617eefdeb59f5ad89bb986755df4d104",
+      "bytes": 4896,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-015.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-015.json",
+      "source_sha256": "d78cab7d3fe4c5fce90b8ee1c33285e9b1a84f78277b67eaa4cc99ed7e685c1e",
+      "sha256": "d78cab7d3fe4c5fce90b8ee1c33285e9b1a84f78277b67eaa4cc99ed7e685c1e",
+      "bytes": 4790,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-016.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-016.json",
+      "source_sha256": "9fea06356654ac54b726dfc966e83671752394ec21ee9e58bf2a54bb23da1582",
+      "sha256": "9fea06356654ac54b726dfc966e83671752394ec21ee9e58bf2a54bb23da1582",
+      "bytes": 2361,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/SF-017.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/SF-017.json",
+      "source_sha256": "8f382191abfee0d2d426ac242b7327c3b74dbcb159890fdb99166ebdd04995cf",
+      "sha256": "8f382191abfee0d2d426ac242b7327c3b74dbcb159890fdb99166ebdd04995cf",
+      "bytes": 4683,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/gt-manifest.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/gt-manifest.json",
+      "source_sha256": "9049aa9461c61a08bde91a7c5e0c4cb8b9b848c62e92636dcbb567abc295c807",
+      "sha256": "9049aa9461c61a08bde91a7c5e0c4cb8b9b848c62e92636dcbb567abc295c807",
+      "bytes": 3004,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/final/source-candidate-manifest.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/final-gt-v2-20261020/source-candidate-manifest.json",
+      "source_sha256": "012c1a428cf618987f305d659b1be2ea7b8d7e11416c16086c5705990660af7d",
+      "sha256": "012c1a428cf618987f305d659b1be2ea7b8d7e11416c16086c5705990660af7d",
+      "bytes": 2891,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/semifinal/Q01.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt/Q01.json",
+      "source_sha256": "77a952c54136031093decf9ad4e3c858fabd426f167f1139ec11a4e2e1617888",
+      "sha256": "77a952c54136031093decf9ad4e3c858fabd426f167f1139ec11a4e2e1617888",
+      "bytes": 5428,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/semifinal/Q02.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt/Q02.json",
+      "source_sha256": "fbbd9249ce3382347ac3a521d887ffff6fc493c04b5e4512deb8aee35c902270",
+      "sha256": "fbbd9249ce3382347ac3a521d887ffff6fc493c04b5e4512deb8aee35c902270",
+      "bytes": 5627,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/semifinal/Q03.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt/Q03.json",
+      "source_sha256": "ecbf121351fa17f897e988ca2cee8500112e05fc64ffe8f3e5dfae3c4681b1c6",
+      "sha256": "ecbf121351fa17f897e988ca2cee8500112e05fc64ffe8f3e5dfae3c4681b1c6",
+      "bytes": 9205,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/semifinal/Q04.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt/Q04.json",
+      "source_sha256": "4d93fdcc0dfefd371aab94f0bace708bb996ce0c2e367240d123283b6a961a6b",
+      "sha256": "4d93fdcc0dfefd371aab94f0bace708bb996ce0c2e367240d123283b6a961a6b",
+      "bytes": 5206,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/semifinal/Q05.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt/Q05.json",
+      "source_sha256": "aa574f55745d4ad18592873d2504cdcc7536d1d2f07e5b612e635fd6dd70587c",
+      "sha256": "aa574f55745d4ad18592873d2504cdcc7536d1d2f07e5b612e635fd6dd70587c",
+      "bytes": 5128,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/semifinal/Q06.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt/Q06.json",
+      "source_sha256": "885ee3184f12a5accea07b298a45fce02f4fbbb7f793fb0f5840bf5fee269ef4",
+      "sha256": "885ee3184f12a5accea07b298a45fce02f4fbbb7f793fb0f5840bf5fee269ef4",
+      "bytes": 5191,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/semifinal/Q07.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt/Q07.json",
+      "source_sha256": "e17b6b9b2925e5a9f7c29bd8216ee4b3d0b0b0d4b0a86c8e5b8d37b654a11c37",
+      "sha256": "e17b6b9b2925e5a9f7c29bd8216ee4b3d0b0b0d4b0a86c8e5b8d37b654a11c37",
+      "bytes": 5209,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/semifinal/Q08.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt/Q08.json",
+      "source_sha256": "43d7b039a4675f09306f5b5d2811e80ec8151149a1b238926c51d122ea5f832f",
+      "sha256": "43d7b039a4675f09306f5b5d2811e80ec8151149a1b238926c51d122ea5f832f",
+      "bytes": 5227,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/semifinal/Q09.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt/Q09.json",
+      "source_sha256": "a12b2ab8a868fc1113f8ffbbee1c98d571009bdde8a784c064c9b0ea6629fe9d",
+      "sha256": "a12b2ab8a868fc1113f8ffbbee1c98d571009bdde8a784c064c9b0ea6629fe9d",
+      "bytes": 5233,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/semifinal/Q10.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt/Q10.json",
+      "source_sha256": "5832b7de432caf3c6006167063daf2f7cf7a3f0a1309d7e2811b1e1e8f662243",
+      "sha256": "5832b7de432caf3c6006167063daf2f7cf7a3f0a1309d7e2811b1e1e8f662243",
+      "bytes": 8688,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/EX-P01.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/EX-P01.json",
+      "source_sha256": "c4509addc94085a539a6ba8b9b804f024392d765d1cdc523d066d289a0c79367",
+      "sha256": "c4509addc94085a539a6ba8b9b804f024392d765d1cdc523d066d289a0c79367",
+      "bytes": 8805,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/EX-P02.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/EX-P02.json",
+      "source_sha256": "f44389ed4e2839adc26ea858703ded6482acfe9cdb5b1590eed091afd21521d6",
+      "sha256": "f44389ed4e2839adc26ea858703ded6482acfe9cdb5b1590eed091afd21521d6",
+      "bytes": 8214,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/P-Q01.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/P-Q01.json",
+      "source_sha256": "edcc763c0c84d6408c10f07372c1de4c1e589343375dd8d632957e002a235419",
+      "sha256": "edcc763c0c84d6408c10f07372c1de4c1e589343375dd8d632957e002a235419",
+      "bytes": 5011,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/Q01.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/Q01.json",
+      "source_sha256": "d92bb2d211f2fe1590c6159606fe385827cc70ecb7e70180ea59016b92a24261",
+      "sha256": "d92bb2d211f2fe1590c6159606fe385827cc70ecb7e70180ea59016b92a24261",
+      "bytes": 5166,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/Q02.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/Q02.json",
+      "source_sha256": "41b3c2580f916597b5cb632753da2b63c30c84a0f6be43ec37930026479739e6",
+      "sha256": "41b3c2580f916597b5cb632753da2b63c30c84a0f6be43ec37930026479739e6",
+      "bytes": 5365,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/Q03.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/Q03.json",
+      "source_sha256": "01c96fe6acc346203acf5680971d25f272bef53b9b6e2730cb635d2594cb9c78",
+      "sha256": "01c96fe6acc346203acf5680971d25f272bef53b9b6e2730cb635d2594cb9c78",
+      "bytes": 8943,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/Q04.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/Q04.json",
+      "source_sha256": "c1270aa34c29cdc5e3e6decf358430b968456a18e19eb0b742aa804f9c4e6213",
+      "sha256": "c1270aa34c29cdc5e3e6decf358430b968456a18e19eb0b742aa804f9c4e6213",
+      "bytes": 4944,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/Q05.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/Q05.json",
+      "source_sha256": "8912a9c2859395b1461fca06e848ea72d4b1b74919429da06dd7f8ccb20a9e34",
+      "sha256": "8912a9c2859395b1461fca06e848ea72d4b1b74919429da06dd7f8ccb20a9e34",
+      "bytes": 4866,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/Q06.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/Q06.json",
+      "source_sha256": "af4e04b5226bb1204bd6f5cf5e962a4c9b3d6cbfbf63917a32a2b8e035604d12",
+      "sha256": "af4e04b5226bb1204bd6f5cf5e962a4c9b3d6cbfbf63917a32a2b8e035604d12",
+      "bytes": 4929,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/Q07.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/Q07.json",
+      "source_sha256": "a22569028be559e06abb852f3ed9a70e33eff7b96717785a74e7111fc2fea197",
+      "sha256": "a22569028be559e06abb852f3ed9a70e33eff7b96717785a74e7111fc2fea197",
+      "bytes": 4947,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/Q08.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/Q08.json",
+      "source_sha256": "242db5f1a8e0b10750e98568d50f2724efa4cb4064496e72028ed37dba5966b8",
+      "sha256": "242db5f1a8e0b10750e98568d50f2724efa4cb4064496e72028ed37dba5966b8",
+      "bytes": 4965,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/Q09.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/Q09.json",
+      "source_sha256": "794e7a967aee7dab48efa13b3104c37d9f161942418dc852d7a48c73fa8dc43b",
+      "sha256": "794e7a967aee7dab48efa13b3104c37d9f161942418dc852d7a48c73fa8dc43b",
+      "bytes": 4971,
+      "sanitization": []
+    },
+    {
+      "path": "private/ground-truth/qa-preview/Q10.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/qa-gt-preview/Q10.json",
+      "source_sha256": "73b93f31c33cd79da42681f6d1066f65d70a7922bf1e2678a0c58c505297a948",
+      "sha256": "73b93f31c33cd79da42681f6d1066f65d70a7922bf1e2678a0c58c505297a948",
+      "bytes": 8426,
+      "sanitization": []
+    },
+    {
+      "path": "private/scoring/formal-final-rubric.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-private-grader/formal-final-rubric-v2-newcases.json",
+      "source_sha256": "2f09909bc319caa0e1672067ed7766a930cf7cf189b3d7b9fe995670c0ef0d7d",
+      "sha256": "2f09909bc319caa0e1672067ed7766a930cf7cf189b3d7b9fe995670c0ef0d7d",
+      "bytes": 672,
+      "sanitization": []
+    },
+    {
+      "path": "questions/final/event-plan.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-contest/final-event-20261023.json",
+      "source_sha256": "1a263286ff331f9294b882adbc75c04c784a64f61d1564f0c9c806fc36f94a0a",
+      "sha256": "1a263286ff331f9294b882adbc75c04c784a64f61d1564f0c9c806fc36f94a0a",
+      "bytes": 1074,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/scoring-plans/final-qualifier.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-submission-review/final-qualifier-scoring-plan.json",
+      "source_sha256": "38f28dab002e2e8b5ba98537266954522aa2d5640142ad3727c55375469bd008",
+      "sha256": "38f28dab002e2e8b5ba98537266954522aa2d5640142ad3727c55375469bd008",
+      "bytes": 873,
+      "sanitization": []
+    },
+    {
+      "path": "organizer/scoring-plans/semifinal.json",
+      "source_host": "server51",
+      "source_path": "/etc/aiops-contest/semifinal-scoring-plan.json",
+      "source_sha256": "d4c3b50629a9a7ff1500a32e6972afda7bc1caca49352b27ebed9be13604f800",
+      "sha256": "d4c3b50629a9a7ff1500a32e6972afda7bc1caca49352b27ebed9be13604f800",
+      "bytes": 1748,
+      "sanitization": []
+    },
+    {
+      "path": "deploy/systemd/aiops-contest-api.service",
+      "source_host": "server51",
+      "source_path": "/etc/systemd/system/aiops-contest-api.service",
+      "source_sha256": "f0632cc260ec862964508ca42e6364255dba659fc0257e733adfb5fc6733b711",
+      "sha256": "f0632cc260ec862964508ca42e6364255dba659fc0257e733adfb5fc6733b711",
+      "bytes": 1134,
+      "sanitization": []
+    },
+    {
+      "path": "deploy/systemd/aiops-private-grader-demo.service",
+      "source_host": "server51",
+      "source_path": "/etc/systemd/system/aiops-private-grader-demo.service",
+      "source_sha256": "474fe19c9a922354117ef86c510a757be1638a5edd539c59ec0fd9d6580b276a",
+      "sha256": "474fe19c9a922354117ef86c510a757be1638a5edd539c59ec0fd9d6580b276a",
+      "bytes": 1001,
+      "sanitization": []
+    },
+    {
+      "path": "deploy/systemd/aiops-competition-visualization.service",
+      "source_host": "server51",
+      "source_path": "/etc/systemd/system/aiops-competition-visualization.service",
+      "source_sha256": "cf0f00d1201175d7058416ce993375b610368b1d544c940987b872956e78a535",
+      "sha256": "cf0f00d1201175d7058416ce993375b610368b1d544c940987b872956e78a535",
+      "bytes": 1232,
+      "sanitization": []
+    },
+    {
+      "path": "deploy/systemd/aiops-competition-submissions.service",
+      "source_host": "server51",
+      "source_path": "/etc/systemd/system/aiops-competition-submissions.service",
+      "source_sha256": "350060f231c43d524ea2f33b55eef9029231e926c7a947727002369dba0942c4",
+      "sha256": "350060f231c43d524ea2f33b55eef9029231e926c7a947727002369dba0942c4",
+      "bytes": 1621,
+      "sanitization": []
+    },
+    {
+      "path": "deploy/systemd/aiops-submission-snapshot.service",
+      "source_host": "server51",
+      "source_path": "/etc/systemd/system/aiops-submission-snapshot.service",
+      "source_sha256": "afe7aca570544fd9c9b3da84b3de6d631bc27a96f5f54beeb5b69ac56c1809d2",
+      "sha256": "afe7aca570544fd9c9b3da84b3de6d631bc27a96f5f54beeb5b69ac56c1809d2",
+      "bytes": 1015,
+      "sanitization": []
+    },
+    {
+      "path": "deploy/systemd/aiops-submission-snapshot.timer",
+      "source_host": "server51",
+      "source_path": "/etc/systemd/system/aiops-submission-snapshot.timer",
+      "source_sha256": "246afe2fc18e41da30852b25954c2c83c3b7d1e7687fbbf5d921261dbda79bd1",
+      "sha256": "246afe2fc18e41da30852b25954c2c83c3b7d1e7687fbbf5d921261dbda79bd1",
+      "bytes": 199,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-001/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-001.json",
+      "source_sha256": "ffd207aa0fba0e2fa1819cd148635fcd332c33869dce58de66ef566aba324c56",
+      "sha256": "ffd207aa0fba0e2fa1819cd148635fcd332c33869dce58de66ef566aba324c56",
+      "bytes": 248187,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-002/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-002.json",
+      "source_sha256": "5114842ca72ec70b5e4d15eae6fd7f2d693151e90349158b7c023082703e261b",
+      "sha256": "5114842ca72ec70b5e4d15eae6fd7f2d693151e90349158b7c023082703e261b",
+      "bytes": 248164,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-003/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-003.json",
+      "source_sha256": "8901c71a88fdae3b391c099c0353dd56d6951f288d4fc41ca8471addff707b7e",
+      "sha256": "8901c71a88fdae3b391c099c0353dd56d6951f288d4fc41ca8471addff707b7e",
+      "bytes": 138706,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-004/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-004.json",
+      "source_sha256": "7b8877eda723fb4f162a4c6770edef1baa3a943c7a854a9c81153c7ed4552b95",
+      "sha256": "7b8877eda723fb4f162a4c6770edef1baa3a943c7a854a9c81153c7ed4552b95",
+      "bytes": 138645,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-005/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-005.json",
+      "source_sha256": "283dd2566691a56e3f74efeda13e2d60cd17d7c368345203451ee89f787c5733",
+      "sha256": "283dd2566691a56e3f74efeda13e2d60cd17d7c368345203451ee89f787c5733",
+      "bytes": 138647,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-006/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-006.json",
+      "source_sha256": "80098ed3d4c885bc69d7b1ec1bbe38d9fe166cfd267dbbfae2394d9d368fe7ae",
+      "sha256": "80098ed3d4c885bc69d7b1ec1bbe38d9fe166cfd267dbbfae2394d9d368fe7ae",
+      "bytes": 138645,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-007/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-007.json",
+      "source_sha256": "4599e0790f0f98e8eff634c5ab3b6ab03b84bdc9dca1f1cd7d59ff09d390b2ff",
+      "sha256": "4599e0790f0f98e8eff634c5ab3b6ab03b84bdc9dca1f1cd7d59ff09d390b2ff",
+      "bytes": 138651,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-008/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-008.json",
+      "source_sha256": "b5f921cde58fe99337e6aa2086bc09ae997c19a121601308733650afaf4e5e8a",
+      "sha256": "b5f921cde58fe99337e6aa2086bc09ae997c19a121601308733650afaf4e5e8a",
+      "bytes": 138646,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-009/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-009.json",
+      "source_sha256": "7f8a7b0917d618aaf9ca476e60f0ee429cad3d934af07efc3b3dfc6c7e95a71e",
+      "sha256": "7f8a7b0917d618aaf9ca476e60f0ee429cad3d934af07efc3b3dfc6c7e95a71e",
+      "bytes": 138674,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-010/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-010.json",
+      "source_sha256": "e5e22c24e5a68d2e11f06d3b4150cf6e33be9dd1c44b4378189aad255474a2a4",
+      "sha256": "e5e22c24e5a68d2e11f06d3b4150cf6e33be9dd1c44b4378189aad255474a2a4",
+      "bytes": 138706,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-011/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-011.json",
+      "source_sha256": "6905309762eeed121046bfa35c61c4e04a4c9f6ee6e156a92ee3cb7f16aea228",
+      "sha256": "6905309762eeed121046bfa35c61c4e04a4c9f6ee6e156a92ee3cb7f16aea228",
+      "bytes": 138674,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-012/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-012.json",
+      "source_sha256": "be8ae191181c909165d7744306e67c86800142f1a76191287ca821c683af6f4a",
+      "sha256": "be8ae191181c909165d7744306e67c86800142f1a76191287ca821c683af6f4a",
+      "bytes": 138651,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-013/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-013.json",
+      "source_sha256": "4e76722a2c36783c67b27acb01c9e4c928f088639ac78763a90a0613fad63df5",
+      "sha256": "4e76722a2c36783c67b27acb01c9e4c928f088639ac78763a90a0613fad63df5",
+      "bytes": 138621,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-014/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-014.json",
+      "source_sha256": "b4b600faaf29987299f0f80dd5e4dece2374daa337bb45c01e7f5dad0d4d97b0",
+      "sha256": "b4b600faaf29987299f0f80dd5e4dece2374daa337bb45c01e7f5dad0d4d97b0",
+      "bytes": 138651,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-015/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-015.json",
+      "source_sha256": "8db32ef5861f481e4ab23ec9cdb78569500207de01cc2f82de4db88d7a0568c4",
+      "sha256": "8db32ef5861f481e4ab23ec9cdb78569500207de01cc2f82de4db88d7a0568c4",
+      "bytes": 138621,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-016/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-016.json",
+      "source_sha256": "b30be7cd619d5b5e7924050d843aaabc8a51f8bb120014a3fa395a31c2fe5f66",
+      "sha256": "b30be7cd619d5b5e7924050d843aaabc8a51f8bb120014a3fa395a31c2fe5f66",
+      "bytes": 138651,
+      "sanitization": []
+    },
+    {
+      "path": "datasets/public-catalog/SF-017/manifest.json",
+      "source_host": "server51",
+      "source_path": "/data/aiops-contest/public/manifests/SF-017.json",
+      "source_sha256": "67fab079852de7aa9ae2cc494ee0d5911b219e05046c98b77935eb137fb9068c",
+      "sha256": "67fab079852de7aa9ae2cc494ee0d5911b219e05046c98b77935eb137fb9068c",
+      "bytes": 138667,
+      "sanitization": []
+    }
+  ],
+  "missing_sources": [],
+  "excluded_large_files": [],
+  "scope": "code, question definitions, private grading assets and small manifests; no credentials or raw telemetry"
+}

@@ -1,0 +1,143 @@
+document_status: DRAFT_NOT_FROZEN
+protocol: Stage5-v3
+approval_required_before_execution: true
+phase: INITIAL_FORMAL_PILOT_NOT_FINAL_PAPER_SCALE
+target_admitted_cases:
+  DEV: {SERVICE: 3, POD: 3, NODE: 3, NETWORK_PATH: 3}
+  TEST: {SERVICE: 5, POD: 5, NODE: 5, NETWORK_PATH: 5}
+  total: 32
+primary_slots: 32
+registered_reserves_per_layer: 6
+registered_reserves_total: 24
+maximum_attempts: 56
+execution_model: FIXED_PRIMARY_AND_RESERVE_POOL_PRE_GT
+split_pool_sizes:
+  DEV: {primary: 12, reserve: 8, total: 20}
+  TEST: {primary: 20, reserve: 16, total: 36}
+mechanism_quota_proposal:
+  SERVICE:
+    service_process_stall: 4
+    service_cpu_saturation: 4
+  POD:
+    single_instance_pause: 4
+    memory_pressure: 4
+    cpu_quota_ad: 0
+  NODE:
+    cpu_contention: 3
+    memory_pressure: 3
+    io_contention: 2
+  NETWORK_PATH:
+    directional_loss: 5
+    directional_bandwidth: 3
+    generic_unverified_delay: 0
+qualification_gate: each_nonzero_mechanism_must_be_repeated_twice_and_approved_before_freeze
+blocked_mechanism_executable_slots: 0
+slot_registration:
+  layer_order: [SERVICE, POD, NODE, NETWORK_PATH]
+  logical_slot_ids:
+    DEV: "S5V3-D01..D12"
+    TEST: "S5V3-T01..T20"
+  slot_layer_assignment: balanced_round_robin_in_layer_order
+  split_assignment: DEV_has_first_3_per_layer_TEST_has_next_5_per_layer
+  mechanism_assignment: fixed_per_layer_quota_before_freeze_and_human_review
+  target_entity_selection: from_fresh_prefault_public_topology_and_qualified_mechanism_roster
+  distinct_target_preference: rotate_service_pod_node_direction_without_post_result_changes
+  seed_rule:
+    generator: PCG64
+    base_seed: 850001
+    per_logical_slot: base_seed_plus_global_slot_index_zero_based
+    reserve: 860001_plus_reserve_pool_order_zero_based
+    fixed_after_approval: true
+  injection_order_rule:
+    method: DEV_primary_order_then_DEV_reserve_order_then_DEV_GT_barrier_then_TEST_primary_order_then_TEST_reserve_order
+    outputs_to_freeze: [exact_candidate_order, exact_seed_per_candidate, split_layer_reserve_pool, exact_target_pool, bounded_intensity]
+  intensity:
+    levels: [LOW, MEDIUM]
+    distribution: balanced_within_each_mechanism_where_feasible
+    parameters: require_targeted_rehearsal_and_human_approval
+proposed_primary_order:
+  - {id: S5V3-D01, split: DEV, layer: SERVICE, mechanism: service_process_stall, seed: 850001}
+  - {id: S5V3-D02, split: DEV, layer: POD, mechanism: single_instance_pause, seed: 850002}
+  - {id: S5V3-D03, split: DEV, layer: NODE, mechanism: cpu_contention, seed: 850003}
+  - {id: S5V3-D04, split: DEV, layer: NETWORK_PATH, mechanism: directional_loss, seed: 850004}
+  - {id: S5V3-D05, split: DEV, layer: SERVICE, mechanism: service_cpu_saturation, seed: 850005}
+  - {id: S5V3-D06, split: DEV, layer: POD, mechanism: memory_pressure, seed: 850006}
+  - {id: S5V3-D07, split: DEV, layer: NODE, mechanism: memory_pressure, seed: 850007}
+  - {id: S5V3-D08, split: DEV, layer: NETWORK_PATH, mechanism: directional_bandwidth, seed: 850008}
+  - {id: S5V3-D09, split: DEV, layer: SERVICE, mechanism: service_process_stall, seed: 850009}
+  - {id: S5V3-D10, split: DEV, layer: POD, mechanism: single_instance_pause, seed: 850010}
+  - {id: S5V3-D11, split: DEV, layer: NODE, mechanism: io_contention, seed: 850011}
+  - {id: S5V3-D12, split: DEV, layer: NETWORK_PATH, mechanism: directional_loss, seed: 850012}
+  - {id: S5V3-T01, split: TEST, layer: SERVICE, mechanism: service_process_stall, seed: 850013}
+  - {id: S5V3-T02, split: TEST, layer: POD, mechanism: single_instance_pause, seed: 850014}
+  - {id: S5V3-T03, split: TEST, layer: NODE, mechanism: cpu_contention, seed: 850015}
+  - {id: S5V3-T04, split: TEST, layer: NETWORK_PATH, mechanism: directional_loss, seed: 850016}
+  - {id: S5V3-T05, split: TEST, layer: SERVICE, mechanism: service_cpu_saturation, seed: 850017}
+  - {id: S5V3-T06, split: TEST, layer: POD, mechanism: memory_pressure, seed: 850018}
+  - {id: S5V3-T07, split: TEST, layer: NODE, mechanism: memory_pressure, seed: 850019}
+  - {id: S5V3-T08, split: TEST, layer: NETWORK_PATH, mechanism: directional_bandwidth, seed: 850020}
+  - {id: S5V3-T09, split: TEST, layer: SERVICE, mechanism: service_process_stall, seed: 850021}
+  - {id: S5V3-T10, split: TEST, layer: POD, mechanism: single_instance_pause, seed: 850022}
+  - {id: S5V3-T11, split: TEST, layer: NODE, mechanism: cpu_contention, seed: 850023}
+  - {id: S5V3-T12, split: TEST, layer: NETWORK_PATH, mechanism: directional_loss, seed: 850024}
+  - {id: S5V3-T13, split: TEST, layer: SERVICE, mechanism: service_cpu_saturation, seed: 850025}
+  - {id: S5V3-T14, split: TEST, layer: POD, mechanism: memory_pressure, seed: 850026}
+  - {id: S5V3-T15, split: TEST, layer: NODE, mechanism: memory_pressure, seed: 850027}
+  - {id: S5V3-T16, split: TEST, layer: NETWORK_PATH, mechanism: directional_bandwidth, seed: 850028}
+  - {id: S5V3-T17, split: TEST, layer: SERVICE, mechanism: service_cpu_saturation, seed: 850029}
+  - {id: S5V3-T18, split: TEST, layer: POD, mechanism: memory_pressure, seed: 850030}
+  - {id: S5V3-T19, split: TEST, layer: NODE, mechanism: io_contention, seed: 850031}
+  - {id: S5V3-T20, split: TEST, layer: NETWORK_PATH, mechanism: directional_loss, seed: 850032}
+proposed_reserve_order:
+  - {id: S5V3-DS-R01, split: DEV, layer: SERVICE, mechanism: service_process_stall, order: 1, seed: 860001}
+  - {id: S5V3-DP-R01, split: DEV, layer: POD, mechanism: single_instance_pause, order: 1, seed: 860002}
+  - {id: S5V3-DN-R01, split: DEV, layer: NODE, mechanism: cpu_contention, order: 1, seed: 860003}
+  - {id: S5V3-DW-R01, split: DEV, layer: NETWORK_PATH, mechanism: directional_loss, order: 1, seed: 860004}
+  - {id: S5V3-DS-R02, split: DEV, layer: SERVICE, mechanism: service_cpu_saturation, order: 2, seed: 860005}
+  - {id: S5V3-DP-R02, split: DEV, layer: POD, mechanism: memory_pressure, order: 2, seed: 860006}
+  - {id: S5V3-DN-R02, split: DEV, layer: NODE, mechanism: memory_pressure, order: 2, seed: 860007}
+  - {id: S5V3-DW-R02, split: DEV, layer: NETWORK_PATH, mechanism: directional_bandwidth, order: 2, seed: 860008}
+  - {id: S5V3-TS-R01, split: TEST, layer: SERVICE, mechanism: service_process_stall, order: 1, seed: 860009}
+  - {id: S5V3-TP-R01, split: TEST, layer: POD, mechanism: single_instance_pause, order: 1, seed: 860010}
+  - {id: S5V3-TN-R01, split: TEST, layer: NODE, mechanism: cpu_contention, order: 1, seed: 860011}
+  - {id: S5V3-TW-R01, split: TEST, layer: NETWORK_PATH, mechanism: directional_loss, order: 1, seed: 860012}
+  - {id: S5V3-TS-R02, split: TEST, layer: SERVICE, mechanism: service_cpu_saturation, order: 2, seed: 860013}
+  - {id: S5V3-TP-R02, split: TEST, layer: POD, mechanism: memory_pressure, order: 2, seed: 860014}
+  - {id: S5V3-TN-R02, split: TEST, layer: NODE, mechanism: memory_pressure, order: 2, seed: 860015}
+  - {id: S5V3-TW-R02, split: TEST, layer: NETWORK_PATH, mechanism: directional_bandwidth, order: 2, seed: 860016}
+  - {id: S5V3-TS-R03, split: TEST, layer: SERVICE, mechanism: service_process_stall, order: 3, seed: 860017}
+  - {id: S5V3-TP-R03, split: TEST, layer: POD, mechanism: single_instance_pause, order: 3, seed: 860018}
+  - {id: S5V3-TN-R03, split: TEST, layer: NODE, mechanism: io_contention, order: 3, seed: 860019}
+  - {id: S5V3-TW-R03, split: TEST, layer: NETWORK_PATH, mechanism: directional_loss, order: 3, seed: 860020}
+  - {id: S5V3-TS-R04, split: TEST, layer: SERVICE, mechanism: service_cpu_saturation, order: 4, seed: 860021}
+  - {id: S5V3-TP-R04, split: TEST, layer: POD, mechanism: memory_pressure, order: 4, seed: 860022}
+  - {id: S5V3-TN-R04, split: TEST, layer: NODE, mechanism: cpu_contention, order: 4, seed: 860023}
+  - {id: S5V3-TW-R04, split: TEST, layer: NETWORK_PATH, mechanism: directional_bandwidth, order: 4, seed: 860024}
+reserves:
+  execution: all_24_registered_candidates_run_or_engineering_terminal_before_split_GT
+  activation: fixed_schedule_independent_of_primary_admission_or_algorithm_predictions
+  pool_partition: two_DEV_and_four_TEST_per_layer_no_cross_split_borrowing
+  selection_after_GT: for_each_invalid_primary_in_primary_order_take_first_unused_ADMITTED_reserve_of_same_split_and_layer_by_pool_order
+  primary_priority: admitted_primary_always_selected_even_if_any_reserve_ranks_better
+  no_new_injection_after_GT: true
+  failed_attempt_archive: permanent
+  cannot_replace_due_to_prediction_or_difficulty: true
+  exhausted_action: report_slot_shortfall_and_mechanism_composition_without_ad_hoc_replacement
+cost_estimate:
+  historical_dev_admitted_fraction: 0.583
+  old_rate_expected_attempts_for_32: 55
+  proposal_A_attempt_range: 32_to_56_depends_on_pre_gt_engineering_failure_rate_only
+  selected_B_attempts: 56_fixed_candidates_or_terminal_records
+  serial_minutes_per_attempt_estimate: 35_to_40
+  selected_B_serial_hours_upper_planning: 33_to_37
+  excludes: [qualification_rehearsal, offline_inference, outages]
+expansion_after_pilot:
+  requires_new_pre_registered_protocol_and_human_review: true
+  axes: [additional_qualified_mechanisms, workload_strength, bounded_fault_intensity, propagation_pattern, target_identity, path_direction, balanced_root_layers]
+  size_decision: prospective_precision_or_power_analysis_using_pilot_uncertainty_not_test_accuracy
+  selection_independent_of_algorithm_predictions: true
+  never_reuse_stage5_v2_cases_as_stage5_v3_cases: true
+test_rules:
+  test_gt_unread_until_prediction_and_split_freeze: true
+  test_method_lock_required: true
+  no_stage5_v2_case_reuse: true

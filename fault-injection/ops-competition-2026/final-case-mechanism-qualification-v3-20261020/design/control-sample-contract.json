@@ -1,0 +1,12 @@
+{
+  "status": "PROSPECTIVE_QUALIFICATION_V3",
+  "source": "independent fixed-rate Image business stream at one request per second",
+  "minimum_success_fraction": 0.9,
+  "allowed_window_seconds": [180, 240, 300],
+  "minimum_successful_requests": {
+    "180": 162,
+    "240": 216,
+    "300": 270
+  },
+  "note": "The v2 result remains immutable. Apply this contract only to newly registered qualification runs."
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "updated_at": null,
+  "practice": {
+    "state": "CLOSED",
+    "planned_date": "2026-10-21",
+    "published_cases": ["SF-001"]
+  },
+  "semifinal": {
+    "published_cases": [],
+    "sessions": {
+      "AM": {"state": "NOT_OPEN", "opens_at": null, "closes_at": null},
+      "PM": {"state": "NOT_OPEN", "opens_at": null, "closes_at": null}
+    }
+  }
+}

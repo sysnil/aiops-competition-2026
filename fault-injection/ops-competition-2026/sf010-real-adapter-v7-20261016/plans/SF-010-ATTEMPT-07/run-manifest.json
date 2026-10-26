@@ -1,0 +1,61 @@
+{
+  "schema": "EXPLICIT_RUN_REGISTRY_V1",
+  "run_id": "SF-010-ATTEMPT-07",
+  "backend": "SF010_QUALIFIED_SERVICE30_REQDELAY60_V1",
+  "plan_path": "/root/ops-competition-2026/sf010-real-adapter-v7-20261016/plans/SF-010-ATTEMPT-07/run-plan.json",
+  "plan_sha256": "b6392fc729b512d15f973458c5778d001a5fee322ef3f46cbbbe22f668e89a22",
+  "schedule_lock_path": "/root/ops-competition-2026/sf010-real-adapter-v7-20261016/plans/SF-010-ATTEMPT-07/schedule-lock.json",
+  "schedule_lock_sha256": "c52c1823244cacb8662cf3c5f0848fc4a81f92e02d88c9235e73d01389bfd4ee",
+  "actions": [
+    {
+      "run_id": "SF-010-ATTEMPT-07",
+      "action_id": "SF-010-ATTEMPT-07-SERVICE",
+      "fault_event_id": "SF-010-F01",
+      "fault_type": "ServicePause",
+      "mechanism_id": "SERVICE",
+      "worker": "k8s-worker3",
+      "targets": [
+        {
+          "service": "recommendation",
+          "name": "recommendation-c887f6f6b-cxb5j",
+          "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+          "node": "k8s-worker3",
+          "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+          "restart_count": 0,
+          "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-pod8b7c229b_cea1_440f_bc88_e9c1f246ef9e.slice/cri-containerd-9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5.scope",
+          "pid": 3416103,
+          "start_ticks": "162275223"
+        },
+        {
+          "service": "recommendation",
+          "name": "recommendation-c887f6f6b-zchkk",
+          "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+          "node": "k8s-worker3",
+          "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+          "restart_count": 0,
+          "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-pod3886c989_d7a1_44e9_8b44_64c536db1897.slice/cri-containerd-f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0.scope",
+          "pid": 3415737,
+          "start_ticks": "162272132"
+        }
+      ],
+      "duration_seconds": 30,
+      "offset_seconds": 600,
+      "planned_utc": "2026-10-15T16:47:43.727538+00:00",
+      "recovery_offset_seconds": 810,
+      "onset_tolerance_seconds": 2,
+      "unit": "ops-sf010-sf-010-attempt-07-service",
+      "backend": "SF010_QUALIFIED_SERVICE30_REQDELAY60_V1",
+      "execute": "RUN_PINNED_QUALIFIED_ADAPTER",
+      "revoke": "REVOKE_STOP_AND_PINNED_CLEANUP",
+      "qualified_registration": "/root/ops-competition-2026/sf010-real-adapter-v7-20261016/plans/SF-010-ATTEMPT-07/service-registration.json",
+      "qualified_registration_sha256": "fe01e275e93947dac67984ae9cb10611bdba0ee3a1f3457249d0ba2539d2c667",
+      "watchdog_proof_file": "/root/ops-competition-2026/qualification/SF010-WATCHDOG-SELFTEST-W3-ATTEMPT07.json",
+      "watchdog_proof_sha256": "56d59b3ff15202026ea7733f688d597e8f3dc87a9cfb3f5e2adffe473d1ee212",
+      "injection_output": "/root/ops-competition-2026/qualification/private-attempts/SF-010-ATTEMPT-07-SERVICE",
+      "runtime": "/root/ops-competition-2026/sf010-real-adapter-v7-20261016/worker-runtime/SF-010-ATTEMPT-07-SERVICE",
+      "registration_file": "/root/ops-competition-2026/sf010-real-adapter-v7-20261016/plans/SF-010-ATTEMPT-07/run-plan.json"
+    }
+  ],
+  "controller_unit": "ops-sf010-formal-controller07-20261015",
+  "observer_unit": "ops-sf010-formal-observer07-20261015"
+}

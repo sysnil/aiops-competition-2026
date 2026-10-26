@@ -1,0 +1,44 @@
+{
+  "event": "FINAL-20261023",
+  "timezone": "Asia/Shanghai",
+  "finalists": [
+    "TEAM-01",
+    "TEAM-02",
+    "TEAM-03",
+    "TEAM-07",
+    "TEAM-08",
+    "TEAM-10",
+    "TEAM-12",
+    "TEAM-16",
+    "TEAM-17"
+  ],
+  "morning_tasks": {
+    "FT-01": "SF-006",
+    "FT-02": "SF-011",
+    "FT-03": "SF-007"
+  },
+  "morning_opens_at_utc": "2026-10-23T01:00:00+00:00",
+  "morning_opens_at_beijing": "2026-10-23T09:00:00+08:00",
+  "morning_closes_at": null,
+  "pk_tasks": {
+    "PK-R01": "SF-004",
+    "PK-R02": "SF-008",
+    "PK-R03": "SF-009",
+    "PK-R04": "SF-012",
+    "PK-R05": "SF-013",
+    "PK-R06": "SF-016",
+    "PK-R07": "SF-014",
+    "PK-R08": "SF-017",
+    "PK-R09": "SF-015"
+  },
+  "pk_default_minutes": 15,
+  "pk_scope": "EXACTLY_TWO_ASSIGNED_FINALISTS",
+  "pk_active_question_limit": 1,
+  "pk_winner_rule": "ACCURACY_THEN_SERVER_RECEIPT_V1",
+  "rubric_version": "final-balanced-evidence-v2.0",
+  "approved_gt_manifest_sha256": "9049aa9461c61a08bde91a7c5e0c4cb8b9b848c62e92636dcbb567abc295c807",
+  "submission_limits": {
+    "FT": "UNLIMITED",
+    "PK": 1
+  }
+}

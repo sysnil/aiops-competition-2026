@@ -1,0 +1,12 @@
+{
+  "schema": "SF_FINAL_CANDIDATE_MASTER_READY_HANDOFF_V1",
+  "status": "NO_NEW_READY_CASES_BATCH_STOPPED_BY_SAFETY",
+  "case_scope": ["SF-013", "SF-014", "SF-015", "SF-016", "SF-017"],
+  "ready_count": 0,
+  "entries": [],
+  "blocked_case": "SF-013",
+  "blocked_reason": "Two pre-injection engineering failures; the second exposed an abort path that left an already-armed Worker Timer pending until explicit cancellation.",
+  "competition_server_contacted": false,
+  "public_or_private_package_created": false,
+  "old_semi_final_ledger_modified": false
+}

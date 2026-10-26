@@ -1,0 +1,35 @@
+schema_version: 1
+task: stage4f_cross_layer_rca
+candidate_layers: [SERVICE, POD, NODE, NETWORK_PATH]
+identifiers:
+  SERVICE: "SERVICE/<service>"
+  POD: "POD/<namespace>/<pod>"
+  NODE: "NODE/<node>"
+  NETWORK_PATH: "NETWORK_PATH/<src-node>/<dst-node>"
+relationships:
+  - HAS_INSTANCE
+  - RUNS_ON
+  - CALLS
+  - COMMUNICATES_WITH
+  - TRAVERSES
+candidate_sources:
+  service: [public_service_topology, public_kubernetes_services]
+  pod: [public_kubernetes_pods_by_uid, public_endpointslices]
+  node: [public_kubernetes_nodes, public_pod_placement]
+  network_path: [public_normal_network_topology, public_verified_route_map]
+rules:
+  - Build the candidate universe before each fault from public metadata only.
+  - A Pod metric label may corroborate a Kubernetes Pod but may not create a Pod candidate by itself.
+  - If a metric-only Pod or conflicting Pod-to-Node placement appears, fail the precheck.
+  - Persist Pod name and UID separately; a name alone never proves identity continuity.
+  - A NetworkPath candidate requires a pre-fault public route map with named source and destination nodes.
+  - TRAVERSES requires independently verified pre-fault route or flow evidence for that edge.
+  - Node-pair co-location alone is insufficient to assert TRAVERSES.
+  - Candidate lists must never be reconstructed from predictions or evaluator labels.
+forbidden_candidate_inputs:
+  - evaluator_gt
+  - fault_family_manifest_private_fields
+  - injection_command
+  - fault_target
+  - root_layer
+  - root_entity

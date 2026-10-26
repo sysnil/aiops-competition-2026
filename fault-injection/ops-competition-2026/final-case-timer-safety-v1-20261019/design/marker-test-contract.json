@@ -1,0 +1,33 @@
+{
+  "status": "PREREGISTERED_HARMLESS_TIMER_LIFECYCLE_TEST",
+  "scope": "Worker2 local systemd marker and Master controller/guard only",
+  "real_fault_adapter_allowed": false,
+  "business_process_or_kubernetes_changes_allowed": false,
+  "marker_command": "write one run-scoped fired.json timestamp only",
+  "planned_delay_seconds": 7,
+  "post_planned_observation_seconds": 3,
+  "controller_kill_before_planned_seconds": 3,
+  "cases": [
+    "normal",
+    "duplicate_arm",
+    "arm_partial_failure",
+    "identity_failure",
+    "capture_failure",
+    "capacity_failure",
+    "sigterm",
+    "sigkill",
+    "restart_first",
+    "cancel_then_wait"
+  ],
+  "normal_expected_fired": true,
+  "aborted_expected_fired": false,
+  "every_case_requires": [
+    "exact Attempt ID and manifest hash",
+    "REVOKED.json on Worker2",
+    "Worker Timer inactive",
+    "Worker Service inactive",
+    "guard or controller cleanup receipt",
+    "inspection after original planned time"
+  ],
+  "suite_fail_policy": "Stop immediately, revoke the exact active Marker Attempt, preserve all evidence"
+}

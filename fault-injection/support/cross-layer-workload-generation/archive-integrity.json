@@ -1,0 +1,76 @@
+{
+  "created_at_utc": "2026-10-10T03:49:20.867695+00:00",
+  "stage5_v2_freeze_sha256": "6ebafa764b904950c00904d06cebae68c66727a8cf703158aa259bb728cd6452",
+  "checks": {
+    "stage5_v2_freeze_unchanged": true,
+    "final_health": true,
+    "final_five_host_residue": true,
+    "no_fault_runs_hashed": true,
+    "completed_attempts_cleaned": true
+  },
+  "runs": {
+    "HIGH-seed41003": {
+      "status": "LOAD_PASS",
+      "sessions_hash_matches": true,
+      "planned_equals_recorded": true
+    },
+    "LOW-seed41001": {
+      "status": "LOAD_PASS",
+      "sessions_hash_matches": true,
+      "planned_equals_recorded": true
+    },
+    "MEDIUM-seed41002": {
+      "status": "LOAD_PASS",
+      "sessions_hash_matches": true,
+      "planned_equals_recorded": true
+    },
+    "smoke-001": {
+      "status": "LOAD_PASS",
+      "sessions_hash_matches": true,
+      "planned_equals_recorded": true
+    },
+    "v2-MEDIUM-seed41004": {
+      "status": "LOAD_PASS",
+      "sessions_hash_matches": true,
+      "planned_equals_recorded": true
+    },
+    "v2-MEDIUM-seed41005": {
+      "status": "LOAD_PASS",
+      "sessions_hash_matches": true,
+      "planned_equals_recorded": true
+    },
+    "v2-smoke-001": {
+      "status": "LOAD_PASS",
+      "sessions_hash_matches": true,
+      "planned_equals_recorded": true
+    },
+    "v3-vu-smoke-001": {
+      "status": "LOAD_PASS",
+      "sessions_hash_matches": true,
+      "planned_equals_recorded": true
+    }
+  },
+  "attempts": {
+    "WG-NET-BANDWIDTH": {
+      "status": "COMPLETE",
+      "fault_results_cleaned": true
+    },
+    "WG-NET-LOSS": {
+      "status": "COMPLETE",
+      "fault_results_cleaned": true
+    },
+    "WG-POD-PULSE": {
+      "status": "COMPLETE",
+      "fault_results_cleaned": true
+    },
+    "WG-SERVICE-PULSE": {
+      "status": "INCOMPLETE_REHEARSAL",
+      "preserved": true
+    },
+    "WG-SERVICE-PULSE-R2": {
+      "status": "COMPLETE",
+      "fault_results_cleaned": true
+    }
+  },
+  "indexed_files": 389
+}

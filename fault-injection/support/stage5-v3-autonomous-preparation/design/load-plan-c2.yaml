@@ -1,0 +1,52 @@
+schema_version: 1
+revision: autonomous_preparation_clean_c2
+status: PRE_REGISTERED_CLEAN_CANDIDATE_NOT_FROZEN_BENCHMARK
+source: independent_rehearsal
+formal_case: false
+revision_reason: restore MEDIUM 1.5 sessions/s, rotate frontend upstream connections and start first capture at +5s to preserve immutable +60s completion
+workload:
+  machine: /root/stage5-v3-autonomous-preparation/design/workload-state-machine-c2.yaml
+  profile: MEDIUM
+  duration_seconds: 1500
+  before_seconds: 600
+  during_seconds: 300
+  after_seconds: 600
+  workflow_weights: {browse: 20, shopping: 30, checkout: 50}
+  control_streams:
+    - {name: image_asset, operation: GET /images/products/OpticalTubeAssembly.jpg, rate_per_second: 1.0, seed_offset: 101}
+    - {name: product_detail, operation: GET /api/products/2ZYFJ3GM2N, rate_per_second: 2.0, seed_offset: 102}
+    - {name: cart_view, operation: GET /api/cart, rate_per_second: 2.0, seed_offset: 103}
+  control_timeout_seconds: 8
+  control_concurrency_per_stream: {image_asset: 2, product_detail: 4, cart_view: 4}
+  max_added_node_cpu_cores: 0.25
+network_path:
+  candidate: NETWORK_PATH/k8s-worker3/k8s-worker2
+  target_business_edge: checkout->cart
+  current_route_and_packet_proof_required: true
+  prefault_target_edge_successful_requests_per_minute_min: 30
+  prefault_target_edge_usable_spans_per_minute_min: 30
+controls:
+  candidate_one: frontend-proxy_worker2_to_image-provider_worker2
+  candidate_two: frontend_worker1_or_worker2_to_cart_worker2
+  alternative_under_observation: frontend_worker1_or_worker2_to_product-catalog_worker3
+  minimum_successful_requests_per_minute_each_phase: 30
+  minimum_valid_edge_spans_per_minute_each_phase: 30
+  maximum_client_p95_ratio: 1.25
+probe:
+  source: k8s-worker3
+  destination: k8s-worker2
+  interval_seconds: 5
+  before_samples: 120
+  during_samples: 60
+  after_samples: 120
+  minimum_valid_before_after: 108
+  minimum_valid_during: 54
+  maximum_consecutive_invalid: 2
+  per_sample_timeout_seconds: 4
+  timeout_or_miss_value: null
+capture:
+  trace_source: JAEGER_OPENSEARCH_STORAGE
+  phase_start_delay_seconds: 5
+  trace_completion_delay_seconds: 60
+  maximum_capture_start_lag_seconds: 120
+clean_seeds: [851211, 851212]

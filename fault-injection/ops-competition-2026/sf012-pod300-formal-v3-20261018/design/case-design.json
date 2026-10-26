@@ -1,0 +1,40 @@
+{
+  "status": "DRAFT_NOT_FROZEN",
+  "case_id": "SF-012",
+  "run_id": "SF-012-ATTEMPT-03",
+  "formal_duration_seconds": 1800,
+  "timeline": {
+    "before_seconds": [0, 600],
+    "pod_fault_seconds": [600, 900],
+    "recovery_seconds": [900, 1800],
+    "recovery_check_offset_seconds": 1140,
+    "postcheck_offset_seconds": 1200,
+    "fault_terminal_deadline_offset_seconds": 1380
+  },
+  "mechanism": {
+    "id": "POD_MEMORY_32M_300",
+    "qualified_decision": "/root/ops-competition-2026/qualification/COMP-SF01-POD-300/decision.json",
+    "target_selector": "current frontend Pod on k8s-worker2",
+    "normal_replica_selector": "other current Ready frontend Pod",
+    "allocation_bytes": 33554432,
+    "duration_seconds": 300,
+    "independent_watchdog_required": true
+  },
+  "workload": {
+    "profile": "LOW_STABLE",
+    "business_sessions_per_second": 0.7,
+    "fixed_image_per_second": 1,
+    "fixed_cart_per_second": 1,
+    "fixed_home_per_second": 1,
+    "fixed_recommendations_per_second": 1,
+    "same_policy_before_during_after": true
+  },
+  "admission_contract": "design/pod-memory-admission-draft.yaml",
+  "absolute_disk_floor_bytes": 5000000000,
+  "storage_commitment_contract": "/root/ops-competition-2026/low-stable-v4-20261017/storage-v2/case-budgets/sf012-att03.json",
+  "budget_scheme_reused_from": "SF-007-ATTEMPT-05",
+  "archive_target": "worker1",
+  "background_data_reservation_bytes": {"worker2": 2000000000, "worker3": 2000000000},
+  "raw_and_public_scope": "new ATTEMPT-03 only",
+  "historical_attempts_unchanged": true
+}

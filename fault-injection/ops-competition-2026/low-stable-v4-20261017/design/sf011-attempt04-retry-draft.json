@@ -1,0 +1,33 @@
+{
+  "status": "DRAFT_PENDING_FRESH_NOFAULT_HEARTBEAT_QUALIFICATION",
+  "case_id": "SF-011",
+  "run_id": "SF-011-ATTEMPT-04",
+  "superseded_attempt03_failure_record_sha256": "571bf6db2d613bbdf7b6056caa9bf157ee508e82da99785199f015afaea9ed01",
+  "mechanism": "HTTP_HOME_DELAY_250MS_60",
+  "target": "ordinary frontend-proxy GET / business path",
+  "fault_offset_seconds": 900,
+  "fault_duration_seconds": 60,
+  "fault_delay_ms": 250,
+  "workload": {
+    "profile": "LOW_STABLE",
+    "sessions_per_second": 0.7,
+    "image_per_second": 1,
+    "cart_per_second": 1,
+    "home_per_second": 1,
+    "recommendations_per_second": 1,
+    "duration_seconds": 1800
+  },
+  "normal_control_rule": {
+    "image_p95_limit": "max(1.25 * before, before + 2.0 ms)",
+    "calibration_source": "VAL5 and VAL6 clean data, recorded before all SF-011 formal attempts",
+    "calibration_sha256": "7b347645e8ce1525b7f1bfdbb6f85bbc4a3e6e2226a94656e38e891e41de19b0",
+    "cart_p95_limit": "1.25 * before, unchanged",
+    "minimum_samples": "unchanged from SF-011 ATTEMPT-03",
+    "no_prior_attempt_rescoring": true
+  },
+  "required_fresh_heartbeat_contract": "design/five-host-heartbeat-qualification-sf011-att04.json",
+  "minimum_filesystem_free_bytes": 5000000000,
+  "no_change_to_public_private_boundary": true,
+  "private_gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "competition_server_import": false
+}

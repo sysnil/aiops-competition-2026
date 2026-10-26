@@ -1,0 +1,179 @@
+{
+  "task_type": "SEMIFINAL_QUERY_VISUALIZATION",
+  "question_id": "Q01",
+  "case_id": "SF-003",
+  "gt_version": "semifinal-query-visualization-candidate-v1",
+  "rubric_version": "semifinal-query-visualization-4+2+2+2-v1",
+  "review_status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "classification": "DRAFT_PREVIEW_ONLY",
+  "chart_value_tolerance": 1e-09,
+  "chart_time_tolerance_seconds": 0.0,
+  "chart": {
+    "chart_type": "line",
+    "title": "Frontend Pod 内存使用曲线",
+    "x_axis": {
+      "label": "UTC bucket start",
+      "timezone": "UTC"
+    },
+    "y_axis": {
+      "label": "MiB",
+      "unit": "MiB"
+    },
+    "series": [
+      {
+        "name": "frontend-68d8bbfdc8-8mnzh",
+        "unit": "MiB",
+        "points": [
+          {
+            "timestamp": "2026-10-16T03:26:49.724275+00:00",
+            "value": 128.859375
+          },
+          {
+            "timestamp": "2026-10-16T03:27:49.724275+00:00",
+            "value": 128.8623046875
+          },
+          {
+            "timestamp": "2026-10-16T03:28:49.724275+00:00",
+            "value": 128.9306640625
+          },
+          {
+            "timestamp": "2026-10-16T03:29:49.724275+00:00",
+            "value": 128.876953125
+          },
+          {
+            "timestamp": "2026-10-16T03:30:49.724275+00:00",
+            "value": 128.875
+          },
+          {
+            "timestamp": "2026-10-16T03:31:49.724275+00:00",
+            "value": 128.875
+          },
+          {
+            "timestamp": "2026-10-16T03:32:49.724275+00:00",
+            "value": 128.8818359375
+          },
+          {
+            "timestamp": "2026-10-16T03:33:49.724275+00:00",
+            "value": 128.943359375
+          },
+          {
+            "timestamp": "2026-10-16T03:34:49.724275+00:00",
+            "value": 128.8896484375
+          },
+          {
+            "timestamp": "2026-10-16T03:35:49.724275+00:00",
+            "value": 128.8974609375
+          },
+          {
+            "timestamp": "2026-10-16T03:36:49.724275+00:00",
+            "value": 163.3251953125
+          },
+          {
+            "timestamp": "2026-10-16T03:37:49.724275+00:00",
+            "value": 129.0087890625
+          },
+          {
+            "timestamp": "2026-10-16T03:38:49.724275+00:00",
+            "value": 129.06640625
+          },
+          {
+            "timestamp": "2026-10-16T03:39:49.724275+00:00",
+            "value": 129.017578125
+          },
+          {
+            "timestamp": "2026-10-16T03:40:49.724275+00:00",
+            "value": 129.9775390625
+          },
+          {
+            "timestamp": "2026-10-16T03:41:49.724275+00:00",
+            "value": 130.3193359375
+          },
+          {
+            "timestamp": "2026-10-16T03:42:49.724275+00:00",
+            "value": 130.3173828125
+          },
+          {
+            "timestamp": "2026-10-16T03:43:49.724275+00:00",
+            "value": 130.384765625
+          },
+          {
+            "timestamp": "2026-10-16T03:44:49.724275+00:00",
+            "value": 130.3359375
+          },
+          {
+            "timestamp": "2026-10-16T03:45:49.724275+00:00",
+            "value": 130.333984375
+          },
+          {
+            "timestamp": "2026-10-16T03:46:49.724275+00:00",
+            "value": 130.330078125
+          },
+          {
+            "timestamp": "2026-10-16T03:47:49.724275+00:00",
+            "value": 130.3330078125
+          },
+          {
+            "timestamp": "2026-10-16T03:48:49.724275+00:00",
+            "value": 130.3310546875
+          },
+          {
+            "timestamp": "2026-10-16T03:49:49.724275+00:00",
+            "value": 130.3359375
+          },
+          {
+            "timestamp": "2026-10-16T03:50:49.724275+00:00",
+            "value": 130.3349609375
+          },
+          {
+            "timestamp": "2026-10-16T03:51:49.724275+00:00",
+            "value": 130.337890625
+          },
+          {
+            "timestamp": "2026-10-16T03:52:49.724275+00:00",
+            "value": 130.3330078125
+          },
+          {
+            "timestamp": "2026-10-16T03:53:49.724275+00:00",
+            "value": 130.3369140625
+          },
+          {
+            "timestamp": "2026-10-16T03:54:49.724275+00:00",
+            "value": 130.396484375
+          },
+          {
+            "timestamp": "2026-10-16T03:55:49.724275+00:00",
+            "value": 130.3349609375
+          }
+        ]
+      }
+    ]
+  },
+  "answers": [
+    {
+      "question_index": 1,
+      "value": 163.33,
+      "unit": "MiB",
+      "value_tolerance": 0.02,
+      "time_tolerance_seconds": 0.0
+    },
+    {
+      "question_index": 2,
+      "value": "2026-10-16T03:36:49.724275+00:00",
+      "unit": "UTC",
+      "value_tolerance": 0.0,
+      "time_tolerance_seconds": 0.0
+    },
+    {
+      "question_index": 3,
+      "value": 130.81,
+      "unit": "MiB",
+      "value_tolerance": 0.02,
+      "time_tolerance_seconds": 0.0
+    }
+  ],
+  "generation": {
+    "source_review_status": "DRAFT_PENDING_HUMAN_REVIEW",
+    "source_public_manifest_sha256": "2dda9c2d1cb4dd912df3efe5e5d2dcc8fb9b6ae2505f49f24682d2a2d22b1b8e",
+    "source_file_sha256": "5295628c2040fb5c85c14fd43d5000eecb5cac88a00b7b512721e5a8e4ce8d64"
+  }
+}

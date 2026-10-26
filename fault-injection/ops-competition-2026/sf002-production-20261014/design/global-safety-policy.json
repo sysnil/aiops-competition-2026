@@ -1,0 +1,38 @@
+{
+  "status": "DRAFT_INDEPENDENT_SAFETY_GATE",
+  "expected_nodes": [
+    "k8s-master",
+    "k8s-worker1",
+    "k8s-worker2",
+    "k8s-worker3"
+  ],
+  "max_snapshot_age_seconds": 180,
+  "max_node_condition_age_seconds": 600,
+  "max_node_lease_age_seconds": 60,
+  "metric_window_seconds": 600,
+  "metric_step_seconds": 30,
+  "minimum_metric_samples_per_node": 18,
+  "minimum_free_bytes_for_planned_runs": 20000000000,
+  "minimum_imagefs_free_fraction": 0.15,
+  "required_metric_names": [
+    "k8s_node_cpu_usage",
+    "k8s_node_memory_available_bytes",
+    "k8s_node_condition_ready"
+  ],
+  "required_components": [
+    "prometheus",
+    "opensearch",
+    "jaeger",
+    "trace_storage",
+    "collector",
+    "cluster_collector",
+    "tigera_operator",
+    "calico_bgp",
+    "workload_http",
+    "five_host_residue",
+    "independent_watchdog",
+    "no_active_fault",
+    "no_mass_pod_restart",
+    "network_connectivity"
+  ]
+}

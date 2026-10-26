@@ -1,0 +1,81 @@
+{
+  "case_id": "SF-006",
+  "classification": "OFFICIAL",
+  "events": [
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "load-generator-79cbb674d-hmktb"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "63176197-bad1-4d67-8844-e825f4a6fea2",
+      "entity_type": "Pod",
+      "evidence_rubric": "Published MEMORY_USAGE_INCREASE explicitly covers the memory working-set gauge.",
+      "gt_event_id": "EVT-0001",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-17T07:28:33.834000+00:00",
+      "observable_start_time": "2026-10-17T07:28:18.834000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "load-generator-79cbb674d-hmktb"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "63176197-bad1-4d67-8844-e825f4a6fea2",
+      "entity_type": "Pod",
+      "evidence_rubric": "Published MEMORY_USAGE_INCREASE explicitly covers the memory working-set gauge.",
+      "gt_event_id": "EVT-0002",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-17T07:45:33.834000+00:00",
+      "observable_start_time": "2026-10-17T07:45:18.834000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "opensearch-0"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+      "entity_type": "Pod",
+      "evidence_rubric": "Published MEMORY_USAGE_INCREASE explicitly covers the memory working-set gauge.",
+      "gt_event_id": "EVT-0003",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-17T07:47:33.834000+00:00",
+      "observable_start_time": "2026-10-17T07:40:48.834000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "frontend-68d8bbfdc8-8mnzh"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+      "entity_type": "Pod",
+      "evidence_rubric": "Published MEMORY_USAGE_INCREASE explicitly covers the memory working-set gauge.",
+      "gt_event_id": "EVT-0004",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-17T07:28:33.834000+00:00",
+      "observable_start_time": "2026-10-17T07:27:48.834000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    }
+  ],
+  "excluded_groups": [],
+  "matching_rule_version": "final-strict-positive-credit-1.1",
+  "review_status": "APPROVED",
+  "rubric_version": "final-strict-positive-credit-1.1",
+  "source_candidate_manifest_sha256": "2b90d9e09dc2b4b0e718c039bcbaf34db0b0d07451090d516ba02ea235abc314",
+  "source_candidate_sha256": "5777d2577d2132f3a7b78790f12c311f09baf02418f6257d91fbbe91eacb0ccf",
+  "source_public_manifest_sha256": "895d85aedfc019b2573a573ca848f36d236047f66d4c279710ca8df495cee66f",
+  "status": "APPROVED",
+  "task_type": "FINAL_ANOMALY_INVESTIGATION",
+  "time_tolerance_seconds": 120,
+  "version": "FINAL-GT-TAXONOMY-20261020-v2"
+}

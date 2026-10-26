@@ -1,0 +1,213 @@
+{
+  "status": "SF011_FORMAL_ENVIRONMENT_PASS",
+  "at_utc": "2026-10-18T11:51:48.302645+00:00",
+  "current_environment_blockers": [],
+  "environment": {
+    "at_utc": "2026-10-18T11:51:47.835704+00:00",
+    "status": "LIVE_ENVIRONMENT_PASS",
+    "disk": {
+      "root_free_bytes": 45325807616,
+      "data_free_bytes": 67656384512,
+      "mount_device": "/dev/sdb1",
+      "uuid": "a35051a2-3d09-4b83-bbc0-3bb055e8a4f3",
+      "absolute_floor_bytes": 5000000000,
+      "old_static_peak_reservation_used": false
+    },
+    "node_metric_source_timestamps": {
+      "k8s_node_cpu_usage": [
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-worker2"
+          },
+          "value": [
+            1792324307.82,
+            "1792324296.827"
+          ]
+        },
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-master"
+          },
+          "value": [
+            1792324307.82,
+            "1792324294.514"
+          ]
+        },
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-worker1"
+          },
+          "value": [
+            1792324307.82,
+            "1792324293.511"
+          ]
+        },
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-worker3"
+          },
+          "value": [
+            1792324307.82,
+            "1792324295.3"
+          ]
+        }
+      ],
+      "k8s_node_memory_available_bytes": [
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-worker2"
+          },
+          "value": [
+            1792324307.822,
+            "1792324296.827"
+          ]
+        },
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-master"
+          },
+          "value": [
+            1792324307.822,
+            "1792324294.514"
+          ]
+        },
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-worker1"
+          },
+          "value": [
+            1792324307.822,
+            "1792324293.511"
+          ]
+        },
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-worker3"
+          },
+          "value": [
+            1792324307.822,
+            "1792324295.3"
+          ]
+        }
+      ],
+      "k8s_node_condition_ready": [
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-worker1"
+          },
+          "value": [
+            1792324307.823,
+            "1792324300.202"
+          ]
+        },
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-worker2"
+          },
+          "value": [
+            1792324307.823,
+            "1792324300.202"
+          ]
+        },
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-worker3"
+          },
+          "value": [
+            1792324307.823,
+            "1792324300.202"
+          ]
+        },
+        {
+          "metric": {
+            "host_name": "otel-collector-65dbbd4c5-7qf92",
+            "k8s_node_name": "k8s-master"
+          },
+          "value": [
+            1792324307.823,
+            "1792324300.202"
+          ]
+        }
+      ]
+    },
+    "collector_refused_raw_series": [
+      {
+        "metric": {
+          "__name__": "otelcol_receiver_refused_spans_total",
+          "host_name": "otel-collector-65dbbd4c5-7qf92",
+          "instance": "09cd1d0e-e74f-44f3-bcfb-f5b652a577d9",
+          "job": "otelcol-contrib",
+          "k8s_namespace_name": "otel-demo",
+          "k8s_node_name": "k8s-worker3",
+          "k8s_pod_name": "otel-collector-65dbbd4c5-7qf92",
+          "receiver": "otlp",
+          "service_instance_id": "09cd1d0e-e74f-44f3-bcfb-f5b652a577d9",
+          "service_name": "otelcol-contrib",
+          "service_version": "0.156.0",
+          "transport": "grpc"
+        },
+        "value": [
+          1792324307.828,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "otelcol_receiver_refused_spans_total",
+          "host_name": "otel-collector-65dbbd4c5-7qf92",
+          "instance": "09cd1d0e-e74f-44f3-bcfb-f5b652a577d9",
+          "job": "otelcol-contrib",
+          "k8s_namespace_name": "otel-demo",
+          "k8s_node_name": "k8s-worker3",
+          "k8s_pod_name": "otel-collector-65dbbd4c5-7qf92",
+          "receiver": "otlp",
+          "service_instance_id": "09cd1d0e-e74f-44f3-bcfb-f5b652a577d9",
+          "service_name": "otelcol-contrib",
+          "service_version": "0.156.0",
+          "transport": "http"
+        },
+        "value": [
+          1792324307.828,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "otelcol_receiver_refused_spans_total",
+          "host_name": "otel-collector-65dbbd4c5-7qf92",
+          "instance": "6c311d92-a883-4b6e-a945-ee1fe895ddc0",
+          "job": "jaeger",
+          "receiver": "otlp",
+          "service_instance_id": "6c311d92-a883-4b6e-a945-ee1fe895ddc0",
+          "service_name": "jaeger",
+          "service_version": "v2.19.0",
+          "transport": "grpc"
+        },
+        "value": [
+          1792324307.828,
+          "0"
+        ]
+      }
+    ],
+    "collector_missing_metric_policy": "UNKNOWN_NOT_ZERO"
+  },
+  "collector_uid": "b6e0e86e-fd79-46ed-be58-61d494c6b074",
+  "collector_refused": {
+    "grpc": 0.0,
+    "http": 0.0
+  },
+  "five_host_snapshot_sha256": "d49a254b6c6517e4dc10820f7a8740719bc9a4f47c9f339497b2748471c9ad65",
+  "five_host_residue_sha256": "a9068f03fbc0b171d10de974daaa3289d266e1744303b44bfb677a735221ad7b",
+  "identity_sha256": "e149cda29748c60988924f8315be333a1036337c76a1ebee4c07c9ce304b3945"
+}

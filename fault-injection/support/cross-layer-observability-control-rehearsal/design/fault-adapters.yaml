@@ -1,0 +1,26 @@
+schema_version: 1
+kind: bounded_fault_adapters_for_observability_control_rehearsal
+status: PREDECLARED_BEFORE_FIRST_FAULT
+rehearsal_root: /root/cross-layer-observability-control-rehearsal
+service_pod_experiments:
+  - {id: OC-D06-S1, source_case: D06-type-independent, target_service: frontend,
+     target_node: k8s-worker2, target_scope: lexicographically_first_ready_pod_uid,
+     mechanism: bounded_sigstop_pulses, stop_seconds: 5, period_seconds: 15,
+     fault_seconds: 60}
+  - {id: OC-D06-S2, source_case: D06-type-independent, target_service: frontend,
+     target_node: k8s-worker2, target_scope: lexicographically_first_ready_pod_uid,
+     mechanism: bounded_sigstop_pulses, stop_seconds: 5, period_seconds: 15,
+     fault_seconds: 60}
+network_experiments:
+  - {id: OC-D11-S1, source_case: D11-type-independent,
+     path: NETWORK_PATH/k8s-worker3/k8s-worker1,
+     mechanism: egress_filtered_netem_loss, loss_percent: 10, fault_seconds: 60}
+  - {id: OC-D11-S2, source_case: D11-type-independent,
+     path: NETWORK_PATH/k8s-worker3/k8s-worker1,
+     mechanism: egress_filtered_netem_loss, loss_percent: 10, fault_seconds: 60}
+  - {id: OC-D12-S1, source_case: D12-type-independent,
+     path: NETWORK_PATH/k8s-worker2/k8s-worker3,
+     mechanism: egress_filtered_tbf_shaping, rate_kbit: 1500, fault_seconds: 60}
+  - {id: OC-D12-S2, source_case: D12-type-independent,
+     path: NETWORK_PATH/k8s-worker2/k8s-worker3,
+     mechanism: egress_filtered_tbf_shaping, rate_kbit: 1500, fault_seconds: 60}

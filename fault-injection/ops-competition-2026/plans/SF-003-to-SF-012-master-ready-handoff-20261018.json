@@ -1,0 +1,254 @@
+{
+  "status": "MASTER_READY_PUBLIC_PACKAGES_VERIFIED",
+  "created_utc": "2026-10-18T13:56:21.557720+00:00",
+  "ledger_sha256": "813035c9c5e69741c73de7d0afb92e427d8745714992ab74c0c41c414f7e69f8",
+  "ready_cases": 10,
+  "remaining_cases": 0,
+  "competition_server_contacted": false,
+  "entries": [
+    {
+      "case_id": "SF-003",
+      "attempt_id": "SF-003-ATTEMPT-02",
+      "public_path_on_master": "/data/stage5-v3/ops-competition-2026/packages/SF-003-ATTEMPT-02/public",
+      "public_manifest_sha256": "2dda9c2d1cb4dd912df3efe5e5d2dcc8fb9b6ae2505f49f24682d2a2d22b1b8e",
+      "public_file_count": 6,
+      "public_total_bytes": 41109913,
+      "window": {
+        "case_id": "SF-003",
+        "start_utc": "2026-10-16T03:26:49.724275+00:00",
+        "end_utc": "2026-10-16T03:56:49.724275+00:00"
+      },
+      "row_counts": {
+        "metrics": 41160,
+        "logs": 298746,
+        "traces": 433676
+      },
+      "trace_index_rows": 62528,
+      "gt_review_state": "DRAFT_PENDING_HUMAN_REVIEW",
+      "ledger_server_import_marker": "NOT_EXECUTED",
+      "competition_server_51_state": "NOT_CHECKED_THIS_TURN"
+    },
+    {
+      "case_id": "SF-004",
+      "attempt_id": "SF-004-ATTEMPT-05",
+      "public_path_on_master": "/data/stage5-v3/ops-competition-2026/packages/SF-004-ATTEMPT-05/public",
+      "public_manifest_sha256": "7074bed09aaae6f5828f8e37e8c03aad0b6dc9caa0188f386867649c9047b242",
+      "public_file_count": 6,
+      "public_total_bytes": 31935257,
+      "window": {
+        "case_id": "SF-004",
+        "run_id": "SF-004-ATTEMPT-05",
+        "formal_case": true,
+        "start_utc": "2026-10-17T06:18:26.347991+00:00",
+        "end_utc": "2026-10-17T06:48:26.347991+00:00",
+        "schedule_sha256": "c928a985baa14a8343ca8afd9d54397fa8d45fa9cd835aadfa5618ad91fc3d5e"
+      },
+      "row_counts": {
+        "metrics": 39000,
+        "logs": 196371,
+        "traces": 349727
+      },
+      "trace_index_rows": 53244,
+      "gt_review_state": "DRAFT_PENDING_HUMAN_REVIEW",
+      "ledger_server_import_marker": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "competition_server_51_state": "NOT_CHECKED_THIS_TURN"
+    },
+    {
+      "case_id": "SF-005",
+      "attempt_id": "SF-005-ATTEMPT-04",
+      "public_path_on_master": "/data/stage5-v3/ops-competition-2026/packages/SF-005-ATTEMPT-04/public",
+      "public_manifest_sha256": "3bddfc396be4bb0a6002d1bbd959c44bf770a692e916dfd5c71da31fafd756f2",
+      "public_file_count": 6,
+      "public_total_bytes": 38974195,
+      "window": {
+        "case_id": "SF-005",
+        "run_id": "SF-005-ATTEMPT-04",
+        "start_utc": "2026-10-16T11:23:55.458636+00:00",
+        "end_utc": "2026-10-16T11:53:55.458636+00:00",
+        "schedule_sha256": "68153ea16eec83868f79fca42a23e5c263a3ce6f3c8b410bd8b2962c52972738",
+        "capture_terminal_sha256": "ba3917674fae384689e5a37d390de9ebb42b1bb5c192e83b5caaba428c4c37bc"
+      },
+      "row_counts": {
+        "metrics": 38425,
+        "logs": 281046,
+        "traces": 420364
+      },
+      "trace_index_rows": 60102,
+      "gt_review_state": "DRAFT_PENDING_HUMAN_REVIEW",
+      "ledger_server_import_marker": "NOT_EXECUTED",
+      "competition_server_51_state": "NOT_CHECKED_THIS_TURN"
+    },
+    {
+      "case_id": "SF-006",
+      "attempt_id": "SF-006-ATTEMPT-01",
+      "public_path_on_master": "/data/stage5-v3/ops-competition-2026/packages/SF-006-ATTEMPT-01/public",
+      "public_manifest_sha256": "895d85aedfc019b2573a573ca848f36d236047f66d4c279710ca8df495cee66f",
+      "public_file_count": 6,
+      "public_total_bytes": 31732626,
+      "window": {
+        "case_id": "SF-006",
+        "run_id": "SF-006-ATTEMPT-01",
+        "formal_case": true,
+        "start_utc": "2026-10-17T07:17:33.834205+00:00",
+        "end_utc": "2026-10-17T07:47:33.834205+00:00",
+        "schedule_sha256": "6b8c683ff38a298c6cccdf08efa690cb699e6f0ea7190e57c97a8aa34bfc3b3c"
+      },
+      "row_counts": {
+        "metrics": 39000,
+        "logs": 199152,
+        "traces": 346841
+      },
+      "trace_index_rows": 52365,
+      "gt_review_state": "DRAFT_PENDING_HUMAN_REVIEW",
+      "ledger_server_import_marker": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "competition_server_51_state": "NOT_CHECKED_THIS_TURN"
+    },
+    {
+      "case_id": "SF-007",
+      "attempt_id": "SF-007-ATTEMPT-08",
+      "public_path_on_master": "/data/stage5-v3/ops-competition-2026/packages/SF-007-ATTEMPT-08/public",
+      "public_manifest_sha256": "b5b3291da7ebc0f8b54f2098ffb3193f763c657f99c2843552c23562a5b7493d",
+      "public_file_count": 6,
+      "public_total_bytes": 30812248,
+      "window": {
+        "case_id": "SF-007",
+        "run_id": "SF-007-ATTEMPT-08",
+        "start_utc": "2026-10-18T10:27:45.435689+00:00",
+        "end_utc": "2026-10-18T10:57:45.435689+00:00",
+        "schedule_sha256": "9c68220d4d71321fea8d2c608dc1a8cd04f5da7d0b84ef3ddc6877493cb2fb5f",
+        "capture_terminal_sha256": "2adc5505df2263fe472808cf63c2558191507e2e8abade8e5c6833874fe5aa65"
+      },
+      "row_counts": {
+        "metrics": 40752,
+        "logs": 190786,
+        "traces": 339854
+      },
+      "trace_index_rows": 51255,
+      "gt_review_state": "DRAFT_PENDING_HUMAN_REVIEW",
+      "ledger_server_import_marker": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "competition_server_51_state": "NOT_CHECKED_THIS_TURN"
+    },
+    {
+      "case_id": "SF-008",
+      "attempt_id": "SF-008-ATTEMPT-09",
+      "public_path_on_master": "/data/stage5-v3/ops-competition-2026/packages/SF-008-ATTEMPT-09/public",
+      "public_manifest_sha256": "5182f70f54aa264746db2527f7da5b0a36d40f0328e1ab6003963b8cc7a59418",
+      "public_file_count": 6,
+      "public_total_bytes": 31414949,
+      "window": {
+        "case_id": "SF-008",
+        "run_id": "SF-008-ATTEMPT-09",
+        "formal_case": true,
+        "start_utc": "2026-10-17T14:33:30.521398+00:00",
+        "end_utc": "2026-10-17T15:03:30.521398+00:00",
+        "schedule_sha256": "692a0de6c372a044fb3e16dbfcb2de0b5f3a2caea79527b4c3209c57bca22dcb"
+      },
+      "row_counts": {
+        "metrics": 40560,
+        "logs": 187619,
+        "traces": 346964
+      },
+      "trace_index_rows": 52853,
+      "gt_review_state": "DRAFT_PENDING_HUMAN_REVIEW",
+      "ledger_server_import_marker": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "competition_server_51_state": "NOT_CHECKED_THIS_TURN"
+    },
+    {
+      "case_id": "SF-009",
+      "attempt_id": "SF-009-ATTEMPT-04",
+      "public_path_on_master": "/data/stage5-v3/ops-competition-2026/packages/SF-009-ATTEMPT-04/public",
+      "public_manifest_sha256": "85c2d7f401939d62ad2cf76d24e19c5cb5250ad76c31e775293520f33a6bfd37",
+      "public_file_count": 6,
+      "public_total_bytes": 32223576,
+      "window": {
+        "case_id": "SF-009",
+        "run_id": "SF-009-ATTEMPT-04",
+        "start_utc": "2026-10-18T04:57:08.516775+00:00",
+        "end_utc": "2026-10-18T05:27:08.516775+00:00",
+        "schedule_sha256": "f5a15857899a5298b2f289e31b4ed2373e5d486a42be9e94f3e46b143d58f9bb",
+        "capture_terminal_sha256": "12750679524012c01ea22cff6d6675b75f2299e313b15994b5dc7c8672719f39"
+      },
+      "row_counts": {
+        "metrics": 40734,
+        "logs": 195753,
+        "traces": 354327
+      },
+      "trace_index_rows": 54268,
+      "gt_review_state": "DRAFT_PENDING_HUMAN_REVIEW",
+      "ledger_server_import_marker": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "competition_server_51_state": "NOT_CHECKED_THIS_TURN"
+    },
+    {
+      "case_id": "SF-010",
+      "attempt_id": "SF-010-ATTEMPT-07",
+      "public_path_on_master": "/data/stage5-v3/ops-competition-2026/exports/SF-010-ATTEMPT-07/public",
+      "public_manifest_sha256": "6598702cfb9edd0cd5476de44e46c5c75191f12583c67c34c86e75a6e8d47a96",
+      "public_file_count": 6,
+      "public_total_bytes": 41134699,
+      "window": {
+        "case_id": "SF-010",
+        "start_utc": "2026-10-15T16:37:43.727538+00:00",
+        "end_utc": "2026-10-15T17:07:43.727538+00:00"
+      },
+      "row_counts": {
+        "metrics": 41581,
+        "logs": 295980,
+        "traces": 432558
+      },
+      "trace_index_rows": 62868,
+      "gt_review_state": "DRAFT_PENDING_HUMAN_REVIEW",
+      "ledger_server_import_marker": "NOT_EXECUTED",
+      "competition_server_51_state": "NOT_CHECKED_THIS_TURN"
+    },
+    {
+      "case_id": "SF-011",
+      "attempt_id": "SF-011-ATTEMPT-05",
+      "public_path_on_master": "/data/stage5-v3/ops-competition-2026/packages/SF-011-ATTEMPT-05/public",
+      "public_manifest_sha256": "025b1a41fc56c17e5b0dd9e36731260eaa5268696b5f0e3b8d36b0a9af12d47e",
+      "public_file_count": 6,
+      "public_total_bytes": 31722665,
+      "window": {
+        "case_id": "SF-011",
+        "run_id": "SF-011-ATTEMPT-05",
+        "formal_case": true,
+        "start_utc": "2026-10-18T13:10:57.472933+00:00",
+        "end_utc": "2026-10-18T13:40:57.472933+00:00",
+        "schedule_sha256": "cc0286762149447396efe37e192b76886466935512ffe005ede479246fdf69a4"
+      },
+      "row_counts": {
+        "metrics": 40792,
+        "logs": 192786,
+        "traces": 349397
+      },
+      "trace_index_rows": 53230,
+      "gt_review_state": "DRAFT_PENDING_HUMAN_REVIEW",
+      "ledger_server_import_marker": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "competition_server_51_state": "NOT_CHECKED_THIS_TURN"
+    },
+    {
+      "case_id": "SF-012",
+      "attempt_id": "SF-012-ATTEMPT-04",
+      "public_path_on_master": "/data/stage5-v3/ops-competition-2026/packages/SF-012-ATTEMPT-04/public",
+      "public_manifest_sha256": "7e7306cf61205d91f5e9c34dea33bc86fc077e0c3bb25e1bce15b684be6bbd12",
+      "public_file_count": 6,
+      "public_total_bytes": 31817899,
+      "window": {
+        "case_id": "SF-012",
+        "run_id": "SF-012-ATTEMPT-04",
+        "start_utc": "2026-10-18T09:19:13.286218+00:00",
+        "end_utc": "2026-10-18T09:49:13.286218+00:00",
+        "schedule_sha256": "867e26f14fe8021ab57f5a8826ac7d291d2272a1af281820002a6c30a94edcef",
+        "capture_terminal_sha256": "902b59dd4c9259e16cf2a9ad836eb90ffb9c5cc989c43113639891f2b2f0348b"
+      },
+      "row_counts": {
+        "metrics": 40560,
+        "logs": 190092,
+        "traces": 351032
+      },
+      "trace_index_rows": 53722,
+      "gt_review_state": "DRAFT_PENDING_HUMAN_REVIEW",
+      "ledger_server_import_marker": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "competition_server_51_state": "NOT_CHECKED_THIS_TURN"
+    }
+  ]
+}

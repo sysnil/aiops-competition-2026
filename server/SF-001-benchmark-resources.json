@@ -1,0 +1,36 @@
+{
+  "pid": 82218,
+  "duration_seconds": 29.484,
+  "samples": 293,
+  "api_cpu_percent": {
+    "mean": 63.062,
+    "peak": 407.7
+  },
+  "system_cpu_percent": {
+    "mean": 16.45,
+    "peak": 100.0
+  },
+  "api_memory": {
+    "rss_peak_bytes": 371593216,
+    "vms_peak_bytes": 2759368704
+  },
+  "api_threads_peak": 29,
+  "system_available_memory_min_bytes": 15777239040,
+  "api_io_delta": {
+    "cancelled_write_bytes": 0,
+    "rchar": 1049388481,
+    "read_bytes": 0,
+    "syscr": 169607,
+    "syscw": 208,
+    "wchar": 39671,
+    "write_bytes": 0
+  },
+  "system_disk_delta": {
+    "read_bytes": 0,
+    "write_bytes": 2891776
+  },
+  "service_state_after": {
+    "aiops-contest-api.service": "active",
+    "nginx.service": "active"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "case_id": "SF-017",
+  "classification": "OFFICIAL",
+  "events": [
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "opensearch-0"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+      "entity_type": "Pod",
+      "evidence_rubric": "Public container_memory_working_set_bytes samples support the Pod memory increase.",
+      "gt_event_id": "EVT-0004",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T14:15:01.133000+00:00",
+      "observable_start_time": "2026-10-20T14:01:16.133000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [
+        "TRACE_LATENCY_INCREASE"
+      ],
+      "accepted_entity_aliases": [],
+      "anomaly_type": "REQUEST_ERROR_INCREASE",
+      "entity_id": "frontend",
+      "entity_type": "Service",
+      "evidence_rubric": "Public Trace error status and duration samples support the Service request error/latency event.",
+      "gt_event_id": "EVT-0006",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T14:05:41.866000+00:00",
+      "observable_start_time": "2026-10-20T14:01:17.579000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [
+        "TRACE_LATENCY_INCREASE"
+      ],
+      "accepted_entity_aliases": [],
+      "anomaly_type": "REQUEST_ERROR_INCREASE",
+      "entity_id": "frontend-proxy",
+      "entity_type": "Service",
+      "evidence_rubric": "Public Trace error status and duration samples support the Service request error/latency event.",
+      "gt_event_id": "EVT-0008",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T14:05:41.861153+00:00",
+      "observable_start_time": "2026-10-20T14:01:17.578754+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "opensearch-0"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+      "entity_type": "Pod",
+      "evidence_rubric": "Public container_memory_working_set_bytes samples support the Pod memory increase.",
+      "gt_event_id": "EVT-0003",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T13:59:31.133000+00:00",
+      "observable_start_time": "2026-10-20T13:55:16.133000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "otel-infra-agent-agent-2w6fg"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "0e0ac70a-a31f-460b-865f-944bc87d29b0",
+      "entity_type": "Pod",
+      "evidence_rubric": "Public container_memory_working_set_bytes samples support the Pod memory increase.",
+      "gt_event_id": "EVT-0001",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T14:09:31.133000+00:00",
+      "observable_start_time": "2026-10-20T14:07:01.133000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    }
+  ],
+  "excluded_groups": [
+    {
+      "event_id": "EVT-0002",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0005",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0007",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0009",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0010",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0011",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    }
+  ],
+  "matching_rule_version": "final-strict-positive-credit-1.1",
+  "review_status": "APPROVED",
+  "rubric_version": "final-strict-positive-credit-1.1",
+  "source_candidate_manifest_sha256": "012c1a428cf618987f305d659b1be2ea7b8d7e11416c16086c5705990660af7d",
+  "source_candidate_sha256": "39b07397e4af2af721f1c988020434d6415b88ab241e58696cf6ccce1ca606ec",
+  "source_public_manifest_sha256": "1f772f68bf55bedb3239d4fc6d67a485f81ba109b504c300b6b0dd3d7bf39dd0",
+  "status": "APPROVED",
+  "task_type": "FINAL_ANOMALY_INVESTIGATION",
+  "time_tolerance_seconds": 120,
+  "version": "FINAL-GT-TAXONOMY-20261020-v2"
+}

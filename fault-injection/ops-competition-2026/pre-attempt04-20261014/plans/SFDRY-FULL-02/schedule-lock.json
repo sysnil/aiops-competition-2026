@@ -1,0 +1,75 @@
+{
+  "run_id": "SFDRY-FULL-02",
+  "plan_sha256": "4e3e60ffbc624e06031360a1270e9c46327afb50a6a408f755ba2bdfd80f4007",
+  "actions": [
+    {
+      "run_id": "SFDRY-FULL-02",
+      "action_id": "SFDRY-FULL-02-SERVICE",
+      "mechanism_id": "SERVICE",
+      "worker": "k8s-worker3",
+      "targets": [
+        {
+          "service": "recommendation",
+          "name": "recommendation-c887f6f6b-cxb5j",
+          "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+          "node": "k8s-worker3",
+          "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+          "restart_count": 0,
+          "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-pod8b7c229b_cea1_440f_bc88_e9c1f246ef9e.slice/cri-containerd-9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5.scope",
+          "pid": 3416103,
+          "start_ticks": "162275223"
+        },
+        {
+          "service": "recommendation",
+          "name": "recommendation-c887f6f6b-zchkk",
+          "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+          "node": "k8s-worker3",
+          "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+          "restart_count": 0,
+          "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-pod3886c989_d7a1_44e9_8b44_64c536db1897.slice/cri-containerd-f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0.scope",
+          "pid": 3415737,
+          "start_ticks": "162272132"
+        }
+      ],
+      "planned_utc": "2026-10-14T07:58:24.803995+00:00",
+      "offset_seconds": 660,
+      "duration_seconds": 10,
+      "unit": "ops-p04-sfdry-full-02-service",
+      "runtime": "/root/ops-competition-2026/pre-attempt04-20261014/worker-runtime/SFDRY-FULL-02-SERVICE",
+      "registration_file": "/root/ops-competition-2026/pre-attempt04-20261014/plans/SFDRY-FULL-02/run-plan.json",
+      "backend": "HARMLESS_LOCAL_TIME_MARKER_V1",
+      "execute": "WRITE_MARKER_AND_MONITOR_LEASE",
+      "revoke": "REVOKE_AND_STOP_OWN_TIMER",
+      "onset_tolerance_seconds": 2
+    },
+    {
+      "run_id": "SFDRY-FULL-02",
+      "action_id": "SFDRY-FULL-02-POD",
+      "mechanism_id": "POD",
+      "worker": "k8s-worker2",
+      "targets": [
+        {
+          "service": "frontend",
+          "name": "frontend-68d8bbfdc8-8mnzh",
+          "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+          "node": "k8s-worker2",
+          "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+          "restart_count": 0,
+          "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-podd4bb49b4_6fb8_4a07_aaf6_e2caff5df974.slice/cri-containerd-447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e.scope",
+          "pid": 2022249,
+          "start_ticks": "164244306"
+        }
+      ],
+      "planned_utc": "2026-10-14T08:01:24.803995+00:00",
+      "offset_seconds": 840,
+      "duration_seconds": 10,
+      "unit": "ops-p04-sfdry-full-02-pod",
+      "runtime": "/root/ops-competition-2026/pre-attempt04-20261014/worker-runtime/SFDRY-FULL-02-POD",
+      "registration_file": "/root/ops-competition-2026/pre-attempt04-20261014/plans/SFDRY-FULL-02/run-plan.json",
+      "backend": "HARMLESS_LOCAL_TIME_MARKER_V1",
+      "execute": "WRITE_MARKER_AND_MONITOR_LEASE",
+      "revoke": "REVOKE_AND_STOP_OWN_TIMER",
+      "onset_tolerance_seconds": 2
+    }
+  ]
+}

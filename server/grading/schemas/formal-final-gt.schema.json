@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "task_type", "classification", "status", "review_status", "version", "rubric_version", "matching_rule_version", "time_tolerance_seconds", "source_candidate_manifest_sha256", "source_candidate_sha256", "source_public_manifest_sha256", "excluded_groups", "events"],
+  "properties": {
+    "case_id": {"pattern": "^SF-[0-9]{3}$"},
+    "task_type": {"const": "FINAL_ANOMALY_INVESTIGATION"},
+    "classification": {"const": "OFFICIAL"},
+    "status": {"const": "APPROVED"},
+    "review_status": {"const": "APPROVED"},
+    "version": {"type": "string", "minLength": 8},
+    "rubric_version": {"type": "string", "minLength": 8},
+    "matching_rule_version": {"type": "string", "minLength": 8},
+    "time_tolerance_seconds": {"type": "integer", "minimum": 0, "maximum": 600},
+    "source_candidate_manifest_sha256": {"pattern": "^[0-9a-f]{64}$"},
+    "source_candidate_sha256": {"pattern": "^[0-9a-f]{64}$"},
+    "source_public_manifest_sha256": {"pattern": "^[0-9a-f]{64}$"},
+    "excluded_groups": {"type": "array", "items": {"type": "object"}},
+    "events": {
+      "type": "array", "minItems": 1, "maxItems": 5,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["gt_event_id", "anomaly_type", "accepted_anomaly_types", "entity_type", "entity_id", "accepted_entity_aliases", "observable_start_time", "observable_end_time", "evidence_rubric", "review_status", "gt_version", "rubric_version"],
+        "properties": {
+          "gt_event_id": {"pattern": "^EVT-[0-9]{4}$"},
+          "anomaly_type": {"type": "string"},
+          "accepted_anomaly_types": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "entity_type": {"enum": ["Service", "Pod", "Node", "CallEdge", "Network", "MetricSeries"]},
+          "entity_id": {"type": "string", "minLength": 1},
+          "accepted_entity_aliases": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "observable_start_time": {"type": "string", "format": "date-time"},
+          "observable_end_time": {"type": "string", "format": "date-time"},
+          "evidence_rubric": {"type": "string", "minLength": 8},
+          "review_status": {"const": "APPROVED"},
+          "gt_version": {"type": "string"},
+          "rubric_version": {"type": "string"}
+        }
+      }
+    }
+  }
+}

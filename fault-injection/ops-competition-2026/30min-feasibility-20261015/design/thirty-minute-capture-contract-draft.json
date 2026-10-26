@@ -1,0 +1,60 @@
+{
+  "status": "DRAFT_NOT_FROZEN_NOT_EXECUTION_PERMISSION",
+  "window_seconds": 1800,
+  "normal_business_load": {
+    "profile": "MEDIUM",
+    "sessions_per_second": 1.4,
+    "image_requests_per_second": 1,
+    "cart_requests_per_second": 2,
+    "same_policy_before_during_after": true
+  },
+  "capture": {
+    "offsets_seconds": [0, 300, 600, 900, 1200, 1500, 1800],
+    "trace_source": "JAEGER_OPENSEARCH_STORAGE",
+    "first_read_seconds_after_window_end": 5,
+    "immutable_trace_completion_seconds_after_window_end": [60, 120, 240],
+    "window_bounds": "[start,end)",
+    "require_all_six_chunk_quality_pass": true,
+    "require_final_request_id_to_proxy_span_accounting": true,
+    "explain_only_real_one_second_boundary_spans": true,
+    "never_rewrite_query_timestamps": true
+  },
+  "proposed_first_fault_gate": {
+    "earliest_onset_with_full_audit_observed_seconds": 600,
+    "require_first_chunk_quality_pass": true,
+    "minimum_authorization_slack_seconds": 15,
+    "maximum_safety_age_seconds": 30,
+    "collector_refused_delta_allowed": 0,
+    "on_missing_or_late_quality": "CANCEL_PENDING_TIMER_KEEP_INVALID_ATTEMPT",
+    "current_formal_controller_integrated": false
+  },
+  "proposed_early_fault_before_full_audit": {
+    "status": "UNVALIDATED_ALTERNATIVE_FOR_FOUR_TO_SIX_EVENTS",
+    "require_full_first_chunk_initial_capture_before_onset": true,
+    "retain_plus240_audit": true,
+    "on_later_audit_failure": "CANCEL_ALL_PENDING_EVENTS_KEEP_ORIGINAL_EVIDENCE",
+    "requires_separate_safety_and_admission_review": true
+  },
+  "fault_duration_policy": {
+    "existing_300_second_formal_contracts_unchanged": true,
+    "historical_qualified_alternative_durations_seconds": {
+      "ServicePause": 30,
+      "PodMemoryStress": 60
+    },
+    "new_formal_versions_require_source_hash_watchdog_and_effect_requalification": true,
+    "other_mechanism_duration_or_recovery_inferred_from_name": false
+  },
+  "storage": {
+    "absolute_free_floor_bytes_each_host_filesystem": 20000000000,
+    "peak_reservation_check_before_each_case": true,
+    "worker2_worker3_immutable_double_archive": true,
+    "archive_sha256_and_restored_read_required": true
+  },
+  "public_private": {
+    "public_metrics_logs_traces_topology_only": true,
+    "private_injection_records_and_gt_separate": true,
+    "gt_draft_from_actual_public_anomaly_evidence": true,
+    "human_review_before_official_scoring": true
+  },
+  "formal_cases_started_by_this_document": 0
+}

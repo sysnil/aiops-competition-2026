@@ -1,0 +1,23 @@
+data:
+  public_root: /data/aiops-contest/public
+  mock_root: /data/aiops-contest/mock-only
+  staging_root: /data/aiops-contest/staging
+  index_root: /data/aiops-contest/indexes
+  cache_root: /data/aiops-contest/cache
+auth:
+  token_db: /etc/aiops-contest/tokens.json
+  team_registry: /etc/aiops-contest/team_registry.json
+  competition_state: /etc/aiops-contest/competition_state.json
+limits:
+  requests_per_minute: 60
+  per_team_concurrency: 4
+  total_query_concurrency: 12
+  max_rows: 1000
+  max_page: 10000
+  max_time_range_seconds: 3600
+  query_timeout_seconds: 3.0
+  max_trace_spans: 5000
+duckdb:
+  threads: 2
+  memory_limit: 768MB
+  temp_directory: /data/aiops-contest/cache/duckdb

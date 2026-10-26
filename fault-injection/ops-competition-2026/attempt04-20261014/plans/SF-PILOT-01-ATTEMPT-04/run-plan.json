@@ -1,0 +1,395 @@
+{
+  "at_utc": "2026-10-14T04:47:53.761973+00:00",
+  "source_sha256": {
+    "/root/ops-competition-2026/attempt04-20261014/scripts/bounded_storage.py": "de621f6f032985ab30f2002f120b4390fe69ed5e381d55c245f0e04e4638e02e",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_export.py": "e474be0e2cb63dea7f55cfdb48079c26fba861fd1dabcaf259fb72f4b8bc63ce",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_chunk_audit.py": "d31b94c742cc6a71be8cb5039570c4170f1e6e0a60c6692b45fda2e0572f0ae8",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/master_transport.py": "6828e7f1cbe7c813c3de6810ea39113e610abf6842083c9b3aa514045dcdf934",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_observer.py": "187d5a4b8ccb63006338c02d500479ba26db123a0757554e3715b4804f09b67b",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_assess.py": "e276e1a257f9b1f69e0dcf8c4ebcc2f614e98daaa4d75eb102c3ab5931c506e5",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/boundary_empty.py": "432f0bf46063701d0e43090dc254f11e81031c8b8da76f636fe48d5b473afbea",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/master_refresh_safety.py": "56f61ecc4c4ada3c74ab97bc311a5f83e5da2ad4b92f779c47864059d6338704",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/attempt_preflight.py": "8efb16776526d1923cb49817df510e5fa1fb6405f9bc5cd4191ae5ff343119fe",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_workload.py": "a254edb99d7d79015c2f1d6157368ee3897ad681f82832abe1dbd983e3ed4252",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_controller.py": "b2241f655b4d17c80b5ca17ff355fd92789e709afe9f7fb8fc53e50f01ffde55",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_controls.py": "8e8607f4352af376bbbbe54cb5ab9fe4440a2924d75a794792cefdbb58a096d0",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/timer_inventory.py": "5db8ded2c1af9fbadcf7553b17e939c87e75739cc8bd4890ba31f370bc7bcac3",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/fault_worker.py": "6490befb34a3528c6cee18a055557863504b39cd661d587f54a667a185277a3a",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_annotations.py": "cc551eff13e16694a3ae91ca97456690a7e78865fe429011a1489a8930a3df37",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_common.py": "0484e16b094fa2237864b2bac194daf719df4414db89c91e18a8a342ad4d69b2",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_recovery.py": "30b3b8a53563d8385f30a89841e4a85b832f6b0d61fa86a1d2ac9ff797b95ae2",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_boundary_guard.py": "8192a26ef040e87a316541e7e705322dea07738811f21baa6d82b1d2867b01a2",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/run_registry.py": "7198cb87efe495838448e311127e13ea78590b38b9bb97b6dda2cd0e38ed1dda",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/storage_budget.py": "dc370c26cf9f1d03dcfdbbc7ec46e89a63442daeafecd6268eb96beb2d521d38",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/prepare_formal.py": "4b1658417151db505e535ca6568e7694ffa1ffbb82bfe70c828a6d78edf0cabb",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_exchange_schema.py": "45580cac2206607d9ae76b55f71bf1e36ae3dff2d7e535066173b483b899e977",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/handshake.py": "df921e49e0a11ce8b8c73d71e23e49a16169c577e575f3cc01d3e4b6c0fb7857",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/business_gate.py": "ace261a3c255dec2420d43580d8f5bcb5557cd5e9208ed6b0cf06c465337e299",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/watchdog_reachability.py": "04e1e4597ee7d41b69ab8f2dee17c3a95f53a661a6786607e533341e430a376e",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/pilot_reference.py": "9d988108d2e83a30d73a15d1eca1b8c0afb857b97e1337d6eb426d17114a14aa",
+    "/root/ops-competition-2026/attempt04-20261014/scripts/master_host_audit.py": "a3387ccce1ed6128185ba56c109e25ae13cafcbcfea1a52883b113388d915ba4",
+    "/root/ops-competition-2026/attempt04-20261014/capture/schedule_trace_completion.py": "5c8d212d34bc2c1cf358627213de2c47d03739b980bf15828d3a548cd2293851",
+    "/root/ops-competition-2026/attempt04-20261014/capture/capture_live_c2.py": "e1439995c41e38908cdd91b05e2be6b5a458ebf767553cd18247ae664ea2d0c5",
+    "/root/ops-competition-2026/attempt04-20261014/capture/schedule_trace_v2.py": "f8d8c5e3f70ca0cf0c7572794c531ceb629582d8a540e9f357af039d6a1aaf16",
+    "/root/ops-competition-2026/attempt04-20261014/capture/trace_storage_reader.py": "686dc664812d7ad6594ecd4240a907cb990e3ac852af6b4b4747235a6e43e7b4",
+    "/root/ops-competition-2026/attempt04-20261014/capture/capture_live.py": "577e21828838e024cc3c4e43a13a2038a59b02652586f739112c399f0e632df1",
+    "/root/ops-competition-2026/attempt04-20261014/capture/trace_identity.py": "5370f59591582ed0d0fdc5f97e43347e9f0bcfbbce5a002af5e16f164b4c5af9",
+    "/root/ops-competition-2026/attempt04-20261014/capture/schedule_trace_completion_v2.py": "f863eb3d1361f0fa0e83c3e38531d732852b52e08de7b24cd40c77452ece9ef1",
+    "/root/ops-competition-2026/attempt04-20261014/capture/evaluate_trace_v2.py": "0f434f1b6efd5c3b576d742184b6f1c0f7222e50e057f55a34dabbd29ff06f4a",
+    "/root/ops-competition-2026/plans/competition-fault-admission.yaml": "cffe921ac415fa2bc7d4d76125e18b2a209933b8489dda2699ebb5c65ebbf538",
+    "/root/ops-competition-2026/scripts/competition_adapter.py": "791481b3e12ce6f64bb77c75acaff7df8000d800081589194ccde5d5ad3f2a92",
+    "/root/ops-competition-2026/scripts/resource_memory_holder.py": "659a6a5d51521e36fda8e6d83b6245b4400d4137f1b343e50e04ee2759d687d0",
+    "/root/ops-competition-2026/scripts/competition_observation.py": "f9d6c1bca2527aa0064eccb16e26108719ec08b00fe86a53d8a0fb3941287d89",
+    "/root/ops-competition-2026/scripts/competition_controls.py": "a4a11e9f581bf85970326dae1ba151747a83c96596434e7a3d53ca668ddac8cf",
+    "/root/ops-competition-2026/scripts/competition_preflight.py": "5c73f34f1ba27ccdda6c7dfc9d9fd5cf19ceaf7f91913f2c2251fc95452f1c70",
+    "/root/ops-competition-2026/scripts/competition_qualification.py": "2f110ea7073896dee2287937d66fce5d84384e249affa60acf9d1ce9e9a72cd1",
+    "/root/ops-competition-2026/scripts/competition_baseline_prefix.py": "8b208c6ae4e9209fdf93e8dc7e5236a46f17f0278c249a97a9ad282030329874",
+    "/root/ops-competition-2026/scripts/authorize_competition.py": "9c14daf5dd71bf263e372c3f5115b49e000657bfe64dbc1b1dab4e35f1d56c03",
+    "/root/ops-competition-2026/scripts/prepare_competition_plan.py": "80f429b12dc3acbf1f59ce3f897ff6980fb419be455c46ccbdd094393c236e7a",
+    "/root/ops-competition-2026/scripts/run_competition_qualification.py": "5f1deb3614dc6196756cf6eba2998d084a8f64312a6a9e31ef835e8ae716902c",
+    "/root/cross-layer-observability-control-rehearsal/scripts/workload_generator_rehearsal.py": "5f7291c9b7698af50b66357fe2fcd38ef9eb491a6330db207d578d38f6fe5464",
+    "/root/stage5-v3-observability-diagnostics/snapshots/reference/workload-state-machine-c3.yaml": "e877814f950088c6a692778a23644979e44888f955bcf35496f4ad59c26ad05b",
+    "/root/stage5-v3-autonomous-preparation/design/load-profiles-c3.yaml": "e9893989f9012cb00432ec95aed3af9daa218238a90bd5a82a61fba02888a23d",
+    "/root/cross-layer-workload-generation/design/people.json": "2e780c99cd1950213c798ba086c184b6ae89a98af8a6df4bb190b2e19bcf77ab",
+    "/root/stage5-v3-autonomous-preparation/scripts/fixed_control_load_c3.py": "77a4f1efe10b23f95358b784fcd428d200b922632aeb9e4ef0920b7365dd4b1c",
+    "/root/stage5-v3-autonomous-preparation/scripts/capture_live_c2.py": "417baa3e086e67b1301ff5a2ea496d57dbd097cd405e01059e8371cb84d68d86",
+    "/root/stage5-v3-autonomous-preparation/scripts/trace_storage_reader.py": "686dc664812d7ad6594ecd4240a907cb990e3ac852af6b4b4747235a6e43e7b4",
+    "/root/stage5-v3-clean-gate-v2/scripts/schedule_trace_completion_v2.py": "0d77ebf6ae147c72e97a3ea9660942a649329ff01411fb1329a4e321441ac38a",
+    "/root/stage5-v3-clean-gate-v2/scripts/schedule_trace_v2.py": "a47013ad0102b907a4faff3fb8e43b5fb6f19d7bd9c8f133c7ee4a73cf5fca92",
+    "/root/stage5-v3-clean-gate-v2/scripts/trace_identity.py": "5370f59591582ed0d0fdc5f97e43347e9f0bcfbbce5a002af5e16f164b4c5af9",
+    "/root/stage5-v3-clean-gate-v2/scripts/evaluate_trace_v2.py": "0f434f1b6efd5c3b576d742184b6f1c0f7222e50e057f55a34dabbd29ff06f4a"
+  },
+  "prerequisites": [
+    {
+      "id": "COMP-SF01-SERVICE-300",
+      "file": "/root/ops-competition-2026/qualification/COMP-SF01-SERVICE-300/decision.json",
+      "sha256": "a41da2b5726912204672fd07bd7fb1181fc67775d70ef43c4f5c52bc352e7bd6"
+    },
+    {
+      "id": "COMP-SF01-POD-300",
+      "file": "/root/ops-competition-2026/qualification/COMP-SF01-POD-300/decision.json",
+      "sha256": "dd4fdfb27ee21cec96e3f810e3d37b5c748a21078457d8db23b96d86b836967c"
+    }
+  ],
+  "targets_and_siblings": [
+    {
+      "service": "frontend",
+      "name": "frontend-68d8bbfdc8-8mnzh",
+      "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+      "node": "k8s-worker2",
+      "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+      "restart_count": 0
+    },
+    {
+      "service": "frontend",
+      "name": "frontend-68d8bbfdc8-c4n85",
+      "uid": "6305d17a-27f0-4dbf-8fc7-7238acb3be91",
+      "node": "k8s-worker1",
+      "container_id": "containerd://71c436f60470eeaf12334e5dd3a69302bbfe16ba1be6f0886260a1b2eb9d0c4e",
+      "restart_count": 0
+    },
+    {
+      "service": "recommendation",
+      "name": "recommendation-c887f6f6b-cxb5j",
+      "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+      "node": "k8s-worker3",
+      "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+      "restart_count": 0
+    },
+    {
+      "service": "recommendation",
+      "name": "recommendation-c887f6f6b-zchkk",
+      "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+      "node": "k8s-worker3",
+      "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+      "restart_count": 0
+    }
+  ],
+  "contract_sha256": "cffe921ac415fa2bc7d4d76125e18b2a209933b8489dda2699ebb5c65ebbf538",
+  "adapter_sha256": "791481b3e12ce6f64bb77c75acaff7df8000d800081589194ccde5d5ad3f2a92",
+  "holder_sha256": "659a6a5d51521e36fda8e6d83b6245b4400d4137f1b343e50e04ee2759d687d0",
+  "allocation_bytes": 33554432,
+  "seed": 1014404,
+  "workload": {
+    "duration_seconds": 3600,
+    "profile": "MEDIUM",
+    "rate_sessions_per_second": 1.4,
+    "control_streams": [
+      {
+        "name": "image_asset",
+        "rate_per_second": 1.0,
+        "seed_offset": 101
+      },
+      {
+        "name": "cart_view",
+        "rate_per_second": 2.0,
+        "seed_offset": 103
+      }
+    ],
+    "control_timeout_seconds": 8,
+    "control_concurrency_per_stream": {
+      "image_asset": 2,
+      "cart_view": 4
+    }
+  },
+  "production_telemetry_proof_sha256": "d887cf3d296aa521eb2cd7a3ed571d3a641f2e71763771f06fe58464e42bf64f",
+  "collector_uid": "ac4b46f1-428e-4814-90ba-c52eaa43e9f3",
+  "collector_config_sha256": "128ed286e8a959aacddc2ee6c00e2d6e8b0a3eb18ea43e5de730a20e3793af2d",
+  "formal_case": true,
+  "id": "SF-PILOT-01-ATTEMPT-04",
+  "public_id": "SF-001",
+  "duration_seconds": 3600,
+  "faults": [
+    {
+      "id": "SF-PILOT-01-ATTEMPT-04-SERVICE",
+      "offset_seconds": 720,
+      "duration_seconds": 300,
+      "plan": "/root/ops-competition-2026/attempt04-20261014/plans/SF-PILOT-01-ATTEMPT-04/SF-PILOT-01-ATTEMPT-04-SERVICE-qualified-registration.json",
+      "sha256": "6560340d014e3da23153c59b56102d470be70d24d1422e556a41dfccfef19d7b"
+    },
+    {
+      "id": "SF-PILOT-01-ATTEMPT-04-POD",
+      "offset_seconds": 2100,
+      "duration_seconds": 300,
+      "plan": "/root/ops-competition-2026/attempt04-20261014/plans/SF-PILOT-01-ATTEMPT-04/SF-PILOT-01-ATTEMPT-04-POD-qualified-registration.json",
+      "sha256": "c0177930f9812f9b6c7fae2f1b11d83a84643a6c0beeb695a90e171e4f215c59"
+    }
+  ],
+  "status": "ONE_CONTEST_PILOT_PREREGISTERED",
+  "capture_offsets_seconds": [
+    0,
+    300,
+    600,
+    1200,
+    1500,
+    1800,
+    2100,
+    2400,
+    2700,
+    3000,
+    3300,
+    3600
+  ],
+  "trace_source": "JAEGER_OPENSEARCH_STORAGE",
+  "trace_offsets_seconds": [
+    5,
+    60,
+    120,
+    240
+  ],
+  "trace_completion_deadlines_seconds": [
+    60,
+    120,
+    180,
+    300
+  ],
+  "quality_assessment_deadline_after_chunk_seconds": 420,
+  "fault_onset_tolerance_seconds": 2,
+  "scheduler": "WORKER_LOCAL_UTC_SYSTEMD_10ms",
+  "authorization_lease_seconds": 4,
+  "maximum_clock_bound_seconds": 0.5,
+  "metric_chunk_policy": "exact half-open [start,end); retain all raw captures",
+  "recovery_check_offsets_seconds": {
+    "SERVICE": 1260,
+    "POD": 2580
+  },
+  "sampling_exclusions": null,
+  "expected_request_policy": "all ordinary sent requests started in the hour; separate out-of-window and not-sent records; exact run window + Trace/Span identity",
+  "interim_request_boundary_guard_seconds": 1,
+  "final_request_boundary_guard_seconds": 0,
+  "private_edge_evidence": {
+    "width_seconds": 1,
+    "read_offset_seconds": 120,
+    "completion_deadline_seconds": 180,
+    "identity_rule": "same Trace ID and real Proxy Server Span; client and server timestamps both within one second of the same global edge",
+    "reported_separately_from_public_matches": true,
+    "public_export_of_guard_rows": false,
+    "timestamp_rewriting": false,
+    "unexplained_nonboundary_missing_requests": "FAIL"
+  },
+  "stop_conditions": [
+    "actual_environment_failure",
+    "any_collector_receiver_refused_increment",
+    "collector_working_set_ge_380MiB",
+    "collector_or_target_identity_changed",
+    "storage_freshness_gt_60s",
+    "independent_Image_or_Cart_HTTP_failure",
+    "mature_unexplained_request_gap",
+    "capture_deadline_failure",
+    "rollback_failure"
+  ],
+  "public_export": {
+    "event_time_half_open_window_only": true,
+    "missing_values": null,
+    "preserve_counter_values": true,
+    "trace_version": "immutable +240 audit snapshot; earlier versions retained and ordinary late spans still fail quality",
+    "source_private_information_policy": "reject leakage; do not silently drop rows",
+    "neutral_client_metadata": "User-Agent only; original workflows/rates unchanged"
+  },
+  "annotation_policy": {
+    "only_public_observations": true,
+    "independent_no_fault_reference": "collector repair VAL1/VAL2; same config and rates; older uptime is a comparability limitation",
+    "gt_status": "DRAFT_PENDING_HUMAN_REVIEW"
+  },
+  "maximum_new_case_attempts": 1,
+  "faults_injected_before_plan": 0,
+  "mode": "FORMAL",
+  "run_token": "[REDACTED_CONFIGURE_LOCALLY]",
+  "start_utc": "2026-10-14T09:12:25.156656+00:00",
+  "health_file": "/data/stage5-v3/ops-competition-2026/audits/COMP-SF01-A04-FINAL-PRE/phase-a-decision.json",
+  "health_sha256": "5d03af6ae2c753a9de6ea0127489a08aa25a6e7188846019d75bc259c6111b97",
+  "observer_unit": "ops-a04-observer-sf-pilot-01-attempt-04",
+  "initialization_budget_seconds": 15,
+  "heartbeat_freshness_seconds": 30,
+  "heartbeat_period_seconds": 15,
+  "prestart_ready_required": true,
+  "markers": [],
+  "authorized_new_formal_attempts": 1,
+  "automatic_attempt04": false,
+  "backend": "QUALIFIED_SERVICE_POD_FAULT_V1",
+  "authorization_scope": "ONE_ATTEMPT04_SERVICE_POD_QUALIFIED_ONLY",
+  "actions": [
+    {
+      "run_id": "SF-PILOT-01-ATTEMPT-04",
+      "action_id": "SF-PILOT-01-ATTEMPT-04-SERVICE",
+      "mechanism_id": "SERVICE",
+      "worker": "k8s-worker3",
+      "targets": [
+        {
+          "service": "recommendation",
+          "name": "recommendation-c887f6f6b-cxb5j",
+          "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+          "node": "k8s-worker3",
+          "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+          "restart_count": 0,
+          "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-pod8b7c229b_cea1_440f_bc88_e9c1f246ef9e.slice/cri-containerd-9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5.scope",
+          "pid": 3416103,
+          "start_ticks": "162275223"
+        },
+        {
+          "service": "recommendation",
+          "name": "recommendation-c887f6f6b-zchkk",
+          "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+          "node": "k8s-worker3",
+          "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+          "restart_count": 0,
+          "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-pod3886c989_d7a1_44e9_8b44_64c536db1897.slice/cri-containerd-f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0.scope",
+          "pid": 3415737,
+          "start_ticks": "162272132"
+        }
+      ],
+      "allocation_bytes": 33554432,
+      "qualified_registration": "/root/ops-competition-2026/attempt04-20261014/plans/SF-PILOT-01-ATTEMPT-04/SF-PILOT-01-ATTEMPT-04-SERVICE-qualified-registration.json",
+      "qualified_registration_sha256": "6560340d014e3da23153c59b56102d470be70d24d1422e556a41dfccfef19d7b",
+      "injection_output": "/root/ops-competition-2026/qualification/private-attempts/SF-PILOT-01-ATTEMPT-04-SERVICE",
+      "watchdog_proof_file": "/root/ops-competition-2026/qualification/watchdog-v3-k8s-worker3.json",
+      "watchdog_proof_sha256": "8c98aa2557ec98b6be8ca7405a87d54680bcd4fdb45abc33d79d976f45cac86f",
+      "watchdog_reachability_file": "/root/ops-competition-2026/attempt04-20261014/results/sf-a04-cleanup-reachability-k8s-worker3.json",
+      "watchdog_reachability_sha256": "9bf50216c1cda4d8d8f6105291845f3895dcad7e3b8886c37d655e85b9ca707e",
+      "planned_utc": "2026-10-14T09:24:25.156656+00:00",
+      "offset_seconds": 720,
+      "duration_seconds": 300,
+      "recovery_offset_seconds": 1260,
+      "unit": "ops-a04-sf-pilot-01-attempt-04-service",
+      "runtime": "/root/ops-competition-2026/attempt04-20261014/worker-runtime/SF-PILOT-01-ATTEMPT-04-SERVICE",
+      "registration_file": "/root/ops-competition-2026/attempt04-20261014/plans/SF-PILOT-01-ATTEMPT-04/run-plan.json",
+      "backend": "QUALIFIED_SERVICE_POD_FAULT_V1",
+      "execute": "RUN_PINNED_QUALIFIED_ADAPTER",
+      "revoke": "REVOKE_STOP_AND_PINNED_CLEANUP",
+      "onset_tolerance_seconds": 2
+    },
+    {
+      "run_id": "SF-PILOT-01-ATTEMPT-04",
+      "action_id": "SF-PILOT-01-ATTEMPT-04-POD",
+      "mechanism_id": "POD",
+      "worker": "k8s-worker2",
+      "targets": [
+        {
+          "service": "frontend",
+          "name": "frontend-68d8bbfdc8-8mnzh",
+          "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+          "node": "k8s-worker2",
+          "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+          "restart_count": 0,
+          "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-podd4bb49b4_6fb8_4a07_aaf6_e2caff5df974.slice/cri-containerd-447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e.scope",
+          "pid": 2022249,
+          "start_ticks": "164244306"
+        }
+      ],
+      "allocation_bytes": 33554432,
+      "qualified_registration": "/root/ops-competition-2026/attempt04-20261014/plans/SF-PILOT-01-ATTEMPT-04/SF-PILOT-01-ATTEMPT-04-POD-qualified-registration.json",
+      "qualified_registration_sha256": "c0177930f9812f9b6c7fae2f1b11d83a84643a6c0beeb695a90e171e4f215c59",
+      "injection_output": "/root/ops-competition-2026/qualification/private-attempts/SF-PILOT-01-ATTEMPT-04-POD",
+      "watchdog_proof_file": "/root/ops-competition-2026/qualification/watchdog-v3-k8s-worker2.json",
+      "watchdog_proof_sha256": "5e2d60018c6234dd68222525c218394e27c71750848373be6947d1421afb544c",
+      "watchdog_reachability_file": "/root/ops-competition-2026/attempt04-20261014/results/sf-a04-cleanup-reachability-k8s-worker2.json",
+      "watchdog_reachability_sha256": "44c79167300111aa7ffc069bb55d6d18dc1d346c858bf67fd7f8650308f7d538",
+      "planned_utc": "2026-10-14T09:47:25.156656+00:00",
+      "offset_seconds": 2100,
+      "duration_seconds": 300,
+      "recovery_offset_seconds": 2580,
+      "unit": "ops-a04-sf-pilot-01-attempt-04-pod",
+      "runtime": "/root/ops-competition-2026/attempt04-20261014/worker-runtime/SF-PILOT-01-ATTEMPT-04-POD",
+      "registration_file": "/root/ops-competition-2026/attempt04-20261014/plans/SF-PILOT-01-ATTEMPT-04/run-plan.json",
+      "backend": "QUALIFIED_SERVICE_POD_FAULT_V1",
+      "execute": "RUN_PINNED_QUALIFIED_ADAPTER",
+      "revoke": "REVOKE_STOP_AND_PINNED_CLEANUP",
+      "onset_tolerance_seconds": 2
+    }
+  ],
+  "raw_root": "/data/stage5-v3/ops-competition-2026/runs/SF-PILOT-01-ATTEMPT-04",
+  "control_root": "/data/stage5-v3/ops-competition-2026/runtime/SF-PILOT-01-ATTEMPT-04",
+  "controller_unit": "ops-a04-controller-sf-pilot-01-attempt-04",
+  "identity_file": "/root/ops-competition-2026/attempt04-20261014/results/target-inspection.json",
+  "identity_sha256": "bfd0698d1929f8f84174ae157f8decd5b5cc4a6dd6e2dfcc68f876e20e61f179",
+  "storage_budget": {
+    "status": "STORAGE_PEAK_BUDGET_PASS",
+    "at_utc": "2026-10-14T09:09:25.156336+00:00",
+    "master": {
+      "root_free": 46083850240,
+      "data_free": 282304946176
+    },
+    "workers": {
+      "w2": {
+        "root_free": 69135810560,
+        "data_free": 88069599232
+      },
+      "w3": {
+        "root_free": 62145200128,
+        "data_free": 122438103040
+      }
+    },
+    "peak_incremental_bytes": {
+      "master_data": 36507222016,
+      "master_root": 67108864,
+      "w2_data": 33285996544,
+      "w3_data": 31138512896
+    },
+    "checks": {
+      "master_root_peak_reserve": true,
+      "master_data_peak_reserve": true,
+      "w2_data_peak_reserve": true,
+      "w3_data_peak_reserve": true,
+      "w2_root_reserve": true,
+      "w3_root_reserve": true
+    },
+    "capture_json_cap_bytes": 25769803776,
+    "raw_plus_control_cap_bytes": 27917287424,
+    "worker2_export_temporary_cap_bytes": 2147483648,
+    "public_private_product_cap_bytes": 2147483648,
+    "operational_reserve_bytes": 1073741824,
+    "worker_safety_floor_bytes": 50000000000,
+    "master_root_floor_bytes": 46000000000,
+    "master_data_floor_bytes": 68719476736,
+    "prior_full02_raw_bytes": 3192086230,
+    "max_prior_five_minute_all_versions_bytes": 984513796,
+    "hour_base_from_chunk_max_bytes": 11814165552,
+    "json_budget_factor_over_chunk_peak_projection": 2.181263133868771,
+    "archive_strategy": "one permanent uncompressed raw replica per Worker; Worker2 export reads its archive; no additional raw staging/tar",
+    "abort_residue_policy": "keep all existing files; reservation cap fails closed before further writes; no deletion",
+    "protected_archives": "all retained; existing usage already deducted from available space"
+  },
+  "authorization_reference": "User explicitly authorized one ATTEMPT04; no ATTEMPT05; only verified 300s Service and 32MiB/300s Pod mechanisms",
+  "validated_basis_manifest_sha256": "97d0bc3709824dcba30820da668f5660c6775b78ccbb1248b0b9cb3e713cdcea",
+  "validated_readiness_sha256": "f22a1cdf457247d620906f57885de06122286d852c8bb411b288a554bd71662c"
+}

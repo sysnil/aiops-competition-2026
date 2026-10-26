@@ -1,0 +1,75 @@
+{
+  "question_id": "EX-P01",
+  "case_id": "SF-001",
+  "title": "练习示例：Frontend Pod 内存",
+  "description": "使用已归档的真实监控记录，按下列口径绘制一张分钟时序图并回答三个问题。",
+  "target_entity_type": "Pod",
+  "target_entity_id": "frontend-68d8bbfdc8-8mnzh",
+  "modality": "Metrics",
+  "time_range": {
+    "start_utc": "2026-10-14T09:12:25.156656+00:00",
+    "end_exclusive_utc": "2026-10-14T10:12:25.156656+00:00"
+  },
+  "query_spec": {
+    "source_file": "metrics.parquet",
+    "source_columns": [
+      "timestamp",
+      "metric_name",
+      "value",
+      "pod",
+      "labels"
+    ],
+    "filters": {
+      "entities": [
+        "frontend-68d8bbfdc8-8mnzh"
+      ],
+      "metric_name": "container_memory_working_set_bytes",
+      "container": "frontend"
+    },
+    "aggregation": "mean(value) / 1048576 by 60-second bucket",
+    "time_bucket": {
+      "origin_utc": "2026-10-14T09:12:25.156656+00:00",
+      "width_seconds": 60,
+      "closed": "left",
+      "timestamp_label": "bucket start UTC",
+      "observation_end_exclusive_utc": "2026-10-14T10:12:25.156656+00:00"
+    },
+    "minimum_samples_per_minute": 2,
+    "missing_policy": "null and line gap for insufficient samples; zero only for observed count queries",
+    "counter_reset_policy": "not applicable",
+    "p95_definition": "not applicable",
+    "comparison_minute_ranges": null,
+    "kind": "memory",
+    "answer_plan": "basic_mean"
+  },
+  "chart_requirement": {
+    "chart_count": 1,
+    "type": "line",
+    "x_axis": "UTC bucket start",
+    "y_axis": "MiB",
+    "series": [
+      "frontend-68d8bbfdc8-8mnzh"
+    ],
+    "granularity_seconds": 60,
+    "legend_required": false
+  },
+  "questions": [
+    {
+      "id": "A1",
+      "text": "整段时间内，最高的每分钟均值是多少（单位 MiB）？",
+      "answer_format": "number"
+    },
+    {
+      "id": "A2",
+      "text": "最高值出现在哪个 UTC 分钟起点？若并列，取最早一分钟。",
+      "answer_format": "time"
+    },
+    {
+      "id": "A3",
+      "text": "整段时间内所有有效分钟值的算术平均是多少（单位 MiB）？",
+      "answer_format": "number"
+    }
+  ],
+  "question_version": "semifinal-query-visualization-candidate-v1",
+  "difficulty": "EXAMPLE"
+}

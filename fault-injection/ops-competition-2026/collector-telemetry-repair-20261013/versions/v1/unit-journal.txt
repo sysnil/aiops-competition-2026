@@ -1,0 +1,15 @@
+Oct 13 13:08:06 k8s-master systemd[1]: Started ops-telemetry-repair-base.service - /usr/bin/python3 -B /root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/run_validation.py --role BASE.
+Oct 13 13:08:08 k8s-master python3[1607214]: Traceback (most recent call last):
+Oct 13 13:08:08 k8s-master python3[1607214]:   File "/root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/run_validation.py", line 117, in <module>
+Oct 13 13:08:08 k8s-master python3[1607214]:     if __name__=='__main__':main()
+Oct 13 13:08:08 k8s-master python3[1607214]:                             ^^^^^^
+Oct 13 13:08:08 k8s-master python3[1607214]:   File "/root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/run_validation.py", line 53, in main
+Oct 13 13:08:08 k8s-master python3[1607214]:     storage();safety(targets);initial=observe(gateway)
+Oct 13 13:08:08 k8s-master python3[1607214]:                                       ^^^^^^^^^^^^^^^^
+Oct 13 13:08:08 k8s-master python3[1607214]:   File "/root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/run_validation.py", line 26, in observe
+Oct 13 13:08:08 k8s-master python3[1607214]:     value=response['hits']['hits'][0]['_source'][field]
+Oct 13 13:08:08 k8s-master python3[1607214]:           ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+Oct 13 13:08:08 k8s-master python3[1607214]: IndexError: list index out of range
+Oct 13 13:08:08 k8s-master systemd[1]: ops-telemetry-repair-base.service: Main process exited, code=exited, status=1/FAILURE
+Oct 13 13:08:08 k8s-master systemd[1]: ops-telemetry-repair-base.service: Failed with result 'exit-code'.
+Oct 13 13:08:08 k8s-master systemd[1]: ops-telemetry-repair-base.service: Consumed 1.353s CPU time.

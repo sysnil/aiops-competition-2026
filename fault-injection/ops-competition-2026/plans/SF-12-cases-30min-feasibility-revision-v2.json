@@ -1,0 +1,899 @@
+{
+  "schema": "SF_12_CASES_30MIN_FEASIBILITY_REVISION_DRAFT_V2",
+  "status": "DRAFT_NOT_FROZEN_NOT_EXECUTION_PERMISSION",
+  "generated_utc": "2026-10-15T09:58:35.535862+00:00",
+  "source_sha256": {
+    "authority": "762ff940a8198e0ef4470614f410edaddab3bc73a277f8a36f04015cc34943f4",
+    "generic_timing": "56ca4183966777dcb5835cbab9685cb8c871b6e2f1b443ce5f606b4b14100796",
+    "case_timing": "121dca8cefbf8e53006263e00cf47ac01e6f31d24cd76e7ba034e21ea90de6fd",
+    "mechanism_audit": "dcb4df1bc1e54bc2d756385729e93e056415984975dc30c905282c39c3a8c4ee",
+    "short_qualifications": "1a5666cab2a1e0c199f8d8a3e64ac04909999e234adacd97e3d299145073db06",
+    "measured_rehearsal": "e513ffb2eabc1ed6ad89350e03294aacdb9f0ba91944a694206add9ff27e9263",
+    "capacity_forecast": "bd29ae49c2e31a8770144341b73f6a61ee98560968706440ac07bfef7fc4ab41"
+  },
+  "cases": [
+    {
+      "case_id": "SF-001",
+      "role": "PRACTICE",
+      "collection_status": "COLLECTED_60MIN_UNCHANGED",
+      "publication_status": "PUBLISHED",
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW"
+    },
+    {
+      "case_id": "SF-002",
+      "role": "PRACTICE",
+      "collection_status": "COLLECTED_60MIN_UNCHANGED",
+      "publication_status": "TRANSFER_AND_IMPORT_PENDING",
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW"
+    },
+    {
+      "case_id": "SF-003",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "original_fault_types_preserved": [
+        "PodCPUStress",
+        "HTTP ReqDelay",
+        "PodKill"
+      ],
+      "timing_hypothesis": {
+        "events": [
+          {
+            "sequence": 1,
+            "mechanism": "PodCPUStress",
+            "start_seconds": 600,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 2,
+            "mechanism": "HTTP ReqDelay",
+            "start_seconds": 990,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 3,
+            "mechanism": "PodKill",
+            "start_seconds": 1380,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          }
+        ],
+        "complete_by_seconds": 1665,
+        "fits_mathematically": true,
+        "requires_deferred_audit": false,
+        "unknown_duration_mechanisms": [
+          "PodCPUStress",
+          "HTTP ReqDelay",
+          "PodKill"
+        ],
+        "no_overlap": true,
+        "production_authorized": false,
+        "case_id": "SF-003",
+        "status": "MATHEMATICAL_FIT_ONLY_ALL_GATES_PENDING"
+      },
+      "mechanism_status": [
+        {
+          "fault_type": "PodCPUStress",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "HTTP ReqDelay",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "PodKill",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        }
+      ],
+      "production_ready": false,
+      "blocking_dimensions": [
+        "NEW_FORMAL_30MIN_RUNNER_NOT_VALIDATED",
+        "EARLY_GATE_NOT_INTEGRATED",
+        "MECHANISM_SAFETY_OR_SHORT_DURATION_NOT_QUALIFIED",
+        "FRESH_CASE_STORAGE_ADMISSION_REQUIRED"
+      ]
+    },
+    {
+      "case_id": "SF-004",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "original_fault_types_preserved": [
+        "NetworkDelay",
+        "HTTP RespDelay",
+        "PodMemoryStress",
+        "ServicePause"
+      ],
+      "timing_hypothesis": {
+        "events": [
+          {
+            "sequence": 1,
+            "mechanism": "NetworkDelay",
+            "start_seconds": 360,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 2,
+            "mechanism": "HTTP RespDelay",
+            "start_seconds": 750,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 3,
+            "mechanism": "PodMemoryStress",
+            "start_seconds": 1140,
+            "duration_seconds": 60,
+            "duration_evidence": "HISTORICAL_SHORT_QUALIFIED_NOT_FORMAL_30MIN"
+          },
+          {
+            "sequence": 4,
+            "mechanism": "ServicePause",
+            "start_seconds": 1530,
+            "duration_seconds": 30,
+            "duration_evidence": "HISTORICAL_SHORT_QUALIFIED_NOT_FORMAL_30MIN"
+          }
+        ],
+        "complete_by_seconds": 1785,
+        "fits_mathematically": true,
+        "requires_deferred_audit": true,
+        "unknown_duration_mechanisms": [
+          "NetworkDelay",
+          "HTTP RespDelay"
+        ],
+        "no_overlap": true,
+        "production_authorized": false,
+        "case_id": "SF-004",
+        "status": "MATHEMATICAL_FIT_ONLY_ALL_GATES_PENDING"
+      },
+      "mechanism_status": [
+        {
+          "fault_type": "NetworkDelay",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "HTTP RespDelay",
+          "engineering_status": "MECHANISM_UNAVAILABLE",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "PodMemoryStress",
+          "engineering_status": "QUALIFIED_EXISTING_ADAPTER_REUSED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "ServicePause",
+          "engineering_status": "QUALIFIED_EXISTING_ADAPTER_REUSED",
+          "current_formal_execution_authorized": false
+        }
+      ],
+      "production_ready": false,
+      "blocking_dimensions": [
+        "NEW_FORMAL_30MIN_RUNNER_NOT_VALIDATED",
+        "EARLY_GATE_NOT_INTEGRATED",
+        "MECHANISM_SAFETY_OR_SHORT_DURATION_NOT_QUALIFIED",
+        "FRESH_CASE_STORAGE_ADMISSION_REQUIRED"
+      ]
+    },
+    {
+      "case_id": "SF-005",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "original_fault_types_preserved": [
+        "HTTP RespReplaceCode",
+        "ContainerKill",
+        "NetworkLoss"
+      ],
+      "timing_hypothesis": {
+        "events": [
+          {
+            "sequence": 1,
+            "mechanism": "HTTP RespReplaceCode",
+            "start_seconds": 600,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 2,
+            "mechanism": "ContainerKill",
+            "start_seconds": 990,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 3,
+            "mechanism": "NetworkLoss",
+            "start_seconds": 1380,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          }
+        ],
+        "complete_by_seconds": 1665,
+        "fits_mathematically": true,
+        "requires_deferred_audit": false,
+        "unknown_duration_mechanisms": [
+          "HTTP RespReplaceCode",
+          "ContainerKill",
+          "NetworkLoss"
+        ],
+        "no_overlap": true,
+        "production_authorized": false,
+        "case_id": "SF-005",
+        "status": "MATHEMATICAL_FIT_ONLY_ALL_GATES_PENDING"
+      },
+      "mechanism_status": [
+        {
+          "fault_type": "HTTP RespReplaceCode",
+          "engineering_status": "MECHANISM_UNAVAILABLE",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "ContainerKill",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "NetworkLoss",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        }
+      ],
+      "production_ready": false,
+      "blocking_dimensions": [
+        "NEW_FORMAL_30MIN_RUNNER_NOT_VALIDATED",
+        "EARLY_GATE_NOT_INTEGRATED",
+        "MECHANISM_SAFETY_OR_SHORT_DURATION_NOT_QUALIFIED",
+        "FRESH_CASE_STORAGE_ADMISSION_REQUIRED"
+      ]
+    },
+    {
+      "case_id": "SF-006",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "original_fault_types_preserved": [
+        "PodCPUStress",
+        "HTTP ReqAbort",
+        "NetworkBandwidth",
+        "HTTP RespAbort",
+        "ServicePause"
+      ],
+      "timing_hypothesis": {
+        "events": [
+          {
+            "sequence": 1,
+            "mechanism": "PodCPUStress",
+            "start_seconds": 360,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 2,
+            "mechanism": "HTTP ReqAbort",
+            "start_seconds": 750,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 3,
+            "mechanism": "NetworkBandwidth",
+            "start_seconds": 1140,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 4,
+            "mechanism": "HTTP RespAbort",
+            "start_seconds": 1530,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 5,
+            "mechanism": "ServicePause",
+            "start_seconds": 1920,
+            "duration_seconds": 30,
+            "duration_evidence": "HISTORICAL_SHORT_QUALIFIED_NOT_FORMAL_30MIN"
+          }
+        ],
+        "complete_by_seconds": 2175,
+        "fits_mathematically": false,
+        "requires_deferred_audit": true,
+        "unknown_duration_mechanisms": [
+          "PodCPUStress",
+          "HTTP ReqAbort",
+          "NetworkBandwidth",
+          "HTTP RespAbort"
+        ],
+        "no_overlap": true,
+        "production_authorized": false,
+        "case_id": "SF-006",
+        "status": "NOT_FIT_WITH_180S_RECOVERY_AND_60S_UNKNOWN_FAULTS"
+      },
+      "mechanism_status": [
+        {
+          "fault_type": "PodCPUStress",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "HTTP ReqAbort",
+          "engineering_status": "MECHANISM_UNAVAILABLE",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "NetworkBandwidth",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "HTTP RespAbort",
+          "engineering_status": "MECHANISM_UNAVAILABLE",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "ServicePause",
+          "engineering_status": "QUALIFIED_EXISTING_ADAPTER_REUSED",
+          "current_formal_execution_authorized": false
+        }
+      ],
+      "production_ready": false,
+      "blocking_dimensions": [
+        "NEW_FORMAL_30MIN_RUNNER_NOT_VALIDATED",
+        "EARLY_GATE_NOT_INTEGRATED",
+        "MECHANISM_SAFETY_OR_SHORT_DURATION_NOT_QUALIFIED",
+        "FRESH_CASE_STORAGE_ADMISSION_REQUIRED"
+      ]
+    },
+    {
+      "case_id": "SF-007",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "original_fault_types_preserved": [
+        "NodeCPUStress",
+        "HTTP ReqDelay",
+        "PodKill",
+        "NetworkDelay"
+      ],
+      "timing_hypothesis": {
+        "events": [
+          {
+            "sequence": 1,
+            "mechanism": "NodeCPUStress",
+            "start_seconds": 360,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 2,
+            "mechanism": "HTTP ReqDelay",
+            "start_seconds": 750,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 3,
+            "mechanism": "PodKill",
+            "start_seconds": 1140,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 4,
+            "mechanism": "NetworkDelay",
+            "start_seconds": 1530,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          }
+        ],
+        "complete_by_seconds": 1815,
+        "fits_mathematically": false,
+        "requires_deferred_audit": true,
+        "unknown_duration_mechanisms": [
+          "NodeCPUStress",
+          "HTTP ReqDelay",
+          "PodKill",
+          "NetworkDelay"
+        ],
+        "no_overlap": true,
+        "production_authorized": false,
+        "case_id": "SF-007",
+        "status": "NOT_FIT_WITH_180S_RECOVERY_AND_60S_UNKNOWN_FAULTS"
+      },
+      "mechanism_status": [
+        {
+          "fault_type": "NodeCPUStress",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "HTTP ReqDelay",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "PodKill",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "NetworkDelay",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        }
+      ],
+      "production_ready": false,
+      "blocking_dimensions": [
+        "NEW_FORMAL_30MIN_RUNNER_NOT_VALIDATED",
+        "EARLY_GATE_NOT_INTEGRATED",
+        "MECHANISM_SAFETY_OR_SHORT_DURATION_NOT_QUALIFIED",
+        "FRESH_CASE_STORAGE_ADMISSION_REQUIRED"
+      ]
+    },
+    {
+      "case_id": "SF-008",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "original_fault_types_preserved": [
+        "NetworkLoss",
+        "HTTP RespReplaceCode",
+        "PodCPUStress",
+        "HTTP RespAbort",
+        "NetworkBandwidth",
+        "PodMemoryStress"
+      ],
+      "timing_hypothesis": {
+        "events": [
+          {
+            "sequence": 1,
+            "mechanism": "NetworkLoss",
+            "start_seconds": 360,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 2,
+            "mechanism": "HTTP RespReplaceCode",
+            "start_seconds": 750,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 3,
+            "mechanism": "PodCPUStress",
+            "start_seconds": 1140,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 4,
+            "mechanism": "HTTP RespAbort",
+            "start_seconds": 1530,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 5,
+            "mechanism": "NetworkBandwidth",
+            "start_seconds": 1920,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 6,
+            "mechanism": "PodMemoryStress",
+            "start_seconds": 2310,
+            "duration_seconds": 60,
+            "duration_evidence": "HISTORICAL_SHORT_QUALIFIED_NOT_FORMAL_30MIN"
+          }
+        ],
+        "complete_by_seconds": 2595,
+        "fits_mathematically": false,
+        "requires_deferred_audit": true,
+        "unknown_duration_mechanisms": [
+          "NetworkLoss",
+          "HTTP RespReplaceCode",
+          "PodCPUStress",
+          "HTTP RespAbort",
+          "NetworkBandwidth"
+        ],
+        "no_overlap": true,
+        "production_authorized": false,
+        "case_id": "SF-008",
+        "status": "NOT_FIT_WITH_180S_RECOVERY_AND_60S_UNKNOWN_FAULTS"
+      },
+      "mechanism_status": [
+        {
+          "fault_type": "NetworkLoss",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "HTTP RespReplaceCode",
+          "engineering_status": "MECHANISM_UNAVAILABLE",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "PodCPUStress",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "HTTP RespAbort",
+          "engineering_status": "MECHANISM_UNAVAILABLE",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "NetworkBandwidth",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "PodMemoryStress",
+          "engineering_status": "QUALIFIED_EXISTING_ADAPTER_REUSED",
+          "current_formal_execution_authorized": false
+        }
+      ],
+      "production_ready": false,
+      "blocking_dimensions": [
+        "NEW_FORMAL_30MIN_RUNNER_NOT_VALIDATED",
+        "EARLY_GATE_NOT_INTEGRATED",
+        "MECHANISM_SAFETY_OR_SHORT_DURATION_NOT_QUALIFIED",
+        "FRESH_CASE_STORAGE_ADMISSION_REQUIRED"
+      ]
+    },
+    {
+      "case_id": "SF-009",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "original_fault_types_preserved": [
+        "NodeCPUStress",
+        "ContainerKill",
+        "HTTP RespDelay",
+        "HTTP ReqAbort",
+        "ServicePause"
+      ],
+      "timing_hypothesis": {
+        "events": [
+          {
+            "sequence": 1,
+            "mechanism": "NodeCPUStress",
+            "start_seconds": 360,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 2,
+            "mechanism": "ContainerKill",
+            "start_seconds": 750,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 3,
+            "mechanism": "HTTP RespDelay",
+            "start_seconds": 1140,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 4,
+            "mechanism": "HTTP ReqAbort",
+            "start_seconds": 1530,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 5,
+            "mechanism": "ServicePause",
+            "start_seconds": 1920,
+            "duration_seconds": 30,
+            "duration_evidence": "HISTORICAL_SHORT_QUALIFIED_NOT_FORMAL_30MIN"
+          }
+        ],
+        "complete_by_seconds": 2175,
+        "fits_mathematically": false,
+        "requires_deferred_audit": true,
+        "unknown_duration_mechanisms": [
+          "NodeCPUStress",
+          "ContainerKill",
+          "HTTP RespDelay",
+          "HTTP ReqAbort"
+        ],
+        "no_overlap": true,
+        "production_authorized": false,
+        "case_id": "SF-009",
+        "status": "NOT_FIT_WITH_180S_RECOVERY_AND_60S_UNKNOWN_FAULTS"
+      },
+      "mechanism_status": [
+        {
+          "fault_type": "NodeCPUStress",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "ContainerKill",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "HTTP RespDelay",
+          "engineering_status": "MECHANISM_UNAVAILABLE",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "HTTP ReqAbort",
+          "engineering_status": "MECHANISM_UNAVAILABLE",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "ServicePause",
+          "engineering_status": "QUALIFIED_EXISTING_ADAPTER_REUSED",
+          "current_formal_execution_authorized": false
+        }
+      ],
+      "production_ready": false,
+      "blocking_dimensions": [
+        "NEW_FORMAL_30MIN_RUNNER_NOT_VALIDATED",
+        "EARLY_GATE_NOT_INTEGRATED",
+        "MECHANISM_SAFETY_OR_SHORT_DURATION_NOT_QUALIFIED",
+        "FRESH_CASE_STORAGE_ADMISSION_REQUIRED"
+      ]
+    },
+    {
+      "case_id": "SF-010",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "original_fault_types_preserved": [
+        "ServicePause",
+        "HTTP ReqDelay"
+      ],
+      "timing_hypothesis": {
+        "events": [
+          {
+            "sequence": 1,
+            "mechanism": "ServicePause",
+            "start_seconds": 600,
+            "duration_seconds": 30,
+            "duration_evidence": "HISTORICAL_SHORT_QUALIFIED_NOT_FORMAL_30MIN"
+          },
+          {
+            "sequence": 2,
+            "mechanism": "HTTP ReqDelay",
+            "start_seconds": 960,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          }
+        ],
+        "complete_by_seconds": 1245,
+        "fits_mathematically": true,
+        "requires_deferred_audit": false,
+        "unknown_duration_mechanisms": [
+          "HTTP ReqDelay"
+        ],
+        "no_overlap": true,
+        "production_authorized": false,
+        "case_id": "SF-010",
+        "status": "MATHEMATICAL_FIT_ONLY_ALL_GATES_PENDING"
+      },
+      "mechanism_status": [
+        {
+          "fault_type": "ServicePause",
+          "engineering_status": "QUALIFIED_EXISTING_ADAPTER_REUSED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "HTTP ReqDelay",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        }
+      ],
+      "production_ready": false,
+      "blocking_dimensions": [
+        "NEW_FORMAL_30MIN_RUNNER_NOT_VALIDATED",
+        "EARLY_GATE_NOT_INTEGRATED",
+        "MECHANISM_SAFETY_OR_SHORT_DURATION_NOT_QUALIFIED",
+        "FRESH_CASE_STORAGE_ADMISSION_REQUIRED"
+      ]
+    },
+    {
+      "case_id": "SF-011",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "original_fault_types_preserved": [
+        "PodMemoryStress",
+        "NetworkDelay"
+      ],
+      "timing_hypothesis": {
+        "events": [
+          {
+            "sequence": 1,
+            "mechanism": "PodMemoryStress",
+            "start_seconds": 600,
+            "duration_seconds": 60,
+            "duration_evidence": "HISTORICAL_SHORT_QUALIFIED_NOT_FORMAL_30MIN"
+          },
+          {
+            "sequence": 2,
+            "mechanism": "NetworkDelay",
+            "start_seconds": 990,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          }
+        ],
+        "complete_by_seconds": 1275,
+        "fits_mathematically": true,
+        "requires_deferred_audit": false,
+        "unknown_duration_mechanisms": [
+          "NetworkDelay"
+        ],
+        "no_overlap": true,
+        "production_authorized": false,
+        "case_id": "SF-011",
+        "status": "MATHEMATICAL_FIT_ONLY_ALL_GATES_PENDING"
+      },
+      "mechanism_status": [
+        {
+          "fault_type": "PodMemoryStress",
+          "engineering_status": "QUALIFIED_EXISTING_ADAPTER_REUSED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "NetworkDelay",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        }
+      ],
+      "production_ready": false,
+      "blocking_dimensions": [
+        "NEW_FORMAL_30MIN_RUNNER_NOT_VALIDATED",
+        "EARLY_GATE_NOT_INTEGRATED",
+        "MECHANISM_SAFETY_OR_SHORT_DURATION_NOT_QUALIFIED",
+        "FRESH_CASE_STORAGE_ADMISSION_REQUIRED"
+      ]
+    },
+    {
+      "case_id": "SF-012",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "original_fault_types_preserved": [
+        "NodeCPUStress",
+        "HTTP RespReplaceCode"
+      ],
+      "timing_hypothesis": {
+        "events": [
+          {
+            "sequence": 1,
+            "mechanism": "NodeCPUStress",
+            "start_seconds": 600,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          },
+          {
+            "sequence": 2,
+            "mechanism": "HTTP RespReplaceCode",
+            "start_seconds": 990,
+            "duration_seconds": 60,
+            "duration_evidence": "UNQUALIFIED_60S_HYPOTHESIS"
+          }
+        ],
+        "complete_by_seconds": 1275,
+        "fits_mathematically": true,
+        "requires_deferred_audit": false,
+        "unknown_duration_mechanisms": [
+          "NodeCPUStress",
+          "HTTP RespReplaceCode"
+        ],
+        "no_overlap": true,
+        "production_authorized": false,
+        "case_id": "SF-012",
+        "status": "MATHEMATICAL_FIT_ONLY_ALL_GATES_PENDING"
+      },
+      "mechanism_status": [
+        {
+          "fault_type": "NodeCPUStress",
+          "engineering_status": "SAFETY_BLOCKED",
+          "current_formal_execution_authorized": false
+        },
+        {
+          "fault_type": "HTTP RespReplaceCode",
+          "engineering_status": "MECHANISM_UNAVAILABLE",
+          "current_formal_execution_authorized": false
+        }
+      ],
+      "production_ready": false,
+      "blocking_dimensions": [
+        "NEW_FORMAL_30MIN_RUNNER_NOT_VALIDATED",
+        "EARLY_GATE_NOT_INTEGRATED",
+        "MECHANISM_SAFETY_OR_SHORT_DURATION_NOT_QUALIFIED",
+        "FRESH_CASE_STORAGE_ADMISSION_REQUIRED"
+      ]
+    }
+  ],
+  "rehearsal": {
+    "capture_pass": true,
+    "dual_archive_pass": true,
+    "parquet_preview_pass": true
+  },
+  "disk_floor_bytes": 20000000000,
+  "capacity_after_rehearsal": {
+    "master": {
+      "available_after_rehearsal_bytes": 253165125632,
+      "retained_old_peak_demand_bytes": 36507222016,
+      "passes_next_case_old_peak_floor": true
+    },
+    "w2": {
+      "available_after_rehearsal_bytes": 56370049024,
+      "retained_old_peak_demand_bytes": 33285996544,
+      "passes_next_case_old_peak_floor": true
+    },
+    "w3": {
+      "available_after_rehearsal_bytes": 82753531904,
+      "retained_old_peak_demand_bytes": 31138512896,
+      "passes_next_case_old_peak_floor": true
+    }
+  },
+  "capacity_forecast": {
+    "status": "MEASURED_NOFAULT_CAPACITY_FORECAST_NOT_FORMAL_ADMISSION",
+    "floor_bytes": 20000000000,
+    "source_archive_bytes_each_worker": 5880259290,
+    "per_future_case_net_sensitivity_25pct_bytes": 7350324113,
+    "preview_peak_work_bytes": 159042928,
+    "preview_peak_product_bytes": 39316119,
+    "hosts": {
+      "master": {
+        "free_after_rehearsal_bytes": 253165125632,
+        "retained_old_peak_demand_bytes": 36507222016,
+        "next_case_peak_residual_bytes": 216657903616,
+        "next_case_eligible_by_storage_only": true,
+        "additional_cases_possible_at_measured_net_with_old_peak": 10,
+        "ten_case_additional_capacity_linear_bytes": 0,
+        "ten_case_additional_capacity_25pct_bytes": 0,
+        "free_after_ten_linear_without_expansion_bytes": 194362532732
+      },
+      "w2": {
+        "free_after_rehearsal_bytes": 56370049024,
+        "retained_old_peak_demand_bytes": 33285996544,
+        "next_case_peak_residual_bytes": 23084052480,
+        "next_case_eligible_by_storage_only": true,
+        "additional_cases_possible_at_measured_net_with_old_peak": 1,
+        "ten_case_additional_capacity_linear_bytes": 49838281130,
+        "ten_case_additional_capacity_25pct_bytes": 63068864537,
+        "free_after_ten_linear_without_expansion_bytes": -2432543876
+      },
+      "w3": {
+        "free_after_rehearsal_bytes": 82753531904,
+        "retained_old_peak_demand_bytes": 31138512896,
+        "next_case_peak_residual_bytes": 51615019008,
+        "next_case_eligible_by_storage_only": true,
+        "additional_cases_possible_at_measured_net_with_old_peak": 6,
+        "ten_case_additional_capacity_linear_bytes": 21307314602,
+        "ten_case_additional_capacity_25pct_bytes": 34537898009,
+        "free_after_ten_linear_without_expansion_bytes": 23950939004
+      }
+    },
+    "cautions": [
+      "Only one no-fault 30-minute run has been measured.",
+      "New 3-6-event cases may exceed this trace/CPU/disk rate.",
+      "Future case admission must reserve peak headroom on every host before injection.",
+      "Historical archives remain protected; no deletion assumed."
+    ]
+  },
+  "first_formal_case_production_ready": false,
+  "historical_formal_case_manifests_modified": false,
+  "formal_faults_injected_this_round": 0
+}

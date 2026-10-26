@@ -1,0 +1,77 @@
+{
+  "collector_config_sha256": "ad42e84b2a1d25b6b9b716f2a119f8d3ab6c50a975b860f3a8eed939618dd05f",
+  "created_utc": "2026-10-17T01:58:03.420504+00:00",
+  "criteria": {
+    "all_expected_sampled_request_proxy_match_fraction": 1.0,
+    "all_receiver_refused_signal_deltas": 0,
+    "all_three_modalities_each_minute": true,
+    "chunk_seconds": 300,
+    "collector_restarts_or_oom": 0,
+    "collector_working_set_stop_bytes": 398458880,
+    "control_p95_ratio_max": 1.25,
+    "control_successes_per_minute_min": 30,
+    "duration_seconds": 1800,
+    "exporter_queue_final_growth_bytes_max": 1048576,
+    "exporter_queue_peak_capacity_fraction_max": 0.01,
+    "log_trace_storage_age_seconds_max": 60,
+    "no_business_fault": true,
+    "opensearch_parent_breaker_new_trips": 0,
+    "target_successes_per_minute_min": 30,
+    "trace_audit_offsets_seconds": [
+      5,
+      60,
+      120,
+      240
+    ],
+    "unexplained_missing_request_ids": 0
+  },
+  "faults_allowed": false,
+  "runs": {
+    "VAL4": {
+      "duration_seconds": 1800,
+      "seed": 751704
+    }
+  },
+  "source_sha256": {
+    "/root/cross-layer-observability-control-rehearsal/scripts/workload_generator_rehearsal.py": "5f7291c9b7698af50b66357fe2fcd38ef9eb491a6330db207d578d38f6fe5464",
+    "/root/cross-layer-workload-generation/design/people.json": "2e780c99cd1950213c798ba086c184b6ae89a98af8a6df4bb190b2e19bcf77ab",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/capture_live_c2.py": "a0b36a73d64d563fa7a733e821eddddb0a6ad55a0b9017482b5f846d12cef4f6",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/evaluate_trace_v2.py": "0f434f1b6efd5c3b576d742184b6f1c0f7222e50e057f55a34dabbd29ff06f4a",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/schedule_trace_completion.py": "27ebeca04f74e4e7a312cb277bfa5777864edeb6df39dda223670914dfdcb885",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/schedule_trace_completion_v2.py": "9a2db5310fd33f7182cd9dda43fd8f44b17029b3111b8e5b0f1baa26d08a8aae",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/schedule_trace_v2.py": "24a05f44d51beab11067b7e51337eafe3be0718333e80231dde8a99b6d190d86",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/trace_identity.py": "5370f59591582ed0d0fdc5f97e43347e9f0bcfbbce5a002af5e16f164b4c5af9",
+    "/root/ops-competition-2026/low-stable-v4-20261017/capture/trace_storage_reader.py": "1b6bc74480e43a8e83d6508f6a8cc47a8ea09bdd57fe577b9f268c014126adb6",
+    "/root/ops-competition-2026/low-stable-v4-20261017/validation-v4/common.py": "8dccd5ca94ef6436e84e0455dd04c1b558d0f60ee956fb71c9ad9c661d86d7cb",
+    "/root/ops-competition-2026/low-stable-v4-20261017/validation-v4/evaluate.py": "278fb81c65a7161629f6079fc80a4fea12ba1c6e30e591b2a9b1e998aab0da60",
+    "/root/ops-competition-2026/low-stable-v4-20261017/validation-v4/fixed_business_streams_v4.py": "d926119748c3f1dc59f937a834e05549e3994691526025dadfb5bcd8279006dd",
+    "/root/ops-competition-2026/low-stable-v4-20261017/validation-v4/observation.py": "2c2ed538706aa8b233b0ffeee1a68087a9618d2b9a9a0661ac231842aefaa993",
+    "/root/ops-competition-2026/low-stable-v4-20261017/validation-v4/run_validation.py": "0aaadd3b318585debdb852edbb6c027baf467284871bf1c05b65edaa15926fed",
+    "/root/ops-competition-2026/scripts/competition_controls.py": "a4a11e9f581bf85970326dae1ba151747a83c96596434e7a3d53ca668ddac8cf",
+    "/root/stage5-v3-autonomous-preparation/design/load-profiles-c3.yaml": "e9893989f9012cb00432ec95aed3af9daa218238a90bd5a82a61fba02888a23d",
+    "/root/stage5-v3-observability-diagnostics/snapshots/reference/workload-state-machine-c3.yaml": "e877814f950088c6a692778a23644979e44888f955bcf35496f4ad59c26ad05b"
+  },
+  "status": "PREREGISTERED_FULL_CHAIN_MEDIUM_TRACE_READER_1800S",
+  "workload": {
+    "arrival_rate_sessions_per_second": 1.4,
+    "control_concurrency_per_stream": {
+      "cart_view": 6,
+      "image_asset": 3
+    },
+    "control_streams": [
+      {
+        "name": "image_asset",
+        "rate_per_second": 1.0,
+        "seed_offset": 101
+      },
+      {
+        "name": "cart_view",
+        "rate_per_second": 2.0,
+        "seed_offset": 103
+      }
+    ],
+    "control_timeout_seconds": 8,
+    "policy_name": "TRACE_REPAIR_MEDIUM",
+    "profile": "MEDIUM"
+  }
+}

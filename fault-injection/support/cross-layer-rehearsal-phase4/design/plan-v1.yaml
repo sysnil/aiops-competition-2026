@@ -1,0 +1,70 @@
+schema_version: 1
+revision: phase4_pre_registered_before_fault
+phase: cross-layer-rehearsal-phase4
+source: independent_rehearsal
+formal_case: false
+stage5_v2_access: read_only_reference_only
+parent_phase3_archive_sha256: 02a4142b80d08c58f43a8d28ae5daf7c199cb72f33c2b0d0211f9d94f40374ed
+experiments:
+  - {id: P4-W3W2-S1, family: worker3_to_worker2_loss, seed: 74021, fault_seconds: 60}
+  - {id: P4-W3W2-S2, family: worker3_to_worker2_loss, seed: 74022, fault_seconds: 60}
+payment_experiments:
+  - {id: P4-PAYMENT-S1, seed: 74011, duration_seconds: 300}
+  - {id: P4-PAYMENT-S2, seed: 74012, duration_seconds: 300}
+payment_coverage:
+  minimum_business_server_spans_per_pod_per_300s: 30
+  minimum_business_server_spans_per_pod_in_4_of_5_minutes: 3
+  minimum_checkout_client_uid_coverage: 0.99
+  required_payment_server_uid_match: 1.0
+  require_two_ready_payment_endpoints: true
+  no_direct_payment_pod_requests: true
+workload:
+  machine: /root/cross-layer-rehearsal-phase4/design/workload-state-machine.yaml
+  profile: MEDIUM
+  duration_seconds: 300
+  before_seconds: 120
+  during_seconds: 60
+  after_seconds: 120
+  checkout_workflow_weight: 60
+  control_streams:
+    - {name: image_asset, operation: GET /images/products/OpticalTubeAssembly.jpg, rate_per_second: 1.0, seed_offset: 101}
+    - {name: product_detail, operation: GET /api/products/2ZYFJ3GM2N, rate_per_second: 2.0, seed_offset: 102}
+    - {name: cart_view, operation: GET /api/cart, rate_per_second: 2.0, seed_offset: 103}
+  control_timeout_seconds: 8
+  control_concurrency_per_stream: {image_asset: 2, product_detail: 4, cart_view: 4}
+  max_added_node_cpu_cores: 0.25
+network_path:
+  target: NETWORK_PATH/k8s-worker3/k8s-worker2
+  affected_business_edge: checkout->cart
+  require_route_and_packet_proof_before_fault: true
+  loss_percent: 10
+  minimum_valid_target_edge_spans_per_60s: 30
+  minimum_fault_business_p95_ratio_or_error_increase: {p95_ratio: 1.5, error_fraction_increase: 0.02}
+  minimum_fault_probe_udp_loss_fraction: 0.05
+  maximum_before_after_probe_udp_loss_fraction: 0.01
+controls:
+  primary: frontend-proxy_to_image-provider_worker2_local
+  secondary: frontend_to_cart_worker2_local
+  minimum_successful_requests_per_minute: 30
+  minimum_valid_edge_spans_per_minute: 30
+  maximum_client_p95_ratio: 1.25
+probe:
+  source: k8s-worker3
+  destination: k8s-worker2
+  interval_seconds: 5
+  before_samples: 24
+  during_samples: 12
+  after_samples: 24
+  require_all_scheduled_samples_recorded: true
+  require_all_iperf_samples_success_for_full_pass: true
+  per_sample_timeout_seconds: 4
+  timeout_or_miss_value: null
+capture:
+  trace_source: JAEGER_OPENSEARCH_STORAGE
+  scheduler: master_local_single_ssh_session
+  phase_start_delay_seconds: 20
+  trace_completion_delay_seconds: 60
+  maximum_capture_start_lag_seconds: 120
+  before_seconds: 120
+  during_seconds: 60
+  after_seconds: 120

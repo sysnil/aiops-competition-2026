@@ -1,0 +1,22 @@
+{
+  "status": "DRAFT_NOT_FROZEN",
+  "scope": "SF-013 through SF-017 only",
+  "window_seconds": 1800,
+  "chunks": 6,
+  "trace_source": "JAEGER_OPENSEARCH_STORAGE",
+  "required_modalities_per_chunk": ["metrics", "logs", "traces"],
+  "first_capture_start_lag_seconds": [5, 10],
+  "first_capture_completion_lag_seconds_max": 60,
+  "collector_receiver_refused_delta_max": 0,
+  "normal_controls": ["image_asset", "cart_view"],
+  "normal_control_success_fraction_min": 0.99,
+  "normal_control_min_successes_per_300s_chunk": 270,
+  "normal_control_proxy_span_match_fraction_min": 0.99,
+  "trace_late_after_plus120_fraction_max": 0.005,
+  "canonical_trace_snapshot": "immutable_plus240",
+  "target_requests_during_fault": "failures_and_timeouts_allowed; missing target Server Span must remain missing and be explained by independent public caller evidence",
+  "unmatched_control_trace_ids": "retain and report; never synthesize spans",
+  "business_impact": "separate from collection validity",
+  "injection_and_recovery": "separate mandatory safety/admission checks; never relaxed by this contract",
+  "gt_budget": "at most five human-reviewed scoring events; raw candidates retained"
+}

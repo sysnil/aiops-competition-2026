@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Semifinal query visualization Private draft GT",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["question_id", "case_id", "source_public_manifest_sha256", "source_file_sha256", "canonical_chart_data", "reference_chart_path", "three_gold_answers", "supporting_public_records", "grading_rubric", "gt_version", "review_status", "calculation_method"],
+  "properties": {
+    "question_id": {"type": "string", "pattern": "^(Q[0-9]{2}|EX-P[0-9]{2})$"},
+    "case_id": {"type": "string", "pattern": "^SF-[0-9]{3}$"},
+    "source_public_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_file_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "canonical_chart_data": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["series", "timestamp_utc", "minute_index", "value", "sample_count"],
+        "properties": {
+          "series": {"type": "string"}, "timestamp_utc": {"type": "string", "format": "date-time"},
+          "minute_index": {"type": "integer", "minimum": 0},
+          "value": {"type": ["number", "null"]},
+          "sample_count": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "reference_chart_path": {"type": "string"},
+    "three_gold_answers": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["answer_type", "answer", "answer_unit", "numerical_tolerance", "time_tolerance_seconds", "calculation_method"],
+        "properties": {
+          "answer_type": {"enum": ["number", "time", "entity"]},
+          "answer": {"type": ["number", "string"]},
+          "answer_unit": {"type": "string"},
+          "numerical_tolerance": {"type": ["number", "null"], "minimum": 0},
+          "time_tolerance_seconds": {"type": "integer", "minimum": 0},
+          "calculation_method": {"type": "string"}
+        }
+      }
+    },
+    "supporting_public_records": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "grading_rubric": {"type": "object", "required": ["chart_points", "answer_points_each", "chart_breakdown"]},
+    "gt_version": {"type": "string"},
+    "review_status": {"const": "DRAFT_PENDING_HUMAN_REVIEW"},
+    "calculation_method": {"type": "object"}
+  }
+}

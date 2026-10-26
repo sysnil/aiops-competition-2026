@@ -1,0 +1,25 @@
+{
+  "status": "DRAFT_NOFAULT_READINESS_HARNESS",
+  "run_id": "SF-FINAL-NOFAULT-1800-20261019-01",
+  "duration_seconds": 1800,
+  "workload_seed": 751719,
+  "workload_profile": "LOW_STABLE",
+  "business_sessions_per_second": 0.7,
+  "control_streams_per_second": {
+    "image_asset": 1,
+    "cart_view": 1,
+    "home": 1,
+    "recommendations": 1
+  },
+  "trace_source": "JAEGER_OPENSEARCH_STORAGE",
+  "capture_chunks": 6,
+  "chunk_seconds": 300,
+  "planned_marker_offset_seconds": 600,
+  "real_fault_adapter_access": false,
+  "real_injection_allowed": false,
+  "benchmark_case_created": false,
+  "reference_capture": "/root/ops-competition-2026/low-stable-v4-20261017/validation-v6/run_validation.py",
+  "output_root": "/data/stage5-v3/ops-competition-2026/final-case-production-readiness-20261019/validation-runs-v6/VAL6",
+  "five_gb_disk_floor_bytes": 5000000000,
+  "capture_controller_isolation": "Separate Marker-only executable, not a bool switch on the real fault adapter"
+}

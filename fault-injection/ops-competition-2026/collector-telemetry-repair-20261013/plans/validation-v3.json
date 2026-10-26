@@ -1,0 +1,118 @@
+{
+  "status": "PREREGISTERED_NO_FAULT_TELEMETRY_REPAIR",
+  "at_utc": "2026-10-13T13:13:06.246602+00:00",
+  "faults_allowed": false,
+  "candidate": {
+    "parameter": "processors.memory_limiter.spike_limit_percentage",
+    "old": 25,
+    "new": 15,
+    "container_limit_mib": 400,
+    "gomemlimit_mib": 320,
+    "hard_limiter_mib": 320,
+    "new_soft_limit_mib": 260,
+    "batch_queue_retry_sampling_changed": false
+  },
+  "runs": {
+    "BASE": {
+      "seed": 930200,
+      "duration_seconds": 300,
+      "configuration": "ORIGINAL"
+    },
+    "VAL1": {
+      "seed": 931100,
+      "duration_seconds": 900,
+      "configuration": "CANDIDATE"
+    },
+    "VAL2": {
+      "seed": 932100,
+      "duration_seconds": 900,
+      "configuration": "CANDIDATE"
+    }
+  },
+  "observation_drain_seconds": 30,
+  "chunk_seconds": 300,
+  "trace_offsets_seconds": [
+    5,
+    60,
+    120,
+    240
+  ],
+  "trace_completion_deadlines_seconds": [
+    60,
+    120,
+    180,
+    300
+  ],
+  "workload": {
+    "profile": "MEDIUM",
+    "arrival_rate_sessions_per_second": 1.4,
+    "workflow_weights": {
+      "browse": 20,
+      "shopping": 30,
+      "checkout": 50
+    },
+    "control_streams": [
+      {
+        "name": "image_asset",
+        "rate_per_second": 1.0,
+        "seed_offset": 101
+      },
+      {
+        "name": "cart_view",
+        "rate_per_second": 2.0,
+        "seed_offset": 103
+      }
+    ],
+    "control_timeout_seconds": 8,
+    "control_concurrency_per_stream": {
+      "image_asset": 2,
+      "cart_view": 4
+    }
+  },
+  "criteria": {
+    "all_issued_sampled_request_proxy_match": 1.0,
+    "control_http_success_fraction": 1.0,
+    "state_machine_http_success_fraction": 1.0,
+    "proxy_spans_dropped_delta": 0,
+    "receiver_refused_grpc_delta": 0,
+    "receiver_refused_http_delta": 0,
+    "metrics_export_timeout_log_count": 0,
+    "new_refusal_or_export_drop_log_count": 0,
+    "collector_restarts_or_oom": 0,
+    "collector_working_set_stop_mib": 380,
+    "all_node_source_metric_age_seconds_max": 60,
+    "log_and_trace_latest_age_seconds_max": 60,
+    "all_three_modalities_each_chunk_required": true,
+    "critical_late_spans": 0,
+    "missing_optional_limiter_failed_retry_counter": "UNKNOWN_NOT_ZERO; cannot independently claim zero failures",
+    "unmatched_expected_requests": "FAIL with per-ID evidence; no denominator exclusions after seeing results",
+    "fixed_drain_overrun": "FAIL; do not extend window after observation"
+  },
+  "source_sha256": {
+    "/root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/change.py": "f1f8e64b0eed272de4190e0598b2f304e9e30063b425e13a5caf07b3bc2fcdd3",
+    "/root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/diagnose.py": "cc81e75e94767773efd6d0bf142ddf0e3b21a29518ac60354774a596487a95fe",
+    "/root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/run_validation.py": "925ef306c52816e676d95049c595810cf1a9479afcf2a753942f8591af1fb149",
+    "/root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/common.py": "f1cc9dc6dde255cc3f65349e8dfc96da974009a60bb27aa3868c7e8924ec7721",
+    "/root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/repair_preflight.py": "f9bfb467718880f3817e2575f344ef5f6894625244489be71c00673664df856d",
+    "/root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/evaluate.py": "21ad62a58b990b2e0bd9ede8e3c7c786979eafdf239081af30dff158389c3ede",
+    "/root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/register.py": "61b3e942fcc9254c686371c6404b523c85b6fe438218958a9eccc3247422582f",
+    "/root/ops-competition-2026/collector-telemetry-repair-20261013/scripts/refresh_repair_safety.py": "5dca8ae833e92d6d9f1a89996d6b9888e266a31a0d165d79d7f53308a734b8f3",
+    "/root/cross-layer-observability-control-rehearsal/scripts/workload_generator_rehearsal.py": "5f7291c9b7698af50b66357fe2fcd38ef9eb491a6330db207d578d38f6fe5464",
+    "/root/ops-competition-2026/scripts/competition_controls.py": "a4a11e9f581bf85970326dae1ba151747a83c96596434e7a3d53ca668ddac8cf",
+    "/root/stage5-v3-observability-diagnostics/snapshots/reference/workload-state-machine-c3.yaml": "e877814f950088c6a692778a23644979e44888f955bcf35496f4ad59c26ad05b",
+    "/root/stage5-v3-autonomous-preparation/design/load-profiles-c3.yaml": "e9893989f9012cb00432ec95aed3af9daa218238a90bd5a82a61fba02888a23d",
+    "/root/cross-layer-workload-generation/design/people.json": "2e780c99cd1950213c798ba086c184b6ae89a98af8a6df4bb190b2e19bcf77ab",
+    "/root/stage5-v3-autonomous-preparation/scripts/fixed_control_load_c3.py": "77a4f1efe10b23f95358b784fcd428d200b922632aeb9e4ef0920b7365dd4b1c",
+    "/root/stage5-v3-autonomous-preparation/scripts/capture_live_c2.py": "417baa3e086e67b1301ff5a2ea496d57dbd097cd405e01059e8371cb84d68d86",
+    "/root/stage5-v3-autonomous-preparation/scripts/trace_storage_reader.py": "686dc664812d7ad6594ecd4240a907cb990e3ac852af6b4b4747235a6e43e7b4",
+    "/root/stage5-v3-autonomous-preparation/scripts/schedule_trace_completion.py": "5c8d212d34bc2c1cf358627213de2c47d03739b980bf15828d3a548cd2293851",
+    "/root/stage5-v3-clean-gate-v2/scripts/schedule_trace_completion_v2.py": "0d77ebf6ae147c72e97a3ea9660942a649329ff01411fb1329a4e321441ac38a",
+    "/root/stage5-v3-clean-gate-v2/scripts/schedule_trace_v2.py": "a47013ad0102b907a4faff3fb8e43b5fb6f19d7bd9c8f133c7ee4a73cf5fca92",
+    "/root/stage5-v3-clean-gate-v2/scripts/trace_identity.py": "5370f59591582ed0d0fdc5f97e43347e9f0bcfbbce5a002af5e16f164b4c5af9",
+    "/root/ops-competition-2026/scripts/competition_observation.py": "f9d6c1bca2527aa0064eccb16e26108719ec08b00fe86a53d8a0fb3941287d89"
+  },
+  "historical_qualification_unchanged": true,
+  "retention_on_success": "keep only after both validations and post-health pass; otherwise rollback",
+  "rollback_timer_seconds": 5400,
+  "automatic_additional_candidate": "forbidden"
+}

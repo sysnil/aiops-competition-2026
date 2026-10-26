@@ -1,0 +1,53 @@
+document_status: DRAFT_NOT_FROZEN
+stage5_v3_protocol_changed: false
+collector:
+  current_configuration: original_memory_limiter_spike_25
+  current_status: INTERMITTENT_REFUSAL_UNRESOLVED
+  evidence: current_gateway_limiter_counter_has_multiple_positive_intervals_outside_short_canary
+  bounded_next_validation:
+    candidate: previously_studied_spike_15_only
+    preconditions:
+      - approved_new_disk_mounted_uuid_verified
+      - independent_systemd_rollback_with_absolute_kubeconfig_armed_and_tested
+      - fresh_global_safety_pass
+      - five_host_residue_pass
+      - code_and_quality_thresholds_frozen_before_window
+    window: one_45_minute_no_fault_observation
+    workload: unchanged_state_machine_1_4_sessions_per_second_plus_image_1_per_second_cart_2_per_second
+    trace: timely_plus_120_scoring_plus_240_read_only_audit
+    processor_refused_metric_absent: UNKNOWN_NOT_ZERO
+    stop_if: [receiver_refusal, abnormal_collector_restart, storage_floor_breach, node_unready, source_health_failure]
+    failed_candidate_action: rollback_and_record_failure_no_more_parameter_search
+    candidate_not_retained_before_review: true
+clean_gate:
+  storage_preflight: PASS_ON_NEW_DISK
+  existing_cpu_increment_rule: unchanged_pending_review
+  existing_control_p95_rule: unchanged_pending_review
+  trace_completion_v2: shadow_only_pending_review
+  full_clean_window_this_round: NOT_RUN
+node_cpu:
+  mechanism: worker1_cpu_contention
+  approval_state: NODE_PENDING_SAFETY_CONTRACT
+  proposed_abort_signals:
+    - node_Ready_false_or_unknown
+    - MemoryPressure_DiskPressure_or_PIDPressure_true_or_unknown
+    - kubelet_or_required_node_metric_stale
+    - non_target_control_node_health_failure
+    - unexpected_mass_Pod_rebuild
+    - cleanup_watchdog_unavailable
+  bounded_worker_count_proposal: at_most_6_of_8_logical_cpus_from_existing_adapter
+  numeric_during_cpu_psi_and_resource_abort_thresholds: require_targeted_prefreeze_validation_and_human_approval
+  real_node_stress_this_round: forbidden
+network_path:
+  target: NETWORK_PATH/k8s-worker2/k8s-worker3
+  traversing_edge: checkout_worker2_to_cart_worker3
+  candidate_controls_for_future_registration:
+    - image_local_worker2
+    - checkout_worker2_to_payment_worker1
+  historical_three_minute_candidate_evidence: exploratory_only_not_qualification
+  preregistered_future_minimums:
+    successful_business_requests_per_minute: 30
+    valid_client_server_edge_spans_per_minute: 30
+    p95_ratio_max: 1.25
+  full_before_during_after_control_and_filter_independence_required: true
+  network_fault_this_round: forbidden

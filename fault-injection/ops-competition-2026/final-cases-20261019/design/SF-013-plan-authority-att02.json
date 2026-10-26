@@ -1,0 +1,20 @@
+{
+  "status": "SF013_ATTEMPT02_DESIGN_LOCKED_PRE_INJECTION",
+  "case_id": "SF-013",
+  "attempt_id": "SF-013-ATTEMPT-02",
+  "superseded_attempt": "SF-013-ATTEMPT-01",
+  "superseded_status": "FAILED_BEFORE_INJECTION_STALE_IDENTITY",
+  "change_from_attempt01": "Refresh current Pod/PID identity immediately before preregistration; start the shared capture/controller as soon as T0 enters the frozen 90-240 second startup window.",
+  "mechanism": "POD_MEMORY_32M_300",
+  "mechanism_qualification": "/root/ops-competition-2026/qualification/COMP-SF01-POD-300/decision.json",
+  "target_policy": "one current frontend Pod on worker2 with healthy sibling on worker1",
+  "case_duration_seconds": 1800,
+  "fault_offset_seconds": 600,
+  "fault_duration_seconds": 300,
+  "workload_contract": "LOW_STABLE_0.7_SESSIONS_PLUS_FOUR_FIXED_1_PER_SECOND",
+  "archive_target": "worker1:/data",
+  "storage_floor_bytes": 5000000000,
+  "admission_change_from_prior": false,
+  "private_gt_review": "DRAFT_PENDING_HUMAN_REVIEW",
+  "no_existing_case_modified": true
+}

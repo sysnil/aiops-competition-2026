@@ -1,0 +1,1737 @@
+{
+  "SF-001": {
+    "case_id": "SF-001",
+    "status_values": {
+      "OK": 9411,
+      "ERROR": 1626
+    },
+    "memory_pods": [
+      {
+        "pod": "load-generator-79cbb674d-hmktb",
+        "minutes": 60,
+        "min_mib": 158.98,
+        "max_mib": 465.33,
+        "range_mib": 306.35
+      },
+      {
+        "pod": "frontend-68d8bbfdc8-8mnzh",
+        "minutes": 60,
+        "min_mib": 127.86,
+        "max_mib": 161.71,
+        "range_mib": 33.85
+      },
+      {
+        "pod": "recommendation-c887f6f6b-cxb5j",
+        "minutes": 60,
+        "min_mib": 48.23,
+        "max_mib": 52.21,
+        "range_mib": 3.98
+      },
+      {
+        "pod": "recommendation-c887f6f6b-zchkk",
+        "minutes": 60,
+        "min_mib": 48.2,
+        "max_mib": 52.18,
+        "range_mib": 3.98
+      },
+      {
+        "pod": "frontend-proxy-844f94c445-w25c9",
+        "minutes": 60,
+        "min_mib": 32.35,
+        "max_mib": 32.87,
+        "range_mib": 0.52
+      },
+      {
+        "pod": "checkout-6767884cf8-v57xw",
+        "minutes": 60,
+        "min_mib": 12.95,
+        "max_mib": 13.36,
+        "range_mib": 0.41
+      },
+      {
+        "pod": "frontend-68d8bbfdc8-c4n85",
+        "minutes": 60,
+        "min_mib": 128.96,
+        "max_mib": 129.37,
+        "range_mib": 0.41
+      },
+      {
+        "pod": "ad-6dd859cc54-qd57p",
+        "minutes": 60,
+        "min_mib": 241.81,
+        "max_mib": 241.96,
+        "range_mib": 0.15
+      },
+      {
+        "pod": "ad-6dd859cc54-bngm2",
+        "minutes": 60,
+        "min_mib": 236.41,
+        "max_mib": 236.54,
+        "range_mib": 0.13
+      }
+    ],
+    "top_services": [
+      {
+        "service": "frontend",
+        "spans": 223837,
+        "errors": 609
+      },
+      {
+        "service": "flagd",
+        "spans": 140902,
+        "errors": 0
+      },
+      {
+        "service": "frontend-proxy",
+        "spans": 138492,
+        "errors": 472
+      },
+      {
+        "service": "product-catalog",
+        "spans": 89430,
+        "errors": 260
+      },
+      {
+        "service": "cart",
+        "spans": 68603,
+        "errors": 0
+      },
+      {
+        "service": "checkout",
+        "spans": 30546,
+        "errors": 0
+      },
+      {
+        "service": "frontend-web",
+        "spans": 19762,
+        "errors": 0
+      },
+      {
+        "service": "recommendation",
+        "spans": 19503,
+        "errors": 284
+      },
+      {
+        "service": "quote",
+        "spans": 14100,
+        "errors": 0
+      },
+      {
+        "service": "shipping",
+        "spans": 11919,
+        "errors": 0
+      },
+      {
+        "service": "image-provider",
+        "spans": 11042,
+        "errors": 0
+      },
+      {
+        "service": "email",
+        "spans": 10076,
+        "errors": 0
+      },
+      {
+        "service": "currency",
+        "spans": 9411,
+        "errors": 0
+      },
+      {
+        "service": "load-generator",
+        "spans": 7582,
+        "errors": 0
+      },
+      {
+        "service": "accounting",
+        "spans": 7569,
+        "errors": 1
+      },
+      {
+        "service": "fraud-detection",
+        "spans": 5050,
+        "errors": 0
+      },
+      {
+        "service": "payment",
+        "spans": 5049,
+        "errors": 0
+      },
+      {
+        "service": "ad",
+        "spans": 4648,
+        "errors": 0
+      },
+      {
+        "service": "jaeger",
+        "spans": 8,
+        "errors": 0
+      }
+    ],
+    "top_edges": [
+      {
+        "parent_service": "frontend-proxy",
+        "service": "frontend",
+        "spans": 57408,
+        "errors": 6
+      },
+      {
+        "parent_service": "frontend",
+        "service": "product-catalog",
+        "spans": 35649,
+        "errors": 101
+      },
+      {
+        "parent_service": "frontend",
+        "service": "cart",
+        "spans": 20675,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend-proxy",
+        "service": "image-provider",
+        "spans": 11042,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend-web",
+        "service": "frontend-proxy",
+        "spans": 9290,
+        "errors": 0
+      },
+      {
+        "parent_service": "recommendation",
+        "service": "product-catalog",
+        "spans": 6501,
+        "errors": 142
+      },
+      {
+        "parent_service": "frontend",
+        "service": "recommendation",
+        "spans": 6501,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "currency",
+        "spans": 5197,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "shipping",
+        "spans": 5038,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "cart",
+        "spans": 5038,
+        "errors": 0
+      },
+      {
+        "parent_service": "shipping",
+        "service": "quote",
+        "spans": 4700,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "currency",
+        "spans": 4214,
+        "errors": 0
+      },
+      {
+        "parent_service": "load-generator",
+        "service": "flagd",
+        "spans": 4194,
+        "errors": 0
+      },
+      {
+        "parent_service": "load-generator",
+        "service": "frontend-proxy",
+        "spans": 3907,
+        "errors": 30
+      },
+      {
+        "parent_service": "checkout",
+        "service": "product-catalog",
+        "spans": 2678,
+        "errors": 0
+      },
+      {
+        "parent_service": "cart",
+        "service": "flagd",
+        "spans": 2639,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "payment",
+        "spans": 2519,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "email",
+        "spans": 2519,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "checkout",
+        "spans": 2519,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "shipping",
+        "spans": 2181,
+        "errors": 0
+      }
+    ],
+    "service_trend": [
+      {
+        "service": "frontend",
+        "minutes": 60,
+        "count_min": 1382,
+        "count_max": 4205,
+        "error_max": 147,
+        "p95_min_ms": 24.77,
+        "p95_max_ms": 272618.0
+      },
+      {
+        "service": "recommendation",
+        "minutes": 55,
+        "count_min": 324,
+        "count_max": 1005,
+        "error_max": 284,
+        "p95_min_ms": 4.2,
+        "p95_max_ms": 1044.9
+      },
+      {
+        "service": "frontend-proxy",
+        "minutes": 60,
+        "count_min": 1114,
+        "count_max": 2670,
+        "error_max": 98,
+        "p95_min_ms": 27.18,
+        "p95_max_ms": 8005.63
+      },
+      {
+        "service": "checkout",
+        "minutes": 59,
+        "count_min": 30,
+        "count_max": 652,
+        "error_max": 0,
+        "p95_min_ms": 21.02,
+        "p95_max_ms": 32.81
+      },
+      {
+        "service": "product-catalog",
+        "minutes": 60,
+        "count_min": 106,
+        "count_max": 2412,
+        "error_max": 260,
+        "p95_min_ms": 3.61,
+        "p95_max_ms": 50.16
+      },
+      {
+        "service": "cart",
+        "minutes": 60,
+        "count_min": 306,
+        "count_max": 1331,
+        "error_max": 0,
+        "p95_min_ms": 1.63,
+        "p95_max_ms": 2.84
+      }
+    ],
+    "error_logs": {
+      "recommendation": 142,
+      "accounting": 1
+    }
+  },
+  "SF-002": {
+    "case_id": "SF-002",
+    "status_values": {
+      "OK": 9506,
+      "ERROR": 1955
+    },
+    "memory_pods": [
+      {
+        "pod": "load-generator-79cbb674d-hmktb",
+        "minutes": 60,
+        "min_mib": 309.99,
+        "max_mib": 455.73,
+        "range_mib": 145.74
+      },
+      {
+        "pod": "frontend-68d8bbfdc8-8mnzh",
+        "minutes": 60,
+        "min_mib": 127.91,
+        "max_mib": 162.87,
+        "range_mib": 34.96
+      },
+      {
+        "pod": "recommendation-c887f6f6b-cxb5j",
+        "minutes": 60,
+        "min_mib": 49.2,
+        "max_mib": 55.21,
+        "range_mib": 6.01
+      },
+      {
+        "pod": "recommendation-c887f6f6b-zchkk",
+        "minutes": 60,
+        "min_mib": 48.21,
+        "max_mib": 53.47,
+        "range_mib": 5.26
+      },
+      {
+        "pod": "frontend-68d8bbfdc8-c4n85",
+        "minutes": 60,
+        "min_mib": 129.11,
+        "max_mib": 131.73,
+        "range_mib": 2.62
+      },
+      {
+        "pod": "checkout-6767884cf8-v57xw",
+        "minutes": 60,
+        "min_mib": 13.07,
+        "max_mib": 13.48,
+        "range_mib": 0.42
+      },
+      {
+        "pod": "frontend-proxy-844f94c445-w25c9",
+        "minutes": 60,
+        "min_mib": 32.39,
+        "max_mib": 32.77,
+        "range_mib": 0.38
+      },
+      {
+        "pod": "ad-6dd859cc54-bngm2",
+        "minutes": 60,
+        "min_mib": 236.49,
+        "max_mib": 236.67,
+        "range_mib": 0.17
+      },
+      {
+        "pod": "ad-6dd859cc54-qd57p",
+        "minutes": 60,
+        "min_mib": 241.88,
+        "max_mib": 242.03,
+        "range_mib": 0.15
+      }
+    ],
+    "top_services": [
+      {
+        "service": "frontend",
+        "spans": 224674,
+        "errors": 954
+      },
+      {
+        "service": "flagd",
+        "spans": 140322,
+        "errors": 1
+      },
+      {
+        "service": "frontend-proxy",
+        "spans": 138958,
+        "errors": 608
+      },
+      {
+        "service": "product-catalog",
+        "spans": 88148,
+        "errors": 0
+      },
+      {
+        "service": "cart",
+        "spans": 69469,
+        "errors": 0
+      },
+      {
+        "service": "checkout",
+        "spans": 30858,
+        "errors": 2
+      },
+      {
+        "service": "frontend-web",
+        "spans": 19994,
+        "errors": 0
+      },
+      {
+        "service": "recommendation",
+        "spans": 19431,
+        "errors": 388
+      },
+      {
+        "service": "quote",
+        "spans": 14274,
+        "errors": 0
+      },
+      {
+        "service": "shipping",
+        "spans": 12055,
+        "errors": 0
+      },
+      {
+        "service": "image-provider",
+        "spans": 10899,
+        "errors": 0
+      },
+      {
+        "service": "email",
+        "spans": 10156,
+        "errors": 0
+      },
+      {
+        "service": "currency",
+        "spans": 9506,
+        "errors": 0
+      },
+      {
+        "service": "load-generator",
+        "spans": 7643,
+        "errors": 0
+      },
+      {
+        "service": "accounting",
+        "spans": 7629,
+        "errors": 1
+      },
+      {
+        "service": "fraud-detection",
+        "spans": 5091,
+        "errors": 1
+      },
+      {
+        "service": "payment",
+        "spans": 5090,
+        "errors": 0
+      },
+      {
+        "service": "ad",
+        "spans": 4592,
+        "errors": 0
+      },
+      {
+        "service": "jaeger",
+        "spans": 8,
+        "errors": 0
+      }
+    ],
+    "top_edges": [
+      {
+        "parent_service": "frontend-proxy",
+        "service": "frontend",
+        "spans": 57766,
+        "errors": 56
+      },
+      {
+        "parent_service": "frontend",
+        "service": "product-catalog",
+        "spans": 35124,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "cart",
+        "spans": 20925,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend-proxy",
+        "service": "image-provider",
+        "spans": 10899,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend-web",
+        "service": "frontend-proxy",
+        "spans": 9058,
+        "errors": 9
+      },
+      {
+        "parent_service": "frontend",
+        "service": "recommendation",
+        "spans": 6477,
+        "errors": 0
+      },
+      {
+        "parent_service": "recommendation",
+        "service": "product-catalog",
+        "spans": 6219,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "currency",
+        "spans": 5271,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "cart",
+        "spans": 5079,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "shipping",
+        "spans": 5078,
+        "errors": 0
+      },
+      {
+        "parent_service": "shipping",
+        "service": "quote",
+        "spans": 4758,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "currency",
+        "spans": 4235,
+        "errors": 0
+      },
+      {
+        "parent_service": "load-generator",
+        "service": "flagd",
+        "spans": 4134,
+        "errors": 0
+      },
+      {
+        "parent_service": "load-generator",
+        "service": "frontend-proxy",
+        "spans": 4104,
+        "errors": 36
+      },
+      {
+        "parent_service": "checkout",
+        "service": "product-catalog",
+        "spans": 2731,
+        "errors": 0
+      },
+      {
+        "parent_service": "cart",
+        "service": "flagd",
+        "spans": 2659,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "checkout",
+        "spans": 2540,
+        "errors": 1
+      },
+      {
+        "parent_service": "checkout",
+        "service": "email",
+        "spans": 2539,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "payment",
+        "spans": 2539,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "shipping",
+        "spans": 2219,
+        "errors": 0
+      }
+    ],
+    "service_trend": [
+      {
+        "service": "frontend",
+        "minutes": 60,
+        "count_min": 1470,
+        "count_max": 4276,
+        "error_max": 334,
+        "p95_min_ms": 22.76,
+        "p95_max_ms": 272609.29
+      },
+      {
+        "service": "recommendation",
+        "minutes": 55,
+        "count_min": 318,
+        "count_max": 999,
+        "error_max": 388,
+        "p95_min_ms": 3.68,
+        "p95_max_ms": 99.78
+      },
+      {
+        "service": "frontend-proxy",
+        "minutes": 60,
+        "count_min": 1204,
+        "count_max": 2732,
+        "error_max": 114,
+        "p95_min_ms": 23.95,
+        "p95_max_ms": 8004.1
+      },
+      {
+        "service": "checkout",
+        "minutes": 60,
+        "count_min": 12,
+        "count_max": 748,
+        "error_max": 2,
+        "p95_min_ms": 19.11,
+        "p95_max_ms": 26.44
+      },
+      {
+        "service": "product-catalog",
+        "minutes": 60,
+        "count_min": 118,
+        "count_max": 1714,
+        "error_max": 0,
+        "p95_min_ms": 3.56,
+        "p95_max_ms": 12.5
+      },
+      {
+        "service": "cart",
+        "minutes": 60,
+        "count_min": 353,
+        "count_max": 1445,
+        "error_max": 0,
+        "p95_min_ms": 1.58,
+        "p95_max_ms": 3.0
+      }
+    ],
+    "error_logs": {
+      "recommendation": 195,
+      "accounting": 1
+    }
+  },
+  "SF-003": {
+    "case_id": "SF-003",
+    "status_values": {
+      "OK": 5103
+    },
+    "memory_pods": [
+      {
+        "pod": "load-generator-79cbb674d-hmktb",
+        "minutes": 30,
+        "min_mib": 209.55,
+        "max_mib": 393.46,
+        "range_mib": 183.9
+      },
+      {
+        "pod": "frontend-68d8bbfdc8-8mnzh",
+        "minutes": 30,
+        "min_mib": 128.86,
+        "max_mib": 163.33,
+        "range_mib": 34.47
+      },
+      {
+        "pod": "frontend-proxy-844f94c445-w25c9",
+        "minutes": 30,
+        "min_mib": 32.77,
+        "max_mib": 33.29,
+        "range_mib": 0.51
+      },
+      {
+        "pod": "checkout-6767884cf8-v57xw",
+        "minutes": 30,
+        "min_mib": 13.25,
+        "max_mib": 13.61,
+        "range_mib": 0.35
+      },
+      {
+        "pod": "frontend-68d8bbfdc8-c4n85",
+        "minutes": 30,
+        "min_mib": 132.08,
+        "max_mib": 132.4,
+        "range_mib": 0.31
+      },
+      {
+        "pod": "ad-6dd859cc54-bngm2",
+        "minutes": 30,
+        "min_mib": 237.05,
+        "max_mib": 237.2,
+        "range_mib": 0.15
+      },
+      {
+        "pod": "ad-6dd859cc54-qd57p",
+        "minutes": 30,
+        "min_mib": 242.35,
+        "max_mib": 242.48,
+        "range_mib": 0.13
+      },
+      {
+        "pod": "recommendation-c887f6f6b-cxb5j",
+        "minutes": 30,
+        "min_mib": 49.3,
+        "max_mib": 49.4,
+        "range_mib": 0.1
+      },
+      {
+        "pod": "recommendation-c887f6f6b-zchkk",
+        "minutes": 30,
+        "min_mib": 48.25,
+        "max_mib": 48.35,
+        "range_mib": 0.1
+      }
+    ],
+    "top_services": [
+      {
+        "service": "frontend",
+        "spans": 118072,
+        "errors": 0
+      },
+      {
+        "service": "flagd",
+        "spans": 75092,
+        "errors": 0
+      },
+      {
+        "service": "frontend-proxy",
+        "spans": 72092,
+        "errors": 0
+      },
+      {
+        "service": "product-catalog",
+        "spans": 47718,
+        "errors": 0
+      },
+      {
+        "service": "cart",
+        "spans": 36883,
+        "errors": 0
+      },
+      {
+        "service": "checkout",
+        "spans": 16790,
+        "errors": 0
+      },
+      {
+        "service": "recommendation",
+        "spans": 10152,
+        "errors": 0
+      },
+      {
+        "service": "frontend-web",
+        "spans": 10091,
+        "errors": 0
+      },
+      {
+        "service": "quote",
+        "spans": 7857,
+        "errors": 0
+      },
+      {
+        "service": "shipping",
+        "spans": 6621,
+        "errors": 0
+      },
+      {
+        "service": "image-provider",
+        "spans": 5642,
+        "errors": 0
+      },
+      {
+        "service": "email",
+        "spans": 5532,
+        "errors": 0
+      },
+      {
+        "service": "currency",
+        "spans": 5103,
+        "errors": 0
+      },
+      {
+        "service": "accounting",
+        "spans": 4155,
+        "errors": 0
+      },
+      {
+        "service": "load-generator",
+        "spans": 3867,
+        "errors": 0
+      },
+      {
+        "service": "fraud-detection",
+        "spans": 2772,
+        "errors": 0
+      },
+      {
+        "service": "payment",
+        "spans": 2770,
+        "errors": 0
+      },
+      {
+        "service": "ad",
+        "spans": 2467,
+        "errors": 0
+      }
+    ],
+    "top_edges": [
+      {
+        "parent_service": "frontend-proxy",
+        "service": "frontend",
+        "spans": 30004,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "product-catalog",
+        "spans": 18995,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "cart",
+        "spans": 10944,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend-proxy",
+        "service": "image-provider",
+        "spans": 5642,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend-web",
+        "service": "frontend-proxy",
+        "spans": 4710,
+        "errors": 0
+      },
+      {
+        "parent_service": "recommendation",
+        "service": "product-catalog",
+        "spans": 3384,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "recommendation",
+        "spans": 3384,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "currency",
+        "spans": 2863,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "shipping",
+        "spans": 2766,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "cart",
+        "spans": 2766,
+        "errors": 0
+      },
+      {
+        "parent_service": "shipping",
+        "service": "quote",
+        "spans": 2619,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "currency",
+        "spans": 2240,
+        "errors": 0
+      },
+      {
+        "parent_service": "load-generator",
+        "service": "frontend-proxy",
+        "spans": 2095,
+        "errors": 0
+      },
+      {
+        "parent_service": "load-generator",
+        "service": "flagd",
+        "spans": 2094,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "product-catalog",
+        "spans": 1480,
+        "errors": 0
+      },
+      {
+        "parent_service": "cart",
+        "service": "flagd",
+        "spans": 1443,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "payment",
+        "spans": 1383,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "email",
+        "spans": 1383,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "checkout",
+        "spans": 1383,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "shipping",
+        "spans": 1236,
+        "errors": 0
+      }
+    ],
+    "service_trend": [
+      {
+        "service": "frontend",
+        "minutes": 30,
+        "count_min": 3729,
+        "count_max": 4255,
+        "error_max": 0,
+        "p95_min_ms": 24.5,
+        "p95_max_ms": 36.8
+      },
+      {
+        "service": "recommendation",
+        "minutes": 30,
+        "count_min": 324,
+        "count_max": 357,
+        "error_max": 0,
+        "p95_min_ms": 4.13,
+        "p95_max_ms": 10.66
+      },
+      {
+        "service": "frontend-proxy",
+        "minutes": 30,
+        "count_min": 2202,
+        "count_max": 2776,
+        "error_max": 0,
+        "p95_min_ms": 26.46,
+        "p95_max_ms": 40.27
+      },
+      {
+        "service": "checkout",
+        "minutes": 30,
+        "count_min": 458,
+        "count_max": 654,
+        "error_max": 0,
+        "p95_min_ms": 22.32,
+        "p95_max_ms": 31.31
+      },
+      {
+        "service": "product-catalog",
+        "minutes": 30,
+        "count_min": 1506,
+        "count_max": 1670,
+        "error_max": 0,
+        "p95_min_ms": 11.25,
+        "p95_max_ms": 15.07
+      },
+      {
+        "service": "cart",
+        "minutes": 30,
+        "count_min": 1105,
+        "count_max": 1376,
+        "error_max": 0,
+        "p95_min_ms": 2.16,
+        "p95_max_ms": 3.21
+      }
+    ],
+    "error_logs": {}
+  },
+  "SF-005": {
+    "case_id": "SF-005",
+    "status_values": {
+      "OK": 4982,
+      "ERROR": 302
+    },
+    "memory_pods": [
+      {
+        "pod": "load-generator-79cbb674d-hmktb",
+        "minutes": 30,
+        "min_mib": 282.3,
+        "max_mib": 419.16,
+        "range_mib": 136.86
+      },
+      {
+        "pod": "frontend-68d8bbfdc8-8mnzh",
+        "minutes": 30,
+        "min_mib": 122.46,
+        "max_mib": 123.3,
+        "range_mib": 0.84
+      },
+      {
+        "pod": "frontend-proxy-844f94c445-w25c9",
+        "minutes": 30,
+        "min_mib": 32.98,
+        "max_mib": 33.55,
+        "range_mib": 0.57
+      },
+      {
+        "pod": "ad-6dd859cc54-bngm2",
+        "minutes": 30,
+        "min_mib": 236.86,
+        "max_mib": 237.12,
+        "range_mib": 0.27
+      },
+      {
+        "pod": "frontend-68d8bbfdc8-c4n85",
+        "minutes": 30,
+        "min_mib": 132.21,
+        "max_mib": 132.48,
+        "range_mib": 0.27
+      },
+      {
+        "pod": "checkout-6767884cf8-v57xw",
+        "minutes": 30,
+        "min_mib": 13.32,
+        "max_mib": 13.56,
+        "range_mib": 0.24
+      },
+      {
+        "pod": "ad-6dd859cc54-qd57p",
+        "minutes": 30,
+        "min_mib": 242.46,
+        "max_mib": 242.64,
+        "range_mib": 0.18
+      },
+      {
+        "pod": "recommendation-c887f6f6b-zchkk",
+        "minutes": 30,
+        "min_mib": 48.25,
+        "max_mib": 48.41,
+        "range_mib": 0.16
+      },
+      {
+        "pod": "recommendation-c887f6f6b-cxb5j",
+        "minutes": 30,
+        "min_mib": 49.3,
+        "max_mib": 49.34,
+        "range_mib": 0.04
+      }
+    ],
+    "top_services": [
+      {
+        "service": "frontend",
+        "spans": 115318,
+        "errors": 136
+      },
+      {
+        "service": "flagd",
+        "spans": 73432,
+        "errors": 0
+      },
+      {
+        "service": "frontend-proxy",
+        "spans": 68674,
+        "errors": 66
+      },
+      {
+        "service": "product-catalog",
+        "spans": 46572,
+        "errors": 82
+      },
+      {
+        "service": "cart",
+        "spans": 36240,
+        "errors": 0
+      },
+      {
+        "service": "checkout",
+        "spans": 16308,
+        "errors": 0
+      },
+      {
+        "service": "recommendation",
+        "spans": 9993,
+        "errors": 18
+      },
+      {
+        "service": "frontend-web",
+        "spans": 8680,
+        "errors": 0
+      },
+      {
+        "service": "quote",
+        "spans": 7584,
+        "errors": 0
+      },
+      {
+        "service": "shipping",
+        "spans": 6400,
+        "errors": 0
+      },
+      {
+        "service": "email",
+        "spans": 5376,
+        "errors": 0
+      },
+      {
+        "service": "image-provider",
+        "spans": 5098,
+        "errors": 0
+      },
+      {
+        "service": "currency",
+        "spans": 4982,
+        "errors": 0
+      },
+      {
+        "service": "accounting",
+        "spans": 4038,
+        "errors": 0
+      },
+      {
+        "service": "load-generator",
+        "spans": 3818,
+        "errors": 0
+      },
+      {
+        "service": "fraud-detection",
+        "spans": 2694,
+        "errors": 0
+      },
+      {
+        "service": "payment",
+        "spans": 2694,
+        "errors": 0
+      },
+      {
+        "service": "ad",
+        "spans": 2463,
+        "errors": 0
+      }
+    ],
+    "top_edges": [
+      {
+        "parent_service": "frontend-proxy",
+        "service": "frontend",
+        "spans": 28881,
+        "errors": 9
+      },
+      {
+        "parent_service": "frontend",
+        "service": "product-catalog",
+        "spans": 18547,
+        "errors": 58
+      },
+      {
+        "parent_service": "frontend",
+        "service": "cart",
+        "spans": 10817,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend-proxy",
+        "service": "image-provider",
+        "spans": 5098,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend-web",
+        "service": "frontend-proxy",
+        "spans": 3927,
+        "errors": 0
+      },
+      {
+        "parent_service": "recommendation",
+        "service": "product-catalog",
+        "spans": 3331,
+        "errors": 9
+      },
+      {
+        "parent_service": "frontend",
+        "service": "recommendation",
+        "spans": 3331,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "currency",
+        "spans": 2778,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "shipping",
+        "spans": 2688,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "cart",
+        "spans": 2688,
+        "errors": 0
+      },
+      {
+        "parent_service": "shipping",
+        "service": "quote",
+        "spans": 2528,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "currency",
+        "spans": 2204,
+        "errors": 0
+      },
+      {
+        "parent_service": "load-generator",
+        "service": "flagd",
+        "spans": 2074,
+        "errors": 0
+      },
+      {
+        "parent_service": "load-generator",
+        "service": "frontend-proxy",
+        "spans": 2048,
+        "errors": 4
+      },
+      {
+        "parent_service": "checkout",
+        "service": "product-catalog",
+        "spans": 1434,
+        "errors": 0
+      },
+      {
+        "parent_service": "cart",
+        "service": "flagd",
+        "spans": 1404,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "payment",
+        "spans": 1344,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "email",
+        "spans": 1344,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "checkout",
+        "spans": 1344,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "shipping",
+        "spans": 1184,
+        "errors": 0
+      }
+    ],
+    "service_trend": [
+      {
+        "service": "frontend",
+        "minutes": 30,
+        "count_min": 2841,
+        "count_max": 4367,
+        "error_max": 136,
+        "p95_min_ms": 24.6,
+        "p95_max_ms": 67.52
+      },
+      {
+        "service": "recommendation",
+        "minutes": 30,
+        "count_min": 258,
+        "count_max": 393,
+        "error_max": 18,
+        "p95_min_ms": 4.35,
+        "p95_max_ms": 89.08
+      },
+      {
+        "service": "frontend-proxy",
+        "minutes": 30,
+        "count_min": 1796,
+        "count_max": 2892,
+        "error_max": 66,
+        "p95_min_ms": 26.91,
+        "p95_max_ms": 34.81
+      },
+      {
+        "service": "checkout",
+        "minutes": 30,
+        "count_min": 228,
+        "count_max": 700,
+        "error_max": 0,
+        "p95_min_ms": 22.24,
+        "p95_max_ms": 27.75
+      },
+      {
+        "service": "product-catalog",
+        "minutes": 30,
+        "count_min": 996,
+        "count_max": 1788,
+        "error_max": 82,
+        "p95_min_ms": 11.14,
+        "p95_max_ms": 26.92
+      },
+      {
+        "service": "cart",
+        "minutes": 30,
+        "count_min": 697,
+        "count_max": 1317,
+        "error_max": 0,
+        "p95_min_ms": 2.13,
+        "p95_max_ms": 3.11
+      }
+    ],
+    "error_logs": {
+      "recommendation": 9
+    }
+  },
+  "SF-010": {
+    "case_id": "SF-010",
+    "status_values": {
+      "OK": 5002,
+      "ERROR": 324
+    },
+    "memory_pods": [
+      {
+        "pod": "load-generator-79cbb674d-hmktb",
+        "minutes": 30,
+        "min_mib": 358.82,
+        "max_mib": 485.57,
+        "range_mib": 126.76
+      },
+      {
+        "pod": "frontend-proxy-844f94c445-w25c9",
+        "minutes": 30,
+        "min_mib": 32.69,
+        "max_mib": 33.24,
+        "range_mib": 0.54
+      },
+      {
+        "pod": "frontend-68d8bbfdc8-c4n85",
+        "minutes": 30,
+        "min_mib": 131.96,
+        "max_mib": 132.39,
+        "range_mib": 0.43
+      },
+      {
+        "pod": "checkout-6767884cf8-v57xw",
+        "minutes": 30,
+        "min_mib": 13.17,
+        "max_mib": 13.55,
+        "range_mib": 0.38
+      },
+      {
+        "pod": "frontend-68d8bbfdc8-8mnzh",
+        "minutes": 30,
+        "min_mib": 128.79,
+        "max_mib": 129.05,
+        "range_mib": 0.27
+      },
+      {
+        "pod": "ad-6dd859cc54-qd57p",
+        "minutes": 30,
+        "min_mib": 242.29,
+        "max_mib": 242.44,
+        "range_mib": 0.15
+      },
+      {
+        "pod": "ad-6dd859cc54-bngm2",
+        "minutes": 30,
+        "min_mib": 236.92,
+        "max_mib": 237.05,
+        "range_mib": 0.14
+      },
+      {
+        "pod": "recommendation-c887f6f6b-cxb5j",
+        "minutes": 30,
+        "min_mib": 49.29,
+        "max_mib": 49.43,
+        "range_mib": 0.14
+      },
+      {
+        "pod": "recommendation-c887f6f6b-zchkk",
+        "minutes": 30,
+        "min_mib": 48.27,
+        "max_mib": 48.34,
+        "range_mib": 0.07
+      }
+    ],
+    "top_services": [
+      {
+        "service": "frontend",
+        "spans": 117779,
+        "errors": 152
+      },
+      {
+        "service": "flagd",
+        "spans": 74611,
+        "errors": 0
+      },
+      {
+        "service": "frontend-proxy",
+        "spans": 72826,
+        "errors": 66
+      },
+      {
+        "service": "product-catalog",
+        "spans": 47493,
+        "errors": 89
+      },
+      {
+        "service": "cart",
+        "spans": 36453,
+        "errors": 0
+      },
+      {
+        "service": "checkout",
+        "spans": 16376,
+        "errors": 0
+      },
+      {
+        "service": "frontend-web",
+        "spans": 10706,
+        "errors": 0
+      },
+      {
+        "service": "recommendation",
+        "spans": 10164,
+        "errors": 16
+      },
+      {
+        "service": "quote",
+        "spans": 7680,
+        "errors": 0
+      },
+      {
+        "service": "shipping",
+        "spans": 6469,
+        "errors": 0
+      },
+      {
+        "service": "image-provider",
+        "spans": 5881,
+        "errors": 0
+      },
+      {
+        "service": "email",
+        "spans": 5396,
+        "errors": 0
+      },
+      {
+        "service": "currency",
+        "spans": 5002,
+        "errors": 0
+      },
+      {
+        "service": "accounting",
+        "spans": 4053,
+        "errors": 1
+      },
+      {
+        "service": "load-generator",
+        "spans": 3881,
+        "errors": 0
+      },
+      {
+        "service": "fraud-detection",
+        "spans": 2704,
+        "errors": 0
+      },
+      {
+        "service": "payment",
+        "spans": 2704,
+        "errors": 0
+      },
+      {
+        "service": "ad",
+        "spans": 2380,
+        "errors": 0
+      }
+    ],
+    "top_edges": [
+      {
+        "parent_service": "frontend-proxy",
+        "service": "frontend",
+        "spans": 30116,
+        "errors": 11
+      },
+      {
+        "parent_service": "frontend",
+        "service": "product-catalog",
+        "spans": 18946,
+        "errors": 67
+      },
+      {
+        "parent_service": "frontend",
+        "service": "cart",
+        "spans": 10901,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend-proxy",
+        "service": "image-provider",
+        "spans": 5881,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend-web",
+        "service": "frontend-proxy",
+        "spans": 5023,
+        "errors": 0
+      },
+      {
+        "parent_service": "recommendation",
+        "service": "product-catalog",
+        "spans": 3388,
+        "errors": 8
+      },
+      {
+        "parent_service": "frontend",
+        "service": "recommendation",
+        "spans": 3388,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "currency",
+        "spans": 2792,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "shipping",
+        "spans": 2698,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "cart",
+        "spans": 2698,
+        "errors": 0
+      },
+      {
+        "parent_service": "shipping",
+        "service": "quote",
+        "spans": 2560,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "currency",
+        "spans": 2210,
+        "errors": 0
+      },
+      {
+        "parent_service": "load-generator",
+        "service": "flagd",
+        "spans": 2115,
+        "errors": 0
+      },
+      {
+        "parent_service": "load-generator",
+        "service": "frontend-proxy",
+        "spans": 2034,
+        "errors": 5
+      },
+      {
+        "parent_service": "checkout",
+        "service": "product-catalog",
+        "spans": 1443,
+        "errors": 0
+      },
+      {
+        "parent_service": "cart",
+        "service": "flagd",
+        "spans": 1409,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "payment",
+        "spans": 1349,
+        "errors": 0
+      },
+      {
+        "parent_service": "checkout",
+        "service": "email",
+        "spans": 1349,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "checkout",
+        "spans": 1349,
+        "errors": 0
+      },
+      {
+        "parent_service": "frontend",
+        "service": "shipping",
+        "spans": 1211,
+        "errors": 0
+      }
+    ],
+    "service_trend": [
+      {
+        "service": "frontend",
+        "minutes": 30,
+        "count_min": 2931,
+        "count_max": 4220,
+        "error_max": 152,
+        "p95_min_ms": 23.19,
+        "p95_max_ms": 86.82
+      },
+      {
+        "service": "recommendation",
+        "minutes": 30,
+        "count_min": 255,
+        "count_max": 360,
+        "error_max": 16,
+        "p95_min_ms": 3.59,
+        "p95_max_ms": 113.17
+      },
+      {
+        "service": "frontend-proxy",
+        "minutes": 30,
+        "count_min": 1950,
+        "count_max": 2740,
+        "error_max": 66,
+        "p95_min_ms": 25.65,
+        "p95_max_ms": 37.12
+      },
+      {
+        "service": "checkout",
+        "minutes": 30,
+        "count_min": 308,
+        "count_max": 670,
+        "error_max": 0,
+        "p95_min_ms": 20.93,
+        "p95_max_ms": 25.12
+      },
+      {
+        "service": "product-catalog",
+        "minutes": 30,
+        "count_min": 1053,
+        "count_max": 1694,
+        "error_max": 89,
+        "p95_min_ms": 10.65,
+        "p95_max_ms": 57.52
+      },
+      {
+        "service": "cart",
+        "minutes": 30,
+        "count_min": 825,
+        "count_max": 1348,
+        "error_max": 0,
+        "p95_min_ms": 2.1,
+        "p95_max_ms": 2.54
+      }
+    ],
+    "error_logs": {
+      "recommendation": 8,
+      "accounting": 1
+    }
+  }
+}

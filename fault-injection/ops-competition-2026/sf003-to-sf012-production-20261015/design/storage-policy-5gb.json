@@ -1,0 +1,18 @@
+{
+  "version": "SF003_SF012_STORAGE_V1_DRAFT",
+  "authorized_absolute_free_floor_bytes": 5000000000,
+  "hosts": ["vm1", "master", "worker1", "worker2", "worker3"],
+  "filesystems_checked_each_host": ["system", "data_if_present"],
+  "vm1_data_mount": null,
+  "master_data_mount": "/data/stage5-v3",
+  "worker_data_mount": "/data",
+  "snapshot_interval_seconds_during_live_work": 15,
+  "forecast_source": "SF30-NOFAULT-20261015 actual 5,880,259,290-byte 30-minute raw archive",
+  "forecast_25pct_sensitivity_bytes_per_case": 7350324113,
+  "old_34_31_29_GiB_reservations_are_not_hard_start_gates": true,
+  "predicted_floor_crossing": "STOP_NEW_WORK; if a fault is active invoke its independently armed exact-scope cleanup, then preserve all evidence",
+  "missing_host_or_mount_snapshot": "BLOCK_START_OR_ABORT_ACTIVE_FAULT",
+  "historical_archive_deletion_automatic": false,
+  "stage5_and_sf001_sf002_policy_modified": false,
+  "formal_case_execution_authorized_by_this_file": false
+}

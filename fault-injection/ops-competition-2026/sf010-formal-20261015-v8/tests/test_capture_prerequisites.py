@@ -1,0 +1,52 @@
+import os
+import subprocess
+import sys
+from pathlib import Path
+import unittest
+
+
+SCRIPTS = Path(__file__).resolve().parents[1] / 'scripts'
+RUN = '/data/stage5-v3/ops-competition-2026/runs/SF-010-ATTEMPT-05'
+os.environ.setdefault('SF010_RUN', RUN)
+sys.path.insert(0, str(SCRIPTS))
+from capture_controller import reject_other_competition_units
+
+
+class CapturePreflight(unittest.TestCase):
+    def test_current_observer_controller_and_capture_are_allowed(self):
+        units = '\n'.join(
+            name + ' loaded active running' for name in (
+                'ops-sf010-formal-observer05-20261015.service',
+                'ops-sf010-formal-controller05-20261015.service',
+                'ops-sf010-formal-capture05-20261015.service'))
+        reject_other_competition_units(units)
+
+    def test_old_or_unregistered_competition_unit_is_rejected(self):
+        for name in ('ops-sf010-formal-observer03-20261015.service',
+                     'ops-sf010-unknown.service', 'ops-sf002-other.service'):
+            with self.subTest(name=name), self.assertRaisesRegex(
+                    RuntimeError, 'Another competition run'):
+                reject_other_competition_units(name + ' loaded active running')
+
+    def test_main_does_not_shadow_module_level_sys(self):
+        environment = dict(os.environ, SF010_RUN=RUN)
+        result = subprocess.run([sys.executable, '-B', '-c',
+            'from capture_controller import main; print("sys" in main.__code__.co_varnames)'],
+            env=dict(environment, PYTHONPATH=str(SCRIPTS)), capture_output=True,
+            text=True, timeout=10)
+        self.assertEqual(result.returncode, 0)
+        self.assertEqual(result.stdout.strip(), 'False')
+
+    def test_missing_kubeconfig_fails_before_creating_run(self):
+        environment = dict(os.environ, SF010_RUN=RUN)
+        environment.pop('KUBECONFIG', None)
+        result = subprocess.run([sys.executable, '-B', '-c',
+            'from capture_controller import prereq; prereq()'],
+            env=dict(environment, PYTHONPATH=str(SCRIPTS)), capture_output=True,
+            text=True, timeout=10)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('Explicit Kubernetes credential context required', result.stderr)
+
+
+if __name__ == '__main__':
+    unittest.main()

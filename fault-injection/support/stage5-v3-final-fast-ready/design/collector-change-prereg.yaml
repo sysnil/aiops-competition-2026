@@ -1,0 +1,22 @@
+status: PREREGISTERED_BEFORE_COLLECTOR_CHANGE
+study: Stage5-v3 Final Fast-Ready, single no-fault candidate
+formal_case: false
+fault_injection: forbidden
+single_candidate:
+  field: processors.memory_limiter.spike_limit_percentage
+  old: 25
+  new: 15
+unchanged:
+  - memory_limit
+  - GOMEMLIMIT
+  - batch
+  - exporter
+  - retry
+  - queue
+  - trace_sampling
+  - workload
+rollback:
+  timer: s5v3ffr-collector-rollback.timer
+  independent_after_minutes: 50
+  restore_exact_original_relay: true
+  remove_only_registered_annotation: true

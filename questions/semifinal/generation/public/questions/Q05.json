@@ -1,0 +1,72 @@
+{
+  "question_id": "Q05",
+  "case_id": "SF-005",
+  "title": "Recommendation 错误日志数量",
+  "description": "使用已归档的真实监控记录，按下列口径绘制一张分钟时序图并回答三个问题。",
+  "target_entity_type": "Service",
+  "target_entity_id": "recommendation",
+  "modality": "Logs",
+  "time_range": {
+    "start_utc": "2026-10-16T11:23:55.458636+00:00",
+    "end_exclusive_utc": "2026-10-16T11:53:55.458636+00:00"
+  },
+  "query_spec": {
+    "source_file": "logs.parquet",
+    "source_columns": [
+      "timestamp",
+      "service",
+      "severity"
+    ],
+    "filters": {
+      "entities": [
+        "recommendation"
+      ],
+      "severity": "ERROR (case-insensitive exact match)"
+    },
+    "aggregation": "count matching log records by 60-second bucket",
+    "time_bucket": {
+      "origin_utc": "2026-10-16T11:23:55.458636+00:00",
+      "width_seconds": 60,
+      "closed": "left",
+      "timestamp_label": "bucket start UTC",
+      "observation_end_exclusive_utc": "2026-10-16T11:53:55.458636+00:00"
+    },
+    "minimum_samples_per_minute": 0,
+    "missing_policy": "null and line gap for insufficient samples; zero only for observed count queries",
+    "counter_reset_policy": "not applicable",
+    "p95_definition": "not applicable",
+    "comparison_minute_ranges": null,
+    "kind": "error_log_count",
+    "answer_plan": "basic_total"
+  },
+  "chart_requirement": {
+    "chart_count": 1,
+    "type": "line",
+    "x_axis": "UTC bucket start",
+    "y_axis": "logs/min",
+    "series": [
+      "recommendation"
+    ],
+    "granularity_seconds": 60,
+    "legend_required": false
+  },
+  "questions": [
+    {
+      "id": "A1",
+      "text": "整段时间内共有多少条符合条件的 ERROR 日志？",
+      "answer_format": "number"
+    },
+    {
+      "id": "A2",
+      "text": "数量最多的一分钟有多少条 ERROR 日志？",
+      "answer_format": "number"
+    },
+    {
+      "id": "A3",
+      "text": "数量最多的分钟起点 UTC 是什么？若并列，取最早一分钟。",
+      "answer_format": "time"
+    }
+  ],
+  "question_version": "semifinal-query-visualization-candidate-v1",
+  "difficulty": "BASIC"
+}

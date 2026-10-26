@@ -1,0 +1,27 @@
+{
+  "status": "DRAFT_STORAGE_PLAN_NOT_PRODUCTION_AUTHORIZATION",
+  "source": "2026-10-19 five-host read-only snapshot and historical per-case peak commitment",
+  "absolute_free_floor_bytes": 5000000000,
+  "master_data_commitment_per_case_bytes": 7350324113,
+  "worker_root_archive_commitment_per_case_bytes": 7350324113,
+  "root_runtime_reservation_per_host_per_case_bytes": 67108864,
+  "one_time_background_reservation_per_host_bytes": 2000000000,
+  "sensitivity_background_data_per_host_per_case_bytes": 2000000000,
+  "proposed_archive_path": "/root/ops-competition-2026/final-case-archives/<Attempt-ID>/",
+  "cases": [
+    {"case_id": "SF-013", "archive_worker": "worker1", "archive_filesystem": "/"},
+    {"case_id": "SF-014", "archive_worker": "worker2", "archive_filesystem": "/"},
+    {"case_id": "SF-015", "archive_worker": "worker3", "archive_filesystem": "/"},
+    {"case_id": "SF-016", "archive_worker": "worker1", "archive_filesystem": "/"},
+    {"case_id": "SF-017", "archive_worker": "worker2", "archive_filesystem": "/"}
+  ],
+  "required_before_real_case": [
+    "Fresh per-filesystem space and mount-identity check",
+    "Case-specific peak and background-write forecast with decimal five-GB floor",
+    "Continuous five-host root/data monitoring during capture, export, and archive",
+    "Immutable source manifest, per-file SHA-256 on Master and Worker, and restored readback",
+    "Independent full-size no-fault archive rehearsal for the new root-disk path",
+    "Stop before the next case if measured or projected free space crosses the floor"
+  ],
+  "historical_archive_deletion_allowed": false
+}

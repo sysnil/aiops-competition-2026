@@ -1,0 +1,72 @@
+{
+  "case_id": "SF-009",
+  "classification": "OFFICIAL",
+  "events": [
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [],
+      "anomaly_type": "TRACE_LATENCY_INCREASE",
+      "entity_id": "frontend",
+      "entity_type": "Service",
+      "evidence_rubric": "GET server: 332 spans, p95 8007.925 ms versus 25.875 ms baseline",
+      "gt_event_id": "EVT-0002",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-18T05:13:43.835000+00:00",
+      "observable_start_time": "2026-10-18T05:13:09.518000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [],
+      "anomaly_type": "TRACE_LATENCY_INCREASE",
+      "entity_id": "frontend-proxy",
+      "entity_type": "Service",
+      "evidence_rubric": "ingress server: 1064 spans, p95 259.558 ms versus 31.503 ms baseline, zero errors",
+      "gt_event_id": "EVT-0003",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-18T05:08:07.519218+00:00",
+      "observable_start_time": "2026-10-18T05:07:08.517689+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [],
+      "anomaly_type": "TRACE_LATENCY_INCREASE",
+      "entity_id": "frontend-proxy",
+      "entity_type": "Service",
+      "evidence_rubric": "ingress server: 736 spans, p95 5775.517 ms versus 31.503 ms baseline, 42 errors",
+      "gt_event_id": "EVT-0004",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-18T05:14:04.484005+00:00",
+      "observable_start_time": "2026-10-18T05:13:09.518025+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    }
+  ],
+  "excluded_groups": [
+    {
+      "reason": "ONLY_17_SPANS_IN_EVIDENCE_MINUTE_AND_2.26X_P95",
+      "source_event_id": "EVT-0001"
+    },
+    {
+      "reason": "CHECKED_REMAINDER_ONLY_0.232_SECONDS_NO_STABLE_EVENT_WINDOW",
+      "source_event_id": "EVT-0005"
+    },
+    {
+      "reason": "CHECKED_REMAINDER_ONLY_0.202_SECONDS_NO_STABLE_EVENT_WINDOW",
+      "source_event_id": "EVT-0006"
+    }
+  ],
+  "matching_rule_version": "final-strict-positive-credit-1.1",
+  "review_status": "APPROVED",
+  "rubric_version": "final-strict-positive-credit-1.1",
+  "source_candidate_manifest_sha256": "2b90d9e09dc2b4b0e718c039bcbaf34db0b0d07451090d516ba02ea235abc314",
+  "source_candidate_sha256": "a9dc7fc6e5c713a4ca5b2da089eda78a29cd9f9862e7ada228bfb0ad682795b7",
+  "source_public_manifest_sha256": "85c2d7f401939d62ad2cf76d24e19c5cb5250ad76c31e775293520f33a6bfd37",
+  "status": "APPROVED",
+  "task_type": "FINAL_ANOMALY_INVESTIGATION",
+  "time_tolerance_seconds": 120,
+  "version": "FINAL-GT-TAXONOMY-20261020-v2"
+}

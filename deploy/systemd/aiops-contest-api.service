@@ -1,0 +1,39 @@
+[Unit]
+Description=AIOps Competition Read-only Data API
+After=network-online.target data.mount
+Wants=network-online.target
+RequiresMountsFor=/data
+
+[Service]
+Type=simple
+User=aiops-api
+Group=aiops-api
+WorkingDirectory=/opt/aiops-contest-server
+Environment=AIOPS_CONFIG=/etc/aiops-contest/config.yaml
+EnvironmentFile=-/etc/aiops-contest/grading-gateway.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/aiops-contest-server/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 1 --no-access-log
+Restart=on-failure
+RestartSec=2s
+TimeoutStopSec=20s
+LimitNOFILE=65536
+TasksMax=512
+MemoryMax=6G
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictNamespaces=true
+LockPersonality=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadOnlyPaths=/data/aiops-contest/public /data/aiops-contest/mock-only
+ReadWritePaths=/data/aiops-contest/cache /data/aiops-contest/indexes /var/log/aiops-contest /var/lib/aiops-grading
+
+[Install]
+WantedBy=multi-user.target

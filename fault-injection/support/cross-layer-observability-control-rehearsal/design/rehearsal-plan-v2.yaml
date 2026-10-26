@@ -1,0 +1,80 @@
+schema_version: 1
+revision: post_rollout_actual_pod_placement_before_first_fault
+revision_reason: frontend_replicas_colocated_on_worker2_after_cpu_constrained_rollout
+kind: independent_observability_control_rehearsal
+status: PREDECLARED_BEFORE_FAULTS
+master_root: /root/cross-layer-observability-control-rehearsal
+stage5_v2_policy: READ_ONLY_NO_TEST_NO_GT
+identity:
+  services: [frontend, ad, payment, recommendation]
+  method: kubernetes_downward_api_to_otel_resource_attributes
+  resource_attributes: [k8s.pod.uid, k8s.pod.name]
+  post_rollout_span_uid_coverage_minimum: 0.99
+  post_rollout_span_uid_accuracy: 1.0
+  require_two_distinct_business_pods_per_service: true
+workload:
+  machine: /root/cross-layer-workload-generation/design/workload-state-machine-v2.yaml
+  generator_version: /root/cross-layer-observability-control-rehearsal/scripts/workload_generator_rehearsal.py
+  profile: MEDIUM
+  duration_seconds: 300
+  before_seconds: 120
+  during_seconds: 60
+  after_seconds: 120
+  control_streams:
+    - {name: image_asset, operation: GET /images/products/OpticalTubeAssembly.jpg, rate_per_second: 1.0, seed_offset: 101}
+    - {name: product_detail, operation: GET /api/products/2ZYFJ3GM2N, rate_per_second: 2.0, seed_offset: 102}
+    - {name: cart_view, operation: GET /api/cart, rate_per_second: 2.0, seed_offset: 103}
+  control_timeout_seconds: 8
+  control_concurrency_per_stream: {image_asset: 2, product_detail: 4, cart_view: 4}
+  control_max_added_cpu_cores_per_node: 0.25
+network_controls:
+  minimum_valid_requests_per_60_seconds: 30
+  minimum_usable_spans_per_60_seconds: 30
+  max_during_before_control_p95_ratio: 1.25
+  require_live_pod_uid_route_and_packet_proof: true
+  paths:
+    NETWORK_PATH/k8s-worker3/k8s-worker1:
+      primary: frontend-proxy-worker2-to-image-provider-worker2
+      secondary: frontend-worker2-to-cart-worker2
+      tertiary: frontend-worker2-to-product-catalog-worker3
+    NETWORK_PATH/k8s-worker2/k8s-worker3:
+      primary: frontend-proxy-worker2-to-image-provider-worker2
+      secondary: frontend-worker2-to-cart-worker2
+  fault_path_business_edges:
+    NETWORK_PATH/k8s-worker3/k8s-worker1: [checkout-worker3-to-shipping-worker1, checkout-worker3-to-payment-worker1]
+    NETWORK_PATH/k8s-worker2/k8s-worker3: [frontend-worker2-to-product-catalog-worker3]
+  invalid_candidate_rule: ambiguous_replica_or_target_path_membership_is_unverified
+experiments:
+  - id: OC-D06-S1
+    family: D06_TYPE_SINGLE_POD_PAUSE
+    seed: 62011
+    fault: {target_service: frontend, target_node: k8s-worker2, target_selector: lexicographically_first_ready_pod_uid, control_selector: other_ready_replica_same_node, stop_seconds: 5, period_seconds: 15, duration_seconds: 60}
+  - id: OC-D06-S2
+    family: D06_TYPE_SINGLE_POD_PAUSE
+    seed: 62012
+    fault: {target_service: frontend, target_node: k8s-worker2, target_selector: lexicographically_first_ready_pod_uid, control_selector: other_ready_replica_same_node, stop_seconds: 5, period_seconds: 15, duration_seconds: 60}
+  - id: OC-D11-S1
+    family: D11_TYPE_NETWORK_LOSS
+    seed: 62021
+    fault: {path: NETWORK_PATH/k8s-worker3/k8s-worker1, loss_percent: 10, duration_seconds: 60}
+  - id: OC-D11-S2
+    family: D11_TYPE_NETWORK_LOSS
+    seed: 62022
+    fault: {path: NETWORK_PATH/k8s-worker3/k8s-worker1, loss_percent: 10, duration_seconds: 60}
+  - id: OC-D12-S1
+    family: D12_TYPE_NETWORK_BANDWIDTH
+    seed: 62031
+    fault: {path: NETWORK_PATH/k8s-worker2/k8s-worker3, rate_kbit: 1500, duration_seconds: 60}
+  - id: OC-D12-S2
+    family: D12_TYPE_NETWORK_BANDWIDTH
+    seed: 62032
+    fault: {path: NETWORK_PATH/k8s-worker2/k8s-worker3, rate_kbit: 1500, duration_seconds: 60}
+gates:
+  five_host_residue_required: true
+  base_health_required: true
+  four_nodes_ready_required: true
+  calico_bgp_peers_per_node: 3
+  no_fault_before_minimum_seconds: 120
+  recovery_minimum_seconds: 120
+  no_gt_or_test_access: true
+  no_replacement_due_to_result: true

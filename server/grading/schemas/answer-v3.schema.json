@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aiops-contest.invalid/schemas/answer-v3.schema.json",
+  "title": "AIOps Semifinal Anomaly Detection Answer v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "schema_version", "task_type", "anomalies"],
+  "properties": {
+    "case_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9_-]{2,63}$"},
+    "schema_version": {"const": "3.0"},
+    "task_type": {"const": "SEMIFINAL_ANOMALY_DETECTION"},
+    "anomalies": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["anomaly_type", "anomaly_description", "entity_type", "entity_id", "start_time", "end_time", "evidence"],
+        "properties": {
+          "anomaly_type": {"enum": ["REQUEST_LATENCY_INCREASE", "REQUEST_ERROR_INCREASE", "REQUEST_TIMEOUT_INCREASE", "CPU_USAGE_INCREASE", "MEMORY_USAGE_INCREASE", "POD_RESTART_INCREASE", "LOG_ERROR_BURST", "TRACE_LATENCY_INCREASE", "CALL_EDGE_LATENCY_INCREASE", "CALL_EDGE_ERROR_INCREASE", "OTHER_OBSERVABLE_ANOMALY"]},
+          "anomaly_description": {"type": "string", "minLength": 8, "maxLength": 1000},
+          "entity_type": {"enum": ["Service", "Pod", "Node", "CallEdge", "Network", "MetricSeries", "Unknown"]},
+          "entity_id": {"type": "string", "minLength": 1, "maxLength": 256},
+          "start_time": {"type": "string", "format": "date-time"},
+          "end_time": {"type": "string", "format": "date-time"},
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["modality", "record_sha256", "record"],
+              "properties": {
+                "modality": {"enum": ["metrics", "logs", "traces"]},
+                "request_id": {"type": ["string", "null"], "maxLength": 128},
+                "record_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+                "record": {"type": "object", "minProperties": 1, "maxProperties": 24}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "case_id": "DEMO-001",
+  "schema_version": "2.0",
+  "anomalies": [
+    {
+      "entity_type": "Service",
+      "entity_id": "demo-payment",
+      "suspected_fault_type": "ServicePause",
+      "start_time": "2030-01-01T00:20:00+00:00",
+      "end_time": "2030-01-01T00:22:00+00:00",
+      "evidence": [
+        {
+          "modality": "logs",
+          "record_sha256": "a4008f9493b94949b80ccad3c42ada24e82aff1ffed31da2dee455e657448de0",
+          "record": {
+            "timestamp": "2030-01-01T00:20:05+00:00",
+            "service": "demo-payment",
+            "pod": "demo-payment-abc123",
+            "severity": "ERROR",
+            "body": "synthetic demo: worker heartbeat stopped for 120 seconds",
+            "attributes": {
+              "demo": true,
+              "source": "synthetic-fixture"
+            },
+            "trace_id": "11111111111111111111111111111111",
+            "span_id": "2222222222222222"
+          }
+        },
+        {
+          "modality": "traces",
+          "record_sha256": "61fffea75cea9791ab91800963f278967bec4f63b49f894d39ddfc97d5fd3cc6",
+          "record": {
+            "trace_id": "11111111111111111111111111111111",
+            "span_id": "2222222222222222",
+            "parent_span_id": "3333333333333333",
+            "parent_service": "demo-checkout",
+            "service": "demo-payment",
+            "operation_name": "Charge",
+            "start_time": "2030-01-01T00:20:06+00:00",
+            "duration_ms": 120000.0,
+            "status": "ERROR",
+            "attributes": {
+              "demo": true,
+              "error.type": "deadline_exceeded"
+            },
+            "resource_attributes": {
+              "service.name": "demo-payment"
+            }
+          }
+        },
+        {
+          "modality": "metrics",
+          "record_sha256": "85550c3bf2e5a2e43e45247a7062a813c1fababa4bf84c72ff4c9cb1b8a77f9d",
+          "record": {
+            "timestamp": "2030-01-01T00:20:00+00:00",
+            "metric_name": "demo_service_heartbeat",
+            "value": 0.0,
+            "labels": {
+              "demo": "true"
+            },
+            "service": "demo-payment",
+            "pod": "demo-payment-abc123",
+            "node": "demo-node-1",
+            "unit": "1",
+            "metric_type": "gauge",
+            "source": "synthetic-fixture"
+          }
+        }
+      ]
+    }
+  ]
+}

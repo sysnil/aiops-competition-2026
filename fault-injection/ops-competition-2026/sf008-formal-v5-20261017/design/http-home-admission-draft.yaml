@@ -1,0 +1,42 @@
+status: DRAFT_LOW_STABLE_NOT_FROZEN
+case_id: SF-008
+mechanism: HTTP_HOME_DELAY_250MS_60
+path: ordinary business GET /
+fault_window:
+  start_offset_seconds: 960
+  duration_seconds: 60
+  delay_ms: 250
+public_effect:
+  service: frontend-proxy
+  span_kind: server
+  user_agents: [business-workload/1.0, business-control/1.0]
+  request_path: /
+  before_window_seconds: 120
+  after_window_seconds: 120
+  minimum_before_trace_ids: 120
+  minimum_during_trace_ids: 60
+  minimum_after_trace_ids: 120
+  minimum_p95_increase_ms: 100
+  minimum_p95_ratio: 2.0
+  recovery_max_p95_ratio: 1.25
+  recovery_max_absolute_increase_ms: 20
+normal_controls:
+  require_image_successes_before_after: 90
+  require_image_successes_during: 45
+  require_cart_successes_before_after: 90
+  require_cart_successes_during: 45
+  require_proxy_span_for_each_control_trace: true
+  maximum_during_to_before_p95_ratio: 1.25
+  maximum_after_to_before_p95_ratio: 1.25
+private_execution:
+  minimum_delayed_home_requests: 60
+  minimum_fixed_stream_delayed_home_requests: 45
+  exact_window_and_strength_required: true
+  short_lease_required: true
+  pod_worker_timer_must_finish_before_http: true
+  no_persistent_cluster_fault_state: true
+result_policy:
+  injection_and_public_observability_both_required_for_ready: true
+  private_headers_and_plan_never_public: true
+  anomalies_detected_from_public_only: true
+  no_agent_output_used_for_admission: true

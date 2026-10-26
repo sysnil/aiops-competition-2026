@@ -1,0 +1,19 @@
+{
+  "status": "DRAFT_SAFETY_BLOCKED_NO_INJECTION",
+  "mechanism": "HTTP ReqDelay",
+  "target_layer": "SERVICE_CALL_EDGE",
+  "current_proxy": "frontend-proxy",
+  "current_filter": "envoy.filters.http.fault with header_delay and max_active_faults=100",
+  "required_http_scope": ["Verified ordinary business HTTP route and protocol", "Exact request/route matcher", "Fixed delay ceiling", "Exclusion of /otlp-http, /telemetry, /jaeger, /grafana, /opamp and Image/Cart controls"],
+  "required_public_direct_evidence": ["Client request duration and status", "Proxy client/server Span identity", "Route-specific request count", "Stable independent normal controls"],
+  "proposed_engineering_changes_before_fault_test": [
+    "Capture and hash the live ConfigMap and Deployment revision before a prospective change.",
+    "Implement a run-scoped, bounded, route-specific HTTP fault adapter; reject gRPC and management routes.",
+    "Use an independent rollback timer with immutable backup, real route verification and a short authorization lease.",
+    "Qualify one short duration on a real ordinary business path while continuously checking Collector, proxy and controls.",
+    "Verify the exact Envoy configuration returns to the saved hash and the proxy replica is healthy after rollback."
+  ],
+  "not_yet_verified": ["route allowlist", "delay ceiling", "control exclusion", "independent rollback", "effective 30-minute duration", "actual anomaly signal"],
+  "global_header_delay_not_sufficient": true,
+  "formal_or_qualification_fault_authorized": false
+}

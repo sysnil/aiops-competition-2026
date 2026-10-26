@@ -1,0 +1,2 @@
+"""Authenticated submission gateway."""
+

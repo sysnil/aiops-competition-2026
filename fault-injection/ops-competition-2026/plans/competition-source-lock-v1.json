@@ -1,0 +1,36 @@
+{
+  "status": "COMPETITION_ADMISSION_SOURCE_LOCKED_NOT_RESEARCH_FREEZE",
+  "at_utc": "2026-10-13T10:43:54.864361+00:00",
+  "source_sha256": {
+    "/root/ops-competition-2026/plans/competition-fault-admission.yaml": "cffe921ac415fa2bc7d4d76125e18b2a209933b8489dda2699ebb5c65ebbf538",
+    "/root/ops-competition-2026/scripts/competition_adapter.py": "791481b3e12ce6f64bb77c75acaff7df8000d800081589194ccde5d5ad3f2a92",
+    "/root/ops-competition-2026/scripts/resource_memory_holder.py": "659a6a5d51521e36fda8e6d83b6245b4400d4137f1b343e50e04ee2759d687d0",
+    "/root/ops-competition-2026/scripts/competition_observation.py": "f9d6c1bca2527aa0064eccb16e26108719ec08b00fe86a53d8a0fb3941287d89",
+    "/root/ops-competition-2026/scripts/competition_controls.py": "a4a11e9f581bf85970326dae1ba151747a83c96596434e7a3d53ca668ddac8cf",
+    "/root/ops-competition-2026/scripts/competition_preflight.py": "5c73f34f1ba27ccdda6c7dfc9d9fd5cf19ceaf7f91913f2c2251fc95452f1c70",
+    "/root/ops-competition-2026/scripts/competition_qualification.py": "2f110ea7073896dee2287937d66fce5d84384e249affa60acf9d1ce9e9a72cd1",
+    "/root/ops-competition-2026/scripts/competition_baseline_prefix.py": "8b208c6ae4e9209fdf93e8dc7e5236a46f17f0278c249a97a9ad282030329874",
+    "/root/ops-competition-2026/scripts/authorize_competition.py": "9c14daf5dd71bf263e372c3f5115b49e000657bfe64dbc1b1dab4e35f1d56c03",
+    "/root/ops-competition-2026/scripts/prepare_competition_plan.py": "80f429b12dc3acbf1f59ce3f897ff6980fb419be455c46ccbdd094393c236e7a",
+    "/root/ops-competition-2026/scripts/run_competition_qualification.py": "5f1deb3614dc6196756cf6eba2998d084a8f64312a6a9e31ef835e8ae716902c",
+    "/root/cross-layer-observability-control-rehearsal/scripts/workload_generator_rehearsal.py": "5f7291c9b7698af50b66357fe2fcd38ef9eb491a6330db207d578d38f6fe5464",
+    "/root/stage5-v3-observability-diagnostics/snapshots/reference/workload-state-machine-c3.yaml": "e877814f950088c6a692778a23644979e44888f955bcf35496f4ad59c26ad05b",
+    "/root/stage5-v3-autonomous-preparation/design/load-profiles-c3.yaml": "e9893989f9012cb00432ec95aed3af9daa218238a90bd5a82a61fba02888a23d",
+    "/root/cross-layer-workload-generation/design/people.json": "2e780c99cd1950213c798ba086c184b6ae89a98af8a6df4bb190b2e19bcf77ab",
+    "/root/stage5-v3-autonomous-preparation/scripts/fixed_control_load_c3.py": "77a4f1efe10b23f95358b784fcd428d200b922632aeb9e4ef0920b7365dd4b1c",
+    "/root/stage5-v3-autonomous-preparation/scripts/capture_live_c2.py": "417baa3e086e67b1301ff5a2ea496d57dbd097cd405e01059e8371cb84d68d86",
+    "/root/stage5-v3-autonomous-preparation/scripts/trace_storage_reader.py": "686dc664812d7ad6594ecd4240a907cb990e3ac852af6b4b4747235a6e43e7b4",
+    "/root/stage5-v3-clean-gate-v2/scripts/schedule_trace_completion_v2.py": "0d77ebf6ae147c72e97a3ea9660942a649329ff01411fb1329a4e321441ac38a",
+    "/root/stage5-v3-clean-gate-v2/scripts/schedule_trace_v2.py": "a47013ad0102b907a4faff3fb8e43b5fb6f19d7bd9c8f133c7ee4a73cf5fca92",
+    "/root/stage5-v3-clean-gate-v2/scripts/trace_identity.py": "5370f59591582ed0d0fdc5f97e43347e9f0bcfbbce5a002af5e16f164b4c5af9",
+    "/root/stage5-v3-clean-gate-v2/scripts/evaluate_trace_v2.py": "0f434f1b6efd5c3b576d742184b6f1c0f7222e50e057f55a34dabbd29ff06f4a"
+  },
+  "faults_injected": 0,
+  "allowed_qualification_ids": [
+    "COMP-SF01-SERVICE-SHORT",
+    "COMP-SF01-SERVICE-300",
+    "COMP-SF01-POD-SHORT",
+    "COMP-SF01-POD-300"
+  ],
+  "maximum_qualification_faults": 4
+}

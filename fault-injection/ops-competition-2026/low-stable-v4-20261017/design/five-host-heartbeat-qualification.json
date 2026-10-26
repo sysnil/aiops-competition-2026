@@ -1,0 +1,12 @@
+{
+  "status": "PREREGISTERED_READ_ONLY_HEARTBEAT_QUALIFICATION",
+  "duration_seconds": 1800,
+  "interval_seconds": 15,
+  "maximum_cycle_seconds": 10,
+  "maximum_schedule_lag_seconds": 2,
+  "allowed_missing_or_timeout_cycles": 0,
+  "minimum_filesystem_free_bytes": 5000000000,
+  "forecast_case_bytes": 7350324113,
+  "faults_allowed": false,
+  "formal_cases_created": 0
+}

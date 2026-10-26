@@ -1,0 +1,65 @@
+{
+  "created_at_utc": "2026-10-10T05:19:16.823024+00:00",
+  "experiment_id": "OC-D12-S1",
+  "source_case": "D12_TYPE_NETWORK_BANDWIDTH",
+  "plan_sha256": "e12fc3de078b7e475701316db85a6526b727b1d658e897aadb5c11f57143f396",
+  "design_sha256": "2acfa2ee1596aca0acd24aa866ee362344c14645a7c50d2e76c4ac4fd0770edc",
+  "health_sha256": "ba5f32a9219dbf4e745b497a52ab0dd7e0446cd09acea549629a5498cca95cd8",
+  "identity_audit_sha256": "a1bf96f7af8baec86bc1e4ea1ab56e967301794de58a25e3d3129d3bacf257e9",
+  "control_analysis_sha256": "e7ec0051940d122baae858b0251fc579aca7fd7311a33b5b7907a19630d1e292",
+  "faults_injected": 0,
+  "formal_case_created": false,
+  "gt_read": false,
+  "status": "RH_NETWORK_PREFLIGHT_READY",
+  "path": "NETWORK_PATH/k8s-worker2/k8s-worker3",
+  "source_node": "k8s-worker2",
+  "destination_node": "k8s-worker3",
+  "source_node_ip": "192.168.53.54",
+  "destination_node_ip": "192.168.53.55",
+  "business_route_prefix": "10.244.100.192/26",
+  "verified_traversing_edges": [
+    {
+      "business_edge": "frontend->product-catalog",
+      "source_pod": "frontend-68d8bbfdc8-6fshv",
+      "source_pod_uid": "819ed018-af80-4b15-b513-40ce0b75c166",
+      "source_pod_ip": "10.244.126.54",
+      "destination_pod": "product-catalog-67768465c-q4n2g",
+      "destination_pod_uid": "ceafa7b1-6ef7-4dbd-92d5-392d38974b9b",
+      "destination_pod_ip": "10.244.100.208",
+      "route_text": "10.244.100.208 via 192.168.53.55 dev ens160 src 192.168.53.54 uid 0 \n    cache",
+      "flow_proof": "05:19:05.772720 IP 10.244.126.54.55590 > 10.244.100.208.8080: Flags [P.], seq 1319195572:1319195740, ack 1469711675, win 650, options [nop,nop,TS val 1883756147 ecr 1731468065], length 168: HTTP"
+    },
+    {
+      "business_edge": "frontend->product-catalog",
+      "source_pod": "frontend-68d8bbfdc8-m8jzl",
+      "source_pod_uid": "61bce249-37a1-4267-8f80-6f0e9617693c",
+      "source_pod_ip": "10.244.126.53",
+      "destination_pod": "product-catalog-67768465c-q4n2g",
+      "destination_pod_uid": "ceafa7b1-6ef7-4dbd-92d5-392d38974b9b",
+      "destination_pod_ip": "10.244.100.208",
+      "route_text": "10.244.100.208 via 192.168.53.55 dev ens160 src 192.168.53.54 uid 0 \n    cache",
+      "flow_proof": "05:19:05.331212 IP 10.244.126.53.46108 > 10.244.100.208.8080: Flags [P.], seq 3735468017:3735468123, ack 3991780041, win 496, options [nop,nop,TS val 2203200507 ecr 2481282817], length 106: HTTP"
+    }
+  ],
+  "qualified_local_controls": [
+    {
+      "edge": "frontend->cart",
+      "source_uid": "819ed018-af80-4b15-b513-40ce0b75c166",
+      "destination_uid": "4fdedc27-dc56-4272-9f30-4c2a47832c9a",
+      "packet": "05:19:05.376452 cali982d7f04b4d Out IP 10.244.126.54.46822 > 10.244.126.8.8080: Flags [P.], seq 3354285865:3354285999, ack 3302334658, win 524, options [nop,nop,TS val 603555610 ecr 3310711539], length 134: HTTP"
+    },
+    {
+      "edge": "frontend->cart",
+      "source_uid": "61bce249-37a1-4267-8f80-6f0e9617693c",
+      "destination_uid": "4fdedc27-dc56-4272-9f30-4c2a47832c9a",
+      "packet": "05:19:05.335063 cali982d7f04b4d Out IP 10.244.126.53.36784 > 10.244.126.8.8080: Flags [P.], seq 4135089112:4135089246, ack 800468408, win 524, options [nop,nop,TS val 2360770342 ecr 2222468916], length 134: HTTP"
+    },
+    {
+      "edge": "frontend-proxy->image-provider",
+      "source_uid": "0ec44465-2320-417d-b718-4e374f98d9da",
+      "destination_uid": "97d402d1-315f-4a69-9960-767519ff7136",
+      "packet": "05:19:05.413063 cali0c3579cee32 Out IP 10.244.126.7.42770 > 10.244.126.14.8081: Flags [P.], seq 3607239444:3607240104, ack 3644311156, win 18411, options [nop,nop,TS val 2411410378 ecr 1445894792], length 660"
+    }
+  ],
+  "route_proof_sha256": "aa4ee7f7d66439f4a32a11901288165dee38d1655334d70756b9ab30a07fe813"
+}

@@ -1,0 +1,46 @@
+status: PREREGISTERED_BEFORE_COLLECTOR_CHANGE
+scope: independent_no_fault_reliability_window_not_formal_clean_qualification
+id: CR-CONTINUOUS-45M-20261012
+seed: 862201
+workload:
+  duration_seconds: 2700
+  profile: MEDIUM
+  session_arrival_rate_per_second: 1.4
+  machine: /root/stage5-v3-observability-diagnostics/snapshots/reference/workload-state-machine-c3.yaml
+  workflow_weights: {browse: 20, shopping: 30, checkout: 50}
+  control_streams:
+    - {name: image_asset, operation: GET /images/products/OpticalTubeAssembly.jpg, rate_per_second: 1.0, seed_offset: 101}
+    - {name: cart_view, operation: GET /api/cart, rate_per_second: 2.0, seed_offset: 103}
+  control_timeout_seconds: 8
+  control_concurrency_per_stream: {image_asset: 2, cart_view: 4}
+candidate_configuration_version: spike_limit_percentage_15
+proxy_server_coverage_fraction_min: 1.0
+cart_checkout_shipping_quote_direct_uid_fraction_min: 1.0
+client_errors_max: 0
+critical_client_server_edge_missing_max: 0
+collector_memory_limiter_refused_spans_delta_max: 0
+monitor_interval_seconds: 15
+prometheus_scrape_interval_expected_seconds: 10
+time_axis: exact_utc_half_open
+per_minute_request_and_trace_counts_required: true
+collector_counter_resets_fail_closed: true
+missing_critical_metric_series_fail_closed: true
+critical_metric_series:
+  - gateway_receiver_accepted_grpc
+  - gateway_receiver_refused_grpc
+  - gateway_jaeger_sent_spans
+  - gateway_jaeger_queue_size
+  - gateway_heap_bytes
+  - gateway_container_working_set_bytes
+exporter_failed_spans_series_absent: UNKNOWN_NOT_ZERO
+missing_exporter_failed_series_requires_all_issued_trace_ids_and_critical_edges_verified: true
+limiter_refused_series_absent: UNKNOWN_NOT_ZERO
+absent_limiter_series_forces_reliability_conclusion: RELIABILITY_INCONCLUSIVE
+grpc_receiver_refused_counter_must_remain_present_and_zero_delta: true
+diagnostic_continuous_allowed_if_limiter_counter_absent_but_grpc_receiver_counter_present: true
+missing_trace_id_or_proxy_span_fail_closed: true
+late_trace_read_after_end_seconds: 240
+raw_request_and_trace_archive: worker2_worker3_dual_sha256_restore_before_master_release
+formal_clean_gate_approval: forbidden
+fault_injection: forbidden
+another_continuous_window_this_round: forbidden

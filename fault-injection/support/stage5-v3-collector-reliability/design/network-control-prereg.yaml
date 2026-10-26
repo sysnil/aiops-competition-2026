@@ -1,0 +1,34 @@
+status: PREREGISTERED_BEFORE_CONTINUOUS_WINDOW
+scope: no_fault_current_topology_control_qualification
+target_business_edge: checkout_to_cart
+target_path_candidate: NETWORK_PATH/k8s-worker2/k8s-worker3
+old_w3_to_w2_proof_reusable: false
+candidate_controls:
+  image:
+    business_edge: frontend-proxy_to_image-provider
+    expected_nodes: [k8s-worker2, k8s-worker2]
+    minimum_successful_requests_per_minute: 30
+    minimum_valid_client_server_edges_per_minute: 30
+    p95_ratio_against_first_ten_minute_median_max: 1.25
+    local_route_and_interface_proof_required: true
+  recommendation:
+    business_edge: frontend_worker1_to_recommendation_worker3
+    expected_nodes: [k8s-worker1, k8s-worker3]
+    minimum_valid_client_server_edges_per_minute: 30
+    p95_ratio_against_first_ten_minute_median_max: 1.25
+    direct_frontend_and_recommendation_pod_uid_required: true
+    shared_worker3_target_resource_risk: conditional_until_fault_scope_verified
+network_adapter_scope_to_audit:
+  implementation_reference: /root/stage5-v3-autonomous-preparation/scripts/network_fault.py
+  expected_source_node: k8s-worker2
+  expected_interface: ens160
+  expected_direction: egress
+  expected_match: verified_worker3_pod_prefix_and_worker3_node_ip
+  configuration_modification_this_round: forbidden
+classification:
+  qualified_requires_business_packets_and_route_and_samples_and_scope_independence: true
+  shared_target_resource_without_rehearsal: CONDITIONAL
+  probe_traffic_cannot_replace_business_request: true
+  any_current_pod_uid_or_route_change: reproof_required
+fault_injection: forbidden
+formal_network_case: forbidden

@@ -1,0 +1,80 @@
+{
+  "question_id": "Q03",
+  "case_id": "SF-003",
+  "title": "Frontend 两个副本的内存对比",
+  "description": "使用已归档的真实监控记录，按下列口径绘制一张分钟时序图并回答三个问题。",
+  "target_entity_type": "Pod",
+  "target_entity_id": [
+    "frontend-68d8bbfdc8-8mnzh",
+    "frontend-68d8bbfdc8-c4n85"
+  ],
+  "modality": "Metrics",
+  "time_range": {
+    "start_utc": "2026-10-16T03:26:49.724275+00:00",
+    "end_exclusive_utc": "2026-10-16T03:56:49.724275+00:00"
+  },
+  "query_spec": {
+    "source_file": "metrics.parquet",
+    "source_columns": [
+      "timestamp",
+      "metric_name",
+      "value",
+      "pod",
+      "labels"
+    ],
+    "filters": {
+      "entities": [
+        "frontend-68d8bbfdc8-8mnzh",
+        "frontend-68d8bbfdc8-c4n85"
+      ],
+      "metric_name": "container_memory_working_set_bytes",
+      "container": "frontend"
+    },
+    "aggregation": "mean(value) / 1048576 by 60-second bucket",
+    "time_bucket": {
+      "origin_utc": "2026-10-16T03:26:49.724275+00:00",
+      "width_seconds": 60,
+      "closed": "left",
+      "timestamp_label": "bucket start UTC",
+      "observation_end_exclusive_utc": "2026-10-16T03:56:49.724275+00:00"
+    },
+    "minimum_samples_per_minute": 2,
+    "missing_policy": "null and line gap for insufficient samples; zero only for observed count queries",
+    "counter_reset_policy": "not applicable",
+    "p95_definition": "not applicable",
+    "comparison_minute_ranges": null,
+    "kind": "memory",
+    "answer_plan": "compare"
+  },
+  "chart_requirement": {
+    "chart_count": 1,
+    "type": "line",
+    "x_axis": "UTC bucket start",
+    "y_axis": "MiB",
+    "series": [
+      "frontend-68d8bbfdc8-8mnzh",
+      "frontend-68d8bbfdc8-c4n85"
+    ],
+    "granularity_seconds": 60,
+    "legend_required": true
+  },
+  "questions": [
+    {
+      "id": "A1",
+      "text": "哪一个实体的整段有效分钟值均值更高：frontend-68d8bbfdc8-8mnzh 还是 frontend-68d8bbfdc8-c4n85？",
+      "answer_format": "entity"
+    },
+    {
+      "id": "A2",
+      "text": "两条曲线的整段分钟均值相差多少（绝对值，单位 MiB）？",
+      "answer_format": "number"
+    },
+    {
+      "id": "A3",
+      "text": "两条曲线的差距（绝对值）最大时，UTC 分钟起点是什么？若并列，取最早一分钟。",
+      "answer_format": "time"
+    }
+  ],
+  "question_version": "semifinal-query-visualization-candidate-v1",
+  "difficulty": "BASIC"
+}

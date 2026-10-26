@@ -1,0 +1,76 @@
+{
+  "status": "DRAFT_NOT_FROZEN_NO_INJECTION",
+  "created_for": "SF-013 through SF-017 final candidate production",
+  "case_duration_seconds": 1800,
+  "difficulty_target": "FINAL_STANDARD",
+  "workload": {
+    "profile": "LOW_STABLE",
+    "business_sessions_per_second": 0.7,
+    "fixed_image_per_second": 1,
+    "fixed_cart_per_second": 1,
+    "fixed_home_per_second": 1,
+    "fixed_recommendations_per_second": 1,
+    "same_strategy_before_during_after": true
+  },
+  "storage": {
+    "absolute_floor_bytes_per_filesystem": 5000000000,
+    "master_per_case_peak_reservation_bytes": 7350324113,
+    "worker_archive_per_case_reservation_bytes": 7350324113,
+    "archive_worker_system_disk_proposed_for_later_cases": true,
+    "archive_scheme_qualification_required": true,
+    "continuous_five_host_forecast_required": true
+  },
+  "cases": [
+    {
+      "case_id": "SF-013",
+      "preferred_mechanism": "POD_CPU_STRESS",
+      "preferred_mechanism_status": "DRAFT_SAFETY_BLOCKED_NO_INJECTION",
+      "qualified_fallback": "POD_MEMORY_32M_60",
+      "fallback_target": "current frontend Pod on worker2 with a healthy sibling",
+      "tentative_fault_window_seconds": [600, 660],
+      "archive_worker": "worker1",
+      "archive_filesystem": "/data",
+      "production_status": "PENDING_INDEPENDENT_PRECHECK"
+    },
+    {
+      "case_id": "SF-014",
+      "qualified_mechanism": "SERVICE_PAUSE_30",
+      "target": "two current recommendation replicas on worker3",
+      "tentative_fault_window_seconds": [600, 630],
+      "archive_worker": "worker2",
+      "archive_filesystem": "/",
+      "production_status": "PENDING_INDEPENDENT_PRECHECK"
+    },
+    {
+      "case_id": "SF-015",
+      "qualified_mechanism": "HTTP_HOME_DELAY_250MS_60",
+      "target": "verified frontend-proxy home business route",
+      "tentative_fault_window_seconds": [900, 960],
+      "archive_worker": "worker2",
+      "archive_filesystem": "/",
+      "production_status": "PENDING_INDEPENDENT_PRECHECK"
+    },
+    {
+      "case_id": "SF-016",
+      "qualified_mechanism": "POD_MEMORY_32M_300",
+      "target": "current frontend Pod on worker2 with a healthy sibling",
+      "tentative_fault_window_seconds": [600, 900],
+      "archive_worker": "worker3",
+      "archive_filesystem": "/",
+      "production_status": "PENDING_INDEPENDENT_PRECHECK"
+    },
+    {
+      "case_id": "SF-017",
+      "qualified_mechanisms": ["HTTP_HOME_DELAY_250MS_60", "SERVICE_PAUSE_30"],
+      "targets": ["verified frontend-proxy home business route", "two current recommendation replicas on worker3"],
+      "tentative_fault_windows_seconds": [[600, 660], [1080, 1110]],
+      "archive_worker": "worker2",
+      "archive_filesystem": "/",
+      "production_status": "PENDING_INDEPENDENT_PRECHECK"
+    }
+  ],
+  "limitations": [
+    "All proposed fallback mechanisms repeat earlier final candidates; difficulty equivalence requires actual public evidence and human review.",
+    "No attempt, frozen plan, public package, or GT has been created by this draft."
+  ]
+}

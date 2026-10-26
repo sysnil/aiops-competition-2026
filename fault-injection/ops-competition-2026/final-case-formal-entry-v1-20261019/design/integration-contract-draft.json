@@ -1,0 +1,33 @@
+{
+  "status": "DRAFT_PRODUCTION_BLOCKED",
+  "version": "final-case-formal-entry-v1-20261019",
+  "candidate_cases": ["SF-013", "SF-014", "SF-015", "SF-016", "SF-017"],
+  "shared_authorization_version": "final-case-unified-execution-v1-20261019",
+  "worker_entry": "scripts/worker_fault_entry.py",
+  "master_http_entry": "scripts/http_workload.py",
+  "master_controller": "scripts/formal_controller.py",
+  "independent_guard": "scripts/formal_guard.py",
+  "dynamic_monitor": "scripts/safety_monitor.py",
+  "formal_launch": "scripts/start_formal.py",
+  "rehearsal_mode": "HARMLESS_REHEARSAL; MARKER and ordinary business requests only",
+  "formal_mode": "FORMAL_CANDIDATE; separate human approval, qualification receipt, fresh global safety and five-host storage proof required",
+  "archive_allocation_draft": {
+    "SF-013": "k8s-worker1:/",
+    "SF-014": "k8s-worker2:/",
+    "SF-015": "k8s-worker3:/",
+    "SF-016": "k8s-worker1:/",
+    "SF-017": "k8s-worker2:/"
+  },
+  "minimum_free_bytes": 5000000000,
+  "master_and_archive_reservation_bytes": 7350324113,
+  "worker_data_background_reservation_bytes_per_case": 2000000000,
+  "open_gates": [
+    "real adapter qualification after source change",
+    "full Global Safety and capture/observer integration",
+    "credible host reboot lifecycle test",
+    "cumulative Worker3 data-disk capacity",
+    "human production approval"
+  ],
+  "real_fault_injections_this_phase": 0,
+  "formal_attempts_created_this_phase": 0
+}

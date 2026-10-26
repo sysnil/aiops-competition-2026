@@ -1,0 +1,532 @@
+{
+  "question_id": "EX-P02",
+  "case_id": "SF-002",
+  "source_public_manifest_sha256": "458645d012ff5c6ffac1d9676a0275a15ab9da5bac403c1d3f5b3afa5b11011f",
+  "source_file_sha256": "31da520e6e68f1698999586db958581e38d7e34b0b53f7bab0fcbddb09194470",
+  "canonical_chart_data": [
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T14:55:28.695044+00:00",
+      "minute_index": 0,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T14:56:28.695044+00:00",
+      "minute_index": 1,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T14:57:28.695044+00:00",
+      "minute_index": 2,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T14:58:28.695044+00:00",
+      "minute_index": 3,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T14:59:28.695044+00:00",
+      "minute_index": 4,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:00:28.695044+00:00",
+      "minute_index": 5,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:01:28.695044+00:00",
+      "minute_index": 6,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:02:28.695044+00:00",
+      "minute_index": 7,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:03:28.695044+00:00",
+      "minute_index": 8,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:04:28.695044+00:00",
+      "minute_index": 9,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:05:28.695044+00:00",
+      "minute_index": 10,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:06:28.695044+00:00",
+      "minute_index": 11,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:07:28.695044+00:00",
+      "minute_index": 12,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:08:28.695044+00:00",
+      "minute_index": 13,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:09:28.695044+00:00",
+      "minute_index": 14,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:10:28.695044+00:00",
+      "minute_index": 15,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:11:28.695044+00:00",
+      "minute_index": 16,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:12:28.695044+00:00",
+      "minute_index": 17,
+      "value": 195.0,
+      "sample_count": 195
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:13:28.695044+00:00",
+      "minute_index": 18,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:14:28.695044+00:00",
+      "minute_index": 19,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:15:28.695044+00:00",
+      "minute_index": 20,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:16:28.695044+00:00",
+      "minute_index": 21,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:17:28.695044+00:00",
+      "minute_index": 22,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:18:28.695044+00:00",
+      "minute_index": 23,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:19:28.695044+00:00",
+      "minute_index": 24,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:20:28.695044+00:00",
+      "minute_index": 25,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:21:28.695044+00:00",
+      "minute_index": 26,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:22:28.695044+00:00",
+      "minute_index": 27,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:23:28.695044+00:00",
+      "minute_index": 28,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:24:28.695044+00:00",
+      "minute_index": 29,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:25:28.695044+00:00",
+      "minute_index": 30,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:26:28.695044+00:00",
+      "minute_index": 31,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:27:28.695044+00:00",
+      "minute_index": 32,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:28:28.695044+00:00",
+      "minute_index": 33,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:29:28.695044+00:00",
+      "minute_index": 34,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:30:28.695044+00:00",
+      "minute_index": 35,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:31:28.695044+00:00",
+      "minute_index": 36,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:32:28.695044+00:00",
+      "minute_index": 37,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:33:28.695044+00:00",
+      "minute_index": 38,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:34:28.695044+00:00",
+      "minute_index": 39,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:35:28.695044+00:00",
+      "minute_index": 40,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:36:28.695044+00:00",
+      "minute_index": 41,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:37:28.695044+00:00",
+      "minute_index": 42,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:38:28.695044+00:00",
+      "minute_index": 43,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:39:28.695044+00:00",
+      "minute_index": 44,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:40:28.695044+00:00",
+      "minute_index": 45,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:41:28.695044+00:00",
+      "minute_index": 46,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:42:28.695044+00:00",
+      "minute_index": 47,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:43:28.695044+00:00",
+      "minute_index": 48,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:44:28.695044+00:00",
+      "minute_index": 49,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:45:28.695044+00:00",
+      "minute_index": 50,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:46:28.695044+00:00",
+      "minute_index": 51,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:47:28.695044+00:00",
+      "minute_index": 52,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:48:28.695044+00:00",
+      "minute_index": 53,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:49:28.695044+00:00",
+      "minute_index": 54,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:50:28.695044+00:00",
+      "minute_index": 55,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:51:28.695044+00:00",
+      "minute_index": 56,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:52:28.695044+00:00",
+      "minute_index": 57,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:53:28.695044+00:00",
+      "minute_index": 58,
+      "value": 0.0,
+      "sample_count": 0
+    },
+    {
+      "series": "recommendation",
+      "timestamp_utc": "2026-10-14T15:54:28.695044+00:00",
+      "minute_index": 59,
+      "value": 0.0,
+      "sample_count": 0
+    }
+  ],
+  "reference_chart_path": "public/manual-assets/EX-P02.png",
+  "three_gold_answers": [
+    {
+      "answer_type": "number",
+      "answer": 195,
+      "answer_unit": "logs",
+      "numerical_tolerance": 0,
+      "time_tolerance_seconds": 0,
+      "calculation_method": "sum of all 60-second bucket counts"
+    },
+    {
+      "answer_type": "number",
+      "answer": 195,
+      "answer_unit": "logs",
+      "numerical_tolerance": 0,
+      "time_tolerance_seconds": 0,
+      "calculation_method": "maximum minute count"
+    },
+    {
+      "answer_type": "time",
+      "answer": "2026-10-14T15:12:28.695044+00:00",
+      "answer_unit": "UTC",
+      "numerical_tolerance": null,
+      "time_tolerance_seconds": 0,
+      "calculation_method": "earliest maximum minute start"
+    }
+  ],
+  "supporting_public_records": [
+    {
+      "timestamp_utc": "2026-10-14T15:12:28.986437376+00:00",
+      "service": "recommendation",
+      "severity": "ERROR",
+      "trace_id": "e42acf7218f86dd0c8172b43d77a9df6"
+    },
+    {
+      "timestamp_utc": "2026-10-14T15:12:29.307093504+00:00",
+      "service": "recommendation",
+      "severity": "ERROR",
+      "trace_id": null
+    },
+    {
+      "timestamp_utc": "2026-10-14T15:12:29.315876608+00:00",
+      "service": "recommendation",
+      "severity": "ERROR",
+      "trace_id": null
+    },
+    {
+      "timestamp_utc": "2026-10-14T15:12:29.352579584+00:00",
+      "service": "recommendation",
+      "severity": "ERROR",
+      "trace_id": null
+    },
+    {
+      "timestamp_utc": "2026-10-14T15:12:29.358370560+00:00",
+      "service": "recommendation",
+      "severity": "ERROR",
+      "trace_id": null
+    },
+    {
+      "timestamp_utc": "2026-10-14T15:12:29.362851328+00:00",
+      "service": "recommendation",
+      "severity": "ERROR",
+      "trace_id": null
+    }
+  ],
+  "grading_rubric": {
+    "chart_points": 4,
+    "answer_points_each": 2,
+    "chart_breakdown": {
+      "entity_and_filter": 1,
+      "time_axis": 1,
+      "values_and_aggregation": 1,
+      "unit_and_legend": 1
+    }
+  },
+  "gt_version": "semifinal-query-visualization-candidate-v1",
+  "review_status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "calculation_method": {
+    "source_file": "logs.parquet",
+    "source_columns": [
+      "timestamp",
+      "service",
+      "severity"
+    ],
+    "filters": {
+      "entities": [
+        "recommendation"
+      ],
+      "severity": "ERROR (case-insensitive exact match)"
+    },
+    "aggregation": "count matching log records by 60-second bucket",
+    "time_bucket": {
+      "origin_utc": "2026-10-14T14:55:28.695044+00:00",
+      "width_seconds": 60,
+      "closed": "left",
+      "timestamp_label": "bucket start UTC",
+      "observation_end_exclusive_utc": "2026-10-14T15:55:28.695044+00:00"
+    },
+    "minimum_samples_per_minute": 0,
+    "missing_policy": "null and line gap for insufficient samples; zero only for observed count queries",
+    "counter_reset_policy": "not applicable",
+    "p95_definition": "not applicable",
+    "comparison_minute_ranges": null
+  }
+}

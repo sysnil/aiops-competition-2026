@@ -1,0 +1,26 @@
+{
+  "phase": "cross-layer-rehearsal-phase4",
+  "component": "payment_multiclient_business_coverage",
+  "registered_at_utc": "2026-10-10T10:27:11.216494+00:00",
+  "checkout_pods_ready_at_setup": 4,
+  "frontend_replacements_planned": 2,
+  "retries_based_on_backend_choice": 0,
+  "payment_faults_injected": 0,
+  "no_formal_case": true,
+  "sha256": {
+    "/root/cross-layer-rehearsal-phase4/design/plan.yaml": "ca7ecce5b1f0ee8865193d4acea23e0750f8d877f5d1a1a19fb42c16a18e34d3",
+    "/root/cross-layer-rehearsal-phase4/design/payment-connection-policy.yaml": "c4644f63162fa094f5ad5a1473fe04b3afa82abbb85fdd1f535d27d4f270482c",
+    "/root/cross-layer-rehearsal-phase4/design/checkout-identity-plan.json": "83936b7187d3b1fb17801b64d87ba51f3487bcd3b23e89b2d18a3a5f1cb3b1aa",
+    "/root/cross-layer-rehearsal-phase4/runtime/payment-setup.json": "e6c086a8c258a793e79a923b2aa5ecd99043086bcaa9fffbdf6ee81796a2e476",
+    "/root/cross-layer-rehearsal-phase4/backups/deployment-checkout.json": "6e23e2fcd6aa70fc964730a4430341227d87abe3087d0530d00a2ff5e5542b1a",
+    "/root/cross-layer-rehearsal-phase4/observations/checkout-main-go-3.0.0.txt": "bec2a5a3973802fa7bca4f497cd41f80900eb92d9d0e52b6553ba02e7638b1d5",
+    "/root/cross-layer-rehearsal-phase4/scripts/checkout_identity_rollout.py": "15d35f600bb880c1940eb0a3f97b027bcfa6c3aec90c08fcced3e2e64d2e9654",
+    "/root/cross-layer-rehearsal-phase4/scripts/payment_setup.py": "f515ea24ebb71f4f96488aec7ce50d40ac7acc4faca861bdd5458ebd95cac441",
+    "/root/cross-layer-rehearsal-phase4/scripts/payment_cleanup.py": "5939b562046705bcff19673b441beca3334fb31a50f6fcfa2fecc6a111ea7c87",
+    "/root/cross-layer-rehearsal-phase4/scripts/reconnect_frontend_clients.py": "6c9e311cac3c8345a20ee5d5e2a758463a19e1722928b9d37e375411e0c4f499",
+    "/root/cross-layer-rehearsal-phase4/scripts/run_payment_window.py": "492050fd0467a8640deb2caed3618469f464fd9fad948f731e97df867e109a84",
+    "/root/cross-layer-rehearsal-phase4/scripts/audit_payment_flow.py": "a5d3d463aef3ea6f0363782daf20846df6215b405059f8cc0672eab3a3d519d0",
+    "/root/cross-layer-rehearsal-phase4/scripts/capture_pipeline.py": "f606e83bc7b7846c45d059806da358e5ccc0dca2cc6f5fa0acd0f87a1e0cbc6f",
+    "/root/cross-layer-rehearsal-phase4/scripts/run_load_pair.py": "d65ebae47bcb57c6ac6a253a757795a253ce1128aaab860fa5e7f596ba9607df"
+  }
+}

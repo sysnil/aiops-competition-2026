@@ -1,0 +1,22 @@
+{
+  "case_id": "DEMO-001",
+  "classification": "SYNTHETIC_DEMO_ONLY",
+  "review_status": "APPROVED",
+  "gt_version": "demo-gt-1.0",
+  "rubric_version": "grading-rubric-1.0",
+  "time_tolerance_seconds": 120,
+  "events": [
+    {
+      "gt_event_id": "DEMO-EVENT-001",
+      "fault_type": "ServicePause",
+      "entity_type": "Service",
+      "entity_id": "demo-payment",
+      "accepted_entity_aliases": [],
+      "accepted_fault_type_aliases": [],
+      "observable_start_time": "2030-01-01T00:20:00+00:00",
+      "observable_end_time": "2030-01-01T00:22:00+00:00",
+      "allow_service_level_partial": false,
+      "evidence_rubric": "Full evidence should show a time-aligned loss of service heartbeat or progress and a corresponding failed or severely delayed request for the same service. One modality without temporal linkage is partial. Unrelated or merely normal telemetry is none."
+    }
+  ]
+}

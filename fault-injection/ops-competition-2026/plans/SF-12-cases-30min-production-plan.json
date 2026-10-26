@@ -1,0 +1,855 @@
+{
+  "schema": "SF_12_CASES_30MIN_PRODUCTION_DRAFT_V1",
+  "status": "DRAFT_PLANNING_AND_READ_ONLY_FEASIBILITY_AUDIT",
+  "generated_utc": "2026-10-15T08:48:20.994934+00:00",
+  "absolute_disk_floor_bytes": 20000000000,
+  "practice_cases": [
+    "SF-001",
+    "SF-002"
+  ],
+  "official_cases": [
+    "SF-003",
+    "SF-004",
+    "SF-005",
+    "SF-006",
+    "SF-007",
+    "SF-008",
+    "SF-009",
+    "SF-010",
+    "SF-011",
+    "SF-012"
+  ],
+  "official_execution_order_after_each_case_is_qualified": [
+    "SF-003",
+    "SF-004",
+    "SF-005",
+    "SF-006",
+    "SF-007",
+    "SF-008",
+    "SF-009",
+    "SF-010",
+    "SF-011",
+    "SF-012"
+  ],
+  "official_count": 10,
+  "practice_count": 2,
+  "cases": [
+    {
+      "case_id": "SF-001",
+      "role": "PRACTICE",
+      "duration_seconds": 3600,
+      "collection_status": "COLLECTED",
+      "fault_types": [
+        "ServicePause",
+        "PodMemoryStress"
+      ],
+      "public_server_status": "PUBLISHED",
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW"
+    },
+    {
+      "case_id": "SF-002",
+      "role": "PRACTICE",
+      "duration_seconds": 3600,
+      "collection_status": "COLLECTED",
+      "fault_types": [
+        "ServicePause",
+        "PodMemoryStress"
+      ],
+      "public_server_status": "TRANSFER_AND_IMPORT_PENDING",
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW"
+    },
+    {
+      "case_id": "SF-003",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "public_server_status": "NOT_CREATED",
+      "gt_status": "NOT_CREATED",
+      "fault_types": [
+        "PodCPUStress",
+        "HTTP ReqDelay",
+        "PodKill"
+      ],
+      "fault_events": [
+        {
+          "fault_event_id": "SF-003-F01",
+          "fault_type": "PodCPUStress",
+          "root_layer": "POD",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-003-F02",
+          "fault_type": "HTTP ReqDelay",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-003-F03",
+          "fault_type": "PodKill",
+          "root_layer": "POD",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        }
+      ],
+      "original_combination_preserved": true,
+      "production_ready": false,
+      "mechanism_blockers": [
+        "HTTP ReqDelay:SAFETY_BLOCKED",
+        "PodCPUStress:SAFETY_BLOCKED",
+        "PodKill:SAFETY_BLOCKED"
+      ],
+      "time_plan_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "candidate_starts_seconds": null,
+      "candidate_is_authorized_schedule": false,
+      "conditional_30min_starts_seconds": null,
+      "conditional_second_fault_max_seconds_if_180s_recovery_and_45s_check": null,
+      "new_case_design_status": null
+    },
+    {
+      "case_id": "SF-004",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "public_server_status": "NOT_CREATED",
+      "gt_status": "NOT_CREATED",
+      "fault_types": [
+        "NetworkDelay",
+        "HTTP RespDelay",
+        "PodMemoryStress",
+        "ServicePause"
+      ],
+      "fault_events": [
+        {
+          "fault_event_id": "SF-004-F01",
+          "fault_type": "NetworkDelay",
+          "root_layer": "NETWORK_PATH",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-004-F02",
+          "fault_type": "HTTP RespDelay",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "MECHANISM_UNAVAILABLE"
+        },
+        {
+          "fault_event_id": "SF-004-F03",
+          "fault_type": "PodMemoryStress",
+          "root_layer": "POD",
+          "duration_seconds": 300,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "QUALIFIED_EXISTING_ADAPTER_REUSED"
+        },
+        {
+          "fault_event_id": "SF-004-F04",
+          "fault_type": "ServicePause",
+          "root_layer": "SERVICE",
+          "duration_seconds": 300,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "QUALIFIED_EXISTING_ADAPTER_REUSED"
+        }
+      ],
+      "original_combination_preserved": true,
+      "production_ready": false,
+      "mechanism_blockers": [
+        "HTTP RespDelay:MECHANISM_UNAVAILABLE",
+        "NetworkDelay:SAFETY_BLOCKED"
+      ],
+      "time_plan_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "candidate_starts_seconds": null,
+      "candidate_is_authorized_schedule": false,
+      "conditional_30min_starts_seconds": null,
+      "conditional_second_fault_max_seconds_if_180s_recovery_and_45s_check": null,
+      "new_case_design_status": null
+    },
+    {
+      "case_id": "SF-005",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "public_server_status": "NOT_CREATED",
+      "gt_status": "NOT_CREATED",
+      "fault_types": [
+        "HTTP RespReplaceCode",
+        "ContainerKill",
+        "NetworkLoss"
+      ],
+      "fault_events": [
+        {
+          "fault_event_id": "SF-005-F01",
+          "fault_type": "HTTP RespReplaceCode",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "MECHANISM_UNAVAILABLE"
+        },
+        {
+          "fault_event_id": "SF-005-F02",
+          "fault_type": "ContainerKill",
+          "root_layer": "POD",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-005-F03",
+          "fault_type": "NetworkLoss",
+          "root_layer": "NETWORK_PATH",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        }
+      ],
+      "original_combination_preserved": true,
+      "production_ready": false,
+      "mechanism_blockers": [
+        "ContainerKill:SAFETY_BLOCKED",
+        "HTTP RespReplaceCode:MECHANISM_UNAVAILABLE",
+        "NetworkLoss:SAFETY_BLOCKED"
+      ],
+      "time_plan_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "candidate_starts_seconds": null,
+      "candidate_is_authorized_schedule": false,
+      "conditional_30min_starts_seconds": null,
+      "conditional_second_fault_max_seconds_if_180s_recovery_and_45s_check": null,
+      "new_case_design_status": null
+    },
+    {
+      "case_id": "SF-006",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "public_server_status": "NOT_CREATED",
+      "gt_status": "NOT_CREATED",
+      "fault_types": [
+        "PodCPUStress",
+        "HTTP ReqAbort",
+        "NetworkBandwidth",
+        "HTTP RespAbort",
+        "ServicePause"
+      ],
+      "fault_events": [
+        {
+          "fault_event_id": "SF-006-F01",
+          "fault_type": "PodCPUStress",
+          "root_layer": "POD",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-006-F02",
+          "fault_type": "HTTP ReqAbort",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "MECHANISM_UNAVAILABLE"
+        },
+        {
+          "fault_event_id": "SF-006-F03",
+          "fault_type": "NetworkBandwidth",
+          "root_layer": "NETWORK_PATH",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-006-F04",
+          "fault_type": "HTTP RespAbort",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "MECHANISM_UNAVAILABLE"
+        },
+        {
+          "fault_event_id": "SF-006-F05",
+          "fault_type": "ServicePause",
+          "root_layer": "SERVICE",
+          "duration_seconds": 300,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "QUALIFIED_EXISTING_ADAPTER_REUSED"
+        }
+      ],
+      "original_combination_preserved": true,
+      "production_ready": false,
+      "mechanism_blockers": [
+        "HTTP ReqAbort:MECHANISM_UNAVAILABLE",
+        "HTTP RespAbort:MECHANISM_UNAVAILABLE",
+        "NetworkBandwidth:SAFETY_BLOCKED",
+        "PodCPUStress:SAFETY_BLOCKED"
+      ],
+      "time_plan_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "candidate_starts_seconds": null,
+      "candidate_is_authorized_schedule": false,
+      "conditional_30min_starts_seconds": null,
+      "conditional_second_fault_max_seconds_if_180s_recovery_and_45s_check": null,
+      "new_case_design_status": null
+    },
+    {
+      "case_id": "SF-007",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "public_server_status": "NOT_CREATED",
+      "gt_status": "NOT_CREATED",
+      "fault_types": [
+        "NodeCPUStress",
+        "HTTP ReqDelay",
+        "PodKill",
+        "NetworkDelay"
+      ],
+      "fault_events": [
+        {
+          "fault_event_id": "SF-007-F01",
+          "fault_type": "NodeCPUStress",
+          "root_layer": "NODE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-007-F02",
+          "fault_type": "HTTP ReqDelay",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-007-F03",
+          "fault_type": "PodKill",
+          "root_layer": "POD",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-007-F04",
+          "fault_type": "NetworkDelay",
+          "root_layer": "NETWORK_PATH",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        }
+      ],
+      "original_combination_preserved": true,
+      "production_ready": false,
+      "mechanism_blockers": [
+        "HTTP ReqDelay:SAFETY_BLOCKED",
+        "NetworkDelay:SAFETY_BLOCKED",
+        "NodeCPUStress:SAFETY_BLOCKED",
+        "PodKill:SAFETY_BLOCKED"
+      ],
+      "time_plan_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "candidate_starts_seconds": null,
+      "candidate_is_authorized_schedule": false,
+      "conditional_30min_starts_seconds": null,
+      "conditional_second_fault_max_seconds_if_180s_recovery_and_45s_check": null,
+      "new_case_design_status": null
+    },
+    {
+      "case_id": "SF-008",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "public_server_status": "NOT_CREATED",
+      "gt_status": "NOT_CREATED",
+      "fault_types": [
+        "NetworkLoss",
+        "HTTP RespReplaceCode",
+        "PodCPUStress",
+        "HTTP RespAbort",
+        "NetworkBandwidth",
+        "PodMemoryStress"
+      ],
+      "fault_events": [
+        {
+          "fault_event_id": "SF-008-F01",
+          "fault_type": "NetworkLoss",
+          "root_layer": "NETWORK_PATH",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-008-F02",
+          "fault_type": "HTTP RespReplaceCode",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "MECHANISM_UNAVAILABLE"
+        },
+        {
+          "fault_event_id": "SF-008-F03",
+          "fault_type": "PodCPUStress",
+          "root_layer": "POD",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-008-F04",
+          "fault_type": "HTTP RespAbort",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "MECHANISM_UNAVAILABLE"
+        },
+        {
+          "fault_event_id": "SF-008-F05",
+          "fault_type": "NetworkBandwidth",
+          "root_layer": "NETWORK_PATH",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-008-F06",
+          "fault_type": "PodMemoryStress",
+          "root_layer": "POD",
+          "duration_seconds": 300,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "QUALIFIED_EXISTING_ADAPTER_REUSED"
+        }
+      ],
+      "original_combination_preserved": true,
+      "production_ready": false,
+      "mechanism_blockers": [
+        "HTTP RespAbort:MECHANISM_UNAVAILABLE",
+        "HTTP RespReplaceCode:MECHANISM_UNAVAILABLE",
+        "NetworkBandwidth:SAFETY_BLOCKED",
+        "NetworkLoss:SAFETY_BLOCKED",
+        "PodCPUStress:SAFETY_BLOCKED"
+      ],
+      "time_plan_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "candidate_starts_seconds": null,
+      "candidate_is_authorized_schedule": false,
+      "conditional_30min_starts_seconds": null,
+      "conditional_second_fault_max_seconds_if_180s_recovery_and_45s_check": null,
+      "new_case_design_status": null
+    },
+    {
+      "case_id": "SF-009",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "public_server_status": "NOT_CREATED",
+      "gt_status": "NOT_CREATED",
+      "fault_types": [
+        "NodeCPUStress",
+        "ContainerKill",
+        "HTTP RespDelay",
+        "HTTP ReqAbort",
+        "ServicePause"
+      ],
+      "fault_events": [
+        {
+          "fault_event_id": "SF-009-F01",
+          "fault_type": "NodeCPUStress",
+          "root_layer": "NODE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-009-F02",
+          "fault_type": "ContainerKill",
+          "root_layer": "POD",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-009-F03",
+          "fault_type": "HTTP RespDelay",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "MECHANISM_UNAVAILABLE"
+        },
+        {
+          "fault_event_id": "SF-009-F04",
+          "fault_type": "HTTP ReqAbort",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "MECHANISM_UNAVAILABLE"
+        },
+        {
+          "fault_event_id": "SF-009-F05",
+          "fault_type": "ServicePause",
+          "root_layer": "SERVICE",
+          "duration_seconds": 300,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "QUALIFIED_EXISTING_ADAPTER_REUSED"
+        }
+      ],
+      "original_combination_preserved": true,
+      "production_ready": false,
+      "mechanism_blockers": [
+        "ContainerKill:SAFETY_BLOCKED",
+        "HTTP ReqAbort:MECHANISM_UNAVAILABLE",
+        "HTTP RespDelay:MECHANISM_UNAVAILABLE",
+        "NodeCPUStress:SAFETY_BLOCKED"
+      ],
+      "time_plan_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "candidate_starts_seconds": null,
+      "candidate_is_authorized_schedule": false,
+      "conditional_30min_starts_seconds": null,
+      "conditional_second_fault_max_seconds_if_180s_recovery_and_45s_check": null,
+      "new_case_design_status": null
+    },
+    {
+      "case_id": "SF-010",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "public_server_status": "NOT_CREATED",
+      "gt_status": "NOT_CREATED",
+      "fault_types": [
+        "ServicePause",
+        "HTTP ReqDelay"
+      ],
+      "fault_events": [
+        {
+          "fault_event_id": "SF-010-F01",
+          "fault_type": "ServicePause",
+          "root_layer": "SERVICE",
+          "duration_seconds": 300,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "QUALIFIED_EXISTING_ADAPTER_REUSED"
+        },
+        {
+          "fault_event_id": "SF-010-F02",
+          "fault_type": "HTTP ReqDelay",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        }
+      ],
+      "original_combination_preserved": null,
+      "production_ready": false,
+      "mechanism_blockers": [
+        "HTTP ReqDelay:SAFETY_BLOCKED"
+      ],
+      "time_plan_status": "BLOCKED_1935S_WITH_VALIDATED_300S_AND_FIRST_CHUNK_GATE",
+      "candidate_starts_seconds": null,
+      "candidate_is_authorized_schedule": false,
+      "conditional_30min_starts_seconds": [
+        720,
+        1410
+      ],
+      "conditional_second_fault_max_seconds_if_180s_recovery_and_45s_check": 165,
+      "new_case_design_status": "DRAFT_REQUIRES_HUMAN_REVIEW"
+    },
+    {
+      "case_id": "SF-011",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "public_server_status": "NOT_CREATED",
+      "gt_status": "NOT_CREATED",
+      "fault_types": [
+        "PodMemoryStress",
+        "NetworkDelay"
+      ],
+      "fault_events": [
+        {
+          "fault_event_id": "SF-011-F01",
+          "fault_type": "PodMemoryStress",
+          "root_layer": "POD",
+          "duration_seconds": 300,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "QUALIFIED_EXISTING_ADAPTER_REUSED"
+        },
+        {
+          "fault_event_id": "SF-011-F02",
+          "fault_type": "NetworkDelay",
+          "root_layer": "NETWORK_PATH",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        }
+      ],
+      "original_combination_preserved": null,
+      "production_ready": false,
+      "mechanism_blockers": [
+        "NetworkDelay:SAFETY_BLOCKED"
+      ],
+      "time_plan_status": "BLOCKED_1935S_WITH_VALIDATED_300S_AND_FIRST_CHUNK_GATE",
+      "candidate_starts_seconds": null,
+      "candidate_is_authorized_schedule": false,
+      "conditional_30min_starts_seconds": [
+        720,
+        1410
+      ],
+      "conditional_second_fault_max_seconds_if_180s_recovery_and_45s_check": 165,
+      "new_case_design_status": "DRAFT_REQUIRES_HUMAN_REVIEW"
+    },
+    {
+      "case_id": "SF-012",
+      "role": "OFFICIAL",
+      "duration_seconds": 1800,
+      "collection_status": "NOT_STARTED",
+      "public_server_status": "NOT_CREATED",
+      "gt_status": "NOT_CREATED",
+      "fault_types": [
+        "NodeCPUStress",
+        "HTTP RespReplaceCode"
+      ],
+      "fault_events": [
+        {
+          "fault_event_id": "SF-012-F01",
+          "fault_type": "NodeCPUStress",
+          "root_layer": "NODE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "SAFETY_BLOCKED"
+        },
+        {
+          "fault_event_id": "SF-012-F02",
+          "fault_type": "HTTP RespReplaceCode",
+          "root_layer": "SERVICE",
+          "duration_seconds": null,
+          "start_seconds": null,
+          "target": null,
+          "qualification": "MECHANISM_UNAVAILABLE"
+        }
+      ],
+      "original_combination_preserved": null,
+      "production_ready": false,
+      "mechanism_blockers": [
+        "HTTP RespReplaceCode:MECHANISM_UNAVAILABLE",
+        "NodeCPUStress:SAFETY_BLOCKED"
+      ],
+      "time_plan_status": "BLOCKED_1935S_WITH_VALIDATED_300S_AND_FIRST_CHUNK_GATE",
+      "candidate_starts_seconds": null,
+      "candidate_is_authorized_schedule": false,
+      "conditional_30min_starts_seconds": null,
+      "conditional_second_fault_max_seconds_if_180s_recovery_and_45s_check": null,
+      "new_case_design_status": "DRAFT_REQUIRES_HUMAN_REVIEW"
+    }
+  ],
+  "storage": {
+    "snapshot": {
+      "master": {
+        "root_free_bytes": 45966876672,
+        "data_free_bytes": 259051798528,
+        "data_mount": "/data/stage5-v3",
+        "epoch": 1792054101.9637718
+      },
+      "worker1": {
+        "root_free_bytes": 70049230848,
+        "data_free_bytes": 54838317056,
+        "data_mount": "/data",
+        "epoch": 1792054102.0369995
+      },
+      "worker2": {
+        "root_free_bytes": 68940414976,
+        "data_free_bytes": 62288429056,
+        "data_mount": "/data",
+        "epoch": 1792054102.0822434
+      },
+      "worker3": {
+        "root_free_bytes": 62011969536,
+        "data_free_bytes": 89149087744,
+        "data_mount": "/data",
+        "epoch": 1792054102.187815
+      }
+    },
+    "budget": {
+      "floor_bytes": 20000000000,
+      "observed_hourly": {
+        "SF-001": {
+          "capture_bytes": {
+            "metrics": 4163215,
+            "logs": 735803982,
+            "traces_and_audits": 10193243465,
+            "other": 7827798
+          },
+          "raw_final_bytes": 11375090023,
+          "runtime_bytes": 217855880,
+          "public_bytes": 77945722,
+          "private_bytes": 4743721
+        },
+        "SF-002": {
+          "capture_bytes": {
+            "metrics": 4395123,
+            "logs": 745327647,
+            "traces_and_audits": 10222271207,
+            "other": 7833138
+          },
+          "raw_final_bytes": 11404214643,
+          "runtime_bytes": 217904180,
+          "public_bytes": 78046401,
+          "private_bytes": 3233468
+        }
+      },
+      "half_hour_linear_estimate_bytes_per_case_per_raw_archive_plus_runtime": 5811059411,
+      "sensitivity_25pct_net_bytes_per_case": 7263824264,
+      "half_hour_linear_estimate_by_modality_bytes": {
+        "metrics": 2197561,
+        "logs": 372663823,
+        "traces_and_audits": 5111135603,
+        "other": 3916569
+      },
+      "half_hour_public_estimate_bytes": 39023200,
+      "half_hour_private_estimate_bytes": 2371860,
+      "ten_case_linear_cumulative_bytes_per_archive_host": 58110594110,
+      "ten_case_25pct_cumulative_bytes_per_archive_host": 72638242640,
+      "current_validated_60min_peak_envelope_retained_until_30min_gate_is_tested": {
+        "master": 36507222016,
+        "worker2": 33285996544,
+        "worker3": 31138512896
+      },
+      "first_case_peak_checks": {
+        "master": {
+          "available_before_case_bytes": 259051798528,
+          "unchanged_60min_protection_bytes": 36507222016,
+          "remaining_after_protected_peak_bytes": 222544576512,
+          "passes_current_conservative_gate": true
+        },
+        "worker2": {
+          "available_before_case_bytes": 62288429056,
+          "unchanged_60min_protection_bytes": 33285996544,
+          "remaining_after_protected_peak_bytes": 29002432512,
+          "passes_current_conservative_gate": true
+        },
+        "worker3": {
+          "available_before_case_bytes": 89149087744,
+          "unchanged_60min_protection_bytes": 31138512896,
+          "remaining_after_protected_peak_bytes": 58010574848,
+          "passes_current_conservative_gate": true
+        }
+      },
+      "max_sequential_cases_at_linear_net_estimate_with_current_envelope": {
+        "master": 10,
+        "worker2": 2,
+        "worker3": 7
+      },
+      "additional_data_capacity_needed_for_tenth_case_with_current_envelope_linear": {
+        "master": 0,
+        "worker2": 43297102187,
+        "worker3": 14288959851
+      },
+      "additional_data_capacity_needed_for_tenth_case_with_current_envelope_25pct": {
+        "master": 0,
+        "worker2": 56371985864,
+        "worker3": 27363843528
+      },
+      "half_hour_peak_not_validated": true,
+      "model_limitations": [
+        "Half-hour sizes are linear extrapolations from two one-hour cases with two faults each.",
+        "More events, trace burst, normalization, and temporary files can increase size.",
+        "A shorter collector/exporter envelope requires an independent live no-fault validation before use.",
+        "Each case requires a fresh peak check on Master and both archive Workers."
+      ]
+    }
+  },
+  "source_provenance": {
+    "capability_matrix": {
+      "path": "/Users/liuzihan/Documents/ChatGPT/otel/ops-competition-2026/planning/SF-12-30min-20261015/evidence/fault-capability-matrix.json",
+      "sha256": "02983cff9bc4d3ba18413df863b0d68d53faf082adf58c91a7ff9bd02d231f12"
+    },
+    "old_candidate_plans": [
+      {
+        "path": "/Users/liuzihan/Documents/ChatGPT/otel/ops-competition-2026/batch-sf002-sf009-20261014/plans/SF-003-candidate.json",
+        "sha256": "9877640ce717b2ef364a9b689c1a3ab47ef6cb2ecd00bd84d591bfedc87084c8"
+      },
+      {
+        "path": "/Users/liuzihan/Documents/ChatGPT/otel/ops-competition-2026/batch-sf002-sf009-20261014/plans/SF-004-candidate.json",
+        "sha256": "4adccc2e7cf120c7a86e478560c0825034290df251c3df581d405ccb0f2a9a6d"
+      },
+      {
+        "path": "/Users/liuzihan/Documents/ChatGPT/otel/ops-competition-2026/batch-sf002-sf009-20261014/plans/SF-005-candidate.json",
+        "sha256": "ea9baef31bafcbf3f902d8d0d04435d8bde1542b0498b8f1c150b12a4aff2ed6"
+      },
+      {
+        "path": "/Users/liuzihan/Documents/ChatGPT/otel/ops-competition-2026/batch-sf002-sf009-20261014/plans/SF-006-candidate.json",
+        "sha256": "24986766f5331d653ad600b9837b7788dc4070e9364069810e5d58d2491ce163"
+      },
+      {
+        "path": "/Users/liuzihan/Documents/ChatGPT/otel/ops-competition-2026/batch-sf002-sf009-20261014/plans/SF-007-candidate.json",
+        "sha256": "363295f060cc402c6234cacc076d59fb65e80195bb99d56653330c570cfa0f43"
+      },
+      {
+        "path": "/Users/liuzihan/Documents/ChatGPT/otel/ops-competition-2026/batch-sf002-sf009-20261014/plans/SF-008-candidate.json",
+        "sha256": "2f42d1303a21a5b159701ece37ee7f04d4a755249f3b2bbf85ec6916cc894c79"
+      },
+      {
+        "path": "/Users/liuzihan/Documents/ChatGPT/otel/ops-competition-2026/batch-sf002-sf009-20261014/plans/SF-009-candidate.json",
+        "sha256": "519a3e2edaac7e69b6b7046c1fa5da6f20f9c58227f7f1367e55afe170c46870"
+      }
+    ],
+    "no_test_or_private_gt_access": true
+  },
+  "time_contract": {
+    "known_fault_duration_seconds": 300,
+    "known_first_recovery_seconds": 240,
+    "known_last_recovery_seconds": 180,
+    "recovery_check_seconds": 45,
+    "next_preflight_seconds": 105,
+    "ten_minute_baseline_two_fault_minimum_seconds": 1815,
+    "first_chunk_final_audit_and_quality_gate_earliest_first_fault_seconds": 720,
+    "two_300_second_faults_with_validated_first_chunk_gate_minimum_seconds": 1935,
+    "nine_minute_baseline_math_only_seconds": 1755,
+    "nine_minute_baseline_candidate_blocked_by_first_chunk_gate": true,
+    "three_300_second_faults_ten_minute_baseline_minimum_seconds": 2505,
+    "no_overlap_or_duration_reduction_authorized": true
+  },
+  "practice_publication": {
+    "sf001_public_published": true,
+    "sf002_public_on_master_only": true,
+    "sf002_transfer_import_api_publish": "PLANNED_NOT_EXECUTED",
+    "starter_agent_submit_py_end_to_end": "NOT_VERIFIED",
+    "grader_practice_case_mapping": "CURRENTLY_DEMO_001_ONLY",
+    "sf001_gt": "DRAFT_PENDING_HUMAN_REVIEW",
+    "sf002_gt": "DRAFT_PENDING_HUMAN_REVIEW"
+  },
+  "no_formal_fault_started": true,
+  "no_original_manifest_rewritten": true
+}

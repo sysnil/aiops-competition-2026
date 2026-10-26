@@ -1,0 +1,18 @@
+{
+  "status": "SF013_ATTEMPT01_DESIGN_LOCKED_PRE_INJECTION",
+  "case_id": "SF-013",
+  "attempt_id": "SF-013-ATTEMPT-01",
+  "preferred_cpu_mechanism": "BLOCKED_UNQUALIFIED",
+  "selected_mechanism": "POD_MEMORY_32M_300",
+  "selected_mechanism_qualification": "/root/ops-competition-2026/qualification/COMP-SF01-POD-300/decision.json",
+  "target_policy": "one current frontend Pod on worker2 with healthy sibling on worker1",
+  "case_duration_seconds": 1800,
+  "fault_offset_seconds": 600,
+  "fault_duration_seconds": 300,
+  "workload_contract": "LOW_STABLE_0.7_SESSIONS_PLUS_FOUR_FIXED_1_PER_SECOND",
+  "archive_target": "worker1:/data",
+  "storage_floor_bytes": 5000000000,
+  "admission_change_from_prior": false,
+  "private_gt_review": "DRAFT_PENDING_HUMAN_REVIEW",
+  "no_existing_case_modified": true
+}

@@ -1,0 +1,7 @@
+# Stage4F cross-layer evaluability validation
+
+The formal Stage4F contracts, adapters, trace-storage reader, and evaluation code were frozen on Master before the F01-F04 faults. The freeze manifest SHA-256 is `52710b1ceb7ef3b1c4cf904df30a777b7c7adbcffc28d0cdbd6dc2ce991f6b74`. All four held-out cases were admitted, and public bundles and first-attempt predictions were frozen before evaluator GT was opened. The authoritative report is `/root/stage4f-cross-layer-validation/reports/stage4f-cross-layer-validation-report.md` on Master. Do not modify frozen `design/`, `scripts/`, or `algorithms/` to reinterpret these results.
+
+Stage4E E01-E04 are historical, already unblinded references. New Stage4F cases must pass the pre-fault Pod UID and public NetworkPath membership gates before injection, and must pass admission after recovery before entering accuracy denominators.
+
+OpenRCA-XL accepts only an anonymous public bundle. Configure `OPENRCA_XL_ENDPOINT_URL` (an independent HTTPS chat-completions endpoint), `OPENRCA_XL_MODEL`, and `OPENRCA_XL_API_KEY` in the Mac public-input runtime; do not place credentials in this repository or a public bundle. The runner is an adapted LLM agent, not an unmodified author RCA-agent reproduction. A local HTTP stub is used only for protocol tests and cannot satisfy the real inference gate. MicroIRC-original and MicroIRC-XL are explicitly nonmandatory while their author label-derived class map lacks a validated GT-free inference path; both must output `BLOCKED_PREREQUISITE` with no ranking until that changes.

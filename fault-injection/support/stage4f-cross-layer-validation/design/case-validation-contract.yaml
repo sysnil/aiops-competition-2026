@@ -1,0 +1,51 @@
+schema_version: 1
+case_ids: [F01, F02, F03, F04]
+optional_replicates: [F05, F06, F07, F08]
+admission_gates:
+  - candidate_contract_frozen_before_fault
+  - observation_contract_frozen_before_fault
+  - scoring_contract_frozen_before_fault
+  - network_path_contract_frozen_before_fault
+  - case_validation_contract_frozen_before_fault
+  - root_entity_in_public_candidate_universe
+  - before_and_during_telemetry_comparable
+  - root_entity_publicly_expressible
+  - fault_injection_success_evidenced_privately
+  - observability_thresholds_pass
+  - public_private_leak_scan_pass
+  - recovery_gate_pass
+pod_fault_extra_gates:
+  - target_pod_exists_before_fault
+  - same_target_pod_uid_before_and_during
+  - no_rollout_or_recreation_of_target_pod
+  - target_pod_metrics_meet_sample_minima
+  - target_pod_in_pre_fault_public_candidates
+  - target_pod_metric_labels_match_uid_or_container_id
+network_fault_extra_gates:
+  - public_path_entity_exists_before_fault
+  - selected_edges_have_pre_fault_TRAVERSES_proof
+  - at_least_one_same_destination_or_same_source_control_edge
+  - path_latency_or_packet_evidence_comparable_before_and_during
+node_fault_extra_gates:
+  - at_least_two_ready_pods_on_target_node_before_fault
+  - target_node_remains_ready_during_fault
+invalid_case_status: INVALID_CASE
+invalid_case_policy: "Archive the attempt and exclude it from every RCA accuracy denominator."
+execution_order:
+  - freeze_all_contracts_and_code
+  - collect_clean_baseline_and_prechecks
+  - freeze_pre_fault_candidate_and_route_maps
+  - freeze_clean_null_calibration
+  - collect_new_fault_cases
+  - build_public_A_and_B
+  - freeze_public_bundle_sha256
+  - run_isolated_RCA_inference
+  - freeze_prediction_sha256
+  - open_evaluator_gt
+  - apply_admission_gates
+  - score_only_admitted_cases
+hardware_safety:
+  require_healthy_cluster_before_each_fault: true
+  stop_if_node_not_ready_or_control_plane_unhealthy: true
+  require_automatic_fault_timeout: true
+  require_cleanup_proof_and_after_window: true

@@ -1,0 +1,24 @@
+{
+  "status": "VALIDATED_ONLY",
+  "case_id": "IMPORT-SAMPLE-001",
+  "version": "V001",
+  "staging": "/data/aiops-contest/staging/import-IMPORT-SAMPLE-001-V001-eaee0c2a5e7145d685d30235d5b704cd",
+  "validation": {
+    "status": "PASS",
+    "errors": [],
+    "stats": {
+      "metrics.parquet": {
+        "rows": 960,
+        "sha256": "be0f3d20dc0ab2b393ae421aa8efd3d8b35f5585838c825d0c4bf479f1ac7622"
+      },
+      "logs.parquet": {
+        "rows": 240,
+        "sha256": "387c5b4fd03654d324cea12e2dcab7bf022abd09e6c320f1b5d774a63e7d6fb7"
+      },
+      "traces.parquet": {
+        "rows": 240,
+        "sha256": "186b7833640678e870a330efc47fb27904cc49bd2327497f27eaef0a3f96f1cf"
+      }
+    }
+  }
+}

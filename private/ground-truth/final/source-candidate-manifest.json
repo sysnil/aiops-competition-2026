@@ -1,0 +1,69 @@
+{
+  "approval_source": "User confirmed review of SF-013 through SF-017 in this task on 2026-10-20",
+  "cases": [
+    {
+      "candidate_sha256": "7c9d221a0606b878cb29e63eb111b301aae1d88d8d9005a04aba0c03c40ffecb",
+      "case_id": "SF-013",
+      "draft_sha256": "f0dc57c38b92e8d66cff273c6046660a4203b8d87d481ff27b4e53c704b2249e",
+      "published_manifest_sha256": "4e76722a2c36783c67b27acb01c9e4c928f088639ac78763a90a0613fad63df5",
+      "selected_event_ids": [
+        "EVT-0001"
+      ],
+      "source_public_manifest_sha256": "3328c73eaf8533d343b6452cb4cd14d3708b2adacc9757b9f593941a8895ab7c"
+    },
+    {
+      "candidate_sha256": "3dd96a1dd6e9c42942a5286db3d57657ae3f916c62014ebfab7ea4366efd0539",
+      "case_id": "SF-014",
+      "draft_sha256": "1c6886ad0d35b8cc3787585f97a2b7858d67cc4bf0482e1d8b62159036282f41",
+      "published_manifest_sha256": "b4b600faaf29987299f0f80dd5e4dece2374daa337bb45c01e7f5dad0d4d97b0",
+      "selected_event_ids": [
+        "EVT-0005",
+        "EVT-0004",
+        "EVT-0007",
+        "EVT-0008",
+        "EVT-0009"
+      ],
+      "source_public_manifest_sha256": "7ce9501fe6dd0751566466cd0220aec64c5d89a06f4ee9bd03c35b4fc7665cfb"
+    },
+    {
+      "candidate_sha256": "1cba0f3582fa430fe129e8ffda422a946ef31b82f59aa4fe53fdebb9c5516eb3",
+      "case_id": "SF-015",
+      "draft_sha256": "73e125964da88c6cab83c9520c637147da9b5e5b8599773bd1ddacee90149ad1",
+      "published_manifest_sha256": "8db32ef5861f481e4ab23ec9cdb78569500207de01cc2f82de4db88d7a0568c4",
+      "selected_event_ids": [
+        "EVT-0001",
+        "EVT-0008",
+        "EVT-0007",
+        "EVT-0009",
+        "EVT-0006"
+      ],
+      "source_public_manifest_sha256": "2e36f67f8e95e0a70fdcb10612cc89c4c5a00255549f583489dadee5af0a04b2"
+    },
+    {
+      "candidate_sha256": "0dc13107d578b9c7fd89516e908b1ec8cfbbb05fcc7312fa4f8bbc087c5c1693",
+      "case_id": "SF-016",
+      "draft_sha256": "00c2763bf98cd2000c05f5da1cedb92772bfe3777e73114376b55f4f568ea2d0",
+      "published_manifest_sha256": "b30be7cd619d5b5e7924050d843aaabc8a51f8bb120014a3fa395a31c2fe5f66",
+      "selected_event_ids": [
+        "EVT-0002",
+        "EVT-0001"
+      ],
+      "source_public_manifest_sha256": "66797252cef3c83f06477bf8c59aec694b732c7bd30b23b55af36335522546a0"
+    },
+    {
+      "candidate_sha256": "39b07397e4af2af721f1c988020434d6415b88ab241e58696cf6ccce1ca606ec",
+      "case_id": "SF-017",
+      "draft_sha256": "7158da6f78d70bf0b2827b94a0afbb51058f550d2e5fa90e061162e2a851677a",
+      "published_manifest_sha256": "67fab079852de7aa9ae2cc494ee0d5911b219e05046c98b77935eb137fb9068c",
+      "selected_event_ids": [
+        "EVT-0004",
+        "EVT-0006",
+        "EVT-0008",
+        "EVT-0003",
+        "EVT-0001"
+      ],
+      "source_public_manifest_sha256": "1f772f68bf55bedb3239d4fc6d67a485f81ba109b504c300b6b0dd3d7bf39dd0"
+    }
+  ],
+  "classification": "PRIVATE_REVIEWED_SOURCE_PROVENANCE"
+}

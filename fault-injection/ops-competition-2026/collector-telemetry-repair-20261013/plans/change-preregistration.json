@@ -1,0 +1,8 @@
+{
+  "status": "PREREGISTERED_BEFORE_COLLECTOR_CHANGE",
+  "single_candidate": {
+    "old": 25,
+    "new": 15
+  },
+  "validation_plan_sha256": "bece01326ed9070552874bd8dda656fabb37297e6c8e5053ab288cf32ea0115b"
+}

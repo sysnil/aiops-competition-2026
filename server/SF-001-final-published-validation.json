@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "stats": {
+    "metrics.parquet": {
+      "rows": 80358,
+      "sha256": "c07243f010354ce2a16af8c221112d07ad2eb84181b790350194e49512210082"
+    },
+    "logs.parquet": {
+      "rows": 567346,
+      "sha256": "952d33914b1e9d15e0b2cff0a01b0fdf433c31e9f15f7df25d86ec9205c21cb0"
+    },
+    "traces.parquet": {
+      "rows": 817529,
+      "sha256": "e48e6064c9e2256fc8054122548348ae8419adf7583b608e7ae1b0ff36154b41"
+    },
+    "observed_source_conditions": {
+      "duplicate_metric_identity_groups": 0,
+      "duplicate_metric_full_row_groups": 0,
+      "unresolved_parent_spans": 41708,
+      "unresolved_log_trace_rows": 1
+    }
+  }
+}

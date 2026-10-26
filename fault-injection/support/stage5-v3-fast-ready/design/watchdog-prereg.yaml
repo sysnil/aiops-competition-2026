@@ -1,0 +1,15 @@
+status: DRAFT_REHEARSAL_ONLY
+namespace: otel-demo
+namespace_uid: 7030ffb7-b5c5-498b-8895-4a58171240bb
+api_server: https://192.168.53.52:6443
+context: kubernetes-admin@kubernetes
+kubeconfig: /etc/kubernetes/admin.conf
+test_configmap: s5v3-fastready-watchdog-probe-20261013
+systemd_user: root
+timer_noop_seconds: 15
+timer_rollback_seconds: 30
+service_timeout_seconds: 120
+max_kubectl_attempts: 2
+allowed_mutation: test ConfigMap data.state BASELINE -> CANDIDATE -> BASELINE
+business_deployment_mutations: forbidden
+fault_injection: forbidden

@@ -1,0 +1,34 @@
+[Unit]
+Description=AIOps Competition Agent Visualization Web
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=aiops-web
+Group=aiops-web
+WorkingDirectory=/opt/aiops-competition/participant-starter
+Environment=AIOPS_WEB_PROJECT_ROOT=/opt/aiops-competition/participant-starter
+Environment=AIOPS_WEB_STATE_ROOT=/var/lib/aiops-agent-web
+Environment=AIOPS_PUBLIC_BASE_URL=http://192.168.51.51:8080
+Environment=AIOPS_TEAM_ENV_FILE=/etc/aiops-competition/team.env
+Environment=AIOPS_LLM_ENV_FILE=/etc/aiops-competition/agent-llm.env
+ExecStart=/opt/aiops-competition/.venv/bin/uvicorn webapp.backend:app --host 192.168.51.50 --port 8088 --workers 1 --no-access-log
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=15
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+ReadOnlyPaths=/opt/aiops-competition/participant-starter /etc/aiops-competition
+ReadWritePaths=/var/lib/aiops-agent-web
+
+[Install]
+WantedBy=multi-user.target
+

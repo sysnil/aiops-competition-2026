@@ -1,0 +1,19 @@
+{
+  "policy_id": "BATCH_STORAGE20_20261014",
+  "authorized_by": "User: Master and other Workers free-space lower bound 20G",
+  "units": "decimal GB",
+  "minimum_free_bytes": 20000000000,
+  "hosts": [
+    "master",
+    "w1",
+    "w2",
+    "w3"
+  ],
+  "filesystems": [
+    "system",
+    "experimental-data"
+  ],
+  "peak_budget_unchanged": true,
+  "other_safety_thresholds_unchanged": true,
+  "historical_assets_modified": false
+}

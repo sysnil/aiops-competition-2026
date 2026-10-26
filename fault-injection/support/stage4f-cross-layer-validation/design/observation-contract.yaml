@@ -1,0 +1,71 @@
+schema_version: 1
+windows:
+  before_min_seconds: 600
+  during_seconds: 300
+  after_min_seconds: 600
+  inference_phases: [before, during]
+  after_phase_policy: recovery_validation_only
+sampling:
+  max_missing_fraction_per_required_series: 0.25
+  pod_min_before_samples_per_required_series: 20
+  pod_min_during_samples_per_required_series: 10
+  node_min_before_samples_per_required_series: 20
+  node_min_during_samples_per_required_series: 10
+  network_min_before_samples_per_required_series: 20
+  network_min_during_samples_per_required_series: 10
+trace_acquisition:
+  source: JAEGER_OPENSEARCH_STORAGE
+  source_indices: jaeger-jaeger-span-YYYY-MM-DD
+  query_window: "startTimeMillis >= window_start and < window_end; validate exact startTime microseconds"
+  completeness: "exact OpenSearch total, bounded full scroll, unique traceID/spanID, raw pages and index UUID/mapping hashes archived"
+  reason: "Jaeger v2.19.0 Query API has a reproducible clock-skew-adjustment panic on current traces; read Jaeger's OpenSearch storage before Stage4F freeze."
+pod_required_metric_families:
+  - container_cpu_usage_seconds_total
+  - container_memory_working_set_bytes
+  - container_cpu_cfs_periods_total
+  - container_cpu_cfs_throttled_periods_total
+  - container_cpu_cfs_throttled_seconds_total
+node_required_metric_families:
+  - k8s_node_cpu_usage
+  - k8s_node_cpu_time_seconds_total
+  - k8s_node_memory_available_bytes
+pod_required_identity:
+  - namespace
+  - pod_name
+  - pod_uid
+  - node_name
+  - container_id
+network_required_observations:
+  - pre_fault_route_or_flow_proof
+  - per_edge_path_membership
+  - latency_before_and_during
+  - at_least_one_control_edge
+normalization:
+  counters: per_second_rate_with_reset_detection
+  gauges: time_window_median_and_p95
+  log_counts: per_second_rate
+  trace_latency: observed_client_span_duration_with_server_child_fallback
+missing_data: null_with_reason_never_zero_imputation
+signal_anomaly_rules:
+  resource_metric: "abs(during_median - before_median) > max(3 * 1.4826 * MAD(before), 0.50 * max(abs(before_median), 1e-9))"
+  restart_or_cgroup_event: "during_count_or_rate > before_count_or_rate with at least one new event"
+  error_log_rate: "during_errors_per_second > 2 * before_errors_per_second + 0.01"
+  trace_edge_p95: "at least 30 observed calls in each phase AND during_p95_ms > max(1.5 * before_p95_ms, before_p95_ms + 10)"
+  network_path_p95: "at least 30 observed path samples in each phase AND during_p95_ms > max(1.5 * before_p95_ms, before_p95_ms + 10)"
+  network_drop_fraction: "during_drop_fraction > before_drop_fraction + 0.01 with at least 100 observed packets in each phase"
+  independent_family_unit: "one metric/log/trace/network family per entity, not one sample or label-cardinality series"
+privacy:
+  public_only_for_inference: true
+  evaluator_gt_after_prediction_freeze: true
+  forbidden_public_fields:
+    - stage_case_id
+    - experiment_id
+    - fault_type
+    - fault_layer
+    - fault_target
+    - fault_parameter
+    - injection_command
+    - root_layer
+    - root_entity
+    - vm_injection_interface
+  algorithm_visible_case_id: "random UUIDv4 public_case_id; F01-F08 mapping remains evaluator-only"

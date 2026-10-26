@@ -1,0 +1,160 @@
+#!/usr/bin/env python3
+"""Export a completed real hour to public Parquet; never reads injection records or GT.
+
+Input is immutable capture chunks and a separately prepared public time window.
+All duplicate/conflicting/out-of-window rows are counted or rejected explicitly.
+"""
+import argparse
+from collections import Counter
+from decimal import Decimal
+import hashlib
+import json
+from pathlib import Path
+import sqlite3
+import time
+from contest_exchange_schema import (canonical,iso_ns,tags,trace_record,log_record,private_leaks,schemas)
+from competition_archive import sha
+
+def read(p):return json.loads(p.read_text())
+def pages(root,kind):
+    for p in sorted((root/kind).glob('*.json')):
+        for hit in read(p)['hits']['hits']:yield hit
+def write_new(p,v):
+    with p.open('x') as f:json.dump(v,f,indent=2,ensure_ascii=False);f.write('\n')
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--captures',type=Path,required=True)
+    p.add_argument('--window',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--work',type=Path,required=True);p.add_argument('--metric-metadata',type=Path)
+    a=p.parse_args();started=time.monotonic()
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+    window=read(a.window);lo=iso_ns(window['start_utc']);hi=iso_ns(window['end_utc'])
+    if hi-lo!=3600*10**9 or window['case_id']!='SF-001':raise RuntimeError('Only one complete real hour')
+    if a.output.exists() or a.work.exists():raise RuntimeError('Export cannot overwrite a prior attempt')
+    a.output.mkdir(parents=True,mode=0o700);a.work.mkdir(parents=True,mode=0o700)
+    db=sqlite3.connect(a.work/'identity.sqlite');db.execute('CREATE TABLE spans(t TEXT,s TEXT,h TEXT,service TEXT,PRIMARY KEY(t,s))')
+    db.execute('CREATE TABLE logs(k TEXT PRIMARY KEY,h TEXT)');db.execute('CREATE TABLE metrics(k TEXT PRIMARY KEY,v TEXT)')
+    chunks=sorted(a.captures.glob('chunk-*'))
+    if len(chunks)!=6:raise RuntimeError('Six complete immutable chunks required')
+    expected=lo;inputs={};duplicates=Counter();counts=Counter();minutes={k:Counter() for k in ('metrics','logs','traces')}
+    bounds={k:[None,None] for k in minutes};unknown=Counter();topology=[];trace_ids=set()
+    registry=read(a.metric_metadata).get('data',{}) if a.metric_metadata else {}
+    # First pass indexes actual parent identities; no inferred parent service.
+    for chunk in chunks:
+        first=chunk/'captures/during';final=chunk/'trace-final/during';m=read(first/'capture-manifest.json')
+        left,right=iso_ns(m['window']['start_utc']),iso_ns(m['window']['end_utc'])
+        if left!=expected or right-left!=600*10**9:raise RuntimeError('Capture window gap/overlap')
+        expected=right
+        if m['trace_source']!='JAEGER_OPENSEARCH_STORAGE':raise RuntimeError('Unexpected trace source')
+        inputs[str(chunk.name)]=sha(first/'capture-manifest.json')
+        for rel,digest in m['sha256'].items():
+            if sha(first/rel)!=digest:raise RuntimeError('First capture hash mismatch')
+        for hit in pages(final,'trace-storage-pages'):
+            s=hit['_source'];ts=int(s['startTime'])*1000
+            if not left<=ts<right:raise RuntimeError('Trace outside its exact capture window')
+            key=(s['traceID'].lower(),s['spanID'].lower());digest=hashlib.sha256(canonical(s).encode()).hexdigest()
+            old=db.execute('SELECT h FROM spans WHERE t=? AND s=?',key).fetchone()
+            if old:
+                if old[0]!=digest:raise RuntimeError('Conflicting duplicate span')
+                duplicates['traces']+=1
+            else:db.execute('INSERT INTO spans VALUES(?,?,?,?)',(*key,digest,s['process']['serviceName']))
+        snap=read(first/'kubernetes/pods.json')
+        topology.append({'observed_at_utc':m['metadata_observed_utc'],'pods':[{
+            'name':r['metadata']['name'],'uid':r['metadata']['uid'],'namespace':r['metadata']['namespace'],
+            'service':r['metadata'].get('labels',{}).get('opentelemetry.io/name'),
+            'node':r['spec'].get('nodeName'),'pod_ip':r['status'].get('podIP'),
+            'containers':[{'name':c['name'],'container_id':c.get('containerID'),'restart_count':c.get('restartCount')}
+                for c in r['status'].get('containerStatuses',[])]} for r in snap['items']]})
+        db.commit()
+    if expected!=hi:raise RuntimeError('Hour end not covered')
+    schema=schemas(pa);writers={k:pq.ParquetWriter(a.output/(k+'.parquet'),v,compression='zstd',compression_level=3) for k,v in schema.items()}
+    buffers={k:[] for k in schema};written=set();association=Counter()
+    def emit(kind,row,stamp):
+        leaks=private_leaks(row)
+        if leaks:raise RuntimeError('Private content found, public package blocked: '+repr(leaks))
+        if not lo<=stamp<hi:raise RuntimeError('Export record outside full-hour boundary')
+        counts[kind]+=1;minutes[kind][str((stamp-lo)//(60*10**9))]+=1
+        bounds[kind][0]=stamp if bounds[kind][0] is None else min(bounds[kind][0],stamp)
+        bounds[kind][1]=stamp if bounds[kind][1] is None else max(bounds[kind][1],stamp)
+        buffers[kind].append(row)
+        if len(buffers[kind])>=5000:
+            writers[kind].write_table(pa.Table.from_pylist(buffers[kind],schema=schema[kind]));buffers[kind].clear()
+    try:
+        for chunk in chunks:
+            first=chunk/'captures/during';final=chunk/'trace-final/during'
+            for file in sorted((first/'metrics').glob('*.json')):
+                for series in read(file)['data']['result']:
+                    labels=series['metric'];name=labels.get('__name__')
+                    if not name:raise RuntimeError('Original metric name missing')
+                    info=registry.get(name) or [];meta=info[0] if len(info)==1 else {}
+                    if not meta:unknown['metric_metadata_series']+=1
+                    for t,v in series['values']:
+                        ts=int(Decimal(str(t))*10**9)
+                        # query_range includes the final boundary; explicitly count the one excluded endpoint.
+                        if ts==hi:duplicates['excluded_metric_end_boundary']+=1;continue
+                        key=hashlib.sha256((canonical(labels)+'@'+str(ts)).encode()).hexdigest()
+                        old=db.execute('SELECT v FROM metrics WHERE k=?',(key,)).fetchone()
+                        if old:
+                            if old[0]!=str(v):raise RuntimeError('Conflicting duplicate metric')
+                            duplicates['metrics']+=1;continue
+                        db.execute('INSERT INTO metrics VALUES(?,?)',(key,str(v)))
+                        emit('metrics',{'timestamp':ts,'metric_name':name,'value':float(v),'labels':canonical(labels),
+                            'service':labels.get('service_name') or labels.get('service'),
+                            'pod':labels.get('pod') or labels.get('k8s_pod_name'),
+                            'node':labels.get('node') or labels.get('k8s_node_name'),
+                            'unit':meta.get('unit') or None,'metric_type':meta.get('type') or None,'source':'PROMETHEUS'},ts)
+            for hit in pages(first,'logs'):
+                key=hit['_index']+'/'+hit['_id'];s=hit['_source'];digest=hashlib.sha256(canonical(s).encode()).hexdigest()
+                old=db.execute('SELECT h FROM logs WHERE k=?',(key,)).fetchone()
+                if old:
+                    if old[0]!=digest:raise RuntimeError('Conflicting duplicate log')
+                    duplicates['logs']+=1;continue
+                db.execute('INSERT INTO logs VALUES(?,?)',(key,digest));r=log_record(s)
+                if r['trace_id']:
+                    association['logs_with_trace_id']+=1
+                    if db.execute('SELECT 1 FROM spans WHERE t=? LIMIT 1',(r['trace_id'].lower(),)).fetchone():association['logs_linked_to_exported_trace']+=1
+                emit('logs',r,r['timestamp'])
+            for hit in pages(final,'trace-storage-pages'):
+                s=hit['_source'];key=(s['traceID'].lower(),s['spanID'].lower())
+                if key in written:continue
+                written.add(key);trace_ids.add(key[0])
+                parents=[r for r in s.get('references',[]) if r.get('refType')=='CHILD_OF'];parent_service=None
+                if parents:
+                    parent=parents[0];found=db.execute('SELECT service FROM spans WHERE t=? AND s=?',
+                        (parent.get('traceID',s['traceID']).lower(),parent['spanID'].lower())).fetchone()
+                    association['spans_with_parent_reference']+=1
+                    if found:parent_service=found[0];association['parent_identity_joined']+=1
+                    else:association['parent_absent_from_window_or_unrecorded']+=1
+                resource=tags(s['process'].get('tags'))
+                if resource.get('k8s.pod.uid'):association['spans_with_pod_uid']+=1
+                r=trace_record(s,parent_service);emit('traces',r,r['start_time'])
+            db.commit()
+        for k,rows in buffers.items():
+            if rows:writers[k].write_table(pa.Table.from_pylist(rows,schema=schema[k]))
+    finally:
+        for w in writers.values():w.close()
+        db.close()
+    if any(counts[k]==0 or any(minutes[k][str(i)]==0 for i in range(60)) for k in schema):raise RuntimeError('Unexplained empty modality/minute; inspect retained partial export')
+    topo={'case_id':'SF-001','kind':'observed_public_kubernetes_identity_snapshots','snapshots':topology}
+    if private_leaks(topo):raise RuntimeError('Topology private leak')
+    write_new(a.output/'topology.json',topo)
+    files={p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in sorted(a.output.iterdir()) if p.is_file()}
+    for k in schema:
+        if pq.ParquetFile(a.output/(k+'.parquet')).metadata.num_rows!=counts[k]:raise RuntimeError('Parquet row count mismatch')
+    manifest={'schema_version':'CONTEST_EXCHANGE_V1','case_id':'SF-001','window':window,
+        'time_bounds':'start inclusive, end exclusive','files':files,'row_counts':dict(counts),'unique_trace_count':len(trace_ids),
+        'minute_counts':{k:dict(v) for k,v in minutes.items()},'timestamp_bounds_unix_ns':bounds,
+        'schemas':{k:str(v) for k,v in schema.items()},'structured_fields_encoding':'Canonical JSON strings; null means unknown',
+        'unknown_metric_metadata':'null, never inferred','raw_metric_counters':'not converted to rates',
+        'trace_source':'JAEGER_OPENSEARCH_STORAGE','trace_status_UNSET':'no explicit OTel status/error recorded',
+        'actual_server_import_compatibility':'NOT_TESTED_THIS_ROUND','private_leak_scan':'PASS'}
+    write_new(a.output/'manifest.json',manifest)
+    private={'status':'PUBLIC_EXPORT_STRUCTURAL_VALIDATION_PASS_PENDING_CASE_QUALITY','input_capture_manifest_sha256':inputs,
+        'duplicate_and_boundary_accounting':dict(duplicates),'unknowns':dict(unknown),'cross_modal_association':dict(association),
+        'elapsed_seconds':time.monotonic()-started,'parquet_version':pa.__version__,
+        'public_manifest_sha256':sha(a.output/'manifest.json'),'source_records_silently_discarded':False}
+    write_new(a.work/'export-report.json',private)
+    print(json.dumps(private))
+
+if __name__=='__main__':main()

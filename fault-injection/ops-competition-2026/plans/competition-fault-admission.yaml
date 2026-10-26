@@ -1,0 +1,136 @@
+schema_version: 1
+protocol: OPS_COMPETITION_2026_SF01_V1
+status: COMPETITION_RULES_FIXED_BEFORE_QUALIFICATION
+scope: anomaly_detection_not_research_root_cause_benchmark
+research_contracts_modified: false
+only_internal_case: SF-PILOT-01
+only_public_case: SF-001
+server_access_this_round: forbidden
+maximum_qualification_faults: 4
+maximum_real_case_attempts: 1
+automatic_extra_fault_or_strength_search: forbidden
+
+safety_gate:
+  unchanged_base_policy: /root/stage5-v3-clean-gate-v2/design/global-safety-policy-draft.json
+  base_policy_sha256: 0f17e00207e2c67665db20774e6535bc4037b0fe2acc3e73ca8cbaa6f3ea792f
+  scope_only_research_false_flag: independent_competition_evaluation_allowed
+  actual_environment_failure_or_unknown: stop
+  four_nodes_ready_pressure_free: required
+  control_plane_coredns_calico: healthy
+  prometheus_opensearch_jaeger_collectors: healthy
+  node_metric_actual_source_age_seconds_max: 60
+  fresh_health_and_five_host_residue_age_seconds_max: 180
+  node_leases_age_seconds_max: 60
+  ntp_synchronized_all_five_hosts: required
+  master_root_free_bytes_min: 46000000000
+  data_uuid: a35051a2-3d09-4b83-bbc0-3bb055e8a4f3
+  data_free_gib_after_30_gib_reservation_min: 64
+  worker_memory_available_gib_min: 8
+  master_memory_available_gib_min: 4
+  router_memory_available_gib_min: 2
+  node_cpu_free_cores_min: 2
+  node_cpu_free_fraction_of_allocatable_min: 0.25
+  prefault_host_cpu_psi_some_avg60_percent_max: 5
+  no_other_active_fault_or_experiment: required
+  independent_watchdog_actual_resume_test: required
+  management_ssh_and_restoration_channels: excluded_from_injection_scope
+  new_business_or_telemetry_configuration_changes: forbidden
+  baseline_client_http_errors_or_timeouts: none
+  during_target_related_business_errors: record_as_possible_effect_not_automatically_environment_failure
+  during_unrelated_image_control_errors: stop
+
+qualification_order:
+  - {id: COMP-SF01-SERVICE-SHORT, layer: SERVICE, before_seconds: 180, fault_seconds: 30, recovery_seconds: 180}
+  - {id: COMP-SF01-SERVICE-300, layer: SERVICE, before_seconds: 300, fault_seconds: 300, recovery_seconds: 300, requires: COMP-SF01-SERVICE-SHORT}
+  - {id: COMP-SF01-POD-SHORT, layer: POD, before_seconds: 180, fault_seconds: 60, recovery_seconds: 180}
+  - {id: COMP-SF01-POD-300, layer: POD, before_seconds: 300, fault_seconds: 300, recovery_seconds: 300, requires: COMP-SF01-POD-SHORT}
+
+mechanisms:
+  SERVICE:
+    family: service_wide_process_stall
+    service: recommendation
+    target_count: 2
+    host: k8s-worker3
+    target_policy: all_current_ready_replicas_of_service
+    signal: bounded_SIGSTOP_with_exact_PID_start_time_identity_SIGCONT_recovery
+    target_cgroup_must_match_pod_uid_and_container_id: true
+    liveness_rebuild_during_stall: forbidden
+    baseline_business_server_traces_per_replica_min: 10
+    baseline_service_business_traces_min: 30
+    short_seconds: 30
+    qualified_duration_required_before_case_seconds: 300
+  POD:
+    family: bounded_single_container_memory_allocation
+    service: frontend
+    target_node: k8s-worker2
+    sibling_node: k8s-worker1
+    allocation_bytes: 33554432
+    interpreter_and_headroom_reserve_bytes: 33554432
+    allocation_plus_current_plus_reserve_fraction_of_memory_max_max: 0.80
+    during_memory_fraction_of_memory_max_abort: 0.80
+    no_memory_max_or_cpu_max_change: true
+    no_oom_kill_or_pod_rebuild: true
+    allocator_must_enter_exact_container_cgroup_before_start: true
+    baseline_business_server_traces_target_and_sibling_min: 10
+    short_seconds: 60
+    qualified_duration_required_before_case_seconds: 300
+
+watchdog:
+  independent_systemd_timer_before_any_signal_or_allocation: true
+  recovery_deadline_after_fault_seconds: 5
+  pid_start_time_and_cgroup_identity_checked: true
+  recovery_idempotent: true
+  timer_cancel_only_after_verified_cleanup: true
+  allocator_own_maximum_seconds: 330
+  watchdog_failure: stop_no_injection
+
+fault_validity:
+  real_target_identity_and_effect_required: true
+  service_all_registered_processes_stopped_and_resumed: true
+  pod_real_memory_allocation_and_private_cgroup_measurement: true
+  planned_vs_actual_duration_tolerance_seconds: 2
+  private_injection_state_never_public_anomaly_evidence: true
+
+observability_validity:
+  all_three_collection_paths_healthy: required
+  each_anomaly_needs_all_modalities: false
+  public_evidence_required: true
+  service_public_anomaly_any_of:
+    - at_least_3_new_related_client_errors_or_timeouts_with_zero_baseline_errors
+    - caller_edge_p95_at_least_2x_baseline_with_at_least_10_real_spans
+    - recommendation_completion_rate_below_20pct_baseline_with_at_least_30_real_issued_related_requests_and_healthy_independent_trace_controls
+  pod_public_memory_signal:
+    min_increase_bytes: 16777216
+    baseline_mad_multiplier: 5
+    consecutive_metric_samples_min: 2
+    target_minus_sibling_centered_increase_bytes_min: 8388608
+  timeout_or_missing_span: preserve_unknown_and_distinguish_collection_failure
+  missing_counter: UNKNOWN_NOT_ZERO
+
+recovery_validity:
+  same_pod_uid_container_id_and_process_start: required
+  no_registered_child_or_stopped_process_residue: required
+  no_node_pressure_or_oom_event: required
+  business_and_telemetry_health: restored
+  memory_recovery_limit: baseline_median_plus_max_16MiB_or_5MAD
+  final_five_host_residue: required
+  cannot_prove_recovery: stop_all_later_faults
+
+collection:
+  trace_source: JAEGER_OPENSEARCH_STORAGE
+  raw_data_root: /data/stage5-v3/ops-competition-2026
+  exact_utc_half_open_windows: true
+  immutable_trace_reads_offsets_seconds: [5, 60, 120, 240]
+  scoring_capture_latest_complete_after_window_seconds: 180
+  late_audit_latest_complete_after_window_seconds: 300
+  missing_or_truncated_collection: retain_evidence_and_fail_quality
+  overwrite_prior_attempt: forbidden
+
+public_boundary:
+  forbid: [private_injection_plan, injection_commands, private_target_labels, injection_parameters, fault_count, injection_schedule, gt, scoring_answers, internal_case_id]
+  legitimate_business_anomalies: preserve
+  export_schema_status: DOCUMENTED_CONTEST_EXCHANGE_SCHEMA_NOT_SERVER_COMPATIBILITY_VERIFIED
+  source_metrics_semantics_units_and_ids: preserve_or_explicit_unknown
+  observed_event_gt_only: true
+  gt_review_status: DRAFT_PENDING_HUMAN_REVIEW
+  automatic_final_gt: forbidden

@@ -1,0 +1,374 @@
+[
+  {
+    "question_id": "Q01",
+    "case_id": "SF-003",
+    "valid_points": 30,
+    "answers": [
+      {
+        "answer_type": "number",
+        "answer": 163.33,
+        "answer_unit": "MiB",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "max of valid minute values"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-16T03:36:49.724275+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum minute start"
+      },
+      {
+        "answer_type": "number",
+        "answer": 130.81,
+        "answer_unit": "MiB",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "unweighted mean of valid minute values"
+      }
+    ]
+  },
+  {
+    "question_id": "Q02",
+    "case_id": "SF-003",
+    "valid_points": 30,
+    "answers": [
+      {
+        "answer_type": "number",
+        "answer": 0.06,
+        "answer_unit": "cores",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "max of valid minute values"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-16T03:51:49.724275+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum minute start"
+      },
+      {
+        "answer_type": "number",
+        "answer": 0.05,
+        "answer_unit": "cores",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "unweighted mean of valid minute values"
+      }
+    ]
+  },
+  {
+    "question_id": "Q03",
+    "case_id": "SF-003",
+    "valid_points": 60,
+    "answers": [
+      {
+        "answer_type": "entity",
+        "answer": "frontend-68d8bbfdc8-c4n85",
+        "answer_unit": "entity ID",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "compare unweighted means of valid minutes"
+      },
+      {
+        "answer_type": "number",
+        "answer": 1.34,
+        "answer_unit": "MiB",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "absolute difference of per-series minute means"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-16T03:36:49.724275+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum absolute per-minute difference"
+      }
+    ]
+  },
+  {
+    "question_id": "Q04",
+    "case_id": "SF-005",
+    "valid_points": 30,
+    "answers": [
+      {
+        "answer_type": "number",
+        "answer": 3331,
+        "answer_unit": "spans",
+        "numerical_tolerance": 0,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "sum of all 60-second bucket counts"
+      },
+      {
+        "answer_type": "number",
+        "answer": 131,
+        "answer_unit": "spans",
+        "numerical_tolerance": 0,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "maximum minute count"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-16T11:49:55.458636+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum minute start"
+      }
+    ]
+  },
+  {
+    "question_id": "Q05",
+    "case_id": "SF-005",
+    "valid_points": 30,
+    "answers": [
+      {
+        "answer_type": "number",
+        "answer": 9,
+        "answer_unit": "logs",
+        "numerical_tolerance": 0,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "sum of all 60-second bucket counts"
+      },
+      {
+        "answer_type": "number",
+        "answer": 9,
+        "answer_unit": "logs",
+        "numerical_tolerance": 0,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "maximum minute count"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-16T11:33:55.458636+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum minute start"
+      }
+    ]
+  },
+  {
+    "question_id": "Q06",
+    "case_id": "SF-005",
+    "valid_points": 30,
+    "answers": [
+      {
+        "answer_type": "number",
+        "answer": 58,
+        "answer_unit": "error spans",
+        "numerical_tolerance": 0,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "sum of all minute error-span counts"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-16T11:33:55.458636+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum minute start"
+      },
+      {
+        "answer_type": "number",
+        "answer": 58,
+        "answer_unit": "error spans",
+        "numerical_tolerance": 0,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "second five-minute count minus first five-minute count"
+      }
+    ]
+  },
+  {
+    "question_id": "Q07",
+    "case_id": "SF-010",
+    "valid_points": 30,
+    "answers": [
+      {
+        "answer_type": "number",
+        "answer": 256.99,
+        "answer_unit": "ms",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "max of minute nearest-rank p95 values"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-15T16:53:43.727538+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum minute start"
+      },
+      {
+        "answer_type": "number",
+        "answer": 1.53,
+        "answer_unit": "ms",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "unweighted mean of five p95 values: second window minus first"
+      }
+    ]
+  },
+  {
+    "question_id": "Q08",
+    "case_id": "SF-010",
+    "valid_points": 30,
+    "answers": [
+      {
+        "answer_type": "number",
+        "answer": 52753,
+        "answer_unit": "spans",
+        "numerical_tolerance": 0,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "sum of all 60-second bucket counts"
+      },
+      {
+        "answer_type": "number",
+        "answer": 1915,
+        "answer_unit": "spans",
+        "numerical_tolerance": 0,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "maximum minute count"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-15T16:38:43.727538+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum minute start"
+      }
+    ]
+  },
+  {
+    "question_id": "Q09",
+    "case_id": "SF-010",
+    "valid_points": 30,
+    "answers": [
+      {
+        "answer_type": "number",
+        "answer": 84.51,
+        "answer_unit": "ms",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "max of minute nearest-rank p95 values"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-15T16:47:43.727538+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum minute start"
+      },
+      {
+        "answer_type": "number",
+        "answer": 0.68,
+        "answer_unit": "ms",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "unweighted mean of five p95 values: second window minus first"
+      }
+    ]
+  },
+  {
+    "question_id": "Q10",
+    "case_id": "SF-010",
+    "valid_points": 60,
+    "answers": [
+      {
+        "answer_type": "entity",
+        "answer": "frontend",
+        "answer_unit": "entity ID",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "compare unweighted means of valid minutes"
+      },
+      {
+        "answer_type": "number",
+        "answer": 25.93,
+        "answer_unit": "ms",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "absolute difference of per-series minute means"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-15T16:47:43.727538+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum absolute per-minute difference"
+      }
+    ]
+  },
+  {
+    "question_id": "EX-P01",
+    "case_id": "SF-001",
+    "valid_points": 60,
+    "answers": [
+      {
+        "answer_type": "number",
+        "answer": 161.71,
+        "answer_unit": "MiB",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "max of valid minute values"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-14T09:51:25.156656+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum minute start"
+      },
+      {
+        "answer_type": "number",
+        "answer": 130.59,
+        "answer_unit": "MiB",
+        "numerical_tolerance": 0.02,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "unweighted mean of valid minute values"
+      }
+    ]
+  },
+  {
+    "question_id": "EX-P02",
+    "case_id": "SF-002",
+    "valid_points": 60,
+    "answers": [
+      {
+        "answer_type": "number",
+        "answer": 195,
+        "answer_unit": "logs",
+        "numerical_tolerance": 0,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "sum of all 60-second bucket counts"
+      },
+      {
+        "answer_type": "number",
+        "answer": 195,
+        "answer_unit": "logs",
+        "numerical_tolerance": 0,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "maximum minute count"
+      },
+      {
+        "answer_type": "time",
+        "answer": "2026-10-14T15:12:28.695044+00:00",
+        "answer_unit": "UTC",
+        "numerical_tolerance": null,
+        "time_tolerance_seconds": 0,
+        "calculation_method": "earliest maximum minute start"
+      }
+    ]
+  }
+]

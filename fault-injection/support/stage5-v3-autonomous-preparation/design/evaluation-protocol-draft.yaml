@@ -1,0 +1,118 @@
+document_status: DRAFT_NOT_FROZEN
+protocol: Stage5-v3
+candidate_levels: [SERVICE, POD, NODE, NETWORK_PATH]
+public_private_boundary:
+  public_from_prefault_metadata_and_live_telemetry_only: true
+  algorithm_denied: [evaluator_gt, fault_family, fault_target, injection_command, root_layer, root_entity, private_adapter_logs]
+  prediction_frozen_before_gt: true
+  candidate_and_route_frozen_before_fault: true
+  anonymous_bundle: required
+variants:
+  A:
+    network_path_candidate: false
+    traverses_mapping: false
+    network_context: false
+  B1:
+    network_path_candidate: only_verified_prefault_public_path_ids
+    traverses_mapping: false
+    network_context: false
+    candidate_list_source: same_prefault_verified_catalog_used_by_B2_but_path_proof_not_exposed
+  B2:
+    network_path_candidate: exactly_same_ids_as_B1
+    traverses_mapping: only_prefault_public_route_and_flow_proof
+    network_context: time_aligned_public_rtt_loss_throughput_and_verified_path_membership
+variant_invariants:
+  shared_across_all_variants: [case_id, observation_window, non_network_metrics, logs, traces, kubernetes, service_pod_node_candidates, aliases, method_version, method_configuration]
+  suppress_in_A_and_B1: [network_path_probes, directional_route_flow_evidence, traverses_mapping, network_specific_context]
+  candidate_construction_from_prediction_or_gt: forbidden
+methods:
+  categories: [original_author_method, named_cross_layer_adaptation, heuristic_baseline]
+  same_name_heuristic_substitution: forbidden
+  microirc_if_label_free_prerequisite_missing: METHOD_PREREQUISITE_BLOCKED
+  method_failure_labels: [NO_PREDICTION, INFERENCE_FAILURE, METHOD_PREREQUISITE_BLOCKED]
+  failures_cannot_activate_reserve: true
+  candidate_support_checked_per_method_and_variant_before_scoring: true
+  unsupported_root_layer_status: OUT_OF_CANDIDATE_SPACE
+  prerequisite_blocked_requires_prefrozen_method_scope: true
+  case_specific_runtime_failure_cannot_be_reclassified_as_prerequisite_blocked: true
+  network_context_effect_only_if_method_consumed_context: true
+scoring_statuses:
+  SCORED: valid_frozen_prediction_ranking_on_selected_ROOT_OBSERVABLE_case_with_supported_root_candidate
+  NO_PREDICTION: completed_run_without_legal_nonempty_prediction_preserve_reason_and_empty_ranking
+  INFERENCE_FAILURE: failed_or_timed_out_run_or_invalid_unverifiable_output_preserve_logs_and_empty_ranking
+  METHOD_PREREQUISITE_BLOCKED: prefrozen_original_method_requirement_unmet_no_heuristic_substitution
+  OUT_OF_CANDIDATE_SPACE: variant_or_prefrozen_method_candidate_universe_lacks_root_layer_or_entity
+  WRONG_PREDICTION: still_SCORED_with_zero_exact_not_case_invalid
+  method_failure_never_activates_reserve: true
+main_metrics:
+  primary: End_to_End_Exact_at_1
+  secondary: [Layer_at_1, Entity_at_1_given_correct_layer, Entity_at_3, Top3, MRR, Mean_Root_Rank]
+  stratify_by: [root_layer, mechanism, workload, business_impact, observability_coverage]
+  report_layer_confusion_matrix: true
+  full_rankings_and_evidence_references: preserve
+  sensitivity_without_no_measurable_user_impact_cases: required
+  primary_case_set: ROOT_OBSERVABLE
+  secondary_case_set: USER_IMPACTFUL_subset_of_ROOT_OBSERVABLE
+  report_case_counts_by: [root_observable, user_impactful, strong, weak, none, unmeasurable, root_layer, mechanism]
+  report_inference_failures_separately: true
+  denominator_rules:
+    selected_case_set: only_deterministically_selected_ROOT_OBSERVABLE_attempts_one_per_logical_slot
+    applicable_case_set: selected_cases_with_root_in_variant_and_prefrozen_method_candidate_scope_and_method_prerequisites_met
+    conditional_accuracy: correct_over_valid_SCORED_predictions_only
+    prediction_coverage: valid_SCORED_predictions_over_applicable_cases
+    coverage_adjusted_exact_at_1: exact_correct_valid_predictions_over_all_applicable_cases_including_NO_PREDICTION_and_INFERENCE_FAILURE
+    no_prediction_and_inference_failure: zero_contribution_to_coverage_adjusted_numerator_but_not_a_wrong_root_verdict
+    method_prerequisite_blocked_and_out_of_candidate_space: excluded_from_applicable_denominator_and_reported_as_scope_gaps
+    method_prerequisite_blocked_must_be_declared_before_case_results: true
+    top3_mrr_and_mean_root_rank: computed_on_valid_SCORED_predictions_with_coverage_reported_alongside
+    no_applicable_cases: null_metric_not_zero
+variant_comparison:
+  paired_cases_and_locked_method_version: true
+  A_to_B1: candidate_space_only_with_identical_non_network_evidence_and_no_network_context
+  B1_to_B2: network_context_only_with_identical_candidate_universe
+  non_network_cases: compare_A_B1_B2_entity_layer_and_network_false_positives
+  network_cases:
+    A: OUT_OF_CANDIDATE_SPACE_for_all_root_accuracy_metrics_and_service_symptom_behavior_only
+    B1: eligible_for_root_accuracy_with_candidate_only
+    B2: eligible_for_root_accuracy_with_same_candidates_plus_context
+  do_not_count_A_network_candidate_absence_as_model_error: true
+  comparison_denominators:
+    A_to_B1_non_network_coverage_adjusted: same_paired_applicable_non_network_cases_including_inference_failures
+    A_to_B1_non_network_conditional_ranking: same_paired_cases_with_valid_prediction_in_both_variants
+    A_to_B1_network: B1_eligible_A_out_of_candidate_space_no_accuracy_delta
+    B1_to_B2_all_layers_coverage_adjusted: same_paired_applicable_cases_including_inference_failures_and_supported_candidate_layer
+    B1_to_B2_conditional_ranking: same_paired_cases_with_valid_prediction_in_both_variants
+    user_impactful: same_paired_subset_within_each_comparison
+    method_no_prediction: excluded_from_ranking_metrics_and_reported_as_inference_failure
+  network_path_false_positive_rate:
+    eligible_cases: root_observable_SERVICE_POD_NODE_cases_with_network_candidates_and_valid_prediction
+    numerator: top1_predicted_layer_NETWORK_PATH
+    denominator: eligible_non_network_cases_with_valid_prediction
+    variants: [B1, B2]
+    A: NOT_APPLICABLE_NO_NETWORK_CANDIDATE
+    top3_network_candidate_rate: report_separately
+    inference_failure_count: report_alongside_denominator
+    paired_B1_B2_delta_uses: intersection_of_cases_with_valid_prediction_in_both_variants
+  denominators_disclosed_per_metric_variant_and_case_set: true
+dataset_quality_not_algorithm_accuracy:
+  - admission_rate_by_mechanism_and_layer
+  - injected_attempt_count
+  - invalid_reason_distribution
+  - admitted_case_count
+  - mechanism_coverage
+  - observability_coverage
+blind_sequence:
+  - qualify_current_mechanisms_and_topology_before_protocol_freeze
+  - freeze_protocol_slot_allocation_method_prerequisites_and_scoring
+  - execute_all_registered_DEV_primaries_and_reserves_or_freeze_engineering_terminal
+  - freeze_all_DEV_public_bundles_method_statuses_predictions_and_split_resolution
+  - unseal_DEV_GT_then_decide_all_admissions_without_prediction_content
+  - select_first_admitted_DEV_candidate_per_slot_by_prefrozen_primary_then_reserve_order_and_score
+  - allow_DEV_only_method_development
+  - freeze_TEST_method_versions_provider_prompt_thresholds_normalization_and_ranking
+  - execute_all_registered_TEST_primaries_and_reserves_or_freeze_engineering_terminal
+  - freeze_all_TEST_public_bundles_method_statuses_predictions_and_split_resolution
+  - unseal_TEST_GT_then_decide_all_admissions_without_prediction_content
+  - select_first_admitted_TEST_candidate_per_slot_by_prefrozen_primary_then_reserve_order_and_score
+  - never_collect_or_rerun_predictions_for_same_split_after_GT
+source_trace_reader: JAEGER_OPENSEARCH_STORAGE

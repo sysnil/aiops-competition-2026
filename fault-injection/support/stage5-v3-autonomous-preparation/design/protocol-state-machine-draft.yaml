@@ -1,0 +1,64 @@
+document_status: DRAFT_NOT_FROZEN
+protocol: Stage5-v3
+execution_model: FIXED_PRIMARY_AND_RESERVE_POOL_PRE_GT
+split_independence: DEV_and_TEST_have_separate_candidate_ledgers_GT_barriers_and_method_locks
+test_method_lock_timing: before_TEST_split_registration_and_first_blind_prediction
+actors:
+  method_runtime: anonymous_public_variant_only
+  pre_gt_engineering_checker: redacted_runtime_capture_public_hashes_and_prediction_manifest_status_only
+  prediction_freeze_validator: public_bundle_and_prediction_schema_and_public_evidence_refs_no_GT
+  trusted_evaluator: private_injection_and_GT_only_after_split_resolution
+  deterministic_selector: frozen_admission_status_and_registered_order_only_no_prediction_contents
+attempt_transitions:
+  - {from: REGISTERED, to: PREFLIGHT_PASSED, evidence: health_route_UID_workload_precheck_and_prefault_snapshot_hash, phase: PRE_GT}
+  - {from: REGISTERED, to: PREFLIGHT_FAILED, evidence: failed_precheck_and_uninjected_adapter_state, phase: PRE_GT}
+  - {from: REGISTERED, to: ATTEMPT_INVALID_PRE_GT, evidence: registered_schedule_and_split_safety_abort_evidence, phase: PRE_GT, terminal: true}
+  - {from: PREFLIGHT_FAILED, to: ATTEMPT_INVALID_PRE_GT, evidence: verified_terminal_manifest_and_no_injection, phase: PRE_GT, terminal: true}
+  - {from: PREFLIGHT_PASSED, to: INJECTION_STARTED, evidence: bounded_watchdog_and_start_time_and_private_adapter_receipt, phase: PRE_GT}
+  - {from: PREFLIGHT_PASSED, to: ATTEMPT_INVALID_PRE_GT, evidence: prestart_safety_stop_and_uninjected_adapter_state, phase: PRE_GT, terminal: true}
+  - {from: INJECTION_STARTED, to: INJECTION_COMPLETED, evidence: bounded_end_time_and_adapter_execution_audit, phase: PRE_GT}
+  - {from: INJECTION_STARTED, to: INJECTION_FAILED, evidence: failed_or_timeout_adapter_and_independent_cleanup_record, phase: PRE_GT}
+  - {from: INJECTION_FAILED, to: ATTEMPT_INVALID_PRE_GT, evidence: verified_failure_terminal_cleanup_and_recovery, phase: PRE_GT, terminal: true}
+  - {from: INJECTION_COMPLETED, to: CAPTURE_COMPLETED, evidence: exact_windows_source_health_control_coverage_immutable_delay_fill_cleanup_and_recovery, phase: PRE_GT}
+  - {from: INJECTION_COMPLETED, to: CAPTURE_INCOMPLETE, evidence: failed_source_or_window_or_control_check_and_cleanup_and_recovery, phase: PRE_GT}
+  - {from: INJECTION_COMPLETED, to: ATTEMPT_INVALID_PRE_GT, evidence: cleanup_or_recovery_failure_terminal_plus_split_safety_abort, phase: PRE_GT, terminal: true}
+  - {from: CAPTURE_INCOMPLETE, to: ATTEMPT_INVALID_PRE_GT, evidence: verified_capture_failure_terminal, phase: PRE_GT, terminal: true}
+  - {from: CAPTURE_COMPLETED, to: PUBLIC_BUNDLE_FROZEN, evidence: A_B1_B2_bundles_candidate_lists_leak_scan_and_SHA256, phase: PRE_GT}
+  - {from: CAPTURE_COMPLETED, to: ATTEMPT_INVALID_PRE_GT, evidence: conversion_or_leak_failure_and_verified_terminal, phase: PRE_GT, terminal: true}
+  - {from: PUBLIC_BUNDLE_FROZEN, to: PREDICTIONS_FROZEN, evidence: every_registered_method_variant_run_status_prediction_or_failure_manifest_schema_evidence_validation_and_SHA256, phase: PRE_GT, terminal: true}
+  - {from: PUBLIC_BUNDLE_FROZEN, to: ATTEMPT_INVALID_PRE_GT, evidence: infrastructure_prediction_archive_integrity_failure_not_individual_method_failure, phase: PRE_GT, terminal: true}
+  - {from: PREDICTIONS_FROZEN, to: ADMITTED, evidence: trusted_evaluator_injection_PASS_observability_PASS_and_business_impact_label, phase: POST_GT}
+  - {from: PREDICTIONS_FROZEN, to: INVALID_POST_GT, evidence: trusted_evaluator_failed_injection_or_observability_reason, phase: POST_GT, terminal: true}
+  - {from: ADMITTED, to: SCORED, evidence: frozen_selection_manifest_and_eligible_method_variant_scores, phase: POST_GT, only_if_selected: true, terminal: true}
+pre_gt_terminal_reasons:
+  - PREFLIGHT_FAILED
+  - SAFETY_STOP_NOT_STARTED
+  - INJECTION_FAILED
+  - CAPTURE_INCOMPLETE
+  - PUBLIC_CONVERSION_FAILED
+  - PUBLIC_PRIVATE_LEAK
+  - PREDICTION_ARCHIVE_INFRA_FAILURE
+  - CLEANUP_OR_RECOVERY_FAILED
+terminal_requires: [reason_code, source_evidence_hashes, cleanup_or_no_injection_state, case_attempt_id, split, schedule_position]
+terminal_forbidden_inputs: [GT, root_layer, root_entity, prediction_correctness, root_rank, model_score, case_difficulty]
+method_failure_rule: valid_NO_PREDICTION_INFERENCE_FAILURE_or_preregistered_METHOD_PREREQUISITE_BLOCKED_run_manifest_still_permits_PREDICTIONS_FROZEN
+split_transitions:
+  - {from: COLLECTING, to: SPLIT_RESOLVED, evidence: every_fixed_candidate_prediction_or_engineering_terminal_frozen_and_complete_hash_ledger, phase: PRE_GT}
+  - {from: COLLECTING, to: SPLIT_ABORTED, evidence: unsafe_residue_or_unverifiable_archive_integrity, phase: PRE_GT, terminal: true}
+  - {from: SPLIT_RESOLVED, to: GT_UNSEALED, evidence: verified_immutable_split_resolution_manifest_and_no_prior_GT_read, phase: POST_GT}
+  - {from: GT_UNSEALED, to: ADMISSIONS_DECIDED, evidence: every_prediction_frozen_candidate_has_trusted_evaluator_3_field_decision_independent_of_method_output, phase: POST_GT}
+  - {from: ADMISSIONS_DECIDED, to: SELECTION_FROZEN, evidence: primary_priority_then_first_unused_admitted_same_split_layer_reserve_by_prefrozen_pool_order_or_SHORTFALL, phase: POST_GT}
+  - {from: SELECTION_FROZEN, to: SCORES_FROZEN, evidence: selected_only_scores_denominators_failures_and_case_counts_hashed, phase: POST_GT, terminal: true}
+gt_barrier:
+  requires_all_registered_candidates_in: [PREDICTIONS_FROZEN, ATTEMPT_INVALID_PRE_GT]
+  requires_split_state: SPLIT_RESOLVED
+  requires_method_lock: TEST_lock_already_frozen_before_any_TEST_blind_run
+  forbids_if: [unresolved_candidate, unsafe_residue, hash_mismatch, earlier_GT_read]
+  after_unseal_forbidden: [new_fault, new_reserve, recapture, candidate_change, method_rerun_replacing_blind_result, prediction_rewrite, protocol_change]
+selection:
+  primary_if_admitted: true
+  otherwise: first_unused_admitted_reserve_in_same_split_and_layer_by_frozen_order
+  reserve_pre_gt_execution_independent_of_primary_result: true
+  prediction_content_and_business_impact_not_selection_inputs: true
+  no_eligible_reserve: SHORTFALL
+  reserve_shared_between_splits: false

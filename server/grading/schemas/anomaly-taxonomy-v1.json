@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "task_type": "SEMIFINAL_ANOMALY_DETECTION",
+  "description": "Semifinal observable-anomaly taxonomy. Categories describe telemetry phenomena, not injected fault mechanisms or root causes.",
+  "types": [
+    {
+      "id": "REQUEST_LATENCY_INCREASE",
+      "name_zh": "请求延迟升高",
+      "definition": "Service-level request latency is materially higher than a comparable baseline or surrounding window.",
+      "observable_evidence": ["request latency metric distribution", "time-aligned request spans with a baseline comparison"],
+      "allowed_entity_types": ["Service"]
+    },
+    {
+      "id": "REQUEST_ERROR_INCREASE",
+      "name_zh": "请求错误增多",
+      "definition": "Service-level failed-request count or rate materially increases relative to a comparable baseline.",
+      "observable_evidence": ["request error counter converted to a rate", "time-aligned failed request spans"],
+      "allowed_entity_types": ["Service"]
+    },
+    {
+      "id": "REQUEST_TIMEOUT_INCREASE",
+      "name_zh": "请求超时增多",
+      "definition": "Explicit request timeout or deadline-exceeded observations materially increase.",
+      "observable_evidence": ["timeout metrics", "explicit timeout logs", "deadline-exceeded spans"],
+      "allowed_entity_types": ["Service", "CallEdge"]
+    },
+    {
+      "id": "CPU_USAGE_INCREASE",
+      "name_zh": "CPU 使用升高",
+      "definition": "CPU usage or CPU consumption rate is materially elevated for the stated entity.",
+      "observable_evidence": ["CPU gauge", "rate derived from a CPU counter", "throttling ratio used only as supporting evidence"],
+      "allowed_entity_types": ["Service", "Pod", "Node", "MetricSeries"]
+    },
+    {
+      "id": "MEMORY_USAGE_INCREASE",
+      "name_zh": "内存使用升高",
+      "definition": "Memory usage or working set is materially elevated for the stated entity.",
+      "observable_evidence": ["memory working-set gauge", "memory usage gauge with a baseline comparison"],
+      "allowed_entity_types": ["Service", "Pod", "Node", "MetricSeries"]
+    },
+    {
+      "id": "POD_RESTART_INCREASE",
+      "name_zh": "Pod 重启增多",
+      "definition": "Observed Pod restart count or restart events increase during the submitted interval.",
+      "observable_evidence": ["restart counter converted to events or rate", "time-aligned restart log or Kubernetes event"],
+      "allowed_entity_types": ["Pod", "Service"]
+    },
+    {
+      "id": "LOG_ERROR_BURST",
+      "name_zh": "错误日志突增",
+      "definition": "Explicit error-severity or semantically equivalent error logs form a time-localized burst.",
+      "observable_evidence": ["multiple time-aligned error records", "error-rate comparison against a baseline"],
+      "allowed_entity_types": ["Service", "Pod", "Node"]
+    },
+    {
+      "id": "TRACE_LATENCY_INCREASE",
+      "name_zh": "Trace 延迟升高",
+      "definition": "Service span or end-to-end trace latency materially increases in Trace telemetry.",
+      "observable_evidence": ["span or trace latency distribution with baseline and anomalous samples"],
+      "allowed_entity_types": ["Service"]
+    },
+    {
+      "id": "CALL_EDGE_LATENCY_INCREASE",
+      "name_zh": "调用边延迟升高",
+      "definition": "Latency on a directed source-to-target service call edge materially increases.",
+      "observable_evidence": ["parent-child span edge comparison with baseline and anomalous samples"],
+      "allowed_entity_types": ["CallEdge"]
+    },
+    {
+      "id": "CALL_EDGE_ERROR_INCREASE",
+      "name_zh": "调用边错误增多",
+      "definition": "Failed calls on a directed source-to-target service edge materially increase.",
+      "observable_evidence": ["failed parent-child edge spans compared with a baseline"],
+      "allowed_entity_types": ["CallEdge"]
+    },
+    {
+      "id": "OTHER_OBSERVABLE_ANOMALY",
+      "name_zh": "其他可观测异常",
+      "definition": "A clearly observable and evidence-backed phenomenon not covered by another published category. It is never a substitute for an uncertain diagnosis and requires specific description and human review.",
+      "observable_evidence": ["specific quantitative or repeated-record evidence plus an explicit description of the observed deviation"],
+      "allowed_entity_types": ["Service", "Pod", "Node", "CallEdge", "Network", "MetricSeries", "Unknown"],
+      "requires_human_review": true
+    }
+  ]
+}

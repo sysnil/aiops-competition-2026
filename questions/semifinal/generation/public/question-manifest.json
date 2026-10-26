@@ -1,0 +1,82 @@
+{
+  "task_type": "SEMIFINAL_QUERY_VISUALIZATION",
+  "version": "semifinal-query-visualization-candidate-v1",
+  "formal_count": 10,
+  "practice_example_count": 2,
+  "formal_questions": [
+    {
+      "question_id": "Q01",
+      "case_id": "SF-003",
+      "classification": "FORMAL_CANDIDATE",
+      "question_sha256": "c99e92e91c0580f33e42209141d03d7924c5f8a69ac7913f705f0bfefe94efd9"
+    },
+    {
+      "question_id": "Q02",
+      "case_id": "SF-003",
+      "classification": "FORMAL_CANDIDATE",
+      "question_sha256": "bcc34007dd59160c9bcaaff2391895c19a236bffc70ea093740c811055ee8dcd"
+    },
+    {
+      "question_id": "Q03",
+      "case_id": "SF-003",
+      "classification": "FORMAL_CANDIDATE",
+      "question_sha256": "79d7cbaf0ea4f1b5a8b7a12a25e405b48013890667002d8c229fcc1715068b48"
+    },
+    {
+      "question_id": "Q04",
+      "case_id": "SF-005",
+      "classification": "FORMAL_CANDIDATE",
+      "question_sha256": "4d94af2fdfe47ef6cabbcb48d6ef0337bfa76fbe8076ce2db9960308dcbcbee5"
+    },
+    {
+      "question_id": "Q05",
+      "case_id": "SF-005",
+      "classification": "FORMAL_CANDIDATE",
+      "question_sha256": "ac48116159decf6905ff1dc116ad9e58b2cfc8a95c04a4727de05388a574d128"
+    },
+    {
+      "question_id": "Q06",
+      "case_id": "SF-005",
+      "classification": "FORMAL_CANDIDATE",
+      "question_sha256": "eca34618a9c38fef1e8b9cb2da22620a2d64372579ab20416e5ea4a05323b121"
+    },
+    {
+      "question_id": "Q07",
+      "case_id": "SF-010",
+      "classification": "FORMAL_CANDIDATE",
+      "question_sha256": "312b5907851e4bc1592e3825d0e5f6091b677065ce24490839a2165355a1a413"
+    },
+    {
+      "question_id": "Q08",
+      "case_id": "SF-010",
+      "classification": "FORMAL_CANDIDATE",
+      "question_sha256": "b428524881c9c3236c41466440a2b11a304de7617399aa25af4cb179bfd3819b"
+    },
+    {
+      "question_id": "Q09",
+      "case_id": "SF-010",
+      "classification": "FORMAL_CANDIDATE",
+      "question_sha256": "e08f39850561f381fbb0ddb9407a77b3817e0fa05757b8dcfcee52e25169b7c4"
+    },
+    {
+      "question_id": "Q10",
+      "case_id": "SF-010",
+      "classification": "FORMAL_CANDIDATE",
+      "question_sha256": "aa0b128d4ebf5373efa0c1f78b7a5fded7d7ce9388abd45f195735f241a63cba"
+    }
+  ],
+  "practice_examples": [
+    {
+      "question_id": "EX-P01",
+      "case_id": "SF-001",
+      "classification": "PRACTICE_EXAMPLE",
+      "question_sha256": "8973d92e8152f9df34fc2ae90140bde4e5627420dfc18b738e6f4bc8bc05ff00"
+    },
+    {
+      "question_id": "EX-P02",
+      "case_id": "SF-002",
+      "classification": "PRACTICE_EXAMPLE",
+      "question_sha256": "d27571e398a0633c06b2b91ef17c1d58374d3aecb54f4b58db1689497c6b6d6b"
+    }
+  ]
+}

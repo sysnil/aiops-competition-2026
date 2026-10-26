@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "fault_types": [
+    "ServicePause",
+    "ServiceCrash",
+    "PodCPUThrottle",
+    "PodMemoryPressure",
+    "PodRestart",
+    "NodeCPUContention",
+    "NodeMemoryPressure",
+    "NetworkDelay",
+    "NetworkPacketLoss",
+    "NetworkBandwidthLimit",
+    "DNSError",
+    "DatabaseLatency",
+    "DependencyFailure",
+    "ConfigurationError",
+    "UNKNOWN"
+  ]
+}

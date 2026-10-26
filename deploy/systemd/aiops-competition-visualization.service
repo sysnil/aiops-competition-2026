@@ -1,0 +1,33 @@
+[Unit]
+Description=AIOps semifinal organizer-only Public data explorer
+After=network.target
+
+[Service]
+Type=simple
+User=aiops-api
+Group=aiops-api
+WorkingDirectory=/opt/aiops-competition-visualization
+Environment=HOME=/var/lib/aiops-competition-visualization
+Environment=STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+ExecStart=/opt/aiops-competition-visualization/.venv312/bin/streamlit run /opt/aiops-competition-visualization/app.py --server.address=127.0.0.1 --server.port=8502 --server.headless=true --server.fileWatcherType=none --server.enableStaticServing=false --server.enableCORS=true --server.enableXsrfProtection=true
+Restart=on-failure
+RestartSec=3
+StateDirectory=aiops-competition-visualization
+CacheDirectory=aiops-competition-visualization
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+CapabilityBoundingSet=
+InaccessiblePaths=/etc/aiops-contest /opt/aiops-contest-server /data/aiops-contest/mock-only /data/aiops-contest/staging /data/aiops-contest/indexes
+ReadOnlyPaths=/data/aiops-contest/public
+IPAddressDeny=any
+IPAddressAllow=localhost
+
+[Install]
+WantedBy=multi-user.target

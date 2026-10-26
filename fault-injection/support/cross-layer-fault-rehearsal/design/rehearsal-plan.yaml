@@ -1,0 +1,80 @@
+schema_version: 1
+kind: cross_layer_fault_rehearsal
+status: PREDECLARED_BEFORE_REHEARSAL_FAULT
+source_archive: /root/stage5-v2-cross-layer-rca
+archive_policy: read_only_stage5_v2_dev_and_no_test_access
+rehearsal_root: /root/cross-layer-fault-rehearsal
+health:
+  five_host_residue_required: true
+  stage5_base_health_required: true
+  recovery_clean_seconds: 120
+  maximum_workload_nonzero_failures_after_recovery: 0
+windows:
+  before_seconds: 120
+  after_seconds: 120
+  prometheus_step_seconds: 15
+  direct_probe_step_seconds: 5
+service_pod_experiments:
+  - id: RH-SVC-PULSE-3S
+    source_case: S5V2-D03
+    target_service: frontend
+    target_scope: both_ready_replicas
+    mechanism: bounded_sigstop_pulses
+    stop_seconds: 3
+    period_seconds: 15
+    fault_seconds: 75
+  - id: RH-SVC-PULSE-5S
+    source_case: S5V2-D03
+    target_service: frontend
+    target_scope: both_ready_replicas
+    mechanism: bounded_sigstop_pulses
+    stop_seconds: 5
+    period_seconds: 15
+    fault_seconds: 75
+  - id: RH-POD-QUOTA
+    source_case: S5V2-D04
+    target_service: ad
+    target_node: k8s-worker1
+    mechanism: reversible_cgroup_cpu_quota_reduction
+    quota_fraction_of_original: 0.125
+    fault_seconds: 75
+  - id: RH-POD-PULSE
+    source_case: S5V2-D06
+    target_service: frontend
+    target_node: k8s-worker3
+    mechanism: bounded_sigstop_pulses
+    stop_seconds: 3
+    period_seconds: 15
+    fault_seconds: 75
+network_experiments:
+  - id: RH-NET-LOSS-10
+    source_case: S5V2-D11
+    path: NETWORK_PATH/k8s-worker3/k8s-worker1
+    mechanism: egress_filtered_netem_loss
+    loss_percent: 10
+    fault_seconds: 120
+    probe_interval_seconds: 15
+    compare_probes: [bounded_iperf3_udp, timestamped_icmp]
+  - id: RH-NET-BW-CONTROLS
+    source_case: S5V2-D12
+    path: NETWORK_PATH/k8s-worker2/k8s-worker3
+    mechanism: egress_filtered_tbf_shaping
+    rate_kbit: 800
+    fault_seconds: 90
+control_candidates:
+  rule: predeclare_independent_service_edges_and_require_per_pod_identity_if_a_service_has_replicas
+  min_trace_spans_per_phase: 30
+  max_during_to_before_p95_ratio: 1.25
+  edges:
+    - shipping->quote
+    - ad->flagd
+    - checkout->currency
+    - frontend->cart
+    - frontend->shipping
+advisory_signal_rules:
+  service_or_pod_p95_during_over_before_min: 2.0
+  service_or_pod_error_rate_increase_min: 0.05
+  cfs_throttled_period_fraction_increase_min: 0.10
+  network_probe_success_rate_target: 0.95
+  no_signal_is_inferred_from_timeout: true
+  no_root_layer_is_inferred_from_service_only_trace: true

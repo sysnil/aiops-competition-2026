@@ -1,0 +1,189 @@
+{
+  "status": "PASS",
+  "base_url": "http://192.168.51.51:8080",
+  "case_id": "SF-001",
+  "checks_passed": 23,
+  "checks_total": 23,
+  "failures": [],
+  "checks": [
+    {
+      "name": "healthz",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "anonymous_case_list",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "public_case_visible",
+      "pass": true,
+      "detail": [
+        {
+          "case_id": "SF-001",
+          "dataset_schema_version": "CONTEST_EXCHANGE_V2",
+          "start_time": "2026-10-14T09:12:25.156656+00:00",
+          "end_time": "2026-10-14T10:12:25.156656+00:00",
+          "available_modalities": [
+            "metrics",
+            "logs",
+            "traces"
+          ],
+          "classification": "PUBLIC_COMPETITION_DATA"
+        }
+      ]
+    },
+    {
+      "name": "mock_case_hidden",
+      "pass": true,
+      "detail": [
+        {
+          "case_id": "SF-001",
+          "dataset_schema_version": "CONTEST_EXCHANGE_V2",
+          "start_time": "2026-10-14T09:12:25.156656+00:00",
+          "end_time": "2026-10-14T10:12:25.156656+00:00",
+          "available_modalities": [
+            "metrics",
+            "logs",
+            "traces"
+          ],
+          "classification": "PUBLIC_COMPETITION_DATA"
+        }
+      ]
+    },
+    {
+      "name": "metadata",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "metadata_window",
+      "pass": true,
+      "detail": {
+        "api": [
+          "2026-10-14T09:12:25.156656+00:00",
+          "2026-10-14T10:12:25.156656+00:00"
+        ]
+      }
+    },
+    {
+      "name": "topology",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "metrics_filter",
+      "pass": true,
+      "detail": {
+        "status": 200,
+        "items": 2,
+        "service": "ad",
+        "pod": "ad-6dd859cc54-bngm2"
+      }
+    },
+    {
+      "name": "logs_filter_keyword",
+      "pass": true,
+      "detail": {
+        "status": 200,
+        "items": 2,
+        "service": "default"
+      }
+    },
+    {
+      "name": "traces_filter",
+      "pass": true,
+      "detail": {
+        "status": 200,
+        "items": 2,
+        "service": "image-provider"
+      }
+    },
+    {
+      "name": "trace_detail",
+      "pass": true,
+      "detail": {
+        "status": 200,
+        "spans": 47
+      }
+    },
+    {
+      "name": "cross_service_frontend_checkout",
+      "pass": true,
+      "detail": [
+        "cart",
+        "checkout",
+        "currency",
+        "email",
+        "flagd",
+        "frontend",
+        "frontend-proxy",
+        "payment",
+        "product-catalog",
+        "quote",
+        "shipping"
+      ]
+    },
+    {
+      "name": "stable_pagination",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "pagination_advances",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "null_log_severity",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "name": "outside_window_empty",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "unpublished_hidden",
+      "pass": true,
+      "detail": 404
+    },
+    {
+      "name": "sql_injection_literal",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "page_limit",
+      "pass": true,
+      "detail": 400
+    },
+    {
+      "name": "path_traversal_blocked",
+      "pass": true,
+      "detail": 404
+    },
+    {
+      "name": "staging_not_exposed",
+      "pass": true,
+      "detail": 404
+    },
+    {
+      "name": "write_method_blocked",
+      "pass": true,
+      "detail": 403
+    },
+    {
+      "name": "published_parquet_counts",
+      "pass": true,
+      "detail": {
+        "metrics": 80358,
+        "logs": 567346,
+        "traces": 817529,
+        "trace_index": 119091
+      }
+    }
+  ]
+}

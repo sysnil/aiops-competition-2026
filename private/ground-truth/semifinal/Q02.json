@@ -1,0 +1,185 @@
+{
+  "task_type": "SEMIFINAL_QUERY_VISUALIZATION",
+  "question_id": "Q02",
+  "case_id": "SF-003",
+  "gt_version": "semifinal-qa-formal-20261022-v1/Q02",
+  "rubric_version": "semifinal-query-visualization-4+2+2+2-v1",
+  "review_status": "APPROVED",
+  "classification": "FORMAL_APPROVED",
+  "chart_value_tolerance": 1e-09,
+  "chart_time_tolerance_seconds": 0.0,
+  "chart": {
+    "chart_type": "line",
+    "title": "Frontend Pod CPU 使用曲线",
+    "x_axis": {
+      "label": "UTC bucket start",
+      "timezone": "UTC"
+    },
+    "y_axis": {
+      "label": "cores",
+      "unit": "cores"
+    },
+    "series": [
+      {
+        "name": "frontend-68d8bbfdc8-8mnzh",
+        "unit": "cores",
+        "points": [
+          {
+            "timestamp": "2026-10-16T03:26:49.724275+00:00",
+            "value": 0.037520422222223716
+          },
+          {
+            "timestamp": "2026-10-16T03:27:49.724275+00:00",
+            "value": 0.05217901666665057
+          },
+          {
+            "timestamp": "2026-10-16T03:28:49.724275+00:00",
+            "value": 0.036719816666663976
+          },
+          {
+            "timestamp": "2026-10-16T03:29:49.724275+00:00",
+            "value": 0.058177216666687556
+          },
+          {
+            "timestamp": "2026-10-16T03:30:49.724275+00:00",
+            "value": 0.03677981666666407
+          },
+          {
+            "timestamp": "2026-10-16T03:31:49.724275+00:00",
+            "value": 0.04870136666665227
+          },
+          {
+            "timestamp": "2026-10-16T03:32:49.724275+00:00",
+            "value": 0.0405826000000161
+          },
+          {
+            "timestamp": "2026-10-16T03:33:49.724275+00:00",
+            "value": 0.03998516666664121
+          },
+          {
+            "timestamp": "2026-10-16T03:34:49.724275+00:00",
+            "value": 0.04847778333335857
+          },
+          {
+            "timestamp": "2026-10-16T03:35:49.724275+00:00",
+            "value": 0.043900499999987616
+          },
+          {
+            "timestamp": "2026-10-16T03:36:49.724275+00:00",
+            "value": 0.0486371666666552
+          },
+          {
+            "timestamp": "2026-10-16T03:37:49.724275+00:00",
+            "value": 0.05387395000000955
+          },
+          {
+            "timestamp": "2026-10-16T03:38:49.724275+00:00",
+            "value": 0.04233389999999417
+          },
+          {
+            "timestamp": "2026-10-16T03:39:49.724275+00:00",
+            "value": 0.04552611666667872
+          },
+          {
+            "timestamp": "2026-10-16T03:40:49.724275+00:00",
+            "value": 0.04038228333332275
+          },
+          {
+            "timestamp": "2026-10-16T03:41:49.724275+00:00",
+            "value": 0.04574526666668438
+          },
+          {
+            "timestamp": "2026-10-16T03:42:49.724275+00:00",
+            "value": 0.04666351666664923
+          },
+          {
+            "timestamp": "2026-10-16T03:43:49.724275+00:00",
+            "value": 0.04581010000001697
+          },
+          {
+            "timestamp": "2026-10-16T03:44:49.724275+00:00",
+            "value": 0.052501699999993434
+          },
+          {
+            "timestamp": "2026-10-16T03:45:49.724275+00:00",
+            "value": 0.04364351666666456
+          },
+          {
+            "timestamp": "2026-10-16T03:46:49.724275+00:00",
+            "value": 0.03397633333333943
+          },
+          {
+            "timestamp": "2026-10-16T03:47:49.724275+00:00",
+            "value": 0.05436544999999266
+          },
+          {
+            "timestamp": "2026-10-16T03:48:49.724275+00:00",
+            "value": 0.04166955000000598
+          },
+          {
+            "timestamp": "2026-10-16T03:49:49.724275+00:00",
+            "value": 0.05174940000000182
+          },
+          {
+            "timestamp": "2026-10-16T03:50:49.724275+00:00",
+            "value": 0.043488399999993516
+          },
+          {
+            "timestamp": "2026-10-16T03:51:49.724275+00:00",
+            "value": 0.06280413333333854
+          },
+          {
+            "timestamp": "2026-10-16T03:52:49.724275+00:00",
+            "value": 0.04481393333332259
+          },
+          {
+            "timestamp": "2026-10-16T03:53:49.724275+00:00",
+            "value": 0.04872281666666822
+          },
+          {
+            "timestamp": "2026-10-16T03:54:49.724275+00:00",
+            "value": 0.0538971333333393
+          },
+          {
+            "timestamp": "2026-10-16T03:55:49.724275+00:00",
+            "value": 0.04012890000000577
+          }
+        ]
+      }
+    ]
+  },
+  "answers": [
+    {
+      "question_index": 1,
+      "value": 0.0628,
+      "unit": "cores",
+      "value_tolerance": 0.0002,
+      "time_tolerance_seconds": 0.0
+    },
+    {
+      "question_index": 2,
+      "value": "2026-10-16T03:51:49.724275+00:00",
+      "unit": "UTC",
+      "value_tolerance": 0.0,
+      "time_tolerance_seconds": 0.0
+    },
+    {
+      "question_index": 3,
+      "value": 0.0461,
+      "unit": "cores",
+      "value_tolerance": 0.0002,
+      "time_tolerance_seconds": 0.0
+    }
+  ],
+  "generation": {
+    "source_review_status": "DRAFT_PENDING_HUMAN_REVIEW",
+    "source_public_manifest_sha256": "2dda9c2d1cb4dd912df3efe5e5d2dcc8fb9b6ae2505f49f24682d2a2d22b1b8e",
+    "source_file_sha256": "5295628c2040fb5c85c14fd43d5000eecb5cac88a00b7b512721e5a8e4ce8d64"
+  },
+  "approval": {
+    "authority": "USER_APPROVED_20261021",
+    "approved_at_utc": "2026-10-21T11:19:01.873572+00:00",
+    "source_preview_sha256": "41b3c2580f916597b5cb632753da2b63c30c84a0f6be43ec37930026479739e6",
+    "source_gt_version": "semifinal-query-visualization-candidate-v1"
+  }
+}

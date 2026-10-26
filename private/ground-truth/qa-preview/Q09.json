@@ -1,0 +1,179 @@
+{
+  "task_type": "SEMIFINAL_QUERY_VISUALIZATION",
+  "question_id": "Q09",
+  "case_id": "SF-010",
+  "gt_version": "semifinal-query-visualization-candidate-v1",
+  "rubric_version": "semifinal-query-visualization-4+2+2+2-v1",
+  "review_status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "classification": "DRAFT_PREVIEW_ONLY",
+  "chart_value_tolerance": 1e-09,
+  "chart_time_tolerance_seconds": 0.0,
+  "chart": {
+    "chart_type": "line",
+    "title": "Frontend 到商品目录的调用边 p95 时延",
+    "x_axis": {
+      "label": "UTC bucket start",
+      "timezone": "UTC"
+    },
+    "y_axis": {
+      "label": "ms",
+      "unit": "ms"
+    },
+    "series": [
+      {
+        "name": "frontend -> product-catalog",
+        "unit": "ms",
+        "points": [
+          {
+            "timestamp": "2026-10-15T16:37:43.727538+00:00",
+            "value": 12.172
+          },
+          {
+            "timestamp": "2026-10-15T16:38:43.727538+00:00",
+            "value": 13.737
+          },
+          {
+            "timestamp": "2026-10-15T16:39:43.727538+00:00",
+            "value": 12.928
+          },
+          {
+            "timestamp": "2026-10-15T16:40:43.727538+00:00",
+            "value": 13.118
+          },
+          {
+            "timestamp": "2026-10-15T16:41:43.727538+00:00",
+            "value": 12.355
+          },
+          {
+            "timestamp": "2026-10-15T16:42:43.727538+00:00",
+            "value": 12.374
+          },
+          {
+            "timestamp": "2026-10-15T16:43:43.727538+00:00",
+            "value": 12.814
+          },
+          {
+            "timestamp": "2026-10-15T16:44:43.727538+00:00",
+            "value": 12.295
+          },
+          {
+            "timestamp": "2026-10-15T16:45:43.727538+00:00",
+            "value": 13.893
+          },
+          {
+            "timestamp": "2026-10-15T16:46:43.727538+00:00",
+            "value": 12.503
+          },
+          {
+            "timestamp": "2026-10-15T16:47:43.727538+00:00",
+            "value": 84.508
+          },
+          {
+            "timestamp": "2026-10-15T16:48:43.727538+00:00",
+            "value": 14.253
+          },
+          {
+            "timestamp": "2026-10-15T16:49:43.727538+00:00",
+            "value": 13.788
+          },
+          {
+            "timestamp": "2026-10-15T16:50:43.727538+00:00",
+            "value": 13.042
+          },
+          {
+            "timestamp": "2026-10-15T16:51:43.727538+00:00",
+            "value": 12.588
+          },
+          {
+            "timestamp": "2026-10-15T16:52:43.727538+00:00",
+            "value": 13.326
+          },
+          {
+            "timestamp": "2026-10-15T16:53:43.727538+00:00",
+            "value": 13.448
+          },
+          {
+            "timestamp": "2026-10-15T16:54:43.727538+00:00",
+            "value": 13.338
+          },
+          {
+            "timestamp": "2026-10-15T16:55:43.727538+00:00",
+            "value": 13.356
+          },
+          {
+            "timestamp": "2026-10-15T16:56:43.727538+00:00",
+            "value": 12.925
+          },
+          {
+            "timestamp": "2026-10-15T16:57:43.727538+00:00",
+            "value": 13.837
+          },
+          {
+            "timestamp": "2026-10-15T16:58:43.727538+00:00",
+            "value": 12.494
+          },
+          {
+            "timestamp": "2026-10-15T16:59:43.727538+00:00",
+            "value": 15.002
+          },
+          {
+            "timestamp": "2026-10-15T17:00:43.727538+00:00",
+            "value": 13.987
+          },
+          {
+            "timestamp": "2026-10-15T17:01:43.727538+00:00",
+            "value": 12.382
+          },
+          {
+            "timestamp": "2026-10-15T17:02:43.727538+00:00",
+            "value": 13.159
+          },
+          {
+            "timestamp": "2026-10-15T17:03:43.727538+00:00",
+            "value": 12.549
+          },
+          {
+            "timestamp": "2026-10-15T17:04:43.727538+00:00",
+            "value": 14.442
+          },
+          {
+            "timestamp": "2026-10-15T17:05:43.727538+00:00",
+            "value": 13.276
+          },
+          {
+            "timestamp": "2026-10-15T17:06:43.727538+00:00",
+            "value": 13.107
+          }
+        ]
+      }
+    ]
+  },
+  "answers": [
+    {
+      "question_index": 1,
+      "value": 84.51,
+      "unit": "ms",
+      "value_tolerance": 0.02,
+      "time_tolerance_seconds": 0.0
+    },
+    {
+      "question_index": 2,
+      "value": "2026-10-15T16:47:43.727538+00:00",
+      "unit": "UTC",
+      "value_tolerance": 0.0,
+      "time_tolerance_seconds": 0.0
+    },
+    {
+      "question_index": 3,
+      "value": 14.77,
+      "unit": "ms",
+      "value_tolerance": 0.02,
+      "time_tolerance_seconds": 0.0
+    }
+  ],
+  "generation": {
+    "source_review_status": "DRAFT_PENDING_HUMAN_REVIEW",
+    "source_public_manifest_sha256": "6598702cfb9edd0cd5476de44e46c5c75191f12583c67c34c86e75a6e8d47a96",
+    "source_file_sha256": "b6c5a28889a542d6785de4fb5dc391087a22f854189790963805e123b5299393"
+  }
+}

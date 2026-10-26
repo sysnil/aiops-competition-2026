@@ -1,0 +1,63 @@
+status: PREREGISTERED_BEFORE_COLLECTOR_CHANGE
+scope: independent_stage5_v3_prefreeze_collector_reliability
+formal_case: false
+fault_injection: forbidden
+historical_results_overwrite: forbidden
+component: otel-demo/deployment/otel-collector
+excluded_components: [otel-cluster-collector, otel-infra-agent-agent, jaeger]
+evidence:
+  historical_gateway_limiter_refused_spans: 1195
+  historical_gateway_grpc_receiver_refused_spans: 679
+  recent_two_hour_gateway_limiter_refused_spans: 1319
+  recent_two_hour_gateway_grpc_receiver_refused_spans: 703
+  recent_heap_peak_mib: 243.433
+  recent_container_working_set_peak_mib: 330.215
+  historical_proxy_span_gap_32_direct_limiter_attribution: UNRESOLVED
+single_candidate:
+  configmap: otel-collector
+  field: processors.memory_limiter.spike_limit_percentage
+  old: 25
+  new: 15
+  expected_soft_limit_mib: {old: 220, new: 260}
+  unchanged_hard_limit_mib: 320
+  unchanged_container_limit_mib: 400
+  unchanged_gomemlimit_mib: 320
+  unchanged_batch_exporter_queue_retry_sampling_workload: true
+  second_parameter_search_this_round: forbidden
+preconditions:
+  fresh_global_safety_pass_max_age_seconds: 180
+  four_nodes_ready_no_pressure: true
+  no_active_fault_or_long_experiment: true
+  five_host_residue_pass: true
+  collector_ready_and_original_config_hash_match: true
+  master_available_bytes_min: 46000000000
+  worker2_worker3_data_disk_free_bytes_min: 50000000000
+  independent_rollback_timer_active_before_patch: true
+  pod_uid_services_unchanged: [cart, checkout, shipping, quote]
+during_bounded_study:
+  master_abort_below_available_bytes: 45000000000
+  worker2_worker3_data_disk_abort_below_available_bytes: 50000000000
+  master_unarchived_raw_bytes_max: 150000000
+  raw_trace_pages_stream_to_worker2_then_dual_archive_worker3: true
+rollback:
+  systemd_timer: s5v3cr-collector-rollback.timer
+  automatic_after_minutes: 90
+  restore_exact_original_configmap_relay: true
+  remove_only_registered_deployment_template_annotation: true
+  automatic_on_rollout_or_health_failure: true
+  stop_timer_only_after_validation_and_archive_pass: true
+stop_conditions:
+  - node_not_ready_or_disk_pressure
+  - collector_pod_oom_or_unplanned_restart
+  - collector_container_working_set_ge_380_mib_for_two_samples
+  - prometheus_jaeger_opensearch_unhealthy
+  - business_request_failures_or_proxy_trace_gap
+  - master_or_worker_storage_below_registered_budget
+  - rollback_watchdog_unavailable
+  - missing_receiver_processor_exporter_metrics
+  - cannot_recover_original_component_state
+after_change:
+  collector_pod_ready_and_config_loaded: true
+  same_four_service_direct_uid_required: true
+  no_proxy_sampling_or_workload_change: true
+  no_formal_clean_gate_approval: true

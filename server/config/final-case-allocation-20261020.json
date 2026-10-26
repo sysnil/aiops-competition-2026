@@ -1,0 +1,20 @@
+{
+  "version": "FINAL-CASE-ALLOCATION-20261020-v1",
+  "status": "REGISTERED_NOT_OPEN",
+  "gt_manifest_sha256": "9049aa9461c61a08bde91a7c5e0c4cb8b9b848c62e92636dcbb567abc295c807",
+  "selection_note": "Retain three existing qualifier bindings and four existing PK bindings; use four newly approved cases for vacant PK rounds; keep one distinct approved reserve.",
+  "tasks": {
+    "FT-01": "SF-006",
+    "FT-02": "SF-011",
+    "FT-03": "SF-007",
+    "PK-R01": "SF-004",
+    "PK-R02": "SF-008",
+    "PK-R03": "SF-009",
+    "PK-R04": "SF-012",
+    "PK-R05": "SF-013",
+    "PK-R06": "SF-016",
+    "PK-R07": "SF-014",
+    "PK-R08": "SF-017"
+  },
+  "reserve_case_id": "SF-015"
+}

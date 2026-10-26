@@ -1,0 +1,37 @@
+[Unit]
+Description=AIOps Competition Private Grader
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=aiops-grader
+Group=aiops-grader
+WorkingDirectory=/opt/aiops-contest-server
+EnvironmentFile=/etc/aiops-private-grader/grader.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/aiops-contest-server/.venv/bin/uvicorn grading.private_grader.service:app --host 127.0.0.1 --port 9001 --workers 1 --no-access-log
+Restart=on-failure
+RestartSec=2s
+TimeoutStopSec=20s
+MemoryMax=1G
+TasksMax=128
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectKernelLogs=true
+ProtectControlGroups=true
+RestrictNamespaces=true
+LockPersonality=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadOnlyPaths=/etc/aiops-private-grader/gt
+ReadWritePaths=/var/log/aiops-private-grader /var/lib/aiops-private-grader
+
+[Install]
+WantedBy=multi-user.target

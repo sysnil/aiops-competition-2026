@@ -1,0 +1,45 @@
+status: PREREGISTERED_BEFORE_NEW_CANARY
+source: existing_state_machine_and_fixed_ordinary_business_controls
+current_config_reference_run: TR-UID-REPAIR-V2-20261012
+current_config_reference_proxy_server_spans: 2087/2087
+formal_case: false
+fault_injection: forbidden
+rollout_timer: s5v3cr-collector-rollback.timer
+candidate_configuration_version: spike_limit_percentage_15
+auditor_sha256: 8c44f055a951cee502e2ce33d7b0131f0faa44b0cc718b60ffe46d2eba972735
+canaries:
+  - {id: CR-REPAIR-CANARY-1-20261012, seed: 862101, role: collector_repair_1}
+  - {id: CR-REPAIR-CANARY-2-20261012, seed: 862102, role: collector_repair_2}
+previous_runs:
+  - {id: TR-PROXY-BASELINE-20261012, seed: 861304}
+  - {id: TR-UID-REPAIR-20261012, seed: 861306}
+  - {id: TR-UID-REPAIR-V2-20261012, seed: 861320}
+workload:
+  duration_seconds: 180
+  profile: MEDIUM
+  session_arrival_rate_per_second: 1.4
+  workflow_weights: {browse: 20, shopping: 30, checkout: 50}
+  control_streams:
+    - {name: image_asset, operation: GET /images/products/OpticalTubeAssembly.jpg, rate_per_second: 1.0, seed_offset: 101}
+    - {name: cart_view, operation: GET /api/cart, rate_per_second: 2.0, seed_offset: 103}
+  control_timeout_seconds: 8
+  control_concurrency_per_stream: {image_asset: 2, cart_view: 4}
+quality_gate:
+  read_not_before_end_plus_seconds: 120
+  repeat_missing_query_at_end_plus_seconds: 240
+  proxy_server_coverage_fraction_min: 1.0
+  direct_uid_match_fraction_each_target_min: 1.0
+  uid_issued_server_spans_each_target_min: 30
+  client_errors_max: 0
+  fixed_image_and_cart_client_server_coverage_min: 1.0
+  collector_limiter_refused_spans_delta_max: 0
+  collector_limiter_refused_absent_series: UNKNOWN_NOT_ZERO
+  absent_limiter_series_requires_full_issued_trace_and_pod_uid_coverage: true
+  absent_limiter_series_does_not_prove_collector_reliability_pass: true
+  collector_grpc_refused_spans_delta_max: 0
+  collector_unexpected_restart_max: 0
+  late_critical_span_count_max: 0
+  missing_exporter_failure_metric_is_unknown_not_zero: true
+failed_run_cannot_be_replaced: true
+both_runs_must_pass_business_trace_and_safety_gates_before_diagnostic_continuous: true
+diagnostic_continuous_allowed_if_limiter_counter_absent_but_grpc_receiver_counter_present: true

@@ -1,0 +1,44 @@
+{
+  "registered_at_utc": "2026-10-10T05:20:00.327792+00:00",
+  "status": "INDEPENDENT_REHEARSAL_REGISTERED",
+  "faults_injected": 0,
+  "stage5_v3_cases_created": 0,
+  "stage5_v2_test_reads": 0,
+  "ids": [
+    "OC-D06-S1",
+    "OC-D06-S2",
+    "OC-D11-S1",
+    "OC-D11-S2",
+    "OC-D12-S1",
+    "OC-D12-S2"
+  ],
+  "seeds": {
+    "OC-D06-S1": 62011,
+    "OC-D06-S2": 62012,
+    "OC-D11-S1": 62021,
+    "OC-D11-S2": 62022,
+    "OC-D12-S1": 62031,
+    "OC-D12-S2": 62032
+  },
+  "control_rates_per_second": {
+    "image_asset": 1.0,
+    "product_detail": 2.0,
+    "cart_view": 2.0
+  },
+  "hashes": {
+    "design/rehearsal-plan-v2.yaml": "2acfa2ee1596aca0acd24aa866ee362344c14645a7c50d2e76c4ac4fd0770edc",
+    "design/fault-adapters.yaml": "e12fc3de078b7e475701316db85a6526b727b1d658e897aadb5c11f57143f396",
+    "design/pod-identity-rollout-plan.json": "74de9e1461e85971ea81c9608018781d168c075265a10f515b9ae5de0acfe94a",
+    "scripts/workload_generator_rehearsal.py": "5f7291c9b7698af50b66357fe2fcd38ef9eb491a6330db207d578d38f6fe5464",
+    "scripts/fixed_control_load.py": "e440571823af45680ce628c19365ca355535fd4b699d9feb9501920130ab0a47",
+    "scripts/run_load_pair.py": "27e6f0a00d7c58c598c32f6eb4a218605f21d454bf0d6ba75321d215dc472a96",
+    "scripts/host_fault.py": "836c6a8a06610e20a76e576ce936f33d9c6ef65735b7619e75366084e2819710",
+    "scripts/network_fault.py": "31cab82cd6d3901b150093a1ca7077227ffa3ac70581305dcec02404a3f35a26",
+    "scripts/probe_network.py": "a490e03e8e822c18f6d7b52952fcb8de117f3875a8c669655c8062cefbdb2f78",
+    "scripts/build_preflight.py": "07e6c91698764a55e406e45270e38445c4bcccf5694b4f6b625d3d40c6114b6a",
+    "scripts/verify_business_routes.py": "294ba5a43da3ed7e4aea5df6185093321633048178419594fbaefc3231a7573c",
+    "scripts/orchestrate_rehearsal.py": "1450df0dfab38cc251ebc2fc60a0035135d1ce9182d229bb04f3b1e5248e3dc7",
+    "scripts/audit_trace_identity.py": "c7916cc5586fe451e5d420b171bc0724426f986bb4a8c890a18ad0236795a5b8",
+    "scripts/analyze_control_run.py": "00e08552944e0b80b47ec7d37bbe2b8c77b9c1b44bcd64e5f7c089db59c5fe67"
+  }
+}

@@ -1,0 +1,20 @@
+schema_version: 1
+status: PREDECLARED_BEFORE_RH_BUSINESS_LOAD_5RPS
+experiment_id: RH-BUSINESS-LOAD-5RPS
+fault_injected: false
+target: frontend
+request_path: /
+target_scope: both_ready_replicas_alternating
+extra_requests_per_second: 5
+duration_seconds: 60
+maximum_requests: 300
+request_timeout_seconds: 2
+maximum_non_200_or_timeout: 10
+before_clean_seconds: 60
+after_clean_seconds: 60
+observation:
+  - ad_container_cpu_usage_seconds_total_by_pod
+  - ad_trace_span_count
+  - frontend_direct_http_success
+stop_if_health_or_residue_fails: true
+no_fault_or_formal_case_created: true

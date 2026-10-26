@@ -1,0 +1,27 @@
+{
+  "case_id": "DEMO-001",
+  "task_type": "SEMIFINAL_ANOMALY_DETECTION",
+  "classification": "SYNTHETIC_DEMO_ONLY",
+  "review_status": "APPROVED",
+  "gt_version": "semifinal-demo-gt-1.0",
+  "rubric_version": "semifinal-anomaly-rubric-1.0",
+  "matching_rule_version": "entity-time-matching-2.0",
+  "time_tolerance_seconds": 120,
+  "events": [
+    {
+      "gt_event_id": "DEMO-ANOMALY-001",
+      "anomaly_type": "REQUEST_TIMEOUT_INCREASE",
+      "accepted_anomaly_types": [],
+      "entity_type": "Service",
+      "entity_id": "demo-payment",
+      "accepted_entity_aliases": [],
+      "observable_start_time": "2030-01-01T00:20:00+00:00",
+      "observable_end_time": "2030-01-01T00:22:00+00:00",
+      "allow_service_level_partial": false,
+      "evidence_rubric": "FULL requires verified, time-aligned payment-service telemetry with an explicit deadline-exceeded or timeout signal and a severely delayed failed request during the event interval. PARTIAL is relevant timeout-like evidence but lacks an explicit signal, entity linkage, or temporal linkage. NONE is normal, unrelated, wrong-entity, or wrong-window telemetry.",
+      "review_status": "APPROVED",
+      "gt_version": "semifinal-demo-gt-1.0",
+      "rubric_version": "semifinal-anomaly-rubric-1.0"
+    }
+  ]
+}

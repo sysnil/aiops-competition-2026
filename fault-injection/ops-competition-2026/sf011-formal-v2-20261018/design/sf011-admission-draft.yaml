@@ -1,0 +1,54 @@
+schema: SF011_FORWARD_TWO_EVENT_ADMISSION_V2
+status: DRAFT_LOW_STABLE_NOT_FROZEN
+case_id: SF-011
+no_fault_calibration_sha256: 7b347645e8ce1525b7f1bfdbb6f85bbc4a3e6e2226a94656e38e891e41de19b0
+ordered_events:
+  - mechanism: SERVICE_PAUSE_30
+    offset_seconds: 600
+    duration_seconds: 30
+    duration_tolerance_seconds: 2
+    public_recommendation:
+      before_window_offsets: [300, 600]
+      during_window_offsets: [600, 630]
+      after_window_offsets: [720, 900]
+      minimum_distinct_server_traces_per_pod_before: 30
+      minimum_distinct_server_traces_per_pod_after: 30
+      minimum_caller_spans_during: 30
+      minimum_failed_caller_spans_during: 5
+      maximum_normalized_server_completion_ratio: 0.20
+      minimum_baseline_server_traces_total: 60
+      direct_signal_rule: client_failures_or_public_completion_collapse
+      maximum_failed_caller_fraction_before: 0.05
+  - mechanism: HTTP_HOME_DELAY_250MS_60
+    offset_seconds: 960
+    duration_seconds: 60
+    public_home_proxy:
+      before_window_seconds: 120
+      after_window_seconds: 120
+      minimum_trace_ids: {before: 120, during: 60, after: 120}
+      minimum_p95_increase_ms: 100
+      minimum_p95_ratio: 2.0
+      recovery_max_p95_ratio: 1.25
+      recovery_max_absolute_increase_ms: 20
+    private_minimum_delayed_home_requests: 60
+    private_minimum_fixed_stream_delayed_home_requests: 45
+normal_controls:
+  image_requests_per_120s_window: 90
+  cart_requests_per_120s_window: 90
+  image_requests_per_30s_window: 25
+  cart_requests_per_30s_window: 25
+  maximum_during_to_before_client_p95_ratio: 1.25
+  maximum_after_to_before_client_p95_ratio: 1.25
+  image_absolute_p95_tolerance_ms: 2.0
+  timeout_is_failure_not_zero_latency: true
+capture:
+  required_chunks: 6
+  require_each_chunk_quality_pass: true
+  require_public_proxy_identity_match: true
+  require_collector_receiver_refused_delta_zero: true
+  require_no_private_leak: true
+result_policy:
+  both_events_publicly_observable_and_privately_verified: true
+  http_recovery_proof: successful_post_preflight_and_no_active_delay_lease
+  private_schedule_not_used_as_public_anomaly_evidence: true
+  no_retroactive_threshold_change: true

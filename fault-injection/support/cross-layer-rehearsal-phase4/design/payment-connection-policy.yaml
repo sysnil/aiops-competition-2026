@@ -1,0 +1,21 @@
+schema_version: 1
+kind: independent_payment_client_reconnect_rehearsal
+registered_before_frontend_reconnect: true
+root: /root/cross-layer-rehearsal-phase4
+checkout_replicas_during_test: 4
+frontend_replicas_during_test: 2
+frontend_reconnect:
+  order: ascending_original_pod_uid
+  action: delete_one_frontend_pod_then_wait_for_two_ready
+  maximum_replacements: 2
+  retries_based_on_backend_choice: 0
+  required_deployment_template_unchanged: true
+  require_fresh_health_before_first_replacement: true
+  require_two_ready_before_second_replacement: true
+  no_fault_injection: true
+payment_validation:
+  seeds: [74011, 74012]
+  minimum_business_server_spans_per_pod_per_300s: 30
+  minimum_business_server_spans_per_pod_in_4_of_5_minutes: 3
+  minimum_checkout_client_uid_coverage: 0.99
+  no_direct_payment_pod_requests: true

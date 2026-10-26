@@ -1,0 +1,216 @@
+{
+  "schema": "SF003_SF012_INDEPENDENT_EXECUTION_CANDIDATE_V1",
+  "status": "BLOCKED_PENDING_MECHANISM_AND_RUNNER_QUALIFICATION",
+  "generated_utc": "2026-10-15T11:19:43.995314+00:00",
+  "source_plan_sha256": "762ff940a8198e0ef4470614f410edaddab3bc73a277f8a36f04015cc34943f4",
+  "storage_policy_sha256": "297fdcd6e6e2c0dde2a13f1ad589171775b27e247009072810d3e13e98dab7bf",
+  "disk_floor_bytes_decimal": 5000000000,
+  "all_relevant_hosts": [
+    "vm1",
+    "master",
+    "worker1",
+    "worker2",
+    "worker3"
+  ],
+  "old_60min_static_peak_reservation_is_start_gate": false,
+  "dynamic_monitoring_required_during": [
+    "fault",
+    "capture",
+    "export",
+    "archive"
+  ],
+  "abort_on_predicted_floor_crossing": true,
+  "automatic_archive_deletion": false,
+  "formal_fault_permission": false,
+  "practice_cases_unchanged": [
+    "SF-001",
+    "SF-002"
+  ],
+  "official_cases": [
+    {
+      "case_id": "SF-003",
+      "duration_seconds": 1800,
+      "fault_types_in_original_order": [
+        "PodCPUStress",
+        "HTTP ReqDelay",
+        "PodKill"
+      ],
+      "fault_event_count": 3,
+      "collection_status": "NOT_STARTED",
+      "qualification_blockers": [
+        "HTTP ReqDelay:SAFETY_BLOCKED",
+        "PodCPUStress:SAFETY_BLOCKED",
+        "PodKill:SAFETY_BLOCKED"
+      ],
+      "time_contract_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "execution_permission": false
+    },
+    {
+      "case_id": "SF-004",
+      "duration_seconds": 1800,
+      "fault_types_in_original_order": [
+        "NetworkDelay",
+        "HTTP RespDelay",
+        "PodMemoryStress",
+        "ServicePause"
+      ],
+      "fault_event_count": 4,
+      "collection_status": "NOT_STARTED",
+      "qualification_blockers": [
+        "HTTP RespDelay:MECHANISM_UNAVAILABLE",
+        "NetworkDelay:SAFETY_BLOCKED"
+      ],
+      "time_contract_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "execution_permission": false
+    },
+    {
+      "case_id": "SF-005",
+      "duration_seconds": 1800,
+      "fault_types_in_original_order": [
+        "HTTP RespReplaceCode",
+        "ContainerKill",
+        "NetworkLoss"
+      ],
+      "fault_event_count": 3,
+      "collection_status": "NOT_STARTED",
+      "qualification_blockers": [
+        "ContainerKill:SAFETY_BLOCKED",
+        "HTTP RespReplaceCode:MECHANISM_UNAVAILABLE",
+        "NetworkLoss:SAFETY_BLOCKED"
+      ],
+      "time_contract_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "execution_permission": false
+    },
+    {
+      "case_id": "SF-006",
+      "duration_seconds": 1800,
+      "fault_types_in_original_order": [
+        "PodCPUStress",
+        "HTTP ReqAbort",
+        "NetworkBandwidth",
+        "HTTP RespAbort",
+        "ServicePause"
+      ],
+      "fault_event_count": 5,
+      "collection_status": "NOT_STARTED",
+      "qualification_blockers": [
+        "HTTP ReqAbort:MECHANISM_UNAVAILABLE",
+        "HTTP RespAbort:MECHANISM_UNAVAILABLE",
+        "NetworkBandwidth:SAFETY_BLOCKED",
+        "PodCPUStress:SAFETY_BLOCKED"
+      ],
+      "time_contract_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "execution_permission": false
+    },
+    {
+      "case_id": "SF-007",
+      "duration_seconds": 1800,
+      "fault_types_in_original_order": [
+        "NodeCPUStress",
+        "HTTP ReqDelay",
+        "PodKill",
+        "NetworkDelay"
+      ],
+      "fault_event_count": 4,
+      "collection_status": "NOT_STARTED",
+      "qualification_blockers": [
+        "HTTP ReqDelay:SAFETY_BLOCKED",
+        "NetworkDelay:SAFETY_BLOCKED",
+        "NodeCPUStress:SAFETY_BLOCKED",
+        "PodKill:SAFETY_BLOCKED"
+      ],
+      "time_contract_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "execution_permission": false
+    },
+    {
+      "case_id": "SF-008",
+      "duration_seconds": 1800,
+      "fault_types_in_original_order": [
+        "NetworkLoss",
+        "HTTP RespReplaceCode",
+        "PodCPUStress",
+        "HTTP RespAbort",
+        "NetworkBandwidth",
+        "PodMemoryStress"
+      ],
+      "fault_event_count": 6,
+      "collection_status": "NOT_STARTED",
+      "qualification_blockers": [
+        "HTTP RespAbort:MECHANISM_UNAVAILABLE",
+        "HTTP RespReplaceCode:MECHANISM_UNAVAILABLE",
+        "NetworkBandwidth:SAFETY_BLOCKED",
+        "NetworkLoss:SAFETY_BLOCKED",
+        "PodCPUStress:SAFETY_BLOCKED"
+      ],
+      "time_contract_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "execution_permission": false
+    },
+    {
+      "case_id": "SF-009",
+      "duration_seconds": 1800,
+      "fault_types_in_original_order": [
+        "NodeCPUStress",
+        "ContainerKill",
+        "HTTP RespDelay",
+        "HTTP ReqAbort",
+        "ServicePause"
+      ],
+      "fault_event_count": 5,
+      "collection_status": "NOT_STARTED",
+      "qualification_blockers": [
+        "ContainerKill:SAFETY_BLOCKED",
+        "HTTP ReqAbort:MECHANISM_UNAVAILABLE",
+        "HTTP RespDelay:MECHANISM_UNAVAILABLE",
+        "NodeCPUStress:SAFETY_BLOCKED"
+      ],
+      "time_contract_status": "BLOCKED_OR_UNRESOLVED_PENDING_EACH_MECHANISM_TIME_CONTRACT",
+      "execution_permission": false
+    },
+    {
+      "case_id": "SF-010",
+      "duration_seconds": 1800,
+      "fault_types_in_original_order": [
+        "ServicePause",
+        "HTTP ReqDelay"
+      ],
+      "fault_event_count": 2,
+      "collection_status": "NOT_STARTED",
+      "qualification_blockers": [
+        "HTTP ReqDelay:SAFETY_BLOCKED"
+      ],
+      "time_contract_status": "BLOCKED_1935S_WITH_VALIDATED_300S_AND_FIRST_CHUNK_GATE",
+      "execution_permission": false
+    },
+    {
+      "case_id": "SF-011",
+      "duration_seconds": 1800,
+      "fault_types_in_original_order": [
+        "PodMemoryStress",
+        "NetworkDelay"
+      ],
+      "fault_event_count": 2,
+      "collection_status": "NOT_STARTED",
+      "qualification_blockers": [
+        "NetworkDelay:SAFETY_BLOCKED"
+      ],
+      "time_contract_status": "BLOCKED_1935S_WITH_VALIDATED_300S_AND_FIRST_CHUNK_GATE",
+      "execution_permission": false
+    },
+    {
+      "case_id": "SF-012",
+      "duration_seconds": 1800,
+      "fault_types_in_original_order": [
+        "NodeCPUStress",
+        "HTTP RespReplaceCode"
+      ],
+      "fault_event_count": 2,
+      "collection_status": "NOT_STARTED",
+      "qualification_blockers": [
+        "HTTP RespReplaceCode:MECHANISM_UNAVAILABLE",
+        "NodeCPUStress:SAFETY_BLOCKED"
+      ],
+      "time_contract_status": "BLOCKED_1935S_WITH_VALIDATED_300S_AND_FIRST_CHUNK_GATE",
+      "execution_permission": false
+    }
+  ]
+}

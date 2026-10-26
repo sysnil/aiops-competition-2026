@@ -1,0 +1,299 @@
+{
+  "task_type": "SEMIFINAL_QUERY_VISUALIZATION",
+  "question_id": "EX-P02",
+  "case_id": "SF-002",
+  "gt_version": "semifinal-query-visualization-candidate-v1",
+  "rubric_version": "semifinal-query-visualization-4+2+2+2-v1",
+  "review_status": "DRAFT_PENDING_HUMAN_REVIEW",
+  "classification": "DRAFT_PREVIEW_ONLY",
+  "chart_value_tolerance": 1e-09,
+  "chart_time_tolerance_seconds": 0.0,
+  "chart": {
+    "chart_type": "line",
+    "title": "练习示例：Recommendation 错误日志",
+    "x_axis": {
+      "label": "UTC bucket start",
+      "timezone": "UTC"
+    },
+    "y_axis": {
+      "label": "logs/min",
+      "unit": "logs/min"
+    },
+    "series": [
+      {
+        "name": "recommendation",
+        "unit": "logs/min",
+        "points": [
+          {
+            "timestamp": "2026-10-14T14:55:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T14:56:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T14:57:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T14:58:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T14:59:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:00:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:01:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:02:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:03:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:04:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:05:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:06:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:07:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:08:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:09:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:10:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:11:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:12:28.695044+00:00",
+            "value": 195.0
+          },
+          {
+            "timestamp": "2026-10-14T15:13:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:14:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:15:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:16:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:17:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:18:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:19:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:20:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:21:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:22:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:23:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:24:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:25:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:26:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:27:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:28:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:29:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:30:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:31:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:32:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:33:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:34:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:35:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:36:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:37:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:38:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:39:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:40:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:41:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:42:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:43:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:44:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:45:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:46:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:47:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:48:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:49:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:50:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:51:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:52:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:53:28.695044+00:00",
+            "value": 0.0
+          },
+          {
+            "timestamp": "2026-10-14T15:54:28.695044+00:00",
+            "value": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  "answers": [
+    {
+      "question_index": 1,
+      "value": 195,
+      "unit": "logs",
+      "value_tolerance": 0.0,
+      "time_tolerance_seconds": 0.0
+    },
+    {
+      "question_index": 2,
+      "value": 195,
+      "unit": "logs",
+      "value_tolerance": 0.0,
+      "time_tolerance_seconds": 0.0
+    },
+    {
+      "question_index": 3,
+      "value": "2026-10-14T15:12:28.695044+00:00",
+      "unit": "UTC",
+      "value_tolerance": 0.0,
+      "time_tolerance_seconds": 0.0
+    }
+  ],
+  "generation": {
+    "source_review_status": "DRAFT_PENDING_HUMAN_REVIEW",
+    "source_public_manifest_sha256": "458645d012ff5c6ffac1d9676a0275a15ab9da5bac403c1d3f5b3afa5b11011f",
+    "source_file_sha256": "31da520e6e68f1698999586db958581e38d7e34b0b53f7bab0fcbddb09194470"
+  }
+}

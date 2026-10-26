@@ -1,0 +1,618 @@
+{
+  "created_at_utc": "2026-10-10T04:51:55.015366+00:00",
+  "method": "Downward API to OTEL_RESOURCE_ATTRIBUTES",
+  "services": {
+    "frontend": {
+      "deployment_uid": "3c752028-1be7-45e4-8364-3bbd39f3faa6",
+      "image": "ghcr.io/open-telemetry/demo:3.0.0-frontend",
+      "original_env": [
+        {
+          "name": "OTEL_SERVICE_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.labels['app.kubernetes.io/component']"
+            }
+          }
+        },
+        {
+          "name": "OTEL_COLLECTOR_NAME",
+          "value": "otel-collector"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE",
+          "value": "cumulative"
+        },
+        {
+          "name": "OTEL_TRACES_SAMPLER",
+          "value": "always_on"
+        },
+        {
+          "name": "FRONTEND_PORT",
+          "value": "8080"
+        },
+        {
+          "name": "PORT",
+          "value": "$(FRONTEND_PORT)"
+        },
+        {
+          "name": "FRONTEND_ADDR",
+          "value": "frontend:8080"
+        },
+        {
+          "name": "AD_ADDR",
+          "value": "ad:8080"
+        },
+        {
+          "name": "CART_ADDR",
+          "value": "cart:8080"
+        },
+        {
+          "name": "CHECKOUT_ADDR",
+          "value": "checkout:8080"
+        },
+        {
+          "name": "CURRENCY_ADDR",
+          "value": "currency:8080"
+        },
+        {
+          "name": "PRODUCT_CATALOG_ADDR",
+          "value": "product-catalog:8080"
+        },
+        {
+          "name": "RECOMMENDATION_ADDR",
+          "value": "recommendation:8080"
+        },
+        {
+          "name": "SHIPPING_ADDR",
+          "value": "http://shipping:8080"
+        },
+        {
+          "name": "FLAGD_HOST",
+          "value": "flagd"
+        },
+        {
+          "name": "FLAGD_PORT",
+          "value": "8013"
+        },
+        {
+          "name": "ENV_PLATFORM",
+          "value": "kubernetes"
+        },
+        {
+          "name": "OTEL_COLLECTOR_HOST",
+          "value": "$(OTEL_COLLECTOR_NAME)"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+          "value": "http://$(OTEL_COLLECTOR_NAME):4317"
+        },
+        {
+          "name": "WEB_OTEL_SERVICE_NAME",
+          "value": "frontend-web"
+        },
+        {
+          "name": "PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT",
+          "value": "http://localhost:8080/otlp-http/v1/traces"
+        },
+        {
+          "name": "OTEL_RESOURCE_ATTRIBUTES",
+          "value": "service.version=3.0.0,service.criticality=critical"
+        }
+      ],
+      "new_env": [
+        {
+          "name": "WG_POD_UID",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.uid"
+            }
+          }
+        },
+        {
+          "name": "WG_POD_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.name"
+            }
+          }
+        },
+        {
+          "name": "OTEL_SERVICE_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.labels['app.kubernetes.io/component']"
+            }
+          }
+        },
+        {
+          "name": "OTEL_COLLECTOR_NAME",
+          "value": "otel-collector"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE",
+          "value": "cumulative"
+        },
+        {
+          "name": "OTEL_TRACES_SAMPLER",
+          "value": "always_on"
+        },
+        {
+          "name": "FRONTEND_PORT",
+          "value": "8080"
+        },
+        {
+          "name": "PORT",
+          "value": "$(FRONTEND_PORT)"
+        },
+        {
+          "name": "FRONTEND_ADDR",
+          "value": "frontend:8080"
+        },
+        {
+          "name": "AD_ADDR",
+          "value": "ad:8080"
+        },
+        {
+          "name": "CART_ADDR",
+          "value": "cart:8080"
+        },
+        {
+          "name": "CHECKOUT_ADDR",
+          "value": "checkout:8080"
+        },
+        {
+          "name": "CURRENCY_ADDR",
+          "value": "currency:8080"
+        },
+        {
+          "name": "PRODUCT_CATALOG_ADDR",
+          "value": "product-catalog:8080"
+        },
+        {
+          "name": "RECOMMENDATION_ADDR",
+          "value": "recommendation:8080"
+        },
+        {
+          "name": "SHIPPING_ADDR",
+          "value": "http://shipping:8080"
+        },
+        {
+          "name": "FLAGD_HOST",
+          "value": "flagd"
+        },
+        {
+          "name": "FLAGD_PORT",
+          "value": "8013"
+        },
+        {
+          "name": "ENV_PLATFORM",
+          "value": "kubernetes"
+        },
+        {
+          "name": "OTEL_COLLECTOR_HOST",
+          "value": "$(OTEL_COLLECTOR_NAME)"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+          "value": "http://$(OTEL_COLLECTOR_NAME):4317"
+        },
+        {
+          "name": "WEB_OTEL_SERVICE_NAME",
+          "value": "frontend-web"
+        },
+        {
+          "name": "PUBLIC_OTEL_EXPORTER_OTLP_TRACES_ENDPOINT",
+          "value": "http://localhost:8080/otlp-http/v1/traces"
+        },
+        {
+          "name": "OTEL_RESOURCE_ATTRIBUTES",
+          "value": "service.version=3.0.0,service.criticality=critical,k8s.pod.uid=$(WG_POD_UID),k8s.pod.name=$(WG_POD_NAME)"
+        }
+      ],
+      "backup_sha256": "4efb60be5e82864b55aca8935a9b62b68e683e966457a5c0edce32fee32563d1"
+    },
+    "ad": {
+      "deployment_uid": "af65152e-8de3-47eb-910f-993dd66191fd",
+      "image": "ghcr.io/open-telemetry/demo:3.0.0-ad",
+      "original_env": [
+        {
+          "name": "OTEL_SERVICE_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.labels['app.kubernetes.io/component']"
+            }
+          }
+        },
+        {
+          "name": "OTEL_COLLECTOR_NAME",
+          "value": "otel-collector"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE",
+          "value": "cumulative"
+        },
+        {
+          "name": "OTEL_TRACES_SAMPLER",
+          "value": "always_on"
+        },
+        {
+          "name": "AD_PORT",
+          "value": "8080"
+        },
+        {
+          "name": "AD_PROMETHEUS_PORT",
+          "value": "9465"
+        },
+        {
+          "name": "FLAGD_HOST",
+          "value": "flagd"
+        },
+        {
+          "name": "FLAGD_PORT",
+          "value": "8013"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+          "value": "http://$(OTEL_COLLECTOR_NAME):4318"
+        },
+        {
+          "name": "OTEL_LOGS_EXPORTER",
+          "value": "otlp"
+        },
+        {
+          "name": "OTEL_EXPERIMENTAL_SDK_TELEMETRY_VERSION",
+          "value": "latest"
+        },
+        {
+          "name": "OTEL_RESOURCE_ATTRIBUTES",
+          "value": "service.version=3.0.0,service.criticality=medium"
+        }
+      ],
+      "new_env": [
+        {
+          "name": "WG_POD_UID",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.uid"
+            }
+          }
+        },
+        {
+          "name": "WG_POD_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.name"
+            }
+          }
+        },
+        {
+          "name": "OTEL_SERVICE_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.labels['app.kubernetes.io/component']"
+            }
+          }
+        },
+        {
+          "name": "OTEL_COLLECTOR_NAME",
+          "value": "otel-collector"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE",
+          "value": "cumulative"
+        },
+        {
+          "name": "OTEL_TRACES_SAMPLER",
+          "value": "always_on"
+        },
+        {
+          "name": "AD_PORT",
+          "value": "8080"
+        },
+        {
+          "name": "AD_PROMETHEUS_PORT",
+          "value": "9465"
+        },
+        {
+          "name": "FLAGD_HOST",
+          "value": "flagd"
+        },
+        {
+          "name": "FLAGD_PORT",
+          "value": "8013"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+          "value": "http://$(OTEL_COLLECTOR_NAME):4318"
+        },
+        {
+          "name": "OTEL_LOGS_EXPORTER",
+          "value": "otlp"
+        },
+        {
+          "name": "OTEL_EXPERIMENTAL_SDK_TELEMETRY_VERSION",
+          "value": "latest"
+        },
+        {
+          "name": "OTEL_RESOURCE_ATTRIBUTES",
+          "value": "service.version=3.0.0,service.criticality=medium,k8s.pod.uid=$(WG_POD_UID),k8s.pod.name=$(WG_POD_NAME)"
+        }
+      ],
+      "backup_sha256": "af1b17de8fa34f3057c739ed56f641f733112bacc64f47056c65e81909c06870"
+    },
+    "payment": {
+      "deployment_uid": "4b997b74-c0af-42a4-a4f7-cf3bf400f3a6",
+      "image": "ghcr.io/open-telemetry/demo:3.0.0-payment",
+      "original_env": [
+        {
+          "name": "OTEL_SERVICE_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.labels['app.kubernetes.io/component']"
+            }
+          }
+        },
+        {
+          "name": "OTEL_COLLECTOR_NAME",
+          "value": "otel-collector"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE",
+          "value": "cumulative"
+        },
+        {
+          "name": "OTEL_TRACES_SAMPLER",
+          "value": "always_on"
+        },
+        {
+          "name": "PAYMENT_PORT",
+          "value": "8080"
+        },
+        {
+          "name": "FLAGD_HOST",
+          "value": "flagd"
+        },
+        {
+          "name": "FLAGD_PORT",
+          "value": "8013"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+          "value": "http://$(OTEL_COLLECTOR_NAME):4317"
+        },
+        {
+          "name": "IPV6_ENABLED",
+          "value": "false"
+        },
+        {
+          "name": "NODE_OPTIONS",
+          "value": "--require @opentelemetry/auto-instrumentations-node/register"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_PROTOCOL",
+          "value": "grpc"
+        },
+        {
+          "name": "OTEL_RESOURCE_ATTRIBUTES",
+          "value": "service.version=3.0.0,service.criticality=critical"
+        }
+      ],
+      "new_env": [
+        {
+          "name": "WG_POD_UID",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.uid"
+            }
+          }
+        },
+        {
+          "name": "WG_POD_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.name"
+            }
+          }
+        },
+        {
+          "name": "OTEL_SERVICE_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.labels['app.kubernetes.io/component']"
+            }
+          }
+        },
+        {
+          "name": "OTEL_COLLECTOR_NAME",
+          "value": "otel-collector"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE",
+          "value": "cumulative"
+        },
+        {
+          "name": "OTEL_TRACES_SAMPLER",
+          "value": "always_on"
+        },
+        {
+          "name": "PAYMENT_PORT",
+          "value": "8080"
+        },
+        {
+          "name": "FLAGD_HOST",
+          "value": "flagd"
+        },
+        {
+          "name": "FLAGD_PORT",
+          "value": "8013"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+          "value": "http://$(OTEL_COLLECTOR_NAME):4317"
+        },
+        {
+          "name": "IPV6_ENABLED",
+          "value": "false"
+        },
+        {
+          "name": "NODE_OPTIONS",
+          "value": "--require @opentelemetry/auto-instrumentations-node/register"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_PROTOCOL",
+          "value": "grpc"
+        },
+        {
+          "name": "OTEL_RESOURCE_ATTRIBUTES",
+          "value": "service.version=3.0.0,service.criticality=critical,k8s.pod.uid=$(WG_POD_UID),k8s.pod.name=$(WG_POD_NAME)"
+        }
+      ],
+      "backup_sha256": "29f863767373904db99f5fc604a566dbc432dcb10cfe195de581bc46387534a8"
+    },
+    "recommendation": {
+      "deployment_uid": "09180210-7ff6-462f-84e6-2ee76063f99e",
+      "image": "ghcr.io/open-telemetry/demo:3.0.0-recommendation",
+      "original_env": [
+        {
+          "name": "OTEL_SERVICE_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.labels['app.kubernetes.io/component']"
+            }
+          }
+        },
+        {
+          "name": "OTEL_COLLECTOR_NAME",
+          "value": "otel-collector"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE",
+          "value": "cumulative"
+        },
+        {
+          "name": "OTEL_TRACES_SAMPLER",
+          "value": "always_on"
+        },
+        {
+          "name": "RECOMMENDATION_PORT",
+          "value": "8080"
+        },
+        {
+          "name": "PRODUCT_CATALOG_ADDR",
+          "value": "product-catalog:8080"
+        },
+        {
+          "name": "OTEL_PYTHON_LOG_CORRELATION",
+          "value": "true"
+        },
+        {
+          "name": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION",
+          "value": "python"
+        },
+        {
+          "name": "FLAGD_HOST",
+          "value": "flagd"
+        },
+        {
+          "name": "FLAGD_PORT",
+          "value": "8013"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+          "value": "http://$(OTEL_COLLECTOR_NAME):4317"
+        },
+        {
+          "name": "OTEL_RESOURCE_ATTRIBUTES",
+          "value": "service.version=3.0.0,service.criticality=medium"
+        }
+      ],
+      "new_env": [
+        {
+          "name": "WG_POD_UID",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.uid"
+            }
+          }
+        },
+        {
+          "name": "WG_POD_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.name"
+            }
+          }
+        },
+        {
+          "name": "OTEL_SERVICE_NAME",
+          "valueFrom": {
+            "fieldRef": {
+              "apiVersion": "v1",
+              "fieldPath": "metadata.labels['app.kubernetes.io/component']"
+            }
+          }
+        },
+        {
+          "name": "OTEL_COLLECTOR_NAME",
+          "value": "otel-collector"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE",
+          "value": "cumulative"
+        },
+        {
+          "name": "OTEL_TRACES_SAMPLER",
+          "value": "always_on"
+        },
+        {
+          "name": "RECOMMENDATION_PORT",
+          "value": "8080"
+        },
+        {
+          "name": "PRODUCT_CATALOG_ADDR",
+          "value": "product-catalog:8080"
+        },
+        {
+          "name": "OTEL_PYTHON_LOG_CORRELATION",
+          "value": "true"
+        },
+        {
+          "name": "PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION",
+          "value": "python"
+        },
+        {
+          "name": "FLAGD_HOST",
+          "value": "flagd"
+        },
+        {
+          "name": "FLAGD_PORT",
+          "value": "8013"
+        },
+        {
+          "name": "OTEL_EXPORTER_OTLP_ENDPOINT",
+          "value": "http://$(OTEL_COLLECTOR_NAME):4317"
+        },
+        {
+          "name": "OTEL_RESOURCE_ATTRIBUTES",
+          "value": "service.version=3.0.0,service.criticality=medium,k8s.pod.uid=$(WG_POD_UID),k8s.pod.name=$(WG_POD_NAME)"
+        }
+      ],
+      "backup_sha256": "bd5d30fa5f9d850f350526f188c3b0a2943e3fb6fe1331b6af17387dacaddb6e"
+    }
+  }
+}

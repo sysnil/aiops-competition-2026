@@ -1,0 +1,111 @@
+{
+  "checks": {
+    "stage5_v2_freeze_unchanged": true,
+    "registered_sources_unchanged": true,
+    "final_health": true,
+    "final_five_host_residue": true,
+    "all_six_complete": true,
+    "all_run_and_capture_hashes": true,
+    "all_uid_coverage_at_least_99_percent": true
+  },
+  "attempts": {
+    "OC-D06-S1": {
+      "complete": true,
+      "state_machine_hash": true,
+      "control_hashes": {
+        "image_asset": true,
+        "product_detail": true,
+        "cart_view": true
+      },
+      "capture_hashes": {
+        "before": true,
+        "during": true,
+        "after": true
+      },
+      "route_proof_hash": true,
+      "uid_coverage": 1.0
+    },
+    "OC-D06-S2": {
+      "complete": true,
+      "state_machine_hash": true,
+      "control_hashes": {
+        "image_asset": true,
+        "product_detail": true,
+        "cart_view": true
+      },
+      "capture_hashes": {
+        "before": true,
+        "during": true,
+        "after": true
+      },
+      "route_proof_hash": true,
+      "uid_coverage": 1.0
+    },
+    "OC-D11-S1": {
+      "complete": true,
+      "state_machine_hash": true,
+      "control_hashes": {
+        "image_asset": true,
+        "product_detail": true,
+        "cart_view": true
+      },
+      "capture_hashes": {
+        "before": true,
+        "during": true,
+        "after": true
+      },
+      "route_proof_hash": true,
+      "uid_coverage": 1.0
+    },
+    "OC-D11-S2": {
+      "complete": true,
+      "state_machine_hash": true,
+      "control_hashes": {
+        "image_asset": true,
+        "product_detail": true,
+        "cart_view": true
+      },
+      "capture_hashes": {
+        "before": true,
+        "during": true,
+        "after": true
+      },
+      "route_proof_hash": true,
+      "uid_coverage": 1.0
+    },
+    "OC-D12-S1": {
+      "complete": true,
+      "state_machine_hash": true,
+      "control_hashes": {
+        "image_asset": true,
+        "product_detail": true,
+        "cart_view": true
+      },
+      "capture_hashes": {
+        "before": true,
+        "during": true,
+        "after": true
+      },
+      "route_proof_hash": true,
+      "uid_coverage": 1.0
+    },
+    "OC-D12-S2": {
+      "complete": true,
+      "state_machine_hash": true,
+      "control_hashes": {
+        "image_asset": true,
+        "product_detail": true,
+        "cart_view": true
+      },
+      "capture_hashes": {
+        "before": true,
+        "during": true,
+        "after": true
+      },
+      "route_proof_hash": true,
+      "uid_coverage": 1.0
+    }
+  },
+  "indexed_files": 479,
+  "stage5_v2_freeze_sha256": "6ebafa764b904950c00904d06cebae68c66727a8cf703158aa259bb728cd6452"
+}

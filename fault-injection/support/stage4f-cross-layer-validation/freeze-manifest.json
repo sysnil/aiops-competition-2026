@@ -1,0 +1,76 @@
+{
+  "status": "STAGE4F_CONTRACTS_FROZEN_BEFORE_FAULT",
+  "frozen_at_utc": "2026-10-04T02:17:25.464661+00:00",
+  "executable_readiness_decision": "readiness/executable-readiness-storage-source-formal-2026-10-04.json",
+  "executable_readiness_sha256": "ab3bceb0379ab89b6278d6ad6bf9d9106dc74799754b662ce033697384a75d12",
+  "trace_source": "JAEGER_OPENSEARCH_STORAGE",
+  "git_provenance": {
+    "head": null,
+    "status": "NO_GIT_HEAD"
+  },
+  "author_sources": {
+    "OpenRCA/RCA-agent": {
+      "commit": "c1bd4af7f635171a1c31cdd567c07d698dff6abc",
+      "archive": "OpenRCA-c1bd4af7f635171a1c31cdd567c07d698dff6abc.zip",
+      "sha256": "970d2572fc0607bcb3a12990f66b906e6d84589255559dcb46451c38329d247b"
+    },
+    "MicroIRC": {
+      "commit": "ef47976a1c09f33593901b7cf2b4652872ab78cd",
+      "archive": "MicroIRC-ef47976a1c09f33593901b7cf2b4652872ab78cd.zip",
+      "sha256": "5ec3b0aa64539eeb5970b3c5acb401f0f9148f557e0b75c8b2c0e410512c2282"
+    },
+    "MicroRCA": {
+      "commit": "de334b2815742a248225cf6e242840a9d5fedc9a",
+      "archive": "MicroRCA-de334b2815742a248225cf6e242840a9d5fedc9a.zip",
+      "sha256": "df36c92ebdf5b183284e87a443e6fb330ddf06db0725c41872491a5bc4c3d1d8"
+    }
+  },
+  "case_selection_policy_sha256": "d254e1c726f0e4190f83522f2eb5a1fb7a22962eaced96cf66cff7f82ab495e5",
+  "f04_route_proof": "readiness/f04-route-proof-podprobe-2026-10-03/public_verified_route_map.json",
+  "f04_route_proof_sha256": "9075c50d366e1f8988732bcf5215519532ba4a129f5f3fddbf6800477903c130",
+  "sha256": {
+    "design/candidate-contract.yaml": "46d87e1fd464934797c33efb11467a3c4c0e6c00b6d2ececf8a4b299b16d1425",
+    "design/observation-contract.yaml": "5edcc49f8b4894c4fde34c551d86b859f986cd0416101062d58eb4ff604d8dd4",
+    "design/scoring-contract.yaml": "fa644dff4183ba35c715dc9165f91f98d5b6a972a97ed6982b132cb31834bae4",
+    "design/network-path-contract.yaml": "02e82557733abf64ab3cb119b110c5e82dd3ded08e551d0e81b436504dbb0966",
+    "design/case-validation-contract.yaml": "bc1ae4c3b18214d591153c3a26af364c875a4997cfcce2ac392e41777d3fc266",
+    "design/case-plan.yaml": "d254e1c726f0e4190f83522f2eb5a1fb7a22962eaced96cf66cff7f82ab495e5",
+    "source/provenance.json": "a8fcc71ca009ab1e173c4c6aba0f09f27dde7e78c359001ed02b1e02f1e93f61",
+    "scripts/admission.py": "59445dd84610885228faecf791a73abb5bdeb97da3e6995ea8ed62fddec08e2e",
+    "scripts/assess_executable_readiness.py": "f7b08c59c85b72bc4901210e1c8164b8fc8ebd78203a2b9c115825044098a4b9",
+    "scripts/build_candidates.py": "0aaf1e7d6a57a7fe886997a2839b7e2a506220db60989f074395271a72220944",
+    "scripts/build_private_case.py": "9a3c540becad02eb80ce7e928673819e030300b3eb3072fef14d8af08998263f",
+    "scripts/build_public_anomaly_fixture.py": "d2a6d6ca4de9057b94d8b57542698266f953b9cb9d8dd7e6418ca557648a7b04",
+    "scripts/build_route_proof.py": "c0ddd3fedfdeb8f413cd809e9c9633ea0e2d53a1ecdb59f0b65d50fa6f35bdc0",
+    "scripts/capture_live.py": "9d3fd5eef169e3ea4f6cd3d2e0ab1434b6c355a7d2cafa92c2a9efb75109427e",
+    "scripts/capture_network_probe.py": "d2b66b0f02d1347389c3ef00e6d01be09b87a41910d9deeed4370078bb671777",
+    "scripts/contracts.py": "256d8d15c95ae8bdf04860372b005c99abbf3266c566c512268846b24a30be8d",
+    "scripts/convert_live.py": "b30a04ad491d2052dd970280e0ffe6f10cb1ee6ebd53275c40fa52dd2479e5b2",
+    "scripts/evaluate.py": "8f016cfafc7c3d9fada903d56fcbb94a308f0773e84a2e99230d3e61cee288b1",
+    "scripts/freeze_predictions.py": "67ae0ddf7c6d6b5b42c89f60e57d7a60fdd61da02be77832a3e39f24256f54fc",
+    "scripts/freeze_preflight.py": "c6f148f70aaa72b9edc00f4585493351264db076632f6c637051bc85174e5b13",
+    "scripts/freeze_public.py": "becf371155e89d00b352fa55187304bc7a3c8dcda70b5c083af9b6aed8f59553",
+    "scripts/host_fault.py": "e0039e3dde6a884d608df18a351b213de29f3a117712c78c6050e83ec795a0e7",
+    "scripts/launch_openrca_from_tty.py": "3f1f08010a645a0b15e05a5653e419704555903394a7c4f15861280ee3f642a0",
+    "scripts/merge_network_probe.py": "ebd6b1e054f2967f5ff3fd41c8f867a5ee6f7bb8b9a113d83aa130c1e76388c6",
+    "scripts/network_path_precheck.py": "acd8472beccc9ae7df3d335e8e37ff1411e7142af529b5de7c1eb92046ffe2ec",
+    "scripts/pod_cpu_exec.py": "2e28988d39f85dcd7a4637e5e5cdf38728738fdb7d4a0a1a9df022b9784677e9",
+    "scripts/pod_precheck.py": "062004e132e68547b803b7028aad782e35bf88fb7fd75f02c2124dbab1dfd158",
+    "scripts/post_freeze_health.py": "d8e26d79aa12f34cf9dc0534c7698caa0e7135dacbd8a69d1deb006e9e857e45",
+    "scripts/prepare_case_preflight.py": "3acf617d2f3a15c955fbcbd25af11612537bc4955eb0b6da7c42716c96c11272",
+    "scripts/run_openrca_isolated.py": "ee71f4ebcfc2125a43f646c8aa54cb615e1e2ac1a74e8f23cc4f8fc904d72109",
+    "scripts/run_public_method.py": "7d81258ee75cae505744a4293c7a6087ba286a411d11001d4db9a9b074a222f0",
+    "scripts/service_node_precheck.py": "cbf9a3b917bb8b123d057a307fa51a1d9d4627bb20455314393106f5b72a2e63",
+    "scripts/signal_rules.py": "4d224bd044158a15a49c1b0465546ce3ab418b359d6e66141f319c4debaaa97a",
+    "scripts/trace_equivalence.py": "fc7fb5dbd18ffe63321c73ca6a56518554db4c6a9e6830df70e617962ffa2c21",
+    "scripts/trace_storage_reader.py": "ebdf0206b8fe3bae9079217cd4799fe7af7185038efb75c02920461b0884ab74",
+    "scripts/validate_f01_precondition.py": "dd9575f91c19d7cdea0609332d864db10b73e22e1f1bfa942955067b42cc18a4",
+    "scripts/validate_openrca_smoke.py": "f9804b5297b4aabaf47e70c53bb42231f9ab5aa7a49be058bf36046396b5b327",
+    "scripts/verify_live_conversion.py": "284dd94e0ca690a9708ad63215e0bd2302dfdee3fd5d0cdb3b3b3534a83f9331",
+    "algorithms/microirc_stage4f_runner.py": "d882ec80ddf15ec43db4595ab08e1eb0ba02ffc03750aa54a38fb2971fbf7c94",
+    "algorithms/microrca_xl.py": "293e870eac09fa62309d0e2771c4ed65ae1c93bc9541bde9c2e05aa8e93434ef",
+    "algorithms/openrca_xl_runner.py": "49577159ac0c449029815157612af8d52dae537f73aa144312d0604a4ada4263",
+    "algorithms/openrca_xl_tools.py": "2535fb66f73814bf487e00051dd914a4c832101b9fcedc0ffa7c3304fadd4dfd",
+    "algorithms/simple_rca_calibrated.py": "af69b920c5f3802106b1c289eb0b49c6cfeba2536532c7b7e8b52dbd21e6ec4e"
+  }
+}

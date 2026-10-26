@@ -1,0 +1,113 @@
+{
+  "status": "CANDIDATE_CGROUPS_INSPECTED_NOT_QUALIFIED",
+  "at_utc": "2026-10-18T08:53:36.641924+00:00",
+  "targets": [
+    {
+      "service": "frontend",
+      "name": "frontend-68d8bbfdc8-8mnzh",
+      "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+      "node": "k8s-worker2",
+      "pod_ip": "10.244.126.57",
+      "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+      "restart_count": 0,
+      "host": "k8s-worker2",
+      "container_task_pid": 2022249,
+      "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-podd4bb49b4_6fb8_4a07_aaf6_e2caff5df974.slice/cri-containerd-447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e.scope",
+      "processes": [
+        {
+          "pid": 2022249,
+          "start_ticks": "164244306",
+          "state": "S",
+          "comm": "next-server (v1"
+        }
+      ],
+      "memory_current_bytes": 134508544,
+      "memory_max_bytes": "262144000",
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "cpu_max": "200000 100000",
+      "conservative_32MiB_plus_32MiB_overhead_fits_80pct": true,
+      "live_80pct_headroom_bytes": 75206656
+    },
+    {
+      "service": "frontend",
+      "name": "frontend-68d8bbfdc8-c4n85",
+      "uid": "6305d17a-27f0-4dbf-8fc7-7238acb3be91",
+      "node": "k8s-worker1",
+      "pod_ip": "10.244.194.101",
+      "container_id": "containerd://71c436f60470eeaf12334e5dd3a69302bbfe16ba1be6f0886260a1b2eb9d0c4e",
+      "restart_count": 0,
+      "host": "k8s-worker1",
+      "container_task_pid": 3157068,
+      "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-pod6305d17a_27f0_4dbf_8fc7_7238acb3be91.slice/cri-containerd-71c436f60470eeaf12334e5dd3a69302bbfe16ba1be6f0886260a1b2eb9d0c4e.scope",
+      "processes": [
+        {
+          "pid": 3157068,
+          "start_ticks": "164244944",
+          "state": "S",
+          "comm": "next-server (v1"
+        }
+      ],
+      "memory_current_bytes": 142962688,
+      "memory_max_bytes": "262144000",
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "cpu_max": "200000 100000",
+      "conservative_32MiB_plus_32MiB_overhead_fits_80pct": false,
+      "live_80pct_headroom_bytes": 66752512
+    },
+    {
+      "service": "recommendation",
+      "name": "recommendation-c887f6f6b-cxb5j",
+      "uid": "8b7c229b-cea1-440f-bc88-e9c1f246ef9e",
+      "node": "k8s-worker3",
+      "pod_ip": "10.244.100.213",
+      "container_id": "containerd://9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5",
+      "restart_count": 0,
+      "host": "k8s-worker3",
+      "container_task_pid": 3416103,
+      "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-pod8b7c229b_cea1_440f_bc88_e9c1f246ef9e.slice/cri-containerd-9872d45e13283a6d19208d1300281c4fb3f8136a0f9a59b9459e53274464e8b5.scope",
+      "processes": [
+        {
+          "pid": 3416103,
+          "start_ticks": "162275223",
+          "state": "S",
+          "comm": "python"
+        }
+      ],
+      "memory_current_bytes": 50962432,
+      "memory_max_bytes": "524288000",
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "cpu_max": "200000 100000",
+      "conservative_32MiB_plus_32MiB_overhead_fits_80pct": true,
+      "live_80pct_headroom_bytes": 368467968
+    },
+    {
+      "service": "recommendation",
+      "name": "recommendation-c887f6f6b-zchkk",
+      "uid": "3886c989-d7a1-44e9-8b44-64c536db1897",
+      "node": "k8s-worker3",
+      "pod_ip": "10.244.100.200",
+      "container_id": "containerd://f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0",
+      "restart_count": 0,
+      "host": "k8s-worker3",
+      "container_task_pid": 3415737,
+      "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-pod3886c989_d7a1_44e9_8b44_64c536db1897.slice/cri-containerd-f58dde7651e1d849718ee316256527409d8d8f237753dc54e65de41c646412f0.scope",
+      "processes": [
+        {
+          "pid": 3415737,
+          "start_ticks": "162272132",
+          "state": "S",
+          "comm": "python"
+        }
+      ],
+      "memory_current_bytes": 51867648,
+      "memory_max_bytes": "524288000",
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "cpu_max": "200000 100000",
+      "conservative_32MiB_plus_32MiB_overhead_fits_80pct": true,
+      "live_80pct_headroom_bytes": 367562752
+    }
+  ],
+  "faults_injected": 0,
+  "historical_identity_sha256": "ec9b57bcec24ba06ae09ffb52f88d0230171aceb17ed28af86f217c4840214fc",
+  "inspection_source_sha256": "72627a228a92ce161d2d2dc188adafd43f7b28c205affc0c992375ed2fb7c3f4"
+}

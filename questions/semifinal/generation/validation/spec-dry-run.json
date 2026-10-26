@@ -1,0 +1,222 @@
+[
+  {
+    "question_id": "Q01",
+    "case_id": "SF-003",
+    "kind": "memory",
+    "unit": "MiB",
+    "series": [
+      {
+        "entity": "frontend-68d8bbfdc8-8mnzh",
+        "points": 30,
+        "valid": 30,
+        "min": 128.859375,
+        "max": 163.3251953125,
+        "samples": 120
+      }
+    ],
+    "evidence_examples": 6
+  },
+  {
+    "question_id": "Q02",
+    "case_id": "SF-003",
+    "kind": "cpu_rate",
+    "unit": "cores",
+    "series": [
+      {
+        "entity": "frontend-68d8bbfdc8-8mnzh",
+        "points": 30,
+        "valid": 30,
+        "min": 0.03397633333333943,
+        "max": 0.06280413333333854,
+        "samples": 119
+      }
+    ],
+    "evidence_examples": 6
+  },
+  {
+    "question_id": "Q03",
+    "case_id": "SF-003",
+    "kind": "memory",
+    "unit": "MiB",
+    "series": [
+      {
+        "entity": "frontend-68d8bbfdc8-8mnzh",
+        "points": 30,
+        "valid": 30,
+        "min": 128.859375,
+        "max": 163.3251953125,
+        "samples": 120
+      },
+      {
+        "entity": "frontend-68d8bbfdc8-c4n85",
+        "points": 30,
+        "valid": 30,
+        "min": 132.0849609375,
+        "max": 132.3994140625,
+        "samples": 120
+      }
+    ],
+    "evidence_examples": 6
+  },
+  {
+    "question_id": "Q04",
+    "case_id": "SF-005",
+    "kind": "server_span_count",
+    "unit": "spans/min",
+    "series": [
+      {
+        "entity": "recommendation",
+        "points": 30,
+        "valid": 30,
+        "min": 86.0,
+        "max": 131.0,
+        "samples": 3331
+      }
+    ],
+    "evidence_examples": 6
+  },
+  {
+    "question_id": "Q05",
+    "case_id": "SF-005",
+    "kind": "error_log_count",
+    "unit": "logs/min",
+    "series": [
+      {
+        "entity": "recommendation",
+        "points": 30,
+        "valid": 30,
+        "min": 0.0,
+        "max": 9.0,
+        "samples": 9
+      }
+    ],
+    "evidence_examples": 6
+  },
+  {
+    "question_id": "Q06",
+    "case_id": "SF-005",
+    "kind": "edge_error_count",
+    "unit": "error spans/min",
+    "series": [
+      {
+        "entity": "frontend -> product-catalog",
+        "points": 30,
+        "valid": 30,
+        "min": 0.0,
+        "max": 58.0,
+        "samples": 58
+      }
+    ],
+    "evidence_examples": 6
+  },
+  {
+    "question_id": "Q07",
+    "case_id": "SF-010",
+    "kind": "server_p95",
+    "unit": "ms",
+    "series": [
+      {
+        "entity": "frontend-proxy",
+        "points": 30,
+        "valid": 30,
+        "min": 25.821,
+        "max": 256.988,
+        "samples": 36413
+      }
+    ],
+    "evidence_examples": 6
+  },
+  {
+    "question_id": "Q08",
+    "case_id": "SF-010",
+    "kind": "server_span_count",
+    "unit": "spans/min",
+    "series": [
+      {
+        "entity": "frontend",
+        "points": 30,
+        "valid": 30,
+        "min": 1371.0,
+        "max": 1915.0,
+        "samples": 52753
+      }
+    ],
+    "evidence_examples": 6
+  },
+  {
+    "question_id": "Q09",
+    "case_id": "SF-010",
+    "kind": "edge_p95",
+    "unit": "ms",
+    "series": [
+      {
+        "entity": "frontend -> product-catalog",
+        "points": 30,
+        "valid": 30,
+        "min": 12.172,
+        "max": 84.508,
+        "samples": 18946
+      }
+    ],
+    "evidence_examples": 6
+  },
+  {
+    "question_id": "Q10",
+    "case_id": "SF-010",
+    "kind": "server_p95",
+    "unit": "ms",
+    "series": [
+      {
+        "entity": "frontend",
+        "points": 30,
+        "valid": 30,
+        "min": 25.994,
+        "max": 38.499,
+        "samples": 52753
+      },
+      {
+        "entity": "cart",
+        "points": 30,
+        "valid": 30,
+        "min": 2.567,
+        "max": 3.013,
+        "samples": 13599
+      }
+    ],
+    "evidence_examples": 6
+  },
+  {
+    "question_id": "EX-P01",
+    "case_id": "SF-001",
+    "kind": "memory",
+    "unit": "MiB",
+    "series": [
+      {
+        "entity": "frontend-68d8bbfdc8-8mnzh",
+        "points": 60,
+        "valid": 60,
+        "min": 127.8564453125,
+        "max": 161.705078125,
+        "samples": 240
+      }
+    ],
+    "evidence_examples": 6
+  },
+  {
+    "question_id": "EX-P02",
+    "case_id": "SF-002",
+    "kind": "error_log_count",
+    "unit": "logs/min",
+    "series": [
+      {
+        "entity": "recommendation",
+        "points": 60,
+        "valid": 60,
+        "min": 0.0,
+        "max": 195.0,
+        "samples": 195
+      }
+    ],
+    "evidence_examples": 6
+  }
+]

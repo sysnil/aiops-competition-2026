@@ -1,0 +1,1101 @@
+{
+  "schema": "SF_TEN_OFFICIAL_CASES_EXECUTION_LEDGER_V2",
+  "design_revision": "/root/ops-competition-2026/plans/SF-remaining-9-production-v2-draft.json",
+  "completed_ready_for_import": 10,
+  "remaining": 0,
+  "official_cases": [
+    {
+      "case_id": "SF-003",
+      "status": "READY_FOR_IMPORT",
+      "run_id": "SF-003-ATTEMPT-02",
+      "faults": [
+        "POD_MEMORY_32M_60"
+      ],
+      "fault_count": 1,
+      "formal_manifest_sha256": "15d97983ca158119ba6308396391380e5ffc6c5c274dfc1c9441a3c804ba551f",
+      "public_manifest_sha256": "2dda9c2d1cb4dd912df3efe5e5d2dcc8fb9b6ae2505f49f24682d2a2d22b1b8e",
+      "raw_archive_manifest_sha256": "188e7c34b32fdc3013b08389f2ab14d0b5a6d7353f7076a5448ec14f347d626f",
+      "output_archive_manifest_sha256": "ecdb5d3626cbcdfcb9e1ff54eb79a802d65fc71c2be9c33d05c317486943842a",
+      "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-003-ATTEMPT-02",
+      "package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-003-ATTEMPT-02",
+      "raw_and_package_worker3": "/data/rca-archives/ops-competition-2026/SF-003-ATTEMPT-02",
+      "admission": "SF003_POD_MEMORY_ADMISSION_PASS",
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+      "gt_candidates": 5,
+      "server_import": "NOT_EXECUTED"
+    },
+    {
+      "case_id": "SF-004",
+      "status": "READY_FOR_IMPORT",
+      "run_id": "SF-004-ATTEMPT-05",
+      "faults": [
+        "HTTP_HOME_DELAY_250MS_60"
+      ],
+      "fault_count": 1,
+      "formal_manifest_sha256": "f8447655607abb8e99946d1487ba49f02ac2c41940f65cd8d7414446cd9f6df0",
+      "public_manifest_sha256": "7074bed09aaae6f5828f8e37e8c03aad0b6dc9caa0188f386867649c9047b242",
+      "admission_decision_sha256": "e8bb046e2afdbacf3454ae7e9fc53146ef4c35528c6cc4de1fa1653bc6de1377",
+      "raw_archive_manifest_sha256": "93e826ecfa10f47594f1182550c548d009ae6cea2d77ab41af387b235f3d0841",
+      "output_archive_manifest_sha256": "dc29dceee55b0aa09ac3cc11ba87794d986cf42ec47a09d8703f611f843abc66",
+      "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-004-ATTEMPT-05",
+      "package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-004-ATTEMPT-05",
+      "raw_and_package_worker3": "/data/rca-archives/ops-competition-2026/SF-004-ATTEMPT-05",
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW_NOT_FOR_SCORING",
+      "gt_candidates": 3,
+      "server_import": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "attempt_history": [
+        {
+          "case_id": "SF-004",
+          "status": "FAILED_OBSERVABILITY_CONTROL",
+          "run_id": "SF-004-ATTEMPT-01",
+          "faults": [
+            "HTTP_HOME_DELAY_250MS_60"
+          ],
+          "fault_count": 1,
+          "formal_manifest_sha256": "797fd2b22c977f8ba75d31ea7b7a4217b5279cb2769d270fa96a866622de5493",
+          "public_manifest_sha256": "8f4aa40786db0119bb30bebae471263a9beb21850c4c60a88feee117600de129",
+          "raw_archive_manifest_sha256": "1fea082c3ca68ab0b56a9059d3413ddcff501637916f851eb6188e490edf5636",
+          "output_archive_manifest_sha256": "894e8f5a8ec46c601aae7de7a25825ad0824a0bc05e33d9dde283716f65023d4",
+          "admission_decision_sha256": "239d0767bfa3c1fe8e4844ce35dbb3b5271fc0db2ca9866f79f5c99fb123ab74",
+          "failed_gate": "cart_normal_latency_after_to_before_p95_ratio_gt_1.25",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-004-ATTEMPT-01",
+          "package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-004-ATTEMPT-01",
+          "raw_and_package_worker3": "/data/rca-archives/ops-competition-2026/SF-004-ATTEMPT-01",
+          "gt_status": "DRAFT_PENDING_HUMAN_REVIEW_NOT_FOR_SCORING",
+          "gt_candidates": 6,
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT"
+        },
+        {
+          "run_id": "SF-004-ATTEMPT-02",
+          "status": "FAILED_BEFORE_INJECTION",
+          "capture_terminal_sha256": "3b858c34fa5d897ede6a0dff6bf6bdf0e2dc7224b4bb27169b8fe35aadadaf45",
+          "fault_injected": false
+        },
+        {
+          "run_id": "SF-004-ATTEMPT-03",
+          "status": "FAILED_EXPORT_BOUNDARY",
+          "failure_record_sha256": "c2530e3f4d2bc99e7758eead3a014d7532d579a641f0054f162c96dcb0597429",
+          "fault_injected": true
+        },
+        {
+          "run_id": "SF-004-ATTEMPT-04",
+          "status": "FAILED_BEFORE_INJECTION_HEARTBEAT_TRANSPORT",
+          "failure_record_sha256": "3b297563c1122f91cea6810fa9f94191db7999e8c1161d5c098e6a136fad4813",
+          "fault_injected": false
+        }
+      ]
+    },
+    {
+      "case_id": "SF-005",
+      "status": "READY_FOR_IMPORT",
+      "run_id": "SF-005-ATTEMPT-04",
+      "faults": [
+        "SERVICE_PAUSE_30"
+      ],
+      "fault_count": 1,
+      "formal_manifest_sha256": "826aba3169f843811bccc4d4fdce4babb379fd94f78affdae685cb4ce2d79240",
+      "public_manifest_sha256": "3bddfc396be4bb0a6002d1bbd959c44bf770a692e916dfd5c71da31fafd756f2",
+      "raw_archive_manifest_sha256": "d201d77a7da0403ad4cec3e3ac76fe70d4646ccf0e1e5c8728586894a961e739",
+      "output_archive_manifest_sha256": "a7e5057633fcfa518a250b4cced374b6562484a43590bb69a859881e8eaa7b82",
+      "admission_decision_sha256": "05ac89df1e9288a1d41c2523fe1ba02bda63cc425cb9285fc53a402474fe8dbe",
+      "admission": "SF005_SERVICE_ADMISSION_PASS",
+      "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-005-ATTEMPT-04",
+      "package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-005-ATTEMPT-04",
+      "raw_and_package_worker2": "/data/rca-archives/ops-competition-2026/SF-005-ATTEMPT-04",
+      "raw_and_package_worker3": "/data/rca-archives/ops-competition-2026/SF-005-ATTEMPT-04",
+      "row_counts": {
+        "metrics": 38425,
+        "logs": 281046,
+        "traces": 420364
+      },
+      "trace_index_rows": 60102,
+      "window": {
+        "start_utc": "2026-10-16T11:23:55.458636+00:00",
+        "end_utc": "2026-10-16T11:53:55.458636+00:00"
+      },
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+      "gt_candidates": 24,
+      "gt_merged_events": 7,
+      "server_import": "NOT_EXECUTED",
+      "attempt_history": [
+        {
+          "case_id": "SF-005",
+          "status": "FAILED_CONTROL_COVERAGE",
+          "run_id": "SF-005-ATTEMPT-02",
+          "faults": [
+            "SERVICE_PAUSE_30"
+          ],
+          "fault_count": 1,
+          "formal_manifest_sha256": "86975e7770451538467c9ad978e89a37ce45abedfbb5d4531179656fe3e7d2a5",
+          "capture_terminal_sha256": "e0f427d4a94681d1d381ef1d6d82e7258c495bba9cd66653a087a7d946041419",
+          "raw_archive_manifest_sha256": "ca6daef56db86dbd246df7cbd7e81baab076aeda9c6b92b946d9a521a405a499",
+          "failed_gate": "image_asset_and_cart_view_each_one_missed_arrival",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-005-ATTEMPT-02",
+          "raw_worker3": "/data/rca-archives/ops-competition-2026/SF-005-ATTEMPT-02/raw",
+          "public_package": "NOT_CREATED",
+          "gt_status": "NOT_CREATED",
+          "previous_attempt": "SF-005-ATTEMPT-01_FAILED_BEFORE_INJECTION",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT"
+        },
+        {
+          "run_id": "SF-005-ATTEMPT-03",
+          "status": "FAILED_BEFORE_INJECTION",
+          "terminal_sha256": "ecb2ee7c56f1b61f86a87ee6ee4a447e7367a18785c7e41fdf86cf11d12626ad",
+          "reason": "Master Worker3 SSH control socket absent; no fault timer armed"
+        }
+      ]
+    },
+    {
+      "case_id": "SF-006",
+      "status": "READY_FOR_IMPORT",
+      "run_id": "SF-006-ATTEMPT-01",
+      "faults": [
+        "POD_MEMORY_32M_60"
+      ],
+      "fault_count": 1,
+      "formal_manifest_sha256": "77d77907e3d2783b47cee1aa7691d0cc308a7f96e2e4dcebd2775171a1d70d45",
+      "public_manifest_sha256": "895d85aedfc019b2573a573ca848f36d236047f66d4c279710ca8df495cee66f",
+      "admission_decision_sha256": "55441c38632ae10635f875696cf0eebb1f2d52268dc977b68fe890aa8ec9b902",
+      "raw_archive_manifest_sha256": "31c9488aedd810de25de1c1649dda2a94a6d520d281da992249b9af7252ef93c",
+      "output_archive_manifest_sha256": "d80202a9d9cd62537eca81689edc878a8c7f173fd880afd22aca5aa7e2150b98",
+      "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-006-ATTEMPT-01",
+      "package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-006-ATTEMPT-01",
+      "raw_and_package_worker1": "/data/rca-archives/ops-competition-2026/SF-006-ATTEMPT-01",
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW_NOT_FOR_SCORING",
+      "gt_candidates": 4,
+      "server_import": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "design_history": {
+        "case_id": "SF-006",
+        "status": "NOT_STARTED",
+        "planned_faults": [
+          "POD_MEMORY_32M_60",
+          "SERVICE_PAUSE_30"
+        ],
+        "draft_only": true
+      }
+    },
+    {
+      "case_id": "SF-007",
+      "status": "READY_FOR_IMPORT",
+      "run_id": "SF-007-ATTEMPT-08",
+      "faults": [
+        "SERVICE_PAUSE_30"
+      ],
+      "fault_count": 1,
+      "formal_manifest_sha256": "8be9bce00f0b129b0d97a205afe6c32100fab88618df71db9133dded68068de7",
+      "public_manifest_sha256": "b5b3291da7ebc0f8b54f2098ffb3193f763c657f99c2843552c23562a5b7493d",
+      "public_verification_sha256": "569ba711f812137c67e0ff218d015650c598e0c84abdc44e6a59535a768839a6",
+      "admission_decision_sha256": "511fe65a129f482cd81b756689d92042e813a7978b9a5004c72413908883712e",
+      "raw_archive_manifest_sha256": "5e661004894420e28acc4c627e31cf582d55393b5a40fd1a92bdb53156f5d01f",
+      "output_archive_manifest_sha256": "feb669aaba1d8e57730bbd7a35f0eaa87ec2203f29e439db7710bc0c44447c15",
+      "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-007-ATTEMPT-08",
+      "package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-007-ATTEMPT-08",
+      "raw_and_package_worker1": "/data/rca-archives/ops-competition-2026/SF-007-ATTEMPT-08",
+      "row_counts": {
+        "metrics": 40752,
+        "logs": 190786,
+        "traces": 339854
+      },
+      "trace_index_rows": 51255,
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+      "gt_candidates": 23,
+      "gt_merged_events": 4,
+      "gt_draft_sha256": "e9b52bcd4b594b5126b5a55e59d911487b0081c49babc26ed004829775a63fa7",
+      "server_import": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "attempt_history": [
+        {
+          "run_id": "SF-007-ATTEMPT-02",
+          "status": "FAILED_DYNAMIC_STORAGE_FORECAST_AFTER_RECOVERY",
+          "fault_injected": true,
+          "fault_recovered": true,
+          "capture_complete": false,
+          "public_bundle_created": false,
+          "private_gt_created": false,
+          "failure_record_sha256": "db878fd1bc06edb4b43132ef79df1a33d0c4faa1adc38cd2db303f7a7a9b0bcb",
+          "raw_archive_manifest_sha256": "4c8e78415d4fd3f544aeedfdf799285dfafb4b8df1473075028172b0c0413073"
+        },
+        {
+          "run_id": "SF-007-ATTEMPT-03",
+          "status": "FAILED_BEFORE_INJECTION_MONITOR_PATH_KEY",
+          "fault_injected": false,
+          "fault_recovered": false,
+          "capture_complete": false,
+          "public_bundle_created": false,
+          "private_gt_created": false,
+          "failure_record_sha256": "1b4cdc70ba95f4ac9198368f4dd7c3046dc94361878aa80a2f547dd72c8bcf6d",
+          "raw_archive_manifest_sha256": "8dafd3a86e78addade6c2f4c9a4bebc5115ca17342e638e1fddf52094866dc81"
+        },
+        {
+          "run_id": "SF-007-ATTEMPT-04",
+          "status": "FAILED_STORAGE_GATE_SEMANTICS_MISMATCH_AFTER_RECOVERY",
+          "fault_injected": true,
+          "fault_recovered": true,
+          "capture_complete": false,
+          "public_bundle_created": false,
+          "private_gt_created": false,
+          "failure_record_sha256": "b1e31a70f39813d334a307b85787e1b42ba4ada4520d488e877b31acabd1e9da",
+          "raw_archive_manifest_sha256": "4e03f0cbd2d9df32fcda1d6cd9097af4e3f3e5315af8e8baf71388e7a37bf434"
+        },
+        {
+          "case_id": "SF-007",
+          "status": "FAILED_STORAGE_GATE_SEMANTICS_MISMATCH",
+          "run_id": "SF-007-ATTEMPT-04",
+          "faults": [
+            "SERVICE_PAUSE_30"
+          ],
+          "fault_count": 1,
+          "failed_gate": "MASTER_PREFLIGHT_REJECTED_V2_PENDING_FORECAST_PASS",
+          "failure_record_sha256": "b1e31a70f39813d334a307b85787e1b42ba4ada4520d488e877b31acabd1e9da",
+          "raw_archive_manifest_sha256": "4e03f0cbd2d9df32fcda1d6cd9097af4e3f3e5315af8e8baf71388e7a37bf434",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-007-ATTEMPT-04",
+          "raw_worker1": "/data/rca-archives/ops-competition-2026/SF-007-ATTEMPT-04/raw",
+          "public_package": "NOT_CREATED",
+          "gt_status": "NOT_CREATED_FAILED_CAPTURE",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT",
+          "design_history": {
+            "case_id": "SF-007",
+            "status": "NOT_STARTED",
+            "planned_faults": [
+              "SERVICE_PAUSE_30",
+              "POD_MEMORY_32M_60"
+            ],
+            "draft_only": true
+          }
+        },
+        {
+          "case_id": "SF-007",
+          "status": "FAILED_STORAGE_FORECAST_SAFETY_STOP",
+          "run_id": "SF-007-ATTEMPT-05",
+          "faults": [
+            "SERVICE_PAUSE_30"
+          ],
+          "fault_count": 1,
+          "failure_record_sha256": "ee7fa8bf84cd5b5053e6f8aada4d11762740e1d094f0c6b250373fdacdc4dff9",
+          "formal_manifest_sha256": "c57b95123361f157b90c757d50c5386d85101ed96b4ad9445054919f4bbcdfaf",
+          "raw_archive_manifest_sha256": "4aa5a230855e013c5b036db548e36621805e8e51dc28be7d98e109a07268adbe",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-007-ATTEMPT-05",
+          "raw_worker1": "/root/ops-competition-2026/failed-attempt-archives/SF-007-ATTEMPT-05/raw",
+          "public_package": "NOT_CREATED",
+          "gt_status": "NOT_CREATED_FAILED_CAPTURE",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT"
+        },
+        {
+          "case_id": "SF-007",
+          "status": "FAILED_BEFORE_INJECTION_STALE_IDENTITY",
+          "run_id": "SF-007-ATTEMPT-06",
+          "faults": [
+            "SERVICE_PAUSE_30"
+          ],
+          "fault_count": 1,
+          "faults_injected": 0,
+          "failed_gate": "CAPTURE_IDENTITY_SNAPSHOT_EXPIRED_BEFORE_T0",
+          "failure_record_sha256": "d36d56c0a9b2de84cd8eb3a88bd137ae215f4c6767c7ac6e902e1b831fa92aca",
+          "formal_manifest_sha256": "6fa2e52a8517981fce0c4a09306b882ba7733d4f6c90a965e76d13d8c080eb90",
+          "raw_archive_manifest_sha256": "a6ad4ff141300f2f2534ee404b618f985ec99d2154a56755c6fe38b5409d1787",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-007-ATTEMPT-06",
+          "raw_worker1": "/data/rca-archives/ops-competition-2026/SF-007-ATTEMPT-06/raw",
+          "public_package": "NOT_CREATED",
+          "gt_status": "NOT_CREATED_BEFORE_INJECTION",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT"
+        },
+        {
+          "case_id": "SF-007",
+          "status": "FAILED_BEFORE_UNITS_STALE_IDENTITY",
+          "run_id": "SF-007-ATTEMPT-07",
+          "faults": [
+            "SERVICE_PAUSE_30"
+          ],
+          "fault_count": 1,
+          "faults_injected": 0,
+          "failed_gate": "STARTUP_IDENTITY_180_SECOND_GUARD",
+          "failure_record_sha256": "ca35dfc4dfb4d031173d9b0e36e42986ccc01962ae623d37756cfd13586a530d",
+          "formal_manifest_sha256": "1dc30ff5bb7c0cc3b386235ecf637dd0012ac352102339429deeadd329680c37",
+          "raw_archive_manifest_sha256": "6ece31feb8b30d22071dee9f5f3863ecaef70e8e386b8be75c9f106fea4fa529",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-007-ATTEMPT-07",
+          "raw_worker1": "/data/rca-archives/ops-competition-2026/SF-007-ATTEMPT-07/raw",
+          "public_package": "NOT_CREATED",
+          "gt_status": "NOT_CREATED_BEFORE_UNITS",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT"
+        }
+      ]
+    },
+    {
+      "attempt_history": [
+        {
+          "case_id": "SF-008",
+          "status": "NOT_STARTED",
+          "planned_faults": [
+            "POD_MEMORY_32M_60",
+            "HTTP_HOME_DELAY_250MS_60"
+          ],
+          "draft_only": true
+        },
+        {
+          "run_id": "SF-008-ATTEMPT-01",
+          "status": "FAILED_BEFORE_INJECTION",
+          "reason": "Missing SF008_RUN in ARMED preflight"
+        },
+        {
+          "run_id": "SF-008-ATTEMPT-02",
+          "status": "FAILED_BEFORE_INJECTION",
+          "reason": "Five-host monitor used an obsolete 30-second capture startup grace"
+        },
+        {
+          "run_id": "SF-008-ATTEMPT-03",
+          "status": "FAILED_BEFORE_INJECTION",
+          "reason": "Old observer remained active; original residue audit missed ops-sf008 prefix"
+        },
+        {
+          "status": "FAILED_ADMISSION",
+          "case_id": "SF-008",
+          "run_id": "SF-008-ATTEMPT-05",
+          "ready_for_import": false,
+          "failed_checks": [
+            "pod_direct_memory_signal",
+            "image_latency"
+          ],
+          "capture_terminal_sha256": "faed7dd2c27a42cb62be27cd14417320454554858ad65052a3baaed325c46d6a",
+          "admission_sha256": "6ed1592a6837a26e71d2939fadba7f1f29c3beb2b18a4e47c100c040710c3f36",
+          "public_manifest_sha256": "148f610d0033c1db7963e5254df894d54fb326e1ba3b787f00ea8e7147d829a4",
+          "raw_archive_manifest_sha256": "234428ca9163024d5387f2d0efeca43a3403954b004e21c2a8b4330303f191c5",
+          "output_archive_manifest_sha256": "b432a2455782d9a4390ba25864123a806d2a793fb73c9c61b2e2a962d7aa596e",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-008-ATTEMPT-05",
+          "public_master": "/data/stage5-v3/ops-competition-2026/packages/SF-008-ATTEMPT-05/public",
+          "raw_worker1": "/data/rca-archives/ops-competition-2026/SF-008-ATTEMPT-05/raw",
+          "outputs_worker1": "/data/rca-archives/ops-competition-2026/SF-008-ATTEMPT-05/outputs",
+          "gt_status": "NOT_CREATED_FAILED_ADMISSION",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT",
+          "final_health_sha256": "390fd51d02e2e57f0f5f0840cf218b5a5f35ed831248b69dcc93ce3b45880551",
+          "final_residue_sha256": "63b3f6dc4b2fc97dc4814a2e0c7e9c6de8efb75297e98fc72be41b764e1573b7",
+          "final_units_sha256": "99df99d5c9d7b834e59cac2df5b2b89c817653419f4eb08903f039954d1f5f90"
+        },
+        {
+          "run_id": "SF-008-ATTEMPT-06",
+          "status": "FAILED_CAPTURE_STALE_POD_STAGE_DEADLINE",
+          "fault_injected": true,
+          "fault_recovered": true,
+          "capture_complete": false,
+          "public_bundle_created": false,
+          "private_gt_created": false,
+          "failure_record_sha256": "5a0ce8615f52a5c5062324774474f45690626745faa4429e61fe91c2597bd8e0",
+          "raw_archive_manifest_sha256": "25e0eb345d771b92362fac490ec6b12d45d2b7346080b6c39b66c8010bddb616"
+        },
+        {
+          "run_id": "SF-008-ATTEMPT-07",
+          "status": "FAILED_BEFORE_INJECTION_W3_RESERVATION_FORECAST",
+          "fault_injected": false,
+          "fault_recovered": false,
+          "capture_complete": false,
+          "public_bundle_created": false,
+          "private_gt_created": false,
+          "failure_record_sha256": "4e93256749a1920b1954b14b12601c9b9e7298eb33806e661ffbcce034af3865",
+          "raw_archive_manifest_sha256": "a46b9fd5534e40638ab4958f62973093247c73629d2b2b12246cb4e831265b02"
+        },
+        {
+          "run_id": "SF-008-ATTEMPT-08",
+          "status": "FAILED_SUSTAINED_WORKER1_STORAGE_FORECAST_AFTER_RECOVERY",
+          "fault_injected": true,
+          "fault_recovered": true,
+          "capture_complete": false,
+          "public_bundle_created": false,
+          "private_gt_created": false,
+          "failure_record_sha256": "405cd0a40347ad9559f6510f68202bb4ff250758e1d76d5cd6a3ca88ab32a486",
+          "raw_archive_manifest_sha256": "c85989e52fea351dfafbd1b62f79c3464ff5b2d632aa0f5dd1dbf22215468b96"
+        },
+        {
+          "case_id": "SF-008",
+          "status": "FAILED_STORAGE_FORECAST",
+          "run_id": "SF-008-ATTEMPT-08",
+          "faults": [
+            "POD_MEMORY_32M_300"
+          ],
+          "fault_count": 1,
+          "failed_gate": "THREE_CONSECUTIVE_WORKER1_FORECASTS_BELOW_5GB",
+          "formal_manifest_sha256": "328cf51c4e651cb199e3a624b021bc95c3a5ad67431cfacb0a9b78a83328eba1",
+          "capture_terminal_sha256": "faed7dd2c27a42cb62be27cd14417320454554858ad65052a3baaed325c46d6a",
+          "raw_archive_manifest_sha256": "c85989e52fea351dfafbd1b62f79c3464ff5b2d632aa0f5dd1dbf22215468b96",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-008-ATTEMPT-08",
+          "raw_worker1": "/data/rca-archives/ops-competition-2026/SF-008-ATTEMPT-05/raw",
+          "raw_worker2": "/data/rca-archives/ops-competition-2026/SF-008-ATTEMPT-08/raw",
+          "public_package": "NOT_CREATED",
+          "gt_status": "NOT_CREATED_FAILED_CAPTURE",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT",
+          "admission_sha256": "6ed1592a6837a26e71d2939fadba7f1f29c3beb2b18a4e47c100c040710c3f36",
+          "public_manifest_sha256": "148f610d0033c1db7963e5254df894d54fb326e1ba3b787f00ea8e7147d829a4",
+          "output_archive_manifest_sha256": "b432a2455782d9a4390ba25864123a806d2a793fb73c9c61b2e2a962d7aa596e",
+          "failure_record_sha256": "405cd0a40347ad9559f6510f68202bb4ff250758e1d76d5cd6a3ca88ab32a486"
+        }
+      ],
+      "case_id": "SF-008",
+      "status": "READY_FOR_IMPORT",
+      "run_id": "SF-008-ATTEMPT-09",
+      "faults": [
+        "POD_MEMORY_32M_300"
+      ],
+      "fault_count": 1,
+      "formal_manifest_sha256": "c43462d225f256002a52a878caf67f8e4c0342d8a2f41994111703bca323b2df",
+      "public_manifest_sha256": "5182f70f54aa264746db2527f7da5b0a36d40f0328e1ab6003963b8cc7a59418",
+      "admission_decision_sha256": "4612df91b5797c24813aad20152beb6824d542f3102a788dbe6477422a0ee4fe",
+      "public_verification_sha256": "a28c84986f0cd512fb5fbb318eca0d0ca41277d610de94af1c51a2bcc355ff41",
+      "raw_archive_manifest_sha256": "4f9a33a2bb5e90c2d06e670c6cce62b6f4701d1fb97101cd181a01140fc97a67",
+      "output_archive_manifest_sha256": "8cf9f2aa5dd9c68e18babb165e16c4df08b5273889362986e3c36a1dd139518c",
+      "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-008-ATTEMPT-09",
+      "package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-008-ATTEMPT-09",
+      "raw_and_package_worker2": "/data/rca-archives/ops-competition-2026/SF-008-ATTEMPT-09",
+      "admission": "SF008_POD_MEMORY_ADMISSION_PASS",
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+      "gt_candidates": 4,
+      "gt_draft_sha256": "4febc99c5a9e4efafb775a33cc837f2a6e64c3d05cbf5e2f320a5b82d7acedee",
+      "server_import": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED"
+    },
+    {
+      "attempt_history": [
+        {
+          "case_id": "SF-009",
+          "status": "PRE_FORMAL_BLOCKED_COLLECTOR_REFUSAL",
+          "planned_faults": [
+            "HTTP_HOME_DELAY_250MS_60",
+            "SERVICE_PAUSE_30"
+          ],
+          "rehearsal_id": "SF009-REVERSE-NOFAULT-01",
+          "marker_manifest_sha256": "3d3057ec8fb57bfa538aabc1ec784b7697c55d2a445b97f26a9c11575a978655",
+          "rehearsal_source_manifest_sha256": "4fb079193c41191aaf351f907da177fffd769db9162034b255ae8e64552872a8",
+          "collector_refused_delta_observed": {
+            "grpc": 662,
+            "http": 476
+          },
+          "faults_injected": 0,
+          "formal_manifest": "NOT_CREATED",
+          "public_package": "NOT_CREATED",
+          "gt_status": "NOT_CREATED",
+          "server_import": "NOT_EXECUTED"
+        },
+        {
+          "case_id": "SF-009",
+          "status": "FAILED_ADMISSION",
+          "run_id": "SF-009-ATTEMPT-01",
+          "faults": [
+            "HTTP_HOME_DELAY_250MS_60",
+            "SERVICE_PAUSE_30"
+          ],
+          "fault_count": 2,
+          "failed_gates": [
+            "service_caller_failures",
+            "service_image_latency"
+          ],
+          "formal_manifest_sha256": "bb21889e89cbec3f28d3446d8369138cd4bae02e1d38b4e0626e2ad676941673",
+          "public_manifest_sha256": "255c71702c37fe8c7a06682574509f52e2a04ef5b6ce13383fc25e91801d1cf4",
+          "raw_archive_manifest_sha256": "2810255d6839528c028aa1e810b94f0931d61b7353345e40fcffd15084e7568f",
+          "output_archive_manifest_sha256": "f09f9dd549c9aa7becfc410c3356f64b42ae9cbc9c067516eba92f24108a6b92",
+          "admission_decision_sha256": "6145d5716f86bd6e6dbb8edebcf76a6e5421d6cf6215dfdcdaf1f9b9369e613d",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-009-ATTEMPT-01",
+          "package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-009-ATTEMPT-01",
+          "raw_and_package_worker2": "/data/rca-archives/ops-competition-2026/SF-009-ATTEMPT-01",
+          "raw_and_package_worker3": "/data/rca-archives/ops-competition-2026/SF-009-ATTEMPT-01",
+          "row_counts": {
+            "metrics": 39534,
+            "logs": 285434,
+            "traces": 423849
+          },
+          "trace_index_rows": 60689,
+          "gt_status": "NOT_CREATED_FAILED_ADMISSION",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT"
+        },
+        {
+          "run_id": "SF-009-ATTEMPT-02",
+          "status": "FAILED_BEFORE_INJECTION_MASTER_TO_WORKER3_AUTH",
+          "fault_injected": false,
+          "capture_complete": false,
+          "public_bundle_created": false,
+          "private_gt_created": false,
+          "formal_manifest_sha256": "0d2009ed331fc1f6b3f87adab8b1192c22e5ac78c0636a9f3d2f8bfab3f327f1",
+          "failure_record_sha256": "9a3b8cb6a569222c3a35e8650d1663fe61ae7e227c809a0e360a800421d1b420",
+          "raw_archive_manifest_sha256": "58b3e6286ed906e2e5b9f699721da8ed0842459116c324da7152ca89f3deb46a"
+        },
+        {
+          "run_id": "SF-009-ATTEMPT-03",
+          "status": "FAILED_CAPTURE_AFTER_HTTP_MASTER_HEARTBEAT_LOSS",
+          "http_reqdelay_250ms_requests_applied": 102,
+          "service_pause_injected": false,
+          "capture_complete": false,
+          "public_bundle_created": false,
+          "private_gt_created": false,
+          "formal_manifest_sha256": "40f0790f38a77007f2a5615fb97bb426a23c6edacd1c33b7743d29e7be124c69",
+          "failure_record_sha256": "4c8bace920eb7179b5576152d30ac3afb6c3ba9434bdb016f14d785d0e8443aa",
+          "raw_archive_manifest_sha256": "72ce5f94ad5418ee85c3b0e02615e96a6ff161cd845cced6b44cfd620e2791ac"
+        }
+      ],
+      "case_id": "SF-009",
+      "status": "READY_FOR_IMPORT",
+      "run_id": "SF-009-ATTEMPT-04",
+      "faults": [
+        "HTTP_HOME_DELAY_250MS_60",
+        "SERVICE_PAUSE_30"
+      ],
+      "fault_count": 2,
+      "formal_manifest_sha256": "cbff5e273e8f03b8c09c2f9278c8b9572f0e94744cec65a3faca48fc5b674a50",
+      "public_manifest_sha256": "85c2d7f401939d62ad2cf76d24e19c5cb5250ad76c31e775293520f33a6bfd37",
+      "public_verification_sha256": "bfa783b1ab2115e0696758c3a9762ad2d8ef3d38293c421f7149f275aaf77750",
+      "admission_decision_sha256": "3ddd6011eceac5c3a61d09d820ab283093513a4973acad585c7cdf85fd8d12ec",
+      "raw_archive_manifest_sha256": "2d79c79704acd96e7af5b5ed8de3f90077c2fa2ac34ff3f727f7e0da61d2f02c",
+      "output_archive_manifest_sha256": "9efafbebaa95944fd1163a53e7061dde2e82a72a7caee0098a00e01d53cab1b5",
+      "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-009-ATTEMPT-04",
+      "package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-009-ATTEMPT-04",
+      "raw_and_package_worker2": "/data/rca-archives/ops-competition-2026/SF-009-ATTEMPT-04",
+      "row_counts": {
+        "metrics": 40734,
+        "logs": 195753,
+        "traces": 354327
+      },
+      "trace_index_rows": 54268,
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+      "gt_candidates": 16,
+      "gt_merged_events": 6,
+      "gt_draft_sha256": "094b5aee5464259c98b70cc1d803639c5b49c6f853393602ca68311e17bb97f9",
+      "server_import": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "next_worker2_archive_budget": "STOP_NEW_WORK"
+    },
+    {
+      "case_id": "SF-010",
+      "status": "READY_FOR_IMPORT",
+      "run_id": "SF-010-ATTEMPT-07",
+      "faults": [
+        "SERVICE_PAUSE_30",
+        "HTTP_HOME_DELAY_250MS_60"
+      ],
+      "fault_count": 2,
+      "formal_manifest_sha256": "0ba2ba14613e8467bb250a5bb016678794a21b1256cb0f0ddab5fd40da10e537",
+      "public_manifest_sha256": "6598702cfb9edd0cd5476de44e46c5c75191f12583c67c34c86e75a6e8d47a96",
+      "raw_archive_manifest_sha256": "eeeba6f1dcad8026c3aeadaed1b8feeef997b2231a762ca8a2bac2f285232079",
+      "output_archive_manifest_sha256": "7b43689fd3d65893b6de460aac091e39a746068b778be438a4379e5ac892a69c",
+      "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-010-ATTEMPT-07",
+      "package_master": "/data/stage5-v3/ops-competition-2026/exports/SF-010-ATTEMPT-07",
+      "raw_and_package_worker2": "/data/rca-archives/ops-competition-2026/SF-010-ATTEMPT-07",
+      "raw_and_package_worker3": "/data/rca-archives/ops-competition-2026/SF-010-ATTEMPT-07",
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+      "gt_candidates": 20,
+      "server_import": "NOT_EXECUTED"
+    },
+    {
+      "case_id": "SF-011",
+      "status": "READY_FOR_IMPORT",
+      "run_id": "SF-011-ATTEMPT-05",
+      "faults": [
+        "HTTP_HOME_DELAY_250MS_60"
+      ],
+      "fault_count": 1,
+      "formal_manifest_sha256": "4fa5f7fecc4ac7943c8fe0c53d0240d318c3b60c2a4204c117a0be27069bb68e",
+      "public_manifest_sha256": "025b1a41fc56c17e5b0dd9e36731260eaa5268696b5f0e3b8d36b0a9af12d47e",
+      "public_verification_sha256": "990ba811245950e7f576223ef521c3b24d6f0d5b4ed5021f21bf9bd4eeaa5e90",
+      "admission_decision_sha256": "838b25dc31f73d65009235f871b632cc907e574307c99b82c4f28f61f3193a8b",
+      "raw_archive_manifest_sha256": "de68b183f896a94d26560764f3aa4ec0d01edecf731c26f155436219a2aa2bf1",
+      "output_archive_manifest_sha256": "67e499537c01109e918602f0138561a0daf7d410eb830b45ec56d73f5f0b07e6",
+      "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-011-ATTEMPT-05",
+      "package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-011-ATTEMPT-05",
+      "raw_and_package_worker3": "/data/rca-archives/ops-competition-2026/SF-011-ATTEMPT-05",
+      "row_counts": {
+        "metrics": 40792,
+        "logs": 192786,
+        "traces": 349397
+      },
+      "trace_index_rows": 53230,
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+      "gt_candidates": 2,
+      "gt_merged_events": 2,
+      "gt_draft_sha256": "a41147d6e5acdd112c78ab8ecff88ca6e90de8b69204f604bf78392c28dadde0",
+      "server_import": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "attempt_history": [
+        {
+          "case_id": "SF-011",
+          "status": "NOT_STARTED",
+          "planned_faults": [
+            "SERVICE_PAUSE_30",
+            "POD_MEMORY_32M_60",
+            "HTTP_HOME_DELAY_250MS_60"
+          ],
+          "draft_only": true
+        },
+        {
+          "case_id": "SF-011",
+          "status": "FAILED_ADMISSION",
+          "run_id": "SF-011-ATTEMPT-01",
+          "faults": [
+            "SERVICE_PAUSE_30",
+            "HTTP_HOME_DELAY_250MS_60"
+          ],
+          "fault_count": 2,
+          "failed_checks": [
+            "http_bounded_execution",
+            "service_caller_failures",
+            "service_image_latency"
+          ],
+          "formal_manifest_sha256": "2db45319a894a39c5a165a143362a969a6b478f582586f62321cb98048469e9c",
+          "public_manifest_sha256": "4a3edb93442dfd84421c8149d4888b0697d68618f06c084aa4baabcc5354cf63",
+          "public_verification_sha256": "0272d76072a1f307a35a9cd7123e790dd97d9c240e96fa1e8e0e860856139369",
+          "admission_decision_sha256": "e4a9a3c60a5c17bf5735846d84ab448ac565f019a9bbbc4874ffa6347c520fe2",
+          "failure_record_sha256": "092708767a8b08a74dffc91ecd838c990b5891d79fc9bbd9612ac0c458a8a30d",
+          "raw_archive_manifest_sha256": "92804be03368631b117e4efccf937e4b9474b451e1ae9993e2aaa268c49f55f3",
+          "rejected_output_archive_manifest_sha256": "0d019f276f40d9f421baac21ff06ecc8586c5ffd5aa4cd33f4cb57f2538c5a33",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-011-ATTEMPT-01",
+          "rejected_package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-011-ATTEMPT-01",
+          "raw_and_rejected_package_worker2": "/data/rca-archives/ops-competition-2026/SF-011-ATTEMPT-01",
+          "gt_status": "NOT_CREATED_FAILED_ADMISSION",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT"
+        },
+        {
+          "run_id": "SF-011-ATTEMPT-02",
+          "status": "FAILED_ADMISSION",
+          "faults_injected": 2,
+          "faults_recovered": true,
+          "capture_complete": true,
+          "public_structural_quality_pass": true,
+          "failed_checks": [
+            "service_cart_latency"
+          ],
+          "private_gt_created": false,
+          "failure_record_sha256": "a84409d6561f8a8b103b8eb2e7f8e202c62c05d043b6ce26c1f672e417c3f8d9",
+          "admission_decision_sha256": "b8f950ff8941304bb271201d5a1f5507192f31f053afc82009d83df3984baefb",
+          "raw_archive_manifest_sha256": "4736d7e5b75df0752d3d55df45272b248ad63cf6dff49f0459dfa0afbb8a04f4",
+          "rejected_output_archive_manifest_sha256": "0438af1ebc5ecb9c130a0c19ee8d0c7bdeac8079b96ff9ddb799a2d3074103c8"
+        },
+        {
+          "case_id": "SF-011",
+          "status": "FAILED_ADMISSION",
+          "run_id": "SF-011-ATTEMPT-02",
+          "faults": [
+            "SERVICE_PAUSE_30",
+            "HTTP_HOME_DELAY_250MS_60"
+          ],
+          "fault_count": 2,
+          "failed_checks": [
+            "service_cart_latency"
+          ],
+          "formal_manifest_sha256": "fb3fc362e13535bd57553d56cdc4bc22f74de9695d6d35a1fc29d1a9edc804e2",
+          "public_manifest_sha256": "685a75827c3a9f8a71218d6420f4c412e378226071da58091ed8882681cb2618",
+          "public_verification_sha256": "88c29f9cd7b8228ae7775bc52fe4dbb0386791eaea16cf67a89a5d1fcaba5ee7",
+          "admission_decision_sha256": "b8f950ff8941304bb271201d5a1f5507192f31f053afc82009d83df3984baefb",
+          "failure_record_sha256": "a84409d6561f8a8b103b8eb2e7f8e202c62c05d043b6ce26c1f672e417c3f8d9",
+          "raw_archive_manifest_sha256": "4736d7e5b75df0752d3d55df45272b248ad63cf6dff49f0459dfa0afbb8a04f4",
+          "rejected_output_archive_manifest_sha256": "0438af1ebc5ecb9c130a0c19ee8d0c7bdeac8079b96ff9ddb799a2d3074103c8",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-011-ATTEMPT-02",
+          "rejected_package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-011-ATTEMPT-02",
+          "raw_and_rejected_package_worker2": "/data/rca-archives/ops-competition-2026/SF-011-ATTEMPT-02",
+          "gt_status": "NOT_CREATED_FAILED_ADMISSION",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT",
+          "next_case_storage": "STOP_NEW_WORK_PENDING_VERIFIED_MIGRATION"
+        },
+        {
+          "case_id": "SF-011",
+          "status": "FAILED_ADMISSION",
+          "run_id": "SF-011-ATTEMPT-03",
+          "faults": [
+            "HTTP_HOME_DELAY_250MS_60"
+          ],
+          "fault_count": 1,
+          "failed_checks": [
+            "image_normal_latency"
+          ],
+          "formal_manifest_sha256": "6c0419b91d6f038d6de8b731cc58d4f9eb7811258b4661244dbc8b5af8e2047b",
+          "public_manifest_sha256": "e793f94cceb5c34c89b5197e0d264f2925197ceb63985f35eacef9a15474a066",
+          "public_verification_sha256": "c349503bbe801f78a94f67f02f46cdf7bf02ca915e26996626b5f634ddbc97ef",
+          "admission_decision_sha256": "38def9b79ec5b11b7144ed124681bc1b5d95f24c15cba148af60bf7de4d01767",
+          "failure_record_sha256": "571bf6db2d613bbdf7b6056caa9bf157ee508e82da99785199f015afaea9ed01",
+          "raw_archive_manifest_sha256": "0c0f62ee2a630240365a18748bb3ec65416c30f2f251363c098ded231c8a5016",
+          "rejected_output_archive_manifest_sha256": "f9b56f924f55feef9e0253fe2e022a08641038ac52734f2e41d23463b251b264",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-011-ATTEMPT-03",
+          "rejected_package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-011-ATTEMPT-03",
+          "raw_and_rejected_package_worker3": "/data/rca-archives/ops-competition-2026/SF-011-ATTEMPT-03",
+          "gt_status": "NOT_CREATED_FAILED_ADMISSION",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT"
+        },
+        {
+          "case_id": "SF-011",
+          "status": "FAILED_STORAGE_FORECAST_AFTER_HTTP_RECOVERY",
+          "run_id": "SF-011-ATTEMPT-04",
+          "faults": [
+            "HTTP_HOME_DELAY_250MS_60"
+          ],
+          "fault_count": 1,
+          "failed_gate": "WORKER1_FORECAST_BELOW_FIVE_GB",
+          "failure_record_sha256": "35fd765e5f7aaf60ef4b1de63f5afef02c29b692cea7ab59fdc39376719ae39f",
+          "formal_manifest_sha256": "e1422228927e42b3ab3f18d0c7d355f49afba9f195371824066b45113f979571",
+          "raw_archive_manifest_sha256": "c101aa621e1601c16b6dd4fba2c16da302e0fc9a6ccea6a2fb9c59dccab5cbc6",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-011-ATTEMPT-04",
+          "raw_worker3": "/data/rca-archives/ops-competition-2026/SF-011-ATTEMPT-04/raw",
+          "public_package": "NOT_CREATED",
+          "gt_status": "NOT_CREATED_FAILED_CAPTURE",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT"
+        }
+      ]
+    },
+    {
+      "case_id": "SF-012",
+      "status": "READY_FOR_IMPORT",
+      "run_id": "SF-012-ATTEMPT-04",
+      "faults": [
+        "POD_MEMORY_32M_300"
+      ],
+      "fault_count": 1,
+      "formal_manifest_sha256": "9114d3151130dc6e44005258363b056ce3ea4497b7f48a1106fc79a3fbeedb86",
+      "public_manifest_sha256": "7e7306cf61205d91f5e9c34dea33bc86fc077e0c3bb25e1bce15b684be6bbd12",
+      "public_verification_sha256": "22e53e8a7e069679f2fe84879490177c5c20372f887e422235d66d4ee05f58d1",
+      "admission_decision_sha256": "44cda9655affa2e766cefc77884ead95182f579ba78e85e8f7fad0071958b2b2",
+      "raw_archive_manifest_sha256": "58cd038d452cd0b8d1f45dea329bd085acfbe9f5eac913f01963799c7998611c",
+      "output_archive_manifest_sha256": "9a081dd7ab56b9813581e873a6e2e0b40f8cc784d580bc8fc1eba2f0f332fe12",
+      "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-012-ATTEMPT-04",
+      "package_master": "/data/stage5-v3/ops-competition-2026/packages/SF-012-ATTEMPT-04",
+      "raw_and_package_worker1": "/data/rca-archives/ops-competition-2026/SF-012-ATTEMPT-04",
+      "row_counts": {
+        "metrics": 40560,
+        "logs": 190092,
+        "traces": 351032
+      },
+      "trace_index_rows": 53722,
+      "gt_status": "DRAFT_PENDING_HUMAN_REVIEW",
+      "gt_candidates": 1,
+      "gt_merged_events": 1,
+      "gt_draft_sha256": "0594a5a31fe56b9744d1c074d8687d6cc98556cc3cc907e68e64e0bcec78fad2",
+      "server_import": "PENDING_PUBLIC_IMPORT_NOT_PUBLISHED",
+      "attempt_history": [
+        {
+          "case_id": "SF-012",
+          "status": "NOT_STARTED",
+          "planned_faults": [
+            "HTTP_HOME_DELAY_250MS_60",
+            "POD_MEMORY_32M_60",
+            "SERVICE_PAUSE_30"
+          ],
+          "draft_only": true
+        },
+        {
+          "case_id": "SF-012",
+          "status": "FAILED_PUBLIC_EXPORT_BOUNDARY",
+          "run_id": "SF-012-ATTEMPT-02",
+          "faults": [
+            "POD_MEMORY_32M_300"
+          ],
+          "fault_count": 1,
+          "failure_record_sha256": "76c1fa666dab672fb984b09d83d695d07d1097ff06bd1e4a9e4729675ede22aa",
+          "formal_manifest_sha256": "88a1a7e524d84811de831d9857c3f24e6d9e820609fea676a8a20e0ffa3213f9",
+          "capture_terminal_sha256": "3fde7287fb63c1b5d219ae40836c06376392d4f4fd2599783b4c0f103f770a01",
+          "raw_archive_manifest_sha256": "8b1157cd548ef443213e80ad43d57aba51af40d0bdeb79efd5c0af0ebc8a5050",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-012-ATTEMPT-02",
+          "raw_worker1": "/data/rca-archives/ops-competition-2026/SF-012-ATTEMPT-02/raw",
+          "gt_status": "NOT_CREATED_FAILED_EXPORT",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT"
+        },
+        {
+          "case_id": "SF-012",
+          "status": "FAILED_BEFORE_INJECTION_STALE_IDENTITY",
+          "run_id": "SF-012-ATTEMPT-03",
+          "faults": [
+            "POD_MEMORY_32M_300"
+          ],
+          "fault_count": 1,
+          "faults_injected": 0,
+          "failed_gate": "CAPTURE_IDENTITY_SNAPSHOT_EXPIRED_BEFORE_T0",
+          "failure_record_sha256": "ea8578d4069e2468f95c7be374dff02418f5a446115efc2b3abdd03aba8f854a",
+          "formal_manifest_sha256": "516eea7c937e55a04cf621a852b95385a3ef73df8eb6daf221487f3e83722eaa",
+          "raw_archive_manifest_sha256": "f38ee560ea4e38c396b36a1bf33fa5975abfef96f0a3993dc71c736d45331265",
+          "raw_master": "/data/stage5-v3/ops-competition-2026/runs/SF-012-ATTEMPT-03",
+          "raw_worker1": "/data/rca-archives/ops-competition-2026/SF-012-ATTEMPT-03/raw",
+          "public_package": "NOT_CREATED",
+          "gt_status": "NOT_CREATED_BEFORE_INJECTION",
+          "server_import": "PROHIBITED_FOR_FAILED_ATTEMPT"
+        }
+      ]
+    }
+  ],
+  "safety": {
+    "absolute_floor_bytes": 5000000000,
+    "no_historical_archive_deleted": true,
+    "no_practice_case_modified": true,
+    "no_contest_api_publication": true
+  },
+  "status_changes": [
+    {
+      "case_id": "SF-005",
+      "from_status": "FAILED_CONTROL_COVERAGE",
+      "to_status": "READY_FOR_IMPORT",
+      "run_id": "SF-005-ATTEMPT-04",
+      "at_utc": "2026-10-16T12:21:26.016184+00:00",
+      "previous_ledger_sha256": "03fb9cb15f6c16cd9a7388895e53f1bffbbaf1cd033b439a69916d164ecb95cf",
+      "evidence_public_manifest_sha256": "3bddfc396be4bb0a6002d1bbd959c44bf770a692e916dfd5c71da31fafd756f2",
+      "evidence_admission_sha256": "05ac89df1e9288a1d41c2523fe1ba02bda63cc425cb9285fc53a402474fe8dbe"
+    },
+    {
+      "case_id": "SF-009",
+      "from_status": "PRE_FORMAL_BLOCKED_COLLECTOR_REFUSAL",
+      "to_status": "FAILED_ADMISSION",
+      "run_id": "SF-009-ATTEMPT-01",
+      "at_utc": "2026-10-16T14:06:56.179191+00:00",
+      "previous_ledger_sha256": "d0e948bd8b3d19ff1d4380b3d5d50eeb12dde0bf7dc4253ddba6b89cdeb5296e",
+      "admission_sha256": "6145d5716f86bd6e6dbb8edebcf76a6e5421d6cf6215dfdcdaf1f9b9369e613d"
+    },
+    {
+      "case_id": "SF-008",
+      "from_status": "NOT_STARTED",
+      "to_status": "FAILED_CAPTURE_INFRASTRUCTURE",
+      "run_id": "SF-008-ATTEMPT-04",
+      "at_utc": "2026-10-16T16:40:07.199288+00:00",
+      "previous_ledger_sha256": "87cb426415eae9bf7d0a9229b72043919e9181bb537ef14ffa74b9c6a2efe5f4",
+      "capture_terminal_sha256": "1f8ee37de6440eae28cfa77744ff0e669e2e26db5cbb93ca73f1cfd8d1abc35b"
+    },
+    {
+      "case_id": "SF-004",
+      "from_status": "FAILED_OBSERVABILITY_CONTROL",
+      "to_status": "READY_FOR_IMPORT",
+      "run_id": "SF-004-ATTEMPT-05",
+      "at_utc": "2026-10-17T07:05:13.658863+00:00",
+      "previous_ledger_sha256": "bcaf9863423554d8052bba906221c940b52f18ad998935887cde4a2d79ebd82c",
+      "evidence_public_manifest_sha256": "7074bed09aaae6f5828f8e37e8c03aad0b6dc9caa0188f386867649c9047b242",
+      "evidence_admission_sha256": "e8bb046e2afdbacf3454ae7e9fc53146ef4c35528c6cc4de1fa1653bc6de1377"
+    },
+    {
+      "case_id": "SF-006",
+      "from_status": "NOT_STARTED",
+      "to_status": "READY_FOR_IMPORT",
+      "run_id": "SF-006-ATTEMPT-01",
+      "at_utc": "2026-10-17T08:07:18.696932+00:00",
+      "previous_ledger_sha256": "5c79ba626aabf7625b0e432f6e04cbea6c8ff16d4a91b538f850ecf0198345e1",
+      "evidence_public_manifest_sha256": "895d85aedfc019b2573a573ca848f36d236047f66d4c279710ca8df495cee66f",
+      "evidence_admission_sha256": "55441c38632ae10635f875696cf0eebb1f2d52268dc977b68fe890aa8ec9b902",
+      "simplification": "Original Pod+Service draft replaced prospectively by one qualified PodMemory60 fault"
+    },
+    {
+      "case_id": "SF-007",
+      "from_status": "NOT_STARTED",
+      "to_status": "FAILED_TARGET_STREAM_COVERAGE",
+      "run_id": "SF-007-ATTEMPT-01",
+      "at_utc": "2026-10-17T08:59:02.429834+00:00",
+      "previous_ledger_sha256": "55dd88eb494ac0b738d4c354036987a07c198ca58d21d7032810e6852f537ead",
+      "failure_record_sha256": "a9f7da87f0f9de660a6dd3a9c4c437c7312d2dda0922926b7c11fde3910c2412",
+      "raw_archive_manifest_sha256": "45db324015272c190e7aef917594573a1b8a194b0d84aa4c949662071eafe8d5"
+    },
+    {
+      "case_id": "SF-008",
+      "from_status": "FAILED_CAPTURE_INFRASTRUCTURE",
+      "to_status": "FAILED_ADMISSION",
+      "run_id": "SF-008-ATTEMPT-05",
+      "at_utc": "2026-10-17T09:52:40.333784+00:00",
+      "previous_ledger_sha256": "ed20e8afa7c7812206c9e9f04dc927515f300509d0de30313d90d5ff3be73536",
+      "failure_record_sha256": "69f5da24f966d75202dcb3c28b7509a8e5293726fb2825ba9a900679fb8d61e1"
+    },
+    {
+      "case_id": "SF-007",
+      "from_status": "FAILED_TARGET_STREAM_COVERAGE",
+      "to_status": "FAILED_DYNAMIC_STORAGE_FORECAST",
+      "run_id": "SF-007-ATTEMPT-02",
+      "at_utc": "2026-10-17T10:56:01.355390+00:00",
+      "previous_ledger_sha256": "f398dcce5db8ab5533ad3d9b8dd11d5ff1d8c88946a5eb95866e34ac6ea7162d",
+      "failure_record_sha256": "db878fd1bc06edb4b43132ef79df1a33d0c4faa1adc38cd2db303f7a7a9b0bcb",
+      "raw_archive_manifest_sha256": "4c8e78415d4fd3f544aeedfdf799285dfafb4b8df1473075028172b0c0413073"
+    },
+    {
+      "case_id": "SF-007",
+      "from_status": "FAILED_DYNAMIC_STORAGE_FORECAST",
+      "to_status": "FAILED_BEFORE_INJECTION",
+      "run_id": "SF-007-ATTEMPT-03",
+      "at_utc": "2026-10-17T11:38:39.558742+00:00",
+      "previous_ledger_sha256": "f85439c5ceb18e890f50d57b46991a5189ddbd3e97b918dc2c040bcf7556bac2",
+      "failure_record_sha256": "1b4cdc70ba95f4ac9198368f4dd7c3046dc94361878aa80a2f547dd72c8bcf6d",
+      "raw_archive_manifest_sha256": "8dafd3a86e78addade6c2f4c9a4bebc5115ca17342e638e1fddf52094866dc81"
+    },
+    {
+      "case_id": "SF-007",
+      "from_status": "FAILED_BEFORE_INJECTION",
+      "to_status": "FAILED_STORAGE_GATE_SEMANTICS_MISMATCH",
+      "run_id": "SF-007-ATTEMPT-04",
+      "at_utc": "2026-10-17T12:05:40.753995+00:00",
+      "previous_ledger_sha256": "5eefaaa7cab49b76a7477b90bf537e6cdf5b79769e86afcbde91ddcb6bfc72f3",
+      "failure_record_sha256": "b1e31a70f39813d334a307b85787e1b42ba4ada4520d488e877b31acabd1e9da",
+      "raw_archive_manifest_sha256": "4e03f0cbd2d9df32fcda1d6cd9097af4e3f3e5315af8e8baf71388e7a37bf434"
+    },
+    {
+      "case_id": "SF-008",
+      "from_status": "FAILED_ADMISSION",
+      "to_status": "FAILED_CAPTURE_STAGE_DEADLINE",
+      "run_id": "SF-008-ATTEMPT-06",
+      "at_utc": "2026-10-17T12:42:36.066189+00:00",
+      "previous_ledger_sha256": "69d365623ca2e440556108fed6f5699e0e706838c785508a233e2e90f4f327f0",
+      "failure_record_sha256": "5a0ce8615f52a5c5062324774474f45690626745faa4429e61fe91c2597bd8e0",
+      "raw_archive_manifest_sha256": "25e0eb345d771b92362fac490ec6b12d45d2b7346080b6c39b66c8010bddb616"
+    },
+    {
+      "case_id": "SF-008",
+      "from_status": "FAILED_CAPTURE_STAGE_DEADLINE",
+      "to_status": "FAILED_BEFORE_INJECTION_STORAGE_RESERVATION",
+      "run_id": "SF-008-ATTEMPT-07",
+      "at_utc": "2026-10-17T13:06:56.477841+00:00",
+      "previous_ledger_sha256": "002f08bb8998f825433e555fbad34e40ce26e19db2ea384fba277347164fe7ea",
+      "failure_record_sha256": "4e93256749a1920b1954b14b12601c9b9e7298eb33806e661ffbcce034af3865",
+      "raw_archive_manifest_sha256": "a46b9fd5534e40638ab4958f62973093247c73629d2b2b12246cb4e831265b02"
+    },
+    {
+      "case_id": "SF-008",
+      "from_status": "FAILED_BEFORE_INJECTION_STORAGE_RESERVATION",
+      "to_status": "FAILED_STORAGE_FORECAST",
+      "run_id": "SF-008-ATTEMPT-08",
+      "at_utc": "2026-10-17T14:13:13.566294+00:00",
+      "previous_ledger_sha256": "8698a7957c3d0d74147825e33d74cfc5357b68e83f7073ebe3e5d311d7c52269",
+      "failure_record_sha256": "405cd0a40347ad9559f6510f68202bb4ff250758e1d76d5cd6a3ca88ab32a486",
+      "raw_archive_manifest_sha256": "c85989e52fea351dfafbd1b62f79c3464ff5b2d632aa0f5dd1dbf22215468b96"
+    },
+    {
+      "case_id": "SF-008",
+      "from_status": "FAILED_STORAGE_FORECAST",
+      "to_status": "READY_FOR_IMPORT",
+      "run_id": "SF-008-ATTEMPT-09",
+      "at_utc": "2026-10-17T15:20:25.913073+00:00",
+      "previous_ledger_sha256": "0348f24cfc7fa23c936f9571c7d3cd56a68273dc0d8f2b652b42fd40cb4aec4d",
+      "public_manifest_sha256": "5182f70f54aa264746db2527f7da5b0a36d40f0328e1ab6003963b8cc7a59418",
+      "admission_decision_sha256": "4612df91b5797c24813aad20152beb6824d542f3102a788dbe6477422a0ee4fe"
+    },
+    {
+      "case_id": "SF-009",
+      "from_status": "FAILED_ADMISSION",
+      "to_status": "FAILED_BEFORE_INJECTION_MASTER_TO_WORKER3_AUTH",
+      "run_id": "SF-009-ATTEMPT-02",
+      "at_utc": "2026-10-17T15:37:49.804693+00:00",
+      "previous_ledger_sha256": "bea5dc3dbce9cf4d8b100b108efbeaa519a4cfbdde3a521f0cbaed074873cb61",
+      "failure_record_sha256": "9a3b8cb6a569222c3a35e8650d1663fe61ae7e227c809a0e360a800421d1b420",
+      "raw_archive_manifest_sha256": "58b3e6286ed906e2e5b9f699721da8ed0842459116c324da7152ca89f3deb46a"
+    },
+    {
+      "case_id": "SF-009",
+      "from_status": "FAILED_BEFORE_INJECTION_MASTER_TO_WORKER3_AUTH",
+      "to_status": "FAILED_CAPTURE_AFTER_HTTP_MASTER_HEARTBEAT_LOSS",
+      "run_id": "SF-009-ATTEMPT-03",
+      "at_utc": "2026-10-18T02:03:16.527936+00:00",
+      "previous_ledger_sha256": "3f441a59759d8fbf4dc717446a09ff9e908d4f552e81a46c6c6c764bb65a50b4",
+      "failure_record_sha256": "4c8bace920eb7179b5576152d30ac3afb6c3ba9434bdb016f14d785d0e8443aa",
+      "raw_archive_manifest_sha256": "72ce5f94ad5418ee85c3b0e02615e96a6ff161cd845cced6b44cfd620e2791ac"
+    },
+    {
+      "case_id": "SF-011",
+      "from_status": "NOT_STARTED",
+      "to_status": "FAILED_ADMISSION",
+      "run_id": "SF-011-ATTEMPT-01",
+      "at_utc": "2026-10-18T03:37:10.448153+00:00",
+      "previous_ledger_sha256": "7854666b95dc3bc53cd9b14ccdb1215a420181b2d1da00d2d0bad27dc0951fcc",
+      "failure_record_sha256": "092708767a8b08a74dffc91ecd838c990b5891d79fc9bbd9612ac0c458a8a30d",
+      "admission_decision_sha256": "e4a9a3c60a5c17bf5735846d84ab448ac565f019a9bbbc4874ffa6347c520fe2",
+      "raw_archive_manifest_sha256": "92804be03368631b117e4efccf937e4b9474b451e1ae9993e2aaa268c49f55f3",
+      "rejected_output_archive_manifest_sha256": "0d019f276f40d9f421baac21ff06ecc8586c5ffd5aa4cd33f4cb57f2538c5a33"
+    },
+    {
+      "case_id": "SF-011",
+      "from_status": "FAILED_ADMISSION",
+      "to_status": "FAILED_ADMISSION",
+      "run_id": "SF-011-ATTEMPT-02",
+      "at_utc": "2026-10-18T04:44:00.472299+00:00",
+      "previous_ledger_sha256": "b5e83033efa81610685133bac9e384fa04187d61659c25bcf92f2c80235046b1",
+      "failure_record_sha256": "a84409d6561f8a8b103b8eb2e7f8e202c62c05d043b6ce26c1f672e417c3f8d9",
+      "admission_decision_sha256": "b8f950ff8941304bb271201d5a1f5507192f31f053afc82009d83df3984baefb",
+      "raw_archive_manifest_sha256": "4736d7e5b75df0752d3d55df45272b248ad63cf6dff49f0459dfa0afbb8a04f4"
+    },
+    {
+      "case_id": "SF-009",
+      "from_status": "FAILED_CAPTURE_AFTER_HTTP_MASTER_HEARTBEAT_LOSS",
+      "to_status": "READY_FOR_IMPORT",
+      "run_id": "SF-009-ATTEMPT-04",
+      "at_utc": "2026-10-18T05:43:05.034024+00:00",
+      "previous_ledger_sha256": "66a195276b926adf58a47e3e981c04926338eef98c96dac100d201daa94f0305",
+      "public_manifest_sha256": "85c2d7f401939d62ad2cf76d24e19c5cb5250ad76c31e775293520f33a6bfd37",
+      "admission_decision_sha256": "3ddd6011eceac5c3a61d09d820ab283093513a4973acad585c7cdf85fd8d12ec"
+    },
+    {
+      "case_id": "SF-012",
+      "from_status": "NOT_STARTED",
+      "to_status": "FAILED_PUBLIC_EXPORT_BOUNDARY",
+      "run_id": "SF-012-ATTEMPT-02",
+      "at_utc": "2026-10-18T06:37:18.239124+00:00",
+      "previous_ledger_sha256": "694937cb16458c7c5d3c962467def53d515b3579ea39d4adbb3481223695c431",
+      "failure_record_sha256": "76c1fa666dab672fb984b09d83d695d07d1097ff06bd1e4a9e4729675ede22aa"
+    },
+    {
+      "case_id": "SF-007",
+      "from_status": "FAILED_STORAGE_GATE_SEMANTICS_MISMATCH",
+      "to_status": "FAILED_STORAGE_FORECAST_SAFETY_STOP",
+      "run_id": "SF-007-ATTEMPT-05",
+      "at_utc": "2026-10-18T07:02:28.584004+00:00",
+      "previous_ledger_sha256": "3736e5ab32d2ebf5c2286265f19119a796f663e1c3db7e617114769d74ef79c0",
+      "failure_record_sha256": "ee7fa8bf84cd5b5053e6f8aada4d11762740e1d094f0c6b250373fdacdc4dff9"
+    },
+    {
+      "case_id": "SF-011",
+      "from_status": "FAILED_ADMISSION",
+      "to_status": "FAILED_ADMISSION",
+      "run_id": "SF-011-ATTEMPT-03",
+      "at_utc": "2026-10-18T08:39:49.899834+00:00",
+      "previous_ledger_sha256": "359c15c5896a14137e78323c92fad9442140d67eeb6432522117632db9d3d46a",
+      "failure_record_sha256": "571bf6db2d613bbdf7b6056caa9bf157ee508e82da99785199f015afaea9ed01"
+    },
+    {
+      "case_id": "SF-007",
+      "from_status": "FAILED_STORAGE_FORECAST_SAFETY_STOP",
+      "to_status": "FAILED_BEFORE_INJECTION_STALE_IDENTITY",
+      "run_id": "SF-007-ATTEMPT-06",
+      "at_utc": "2026-10-18T08:50:06.275530+00:00",
+      "previous_ledger_sha256": "7af5c38ea0c9f0beb59f77ac7881cd41c21a5e595396ddc38556548cb7944b33",
+      "failure_record_sha256": "d36d56c0a9b2de84cd8eb3a88bd137ae215f4c6767c7ac6e902e1b831fa92aca"
+    },
+    {
+      "case_id": "SF-012",
+      "from_status": "FAILED_PUBLIC_EXPORT_BOUNDARY",
+      "to_status": "FAILED_BEFORE_INJECTION_STALE_IDENTITY",
+      "run_id": "SF-012-ATTEMPT-03",
+      "at_utc": "2026-10-18T09:05:25.561107+00:00",
+      "previous_ledger_sha256": "e1ce9bd47e71f0c917b24c1b5072359be94a4243c85520ccec4c39150ea373fc",
+      "failure_record_sha256": "ea8578d4069e2468f95c7be374dff02418f5a446115efc2b3abdd03aba8f854a"
+    },
+    {
+      "case_id": "SF-012",
+      "from_status": "FAILED_BEFORE_INJECTION_STALE_IDENTITY",
+      "to_status": "READY_FOR_IMPORT",
+      "run_id": "SF-012-ATTEMPT-04",
+      "at_utc": "2026-10-18T10:04:04.708971+00:00",
+      "previous_ledger_sha256": "38806f92990e2b74b7ddcdfca8d687e2f3d572e843a36d05ff9533cddb384dca",
+      "public_manifest_sha256": "7e7306cf61205d91f5e9c34dea33bc86fc077e0c3bb25e1bce15b684be6bbd12",
+      "admission_decision_sha256": "44cda9655affa2e766cefc77884ead95182f579ba78e85e8f7fad0071958b2b2"
+    },
+    {
+      "case_id": "SF-007",
+      "from_status": "FAILED_BEFORE_INJECTION_STALE_IDENTITY",
+      "to_status": "FAILED_BEFORE_UNITS_STALE_IDENTITY",
+      "run_id": "SF-007-ATTEMPT-07",
+      "at_utc": "2026-10-18T10:16:35.193942+00:00",
+      "previous_ledger_sha256": "82984ea1361fe3c775e0070096f46e07a6956ee75dde01ccd95e8f144cf62bf3",
+      "failure_record_sha256": "ca35dfc4dfb4d031173d9b0e36e42986ccc01962ae623d37756cfd13586a530d"
+    },
+    {
+      "case_id": "SF-007",
+      "from_status": "FAILED_BEFORE_UNITS_STALE_IDENTITY",
+      "to_status": "READY_FOR_IMPORT",
+      "run_id": "SF-007-ATTEMPT-08",
+      "at_utc": "2026-10-18T11:13:09.786961+00:00",
+      "previous_ledger_sha256": "20a86d28b4712580b5093a0a0da60c06c9e16942b734e668c1d5f845029227b5",
+      "public_manifest_sha256": "b5b3291da7ebc0f8b54f2098ffb3193f763c657f99c2843552c23562a5b7493d",
+      "admission_decision_sha256": "511fe65a129f482cd81b756689d92042e813a7978b9a5004c72413908883712e"
+    },
+    {
+      "case_id": "SF-011",
+      "from_status": "FAILED_ADMISSION",
+      "to_status": "FAILED_STORAGE_FORECAST_AFTER_HTTP_RECOVERY",
+      "run_id": "SF-011-ATTEMPT-04",
+      "at_utc": "2026-10-18T12:23:30.768307+00:00",
+      "previous_ledger_sha256": "433f6703c21f6ef6e3097343aec1300d89c7511bf65bd8d134d613a1a9341b44",
+      "failure_record_sha256": "35fd765e5f7aaf60ef4b1de63f5afef02c29b692cea7ab59fdc39376719ae39f"
+    },
+    {
+      "case_id": "SF-011",
+      "from_status": "FAILED_STORAGE_FORECAST_AFTER_HTTP_RECOVERY",
+      "to_status": "READY_FOR_IMPORT",
+      "run_id": "SF-011-ATTEMPT-05",
+      "at_utc": "2026-10-18T13:55:22.202458+00:00",
+      "previous_ledger_sha256": "ee8b439931e121e4909c9fab8de5c1f40f3afb8d9ec3ea7a4fc126b2198ceea8",
+      "public_manifest_sha256": "025b1a41fc56c17e5b0dd9e36731260eaa5268696b5f0e3b8d36b0a9af12d47e",
+      "admission_decision_sha256": "838b25dc31f73d65009235f871b632cc907e574307c99b82c4f28f61f3193a8b"
+    }
+  ]
+}

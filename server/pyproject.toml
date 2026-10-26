@@ -1,0 +1,31 @@
+[project]
+name = "aiops-contest-data-server"
+version = "1.0.0"
+description = "Read-only observability query service for the AIOps competition"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "duckdb",
+  "pyarrow",
+  "polars",
+  "pandas",
+  "numpy",
+  "orjson",
+  "pyyaml",
+  "fastapi",
+  "uvicorn",
+  "pydantic",
+  "httpx",
+  "python-multipart",
+  "psutil",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+

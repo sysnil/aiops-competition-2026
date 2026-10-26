@@ -1,0 +1,28 @@
+[Unit]
+Description=Publish consistent scoring snapshot for committee viewer
+After=aiops-private-grader-demo.service
+
+[Service]
+Type=oneshot
+User=aiops-api
+Group=aiops-api
+ExecStart=/opt/aiops-competition-visualization/.venv312/bin/python /opt/aiops-competition-submissions/snapshot.py
+StateDirectory=aiops-submission-snapshot
+StateDirectoryMode=0700
+UMask=0077
+TimeoutStartSec=25
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+CapabilityBoundingSet=
+InaccessiblePaths=/etc/aiops-private-grader /etc/aiops-contest /data/aiops-contest /opt/aiops-contest-server
+# The source main database is read-only; SQLite may maintain its WAL sidecars.
+ReadWritePaths=/var/lib/aiops-grading /var/lib/aiops-submission-snapshot
+ReadOnlyPaths=/var/lib/aiops-grading/submissions.sqlite3 /var/lib/aiops-grading/answers /var/lib/aiops-grading/final-answers
+IPAddressDeny=any
+RestrictAddressFamilies=AF_UNIX

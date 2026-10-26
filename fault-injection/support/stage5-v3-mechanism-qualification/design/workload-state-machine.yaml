@@ -1,0 +1,76 @@
+schema_version: 1
+provenance:
+  deployment_image: ghcr.io/open-telemetry/demo:3.0.0-load-generator
+  deployed_script: /home/k6/script.js
+  deployed_script_sha256: cacfe65d69e2c20f2e22ebef618369a4ddf731ce750e275444f9c86cf50ac755
+  endpoint_basis: deployed_k6_script_plus_live_proxy_trace_2026_10_10
+  image_route_evidence:
+    trace_id: 2d88bbe72a66457e6dc1671670c6a420
+    observed_proxy_url: http://frontend-proxy:8080/images/products/OpticalTubeAssembly.jpg
+    verified_http_status: 200
+  extra_api_source_tag: https://github.com/open-telemetry/opentelemetry-demo/tree/3.0.0/src/frontend/pages/api
+  extra_api_live_verification:
+    currency: GET /api/currency
+    shipping: GET /api/shipping?itemList=...&currencyCode=USD&address=...
+entrypoint: http://frontend-proxy.otel-demo.svc.cluster.local:8080
+products:
+  - 0PUK6V6EV0
+  - 1YMWWN1N4O
+  - 2ZYFJ3GM2N
+  - 66VCHSJNUP
+  - 6E92ZMYYFZ
+  - 9SIQT8TOJO
+  - L9ECAV7KIM
+  - LS4PSXUNUM
+  - OLJCESPC7Z
+  - HQTGWGPNH4
+categories: [binoculars, telescopes, accessories, assembly, travel, books]
+operations:
+  home: {method: GET, path: /}
+  image_asset: {method: GET, path: /images/products/OpticalTubeAssembly.jpg}
+  currency: {method: GET, path: /api/currency}
+  product: {method: GET, path: '/api/products/{product}'}
+  recommendations: {method: GET, path: '/api/recommendations?productIds={product}'}
+  ads: {method: GET, path: '/api/data/?contextKeys={category}'}
+  cart_view: {method: GET, path: /api/cart}
+  cart_add: {method: POST, path: /api/cart, requires: [product_selected, user_id]}
+  shipping_quote: {method: GET, path: /api/shipping, requires: [cart_nonempty, user_id]}
+  checkout: {method: POST, path: /api/checkout, requires: [cart_nonempty, user_id]}
+workflows:
+  browse:
+    weight: 20
+    start: home
+    transitions:
+      home: [{to: image_asset, probability: 0.40}, {to: currency, probability: 0.20}, {to: product, probability: 0.40}]
+      image_asset: [{to: product, probability: 1.0}]
+      currency: [{to: product, probability: 1.0}]
+      product: [{to: recommendations, probability: 0.50}, {to: ads, probability: 0.25}, {to: end, probability: 0.25}]
+      recommendations: [{to: ads, probability: 0.40}, {to: end, probability: 0.60}]
+      ads: [{to: end, probability: 1.0}]
+  shopping:
+    weight: 30
+    start: home
+    transitions:
+      home: [{to: image_asset, probability: 0.40}, {to: currency, probability: 0.20}, {to: product, probability: 0.40}]
+      image_asset: [{to: product, probability: 1.0}]
+      currency: [{to: product, probability: 1.0}]
+      product: [{to: recommendations, probability: 0.30}, {to: ads, probability: 0.45}, {to: cart_add, probability: 0.25}]
+      recommendations: [{to: ads, probability: 0.55}, {to: cart_add, probability: 0.45}]
+      ads: [{to: cart_add, probability: 1.0}]
+      cart_add: [{to: cart_view, probability: 0.75}, {to: product, probability: 0.15}, {to: end, probability: 0.10}]
+      cart_view: [{to: shipping_quote, probability: 0.60}, {to: end, probability: 0.40}]
+      shipping_quote: [{to: end, probability: 1.0}]
+  checkout:
+    weight: 50
+    start: home
+    transitions:
+      home: [{to: image_asset, probability: 0.40}, {to: currency, probability: 0.20}, {to: product, probability: 0.40}]
+      image_asset: [{to: product, probability: 1.0}]
+      currency: [{to: product, probability: 1.0}]
+      product: [{to: recommendations, probability: 0.20}, {to: ads, probability: 0.55}, {to: cart_add, probability: 0.25}]
+      recommendations: [{to: cart_add, probability: 1.0}]
+      ads: [{to: cart_add, probability: 1.0}]
+      cart_add: [{to: cart_view, probability: 0.60}, {to: shipping_quote, probability: 0.20}, {to: checkout, probability: 0.20}]
+      cart_view: [{to: shipping_quote, probability: 0.60}, {to: checkout, probability: 0.40}]
+      shipping_quote: [{to: checkout, probability: 1.0}]
+      checkout: [{to: end, probability: 1.0}]

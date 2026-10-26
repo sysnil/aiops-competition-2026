@@ -1,0 +1,29 @@
+VALIDATION_UTC=2026-10-12T13:02:02+00:00
+STATUS COMPETITION_DATA_SERVER_PREPARED
+SERVICES api=active nginx=active
+ENABLED api=enabled nginx=enabled
+HEALTH {"status":"ok","service":"aiops-contest-data-api","version":"1.0.0"}
+UNAUTHENTICATED_HTTP 401
+AUTHORIZED_CASES_HTTP 200
+OPENAPI_ROUTES
+/healthz
+/v1/cases
+/v1/cases/{case_id}/logs
+/v1/cases/{case_id}/metadata
+/v1/cases/{case_id}/metrics
+/v1/cases/{case_id}/topology
+/v1/cases/{case_id}/traces
+/v1/cases/{case_id}/traces/{trace_id}
+PYTEST
+.....                                                                    [100%]
+5 passed in 1.19s
+CASE_VALIDATION
+{"status":"PASS","errors":[],"stats":{"metrics.parquet":{"rows":960,"sha256":"21d463bf1ebe41231b5fcd65d6196bd369f9e683dd7327cb352a20d4fbdbbb75"},"logs.parquet":{"rows":240,"sha256":"387c5b4fd03654d324cea12e2dcab7bf022abd09e6c320f1b5d774a63e7d6fb7"},"traces.parquet":{"rows":240,"sha256":"afe83e6fb9ef8b6b241c8ee4ea9ebbbc368973e4e6f2c69581e47c22f3402fb4"}}}
+IMPORT_PIPELINE VALIDATED_ONLY PASS
+BENCHMARK {"clients":17,"requests":204,"qps":15.999,"latency_ms":{"p50":1039.677,"p95":1511.194,"p99":1774.01},"http_errors":0,"http_error_rate":0.0,"resources":{"cpu_peak_percent":100.0,"cpu_mean_percent":29.58,"memory_peak_bytes":845561856,"disk_read_bytes":0,"disk_write_bytes":1499136},"security_checks":{"invalid_token":401,"unpublished_case":404,"out_of_bounds":400,"sql_injection_literal":200,"oversized_page":400,"path_traversal":404},"rate_limit_check":{"attempts":65,"statuses":{"200":48,"429":17},"passed":true}}
+PLAINTEXT_TOKEN_ISOLATION_PASS
+TOKEN_LOG_REDACTION_PASS
+PUBLISHED_DATA_READ_ONLY_PASS
+STAGING_ROOT_ONLY_PASS
+RESTART_RECOVERY_PASS
+LOOPBACK_BINDING_PASS

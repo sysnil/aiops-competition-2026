@@ -1,0 +1,130 @@
+{
+  "case_id": "SF-014",
+  "classification": "OFFICIAL",
+  "events": [
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "opensearch-0"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "9e7ebd42-b7a3-42bc-a417-c10cb627b122",
+      "entity_type": "Pod",
+      "evidence_rubric": "Public container_memory_working_set_bytes samples support the Pod memory increase.",
+      "gt_event_id": "EVT-0005",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T07:08:50.131000+00:00",
+      "observable_start_time": "2026-10-20T06:49:05.131000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "load-generator-79cbb674d-hmktb"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "63176197-bad1-4d67-8844-e825f4a6fea2",
+      "entity_type": "Pod",
+      "evidence_rubric": "Public container_memory_working_set_bytes samples support the Pod memory increase.",
+      "gt_event_id": "EVT-0004",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T07:08:50.131000+00:00",
+      "observable_start_time": "2026-10-20T06:55:50.131000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [],
+      "accepted_entity_aliases": [
+        "prometheus-665dbf8745-67bmm"
+      ],
+      "anomaly_type": "MEMORY_USAGE_INCREASE",
+      "entity_id": "d61600d8-407a-46ae-b0e5-766ad683573d",
+      "entity_type": "Pod",
+      "evidence_rubric": "Public container_memory_working_set_bytes samples support the Pod memory increase.",
+      "gt_event_id": "EVT-0007",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T07:08:50.131000+00:00",
+      "observable_start_time": "2026-10-20T06:56:20.131000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [
+        "TRACE_LATENCY_INCREASE"
+      ],
+      "accepted_entity_aliases": [],
+      "anomaly_type": "REQUEST_ERROR_INCREASE",
+      "entity_id": "frontend",
+      "entity_type": "Service",
+      "evidence_rubric": "Public Trace error status and duration samples support the Service request error/latency event.",
+      "gt_event_id": "EVT-0008",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T06:54:28.496000+00:00",
+      "observable_start_time": "2026-10-20T06:49:06.583000+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    },
+    {
+      "accepted_anomaly_types": [
+        "TRACE_LATENCY_INCREASE"
+      ],
+      "accepted_entity_aliases": [],
+      "anomaly_type": "REQUEST_ERROR_INCREASE",
+      "entity_id": "frontend-proxy",
+      "entity_type": "Service",
+      "evidence_rubric": "Public Trace error status and duration samples support the Service request error/latency event.",
+      "gt_event_id": "EVT-0009",
+      "gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+      "observable_end_time": "2026-10-20T06:54:04.139379+00:00",
+      "observable_start_time": "2026-10-20T06:49:06.583436+00:00",
+      "review_status": "APPROVED",
+      "rubric_version": "final-strict-positive-credit-1.1"
+    }
+  ],
+  "excluded_groups": [
+    {
+      "event_id": "EVT-0001",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0002",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0003",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0006",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0010",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0011",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0012",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    },
+    {
+      "event_id": "EVT-0013",
+      "reason": "NOT_SELECTED_IN_USER_CONFIRMED_DRAFT"
+    }
+  ],
+  "matching_rule_version": "final-strict-positive-credit-1.1",
+  "review_status": "APPROVED",
+  "rubric_version": "final-strict-positive-credit-1.1",
+  "source_candidate_manifest_sha256": "012c1a428cf618987f305d659b1be2ea7b8d7e11416c16086c5705990660af7d",
+  "source_candidate_sha256": "3dd96a1dd6e9c42942a5286db3d57657ae3f916c62014ebfab7ea4366efd0539",
+  "source_public_manifest_sha256": "7ce9501fe6dd0751566466cd0220aec64c5d89a06f4ee9bd03c35b4fc7665cfb",
+  "status": "APPROVED",
+  "task_type": "FINAL_ANOMALY_INVESTIGATION",
+  "time_tolerance_seconds": 120,
+  "version": "FINAL-GT-TAXONOMY-20261020-v2"
+}

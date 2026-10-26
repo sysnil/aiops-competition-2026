@@ -1,0 +1,11 @@
+[Unit]
+Description=Refresh committee scoring snapshot every five seconds
+
+[Timer]
+OnBootSec=2
+OnUnitActiveSec=5
+AccuracySec=1
+Unit=aiops-submission-snapshot.service
+
+[Install]
+WantedBy=timers.target

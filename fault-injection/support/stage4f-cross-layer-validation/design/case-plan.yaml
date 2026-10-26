@@ -1,0 +1,37 @@
+schema_version: 1
+primary_cases:
+  F01:
+    layer: SERVICE
+    selection_policy: "Choose a healthy service other than product-catalog with at least two stable ready Pods; freeze the service and Pod UIDs before injection."
+    fault_family: bounded_service_wide_application_degradation
+    execution_adapter: host_fault.py
+    duration_seconds: 300
+    rejection_rule: "Reject if only one replica is available or the change is actually Pod-specific."
+  F02:
+    layer: POD
+    selection_policy: "Choose one stable business Pod with at least 20 clean CPU, memory and cgroup samples and no pending rollout; freeze Pod UID."
+    fault_family: bounded_single_pod_resource_pressure
+    execution_adapter: pod_cpu_exec.py
+    duration_seconds: 300
+    rejection_rule: "Reject on UID change, recreation, missing cgroup series or insufficient during samples."
+  F03:
+    layer: NODE
+    selection_policy: "Choose a healthy worker other than Stage4E's k8s-worker3 with at least two ready business Pods on distinct services."
+    fault_family: bounded_node_cpu_contention
+    execution_adapter: host_fault.py
+    duration_seconds: 300
+    rejection_rule: "Reject if node placement or Ready status is unstable."
+  F04:
+    layer: NETWORK_PATH
+    selection_policy: "Choose a named node pair with at least two selected traversing service edges and one verified nontraversing control before the fault."
+    preferred_public_path: NETWORK_PATH/k8s-worker3/k8s-worker2
+    fault_family: bounded_shared_path_latency
+    execution_adapter: host_fault.py
+    duration_seconds: 300
+    rejection_rule: "Reject if pre-fault public route/flow evidence cannot prove each selected edge's path membership."
+optional_replicates:
+  F05: SERVICE
+  F06: POD
+  F07: NODE
+  F08: NETWORK_PATH
+replicate_policy: "Collect only after F01-F04 are admitted and system recovery gates pass."

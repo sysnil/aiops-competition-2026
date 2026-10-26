@@ -1,0 +1,24 @@
+api:
+  timeout_seconds: 8
+  max_retries: 8
+scan:
+  window_seconds: 300
+  page_size: 500
+  log_keyword: error
+  trace_service_limit: 2
+detection:
+  robust_z_threshold: 5.0
+  counter_ratio_threshold: 2.0
+mcp:
+  max_traces: 6
+output:
+  max_anomalies: 16
+llm_agent:
+  timeout_seconds: 60
+  max_retries: 2
+  max_output_tokens: 1200
+  temperature: 0
+  max_rounds: 16
+  max_tool_calls: 48
+  total_timeout_seconds: 480
+  tool_result_char_limit: 12000

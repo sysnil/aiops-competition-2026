@@ -1,0 +1,112 @@
+{
+  "version": "final-stage1-internal-v1",
+  "publication_state": "INTERNAL_DEVELOPMENT_ONLY",
+  "preview_scoring": {
+    "version": "final-accuracy-speed-20261021-v1",
+    "round_winner_rule": "ACCURACY_THEN_SERVER_RECEIPT_V1",
+    "internal_preview_only": false,
+    "base_max": 0,
+    "pk_auto_max": 10,
+    "judge_max": 0,
+    "root_bonus_max": 0
+  },
+  "public_prompt": "请使用 Agent 对指定时间范围内的系统运行状况进行分析，自主识别异常现象及其影响实体，提供监控图表和可验证的数据证据，并提交结构化异常调查结果。",
+  "tasks": [
+    {
+      "task_id": "FT-01",
+      "case_id": "SF-006",
+      "kind": "FT",
+      "max_submissions": 0,
+      "title": "上半场第 1 题｜异常调查",
+      "description": "晋级队伍共同分析本题公开的监控数据，识别异常现象、影响实体和 UTC 时间范围，并用图表与可回查的证据支撑结论。"
+    },
+    {
+      "task_id": "FT-02",
+      "case_id": "SF-011",
+      "kind": "FT",
+      "max_submissions": 0,
+      "title": "上半场第 2 题｜异常调查",
+      "description": "晋级队伍共同分析本题公开的监控数据，识别异常现象、影响实体和 UTC 时间范围，并用图表与可回查的证据支撑结论。"
+    },
+    {
+      "task_id": "FT-03",
+      "case_id": "SF-007",
+      "kind": "FT",
+      "max_submissions": 0,
+      "title": "上半场第 3 题｜异常调查",
+      "description": "晋级队伍共同分析本题公开的监控数据，识别异常现象、影响实体和 UTC 时间范围，并用图表与可回查的证据支撑结论。"
+    },
+    {
+      "task_id": "PK-R01",
+      "case_id": "SF-004",
+      "kind": "PK",
+      "max_submissions": 1,
+      "title": "下半场第 1 轮｜同题 PK",
+      "description": "本轮对阵双方分析同一公开 Case，提交异常类型、实体、时间范围及监控证据；未参赛队伍不可访问。"
+    },
+    {
+      "task_id": "PK-R02",
+      "case_id": "SF-008",
+      "kind": "PK",
+      "max_submissions": 1,
+      "title": "下半场第 2 轮｜同题 PK",
+      "description": "本轮对阵双方分析同一公开 Case，提交异常类型、实体、时间范围及监控证据；未参赛队伍不可访问。"
+    },
+    {
+      "task_id": "PK-R03",
+      "case_id": "SF-009",
+      "kind": "PK",
+      "max_submissions": 1,
+      "title": "下半场第 3 轮｜同题 PK",
+      "description": "本轮对阵双方分析同一公开 Case，提交异常类型、实体、时间范围及监控证据；未参赛队伍不可访问。"
+    },
+    {
+      "task_id": "PK-R04",
+      "case_id": "SF-012",
+      "kind": "PK",
+      "max_submissions": 1,
+      "title": "下半场第 4 轮｜同题 PK",
+      "description": "本轮对阵双方分析同一公开 Case，提交异常类型、实体、时间范围及监控证据；未参赛队伍不可访问。"
+    },
+    {
+      "task_id": "PK-R05",
+      "case_id": "SF-013",
+      "kind": "PK",
+      "max_submissions": 1,
+      "title": "下半场第 5 轮｜同题 PK",
+      "description": "本轮对阵双方分析同一公开 Case，提交异常类型、实体、时间范围及监控证据；未参赛队伍不可访问。"
+    },
+    {
+      "task_id": "PK-R06",
+      "case_id": "SF-016",
+      "kind": "PK",
+      "max_submissions": 1,
+      "title": "下半场第 6 轮｜同题 PK",
+      "description": "本轮对阵双方分析同一公开 Case，提交异常类型、实体、时间范围及监控证据；未参赛队伍不可访问。"
+    },
+    {
+      "task_id": "PK-R07",
+      "case_id": "SF-014",
+      "kind": "PK",
+      "max_submissions": 1,
+      "title": "下半场第 7 轮｜同题 PK",
+      "description": "本轮对阵双方分析同一公开 Case，提交异常类型、实体、时间范围及监控证据；未参赛队伍不可访问。"
+    },
+    {
+      "task_id": "PK-R08",
+      "case_id": "SF-017",
+      "kind": "PK",
+      "max_submissions": 1,
+      "title": "下半场第 8 轮｜同题 PK",
+      "description": "本轮对阵双方分析同一公开 Case，提交异常类型、实体、时间范围及监控证据；未参赛队伍不可访问。"
+    },
+    {
+      "task_id": "PK-R09",
+      "case_id": "SF-015",
+      "kind": "PK",
+      "max_submissions": 1,
+      "title": "下半场第 9 题｜备用题 PK",
+      "description": "组委会选择启用的备用PK题；仅指定对阵双方可访问，评分优先、同分按51接收提交时间决胜。"
+    }
+  ]
+}

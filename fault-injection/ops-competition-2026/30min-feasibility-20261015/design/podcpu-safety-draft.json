@@ -1,0 +1,19 @@
+{
+  "status": "DRAFT_SAFETY_BLOCKED_NO_INJECTION",
+  "mechanism": "PodCPUStress",
+  "target_layer": "POD",
+  "historical_implementation": "/root/stage4f-cross-layer-validation/scripts/pod_cpu_exec.py",
+  "current_target_candidates": "Read from reports/fresh-mechanism-audit.json at execution time; never reuse old Worker2 Ad target",
+  "required_identity": ["pod_uid", "container_id", "container_start", "node", "cgroup_path", "cpu.max", "sibling_uid"],
+  "required_public_direct_evidence": ["UID-linked container CPU usage", "CFS periods/throttled periods and seconds", "actual ordinary business requests per Pod", "normal sibling and unaffected Node controls"],
+  "proposed_engineering_changes_before_fault_test": [
+    "Create a dedicated Worker-local process whose PID, start ticks and cgroup are recorded before load begins.",
+    "Arm a separate Worker-local cleanup timer before any CPU consumption; cleanup may terminate only the recorded owned PID/start identity.",
+    "Bind the Worker action to an immutable run manifest, fresh target UID and four-second lease; revoke immediately on stale heartbeat.",
+    "Cap CPU use to the target container cgroup and verify at least two host cores remain available; reserve Collector, Jaeger and OpenSearch capacity.",
+    "Enforce node CPU pressure and memory safety stop conditions continuously, and verify process absence plus business recovery after cleanup."
+  ],
+  "not_yet_verified": ["run-owned cleanup", "independent watchdog", "protected cohost isolation", "effective 30-minute fault duration", "actual anomaly signal"],
+  "legacy_procedure_prohibited": "Do not run kubectl exec yes with global pkill -x yes cleanup or the old Worker2 target.",
+  "formal_or_qualification_fault_authorized": false
+}

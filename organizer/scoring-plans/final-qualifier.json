@@ -1,0 +1,32 @@
+{
+  "version": "FINAL-QUALIFIER-20261023-0900-1105-v4-team10",
+  "status": "APPROVED_FOR_SCORING",
+  "timezone": "Asia/Shanghai",
+  "date": "2026-10-23",
+  "start_utc": "2026-10-23T01:00:00+00:00",
+  "end_utc": "2026-10-23T03:05:00+00:00",
+  "time_rule": "start <= server received_at < end",
+  "teams": [
+    "TEAM-01",
+    "TEAM-02",
+    "TEAM-03",
+    "TEAM-07",
+    "TEAM-08",
+    "TEAM-10",
+    "TEAM-12",
+    "TEAM-16",
+    "TEAM-17"
+  ],
+  "tasks": {
+    "FT-01": "SF-006",
+    "FT-02": "SF-011",
+    "FT-03": "SF-007"
+  },
+  "points_per_task": 100,
+  "aggregation": "THREE_TASK_MEAN",
+  "selection": "HIGHEST_SCORE_EARLIEST_RECEIVED_WITHIN_WINDOW",
+  "ties": "EARLIEST_DISPLAYED_MEAN_ACHIEVEMENT",
+  "required_rubric_version": "final-balanced-evidence-v2.0",
+  "required_gt_version": "FINAL-GT-TAXONOMY-20261020-v2",
+  "access_or_submission_window_changed": false
+}

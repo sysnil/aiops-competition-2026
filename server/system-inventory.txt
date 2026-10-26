@@ -1,0 +1,81 @@
+INVENTORY_UTC=2026-10-12T13:02:46+00:00
+PRETTY_NAME="Ubuntu 24.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.2 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Linux cnic 6.8.0-58-generic #60-Ubuntu SMP PREEMPT_DYNAMIC Fri Mar 14 18:29:48 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+Architecture:                         x86_64
+CPU(s):                               4
+Model name:                           Intel(R) Xeon(R) Silver 4314 CPU @ 2.40GHz
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       717Mi        12Gi       1.2Mi       2.8Gi        14Gi
+Swap:          4.0Gi          0B       4.0Gi
+NAME                       SIZE TYPE FSTYPE      LABEL      UUID                                   MOUNTPOINTS
+sda                        100G disk                                                               
+├─sda1                       1M part                                                               
+├─sda2                       2G part ext4                   c1b86ff7-d489-458b-95d6-f0961643b017   /boot
+└─sda3                      98G part LVM2_member            niFJxg-4Awd-jZ5e-3pPA-N5I3-4s3O-WD7Tqs 
+  └─ubuntu--vg-ubuntu--lv   98G lvm  ext4                   42f9e705-1f2a-499e-8a48-2648093760d6   /
+sdb                        200G disk                                                               
+└─sdb1                     200G part ext4        AIOPS_DATA b54b1161-c8ef-43d2-b883-c691824bd84c   /data
+sr0                       1024M rom                                                                
+Filesystem                        Type  Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4   96G  8.4G   83G  10% /
+/dev/sdb1                         ext4  196G  396K  186G   1% /data
+TARGET SOURCE    FSTYPE OPTIONS
+/data  /dev/sdb1 ext4   rw,nosuid,nodev,noexec,relatime
+ Static hostname: cnic
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: ea29fab5e9174f298038e9e346a6f4b1
+         Boot ID: 3d9ff62c55d94a4ca6313fdaf8fb654f
+  Virtualization: vmware
+Operating System: Ubuntu 24.04.2 LTS
+          Kernel: Linux 6.8.0-58-generic
+    Architecture: x86-64
+ Hardware Vendor: VMware, Inc.
+  Hardware Model: VMware Virtual Platform
+Firmware Version: 6.00
+   Firmware Date: Thu 2020-11-12
+    Firmware Age: 5y 10month 4w 1d
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens160           UP             192.168.51.51/24 fe80::250:56ff:feba:545c/64 
+default via 192.168.51.1 dev ens160 proto static 
+192.168.51.0/24 dev ens160 proto kernel scope link src 192.168.51.51 
+active
+active
+active
+enabled
+enabled
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                                                                                              
+udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=802,fd=16))                                                                                           
+udp   UNCONN 0      0      127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=802,fd=14))                                                                                           
+tcp   LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=802,fd=17))                                                                                           
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=802,fd=15))                                                                                           
+tcp   LISTEN 0      511        127.0.0.1:8080      0.0.0.0:*    users:(("nginx",pid=13367,fd=7),("nginx",pid=13366,fd=7),("nginx",pid=13365,fd=7),("nginx",pid=13364,fd=7),("nginx",pid=13363,fd=7))
+tcp   LISTEN 0      2048       127.0.0.1:8000      0.0.0.0:*    users:(("uvicorn",pid=13372,fd=6))                                                                                                  
+tcp   LISTEN 0      4096               *:22              *:*    users:(("sshd",pid=1672,fd=3),("systemd",pid=1,fd=123))                                                                             
+Python 3.11.17
+uv 0.13.0 (x86_64-unknown-linux-gnu)
+git version 2.43.0
+nginx version: nginx/1.24.0 (Ubuntu)
+duckdb 1.5.6
+fastapi 0.143.0
+uvicorn 0.54.0
+pyarrow 26.0.0
+polars 2.0.0
+pandas 3.0.6
+numpy 2.4.6
+pydantic 2.14.1
+httpx 0.28.1
+psutil 7.2.2
+uid=999(aiops-api) gid=988(aiops-api) groups=988(aiops-api)

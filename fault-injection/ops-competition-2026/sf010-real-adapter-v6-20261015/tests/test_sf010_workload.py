@@ -1,0 +1,49 @@
+import importlib.util
+from pathlib import Path
+import tempfile
+import unittest
+from datetime import datetime, timedelta, timezone
+
+
+FILE = Path(__file__).resolve().parents[1] / 'scripts/sf010_workload.py'
+SPEC = importlib.util.spec_from_file_location('sf010_workload', FILE)
+MODULE = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(MODULE)
+
+
+class FormalHomeDelay(unittest.TestCase):
+    def test_only_fresh_exact_scope_lease_permits_header(self):
+        now = datetime.now(timezone.utc)
+        lease = {'run_id': 'SF-010-ATTEMPT-06', 'plan_sha256': 'a' * 64,
+                 'permission': 'BOUND_HTTP_REQDELAY', 'safety_pass': True,
+                 'issued_utc': now.isoformat(),
+                 'expires_utc': (now + timedelta(seconds=4)).isoformat()}
+        self.assertTrue(MODULE.lease_valid(lease, 'a' * 64, now.timestamp()+1))
+        self.assertFalse(MODULE.lease_valid(lease, 'a' * 64, now.timestamp()+5))
+        self.assertFalse(MODULE.lease_valid(lease, 'b' * 64, now.timestamp()+1))
+
+    def test_public_user_agent_is_neutral_and_source_anchor_is_exact(self):
+        source = "headers = {'User-Agent': 'stage5-workload-rehearsal/1.0'}"
+        self.assertIn("'User-Agent': 'business-workload/1.0'",
+                      MODULE.neutralize_user_agent(source))
+        with self.assertRaisesRegex(RuntimeError, 'anchor changed'):
+            MODULE.neutralize_user_agent(source + source)
+
+    def test_exact_home_window_and_control_exclusion(self):
+        self.assertFalse(MODULE.should_delay('http://demo/', 'GET', 959.999, 960, 1020))
+        self.assertTrue(MODULE.should_delay('http://demo/', 'GET', 960, 960, 1020))
+        self.assertTrue(MODULE.should_delay('http://demo/', 'GET', 1019.999, 960, 1020))
+        self.assertFalse(MODULE.should_delay('http://demo/', 'GET', 1020, 960, 1020))
+        self.assertFalse(MODULE.should_delay('http://demo/api/cart', 'GET', 980, 960, 1020))
+        self.assertFalse(MODULE.should_delay('http://demo/', 'POST', 980, 960, 1020))
+
+    def test_wrong_case_identity_fails_before_source_access(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with self.assertRaisesRegex(RuntimeError, 'Wrong SF-010 run identity'):
+                MODULE.run({'id': 'SF-009-ATTEMPT-01', 'formal_case': True,
+                            'duration_seconds': 1800, 'profile': 'MEDIUM'},
+                           Path(directory) / 'new-output', 'a' * 64)
+
+
+if __name__ == '__main__':
+    unittest.main()

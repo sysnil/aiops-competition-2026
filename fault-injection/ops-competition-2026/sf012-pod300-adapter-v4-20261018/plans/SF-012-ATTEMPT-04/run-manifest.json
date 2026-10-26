@@ -1,0 +1,50 @@
+{
+  "schema": "EXPLICIT_RUN_REGISTRY_V1",
+  "run_id": "SF-012-ATTEMPT-04",
+  "backend": "SF012_QUALIFIED_POD_MEMORY300_V1",
+  "plan_path": "/root/ops-competition-2026/sf012-pod300-adapter-v4-20261018/plans/SF-012-ATTEMPT-04/run-plan.json",
+  "plan_sha256": "6ffe3d9e928afbd5283312b303463be1ab0f5b4cfa13523a37c1fc4f5099a82b",
+  "schedule_lock_path": "/root/ops-competition-2026/sf012-pod300-adapter-v4-20261018/plans/SF-012-ATTEMPT-04/schedule-lock.json",
+  "schedule_lock_sha256": "1d2f8137ace09d8070ee8c7491f5f9f9167e045e41f5280e0703707c01e1d8ba",
+  "actions": [
+    {
+      "run_id": "SF-012-ATTEMPT-04",
+      "action_id": "SF-012-ATTEMPT-04-POD",
+      "fault_event_id": "SF-012-F01",
+      "fault_type": "PodMemoryStress",
+      "mechanism_id": "POD",
+      "worker": "k8s-worker2",
+      "targets": [
+        {
+          "service": "frontend",
+          "name": "frontend-68d8bbfdc8-8mnzh",
+          "uid": "d4bb49b4-6fb8-4a07-aaf6-e2caff5df974",
+          "node": "k8s-worker2",
+          "container_id": "containerd://447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e",
+          "restart_count": 0,
+          "cgroup": "/sys/fs/cgroup/kubepods.slice/kubepods-podd4bb49b4_6fb8_4a07_aaf6_e2caff5df974.slice/cri-containerd-447e10cf3371070dd55895a4a443849b24b0d3453b324eae14ebbd5b14f4ba7e.scope",
+          "pid": 2022249,
+          "start_ticks": "164244306"
+        }
+      ],
+      "duration_seconds": 300,
+      "offset_seconds": 600,
+      "planned_utc": "2026-10-18T09:29:13.286218+00:00",
+      "recovery_offset_seconds": 1140,
+      "onset_tolerance_seconds": 2,
+      "unit": "ops-sf012-sf-012-attempt-04-pod",
+      "backend": "SF012_QUALIFIED_POD_MEMORY300_V1",
+      "execute": "RUN_PINNED_QUALIFIED_ADAPTER",
+      "revoke": "REVOKE_STOP_AND_PINNED_CLEANUP",
+      "qualified_registration": "/root/ops-competition-2026/sf012-pod300-adapter-v4-20261018/plans/SF-012-ATTEMPT-04/pod-registration.json",
+      "qualified_registration_sha256": "98bedb837629ceb6c8b6fb85096331256accb068304cb1ed62d9e27d5bb5013f",
+      "watchdog_proof_file": "/root/ops-competition-2026/qualification/SF012-WATCHDOG-SELFTEST-W2-ATTEMPT04.json",
+      "watchdog_proof_sha256": "43f29c21fa9962f092c0bc8bdc1eb6a723e06ff76bfb37b5e48e6f6e4ef59be3",
+      "injection_output": "/root/ops-competition-2026/qualification/private-attempts/SF-012-ATTEMPT-04-POD",
+      "runtime": "/root/ops-competition-2026/sf012-pod300-adapter-v4-20261018/worker-runtime/SF-012-ATTEMPT-04-POD",
+      "registration_file": "/root/ops-competition-2026/sf012-pod300-adapter-v4-20261018/plans/SF-012-ATTEMPT-04/run-plan.json"
+    }
+  ],
+  "controller_unit": "ops-sf012-formal-controller04-20261018",
+  "observer_unit": "ops-sf012-formal-observer04-20261018"
+}
